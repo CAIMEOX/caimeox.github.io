@@ -1,49 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>542</anchor>  <taxon>Definition</taxon> <addr>def-000A</addr>  <route>def-000A.xml</route>   <title>Subgroups</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1364</anchor>  <taxon>Definition</taxon> <addr>def-000A</addr>  <route>def-000A.xml</route>   <title>Subgroups</title> </frontmatter> <mainmatter><p>
 Let <tex>G</tex> be a group and <tex>H</tex> be a nonempty subset of <tex>G</tex> which is closed under operation <tex>\times</tex> and :
 <ul><li><tex>\forall  a,b \in  H,a \times  b \in  H</tex></li>
 <li><tex>\forall  h \in  H,h^{-1} \in  H</tex></li></ul>
-then <tex>H</tex> is a subgroup of <tex>G</tex>. <tex>e=h \times  h^{-1}</tex> is always in group <tex>H</tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>543</anchor>   <addr>def</addr>  <route>def.xml</route>   <title>Definitions Collection</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>544</anchor>  <taxon>Definition</taxon> <addr>def-0001</addr>  <route>def-0001.xml</route>   <title>Group</title> </frontmatter> <mainmatter><p>
+then <tex>H</tex> is a subgroup of <tex>G</tex>. <tex>e=h \times  h^{-1}</tex> is always in group <tex>H</tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1365</anchor>   <addr>def</addr>  <route>def.xml</route>   <title>Definitions Collection</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1366</anchor>  <taxon>Definition</taxon> <addr>def-0001</addr>  <route>def-0001.xml</route>   <title>Group</title> </frontmatter> <mainmatter><p>
 A <strong>group</strong> is a set <tex>G</tex> with a binary operation <tex>\circ</tex> satisfies the following properties:
 <ul><li>Closure: <tex>\forall  a,b \in  G,a  \circ  b \in  G</tex></li>
 <li>Associativity: <tex>\forall  a,b,c \in  G, (a \circ  b)  \circ  c= a  \circ  (b  \circ  c)</tex></li>
 <li>Identity: <tex>\exists  e \in  G</tex> such that <tex>\forall  g \in  G, g \circ  e=e \circ  g = g</tex></li>
-<li>Inverse: <tex>\forall  g \in  G, \exists  g^{-1} \in  G</tex> such that <tex>g \circ  g^{-1}=e</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>545</anchor>  <taxon>Definition</taxon> <addr>def-0002</addr>  <route>def-0002.xml</route>   <title>Abel Group</title> </frontmatter> <mainmatter><p>
-If in a group <tex>G</tex>, <tex>\forall  a,b \in  G, a \circ  b=b \circ  a</tex> then <tex>G</tex> is called an <strong>abelian (commutative) group</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>546</anchor>  <taxon>Definition</taxon> <addr>def-0003</addr>  <route>def-0003.xml</route>   <title>Group Element Order</title> </frontmatter> <mainmatter><p>
+<li>Inverse: <tex>\forall  g \in  G, \exists  g^{-1} \in  G</tex> such that <tex>g \circ  g^{-1}=e</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1367</anchor>  <taxon>Definition</taxon> <addr>def-0002</addr>  <route>def-0002.xml</route>   <title>Abel Group</title> </frontmatter> <mainmatter><p>
+If in a <link href="def-0001.xml" type="local" addr="def-0001" title="Group">group</link> <tex>G</tex>, <tex>\forall  a,b \in  G, a \circ  b=b \circ  a</tex> then <tex>G</tex> is called an <strong>abelian (commutative) group</strong>.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1368</anchor>  <taxon>Definition</taxon> <addr>def-0003</addr>  <route>def-0003.xml</route>   <title>Group Element Order</title> </frontmatter> <mainmatter><p>
 For a group <tex>G</tex> an <tex>x \in  G</tex> define the <strong>order</strong> of <tex>x</tex> be the smallest positive integer <tex>n</tex> (denotes <tex>|x|</tex>) st <tex>x^n=1</tex>. If such <tex>n</tex> does not exist then <tex>x</tex> is said to be of infinite order.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>547</anchor>  <taxon>Definition</taxon> <addr>def-0004</addr>  <route>def-0004.xml</route>   <title>Multiplication Table</title> </frontmatter> <mainmatter><p>
-Let <tex>G=  \{ g_1, g_2,  \cdots , g_n \}</tex> is finite group. The multiplication table is the <tex>n \times  n</tex> matrix whose <tex>i,j</tex> entry is the group element <tex>g_i  \circ  g_j</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>548</anchor>  <taxon>Definition</taxon> <addr>def-0005</addr>  <route>def-0005.xml</route>   <title>Generator</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1369</anchor>  <taxon>Definition</taxon> <addr>def-0004</addr>  <route>def-0004.xml</route>   <title>Multiplication Table</title> </frontmatter> <mainmatter><p>
+Let <tex>G=  \{ g_1, g_2,  \cdots , g_n \}</tex> is finite group. The multiplication table is the <tex>n \times  n</tex> matrix whose <tex>i,j</tex> entry is the group element <tex>g_i  \circ  g_j</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1370</anchor>  <taxon>Definition</taxon> <addr>def-0005</addr>  <route>def-0005.xml</route>   <title>Generator</title> </frontmatter> <mainmatter><p>
 A subset <tex>S \in  G</tex> where <tex>\forall  g \in  G</tex> can be written as a (finite) product of <tex>s \in  S</tex> and <tex>s^{-1}</tex> is called a set of <strong>generators</strong> of <tex>G</tex>
-<tex>G= \braket {S}</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>549</anchor>  <taxon>Definition</taxon> <addr>def-0006</addr>  <route>def-0006.xml</route>   <title>Field</title> </frontmatter> <mainmatter><p>
-A field is a set <tex>F</tex> together with two binary operations <tex>+</tex> and <tex>\times</tex> on <tex>F</tex> st <tex>(F,+)</tex> is an abelian group (identity is <tex>0</tex>) and <tex>(F- \{ 0 \} , \times )</tex> is also an abelian group such that
-<tex>a \times (b+c)=a \times  b+a \times  c, \forall  a,b,c \in  F</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>550</anchor>  <taxon>Definition</taxon> <addr>def-0007</addr>  <route>def-0007.xml</route>   <title>Monoid</title> </frontmatter> <mainmatter><p>
+<tex>G= \braket {S}</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1371</anchor>  <taxon>Definition</taxon> <addr>def-0006</addr>  <route>def-0006.xml</route>   <title>Field</title> </frontmatter> <mainmatter><p>
+A field is a set <tex>F</tex> together with two binary operations <tex>+</tex> and <tex>\times</tex> on <tex>F</tex> st <tex>(F,+)</tex> is an <link href="def-0002.xml" type="local" addr="def-0002" title="Abel Group">abelian group</link> (identity is <tex>0</tex>) and <tex>(F- \{ 0 \} , \times )</tex> is also an abelian group such that
+<tex>a \times (b+c)=a \times  b+a \times  c, \forall  a,b,c \in  F</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1372</anchor>  <taxon>Definition</taxon> <addr>def-0007</addr>  <route>def-0007.xml</route>   <title>Monoid</title> </frontmatter> <mainmatter><p>
 A set <tex>S</tex> equipped with a binary operation <tex>S \times  S \to  S</tex>, which we will denote <tex>\circ</tex>, is a <strong>monoid</strong> if it satisfies the following two axioms:
 <ul><li>Associativity: <tex>\forall  a,b,c \in  S, (a \circ  b)  \circ  c= a  \circ  (b  \circ  c)</tex></li>
-<li>Identity: <tex>\exists  e \in  S</tex> such that <tex>\forall  g \in  S, g \circ  e=e \circ  g = g</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>551</anchor>  <taxon>Definition</taxon> <addr>def-0008</addr>  <route>def-0008.xml</route>   <title>Group Action</title> </frontmatter> <mainmatter><p>
+<li>Identity: <tex>\exists  e \in  S</tex> such that <tex>\forall  g \in  S, g \circ  e=e \circ  g = g</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1373</anchor>  <taxon>Definition</taxon> <addr>def-0008</addr>  <route>def-0008.xml</route>   <title>Group Action</title> </frontmatter> <mainmatter><p>
 A group action of a group <tex>G</tex> on a set <tex>A</tex> is a map from <tex>G \times  A  \to  A</tex> (<tex>g \cdot  a</tex>), <tex>\forall  g \in  G</tex> and <tex>a \in  A</tex> satisfying the following properties:
 <ul><li><tex>g_1 \cdot  (g_2 \cdot  a)=(g_1g_2) \cdot  a</tex></li>
-<li><tex>\forall  a \in  A,1 \cdot  a = a</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>552</anchor>  <taxon>Definition</taxon> <addr>def-0009</addr>  <route>def-0009.xml</route>   <title>Group Homomorphism</title> </frontmatter> <mainmatter><p>
+<li><tex>\forall  a \in  A,1 \cdot  a = a</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1374</anchor>  <taxon>Definition</taxon> <addr>def-0009</addr>  <route>def-0009.xml</route>   <title>Group Homomorphism</title> </frontmatter> <mainmatter><p>
 Let <tex>(G, \times )</tex> and <tex>(H, \circ )</tex> be groups. A map <tex>\phi  : G \to  H</tex> such that
 <tex>\forall  x,y \in  G, \phi (x \times  y)= \phi (x) \circ \phi (y)</tex> is called a <strong>group homomorphism</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>553</anchor>  <taxon>Definition</taxon> <addr>def-000B</addr>  <route>def-000B.xml</route>   <title>Euclidean Topology</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1375</anchor>  <taxon>Definition</taxon> <addr>def-000B</addr>  <route>def-000B.xml</route>   <title>Euclidean Topology</title> </frontmatter> <mainmatter><p>
 A subset <tex>S</tex> of <tex>\mathbb {R}</tex> is said to be open in the <strong>euclidean topology</strong> on <tex>\mathbb {R}</tex> if <tex>\forall  x \in  S</tex> there exists <tex>a,b \in \mathbb {R}</tex> with <tex>a&lt;b</tex> st <tex>x \in (a,b) \in  S</tex>.
 </p><p>The dual definition (using closed sets) is also valid.</p><p>
 For each <tex>a</tex> and <tex>b</tex> in <tex>\mathbb {R}</tex> with <tex>a&lt;b</tex> the closed intervcal <tex>[a,b]</tex> is a closed set in the euclidean topology in <tex>\mathbb {R}</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>554</anchor>  <taxon>Definition</taxon> <addr>def-000C</addr>  <route>def-000C.xml</route>   <title>Topological Space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1376</anchor>  <taxon>Definition</taxon> <addr>def-000C</addr>  <route>def-000C.xml</route>   <title>Topological Space</title> </frontmatter> <mainmatter><p>
 A <strong>topological space</strong> is a set <tex>S</tex> together with a collection <tex>\tau</tex> of subsets called open sets such that
 <ul><li>T1: <tex>S, \varnothing \in \tau</tex></li>
 <li>T2: <tex>\forall  U,V \in \tau , U \cap  V \in \tau</tex></li>
-<li>T3: The union of any collection of open sets is open.</li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>555</anchor>  <taxon>Definition</taxon> <addr>def-000D</addr>  <route>def-000D.xml</route>   <title>Relative Topology</title> </frontmatter> <mainmatter><p>
+<li>T3: The union of any collection of open sets is open.</li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1377</anchor>  <taxon>Definition</taxon> <addr>def-000D</addr>  <route>def-000D.xml</route>   <title>Relative Topology</title> </frontmatter> <mainmatter><p>
 Let <tex>(X, \tau )</tex> be a topological space and <tex>A \subseteq  X</tex>. Then <tex>\tau _A= \{ U \cap  A \mid  U \in \tau \}</tex> is a topology on <tex>A</tex> called the <strong>relative topology</strong> on <tex>A</tex> induced by <tex>\tau</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>556</anchor>  <taxon>Definition</taxon> <addr>def-000E</addr>  <route>def-000E.xml</route>   <title>Co-finite Topology</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1378</anchor>  <taxon>Definition</taxon> <addr>def-000E</addr>  <route>def-000E.xml</route>   <title>Co-finite Topology</title> </frontmatter> <mainmatter><p>
 Let <tex>X</tex> be a set. The <strong>co-finite topology</strong> on <tex>X</tex> is the topology <tex>\tau</tex> on <tex>X</tex> whose open sets are <tex>\emptyset</tex> and all subsets of <tex>X</tex> whose complement is finite.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>557</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1379</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title> </frontmatter> <mainmatter><p>
 Let <tex>\Lambda</tex> be the set of lambda terms. Then <tex>\Lambda</tex> is defined inductively as follows:
 (<tex>V</tex> is the set of variables)
 <ul><li>Variable: <tex>\forall  x \in  V, x \in   \Lambda</tex></li>
 <li>Abstraction: <tex>\forall  x \in  V, M \in   \Lambda ,  \lambda  x.M \in   \Lambda</tex></li>
 <li>Application: <tex>\forall  M,N \in   \Lambda , (MN) \in   \Lambda</tex></li></ul></p><p>
 Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 possibilities are separated by <code>|</code>):
-<tex display="block">\Lambda  = V |  \lambda  V. \Lambda  |  \Lambda \Lambda</tex></p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>
+<tex display="block">\Lambda  = V |  \lambda  V. \Lambda  |  \Lambda \Lambda</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1380</anchor>  <taxon>Definition</taxon> <addr>def-000G</addr>  <route>def-000G.xml</route>   <title>List</title> </frontmatter> <mainmatter><p>
+    Let <tex>n</tex> be a natural number. A <strong>list</strong> of length <tex>n</tex> is an ordered collection of <tex>n</tex> elements.
+    <tex display="block">
+        (x_1, x_2,  \dots , x_n)
+    </tex>
+    Two lists are equal if and only if they have the same length and the same elements in the same order.
+</p><strong>Addition in Lists</strong><p>
+    Let <tex>n</tex> be a natural number. Let <tex>(x_1, x_2,  \dots , x_n)</tex> and <tex>(y_1, y_2,  \dots , y_n)</tex> be lists of length <tex>n</tex>. The <strong>sum</strong> of these lists is the list <tex>(x_1 + y_1, x_2 + y_2,  \dots , x_n + y_n)</tex>.
+</p><strong>Additive Inverse in Lists</strong><p>
+    Let <tex>n</tex> be a natural number. Let <tex>x=(x_1, x_2,  \dots , x_n)</tex> be a list of length <tex>n</tex>. The <strong>additive inverse</strong> of this list is the list <tex>-x=(-x_1, -x_2,  \dots , -x_n)</tex>.
+</p><strong>Scalar Multiplication in Lists</strong><p>
+    Let <tex>n</tex> be a natural number. Let <tex>x=(x_1, x_2,  \dots , x_n)</tex> be a list of length <tex>n</tex>. Let <tex>c</tex> be a real number. The <strong>scalar multiplication</strong> of <tex>c</tex> and <tex>x</tex> is the list <tex>cx=(cx_1, cx_2,  \dots , cx_n)</tex>.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1381</anchor>  <taxon>Definition</taxon> <addr>def-000H</addr>  <route>def-000H.xml</route>   <title>Vector Space</title> </frontmatter> <mainmatter><p>
+    A vector space over a <link href="def-0006.xml" type="local" addr="def-0006" title="Field">field</link> <tex>F</tex> is a non-empty set <tex>V</tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
+    In this context, the elements of <tex>F</tex> are commonly called <strong>vectors</strong>, and the elements of <tex>F</tex> are called <strong>scalars</strong>.
+    <ul><li>Commutativity: <tex>
+             \forall  x, y  \in  V, x + y = y + x
+        </tex></li>
+        <li>Associativity: <tex>
+             \forall  x, y, z  \in  V, (x + y) + z = x + (y + z)
+        </tex></li>
+        <li>Additive Identity: <tex>
+             \exists  0  \in  V  \text { such that }  \forall  x  \in  V, x + 0 = x
+        </tex></li>
+        <li>Multiplicative Identity: <tex>
+             \forall  x  \in  V, 1x = x
+        </tex></li>
+        <li>Additive Inverse: <tex>
+             \forall  x  \in  V,  \exists  y  \in  V  \text { such that } x + y = 0
+        </tex></li>
+        <li>Distributivity: <tex>
+             \forall  x, y  \in  V,  \forall  c, d  \in  F, c(x + y) = cx + cy, (c + d)x = cx + dx
+        </tex></li></ul></p><p>
+    Elements of a vector space are called <strong>vectors</strong> or <strong>points</strong>.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1382</anchor>  <taxon>Definition</taxon> <addr>def-000I</addr>  <route>def-000I.xml</route>   <title>Linear Subspace</title> </frontmatter> <mainmatter><p>
+    A subset <tex>U</tex> of a vector space <tex>V</tex> over a field <tex>F</tex> is called a <strong>subspace</strong> of <tex>V</tex> if <tex>U</tex> is itself a <strong>vector space</strong> over <tex>F</tex> with the operations of addition and scalar multiplication on <tex>V</tex>.
+    The subset also satisfies the following axioms (vice versa):
+    <ul><li>Additive identity: <tex>0 \in  U</tex></li>
+        <li>Closure: <tex>\forall  u,v \in  U, u+v \in  U</tex></li>
+        <li>Closed Scalar multiplication: <tex>\forall  u \in  U,  \forall  c \in  F, cu \in  U</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1383</anchor>  <taxon>Definition</taxon> <addr>def-000J</addr>  <route>def-000J.xml</route>   <title>Sum of subsets</title> </frontmatter> <mainmatter><p>
+    Let <tex>U_1,  \dots , U_n</tex> be subsets of a vector space <tex>V</tex>.
+    The <strong>sum</strong> of <tex>U_1,  \dots , U_n</tex> is defined as
+    <tex display="block">U_1 +  \dots  + U_n =  \{ u_1 +  \dots  + u_n  \mid  u_i  \in  U_i \}</tex>.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1384</anchor>  <taxon>Definition</taxon> <addr>def-000K</addr>  <route>def-000K.xml</route>   <title>Direct Sum</title> </frontmatter> <mainmatter><p>
+    Let <tex>U_1,  \dots , U_n</tex> be subspaces of a vector space <tex>V</tex>.
+    The <strong>direct sum</strong> of <tex>U_1,  \dots , U_n</tex> is defined as
+    <tex display="block">
+        U_1  \oplus   \dots   \oplus  U_n =  \{ u_1 +  \dots  + u_n  \mid  u_i  \in  U_i \} 
+    </tex>
+    if every element in <tex>U_1  \oplus   \dots   \oplus  U_n</tex> can be written as <tex>u_1 +  \dots  + u_n </tex> in only one way.
+    This definition requires every vector in the sum have a unique representation.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1385</anchor>  <taxon>Definition</taxon> <addr>def-000L</addr>  <route>def-000L.xml</route>   <title>Linear Combination</title> </frontmatter> <mainmatter><p>
+    Let <tex>V</tex> be a <link href="def-000H.xml" type="local" addr="def-000H" title="Vector Space">vector space</link> over a field <tex>F</tex>.
+    Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
+    A <strong>linear combination</strong> of <tex>v_1,  \dots , v_n</tex> is an expression of the form
+    <tex display="block">
+        a_1 v_1 +  \dots  + a_n v_n
+    </tex>
+    where <tex>a_1,  \dots , a_n  \in  F</tex>.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1386</anchor>  <taxon>Definition</taxon> <addr>def-000M</addr>  <route>def-000M.xml</route>   <title>Linear Span</title> </frontmatter> <mainmatter><p>
+    Let <tex>V</tex> be a vector space over a field <tex>F</tex>.
+    Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
+    The <strong>span</strong> of <tex>v_1,  \dots , v_n</tex> is defined as
+    <tex display="block">
+         \text {span} (v_1,  \dots , v_n) =  \{ a_1 v_1 +  \dots  + a_n v_n  \mid  a_i  \in  F \} 
+    </tex>
+    The span of empty set is defined to be <tex>\{ 0 \}</tex>.    
+</p><p>
+    If <tex>\text {span} (v_1,  \dots , v_n) = V</tex>, we say that <tex>v_1,  \dots , v_n</tex> <strong>spans</strong> <tex>V</tex>.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1387</anchor>  <taxon>Definition</taxon> <addr>def-000N</addr>  <route>def-000N.xml</route>   <title>Finite-Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
+    A <link href="def-000H.xml" type="local" addr="def-000H" title="Vector Space">vector space</link> <tex>V</tex> is called <strong>finite-dimensional</strong> if some <link href="def-000G.xml" type="local" addr="def-000G" title="List">list</link> of vectors <tex>v_1,  \dots , v_n</tex> <link href="def-000M.xml" type="local" addr="def-000M" title="Linear Span">spans</link> <tex>V</tex>.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1388</anchor>  <taxon>Definition</taxon> <addr>def-000O</addr>  <route>def-000O.xml</route>   <title>Infinite-dimensional vector space</title> </frontmatter> <mainmatter><p>
+    A vector space <tex>V</tex> is called <strong>infinite-dimensional</strong> if it is not <link href="def-000N.xml" type="local" addr="def-000N" title="Finite-Dimensional Vector Space">finite-dimensional</link>.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1389</anchor>  <taxon>Definition</taxon> <addr>def-000P</addr>  <route>def-000P.xml</route>   <title>Linearly independent</title> </frontmatter> <mainmatter><p>
+    A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly independent</strong> if
+    <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
+    implies that <tex>a_1 =  \dots  = a_n = 0</tex>.
+    The trivial case of <tex>\{ 0 \}</tex> is also considered linearly independent.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1390</anchor>  <taxon>Definition</taxon> <addr>def-000Q</addr>  <route>def-000Q.xml</route>   <title>Linearly dependent</title> </frontmatter> <mainmatter><p>
+    A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly dependent</strong> if
+    <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
+    for some <tex>a_1,  \dots , a_n  \in   \mathbb {F}</tex> with at least one <tex>a_i  \neq  0</tex> (not all <tex>0</tex>).
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1391</anchor>  <taxon>Definition</taxon> <addr>def-000R</addr>  <route>def-000R.xml</route>   <title>Basis</title> </frontmatter> <mainmatter><p>
+    A basis of <tex>V</tex> is a list of vectors in <tex>V</tex>
+    that is linearly independent and spans <tex>V</tex>. 
+</p><p><strong>Criterion for basis</strong>
+    A list of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is a basis of <tex>V</tex> if and only if
+    every <tex>v  \in  V</tex> can be written <strong>uniquely</strong> as a linear combination of <tex>v_1,  \dots , v_n</tex>.
+</p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>
