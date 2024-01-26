@@ -1,13 +1,14 @@
 \title{CAIMEO}
 \taxon{person}
 \p{
-    This blog majorly writes about science, computer and mathematic, also is my personal public notes. 
-    Feel free to point out any good or wrong reference of topic you view on the site.
+    A student interested in math and computer science.
 }
 
 \meta{position}{Student}
 \meta{external}{https://github.com/CAIMEOX} % optional
-
+##{
+    \text{Life} = \int_{\text{birth}}^{\text{death}} \text{Learning} \, \text{d}t
+}
 \ul{
     \li{Learning Programming Language Theory and Type Theory}
     \li{Reading Type Theory and Formal Proof and Homotopy Type Theory}

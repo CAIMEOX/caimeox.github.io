@@ -1,10 +1,16 @@
 \title{About this website}
 \p{
-    This website is a “forest” created using the Forester tool. I organize my thoughts here on a variety of topics at a granular level; sometimes these thoughts are self-contained, and at times I may organize them into larger notebooks or lecture notes. My nascent ideas about the design of tools for scientific thought are here. I welcome collaboration on any of the topics represented in my forest.
-    To navigate my forest, press \code{Ctrl-K}.
+    The choice of the name "\strong{Rabbit Hole}" carries a metaphorical significance inspired by Lewis Carroll's \em{Alice's Adventures 
+    in Wonderland}, meaning to delve into a topic or pursue a line of thought that leads to unexpected or complex places.
+    It can refer to getting deeply involved in researching a subject, exploring a particular interest, or going through 
+    a series of trees in the forest that leads to a chain of related topics.
 }
-\p{
-    Here are some standards of this blog.
+
+\scope{
+    \strong{How to navigate?}
+    \p{This website is a “\em{forest}” created using the \strong{Forester} tool.
+    To navigate my forest, press \code{Ctrl-K}.
+    Here are some standards of this blog.}
     \ul{
         \li{All posts starts with a prefix and appends with a hex number}
         \li{Available post prefixes:

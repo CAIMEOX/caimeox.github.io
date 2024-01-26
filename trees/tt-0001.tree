@@ -15,9 +15,8 @@ In dealing with functions there are two \strong{construction principles} and one
 }
 }
 The beta reduction makes use of the \strong{substitution} #{M[N/x]} which represents the result of replacing all free occurences of #{x} in #{M} with #{N}.
-}
-
+} 
 \scope{
 \p{Expressions in the lambda calculus is called \strong{terms}. The set of terms is denoted #{\Lambda}.}
-\transclude{def-000F}
+\transclude{def-000F} 
 }
