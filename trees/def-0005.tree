@@ -1,0 +1,5 @@
+\title{Generator}
+\p{
+    A subset #{S\in G} where #{\forall g\in G} can be written as a (finite) product of #{s\in S} and #{s^{-1}} is called a set of \strong{generators} of #{G}
+#{G=\braket{S}}
+}

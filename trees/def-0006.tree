@@ -1,0 +1,5 @@
+\title{Field}
+\p{
+    A field is a set #{F} together with two binary operations #{+} and #{\times} on #{F} st #{(F,+)} is an abelian group (identity is #{0}) and #{(F-\{0\},\times)} is also an abelian group such that
+    #{a\times(b+c)=a\times b+a\times c,\forall a,b,c\in F}
+}

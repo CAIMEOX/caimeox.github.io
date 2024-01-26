@@ -1,0 +1,22 @@
+\title{About this website}
+\p{
+    This website is a “forest” created using the Forester tool. I organize my thoughts here on a variety of topics at a granular level; sometimes these thoughts are self-contained, and at times I may organize them into larger notebooks or lecture notes. My nascent ideas about the design of tools for scientific thought are here. I welcome collaboration on any of the topics represented in my forest. 
+    To navigate my forest, press \code{Ctrl-K}.
+}
+\p{
+    Here are some standards of this blog.
+    \ul{
+        \li{All posts starts with a prefix and appends with a hex number}
+        \li{Available post prefixes:
+            \ul{
+                \li{\code{cs} Computer Science}
+                \li{\code{math} Mathematics}
+                \li{\code{phy} Physics}
+                \li{\code{plt} Programming language theory}
+                \li{\code{tt} Type Theory}
+                \li{\code{def} Definitions (For any topic above)}
+                \li{\code{proj} My Project}
+            }
+        }
+    }
+}

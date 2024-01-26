@@ -1,0 +1,7 @@
+\title{Minecraft ScriptAPI wrapper}
+\p{These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.}
+\ul{
+    \li{[ReScript](https://github.com/CAIMEOX/rescript-bedrock)}
+    \li{[PureScript](https://github.com/CAIMEOX/pure_bedrock)}
+    \li{[Idris2](https://github.com/CAIMEOX/BedrockFP)}
+}

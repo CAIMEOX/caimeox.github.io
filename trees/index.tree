@@ -1,0 +1,11 @@
+\title{The Rabbit Hole}
+\author{CAIMEO}
+\scope{
+    \put\transclude/numbered{false}
+    \transclude{caimeo}
+    \transclude{about}
+}
+\put\transclude/expanded{false}
+\transclude{notes}
+\transclude{posts}
+\transclude{projects}

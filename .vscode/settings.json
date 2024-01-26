@@ -1,0 +1,5 @@
+{
+  "editor.formatOnSave": true,
+  "explorer.excludeGitIgnore": true,
+  "latex-workshop.latex.autoBuild.run": "never",
+}

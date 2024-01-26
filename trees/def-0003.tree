@@ -1,0 +1,4 @@
+\title{Group Element Order}
+\p{
+    For a group #{G} an #{x\in G} define the \strong{order} of #{x} be the smallest positive integer #{n} (denotes #{|x|}) st #{x^n=1}. If such #{n} does not exist then #{x} is said to be of infinite order.
+}
