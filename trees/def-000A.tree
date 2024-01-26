@@ -1,1 +1,9 @@
-\date{2024-01-26}
+\title{Subgroups}
+\p{
+Let #{G} be a group and #{H} be a nonempty subset of #{G} which is closed under operation #{\times} and :
+\ul{
+\li{#{\forall a,b\in H,a\times b\in H}}
+\li{#{\forall h\in H,h^{-1}\in H}}
+}
+then #{H} is a subgroup of #{G}. #{e=h\times h^{-1}} is always in group #{H}
+}

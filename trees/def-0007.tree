@@ -1,1 +1,8 @@
-\date{2024-01-26}
+\title{Monoid}
+\p{
+A set #{S} equipped with a binary operation #{S\times S\to S}, which we will denote #{\circ}, is a \strong{monoid} if it satisfies the following two axioms:
+\ul{
+\li{Associativity: #{\forall a,b,c\in S, (a\circ b) \circ c= a \circ (b \circ c)}}
+\li{Identity: #{\exists e\in S} such that #{\forall g\in S, g\circ e=e\circ g = g}}
+}
+}

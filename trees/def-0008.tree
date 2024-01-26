@@ -1,1 +1,8 @@
-\date{2024-01-26}
+\title{Group Action}
+\p{
+A group action of a group #{G} on a set #{A} is a map from #{G\times A \to A} (#{g\cdot a}), #{\forall g\in G} and #{a\in A} satisfying the following properties:
+\ul{
+\li{#{g_1\cdot (g_2\cdot a)=(g_1g_2)\cdot a}}
+\li{#{\forall a\in A,1\cdot a = a}}
+}
+}

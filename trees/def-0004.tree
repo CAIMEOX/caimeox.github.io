@@ -1,4 +1,4 @@
 \title{Multiplication Table}
 \p{
-    Let #{G= \{g_1, g_2, \cdots, g_n\}} is finite group. The multiplication table is the #{n\times n} matrix whose #{i,j} entry is the group element #{g_i \circ g_j}
+Let #{G= \{g_1, g_2, \cdots, g_n\}} is finite group. The multiplication table is the #{n\times n} matrix whose #{i,j} entry is the group element #{g_i \circ g_j}
 }
