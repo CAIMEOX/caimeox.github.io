@@ -1,0 +1,5 @@
+\title{Relative Topology}
+\taxon{Definition}
+\p{
+Let #{(X,\tau)} be a topological space and #{A\subseteq X}. Then #{\tau_A=\{U\cap A\mid U\in\tau\}} is a topology on #{A} called the \strong{relative topology} on #{A} induced by #{\tau}.
+}

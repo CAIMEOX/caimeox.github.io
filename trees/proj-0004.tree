@@ -1,4 +1,5 @@
 \title{Minecraft ScriptAPI wrapper}
+\taxon{Project}
 \p{These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.}
 \ul{
     \li{[ReScript](https://github.com/CAIMEOX/rescript-bedrock)}

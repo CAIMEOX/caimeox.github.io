@@ -1,0 +1,10 @@
+\title{Topological Space}
+\taxon{Definition}
+\p{
+A \strong{topological space} is a set #{S} together with a collection #{\tau} of subsets called open sets such that
+\ul{
+\li{T1: #{S,\varnothing\in\tau}}
+\li{T2: #{\forall U,V\in\tau, U\cap V\in\tau}}
+\li{T3: The union of any collection of open sets is open.}
+}
+}

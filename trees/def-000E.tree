@@ -1,0 +1,5 @@
+\title{Co-finite Topology}
+\taxon{Definition}
+\p{
+Let #{X} be a set. The \strong{co-finite topology} on #{X} is the topology #{\tau} on #{X} whose open sets are #{\emptyset} and all subsets of #{X} whose complement is finite.
+}

@@ -1,4 +1,5 @@
 \title{Group Homomorphism}
+\taxon{Definition}
 \p{
 Let #{(G,\times)} and #{(H,\circ)} be groups. A map #{\phi : G\to H} such that
 #{\forall x,y\in G,\phi(x\times y)=\phi(x)\circ\phi(y)} is called a \strong{group homomorphism}.

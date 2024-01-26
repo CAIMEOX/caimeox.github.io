@@ -1,4 +1,5 @@
 \title{Command Lisp}
+\taxon{Project}
 \p{
     [Command Lisp](https://github.com/CAIMEOX/CommandLisp) is a simplified language designed for Minecraft Bedrock Command System, characterized by a very high level of abstraction, which is also a dialect of Lisp.
 }

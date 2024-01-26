@@ -1,6 +1,6 @@
 \title{About this website}
 \p{
-    This website is a “forest” created using the Forester tool. I organize my thoughts here on a variety of topics at a granular level; sometimes these thoughts are self-contained, and at times I may organize them into larger notebooks or lecture notes. My nascent ideas about the design of tools for scientific thought are here. I welcome collaboration on any of the topics represented in my forest. 
+    This website is a “forest” created using the Forester tool. I organize my thoughts here on a variety of topics at a granular level; sometimes these thoughts are self-contained, and at times I may organize them into larger notebooks or lecture notes. My nascent ideas about the design of tools for scientific thought are here. I welcome collaboration on any of the topics represented in my forest.
     To navigate my forest, press \code{Ctrl-K}.
 }
 \p{
@@ -15,6 +15,8 @@
                 \li{\code{plt} Programming language theory}
                 \li{\code{tt} Type Theory}
                 \li{\code{def} Definitions (For any topic above)}
+                \li{\code{thm} Theorems and propositions (For any topic above)}
+                \li{\code{eg} Examples}
                 \li{\code{proj} My Project}
             }
         }

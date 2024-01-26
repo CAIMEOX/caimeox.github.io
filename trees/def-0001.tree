@@ -1,10 +1,11 @@
 \title{Group}
+\taxon{Definition}
 \p{
-    A \strong{group} is a set #{G} with a binary operation #{\circ} satisfies the following properties:
-    \ul{
-        \li{Closure: #{\forall a,b\in G,a \circ b\in G}}
-        \li{Associativity: #{\forall a,b,c\in G, (a\circ b) \circ c= a \circ (b \circ c)}}
-        \li{Identity: #{\exists e\in G} such that #{\forall g\in G, g\circ e=e\circ g = g}}
-        \li{Inverse: #{\forall g\in G,\exists g^{-1}\in G} such that #{g\circ g^{-1}=e}}
-    }
+A \strong{group} is a set #{G} with a binary operation #{\circ} satisfies the following properties:
+\ul{
+\li{Closure: #{\forall a,b\in G,a \circ b\in G}}
+\li{Associativity: #{\forall a,b,c\in G, (a\circ b) \circ c= a \circ (b \circ c)}}
+\li{Identity: #{\exists e\in G} such that #{\forall g\in G, g\circ e=e\circ g = g}}
+\li{Inverse: #{\forall g\in G,\exists g^{-1}\in G} such that #{g\circ g^{-1}=e}}
+}
 }

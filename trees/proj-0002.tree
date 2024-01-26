@@ -1,4 +1,5 @@
 \title{Pure Eval}
+\taxon{Project}
 \p{
     [Pure Eval](https://github.com/PureEval/PureEval) was created for the [VoxelGeometry](proj-0003) project, aiming to build a compact yet powerful JavaScript functional utility toolkit.
 }

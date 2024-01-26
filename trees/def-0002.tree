@@ -1,4 +1,5 @@
 \title{Abel Group}
+\taxon{Definition}
 \p{
-    If in a group #{G}, #{\forall a,b\in G, a\circ b=b\circ a} then #{G} is called an \strong{abelian (commutative) group}.
+If in a group #{G}, #{\forall a,b\in G, a\circ b=b\circ a} then #{G} is called an \strong{abelian (commutative) group}.
 }

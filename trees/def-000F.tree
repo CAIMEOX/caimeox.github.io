@@ -1,0 +1,15 @@
+\title{Set of Lambda Terms}
+\taxon{Definition}
+\p{
+Let #{\Lambda} be the set of lambda terms. Then #{\Lambda} is defined inductively as follows:
+(#{V} is the set of variables)
+\ul{
+\li{Variable: #{\forall x\in V, x\in \Lambda}}
+\li{Abstraction: #{\forall x\in V, M\in \Lambda, \lambda x.M\in \Lambda}}
+\li{Application: #{\forall M,N\in \Lambda, (MN)\in \Lambda}}
+}
+}
+\p{
+Another way to define #{\Lambda} is to use the following grammar (The 3 possibilities are separated by \code{|}):
+##{\Lambda = V | \lambda V.\Lambda | \Lambda\Lambda}
+}

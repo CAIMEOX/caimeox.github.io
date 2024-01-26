@@ -1,4 +1,5 @@
 \title{Monoid}
+\taxon{Definition}
 \p{
 A set #{S} equipped with a binary operation #{S\times S\to S}, which we will denote #{\circ}, is a \strong{monoid} if it satisfies the following two axioms:
 \ul{

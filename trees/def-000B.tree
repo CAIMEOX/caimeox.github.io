@@ -1,0 +1,11 @@
+\title{Euclidean Topology}
+\taxon{Definition}
+\p{
+A subset #{S} of #{\mathbb{R}} is said to be open in the \strong{euclidean topology} on #{\mathbb{R}} if #{\forall x\in S} there exists #{a,b\in\mathbb{R}} with #{a<b} st #{x\in(a,b)\in S}.
+}
+
+\p{The dual definition (using closed sets) is also valid.}
+\p{
+For each #{a} and #{b} in #{\mathbb{R}} with #{a<b} the closed intervcal #{[a,b]} is a closed set in the euclidean topology in #{\mathbb{R}}.
+}
+
