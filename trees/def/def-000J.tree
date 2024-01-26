@@ -1,0 +1,7 @@
+\title{Sum of subsets}
+\taxon{Definition}
+\p{
+    Let #{U_1, \dots, U_n} be subsets of a vector space #{V}.
+    The \strong{sum} of #{U_1, \dots, U_n} is defined as
+    ##{U_1 + \dots + U_n = \{u_1 + \dots + u_n \mid u_i \in U_i\}}.
+}

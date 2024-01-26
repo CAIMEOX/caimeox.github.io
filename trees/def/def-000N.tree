@@ -1,0 +1,5 @@
+\title{Finite-Dimensional Vector Space}
+\taxon{Definition}
+\p{
+    A [vector space](def-000H) #{V} is called \strong{finite-dimensional} if some [list](def-000G) of vectors #{v_1, \dots, v_n} [spans](def-000M) #{V}.
+}

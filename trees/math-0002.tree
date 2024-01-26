@@ -1,0 +1,57 @@
+\title{Finite Dimensional Vector Space}
+\date{2024-01-26}
+\taxon{Linear Algebra}
+\import{macros}
+\p{
+    Adding up scalar mulitples of vectors in a list gives a linear combination.
+}
+\transclude{def-000L}
+\p{
+    To talk about a structure, we usually define a collection of this structure.
+    Hence we have span for linear combinations.
+}
+\transclude{def-000M}
+\p{
+    Suppose we have span #{S=\spn(v_1, \dots, v_n)}. (Span is trivially a subspace.)
+    Obviously for all #{v_j (1 \leq j \leq n)}, #{v_j \in S}.
+    Because subspaces are closed under scalar multiplication and addition, every
+    subspace of #{V} containing #{v_1, \dots, v_n} must contain #{S}.
+    Thus we conclude that #{S} is the smallest subspace containing #{v_1, \dots, v_n}.
+}
+\p{
+    The discussion about \strong{spans} leads to a key definition in linear algebra.
+}
+\transclude{def-000N}
+\p{
+    The opposite of finite-dimensional is infinite-dimensional.
+}
+\transclude{def-000O}
+\p{
+    Consider the situation that there is only one way to
+    express a vector #{v} as a linear combination of vectors in a list #{v_1, \dots, v_n}.
+    What property of the list #{v_1, \dots, v_n} does this situation imply? The answer is
+    linear independence.
+}
+\transclude{def-000P}
+\p{
+    If some vectors are not linearly independent, then there are more than one way to
+    express a vector as a linear combination of vectors in the list. This leads to 
+    the following definition.
+}
+\transclude{def-000Q}
+\p{
+    The following lemma is a direct consequence of the definition of linear independence.
+    It states that for a given linearly dependent list, we can always remove a vector
+    without changing the span.
+}
+\transclude{thm-0001}
+\transclude{thm-0002}
+\p{
+    We have discussed linear independent lists and spanning lists.
+    Now we are ready to define a basis.
+}
+\transclude{def-000R}
+\p{
+    For instance, we have standard basis #{\{e_1, \dots, e_n\}} for #{\mathbb{F}^n},
+    where #{e_i} is the vector with #{1} at #{i}-th position and #{0} elsewhere.
+}

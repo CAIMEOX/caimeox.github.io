@@ -1,0 +1,11 @@
+\title{Linear Subspace}
+\taxon{Definition}
+\p{
+    A subset #{U} of a vector space #{V} over a field #{F} is called a \strong{subspace} of #{V} if #{U} is itself a \strong{vector space} over #{F} with the operations of addition and scalar multiplication on #{V}.
+    The subset also satisfies the following axioms (vice versa):
+    \ul{
+        \li{Additive identity: #{0\in U}}
+        \li{Closure: #{\forall u,v\in U, u+v\in U}}
+        \li{Closed Scalar multiplication: #{\forall u\in U, \forall c\in F, cu\in U}}
+    }
+}

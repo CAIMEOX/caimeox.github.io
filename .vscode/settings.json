@@ -1,5 +1,12 @@
 {
-  "editor.formatOnSave": true,
   "explorer.excludeGitIgnore": true,
   "latex-workshop.latex.autoBuild.run": "never",
+  "filewatcher.commands": [
+    {
+      "match":"trees/",
+      "isAsync": true,
+      "cmd": "cd ${currentWorkspace} && make",
+      "event": "onFolderChange"
+    }
+  ]
 }

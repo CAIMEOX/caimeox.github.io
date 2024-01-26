@@ -172,7 +172,7 @@
             <nav class="nav">
               <div class="logo">
                 <a href="index.xml" title="Home">
-                  <xsl:text>« Home</xsl:text>
+                  <xsl:text>Home</xsl:text>
                 </a>
               </div>
             </nav>

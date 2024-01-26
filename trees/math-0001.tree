@@ -1,0 +1,31 @@
+\title{Vector Space}
+\date{2024-01-26}
+\taxon{Linear Algebra}
+\p{
+    The motivation for the definition of a vector space comes from the properties
+    of vectors in Euclidean space #{\mathbb{R}^n} and #{\mathbb{C}^n}.
+    The definition abstracts and generalizes these properties.
+}
+\transclude{def-000H}
+\p{
+    When dealing with vector spaces, we usually interested only in subspaces.
+    And the union of subspaces is rarely a subspace, thus
+    we are more interested with sums of subspaces.
+}
+\transclude{def-000I}
+\p{
+    After that we can define the sum of subsets.
+}
+\transclude{def-000J}
+\p{
+    The sum of subspaces is the smallest subspace that contains all the subspaces.
+}
+\p{
+    Every element in #{U_1 + \dots + U_n} can be written as a sum of elements #{u_i} in #{U_i}:
+    ##{
+        u_1+\cdots+u_n
+    }
+    We will interested in cases where each vector in #{U_1 + \dots + U_n} can be represented in the form above
+    in only one way. This leads to the definition of direct sum.
+}
+\transclude{def-000K}

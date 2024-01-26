@@ -1,0 +1,5 @@
+\title{Length of linearly independent list #{\leq} length of spanning list}
+\taxon{Lemma}
+\p{
+    In a finite dimensional vector space, the length of a linearly independent list is less than or equal to the length of a spanning list.
+}

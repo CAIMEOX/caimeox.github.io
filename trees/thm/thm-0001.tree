@@ -1,0 +1,11 @@
+\title{Linear Dependence Lemma}
+\taxon{Lemma}
+\import{macros}
+\p{
+    Let #{v_1, \dots, v_n} be vectors in a vector space #{V} over a field #{\mathbb{F}}.
+    If #{v_1, \dots, v_n} are linearly dependent, then there exists #{1 \leq i \leq n} such that
+    \ul{
+        \li{#{v_i \in \spn(v_1, \dots, v_{i-1})}}
+        \li{Remove #{v_i} from the list #{v_1, \dots, v_n} and the span does not change}
+    }
+}

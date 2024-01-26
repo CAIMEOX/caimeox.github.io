@@ -1,0 +1,5 @@
+\title{Infinite-dimensional vector space}
+\taxon{Definition}
+\p{
+    A vector space #{V} is called \strong{infinite-dimensional} if it is not [finite-dimensional](def-000N).
+}

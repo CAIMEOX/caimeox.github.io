@@ -1,0 +1,29 @@
+\title{Vector Space}
+\taxon{Definition}
+\p{
+    A vector space over a [field](def-0006) #{F} is a non-empty set #{V} together with a binary operation and a binary function that satisfy the axioms listed below. 
+    In this context, the elements of #{F} are commonly called \strong{vectors}, and the elements of #{F} are called \strong{scalars}.
+    \ul{
+        \li{Commutativity: #{
+            \forall x, y \in V, x + y = y + x
+        } }
+        \li{Associativity: #{
+            \forall x, y, z \in V, (x + y) + z = x + (y + z)
+        } }
+        \li{Additive Identity: #{
+            \exists 0 \in V \text{ such that } \forall x \in V, x + 0 = x
+        } }
+        \li{Multiplicative Identity: #{
+            \forall x \in V, 1x = x
+        } }
+        \li{Additive Inverse: #{
+            \forall x \in V, \exists y \in V \text{ such that } x + y = 0
+        } }
+        \li{Distributivity: #{
+            \forall x, y \in V, \forall c, d \in F, c(x + y) = cx + cy, (c + d)x = cx + dx
+        } }
+    }
+}
+\p{
+    Elements of a vector space are called \strong{vectors} or \strong{points}.
+}

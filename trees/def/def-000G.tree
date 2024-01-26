@@ -1,0 +1,24 @@
+\title{List}
+\taxon{Definition}
+\p{
+    Let #{n} be a natural number. A \strong{list} of length #{n} is an ordered collection of #{n} elements.
+    ##{
+        (x_1, x_2, \dots, x_n)
+    }
+    Two lists are equal if and only if they have the same length and the same elements in the same order.
+}
+
+\strong{Addition in Lists}
+\p{
+    Let #{n} be a natural number. Let #{(x_1, x_2, \dots, x_n)} and #{(y_1, y_2, \dots, y_n)} be lists of length #{n}. The \strong{sum} of these lists is the list #{(x_1 + y_1, x_2 + y_2, \dots, x_n + y_n)}.
+}
+
+\strong{Additive Inverse in Lists}
+\p{
+    Let #{n} be a natural number. Let #{x=(x_1, x_2, \dots, x_n)} be a list of length #{n}. The \strong{additive inverse} of this list is the list #{-x=(-x_1, -x_2, \dots, -x_n)}.
+}
+
+\strong{Scalar Multiplication in Lists}
+\p{
+    Let #{n} be a natural number. Let #{x=(x_1, x_2, \dots, x_n)} be a list of length #{n}. Let #{c} be a real number. The \strong{scalar multiplication} of #{c} and #{x} is the list #{cx=(cx_1, cx_2, \dots, cx_n)}.
+}

@@ -1,0 +1,15 @@
+\title{Linear Span}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{V} be a vector space over a field #{F}.
+    Let #{v_1, \dots, v_n} be vectors in #{V}.
+    The \strong{span} of #{v_1, \dots, v_n} is defined as
+    ##{
+        \spn(v_1, \dots, v_n) = \{a_1 v_1 + \dots + a_n v_n \mid a_i \in F\}
+    }
+    The span of empty set is defined to be #{\{0\}}.    
+}
+\p{
+    If #{\spn(v_1, \dots, v_n) = V}, we say that #{v_1, \dots, v_n} \strong{spans} #{V}.
+}

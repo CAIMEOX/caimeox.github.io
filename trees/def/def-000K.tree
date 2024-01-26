@@ -1,0 +1,11 @@
+\title{Direct Sum}
+\taxon{Definition}
+\p{
+    Let #{U_1, \dots, U_n} be subspaces of a vector space #{V}.
+    The \strong{direct sum} of #{U_1, \dots, U_n} is defined as
+    ##{
+        U_1 \oplus \dots \oplus U_n = \{u_1 + \dots + u_n \mid u_i \in U_i\}
+    }
+    if every element in #{U_1 \oplus \dots \oplus U_n} can be written as #{u_1 + \dots + u_n } in only one way.
+    This definition requires every vector in the sum have a unique representation.
+}

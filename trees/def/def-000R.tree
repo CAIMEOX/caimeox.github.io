@@ -1,0 +1,11 @@
+\title{Basis}
+\taxon{Definition}
+\p{
+    A basis of #{V} is a list of vectors in #{V}
+    that is linearly independent and spans #{V}. 
+}
+\p{
+    \strong{Criterion for basis}
+    A list of vectors #{\{v_1, \dots, v_n\}} is a basis of #{V} if and only if
+    every #{v \in V} can be written \strong{uniquely} as a linear combination of #{v_1, \dots, v_n}.
+}
