@@ -1,0 +1,15 @@
+\title{Weakening}
+\taxon{Definition}
+\import{macros}
+\p{
+    Weakening rule asserts that we can add a variable to the context.
+    ##{
+        \frac{
+            \Gamma\vdash A\type
+            \quad 
+            \Gamma,\Delta\vdash \mathcal{J}
+        }{
+            \Gamma,x:A,\Delta\vdash \mathcal{J}
+        }W 
+    }
+}

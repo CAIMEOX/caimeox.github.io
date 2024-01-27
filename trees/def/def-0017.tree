@@ -1,0 +1,34 @@
+\title{Dependent type theory: Judgments}
+\taxon{Definition}
+\import{macros}
+\scope{
+    \p{
+        There are four kinds of judgments in Martin Lof's dependent type theory:
+    }
+    \ul{
+        \li{
+            #{A} is a well-formed type in context #{\Gamma}
+            ##{
+                \Gamma \vdash A \type
+            }
+        }
+        \li{
+            #{A} and #{B} are judgmentally equal types in context #{\Gamma}
+            ##{
+                \Gamma \vdash A \equiv B \type
+            }
+        }
+        \li{
+            #{a} is a term of type #{A} in context #{\Gamma}
+            ##{
+                \Gamma \vdash a : A
+            }
+        }
+        \li{
+            #{a} and #{b} are judgmentally equal terms of type #{A} in context #{\Gamma}
+            ##{
+                \Gamma \vdash a \equiv b : A
+            }
+        }
+    }
+}

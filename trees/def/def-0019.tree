@@ -1,0 +1,10 @@
+\title{Section of Type Family}
+\taxon{Definition}
+\p{
+    Let #{B} be a [type family](def-0018) over #{A} in context #{\Gamma}.
+    A \strong{section} of #{B} is a term #{b} of type #{B(x)} in context #{\Gamma,x:A}.
+    ##{
+        \Gamma, x:A \vdash b : B(x)
+    }
+    Alternatively, we say that #{b} is a term of #{B(x)} indexed by #{x:A} in context #{\Gamma}.
+}

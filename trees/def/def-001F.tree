@@ -1,0 +1,16 @@
+\title{Generic Elements}
+\taxon{Definition}
+\import{macros}
+\p{
+    The rule for the generic element asserts that 
+    any hypothetical element #{x:A} in context #{\Gamma,x:A}
+    is also an element of #{A} in context #{\Gamma,x:A}.
+    ##{
+        \frac{
+            \Gamma\vdash A\type
+        }{
+            \Gamma,x:A\vdash x:A
+        }\delta
+    }
+    This rule is also called the \strong{variable rule}.   
+}

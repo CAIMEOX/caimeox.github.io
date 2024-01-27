@@ -1,6 +1,6 @@
 \title{Untyped Lambda Calculus}
 \date{2024-01-26}
-\taxon{Notes}
+\taxon{Type Theory}
 \p{
 In dealing with functions there are two \strong{construction principles} and one \strong{evalutaion rule}
 \ul{

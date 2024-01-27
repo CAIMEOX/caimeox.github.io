@@ -1,0 +1,59 @@
+\title{
+    Formation of contexts, types and terms
+}
+\taxon{Definition}
+\import{macros}
+\p{
+    The following rules follow from the presuppotion
+    about contexts, types and terms, can be used freely.
+}
+\ul{
+    \li{
+        ##{
+            \frac{
+                \Gamma,x:A\vdash B(x)\type
+            }{
+                \Gamma\vdash A\type
+            }
+        }
+    }
+    \li{
+        ##{
+            \frac{
+                \Gamma\vdash A\equiv B\type
+            }{
+                \Gamma\vdash A\type
+            }
+            \quad
+            \frac{
+                \Gamma\vdash A\equiv B\type
+            }{
+                \Gamma\vdash B\type
+            }
+        }
+    }
+    \li{
+        ##{
+            \frac{
+                \Gamma\vdash a:A
+            }{
+                \Gamma\vdash A\type
+            }
+        }
+    }
+    \li{
+        ##{
+            \frac{
+                \Gamma\vdash a\equiv b:A
+            }{
+                \Gamma\vdash a:A
+            }
+            \quad 
+            \frac{
+                \Gamma\vdash a\equiv b:A
+            }{
+                \Gamma\vdash b:A
+            }
+        }
+    }
+}

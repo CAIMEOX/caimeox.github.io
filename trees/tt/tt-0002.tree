@@ -1,0 +1,111 @@
+\title{Introduction to Type Theory}
+\taxon{Type Theory}
+\date{2024-01-27}
+\p{This is a note on dependent type theory.}
+\p{
+    \strong{Homotopy type theory} is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
+    The set-theoretic foundation has two two layers:
+    \ul{
+        \li{the deductive system of first-order logic}
+        \li{the theory of a particular theory, such as ZFC}
+    } 
+    Type theory itself is a deductive system, which has one basic notation: \em{types}.
+    Propositions are identified with types.
+    
+    Thus, the activity of proving a theorem is identified with 
+    constructing a \em{inhabitant} of a certain type.
+}
+\p{
+    Informally, a deductive system is a collection of rules for deriving \strong{judgments}. 
+    The judgment is considered to be the external of the theory, living in the \strong{metatheory}.
+}
+\p{
+    In first order logic, there is only one kind of judgment: a proposition has a proof.
+    A proposition #{P} gives rise to a judgment "#{P} has a proof".
+    The proposition #{P} lives inside the theory, while the judgment "#{P} has a proof" lives in the metatheory. 
+}
+\p{
+    In type theory, analogous to first order logic,
+    "#{P} has a proof" is written as "#{p:P}" (Type #{P} has a term #{p}).
+    \ul{
+        \li{If #{P} is a proposition, then #{p} is a \strong{witness} to the provability of #{P}, 
+        or \strong{evidence} of the truth of #{P}.}
+        \li{#{p:P} can also be interpreted as #{p\in P},
+        but #{p:P} is a judgment while #{p\in P} is a proposition.}
+    }
+    Working inside type theory we can't write down statements like
+    "if #{p:P} then ..." nor can we disprove the judgment "#{p:P}".
+}
+\p{
+    A key difference between type theory and set theory is the equality.
+    The notion of equality in set theory is simply a proposition.
+    Howerver, in type theory, there are two kinds of equality.
+    \ul{
+        \li{The first kind is the \strong{propositional equality} #{a=_Ab}.
+        This is a proposition}
+        \li{The second kind is the \strong{judgmental equality} #{a\equiv b:A}.
+        This is a judgment}
+    }
+    Two terms #{a:A} and #{b:A} are propositionally equal if you can prove #{a =_A b} , 
+    or equivalently if you can construct a term #{h : a =_A b}.
+}
+\scope{
+    \p{
+        In type theory there is also a requirement for a judgment-level equality.
+        This is called \strong{judgmental equality}, meaning "equal by definition".
+    }
+    \transclude{def-0015}
+    \p{
+        judgments may depend on \em{assumptions} of the form #{x:A} where #{x} is a
+        variable and #{A} is a type. And the collection (actually ordered list) of such assumptions is called 
+        the \strong{context}, denoted #{\Gamma}. (from a topological point of view it 
+        may be thought of as a \strong{parameters space}).
+        The role of a context is to declare what \strong{hypothetical terms} are assumed, 
+        along with their types.
+        The notation #{\vdash} means making conclusion from assumptions.
+    }
+}
+\p{
+    Remember the difference between axiom and (inference) rules.
+    \ul{
+        \li{Rules allow us to conclude one judgment from a collection of other judgments.}
+        \li{Axioms are judgments that are assumed to be true without proof.}
+    }
+}
+\p{
+    We start by introduction to Matrin Lof's dependent type theory. 
+}
+\transclude{def-0017}
+\p{
+    All judgments are context dependent, 
+    and indeed that even the types of the variables in a context
+    may depend on any previous declared variables.
+
+    To introduce types dependent on terms, 
+    we need the notation of type families.
+}
+\transclude{def-0018}
+\p{
+    Now we can define a term of a type family, that is, a section of a type family.
+}
+\transclude{def-0019}
+\p{
+    We now ready to present the inference rules for dependent type theory.
+    These rules are known as the \strong{structual rules} of the theory.
+    There are 6 sets of rules:
+    \ul{
+        \li{Formation contexts, types and terms}
+        \li{Postulating that judgmental equality is an equivalence relation}
+        \li{Vairable conversion}
+        \li{Substitution}
+        \li{Weakening}
+        \li{Generic element}
+    }
+}
+\transclude{def-001A}
+\transclude{def-001B}
+\transclude{def-001C}
+\transclude{def-001D}
+\transclude{def-001E}
+\transclude{def-001F}
+

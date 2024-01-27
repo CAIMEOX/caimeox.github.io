@@ -1,0 +1,39 @@
+\title{Substitution}
+\taxon{Definition}
+\import{macros}
+\p{
+    The substitution rule postulates that we can substitute a term for a variable.
+    ##{
+        \frac{
+            \Gamma\vdash a:A
+            \quad
+            \Gamma,x:A,\Delta\vdash \mathcal{J}
+        }{
+            \Gamma,\Delta[x:=a]\vdash \mathcal{J}[x:=a]
+        }
+    }
+    The notation #{\Gamma,\Delta[x:=a]} means that we substitute #{a} for #{x} in #{\Delta}.
+}
+\p{
+    With the substitution rule, we need two more \em{congruence rules} to
+    convert judgmental equality of terms and types.
+    ##{
+        \frac{
+            \Gamma\vdash a\equiv a':A
+            \quad
+            \Gamma,x:A,\Delta\vdash B \type
+        }{
+            \Gamma,\Delta[x:=a]\vdash B[x:=a]\equiv B[x:=a'] \type
+        }
+    }
+
+    ##{
+        \frac{
+            \Gamma\vdash A\equiv A'\type
+            \quad
+            \Gamma,x:A,\Delta\vdash b:A
+        }{
+            \Gamma,\Delta[x:=a]\vdash b[x:=a]\equiv b[x:=a']:A'[x:=a] \type
+        }
+    }
+}

@@ -14,6 +14,7 @@
       devShells."${system}".default = pkgs.mkShell {
         buildInputs = [ 
           pkgs.fswatch
+          pkgs.nodePackages.live-server
           pkgs.texlive.combined.scheme-full
           forester.packages."${system}".default ];
         shellHook = ''

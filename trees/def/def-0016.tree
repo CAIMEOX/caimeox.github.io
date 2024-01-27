@@ -1,0 +1,6 @@
+\title{Negative Type}
+\taxon{Definition}
+\p{
+    A \strong{negative type} is a type whose eliminators are regarded as primary.
+    Its constructors can be derived from eliminators.
+}

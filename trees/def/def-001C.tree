@@ -1,0 +1,27 @@
+\title{Variable Conversion}
+\taxon{Definition}
+\import{macros}
+\p{
+    This rule postulates that we can
+    convert the type of a variable to a judgmentally equal type.
+    ##{
+        \frac{
+            \Gamma\vdash A\equiv A'\type
+            \quad
+            \Gamma,x:A,\Delta\vdash B(x)\type
+        }{
+            \Gamma,x:A',\Delta\vdash B(x)\type
+        }
+    }
+    Similarly, we can convert judgmental equality of types and terms.
+    We state all of them at once using a \em{generic judgment thesis} #{\mathcal{J}}.
+    ##{
+        \frac{
+            \Gamma\vdash A\equiv A'\type
+            \quad
+            \Gamma,x:A,\Delta\vdash \mathcal{J}
+        }{
+            \Gamma,x:A',\Delta\vdash \mathcal{J}
+        }
+    }
+}

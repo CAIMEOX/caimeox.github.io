@@ -1,0 +1,57 @@
+\title{
+    Judgmental equality is equivalence relation
+}
+\taxon{Definition}
+\import{macros}
+\p{
+    judgmental equality on types and on elements is an [equivalence relation](def-000X) 
+    simply postulate that these relations are reflexive, symmetric, and transitive:
+}
+\ul{
+    \li{
+        ##{
+            \frac{
+                \Gamma\vdash a:A
+            }{
+                \Gamma\vdash a\equiv a:A
+            }
+            \quad
+            \frac{
+                \Gamma\vdash a\equiv b:A
+            }{
+                \Gamma\vdash b\equiv a:A
+            }
+            \quad
+            \frac{
+                \Gamma\vdash a\equiv b:A
+                \quad
+                \Gamma\vdash b\equiv c:A
+            }{
+                \Gamma\vdash a\equiv c:A
+            }
+        }
+    }
+    \li{
+        ##{
+            \frac{
+                \Gamma\vdash A\type
+            }{
+                \Gamma\vdash A\equiv A\type
+            }
+            \quad
+            \frac{
+                \Gamma\vdash A\equiv B\type
+            }{
+                \Gamma\vdash B\equiv A\type
+            }
+            \quad
+            \frac{
+                \Gamma\vdash A\equiv B\type
+                \quad
+                \Gamma\vdash B\equiv C\type
+            }{
+                \Gamma\vdash A\equiv C\type
+            }
+        }
+    }
+}

@@ -1,3 +1,4 @@
 % snake case for inline math
 % camel case for outer environment
 \def\spn{\text{span}}
+\def\type{\space\text{type}}

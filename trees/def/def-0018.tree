@@ -1,0 +1,13 @@
+\title{Type Family}
+\taxon{Definition}
+\import{macros}
+\p{
+    Consider a type #{A} in context #{\Gamma}.
+    A \strong{family} of types over #{A} in context #{\Gamma}
+    is a type #{B(x)} in context #{\Gamma, x:A}.
+    ##{
+        \Gamma, x:A \vdash B(x) \type
+    }
+    #{B} is a family of types over #{A} in context #{\Gamma}.
+    Alternatively, we say that #{B(x)} is a type \strong{indexed} by #{x:A} in context #{\Gamma}.
+}

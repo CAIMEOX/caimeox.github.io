@@ -1,0 +1,12 @@
+\title{Judgemental Equality}
+\taxon{Definition}
+\p{
+    \strong{Judgemental equality} of terms is given by the following judgement:
+    ##{
+        \Gamma\vdash a\equiv a':A
+    }
+    #{a} and #{a'} are judgementally equal terms of type #{A} in context #{\Gamma}.
+}
+\p{
+    Note that the notation #{\equiv} binds more loosely than anything else.
+}

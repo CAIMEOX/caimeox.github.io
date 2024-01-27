@@ -1,6 +1,9 @@
 {
   "explorer.excludeGitIgnore": true,
   "latex-workshop.latex.autoBuild.run": "never",
+  "liveServer.settings.root": "output/",
+  "liveServer.settings.fullReload": true,
+  "liveServer.settings.useWebExt": true,
   "filewatcher.commands": [
     {
       "match":"trees/",
@@ -8,5 +11,6 @@
       "cmd": "cd ${currentWorkspace} && make",
       "event": "onFolderChange"
     }
-  ]
+  ],
+  "cmake.configureOnOpen": false
 }
