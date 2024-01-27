@@ -1,0 +1,21 @@
+\title{Upper Bound and Lower Bound}
+\taxon{Definition}
+\p{
+    Let a subset #{S} of a [partially ordered](def-000Y) set #{(P, \leq)},
+    #{S} is bounded above if there exists #{x \in P} such that #{\forall y \in S, y \leq x}. And #{x} is called an \strong{upper bound} of #{S}.
+    Dually, #{S} is bounded below if there exists #{x \in P} such that #{\forall y \in S, x \leq y}. And #{x} is called a \strong{lower bound} of #{S}.
+}
+\scope{
+    \p{\strong{Supremum (least upper bound)}}
+    \p{
+    An element #{x\in P} is a supremum of #{S},
+    if for all upper bounds #{z \in P} of #{S}, #{x \leq z}.
+    Denoted as #{x = \sup S}.
+    }
+    \p{\strong{Infimum (greatest lower bound)}}
+    \p{
+    An element #{x\in P} is a infimum of #{S},
+    if for all lower bounds #{z \in P} of #{S}, #{z \leq x}.
+    Denoted as #{x = \inf S}.
+    }
+}

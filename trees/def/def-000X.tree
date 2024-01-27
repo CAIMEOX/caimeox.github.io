@@ -1,0 +1,17 @@
+\title{Equivalence relation}
+\taxon{Definition}
+\p{
+    An equivalence relation #{R} on a set #{A} is a [relation](def-000W) that is reflexive,
+    symmetric, and transitive.
+    \ul{
+        \li{Reflexive:
+            #{\forall x\in A, xRx}
+        }
+        \li{Symmetric:
+            #{\forall x,y\in A, xRy\implies yRx}
+        }
+        \li{Transitive:
+            #{\forall x,y,z\in A, xRy\land yRz\implies xRz}
+        }
+    }
+}

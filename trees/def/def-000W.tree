@@ -1,0 +1,9 @@
+\title{Relation}
+\taxon{Definition}
+\p{
+    A \strong{relation} #{R} is a subset of the Cartesian product of two sets #{A} and
+    #{B}, i.e. #{R\subseteq A\times B}.
+    If #{(a,b)\in R}, we write #{aRb}.
+
+    A relation that between #{X} and itself is called \strong{homogeneous relation}.
+}

@@ -1,0 +1,5 @@
+\title{Least upper bound property}
+\taxon{Definition}
+\p{
+    A set #{S} has the least upper bound property if every non-empty subset #{T} of #{S} that is bounded above has a least upper bound #{\sup T}.
+}

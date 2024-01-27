@@ -1,0 +1,6 @@
+\title{Cartesian product}
+\taxon{Definition}
+\p{
+    Given two sets #{A} and #{B}, the Cartesian product #{A\times B} is the set
+    of all ordered pairs #{(a,b)} where #{a\in A} and #{b\in B}.
+}

@@ -1,0 +1,6 @@
+\title{Principle of Comprehension}
+\taxon{Definition}
+\p{
+    Given a set #{A} and a property #{P(x)}, there exists a set #{B} such that
+    #{x\in B \iff x\in A \land P(x)}.
+}

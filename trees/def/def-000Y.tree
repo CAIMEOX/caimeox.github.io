@@ -1,0 +1,11 @@
+\title{Partial Order}
+\taxon{Definition}
+\p{
+    A \strong{(non-strict) partial order} is a relation #{\leq} that is reflexive, antisymmetric and transitive.
+    \ul{
+        \li{Reflexive: #{a\leq a}}
+        \li{Antisymmetric: #{a\leq b} and #{b\leq a} implies #{a=b}}
+        \li{Transitive: #{a\leq b} and #{b\leq c} implies #{a\leq c}}
+    }
+    A non-strict partial order is also known as an antisymmetric [preorder](def-000Z).
+}

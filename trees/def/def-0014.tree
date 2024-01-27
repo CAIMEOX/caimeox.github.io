@@ -1,0 +1,8 @@
+\title{Real Number System}
+\taxon{Definition}
+\p{
+    The element of #{\mathbb{R}} is a [Dedekind Cut](def-0013) in #{\mathbb{Q}}.
+    ##{
+        \mathbb{R} := \{ L | (L,R) \text{ is a Dedekind Cut} \}
+    }
+}

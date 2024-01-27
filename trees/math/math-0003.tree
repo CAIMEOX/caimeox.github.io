@@ -1,0 +1,35 @@
+\title{Set Theory}
+\date{2024-01-26}
+\taxon{Set Theory}
+\p{
+    We will first start by introducing sets
+}
+\transclude{def-000S}
+\p{
+    And principles of set theory
+}
+\transclude{def-000T}
+\transclude{def-000U}
+\p{
+    We then define the Cartesian product of two sets
+}
+\transclude{def-000V}
+\p{
+    With the Cartesian product, we can define the relation
+}
+\transclude{def-000W}
+\transclude{def-000X}
+\p{
+    One of the most important relations is the order relation.
+    The basic order relation is the preorder.
+}
+\transclude{def-000Z}
+\transclude{def-000Y}
+\p{
+    And the strict partial order (notice the difference between asymmetric and antisymmetric)
+}
+\transclude{def-0010}
+\p{
+    With the definition of order, we can define the upper bound and lower bound
+}
+\transclude{def-0011}

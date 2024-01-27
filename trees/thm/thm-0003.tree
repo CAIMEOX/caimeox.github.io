@@ -1,0 +1,6 @@
+\title{Existence theorem}
+\taxon{Theorem}
+\p{
+    There exists an ordered field #{\mathbb{R}} that satisfies the [least upper bound property](def-0012).
+    Moreover #{\mathbb{R}} contains #{\mathbb{Q}} as a subfield.
+}

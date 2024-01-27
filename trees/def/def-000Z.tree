@@ -1,0 +1,9 @@
+\title{Preorder}
+\taxon{Definition}
+\p{
+    A \strong{preorder} is a relation #{\leq} that is reflexive and transitive.
+    \ul{
+        \li{Reflexive: #{a\leq a}}
+        \li{Transitive: #{a\leq b} and #{b\leq c} implies #{a\leq c}}
+    }
+}

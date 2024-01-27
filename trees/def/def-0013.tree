@@ -1,0 +1,11 @@
+\title{Dedekind cuts}
+\taxon{Definition}
+\p{
+    A Dedekind cut is a partition of the rationals #{\mathbb{Q}} into two non-empty sets #{L} and #{R} such that:
+    \ul{
+        \li{#{L\neq\emptyset}}
+        \li{#{R\neq\emptyset}}
+        \li{if #{x,y\in\mathbb{Q}, x<y} and #{y\in L} then #{x\in L}}
+        \li{if #{p\in L} then exists #{q\in L} such that #{p<q}}
+    }
+}

@@ -1,0 +1,49 @@
+\title{The construction of #{\mathbb{R}}}
+\taxon{Math Analysis}
+\date{2024-01-27}
+\p{
+    We start constructing #{\mathbb{R}} from #{\mathbb{Q}} by a way that it satisfies the existence theorem,
+    the core of construction.
+}
+\transclude{thm-0003}
+\p{
+    The least-upper-bound property mentioned above is defined:
+}
+\transclude{def-0012}
+\p{
+    Why do we need the least-upper-bound property?
+    Consider the set #{S = \{x \in \mathbb{Q} | x^2 < 2\}}.
+    #{S} is bounded above by #{2}, but it does not have a least upper bound in #{\mathbb{Q}}.
+    Therefore we can't express #{\sqrt{2}} in field #{\mathbb{Q}} since some "gaps" exist.
+    This fact motivates us to construct a more complete field #{\mathbb{R}}.
+    We have constructed #{\mathbb{Q}} from #{\mathbb{Z}}, and now we construct #{\mathbb{R}} from #{\mathbb{Q}}.
+}
+\p{
+    Then we should find a way to express "#{\sqrt{2}}" using #{\mathbb{Q}}.
+    A crucial idea is \strong{approximating} #{\sqrt{2}} by a sequence of rational numbers.
+    ##{
+        \sqrt{2} := \{ p^2<2 \lor p<0, p\in\mathbb{Q} \}
+    }
+    We can cut the number axis into two pieces by #{\sqrt{2}}, such cut is called a \strong{Dedekind cut}. 
+    A cut should be well-defined rather than just an intuitive concept.
+}
+\p{
+    As we use set theory to construct #{\mathbb{R}}, it motivates us to define Dedekind cut as a set.
+    It should satisfies some properties:
+    \ul{
+        \li{Can't be empty or the whole #{\mathbb{Q}}}
+        \li{Closed downward}
+        \li{Contains not the largest number}
+    }
+    A formal definition is given below:
+}
+\transclude{def-0013}
+\p{
+    Now we can defined the real number as a set of Dedekind cuts.
+}
+\transclude{def-0014}
+\p{
+    Now define the order relation on #{\mathbb{R}}.
+    We have defined #{\mathbb{R}} as the set of Dedekind cuts, so we can define the strict partial order relation #{<} on #{\mathbb{R}} by the set operation #{\subset}.
+    The irreflexive, asymmetric and transitive properties are trivial. 
+}

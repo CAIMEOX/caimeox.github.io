@@ -1,0 +1,18 @@
+\title{Set}
+\taxon{Definition}
+\p{
+    A set is a collection of objects.
+}
+\p{
+    \strong{Element}
+    #{x\in A} means #{A} is a collection and #{x} is an element of a collection.
+}
+\p{
+    \strong{Subset}
+    #{A\subseteq B} means #{A} is a \strong{subset} of #{B}.
+    #{A\subset B} means #{A} is a \strong{proper subset} of #{B}.
+}
+\p{
+    \strong{Power Set}
+    #{\mathcal{P}(A)} is the set of all subsets of #{A}.
+}

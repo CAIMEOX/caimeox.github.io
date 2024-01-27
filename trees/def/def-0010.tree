@@ -1,0 +1,10 @@
+\title{Strict partial orders}
+\taxon{Definition}
+\p{
+    A strict partial order is a relation #{<} that is irreflexive, asymmetric and transitive.
+    \ul{
+        \li{Irreflexive: #{\neg(a<a)}}
+        \li{Asymmetric: #{a<b} implies #{\neg(b<a)}}
+        \li{Transitive: #{a<b} and #{b<c} implies #{a<c}}
+    }
+}
