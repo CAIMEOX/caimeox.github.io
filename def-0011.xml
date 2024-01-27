@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2585</anchor>  <taxon>Definition</taxon> <addr>def-0011</addr>  <route>def-0011.xml</route>   <title>Upper Bound and Lower Bound</title> </frontmatter> <mainmatter><p>
+    Let a subset <tex>S</tex> of a <link href="def-000Y.xml" type="local" addr="def-000Y" title="Partial Order">partially ordered</link> set <tex>(P,  \leq )</tex>,
+    <tex>S</tex> is bounded above if there exists <tex>x  \in  P</tex> such that <tex>\forall  y  \in  S, y  \leq  x</tex>. And <tex>x</tex> is called an <strong>upper bound</strong> of <tex>S</tex>.
+    Dually, <tex>S</tex> is bounded below if there exists <tex>x  \in  P</tex> such that <tex>\forall  y  \in  S, x  \leq  y</tex>. And <tex>x</tex> is called a <strong>lower bound</strong> of <tex>S</tex>.
+</p>
+    <p><strong>Supremum (least upper bound)</strong></p>
+    <p>
+    An element <tex>x \in  P</tex> is a supremum of <tex>S</tex>,
+    if for all upper bounds <tex>z  \in  P</tex> of <tex>S</tex>, <tex>x  \leq  z</tex>.
+    Denoted as <tex>x =  \sup  S</tex>.
+    </p>
+    <p><strong>Infimum (greatest lower bound)</strong></p>
+    <p>
+    An element <tex>x \in  P</tex> is a infimum of <tex>S</tex>,
+    if for all lower bounds <tex>z  \in  P</tex> of <tex>S</tex>, <tex>z  \leq  x</tex>.
+    Denoted as <tex>x =  \inf  S</tex>.
+    </p>
+</mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2586</anchor>  <taxon>Set Theory</taxon> <addr>math-0003</addr>  <route>math-0003.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Set Theory</title> </frontmatter> <mainmatter><p>
+    We will first start by introducing sets
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2587</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>Set</title> </frontmatter> <mainmatter><p>
+    A set is a collection of objects.
+</p><p><strong>Element</strong>
+    <tex>x \in  A</tex> means <tex>A</tex> is a collection and <tex>x</tex> is an element of a collection.
+</p><p><strong>Subset</strong>
+    <tex>A \subseteq  B</tex> means <tex>A</tex> is a <strong>subset</strong> of <tex>B</tex>.
+    <tex>A \subset  B</tex> means <tex>A</tex> is a <strong>proper subset</strong> of <tex>B</tex>.
+</p><p><strong>Power Set</strong>
+    <tex>\mathcal {P}(A)</tex> is the set of all subsets of <tex>A</tex>.
+</p></mainmatter> </tree><p>
+    And principles of set theory
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2588</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
+    Two sets are equal if and only if they have the same elements.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2589</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
+    Given a set <tex>A</tex> and a property <tex>P(x)</tex>, there exists a set <tex>B</tex> such that
+    <tex>x \in  B  \iff  x \in  A  \land  P(x)</tex>.
+</p></mainmatter> </tree><p>
+    We then define the Cartesian product of two sets
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2590</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
+    Given two sets <tex>A</tex> and <tex>B</tex>, the Cartesian product <tex>A \times  B</tex> is the set
+    of all ordered pairs <tex>(a,b)</tex> where <tex>a \in  A</tex> and <tex>b \in  B</tex>.
+</p></mainmatter> </tree><p>
+    With the Cartesian product, we can define the relation
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2591</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
+    A <strong>relation</strong> <tex>R</tex> is a subset of the Cartesian product of two sets <tex>A</tex> and
+    <tex>B</tex>, i.e. <tex>R \subseteq  A \times  B</tex>.
+    If <tex>(a,b) \in  R</tex>, we write <tex>aRb</tex>.
+
+    A relation that between <tex>X</tex> and itself is called <strong>homogeneous relation</strong>.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2592</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence relation</title> </frontmatter> <mainmatter><p>
+    An equivalence relation <tex>R</tex> on a set <tex>A</tex> is a <link href="def-000W.xml" type="local" addr="def-000W" title="Relation">relation</link> that is reflexive,
+    symmetric, and transitive.
+    <ul><li>Reflexive:
+            <tex>\forall  x \in  A, xRx</tex></li>
+        <li>Symmetric:
+            <tex>\forall  x,y \in  A, xRy \implies  yRx</tex></li>
+        <li>Transitive:
+            <tex>\forall  x,y,z \in  A, xRy \land  yRz \implies  xRz</tex></li></ul></p></mainmatter> </tree><p>
+    One of the most important relations is the order relation.
+    The basic order relation is the preorder.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2593</anchor>  <taxon>Definition</taxon> <addr>def-000Z</addr>  <route>def-000Z.xml</route>   <title>Preorder</title> </frontmatter> <mainmatter><p>
+    A <strong>preorder</strong> is a relation <tex>\leq</tex> that is reflexive and transitive.
+    <ul><li>Reflexive: <tex>a \leq  a</tex></li>
+        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2594</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
+    A <strong>(non-strict) partial order</strong> is a relation <tex>\leq</tex> that is reflexive, antisymmetric and transitive.
+    <ul><li>Reflexive: <tex>a \leq  a</tex></li>
+        <li>Antisymmetric: <tex>a \leq  b</tex> and <tex>b \leq  a</tex> implies <tex>a=b</tex></li>
+        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul>
+    A non-strict partial order is also known as an antisymmetric <link href="def-000Z.xml" type="local" addr="def-000Z" title="Preorder">preorder</link>.
+</p></mainmatter> </tree><p>
+    And the strict partial order (notice the difference between asymmetric and antisymmetric)
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2595</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
+    A strict partial order is a relation <tex>&lt;</tex> that is irreflexive, asymmetric and transitive.
+    <ul><li>Irreflexive: <tex>\neg (a&lt;a)</tex></li>
+        <li>Asymmetric: <tex>a&lt;b</tex> implies <tex>\neg (b&lt;a)</tex></li>
+        <li>Transitive: <tex>a&lt;b</tex> and <tex>b&lt;c</tex> implies <tex>a&lt;c</tex></li></ul></p></mainmatter> </tree><p>
+    With the definition of order, we can define the upper bound and lower bound
+</p></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2596</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
+    A <strong>(non-strict) partial order</strong> is a relation <tex>\leq</tex> that is reflexive, antisymmetric and transitive.
+    <ul><li>Reflexive: <tex>a \leq  a</tex></li>
+        <li>Antisymmetric: <tex>a \leq  b</tex> and <tex>b \leq  a</tex> implies <tex>a=b</tex></li>
+        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul>
+    A non-strict partial order is also known as an antisymmetric <link href="def-000Z.xml" type="local" addr="def-000Z" title="Preorder">preorder</link>.
+</p></mainmatter> </tree></related> <backlinks/> <references/></backmatter></tree>
