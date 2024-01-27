@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>994</anchor>  <taxon>Definition</taxon> <addr>def-001F</addr>  <route>def-001F.xml</route>   <title>Generic Elements</title> </frontmatter> <mainmatter><p>
+    The rule for the generic element asserts that 
+    any hypothetical element <tex>x:A</tex> in context <tex>\Gamma ,x:A</tex>
+    is also an element of <tex>A</tex> in context <tex>\Gamma ,x:A</tex>.
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  A \space \text {type} 
+        }{
+             \Gamma ,x:A \vdash  x:A
+        } \delta 
+    </tex>
+    This rule is also called the <strong>variable rule</strong>.   
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>995</anchor>  <taxon>Type Theory</taxon> <addr>tt-0002</addr>  <route>tt-0002.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title> </frontmatter> <mainmatter><p>This is a note on dependent type theory.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
+    The set-theoretic foundation has two two layers:
+    <ul><li>the deductive system of first-order logic</li>
+        <li>the theory of a particular theory, such as ZFC</li></ul> 
+    Type theory itself is a deductive system, which has one basic notation: <em>types</em>.
+    Propositions are identified with types.
+    
+    Thus, the activity of proving a theorem is identified with 
+    constructing a <em>inhabitant</em> of a certain type.
+</p><p>
+    Informally, a deductive system is a collection of rules for deriving <strong>judgments</strong>. 
+    The judgment is considered to be the external of the theory, living in the <strong>metatheory</strong>.
+</p><p>
+    In first order logic, there is only one kind of judgment: a proposition has a proof.
+    A proposition <tex>P</tex> gives rise to a judgment &quot;<tex>P</tex> has a proof&quot;.
+    The proposition <tex>P</tex> lives inside the theory, while the judgment &quot;<tex>P</tex> has a proof&quot; lives in the metatheory. 
+</p><p>
+    In type theory, analogous to first order logic,
+    &quot;<tex>P</tex> has a proof&quot; is written as &quot;<tex>p:P</tex>&quot; (Type <tex>P</tex> has a term <tex>p</tex>).
+    <ul><li>If <tex>P</tex> is a proposition, then <tex>p</tex> is a <strong>witness</strong> to the provability of <tex>P</tex>, 
+        or <strong>evidence</strong> of the truth of <tex>P</tex>.</li>
+        <li><tex>p:P</tex> can also be interpreted as <tex>p \in  P</tex>,
+        but <tex>p:P</tex> is a judgment while <tex>p \in  P</tex> is a proposition.</li></ul>
+    Working inside type theory we can't write down statements like
+    &quot;if <tex>p:P</tex> then ...&quot; nor can we disprove the judgment &quot;<tex>p:P</tex>&quot;.
+</p><p>
+    A key difference between type theory and set theory is the equality.
+    The notion of equality in set theory is simply a proposition.
+    Howerver, in type theory, there are two kinds of equality.
+    <ul><li>The first kind is the <strong>propositional equality</strong> <tex>a=_Ab</tex>.
+        This is a proposition</li>
+        <li>The second kind is the <strong>judgmental equality</strong> <tex>a \equiv  b:A</tex>.
+        This is a judgment</li></ul>
+    Two terms <tex>a:A</tex> and <tex>b:A</tex> are propositionally equal if you can prove <tex>a =_A b</tex> , 
+    or equivalently if you can construct a term <tex>h : a =_A b</tex>.
+</p>
+    <p>
+        In type theory there is also a requirement for a judgment-level equality.
+        This is called <strong>judgmental equality</strong>, meaning &quot;equal by definition&quot;.
+    </p>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>996</anchor>  <taxon>Definition</taxon> <addr>def-0015</addr>  <route>def-0015.xml</route>   <title>Judgemental Equality</title> </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
+    <tex display="block">
+         \Gamma \vdash  a \equiv  a':A
+    </tex>
+    <tex>a</tex> and <tex>a'</tex> are judgementally equal terms of type <tex>A</tex> in context <tex>\Gamma</tex>.
+</p><p>
+    Note that the notation <tex>\equiv</tex> binds more loosely than anything else.
+</p></mainmatter> </tree>
+    <p>
+        judgments may depend on <em>assumptions</em> of the form <tex>x:A</tex> where <tex>x</tex> is a
+        variable and <tex>A</tex> is a type. And the collection (actually ordered list) of such assumptions is called 
+        the <strong>context</strong>, denoted <tex>\Gamma</tex>. (from a topological point of view it 
+        may be thought of as a <strong>parameters space</strong>).
+        The role of a context is to declare what <strong>hypothetical terms</strong> are assumed, 
+        along with their types.
+        The notation <tex>\vdash</tex> means making conclusion from assumptions.
+    </p>
+<p>
+    Remember the difference between axiom and (inference) rules.
+    <ul><li>Rules allow us to conclude one judgment from a collection of other judgments.</li>
+        <li>Axioms are judgments that are assumed to be true without proof.</li></ul></p><p>
+    We start by introduction to Matrin Lof's dependent type theory. 
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>997</anchor>  <taxon>Definition</taxon> <addr>def-0017</addr>  <route>def-0017.xml</route>   <title>Dependent type theory: Judgments</title> </frontmatter> <mainmatter>
+    <p>
+        There are four kinds of judgments in Martin Lof's dependent type theory:
+    </p>
+    <ul><li><tex>A</tex> is a well-formed type in context <tex>\Gamma</tex>
+            <tex display="block">
+                 \Gamma   \vdash  A  \space \text {type} 
+            </tex></li>
+        <li><tex>A</tex> and <tex>B</tex> are judgmentally equal types in context <tex>\Gamma</tex>
+            <tex display="block">
+                 \Gamma   \vdash  A  \equiv  B  \space \text {type} 
+            </tex></li>
+        <li><tex>a</tex> is a term of type <tex>A</tex> in context <tex>\Gamma</tex>
+            <tex display="block">
+                 \Gamma   \vdash  a : A
+            </tex></li>
+        <li><tex>a</tex> and <tex>b</tex> are judgmentally equal terms of type <tex>A</tex> in context <tex>\Gamma</tex>
+            <tex display="block">
+                 \Gamma   \vdash  a  \equiv  b : A
+            </tex></li></ul>
+</mainmatter> </tree><p>
+    All judgments are context dependent, 
+    and indeed that even the types of the variables in a context
+    may depend on any previous declared variables.
+
+    To introduce types dependent on terms, 
+    we need the notation of type families.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>998</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title> </frontmatter> <mainmatter><p>
+    Consider a type <tex>A</tex> in context <tex>\Gamma</tex>.
+    A <strong>family</strong> of types over <tex>A</tex> in context <tex>\Gamma</tex>
+    is a type <tex>B(x)</tex> in context <tex>\Gamma , x:A</tex>.
+    <tex display="block">
+         \Gamma , x:A  \vdash  B(x)  \space \text {type} 
+    </tex>
+    <tex>B</tex> is a family of types over <tex>A</tex> in context <tex>\Gamma</tex>.
+    Alternatively, we say that <tex>B(x)</tex> is a type <strong>indexed</strong> by <tex>x:A</tex> in context <tex>\Gamma</tex>.
+</p></mainmatter> </tree><p>
+    Now we can define a term of a type family, that is, a section of a type family.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>999</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title> </frontmatter> <mainmatter><p>
+    Let <tex>B</tex> be a <link href="def-0018.xml" type="local" addr="def-0018" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>.
+    A <strong>section</strong> of <tex>B</tex> is a term <tex>b</tex> of type <tex>B(x)</tex> in context <tex>\Gamma ,x:A</tex>.
+    <tex display="block">
+         \Gamma , x:A  \vdash  b : B(x)
+    </tex>
+    Alternatively, we say that <tex>b</tex> is a term of <tex>B(x)</tex> indexed by <tex>x:A</tex> in context <tex>\Gamma</tex>.
+</p></mainmatter> </tree><p>
+    We now ready to present the inference rules for dependent type theory.
+    These rules are known as the <strong>structual rules</strong> of the theory.
+    There are 6 sets of rules:
+    <ul><li>Formation contexts, types and terms</li>
+        <li>Postulating that judgmental equality is an equivalence relation</li>
+        <li>Vairable conversion</li>
+        <li>Substitution</li>
+        <li>Weakening</li>
+        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1000</anchor>  <taxon>Definition</taxon> <addr>def-001A</addr>  <route>def-001A.xml</route>   <title>
+    Formation of contexts, types and terms
+</title> </frontmatter> <mainmatter><p>
+    The following rules follow from the presuppotion
+    about contexts, types and terms, can be used freely.
+</p><ul><li><tex display="block">
+             \frac {
+                 \Gamma ,x:A \vdash  B(x) \space \text {type} 
+            }{
+                 \Gamma \vdash  A \space \text {type} 
+            }
+        </tex></li>
+    <li><tex display="block">
+             \frac {
+                 \Gamma \vdash  A \equiv  B \space \text {type} 
+            }{
+                 \Gamma \vdash  A \space \text {type} 
+            }
+             \quad 
+             \frac {
+                 \Gamma \vdash  A \equiv  B \space \text {type} 
+            }{
+                 \Gamma \vdash  B \space \text {type} 
+            }
+        </tex></li>
+    <li><tex display="block">
+             \frac {
+                 \Gamma \vdash  a:A
+            }{
+                 \Gamma \vdash  A \space \text {type} 
+            }
+        </tex></li>
+    <li><tex display="block">
+             \frac {
+                 \Gamma \vdash  a \equiv  b:A
+            }{
+                 \Gamma \vdash  a:A
+            }
+             \quad  
+             \frac {
+                 \Gamma \vdash  a \equiv  b:A
+            }{
+                 \Gamma \vdash  b:A
+            }
+        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1001</anchor>  <taxon>Definition</taxon> <addr>def-001B</addr>  <route>def-001B.xml</route>   <title>
+    Judgmental equality is equivalence relation
+</title> </frontmatter> <mainmatter><p>
+    judgmental equality on types and on elements is an <link href="def-000X.xml" type="local" addr="def-000X" title="Equivalence relation">equivalence relation</link> 
+    simply postulate that these relations are reflexive, symmetric, and transitive:
+</p><ul><li><tex display="block">
+             \frac {
+                 \Gamma \vdash  a:A
+            }{
+                 \Gamma \vdash  a \equiv  a:A
+            }
+             \quad 
+             \frac {
+                 \Gamma \vdash  a \equiv  b:A
+            }{
+                 \Gamma \vdash  b \equiv  a:A
+            }
+             \quad 
+             \frac {
+                 \Gamma \vdash  a \equiv  b:A
+                 \quad 
+                 \Gamma \vdash  b \equiv  c:A
+            }{
+                 \Gamma \vdash  a \equiv  c:A
+            }
+        </tex></li>
+    <li><tex display="block">
+             \frac {
+                 \Gamma \vdash  A \space \text {type} 
+            }{
+                 \Gamma \vdash  A \equiv  A \space \text {type} 
+            }
+             \quad 
+             \frac {
+                 \Gamma \vdash  A \equiv  B \space \text {type} 
+            }{
+                 \Gamma \vdash  B \equiv  A \space \text {type} 
+            }
+             \quad 
+             \frac {
+                 \Gamma \vdash  A \equiv  B \space \text {type} 
+                 \quad 
+                 \Gamma \vdash  B \equiv  C \space \text {type} 
+            }{
+                 \Gamma \vdash  A \equiv  C \space \text {type} 
+            }
+        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1002</anchor>  <taxon>Definition</taxon> <addr>def-001C</addr>  <route>def-001C.xml</route>   <title>Variable Conversion</title> </frontmatter> <mainmatter><p>
+    This rule postulates that we can
+    convert the type of a variable to a judgmentally equal type.
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  A \equiv  A' \space \text {type} 
+             \quad 
+             \Gamma ,x:A, \Delta \vdash  B(x) \space \text {type} 
+        }{
+             \Gamma ,x:A', \Delta \vdash  B(x) \space \text {type} 
+        }
+    </tex>
+    Similarly, we can convert judgmental equality of types and terms.
+    We state all of them at once using a <em>generic judgment thesis</em> <tex>\mathcal {J}</tex>.
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  A \equiv  A' \space \text {type} 
+             \quad 
+             \Gamma ,x:A, \Delta \vdash   \mathcal {J}
+        }{
+             \Gamma ,x:A', \Delta \vdash   \mathcal {J}
+        }
+    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1003</anchor>  <taxon>Definition</taxon> <addr>def-001D</addr>  <route>def-001D.xml</route>   <title>Substitution</title> </frontmatter> <mainmatter><p>
+    The substitution rule postulates that we can substitute a term for a variable.
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  a:A
+             \quad 
+             \Gamma ,x:A, \Delta \vdash   \mathcal {J}
+        }{
+             \Gamma , \Delta [x:=a] \vdash   \mathcal {J}[x:=a]
+        }
+    </tex>
+    The notation <tex>\Gamma , \Delta [x:=a]</tex> means that we substitute <tex>a</tex> for <tex>x</tex> in <tex>\Delta</tex>.
+</p><p>
+    With the substitution rule, we need two more <em>congruence rules</em> to
+    convert judgmental equality of terms and types.
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  a \equiv  a':A
+             \quad 
+             \Gamma ,x:A, \Delta \vdash  B  \space \text {type} 
+        }{
+             \Gamma , \Delta [x:=a] \vdash  B[x:=a] \equiv  B[x:=a']  \space \text {type} 
+        }
+    </tex>
+
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  A \equiv  A' \space \text {type} 
+             \quad 
+             \Gamma ,x:A, \Delta \vdash  b:A
+        }{
+             \Gamma , \Delta [x:=a] \vdash  b[x:=a] \equiv  b[x:=a']:A'[x:=a]  \space \text {type} 
+        }
+    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1004</anchor>  <taxon>Definition</taxon> <addr>def-001E</addr>  <route>def-001E.xml</route>   <title>Weakening</title> </frontmatter> <mainmatter><p>
+    Weakening rule asserts that we can add a variable to the context.
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  A \space \text {type} 
+             \quad  
+             \Gamma , \Delta \vdash   \mathcal {J}
+        }{
+             \Gamma ,x:A, \Delta \vdash   \mathcal {J}
+        }W 
+    </tex></p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>
