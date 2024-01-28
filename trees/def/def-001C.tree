@@ -22,6 +22,6 @@
             \Gamma,x:A,\Delta\vdash \mathcal{J}
         }{
             \Gamma,x:A',\Delta\vdash \mathcal{J}
-        }
+        }VC
     }
 }

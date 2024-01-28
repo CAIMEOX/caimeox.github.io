@@ -10,7 +10,7 @@
             \Gamma,x:A,\Delta\vdash \mathcal{J}
         }{
             \Gamma,\Delta[x:=a]\vdash \mathcal{J}[x:=a]
-        }
+        }S
     }
     The notation #{\Gamma,\Delta[x:=a]} means that we substitute #{a} for #{x} in #{\Delta}.
 }

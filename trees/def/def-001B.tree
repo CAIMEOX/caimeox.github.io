@@ -4,7 +4,7 @@
 \taxon{Definition}
 \import{macros}
 \p{
-    judgmental equality on types and on elements is an [equivalence relation](def-000X) 
+    Judgmental equality on types and on elements is an [equivalence relation](def-000X) 
     simply postulate that these relations are reflexive, symmetric, and transitive:
 }
 \ul{

@@ -105,7 +105,26 @@
 \transclude{def-001A}
 \transclude{def-001B}
 \transclude{def-001C}
+\p{
+    Consider a term #{f:B(x)} indexed by #{x:A} in context #{\Gamma},
+    and we also have a term #{a:A}.
+    We can simultaneously substitute #{a} for all occurrences of #{x} in #{f}
+    to obtain a new term #{f[x:=a]:B(a)}.
+}
 \transclude{def-001D}
+\transclude{def-001G}
+\p{
+    The process of expanding the context by a fresh variable of type #{A} is called weakening (by #{A}).
+    Intuitively, weakening is the process of adding a new hypothesis to the context.
+    And the hypothesis will weaken the conclusion.
+}
 \transclude{def-001E}
+\p{
+    Finally, the generic elemets rule ensures that
+    the variables declared in a context.
+}
 \transclude{def-001F}
-
+\p{
+    The next topic is the dependent function type, a fundamental concept of dependent type theory.
+    Simply put, a dependent function type is a function whose type of output may depend on the input.
+}

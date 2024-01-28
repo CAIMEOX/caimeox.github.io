@@ -1,0 +1,12 @@
+\title{Fiber and Value}
+\taxon{Definition}
+\p{
+    Let #{B} be a [type family](def-0018) over #{A} in context #{\Gamma},
+    an a well-formed term #{a:A},
+    then we say that #{B[x:=a]} is the \strong{fiber} of #{B} at #{a}, denoted #{B(a)}.
+}
+\p{
+    Let #{b} a [section](def-0019) of #{B} over #{A} in context #{\Gamma},
+    then we say that #{b(a):\equiv b[x:=a]} is the \strong{value} of #{b} at #{a}.
+
+}
