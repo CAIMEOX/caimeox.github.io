@@ -275,4 +275,49 @@
 \p{
     A central concept in special relativity is \strong{proper time},
     which is a Lorentz invariant measure of time.
+    Consider a world-line and two events #{A} and #{B} on the world-line.
+    Different Lorentz observers will measure different time intervals between the two events.
+    But imagine a clock that moves along the world-line.
+    The time measured by the clock is called the \strong{proper time} between the two events.
+}
+\transclude{def-001S}
+\p{
+    By this definition, proper time is a invariant. Consider an invariant interval 
+    for the motion of a particle along #{x} axis:
+    ##{
+        -ds^2 = -c^2 dt^2 + dx^2 = -c^2 dt^2 (1 - \beta^2)
+    }
+    Now attach a Lorentz frame to the particle does not move
+    and the time is recorded by the clock that is moving with the particle.
+    Hence #{dx=0} and #{dt=dt_p} is the proper time.
+    ##{
+        -ds^2 = -c^2 dt_p^2 
+    }
+    Cancel the minus sign and the square root
+    ##{
+        dt_p = c dt_p
+    }
+    This shows that for timelike intervals,
+    the \strong{proper time interval} is #{\frac{ds}{c}}.
+    Similarly, 
+    ##{
+        ds = cdt \sqrt{1-\beta^2} \implies \frac{dt}{ds} = \frac{\gamma}{c}
+    }
+    The invariant #{ds} can be used to construct nre Lorentz vectors.
+    For instance, we can construct velocity four-vector:
+    ##{
+        u^\mu = c \frac{dx^\mu}{ds} = c (\frac{d(ct)}{ds}, \frac{dx}{ds}, \frac{dy}{ds}, \frac{dz}{ds})
+    }
+    This can be simplified by using the definition of proper time:
+    ##{
+        \frac{dx}{ds} = \frac{dx}{dt} \frac{dt}{ds} = \frac{v_x\gamma}{c}
+    }
+    Hence we find
+    ##{
+        u^\mu = (\gamma c, \gamma v_x, \gamma v_y, \gamma v_z) = \gamma (c, \vec{v})
+    }
+    We see that the momentum four-vector is just the velocity four-vector multiplied by the rest mass.
+    ##{
+        p^\mu = m u^\mu
+    }
 }

@@ -1,0 +1,25 @@
+\title{Ordinary Function Type}
+\taxon{Definition}
+\import{macros}
+\p{
+    A special case of [#{\Pi}-type](def-001T) is the \strong{ordinary function type}.
+    Using weakening rule we can obtain thee type #{A\to B} of ordinary function from #{A} to #{B}
+    ##{
+        \frac{
+            \Gamma\vdash A\type
+            \quad
+            \Gamma\vdash B\type
+        }{\dfrac{
+            \Gamma,x:A\vdash B\type
+        }{
+            \Gamma\vdash \Pi_{(x:A)}B\type
+        }\Pi}W
+    }
+    A term #{f: \Pi_{(x:A)}B} is an ordinary function. The type #{A \to B} is defined:
+    ##{
+        A\to B := \Pi_{(x:A)}B
+    }
+    The type #{A} is called \strong{domain} of #{f},
+    and type #{B} is called \strong{codomain} of #{f}.
+    The notation #{:=} here means to make a definition.
+}

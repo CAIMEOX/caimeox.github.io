@@ -1,0 +1,51 @@
+\title{Is JavaScript an untyped language?}
+\taxon{Compute Science}
+\date{2024-01-29}
+\p{
+    This is a note about the the argument that JavaScript is an untyped language.
+    Most opinions came from the References.
+}
+\p{
+    The first thing I want to classify is the word \strong{strong typing} and \strong{weak typing} are meaningless.
+    In a limit case we can compare two languages that have similar type system, and talk about which one is \em{stronger}.
+    But for the common case, it's totally nonsense.
+}
+\p{
+    Static and dynamic typing is a meaningful classsification. But the discussion about dynamic and static languages is mostly wrong on the Internet.
+    Dynamic language is a popular concept, however, it is rather a \strong{marketing} than a well-defined terminology.
+    It's designed to confuse rather than inform.
+}
+\p{
+    In fact, dynamic typing is just a special case of static typing.
+    It limits more than contributes.The root of the problem is the confusion 
+    between type and class. It's very useful to have multiple classes of values
+    of a same type.
+    They are interchangeable because they represent values of the same type.
+    Only the form of presentation differs.
+}
+\p{
+    The distinction between two classes of the same type is dynamic.
+    But this does not conflict with the fact that only one static type.
+    In type theory this is what we called \strong{Sum Type}.
+    Being a sum type we can dispatch on the class of the value of the type,
+    and decide what to do at runtime.
+}
+\p{
+    This characteristics is same to dynamic language where values can be classified into
+    various forms that can be distinguished at runtime.
+    The answer is now clear: dynamic language classifies all values in this way.
+    What they do just merge all values of the language into a single type.
+    The so-called \strong{untyped} language is just \strong{unityped}.
+}
+\p{
+    Therefore, JavaScript is definitely untyped.
+}
+\scope{
+    \p{\strong{References}}
+    \ul{
+        \li{[Dynamic and static language](https://existentialtype.wordpress.com/2011/03/19/dynamic-languages-are-static-languages/)}
+        \li{[stackoverflow](https://stackoverflow.com/questions/964910/is-javascript-an-untyped-language)}
+        \li{[What to know before debating type systems](https://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html)}
+        \li{\em{Practical Foundations for Programming Languages}, Robert Harper}
+    }
+}

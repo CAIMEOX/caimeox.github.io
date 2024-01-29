@@ -1,16 +1,17 @@
 \title{CAIMEO}
 \taxon{person}
 \p{
-    A student interested in math and computer science.
+    A student interested in math, physics and computer science.
 }
 
 \meta{position}{Student}
 \meta{external}{https://github.com/CAIMEOX} % optional
 ##{
-    \text{Life} = \int_{\text{birth}}^{\text{death}} \text{Learning} \, \text{d}t
+    i\hbar \frac{\partial}{\partial t} \Psi(x, t) = \hat{H} \Psi(x, t)
 }
 \ul{
     \li{Learning Programming Language Theory and Type Theory}
+    \li{Attend in writing articles about String Theory}
     \li{Reading Type Theory and Formal Proof and Homotopy Type Theory}
     \li{Working on CommandLisp}
 }

@@ -128,3 +128,33 @@
     The next topic is the dependent function type, a fundamental concept of dependent type theory.
     Simply put, a dependent function type is a function whose type of output may depend on the input.
 }
+\p{
+    Consider a section #{b} of a family #{B} over #{A} in context #{\Gamma}:
+    ##{
+        \Gamma,x:A\vdash b(x):B(x)
+    }
+    Such a section #{b} is an operation or assignment #{x\mapsto b(x)} that assigns to each element #{x:A}
+    to a term #{b(x):B(x)}.
+    We may see #{b} as a function takes #{x:A} to #{b(x):B(x)}.
+    The function #{x\mapsto b(x)} is called a \strong{dependent function}.
+    The type of all dependent functions from #{A} to #{B} is called the \strong{dependent function type}.
+    ##{
+        \Pi_{(x:A)}B(x) \text{ or } (x:A)\to B(x)
+    }
+}
+\p{
+    To introduce a type we need the following four rules:
+    \ul{
+        \li{Formation rule}
+        \li{Introduction rule}
+        \li{Elimination rule}
+        \li{Computation rule}
+    }
+    Besides these we also need the \strong{congruence rule} for judgmental equality.
+}
+
+\transclude{def-001T}
+\p{
+    A degenrated case of dependent function type is the ordinary function type.
+}
+\transclude{def-001U}

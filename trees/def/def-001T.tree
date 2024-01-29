@@ -1,0 +1,82 @@
+\title{Dependent Function Type}
+\taxon{Definition}
+\import{macros}
+\p{
+    \strong{Formation Rule}
+    For any type family #{B} over #{A} in context #{\Gamma}:
+    ##{
+        \frac{
+            \Gamma,x:A\vdash B(x)\type
+        }{
+            \Gamma\vdash \Pi_{(x:A)}B(x)\type
+        }\Pi
+    }
+    We also require that the operation of forming dependent function types
+    respects judgmental equality.
+    ##{
+        \frac{
+            \Gamma\vdash A\equiv A'\type
+            \quad
+            \Gamma,x:A\vdash B(x)\equiv B'(x)\type
+        }{
+            \Gamma\vdash \Pi_{(x:A)}B(x)\equiv \Pi_{(x:A')}B'(x)\type
+        }\Pi\text{-eq}
+    }
+}
+\p{
+    \strong{Introduction Rule (#{\lambda}-abstraction)}
+    In order to construct a dependent function we have to
+    construct a term #{f(x):B(x)} indexed by #{x:A} in context #{\Gamma}:
+    ##{
+        \frac{
+            \Gamma,x:A\vdash b(x):B(x)
+        }{
+            \Gamma\vdash \lambda x.b(x):\Pi_{(x:A)}B(x)
+        }\lambda
+    }
+    And the congruence rule:
+    ##{
+        \frac{
+            \Gamma,x:A\vdash b(x)\equiv b'(x):B(x)
+        }{
+            \Gamma\vdash \lambda x.b(x)\equiv \lambda x.b'(x):\Pi_{(x:A)}B(x)
+        }\lambda\text{-eq}
+    }
+}
+\p{
+    \strong{Elimination Rule (Evaluation Rule)}
+    In order to use dependent function we need to provide an argument of the domain type.
+    ##{
+        \frac{
+            \Gamma\vdash f:\Pi_{(x:A)}B(x)
+        }{
+            \Gamma,x:A\vdash f(x):B(x)
+        }ev
+    }
+    Again we require the judgmental equality to be respected:
+    ##{
+        \frac{
+            \Gamma\vdash f\equiv f':\Pi_{(x:A)}B(x)
+        }{
+            \Gamma,x:A\vdash f(x)\equiv f'(x):B(x)
+        }ev\text{-eq}
+    }
+}
+\p{
+    \strong{Computation Rule (#{\beta}-reduction)}
+    ##{
+        \frac{
+            \Gamma,x:A\vdash b(x):B(x)
+        }{
+            \Gamma,x:A\vdash (\lambda y.b(y))(x)\equiv b(x):B(x)
+        }\beta
+    }
+    We postulate that all elements of a dependent function type are dependent functions.
+    ##{
+        \frac{
+            \Gamma\vdash f:\Pi_{(x:A)}B(x)
+        }{
+            \Gamma\vdash f\equiv \lambda x.f(x):\Pi_{(x:A)}B(x)
+        }\eta
+    }
+}
