@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2049</anchor>  <taxon>Definition</taxon> <addr>def-001O</addr>  <route>def-001O.xml</route>   <title>Antisymmetric Matrix</title> </frontmatter> <mainmatter><p>
+    A square matrix <tex>A</tex> is antisymmetric if it is equal to the negative of its transpose:
+    <tex display="block">
+        A = -A^T
+    </tex>
+    This also implies <tex>A^{-1} A^T = -I</tex></p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2050</anchor>  <taxon>Definition</taxon> <addr>def-001M</addr>  <route>def-001M.xml</route>   <title>Symmetric and Antisymmetric Part</title> </frontmatter> <mainmatter><p>
+    Any square matrix <tex>A</tex> can be written as the sum of a symmetric and antisymmetric matrix:
+    <tex display="block">
+        A = A_S + A_A
+    </tex>
+    where <tex>A_S</tex> is the <strong>symmetric part</strong> and <tex>A_A</tex> is the <strong>antisymmetric part</strong>.
+    <tex display="block">
+        A_S =  \frac {1}{2}(A + A^T)
+    </tex>
+    where <tex>A_S</tex> is a <link href="def-001N.xml" type="local" title="Symmetric Matrix">symmetric matrix</link>
+    <tex display="block">
+        A_A =  \frac {1}{2}(A - A^T)
+    </tex>
+    where <tex>A_A</tex> is an <link href="def-001O.xml" type="local" title="Antisymmetric Matrix">antisymmetric matrix</link></p></mainmatter> </tree></backlinks> <references/></backmatter></tree>
