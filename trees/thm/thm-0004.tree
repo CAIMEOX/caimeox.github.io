@@ -1,0 +1,12 @@
+\title{Raise Indices}
+\taxon{Trick}
+\p{
+    ##{
+        \eta^{\rho\mu}b_\mu
+        = \eta^{\rho\mu} (\eta_{\mu\nu} b^\nu)
+        = \eta^{\rho\mu} \eta_{\mu\nu} b^\nu
+        = \delta^\rho_\nu b^\nu
+        = b^\rho
+    }
+    The lower index of #{b_\mu} is raised to #{b^\rho} by #{\eta^{\rho\mu}}.
+}

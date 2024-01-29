@@ -1,0 +1,17 @@
+\title{Symmetric and Antisymmetric Part}
+\taxon{Definition}
+\p{
+    Any square matrix #{A} can be written as the sum of a symmetric and antisymmetric matrix:
+    ##{
+        A = A_S + A_A
+    }
+    where #{A_S} is the \strong{symmetric part} and #{A_A} is the \strong{antisymmetric part}.
+    ##{
+        A_S = \frac{1}{2}(A + A^T)
+    }
+    where #{A_S} is a [symmetric matrix](def-001N)
+    ##{
+        A_A = \frac{1}{2}(A - A^T)
+    }
+    where #{A_A} is an [antisymmetric matrix](def-001O)
+}

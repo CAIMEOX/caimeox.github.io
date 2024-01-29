@@ -1,0 +1,50 @@
+\title{Lorentz Transformations}
+\taxon{Definition}
+\p{
+    Consider a frame #{S} and #{S'} which is moving along the #{+x} direction of the #{S} frame
+    with a velocity #{v}.
+    Assume that the origins of the two frames coincide at #{t=t'=0} and coordinate axes are parallel.
+
+    We say that #{S'} is boosted along the #{x} direction with velocity parameter #{\beta\equiv\frac{v}{c}}.
+    The \strong{Lorentz transformations} are defined by a set of equations that relate the coordinates of an event in the two frames.
+    ##{
+        \begin{align*}
+            x' &= \gamma(x-\beta ct) \\
+            y' &= y \\
+            z' &= z \\
+            ct' &= \gamma(ct-\beta x)
+        \end{align*}
+    }
+    where #{\gamma\equiv\dfrac{1}{\sqrt{1-\beta^2}} = \dfrac{1}{\sqrt{1-\frac{v^2}{c^2}}}} is the \strong{Lorentz factor}.
+    The coordinates orthogonal to the #{x} direction remains unchanged.
+}
+\p{
+    Lorentz transformations are the linear transformations of coordinates that remains the #{\Delta s^2} unchanged. 
+    We can write the Lorentz transformations in matrix form:
+    ##{
+        \begin{pmatrix}
+            ct' \\
+            x' \\
+            y' \\
+            z' 
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            \gamma & -\beta\gamma & 0 & 0 \\
+            -\beta\gamma & \gamma & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 
+        \end{pmatrix}
+        \begin{pmatrix}
+            ct \\
+            x \\
+            y \\
+            z 
+        \end{pmatrix}
+    }
+    Or in a more compact form:
+    ##{
+        x'^\mu = L^\mu_\nu x^\nu
+    }
+    where #{L^\mu_\nu} is the \strong{Lorentz transformation matrix} presented above.
+}

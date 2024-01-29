@@ -1,0 +1,9 @@
+\title{Symmetric Matrix}
+\taxon{Definition}
+\p{
+    A square matrix #{A} is symmetric if it is equal to its transpose:
+    ##{
+        A = A^T
+    }
+    This also implies #{A^{-1} A^T = I}
+}

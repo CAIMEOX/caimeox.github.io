@@ -1,0 +1,9 @@
+\title{Antisymmetric Matrix}
+\taxon{Definition}
+\p{
+    A square matrix #{A} is antisymmetric if it is equal to the negative of its transpose:
+    ##{
+        A = -A^T
+    }
+    This also implies #{A^{-1} A^T = -I}
+}

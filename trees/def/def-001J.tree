@@ -1,0 +1,6 @@
+\title{Spacelike Separated Events}
+\taxon{Definition}
+\p{
+    Two events for which #{\Delta s^2 < 0} are said to be \strong{spacelike separated}.
+    Events that are simultaneous in a Lorentz frame but in different position are spacelike separated.
+}

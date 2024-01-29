@@ -1,0 +1,11 @@
+\title{Kronecker Delta}
+\taxon{Definition}
+\p{
+    The \strong{Kronecker delta} is defined as
+    ##{
+        \delta_{i}^j = \begin{cases}
+            1 & \text{if } i = j \\
+            0 & \text{if } i \neq j
+        \end{cases}
+    }
+}

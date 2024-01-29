@@ -1,0 +1,14 @@
+\title{Minkowski Metric}
+\taxon{Definition}
+\p{
+    The \strong{Minkowski Metric}, aka \strong{Minkowski Tensor}, is a tensor #{\eta_{\mu\nu}} whose elements are defined by the matrix
+    ##{
+        \eta_{\mu\nu} = \begin{pmatrix}
+            -1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 
+        \end{pmatrix}
+    }
+    where #{\mu} and #{\nu} are Lorentz indices run over #{0,1,2,3}.
+}

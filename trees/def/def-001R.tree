@@ -1,0 +1,15 @@
+\title{Light-cone Coordinates}
+\taxon{Definition}
+\p{
+    The \strong{light-cone coordinates} can be defined as
+    two independent [linear combinations](def-000L) of the time 
+    and a chosen spatial coordinate (conventionally #{x^1}):
+    ##{
+        \begin{align*}
+            x^+ \equiv \frac{1}{\sqrt{2}} (X^0 + X^1) \\
+            x^- \equiv \frac{1}{\sqrt{2}} (X^0 - X^1)
+        \end{align*}
+    }
+    while other spatial coordinates remain unchanged. Thus the complete set of 
+    light-cone coordinates is #{(x^+,x^-,x^2,x^3)}.
+}

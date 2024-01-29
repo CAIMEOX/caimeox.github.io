@@ -1,0 +1,278 @@
+\title{Special Relativity and extra dimensions}
+\date{2024-01-29}
+\author{CAIMEO}
+\taxon{String Theory}
+\import{macros}
+\p{
+    Speical relativity is based on the exprimental fact that the speed of light is the same for all inertial observers.
+    In comparing the coordinates of events, two inertial observers (\strong{Lorentz observers}) find that the
+    appropriate coordinate transformations mix space and time.   
+}
+\p{
+    In special relativity events are characterized by their coordinates in space #{(x,y,z)} and time (#{t}).
+    It's convenient to combine these into a four-vector where the #{t} coordinate is multiplied by #{c} (\strong{Speed of light}): so 
+    that all four coordinates have the same units (length).
+    ##{x^\mu = (x^0,x^1,x^2,x^3) = (ct,x,y,z)}
+    The superscript #{\mu} is called a \strong{Lorentz index} and runs from 0 to 3.
+}
+\p{
+    Consider a Lorentz frame #{S} where two events are represented by the coordinates 
+    #{x^\mu} and #{x^\mu + \Delta x^\mu}.
+    Let #{S'} be another Lorentz frame where the same two events are represented by the coordinates
+    #{x'^\mu} and #{x'^\mu + \Delta x'^\mu}.
+    The value of #{x'^\mu} is different from #{x^\mu} and so as #{\Delta x'^\mu} from #{\Delta x^\mu}.
+    However there is an invariant \strong{interval} #{\Delta s^2} defined by
+    ##{
+        -\Delta s^2 = -(\Delta x^0)^2 + (\Delta x^1)^2 + (\Delta x^2)^2 + (\Delta x^3)^2
+    }
+    The minus sign in front of #{(x^0)^2} encodes the fundamental difference between space and time coordinates.
+}
+\p{
+    The invariant interval implies the following equation:
+    ##{
+        \Delta s ^2 = \Delta s'^2
+    }
+    The minus sign on the left of #{\Delta s^2} implies that #{\Delta s^2 >0} for events that are \strong{timelike separated}.
+}
+\transclude{def-001H}
+\p{
+    The history of a particle is represented in spacetime as a curve called a \strong{world-line}.
+    Any two events on the world-line are timelike separated, because no particle can 
+    move faster than light.
+}
+\transclude{def-001I}
+\transclude{def-001J}
+\p{
+    For timelike event we can define
+    ##{
+        \Delta s \equiv \sqrt{\Delta s^2}
+    }
+}
+\p{
+    It is useful to consider events that are \em{infinitesimally close} to each other.
+    Small coordinate difference are needed to define velocity.
+    Infinitesimal coordinate differences are written as #{dx^\mu}.
+    ##{
+        -ds^2 = -(dx^0)^2 + (dx^1)^2 + (dx^2)^2 + (dx^3)^2
+    }
+    The equality of intervals is the statement
+    ##{
+        ds^2 = ds'^2
+    }
+    Let's define a better notation:
+    ##{
+        dx_0 \equiv -dx^0,
+        dx_1 \equiv dx^1,
+        dx_2 \equiv dx^2,
+        dx_3 \equiv dx^3
+        \tag{1}
+    }
+    Notice that the inclusion of the minus sign in the definition of #{dx_0} is a matter of convention.
+    ##{
+        dx_\mu = (dx_0,dx_1,dx_2,dx_3)
+    }
+    Now rewrite #{ds^2} in terms of #{dx_\mu} and #{dx^\mu}:
+    ##{
+        -ds^2 = dx_0dx^0 + dx_1dx^1 + dx_2dx^2 + dx_3dx^3 = \sum_{\mu=0}^3 dx_\mu dx^\mu
+    }
+    Using [Einstein's Summation Convention](def-001K) we can rewrite
+    ##{
+        ds^2 = dx_\mu dx^\mu
+    }
+    And for Infinitesimal timelike intervals we can define
+    ##{
+        ds \equiv \sqrt{ds^2} 
+    }
+    We can also express the interval #{ds^2} using the \strong{Minkowski Metric}:
+    ##{
+        -ds^2= \eta_{\mu\nu} dx^\mu dx^\nu
+    }
+    and the metric is defined by
+}
+\transclude{def-001L}
+\p{
+    How can we derive the Minkowski Metric? First we require #{\eta_{\mu\nu}} to be a symmetric matrix,
+    because any antisymmetric part would not contribute to the interval.
+    ##{
+        \eta_{\mu\nu} = \eta_{\nu\mu}
+    }
+    And for any two-indexed object #{M_{\mu\nu}} can be decomposed into symmetric and antisymmetric parts:
+    ##{
+        M_{\mu\nu} = \frac{1}{2}(M_{\mu\nu} + M_{\nu\mu}) + \frac{1}{2}(M_{\mu\nu} - M_{\nu\mu})
+    }
+    With the antisymmetric part (denoted #{\delta}) which we can see
+    ##{
+        \delta_{\mu\nu}dx^\mu dx^\nu = (-\delta_{\nu\mu}) dx^\mu dx^\nu = -\delta_{\mu\nu}dx^\nu dx^\mu = -\delta_{\mu\nu}dx^\mu dx^\nu
+    }
+    Note that the second step relabeled the dummy indices #{\mu} and #{\nu}.
+    The third step we swapped the order of the two terms. Hence the antisymmetric part is zero.
+}
+\p{
+    The equation #{dx_\mu = (dx_0,dx_1,dx_2,dx_3)} can be rewritten as
+    ##{
+        dx_\mu = \eta_{\mu\nu} dx^\nu
+    }
+    For more general case:
+    ##{
+        b_\mu \equiv \eta_{\mu\nu} b^\nu
+    }
+    Given #{a^\mu} and #{b^\mu} we can define the dot scalar product as 
+    ##{
+        a \cdot b \equiv a^\mu b_\mu = a^\mu \eta_{\mu\nu} b^\nu = -a^0 b^0 + a^1 b^1 + a^2 b^2 + a^3 b^3
+    }
+    Note that #{a^\mu b_\mu = a_\mu b^\mu} because #{\eta_{\mu\nu}} is symmetric.
+}
+\p{
+    It's convenient to introduce the inverse matrix of #{\eta_{\mu\nu}}:
+    ##{
+        \eta^{\mu\nu} = 
+        \begin{pmatrix}
+            -1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{pmatrix}
+    }
+    And the inverse property is
+    ##{
+        \eta^{\mu\rho} \eta_{\rho\nu} = \delta^\mu_\nu
+    }
+    where #{\delta^\mu_\nu} is the [Kronecker Delta](def-001P).
+}
+\transclude{thm-0004}
+\p{
+    \strong{Lorentz transformations} are the relations between coordinates in two different
+    inertial frames.
+    
+}
+\transclude{def-001Q}
+\p{
+    We now introduce a coordinate system that will be extremely useful in string theory,
+    the \strong{light-cone coordinates}.
+}
+\transclude{def-001R}
+\p{
+    The name \strong{light-cone coordinates} comes from the fact that the associated coordinates axes
+    are the world-lines of beams of light emitted form the origin along the #{x^1} axis.
+    \ul{
+        \li{
+            For a beam of light moving in the positive #{x^1} direction,
+            we have #{x^1=ct=x^0} and thus #{x^-=0}. By definition #{x^-=0}
+            is actually the #{x^+} axis. 
+        }
+        \li{
+            For a beam of light moving in the negative #{x^1} direction,
+            we have #{x^1=-ct=-x^0} and thus #{x^+=0}. By definition #{x^+=0}
+            is actually the #{x^-} axis. 
+        }
+    }
+    The #{x^+} and #{x^-} axes are perpendicular to each other and at #{45^\circ} to the #{x^0} and #{x^1} axis.
+}
+\p{
+    Both #{x^+} and #{x^-} can be a time coordinate although neither is a time coordinate
+    in the standard sense of the world (Not ordinary time).
+    For definiteness we will take #{x^+} as the light-cone time coordinate and #{x^-} as the spatial coordinate.
+}
+\p{
+    Take differentials and multiply of the light-cone coordinates:
+    ##{
+        2dx^+ dx^- = (dx^0 + dx^1)(dx^0 - dx^1) = (dx^0)^2 - (dx^1)^2
+    }
+    which follows the invariant interval
+    ##{
+        -ds^2 = -2dx^+ dx^- + (dx^2)^2 + (dx^3)^2
+    }
+    As we did before, we can represent this with index notation:
+    ##{
+        -ds^2 = \hat{\eta}_{\mu\nu} dx^\mu dx^\nu
+    }
+    where the \strong{light-cone metric} is
+    ##{
+        \hat{\eta}_{\mu\nu} = 
+        \begin{pmatrix}
+            0 & -1 & 0 & 0 \\
+            -1 & 0 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{pmatrix}
+    }
+    This is easy to derive from the symmetric.
+}
+\p{
+    The light-cone coordinates looks unusual but if you see some
+    calculations you will find the results very surprising.
+}
+\p{
+    Consider a particle moving in the #{x^1} direction with velocity #{v}.
+    At the initial time the positions are all #{0}.
+    (The velocity parameter is denote #{\beta})
+    ##{
+        \begin{align*}
+            x^1 = vt = \beta x^0
+            \\
+            x^2(t) = x^3(t) = 0
+        \end{align*}
+    }
+    Now compute the light-cone coordinates:
+    ##{
+        \begin{align*}
+            x^+ = \frac{1}{\sqrt{2}}(x^0 + x^1) = \frac{1}{\sqrt{2}}(x^0 + \beta x^0) = \frac{1+\beta}{\sqrt{2}}x^0
+            \\
+            x^- = \frac{1}{\sqrt{2}}(x^0 - x^1) = \frac{1}{\sqrt{2}}(x^0 - \beta x^0) = \frac{1-\beta}{\sqrt{2}}x^0
+        \end{align*}
+    }
+    And we identify the ratio 
+    ##{
+        \frac{dx^+}{dx^-} = \frac{1+\beta}{1-\beta}
+    }
+    as the light-cone velocity of the particle. This looks strange:
+    \ul{
+        \li{
+            For #{\beta=-1} the light-cone velocity is #{\infty}.
+        }
+        \li{
+            For a particle moving at the speed of light (#{\beta=1}), the light-cone velocity is #{0}.
+        }
+        \li{
+            More interestingly, a static particle (#{\beta=0}) is moving quite fast in the light-cone coordinates.
+        }
+    }
+    Note that the light-cone coordinates can't be acquired by Lorentz transformation.
+}
+\p{
+    Just get the idea of the light-cone coordinates, now let's dive into the relativistic energy and momentum.
+    In special relativity there is relationship between energy and momentum.
+    ##{
+        \frac{E^2}{c^2}-\vec{p}^2 = m^2c^2
+    }
+    where #{m} is the rest mass of the particle, and #{c} is the speed of light.
+    ##{
+        E = \gamma mc^2,
+        \quad 
+        \vec{p} = \gamma m\vec{m}
+    }
+    The energy and momentum can be used to define a momentum four-vector
+    ##{
+        p^\mu = (\frac{E}{c},p_x, p_y, p_z)
+    }
+    or shortly
+    ##{
+        p^\mu = (\frac{E}{c},\vec{p}) = m\gamma (c, \vec{v})
+    }
+    Using operator #{\eta_{\mu\nu}} to lower the index:
+    ##{
+        p_\mu = (p_0, p_1, p_2, p_3) = \eta_{\mu\nu} p^\nu = (-\frac{E}{c},p_x, p_y, p_z)
+    }
+    And make use of the relationship above.
+    ##{
+        p_\mu p^\mu = \eta_{\mu\nu} p^\mu p^\nu = -\frac{E^2}{c^2} + p_x^2 + p_y^2 + p_z^2 = -m^2c^2
+    }
+    Using the relativistic scalar product notation:
+    ##{
+        p ^2 \equiv p \cdot p = p_\mu p^\mu = -m^2c^2
+    }
+}
+\p{
+    A central concept in special relativity is \strong{proper time},
+    which is a Lorentz invariant measure of time.
+}

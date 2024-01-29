@@ -1,0 +1,9 @@
+\title{Timelike Separated Events}
+\taxon{Definition}
+\p{
+    An event #{S} is said to be timelike separated if
+    ##{
+        (\Delta x^0)^2 > (\Delta x^1)^2 + (\Delta x^2)^2 + (\Delta x^3)^2
+    }
+    or briefly #{\Delta s^2 > 0}. The spatial separation is less than the distance light travels.
+}
