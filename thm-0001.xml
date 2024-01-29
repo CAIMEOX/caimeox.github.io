@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2511</anchor>  <taxon>Lemma</taxon> <addr>thm-0001</addr>  <route>thm-0001.xml</route>   <title>Linear Dependence Lemma</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2647</anchor>  <taxon>Lemma</taxon> <addr>thm-0001</addr>  <route>thm-0001.xml</route>   <title>Linear Dependence Lemma</title> </frontmatter> <mainmatter><p>
     Let <tex>v_1,  \dots , v_n</tex> be vectors in a vector space <tex>V</tex> over a field <tex>\mathbb {F}</tex>.
     If <tex>v_1,  \dots , v_n</tex> are linearly dependent, then there exists <tex>1  \leq  i  \leq  n</tex> such that
     <ul><li><tex>v_i  \in   \text {span} (v_1,  \dots , v_{i-1})</tex></li>
-        <li>Remove <tex>v_i</tex> from the list <tex>v_1,  \dots , v_n</tex> and the span does not change</li></ul></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2512</anchor>  <taxon>Linear Algebra</taxon> <addr>math-0002</addr>  <route>math-0002.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Finite Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
+        <li>Remove <tex>v_i</tex> from the list <tex>v_1,  \dots , v_n</tex> and the span does not change</li></ul></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2648</anchor>  <taxon>Linear Algebra</taxon> <addr>math-0002</addr>  <route>math-0002.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Finite Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
     Adding up scalar mulitples of vectors in a list gives a linear combination.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb></trail> <anchor>2513</anchor>  <taxon>Definition</taxon> <addr>def-000L</addr>  <route>def-000L.xml</route>   <title>Linear Combination</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb></trail> <anchor>2649</anchor>  <taxon>Definition</taxon> <addr>def-000L</addr>  <route>def-000L.xml</route>   <title>Linear Combination</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a <link href="def-000H.xml" type="local" title="Vector Space">vector space</link> over a field <tex>F</tex>.
     Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
     A <strong>linear combination</strong> of <tex>v_1,  \dots , v_n</tex> is an expression of the form
@@ -17,7 +17,7 @@
 </p></mainmatter> </tree><p>
     To talk about a structure, we usually define a collection of this structure.
     Hence we have span for linear combinations.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb></trail> <anchor>2514</anchor>  <taxon>Definition</taxon> <addr>def-000M</addr>  <route>def-000M.xml</route>   <title>Linear Span</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb></trail> <anchor>2650</anchor>  <taxon>Definition</taxon> <addr>def-000M</addr>  <route>def-000M.xml</route>   <title>Linear Span</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a vector space over a field <tex>F</tex>.
     Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
     The <strong>span</strong> of <tex>v_1,  \dots , v_n</tex> is defined as
@@ -35,18 +35,18 @@
     Thus we conclude that <tex>S</tex> is the smallest subspace containing <tex>v_1,  \dots , v_n</tex>.
 </p><p>
     The discussion about <strong>spans</strong> leads to a key definition in linear algebra.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb></trail> <anchor>2515</anchor>  <taxon>Definition</taxon> <addr>def-000N</addr>  <route>def-000N.xml</route>   <title>Finite-Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb></trail> <anchor>2651</anchor>  <taxon>Definition</taxon> <addr>def-000N</addr>  <route>def-000N.xml</route>   <title>Finite-Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
     A <link href="def-000H.xml" type="local" title="Vector Space">vector space</link> <tex>V</tex> is called <strong>finite-dimensional</strong> if some <link href="def-000G.xml" type="local" title="List">list</link> of vectors <tex>v_1,  \dots , v_n</tex> <link href="def-000M.xml" type="local" title="Linear Span">spans</link> <tex>V</tex>.
 </p></mainmatter> </tree><p>
     The opposite of finite-dimensional is infinite-dimensional.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>4</crumb></trail> <anchor>2516</anchor>  <taxon>Definition</taxon> <addr>def-000O</addr>  <route>def-000O.xml</route>   <title>Infinite-dimensional vector space</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>4</crumb></trail> <anchor>2652</anchor>  <taxon>Definition</taxon> <addr>def-000O</addr>  <route>def-000O.xml</route>   <title>Infinite-dimensional vector space</title> </frontmatter> <mainmatter><p>
     A vector space <tex>V</tex> is called <strong>infinite-dimensional</strong> if it is not <link href="def-000N.xml" type="local" title="Finite-Dimensional Vector Space">finite-dimensional</link>.
 </p></mainmatter> </tree><p>
     Consider the situation that there is only one way to
     express a vector <tex>v</tex> as a linear combination of vectors in a list <tex>v_1,  \dots , v_n</tex>.
     What property of the list <tex>v_1,  \dots , v_n</tex> does this situation imply? The answer is
     linear independence.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>5</crumb></trail> <anchor>2517</anchor>  <taxon>Definition</taxon> <addr>def-000P</addr>  <route>def-000P.xml</route>   <title>Linearly independent</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>5</crumb></trail> <anchor>2653</anchor>  <taxon>Definition</taxon> <addr>def-000P</addr>  <route>def-000P.xml</route>   <title>Linearly independent</title> </frontmatter> <mainmatter><p>
     A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly independent</strong> if
     <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
     implies that <tex>a_1 =  \dots  = a_n = 0</tex>.
@@ -55,7 +55,7 @@
     If some vectors are not linearly independent, then there are more than one way to
     express a vector as a linear combination of vectors in the list. This leads to 
     the following definition.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>6</crumb></trail> <anchor>2518</anchor>  <taxon>Definition</taxon> <addr>def-000Q</addr>  <route>def-000Q.xml</route>   <title>Linearly dependent</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>6</crumb></trail> <anchor>2654</anchor>  <taxon>Definition</taxon> <addr>def-000Q</addr>  <route>def-000Q.xml</route>   <title>Linearly dependent</title> </frontmatter> <mainmatter><p>
     A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly dependent</strong> if
     <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
     for some <tex>a_1,  \dots , a_n  \in   \mathbb {F}</tex> with at least one <tex>a_i  \neq  0</tex> (not all <tex>0</tex>).
@@ -63,12 +63,12 @@
     The following lemma is a direct consequence of the definition of linear independence.
     It states that for a given linearly dependent list, we can always remove a vector
     without changing the span.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>8</crumb></trail> <anchor>2519</anchor>  <taxon>Lemma</taxon> <addr>thm-0002</addr>  <route>thm-0002.xml</route>   <title>Length of linearly independent list <tex>\leq</tex> length of spanning list</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>8</crumb></trail> <anchor>2655</anchor>  <taxon>Lemma</taxon> <addr>thm-0002</addr>  <route>thm-0002.xml</route>   <title>Length of linearly independent list <tex>\leq</tex> length of spanning list</title> </frontmatter> <mainmatter><p>
     In a finite dimensional vector space, the length of a linearly independent list is less than or equal to the length of a spanning list.
 </p></mainmatter> </tree><p>
     We have discussed linear independent lists and spanning lists.
     Now we are ready to define a basis.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>9</crumb></trail> <anchor>2520</anchor>  <taxon>Definition</taxon> <addr>def-000R</addr>  <route>def-000R.xml</route>   <title>Basis</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>9</crumb></trail> <anchor>2656</anchor>  <taxon>Definition</taxon> <addr>def-000R</addr>  <route>def-000R.xml</route>   <title>Basis</title> </frontmatter> <mainmatter><p>
     A basis of <tex>V</tex> is a list of vectors in <tex>V</tex>
     that is linearly independent and spans <tex>V</tex>. 
 </p><p><strong>Criterion for basis</strong>

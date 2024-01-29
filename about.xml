@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>145</anchor>   <addr>about</addr>  <route>about.xml</route>   <title>About this website</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>146</anchor>   <addr>about</addr>  <route>about.xml</route>   <title>About this website</title> </frontmatter> <mainmatter><p>
     The choice of the name &quot;<strong>Rabbit Hole</strong>&quot; carries a metaphorical significance inspired by Lewis Carroll's <em>Alice's Adventures 
     in Wonderland</em>, meaning to delve into a topic or pursue a line of thought that leads to unexpected or complex places.
     It can refer to getting deeply involved in researching a subject, exploring a particular interest, or going through 
@@ -21,18 +21,19 @@
                 <li><code>thm</code> Theorems and propositions (For any topic above)</li>
                 <li><code>eg</code> Examples</li>
                 <li><code>proj</code> My Project</li></ul></li></ul>
-</mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" root="true"><frontmatter> <anchor>146</anchor>   <addr>index</addr>  <route>index.xml</route>  <authors><author>CAIMEO</author> </authors> <title>The Rabbit Hole</title> </frontmatter> <mainmatter>
+</mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" root="true"><frontmatter> <anchor>147</anchor>   <addr>index</addr>  <route>index.xml</route>  <authors><author>CAIMEO</author> </authors> <title>The Rabbit Hole</title> </frontmatter> <mainmatter>
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter> <anchor>147</anchor>  <taxon>Person</taxon> <addr>caimeo</addr>  <route>caimeo.xml</route>   <title>CAIMEO</title> <meta name="position">Student</meta><meta name="external">https://github.com/CAIMEOX</meta></frontmatter> <mainmatter><p>
-    A student interested in math and computer science.
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter> <anchor>148</anchor>  <taxon>Person</taxon> <addr>caimeo</addr>  <route>caimeo.xml</route>   <title>CAIMEO</title> <meta name="position">Student</meta><meta name="external">https://github.com/CAIMEOX</meta></frontmatter> <mainmatter><p>
+    A student interested in math, physics and computer science.
 </p><tex display="block">
-     \text {Life} =  \int _{ \text {birth}}^{ \text {death}}  \text {Learning}  \,   \text {d}t
+    i \hbar   \frac { \partial }{ \partial  t}  \Psi (x, t) =  \hat {H}  \Psi (x, t)
 </tex><ul><li>Learning Programming Language Theory and Type Theory</li>
+    <li>Attend in writing articles about String Theory</li>
     <li>Reading Type Theory and Formal Proof and Homotopy Type Theory</li>
     <li>Working on CommandLisp</li></ul></mainmatter> </tree>
     
 
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb></trail> <anchor>148</anchor>   <addr>posts</addr>  <route>posts.xml</route>  <authors> <contributor>CAIMEO</contributor></authors> <title>Blog posts</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb></trail> <anchor>149</anchor>  <taxon>Type Theory</taxon> <addr>tt-0002</addr>  <route>tt-0002.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title> </frontmatter> <mainmatter><p>This is a note on dependent type theory.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb></trail> <anchor>149</anchor>   <addr>posts</addr>  <route>posts.xml</route>  <authors> <contributor>CAIMEO</contributor></authors> <title>Blog posts</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb></trail> <anchor>150</anchor>  <taxon>Type Theory</taxon> <addr>tt-0002</addr>  <route>tt-0002.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title> </frontmatter> <mainmatter><p>This is a note on dependent type theory.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
     The set-theoretic foundation has two two layers:
     <ul><li>the deductive system of first-order logic</li>
         <li>the theory of a particular theory, such as ZFC</li></ul> 
@@ -72,7 +73,7 @@
         In type theory there is also a requirement for a judgment-level equality.
         This is called <strong>judgmental equality</strong>, meaning &quot;equal by definition&quot;.
     </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>1</crumb></trail> <anchor>150</anchor>  <taxon>Definition</taxon> <addr>def-0015</addr>  <route>def-0015.xml</route>   <title>Judgemental Equality</title> </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>1</crumb></trail> <anchor>151</anchor>  <taxon>Definition</taxon> <addr>def-0015</addr>  <route>def-0015.xml</route>   <title>Judgemental Equality</title> </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
     <tex display="block">
          \Gamma \vdash  a \equiv  a':A
     </tex>
@@ -94,7 +95,7 @@
     <ul><li>Rules allow us to conclude one judgment from a collection of other judgments.</li>
         <li>Axioms are judgments that are assumed to be true without proof.</li></ul></p><p>
     We start by introduction to Matrin Lof's dependent type theory. 
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>2</crumb></trail> <anchor>151</anchor>  <taxon>Definition</taxon> <addr>def-0017</addr>  <route>def-0017.xml</route>   <title>Dependent type theory: Judgments</title> </frontmatter> <mainmatter>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>2</crumb></trail> <anchor>152</anchor>  <taxon>Definition</taxon> <addr>def-0017</addr>  <route>def-0017.xml</route>   <title>Dependent type theory: Judgments</title> </frontmatter> <mainmatter>
     <p>
         There are four kinds of judgments in Martin Lof's dependent type theory:
     </p>
@@ -121,7 +122,7 @@
 
     To introduce types dependent on terms, 
     we need the notation of type families.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>3</crumb></trail> <anchor>152</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>3</crumb></trail> <anchor>153</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title> </frontmatter> <mainmatter><p>
     Consider a type <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>family</strong> of types over <tex>A</tex> in context <tex>\Gamma</tex>
     is a type <tex>B(x)</tex> in context <tex>\Gamma , x:A</tex>.
@@ -132,7 +133,7 @@
     Alternatively, we say that <tex>B(x)</tex> is a type <strong>indexed</strong> by <tex>x:A</tex> in context <tex>\Gamma</tex>.
 </p></mainmatter> </tree><p>
     Now we can define a term of a type family, that is, a section of a type family.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>4</crumb></trail> <anchor>153</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>4</crumb></trail> <anchor>154</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title> </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>section</strong> of <tex>B</tex> is a term <tex>b</tex> of type <tex>B(x)</tex> in context <tex>\Gamma ,x:A</tex>.
     <tex display="block">
@@ -148,7 +149,7 @@
         <li>Vairable conversion</li>
         <li>Substitution</li>
         <li>Weakening</li>
-        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>5</crumb></trail> <anchor>154</anchor>  <taxon>Definition</taxon> <addr>def-001A</addr>  <route>def-001A.xml</route>   <title>
+        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>5</crumb></trail> <anchor>155</anchor>  <taxon>Definition</taxon> <addr>def-001A</addr>  <route>def-001A.xml</route>   <title>
     Formation of contexts, types and terms
 </title> </frontmatter> <mainmatter><p>
     The following rules follow from the presuppotion
@@ -192,7 +193,7 @@
             }{
                  \Gamma \vdash  b:A
             }
-        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>6</crumb></trail> <anchor>155</anchor>  <taxon>Definition</taxon> <addr>def-001B</addr>  <route>def-001B.xml</route>   <title>
+        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>6</crumb></trail> <anchor>156</anchor>  <taxon>Definition</taxon> <addr>def-001B</addr>  <route>def-001B.xml</route>   <title>
     Judgmental equality is equivalence relation
 </title> </frontmatter> <mainmatter><p>
     Judgmental equality on types and on elements is an <link href="def-000X.xml" type="local" title="Equivalence relation">equivalence relation</link> 
@@ -238,7 +239,7 @@
             }{
                  \Gamma \vdash  A \equiv  C \space \text {type} 
             }
-        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>7</crumb></trail> <anchor>156</anchor>  <taxon>Definition</taxon> <addr>def-001C</addr>  <route>def-001C.xml</route>   <title>Variable Conversion</title> </frontmatter> <mainmatter><p>
+        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>7</crumb></trail> <anchor>157</anchor>  <taxon>Definition</taxon> <addr>def-001C</addr>  <route>def-001C.xml</route>   <title>Variable Conversion</title> </frontmatter> <mainmatter><p>
     This rule postulates that we can
     convert the type of a variable to a judgmentally equal type.
     <tex display="block">
@@ -265,7 +266,7 @@
     and we also have a term <tex>a:A</tex>.
     We can simultaneously substitute <tex>a</tex> for all occurrences of <tex>x</tex> in <tex>f</tex>
     to obtain a new term <tex>f[x:=a]:B(a)</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>8</crumb></trail> <anchor>157</anchor>  <taxon>Definition</taxon> <addr>def-001D</addr>  <route>def-001D.xml</route>   <title>Substitution</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>8</crumb></trail> <anchor>158</anchor>  <taxon>Definition</taxon> <addr>def-001D</addr>  <route>def-001D.xml</route>   <title>Substitution</title> </frontmatter> <mainmatter><p>
     The substitution rule postulates that we can substitute a term for a variable.
     <tex display="block">
          \frac {
@@ -298,7 +299,7 @@
         }{
              \Gamma , \Delta [x:=a] \vdash  b[x:=a] \equiv  b[x:=a']:A'[x:=a]  \space \text {type} 
         }
-    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>9</crumb></trail> <anchor>158</anchor>  <taxon>Definition</taxon> <addr>def-001G</addr>  <route>def-001G.xml</route>   <title>Fiber and Value</title> </frontmatter> <mainmatter><p>
+    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>9</crumb></trail> <anchor>159</anchor>  <taxon>Definition</taxon> <addr>def-001G</addr>  <route>def-001G.xml</route>   <title>Fiber and Value</title> </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>,
     an a well-formed term <tex>a:A</tex>,
     then we say that <tex>B[x:=a]</tex> is the <strong>fiber</strong> of <tex>B</tex> at <tex>a</tex>, denoted <tex>B(a)</tex>.
@@ -310,7 +311,7 @@
     The process of expanding the context by a fresh variable of type <tex>A</tex> is called weakening (by <tex>A</tex>).
     Intuitively, weakening is the process of adding a new hypothesis to the context.
     And the hypothesis will weaken the conclusion.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>10</crumb></trail> <anchor>159</anchor>  <taxon>Definition</taxon> <addr>def-001E</addr>  <route>def-001E.xml</route>   <title>Weakening</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>10</crumb></trail> <anchor>160</anchor>  <taxon>Definition</taxon> <addr>def-001E</addr>  <route>def-001E.xml</route>   <title>Weakening</title> </frontmatter> <mainmatter><p>
     Weakening rule asserts that we can add a variable to the context.
     <tex display="block">
          \frac {
@@ -323,7 +324,7 @@
     </tex></p></mainmatter> </tree><p>
     Finally, the generic elemets rule ensures that
     the variables declared in a context.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>11</crumb></trail> <anchor>160</anchor>  <taxon>Definition</taxon> <addr>def-001F</addr>  <route>def-001F.xml</route>   <title>Generic Elements</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>11</crumb></trail> <anchor>161</anchor>  <taxon>Definition</taxon> <addr>def-001F</addr>  <route>def-001F.xml</route>   <title>Generic Elements</title> </frontmatter> <mainmatter><p>
     The rule for the generic element asserts that 
     any hypothetical element <tex>x:A</tex> in context <tex>\Gamma ,x:A</tex>
     is also an element of <tex>A</tex> in context <tex>\Gamma ,x:A</tex>.
@@ -338,7 +339,116 @@
 </p></mainmatter> </tree><p>
     The next topic is the dependent function type, a fundamental concept of dependent type theory.
     Simply put, a dependent function type is a function whose type of output may depend on the input.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb></trail> <anchor>161</anchor>  <taxon>String Theory</taxon> <addr>phy-0001</addr>  <route>phy-0001.xml</route> <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and extra dimensions</title> </frontmatter> <mainmatter><p>
+</p><p>
+    Consider a section <tex>b</tex> of a family <tex>B</tex> over <tex>A</tex> in context <tex>\Gamma</tex>:
+    <tex display="block">
+         \Gamma ,x:A \vdash  b(x):B(x)
+    </tex>
+    Such a section <tex>b</tex> is an operation or assignment <tex>x \mapsto  b(x)</tex> that assigns to each element <tex>x:A</tex>
+    to a term <tex>b(x):B(x)</tex>.
+    We may see <tex>b</tex> as a function takes <tex>x:A</tex> to <tex>b(x):B(x)</tex>.
+    The function <tex>x \mapsto  b(x)</tex> is called a <strong>dependent function</strong>.
+    The type of all dependent functions from <tex>A</tex> to <tex>B</tex> is called the <strong>dependent function type</strong>.
+    <tex display="block">
+         \Pi _{(x:A)}B(x)  \text { or } (x:A) \to  B(x)
+    </tex></p><p>
+    To introduce a type we need the following four rules:
+    <ul><li>Formation rule</li>
+        <li>Introduction rule</li>
+        <li>Elimination rule</li>
+        <li>Computation rule</li></ul>
+    Besides these we also need the <strong>congruence rule</strong> for judgmental equality.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>12</crumb></trail> <anchor>162</anchor>  <taxon>Definition</taxon> <addr>def-001T</addr>  <route>def-001T.xml</route>   <title>Dependent Function Type</title> </frontmatter> <mainmatter><p><strong>Formation Rule</strong>
+    For any type family <tex>B</tex> over <tex>A</tex> in context <tex>\Gamma</tex>:
+    <tex display="block">
+         \frac {
+             \Gamma ,x:A \vdash  B(x) \space \text {type} 
+        }{
+             \Gamma \vdash   \Pi _{(x:A)}B(x) \space \text {type} 
+        } \Pi 
+    </tex>
+    We also require that the operation of forming dependent function types
+    respects judgmental equality.
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  A \equiv  A' \space \text {type} 
+             \quad 
+             \Gamma ,x:A \vdash  B(x) \equiv  B'(x) \space \text {type} 
+        }{
+             \Gamma \vdash   \Pi _{(x:A)}B(x) \equiv   \Pi _{(x:A')}B'(x) \space \text {type} 
+        } \Pi \text {-eq}
+    </tex></p><p><strong>Introduction Rule (<tex>\lambda</tex>-abstraction)</strong>
+    In order to construct a dependent function we have to
+    construct a term <tex>f(x):B(x)</tex> indexed by <tex>x:A</tex> in context <tex>\Gamma</tex>:
+    <tex display="block">
+         \frac {
+             \Gamma ,x:A \vdash  b(x):B(x)
+        }{
+             \Gamma \vdash   \lambda  x.b(x): \Pi _{(x:A)}B(x)
+        } \lambda 
+    </tex>
+    And the congruence rule:
+    <tex display="block">
+         \frac {
+             \Gamma ,x:A \vdash  b(x) \equiv  b'(x):B(x)
+        }{
+             \Gamma \vdash   \lambda  x.b(x) \equiv   \lambda  x.b'(x): \Pi _{(x:A)}B(x)
+        } \lambda \text {-eq}
+    </tex></p><p><strong>Elimination Rule (Evaluation Rule)</strong>
+    In order to use dependent function we need to provide an argument of the domain type.
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  f: \Pi _{(x:A)}B(x)
+        }{
+             \Gamma ,x:A \vdash  f(x):B(x)
+        }ev
+    </tex>
+    Again we require the judgmental equality to be respected:
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  f \equiv  f': \Pi _{(x:A)}B(x)
+        }{
+             \Gamma ,x:A \vdash  f(x) \equiv  f'(x):B(x)
+        }ev \text {-eq}
+    </tex></p><p><strong>Computation Rule (<tex>\beta</tex>-reduction)</strong>
+    <tex display="block">
+         \frac {
+             \Gamma ,x:A \vdash  b(x):B(x)
+        }{
+             \Gamma ,x:A \vdash  ( \lambda  y.b(y))(x) \equiv  b(x):B(x)
+        } \beta 
+    </tex>
+    We postulate that all elements of a dependent function type are dependent functions.
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  f: \Pi _{(x:A)}B(x)
+        }{
+             \Gamma \vdash  f \equiv   \lambda  x.f(x): \Pi _{(x:A)}B(x)
+        } \eta 
+    </tex></p></mainmatter> </tree><p>
+    A degenrated case of dependent function type is the ordinary function type.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>1</crumb> <crumb>13</crumb></trail> <anchor>163</anchor>  <taxon>Definition</taxon> <addr>def-001U</addr>  <route>def-001U.xml</route>   <title>Ordinary Function Type</title> </frontmatter> <mainmatter><p>
+    A special case of <link href="def-001T.xml" type="local" title="Dependent Function Type"><tex>\Pi</tex>-type</link> is the <strong>ordinary function type</strong>.
+    Using weakening rule we can obtain thee type <tex>A \to  B</tex> of ordinary function from <tex>A</tex> to <tex>B</tex>
+    <tex display="block">
+         \frac {
+             \Gamma \vdash  A \space \text {type} 
+             \quad 
+             \Gamma \vdash  B \space \text {type} 
+        }{ \dfrac {
+             \Gamma ,x:A \vdash  B \space \text {type} 
+        }{
+             \Gamma \vdash   \Pi _{(x:A)}B \space \text {type} 
+        } \Pi }W
+    </tex>
+    A term <tex>f:  \Pi _{(x:A)}B</tex> is an ordinary function. The type <tex>A  \to  B</tex> is defined:
+    <tex display="block">
+        A \to  B :=  \Pi _{(x:A)}B
+    </tex>
+    The type <tex>A</tex> is called <strong>domain</strong> of <tex>f</tex>,
+    and type <tex>B</tex> is called <strong>codomain</strong> of <tex>f</tex>.
+    The notation <tex>:=</tex> here means to make a definition.
+</p></mainmatter> </tree></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb></trail> <anchor>164</anchor>  <taxon>String Theory</taxon> <addr>phy-0001</addr>  <route>phy-0001.xml</route> <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and extra dimensions</title> </frontmatter> <mainmatter><p>
     Speical relativity is based on the exprimental fact that the speed of light is the same for all inertial observers.
     In comparing the coordinates of events, two inertial observers (<strong>Lorentz observers</strong>) find that the
     appropriate coordinate transformations mix space and time.   
@@ -365,7 +475,7 @@
          \Delta  s ^2 =  \Delta  s'^2
     </tex>
     The minus sign on the left of <tex>\Delta  s^2</tex> implies that <tex>\Delta  s^2 &gt;0</tex> for events that are <strong>timelike separated</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>1</crumb></trail> <anchor>162</anchor>  <taxon>Definition</taxon> <addr>def-001H</addr>  <route>def-001H.xml</route>   <title>Timelike Separated Events</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>1</crumb></trail> <anchor>165</anchor>  <taxon>Definition</taxon> <addr>def-001H</addr>  <route>def-001H.xml</route>   <title>Timelike Separated Events</title> </frontmatter> <mainmatter><p>
     An event <tex>S</tex> is said to be timelike separated if
     <tex display="block">
         ( \Delta  x^0)^2 &gt; ( \Delta  x^1)^2 + ( \Delta  x^2)^2 + ( \Delta  x^3)^2
@@ -375,10 +485,10 @@
     The history of a particle is represented in spacetime as a curve called a <strong>world-line</strong>.
     Any two events on the world-line are timelike separated, because no particle can 
     move faster than light.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>2</crumb></trail> <anchor>163</anchor>  <taxon>Definition</taxon> <addr>def-001I</addr>  <route>def-001I.xml</route>   <title>Lightlike Separated Events</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>2</crumb></trail> <anchor>166</anchor>  <taxon>Definition</taxon> <addr>def-001I</addr>  <route>def-001I.xml</route>   <title>Lightlike Separated Events</title> </frontmatter> <mainmatter><p>
     Events connected by the world-line of a <strong>photon</strong> are said to be <strong>lightlike separated</strong>.
     For which <tex>\Delta  s^2 = 0</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>3</crumb></trail> <anchor>164</anchor>  <taxon>Definition</taxon> <addr>def-001J</addr>  <route>def-001J.xml</route>   <title>Spacelike Separated Events</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>3</crumb></trail> <anchor>167</anchor>  <taxon>Definition</taxon> <addr>def-001J</addr>  <route>def-001J.xml</route>   <title>Spacelike Separated Events</title> </frontmatter> <mainmatter><p>
     Two events for which <tex>\Delta  s^2 &lt; 0</tex> are said to be <strong>spacelike separated</strong>.
     Events that are simultaneous in a Lorentz frame but in different position are spacelike separated.
 </p></mainmatter> </tree><p>
@@ -425,7 +535,7 @@
         -ds^2=  \eta _{ \mu \nu } dx^ \mu  dx^ \nu 
     </tex>
     and the metric is defined by
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>4</crumb></trail> <anchor>165</anchor>  <taxon>Definition</taxon> <addr>def-001L</addr>  <route>def-001L.xml</route>   <title>Minkowski Metric</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>4</crumb></trail> <anchor>168</anchor>  <taxon>Definition</taxon> <addr>def-001L</addr>  <route>def-001L.xml</route>   <title>Minkowski Metric</title> </frontmatter> <mainmatter><p>
     The <strong>Minkowski Metric</strong>, aka <strong>Minkowski Tensor</strong>, is a tensor <tex>\eta _{ \mu \nu }</tex> whose elements are defined by the matrix
     <tex display="block">
          \eta _{ \mu \nu } =  \begin {pmatrix}
@@ -482,7 +592,7 @@
          \eta ^{ \mu \rho }  \eta _{ \rho \nu } =  \delta ^ \mu _ \nu 
     </tex>
     where <tex>\delta ^ \mu _ \nu</tex> is the <link href="def-001P.xml" type="local" title="Kronecker Delta">Kronecker Delta</link>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>5</crumb></trail> <anchor>166</anchor>  <taxon>Trick</taxon> <addr>thm-0004</addr>  <route>thm-0004.xml</route>   <title>Raise Indices</title> </frontmatter> <mainmatter><p><tex display="block">
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>5</crumb></trail> <anchor>169</anchor>  <taxon>Trick</taxon> <addr>thm-0004</addr>  <route>thm-0004.xml</route>   <title>Raise Indices</title> </frontmatter> <mainmatter><p><tex display="block">
          \eta ^{ \rho \mu }b_ \mu 
         =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )
         =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu 
@@ -493,7 +603,7 @@
 </p></mainmatter> </tree><p><strong>Lorentz transformations</strong> are the relations between coordinates in two different
     inertial frames.
     
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>6</crumb></trail> <anchor>167</anchor>  <taxon>Definition</taxon> <addr>def-001Q</addr>  <route>def-001Q.xml</route>   <title>Lorentz Transformations</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>6</crumb></trail> <anchor>170</anchor>  <taxon>Definition</taxon> <addr>def-001Q</addr>  <route>def-001Q.xml</route>   <title>Lorentz Transformations</title> </frontmatter> <mainmatter><p>
     Consider a frame <tex>S</tex> and <tex>S'</tex> which is moving along the <tex>+x</tex> direction of the <tex>S</tex> frame
     with a velocity <tex>v</tex>.
     Assume that the origins of the two frames coincide at <tex>t=t'=0</tex> and coordinate axes are parallel.
@@ -542,7 +652,7 @@
 </p></mainmatter> </tree><p>
     We now introduce a coordinate system that will be extremely useful in string theory,
     the <strong>light-cone coordinates</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>7</crumb></trail> <anchor>168</anchor>  <taxon>Definition</taxon> <addr>def-001R</addr>  <route>def-001R.xml</route>   <title>Light-cone Coordinates</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>7</crumb></trail> <anchor>171</anchor>  <taxon>Definition</taxon> <addr>def-001R</addr>  <route>def-001R.xml</route>   <title>Light-cone Coordinates</title> </frontmatter> <mainmatter><p>
     The <strong>light-cone coordinates</strong> can be defined as
     two independent <link href="def-000L.xml" type="local" title="Linear Combination">linear combinations</link> of the time 
     and a chosen spatial coordinate (conventionally <tex>x^1</tex>):
@@ -667,9 +777,54 @@
     </tex></p><p>
     A central concept in special relativity is <strong>proper time</strong>,
     which is a Lorentz invariant measure of time.
-</p></mainmatter> </tree></mainmatter> </tree>
+    Consider a world-line and two events <tex>A</tex> and <tex>B</tex> on the world-line.
+    Different Lorentz observers will measure different time intervals between the two events.
+    But imagine a clock that moves along the world-line.
+    The time measured by the clock is called the <strong>proper time</strong> between the two events.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb> <crumb>2</crumb> <crumb>8</crumb></trail> <anchor>172</anchor>  <taxon>Definition</taxon> <addr>def-001S</addr>  <route>def-001S.xml</route>   <title>Proper Time</title> </frontmatter> <mainmatter><p>
+    The <strong>proper time</strong> along a timelike world-line is defined as the
+    time as measured by a clock following that line. 
+</p></mainmatter> </tree><p>
+    By this definition, proper time is a invariant. Consider an invariant interval 
+    for the motion of a particle along <tex>x</tex> axis:
+    <tex display="block">
+        -ds^2 = -c^2 dt^2 + dx^2 = -c^2 dt^2 (1 -  \beta ^2)
+    </tex>
+    Now attach a Lorentz frame to the particle does not move
+    and the time is recorded by the clock that is moving with the particle.
+    Hence <tex>dx=0</tex> and <tex>dt=dt_p</tex> is the proper time.
+    <tex display="block">
+        -ds^2 = -c^2 dt_p^2 
+    </tex>
+    Cancel the minus sign and the square root
+    <tex display="block">
+        dt_p = c dt_p
+    </tex>
+    This shows that for timelike intervals,
+    the <strong>proper time interval</strong> is <tex>\frac {ds}{c}</tex>.
+    Similarly, 
+    <tex display="block">
+        ds = cdt  \sqrt {1- \beta ^2}  \implies   \frac {dt}{ds} =  \frac { \gamma }{c}
+    </tex>
+    The invariant <tex>ds</tex> can be used to construct nre Lorentz vectors.
+    For instance, we can construct velocity four-vector:
+    <tex display="block">
+        u^ \mu  = c  \frac {dx^ \mu }{ds} = c ( \frac {d(ct)}{ds},  \frac {dx}{ds},  \frac {dy}{ds},  \frac {dz}{ds})
+    </tex>
+    This can be simplified by using the definition of proper time:
+    <tex display="block">
+         \frac {dx}{ds} =  \frac {dx}{dt}  \frac {dt}{ds} =  \frac {v_x \gamma }{c}
+    </tex>
+    Hence we find
+    <tex display="block">
+        u^ \mu  = ( \gamma  c,  \gamma  v_x,  \gamma  v_y,  \gamma  v_z) =  \gamma  (c,  \vec {v})
+    </tex>
+    We see that the momentum four-vector is just the velocity four-vector multiplied by the rest mass.
+    <tex display="block">
+        p^ \mu  = m u^ \mu 
+    </tex></p></mainmatter> </tree></mainmatter> </tree>
     
-    <tree expanded="false" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb></trail> <anchor>169</anchor>   <addr>notes</addr>  <route>notes.xml</route>   <title>Notes</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>1</crumb></trail> <anchor>170</anchor>  <taxon>Type Theory</taxon> <addr>tt-0001</addr>  <route>tt-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Untyped Lambda Calculus</title> </frontmatter> <mainmatter><p>
+    <tree expanded="false" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb></trail> <anchor>173</anchor>   <addr>notes</addr>  <route>notes.xml</route>   <title>Notes</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>1</crumb></trail> <anchor>174</anchor>  <taxon>Type Theory</taxon> <addr>tt-0001</addr>  <route>tt-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Untyped Lambda Calculus</title> </frontmatter> <mainmatter><p>
 In dealing with functions there are two <strong>construction principles</strong> and one <strong>evalutaion rule</strong>
 <ul><li>Construction Principles</li>
 <ul><li>Function Abstraction: <tex>\lambda  x.M</tex></li>
@@ -679,7 +834,7 @@ In dealing with functions there are two <strong>construction principles</strong>
 The beta reduction makes use of the <strong>substitution</strong> <tex>M[N/x]</tex> which represents the result of replacing all free occurences of <tex>x</tex> in <tex>M</tex> with <tex>N</tex>.
 </p>
 <p>Expressions in the lambda calculus is called <strong>terms</strong>. The set of terms is denoted <tex>\Lambda</tex>.</p>
-<tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>1</crumb> <crumb>1</crumb></trail> <anchor>171</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>1</crumb> <crumb>1</crumb></trail> <anchor>175</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title> </frontmatter> <mainmatter><p>
 Let <tex>\Lambda</tex> be the set of lambda terms. Then <tex>\Lambda</tex> is defined inductively as follows:
 (<tex>V</tex> is the set of variables)
 <ul><li>Variable: <tex>\forall  x \in  V, x \in   \Lambda</tex></li>
@@ -687,9 +842,9 @@ Let <tex>\Lambda</tex> be the set of lambda terms. Then <tex>\Lambda</tex> is de
 <li>Application: <tex>\forall  M,N \in   \Lambda , (MN) \in   \Lambda</tex></li></ul></p><p>
 Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 possibilities are separated by <code>|</code>):
 <tex display="block">\Lambda  = V |  \lambda  V. \Lambda  |  \Lambda \Lambda</tex></p></mainmatter> </tree> 
-</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb></trail> <anchor>172</anchor>  <taxon>Set Theory</taxon> <addr>math-0003</addr>  <route>math-0003.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Set Theory</title> </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb></trail> <anchor>176</anchor>  <taxon>Set Theory</taxon> <addr>math-0003</addr>  <route>math-0003.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Set Theory</title> </frontmatter> <mainmatter><p>
     We will first start by introducing sets
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>1</crumb></trail> <anchor>173</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>Set</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>1</crumb></trail> <anchor>177</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>Set</title> </frontmatter> <mainmatter><p>
     A set is a collection of objects.
 </p><p><strong>Element</strong>
     <tex>x \in  A</tex> means <tex>A</tex> is a collection and <tex>x</tex> is an element of a collection.
@@ -700,25 +855,25 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     <tex>\mathcal {P}(A)</tex> is the set of all subsets of <tex>A</tex>.
 </p></mainmatter> </tree><p>
     And principles of set theory
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>2</crumb></trail> <anchor>174</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>2</crumb></trail> <anchor>178</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
     Two sets are equal if and only if they have the same elements.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>3</crumb></trail> <anchor>175</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>3</crumb></trail> <anchor>179</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
     Given a set <tex>A</tex> and a property <tex>P(x)</tex>, there exists a set <tex>B</tex> such that
     <tex>x \in  B  \iff  x \in  A  \land  P(x)</tex>.
 </p></mainmatter> </tree><p>
     We then define the Cartesian product of two sets
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>4</crumb></trail> <anchor>176</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>4</crumb></trail> <anchor>180</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
     Given two sets <tex>A</tex> and <tex>B</tex>, the Cartesian product <tex>A \times  B</tex> is the set
     of all ordered pairs <tex>(a,b)</tex> where <tex>a \in  A</tex> and <tex>b \in  B</tex>.
 </p></mainmatter> </tree><p>
     With the Cartesian product, we can define the relation
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>5</crumb></trail> <anchor>177</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>5</crumb></trail> <anchor>181</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
     A <strong>relation</strong> <tex>R</tex> is a subset of the Cartesian product of two sets <tex>A</tex> and
     <tex>B</tex>, i.e. <tex>R \subseteq  A \times  B</tex>.
     If <tex>(a,b) \in  R</tex>, we write <tex>aRb</tex>.
 
     A relation that between <tex>X</tex> and itself is called <strong>homogeneous relation</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>6</crumb></trail> <anchor>178</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence relation</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>6</crumb></trail> <anchor>182</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence relation</title> </frontmatter> <mainmatter><p>
     An equivalence relation <tex>R</tex> on a set <tex>A</tex> is a <link href="def-000W.xml" type="local" title="Relation">relation</link> that is reflexive,
     symmetric, and transitive.
     <ul><li>Reflexive:
@@ -729,10 +884,10 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
             <tex>\forall  x,y,z \in  A, xRy \land  yRz \implies  xRz</tex></li></ul></p></mainmatter> </tree><p>
     One of the most important relations is the order relation.
     The basic order relation is the preorder.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>7</crumb></trail> <anchor>179</anchor>  <taxon>Definition</taxon> <addr>def-000Z</addr>  <route>def-000Z.xml</route>   <title>Preorder</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>7</crumb></trail> <anchor>183</anchor>  <taxon>Definition</taxon> <addr>def-000Z</addr>  <route>def-000Z.xml</route>   <title>Preorder</title> </frontmatter> <mainmatter><p>
     A <strong>preorder</strong> is a relation <tex>\leq</tex> that is reflexive and transitive.
     <ul><li>Reflexive: <tex>a \leq  a</tex></li>
-        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>8</crumb></trail> <anchor>180</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
+        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>8</crumb></trail> <anchor>184</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
     A <strong>(non-strict) partial order</strong> is a relation <tex>\leq</tex> that is reflexive, antisymmetric and transitive.
     <ul><li>Reflexive: <tex>a \leq  a</tex></li>
         <li>Antisymmetric: <tex>a \leq  b</tex> and <tex>b \leq  a</tex> implies <tex>a=b</tex></li>
@@ -740,13 +895,13 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     A non-strict partial order is also known as an antisymmetric <link href="def-000Z.xml" type="local" title="Preorder">preorder</link>.
 </p></mainmatter> </tree><p>
     And the strict partial order (notice the difference between asymmetric and antisymmetric)
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>9</crumb></trail> <anchor>181</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>9</crumb></trail> <anchor>185</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
     A strict partial order is a relation <tex>&lt;</tex> that is irreflexive, asymmetric and transitive.
     <ul><li>Irreflexive: <tex>\neg (a&lt;a)</tex></li>
         <li>Asymmetric: <tex>a&lt;b</tex> implies <tex>\neg (b&lt;a)</tex></li>
         <li>Transitive: <tex>a&lt;b</tex> and <tex>b&lt;c</tex> implies <tex>a&lt;c</tex></li></ul></p></mainmatter> </tree><p>
     With the definition of order, we can define the upper bound and lower bound
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>10</crumb></trail> <anchor>182</anchor>  <taxon>Definition</taxon> <addr>def-0011</addr>  <route>def-0011.xml</route>   <title>Upper Bound and Lower Bound</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>2</crumb> <crumb>10</crumb></trail> <anchor>186</anchor>  <taxon>Definition</taxon> <addr>def-0011</addr>  <route>def-0011.xml</route>   <title>Upper Bound and Lower Bound</title> </frontmatter> <mainmatter><p>
     Let a subset <tex>S</tex> of a <link href="def-000Y.xml" type="local" title="Partial Order">partially ordered</link> set <tex>(P,  \leq )</tex>,
     <tex>S</tex> is bounded above if there exists <tex>x  \in  P</tex> such that <tex>\forall  y  \in  S, y  \leq  x</tex>. And <tex>x</tex> is called an <strong>upper bound</strong> of <tex>S</tex>.
     Dually, <tex>S</tex> is bounded below if there exists <tex>x  \in  P</tex> such that <tex>\forall  y  \in  S, x  \leq  y</tex>. And <tex>x</tex> is called a <strong>lower bound</strong> of <tex>S</tex>.
@@ -763,15 +918,15 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     if for all lower bounds <tex>z  \in  P</tex> of <tex>S</tex>, <tex>z  \leq  x</tex>.
     Denoted as <tex>x =  \inf  S</tex>.
     </p>
-</mainmatter> </tree></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>3</crumb></trail> <anchor>183</anchor>  <taxon>Math Analysis</taxon> <addr>math-0004</addr>  <route>math-0004.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>The construction of <tex>\mathbb {R}</tex></title> </frontmatter> <mainmatter><p>
+</mainmatter> </tree></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>3</crumb></trail> <anchor>187</anchor>  <taxon>Math Analysis</taxon> <addr>math-0004</addr>  <route>math-0004.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>The construction of <tex>\mathbb {R}</tex></title> </frontmatter> <mainmatter><p>
     We start constructing <tex>\mathbb {R}</tex> from <tex>\mathbb {Q}</tex> by a way that it satisfies the existence theorem,
     the core of construction.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>3</crumb> <crumb>1</crumb></trail> <anchor>184</anchor>  <taxon>Theorem</taxon> <addr>thm-0003</addr>  <route>thm-0003.xml</route>   <title>Existence theorem</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>3</crumb> <crumb>1</crumb></trail> <anchor>188</anchor>  <taxon>Theorem</taxon> <addr>thm-0003</addr>  <route>thm-0003.xml</route>   <title>Existence theorem</title> </frontmatter> <mainmatter><p>
     There exists an ordered field <tex>\mathbb {R}</tex> that satisfies the <link href="def-0012.xml" type="local" title="Least upper bound property">least upper bound property</link>.
     Moreover <tex>\mathbb {R}</tex> contains <tex>\mathbb {Q}</tex> as a subfield.
 </p></mainmatter> </tree><p>
     The least-upper-bound property mentioned above is defined:
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>3</crumb> <crumb>2</crumb></trail> <anchor>185</anchor>  <taxon>Definition</taxon> <addr>def-0012</addr>  <route>def-0012.xml</route>   <title>Least upper bound property</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>3</crumb> <crumb>2</crumb></trail> <anchor>189</anchor>  <taxon>Definition</taxon> <addr>def-0012</addr>  <route>def-0012.xml</route>   <title>Least upper bound property</title> </frontmatter> <mainmatter><p>
     A set <tex>S</tex> has the least upper bound property if every non-empty subset <tex>T</tex> of <tex>S</tex> that is bounded above has a least upper bound <tex>\sup  T</tex>.
 </p></mainmatter> </tree><p>
     Why do we need the least-upper-bound property?
@@ -795,14 +950,14 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
         <li>Closed downward</li>
         <li>Contains not the largest number</li></ul>
     A formal definition is given below:
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>3</crumb> <crumb>3</crumb></trail> <anchor>186</anchor>  <taxon>Definition</taxon> <addr>def-0013</addr>  <route>def-0013.xml</route>   <title>Dedekind cuts</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>3</crumb> <crumb>3</crumb></trail> <anchor>190</anchor>  <taxon>Definition</taxon> <addr>def-0013</addr>  <route>def-0013.xml</route>   <title>Dedekind cuts</title> </frontmatter> <mainmatter><p>
     A Dedekind cut is a partition of the rationals <tex>\mathbb {Q}</tex> into two non-empty sets <tex>L</tex> and <tex>R</tex> such that:
     <ul><li><tex>L \neq \emptyset</tex></li>
         <li><tex>R \neq \emptyset</tex></li>
         <li>if <tex>x,y \in \mathbb {Q}, x&lt;y</tex> and <tex>y \in  L</tex> then <tex>x \in  L</tex></li>
         <li>if <tex>p \in  L</tex> then exists <tex>q \in  L</tex> such that <tex>p&lt;q</tex></li></ul></p></mainmatter> </tree><p>
     Now we can defined the real number as a set of Dedekind cuts.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>3</crumb> <crumb>4</crumb></trail> <anchor>187</anchor>  <taxon>Definition</taxon> <addr>def-0014</addr>  <route>def-0014.xml</route>   <title>Real Number System</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>3</crumb> <crumb>4</crumb></trail> <anchor>191</anchor>  <taxon>Definition</taxon> <addr>def-0014</addr>  <route>def-0014.xml</route>   <title>Real Number System</title> </frontmatter> <mainmatter><p>
     The element of <tex>\mathbb {R}</tex> is a <link href="def-0013.xml" type="local" title="Dedekind cuts">Dedekind Cut</link> in <tex>\mathbb {Q}</tex>.
     <tex display="block">
          \mathbb {R} :=  \{  L | (L,R)  \text { is a Dedekind Cut}  \} 
@@ -810,11 +965,11 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     Now define the order relation on <tex>\mathbb {R}</tex>.
     We have defined <tex>\mathbb {R}</tex> as the set of Dedekind cuts, so we can define the strict partial order relation <tex>&lt;</tex> on <tex>\mathbb {R}</tex> by the set operation <tex>\subset</tex>.
     The irreflexive, asymmetric and transitive properties are trivial. 
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>4</crumb></trail> <anchor>188</anchor>  <taxon>Linear Algebra</taxon> <addr>math-0001</addr>  <route>math-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Vector Space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>4</crumb></trail> <anchor>192</anchor>  <taxon>Linear Algebra</taxon> <addr>math-0001</addr>  <route>math-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Vector Space</title> </frontmatter> <mainmatter><p>
     The motivation for the definition of a vector space comes from the properties
     of vectors in Euclidean space <tex>\mathbb {R}^n</tex> and <tex>\mathbb {C}^n</tex>.
     The definition abstracts and generalizes these properties.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>4</crumb> <crumb>1</crumb></trail> <anchor>189</anchor>  <taxon>Definition</taxon> <addr>def-000H</addr>  <route>def-000H.xml</route>   <title>Vector Space</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>4</crumb> <crumb>1</crumb></trail> <anchor>193</anchor>  <taxon>Definition</taxon> <addr>def-000H</addr>  <route>def-000H.xml</route>   <title>Vector Space</title> </frontmatter> <mainmatter><p>
     A vector space over a <link href="def-0006.xml" type="local" title="Field">field</link> <tex>F</tex> is a non-empty set <tex>V</tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
     In this context, the elements of <tex>F</tex> are commonly called <strong>vectors</strong>, and the elements of <tex>F</tex> are called <strong>scalars</strong>.
     <ul><li>Commutativity: <tex>
@@ -840,14 +995,14 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     When dealing with vector spaces, we usually interested only in subspaces.
     And the union of subspaces is rarely a subspace, thus
     we are more interested with sums of subspaces.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>4</crumb> <crumb>2</crumb></trail> <anchor>190</anchor>  <taxon>Definition</taxon> <addr>def-000I</addr>  <route>def-000I.xml</route>   <title>Linear Subspace</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>4</crumb> <crumb>2</crumb></trail> <anchor>194</anchor>  <taxon>Definition</taxon> <addr>def-000I</addr>  <route>def-000I.xml</route>   <title>Linear Subspace</title> </frontmatter> <mainmatter><p>
     A subset <tex>U</tex> of a vector space <tex>V</tex> over a field <tex>F</tex> is called a <strong>subspace</strong> of <tex>V</tex> if <tex>U</tex> is itself a <strong>vector space</strong> over <tex>F</tex> with the operations of addition and scalar multiplication on <tex>V</tex>.
     The subset also satisfies the following axioms (vice versa):
     <ul><li>Additive identity: <tex>0 \in  U</tex></li>
         <li>Closure: <tex>\forall  u,v \in  U, u+v \in  U</tex></li>
         <li>Closed Scalar multiplication: <tex>\forall  u \in  U,  \forall  c \in  F, cu \in  U</tex></li></ul></p></mainmatter> </tree><p>
     After that we can define the sum of subsets.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>4</crumb> <crumb>3</crumb></trail> <anchor>191</anchor>  <taxon>Definition</taxon> <addr>def-000J</addr>  <route>def-000J.xml</route>   <title>Sum of subsets</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>4</crumb> <crumb>3</crumb></trail> <anchor>195</anchor>  <taxon>Definition</taxon> <addr>def-000J</addr>  <route>def-000J.xml</route>   <title>Sum of subsets</title> </frontmatter> <mainmatter><p>
     Let <tex>U_1,  \dots , U_n</tex> be subsets of a vector space <tex>V</tex>.
     The <strong>sum</strong> of <tex>U_1,  \dots , U_n</tex> is defined as
     <tex display="block">U_1 +  \dots  + U_n =  \{ u_1 +  \dots  + u_n  \mid  u_i  \in  U_i \}</tex>.
@@ -860,7 +1015,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     </tex>
     We will interested in cases where each vector in <tex>U_1 +  \dots  + U_n</tex> can be represented in the form above
     in only one way. This leads to the definition of direct sum.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>4</crumb> <crumb>4</crumb></trail> <anchor>192</anchor>  <taxon>Definition</taxon> <addr>def-000K</addr>  <route>def-000K.xml</route>   <title>Direct Sum</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>4</crumb> <crumb>4</crumb></trail> <anchor>196</anchor>  <taxon>Definition</taxon> <addr>def-000K</addr>  <route>def-000K.xml</route>   <title>Direct Sum</title> </frontmatter> <mainmatter><p>
     Let <tex>U_1,  \dots , U_n</tex> be subspaces of a vector space <tex>V</tex>.
     The <strong>direct sum</strong> of <tex>U_1,  \dots , U_n</tex> is defined as
     <tex display="block">
@@ -868,9 +1023,9 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     </tex>
     if every element in <tex>U_1  \oplus   \dots   \oplus  U_n</tex> can be written as <tex>u_1 +  \dots  + u_n </tex> in only one way.
     This definition requires every vector in the sum have a unique representation.
-</p></mainmatter> </tree></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb></trail> <anchor>193</anchor>  <taxon>Linear Algebra</taxon> <addr>math-0002</addr>  <route>math-0002.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Finite Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb></trail> <anchor>197</anchor>  <taxon>Linear Algebra</taxon> <addr>math-0002</addr>  <route>math-0002.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Finite Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
     Adding up scalar mulitples of vectors in a list gives a linear combination.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>1</crumb></trail> <anchor>194</anchor>  <taxon>Definition</taxon> <addr>def-000L</addr>  <route>def-000L.xml</route>   <title>Linear Combination</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>1</crumb></trail> <anchor>198</anchor>  <taxon>Definition</taxon> <addr>def-000L</addr>  <route>def-000L.xml</route>   <title>Linear Combination</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a <link href="def-000H.xml" type="local" title="Vector Space">vector space</link> over a field <tex>F</tex>.
     Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
     A <strong>linear combination</strong> of <tex>v_1,  \dots , v_n</tex> is an expression of the form
@@ -881,7 +1036,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
 </p></mainmatter> </tree><p>
     To talk about a structure, we usually define a collection of this structure.
     Hence we have span for linear combinations.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>2</crumb></trail> <anchor>195</anchor>  <taxon>Definition</taxon> <addr>def-000M</addr>  <route>def-000M.xml</route>   <title>Linear Span</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>2</crumb></trail> <anchor>199</anchor>  <taxon>Definition</taxon> <addr>def-000M</addr>  <route>def-000M.xml</route>   <title>Linear Span</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a vector space over a field <tex>F</tex>.
     Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
     The <strong>span</strong> of <tex>v_1,  \dots , v_n</tex> is defined as
@@ -899,18 +1054,18 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     Thus we conclude that <tex>S</tex> is the smallest subspace containing <tex>v_1,  \dots , v_n</tex>.
 </p><p>
     The discussion about <strong>spans</strong> leads to a key definition in linear algebra.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>3</crumb></trail> <anchor>196</anchor>  <taxon>Definition</taxon> <addr>def-000N</addr>  <route>def-000N.xml</route>   <title>Finite-Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>3</crumb></trail> <anchor>200</anchor>  <taxon>Definition</taxon> <addr>def-000N</addr>  <route>def-000N.xml</route>   <title>Finite-Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
     A <link href="def-000H.xml" type="local" title="Vector Space">vector space</link> <tex>V</tex> is called <strong>finite-dimensional</strong> if some <link href="def-000G.xml" type="local" title="List">list</link> of vectors <tex>v_1,  \dots , v_n</tex> <link href="def-000M.xml" type="local" title="Linear Span">spans</link> <tex>V</tex>.
 </p></mainmatter> </tree><p>
     The opposite of finite-dimensional is infinite-dimensional.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>4</crumb></trail> <anchor>197</anchor>  <taxon>Definition</taxon> <addr>def-000O</addr>  <route>def-000O.xml</route>   <title>Infinite-dimensional vector space</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>4</crumb></trail> <anchor>201</anchor>  <taxon>Definition</taxon> <addr>def-000O</addr>  <route>def-000O.xml</route>   <title>Infinite-dimensional vector space</title> </frontmatter> <mainmatter><p>
     A vector space <tex>V</tex> is called <strong>infinite-dimensional</strong> if it is not <link href="def-000N.xml" type="local" title="Finite-Dimensional Vector Space">finite-dimensional</link>.
 </p></mainmatter> </tree><p>
     Consider the situation that there is only one way to
     express a vector <tex>v</tex> as a linear combination of vectors in a list <tex>v_1,  \dots , v_n</tex>.
     What property of the list <tex>v_1,  \dots , v_n</tex> does this situation imply? The answer is
     linear independence.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>5</crumb></trail> <anchor>198</anchor>  <taxon>Definition</taxon> <addr>def-000P</addr>  <route>def-000P.xml</route>   <title>Linearly independent</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>5</crumb></trail> <anchor>202</anchor>  <taxon>Definition</taxon> <addr>def-000P</addr>  <route>def-000P.xml</route>   <title>Linearly independent</title> </frontmatter> <mainmatter><p>
     A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly independent</strong> if
     <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
     implies that <tex>a_1 =  \dots  = a_n = 0</tex>.
@@ -919,7 +1074,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     If some vectors are not linearly independent, then there are more than one way to
     express a vector as a linear combination of vectors in the list. This leads to 
     the following definition.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>6</crumb></trail> <anchor>199</anchor>  <taxon>Definition</taxon> <addr>def-000Q</addr>  <route>def-000Q.xml</route>   <title>Linearly dependent</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>6</crumb></trail> <anchor>203</anchor>  <taxon>Definition</taxon> <addr>def-000Q</addr>  <route>def-000Q.xml</route>   <title>Linearly dependent</title> </frontmatter> <mainmatter><p>
     A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly dependent</strong> if
     <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
     for some <tex>a_1,  \dots , a_n  \in   \mathbb {F}</tex> with at least one <tex>a_i  \neq  0</tex> (not all <tex>0</tex>).
@@ -927,16 +1082,16 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     The following lemma is a direct consequence of the definition of linear independence.
     It states that for a given linearly dependent list, we can always remove a vector
     without changing the span.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>7</crumb></trail> <anchor>200</anchor>  <taxon>Lemma</taxon> <addr>thm-0001</addr>  <route>thm-0001.xml</route>   <title>Linear Dependence Lemma</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>7</crumb></trail> <anchor>204</anchor>  <taxon>Lemma</taxon> <addr>thm-0001</addr>  <route>thm-0001.xml</route>   <title>Linear Dependence Lemma</title> </frontmatter> <mainmatter><p>
     Let <tex>v_1,  \dots , v_n</tex> be vectors in a vector space <tex>V</tex> over a field <tex>\mathbb {F}</tex>.
     If <tex>v_1,  \dots , v_n</tex> are linearly dependent, then there exists <tex>1  \leq  i  \leq  n</tex> such that
     <ul><li><tex>v_i  \in   \text {span} (v_1,  \dots , v_{i-1})</tex></li>
-        <li>Remove <tex>v_i</tex> from the list <tex>v_1,  \dots , v_n</tex> and the span does not change</li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>8</crumb></trail> <anchor>201</anchor>  <taxon>Lemma</taxon> <addr>thm-0002</addr>  <route>thm-0002.xml</route>   <title>Length of linearly independent list <tex>\leq</tex> length of spanning list</title> </frontmatter> <mainmatter><p>
+        <li>Remove <tex>v_i</tex> from the list <tex>v_1,  \dots , v_n</tex> and the span does not change</li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>8</crumb></trail> <anchor>205</anchor>  <taxon>Lemma</taxon> <addr>thm-0002</addr>  <route>thm-0002.xml</route>   <title>Length of linearly independent list <tex>\leq</tex> length of spanning list</title> </frontmatter> <mainmatter><p>
     In a finite dimensional vector space, the length of a linearly independent list is less than or equal to the length of a spanning list.
 </p></mainmatter> </tree><p>
     We have discussed linear independent lists and spanning lists.
     Now we are ready to define a basis.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>9</crumb></trail> <anchor>202</anchor>  <taxon>Definition</taxon> <addr>def-000R</addr>  <route>def-000R.xml</route>   <title>Basis</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>5</crumb> <crumb>9</crumb></trail> <anchor>206</anchor>  <taxon>Definition</taxon> <addr>def-000R</addr>  <route>def-000R.xml</route>   <title>Basis</title> </frontmatter> <mainmatter><p>
     A basis of <tex>V</tex> is a list of vectors in <tex>V</tex>
     that is linearly independent and spans <tex>V</tex>. 
 </p><p><strong>Criterion for basis</strong>
@@ -945,11 +1100,49 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
 </p></mainmatter> </tree><p>
     For instance, we have standard basis <tex>\{ e_1,  \dots , e_n \}</tex> for <tex>\mathbb {F}^n</tex>,
     where <tex>e_i</tex> is the vector with <tex>1</tex> at <tex>i</tex>-th position and <tex>0</tex> elsewhere.
-</p></mainmatter> </tree></mainmatter> </tree>
-    <tree expanded="false" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb></trail> <anchor>203</anchor>   <addr>projects</addr>  <route>projects.xml</route>   <title>Projects</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb> <crumb>1</crumb></trail> <anchor>204</anchor>  <taxon>Project</taxon> <addr>proj-0001</addr>  <route>proj-0001.xml</route>   <title>Command Lisp</title> </frontmatter> <mainmatter><p><link href="https://github.com/CAIMEOX/CommandLisp" type="external">Command Lisp</link> is a simplified language designed for Minecraft Bedrock Command System, characterized by a very high level of abstraction, which is also a dialect of Lisp.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb> <crumb>2</crumb></trail> <anchor>205</anchor>  <taxon>Project</taxon> <addr>proj-0002</addr>  <route>proj-0002.xml</route>   <title>Pure Eval</title> </frontmatter> <mainmatter><p><link href="https://github.com/PureEval/PureEval" type="external">Pure Eval</link> was created for the <link href="proj-0003.xml" type="local" title="Voxel Geometry">VoxelGeometry</link> project, aiming to build a compact yet powerful JavaScript functional utility toolkit.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb> <crumb>3</crumb></trail> <anchor>206</anchor>  <taxon>Project</taxon> <addr>proj-0003</addr>  <route>proj-0003.xml</route>   <title>Voxel Geometry</title> </frontmatter> <mainmatter><p><link href="https://github.com/CAIMEOX/VoxelGeometry" type="external">Voxel Geometry</link> is voxel geometry library which is used to construct Space (A collection of 3-dimension Vectors) and perform transformation between Spaces.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb> <crumb>4</crumb></trail> <anchor>207</anchor>  <taxon>Project</taxon> <addr>proj-0004</addr>  <route>proj-0004.xml</route>   <title>Minecraft ScriptAPI wrapper</title> </frontmatter> <mainmatter><p>These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.</p><ul><li><link href="https://github.com/CAIMEOX/rescript-bedrock" type="external">ReScript</link></li>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb> <crumb>6</crumb></trail> <anchor>207</anchor>  <taxon>Compute Science</taxon> <addr>cs-0001</addr>  <route>cs-0001.xml</route> <date><year>2024</year> <month>1</month> <day>29</day></date>  <title>Is JavaScript an untyped language?</title> </frontmatter> <mainmatter><p>
+    This is a note about the the argument that JavaScript is an untyped language.
+    Most opinions came from the References.
+</p><p>
+    The first thing I want to classify is the word <strong>strong typing</strong> and <strong>weak typing</strong> are meaningless.
+    In a limit case we can compare two languages that have similar type system, and talk about which one is <em>stronger</em>.
+    But for the common case, it's totally nonsense.
+</p><p>
+    Static and dynamic typing is a meaningful classsification. But the discussion about dynamic and static languages is mostly wrong on the Internet.
+    Dynamic language is a popular concept, however, it is rather a <strong>marketing</strong> than a well-defined terminology.
+    It's designed to confuse rather than inform.
+</p><p>
+    In fact, dynamic typing is just a special case of static typing.
+    It limits more than contributes.The root of the problem is the confusion 
+    between type and class. It's very useful to have multiple classes of values
+    of a same type.
+    They are interchangeable because they represent values of the same type.
+    Only the form of presentation differs.
+</p><p>
+    The distinction between two classes of the same type is dynamic.
+    But this does not conflict with the fact that only one static type.
+    In type theory this is what we called <strong>Sum Type</strong>.
+    Being a sum type we can dispatch on the class of the value of the type,
+    and decide what to do at runtime.
+</p><p>
+    This characteristics is same to dynamic language where values can be classified into
+    various forms that can be distinguished at runtime.
+    The answer is now clear: dynamic language classifies all values in this way.
+    What they do just merge all values of the language into a single type.
+    The so-called <strong>untyped</strong> language is just <strong>unityped</strong>.
+</p><p>
+    Therefore, JavaScript is definitely untyped.
+</p>
+    <p><strong>References</strong></p>
+    <ul><li><link href="https://existentialtype.wordpress.com/2011/03/19/dynamic-languages-are-static-languages/" type="external">Dynamic and static language</link></li>
+        <li><link href="https://stackoverflow.com/questions/964910/is-javascript-an-untyped-language" type="external">stackoverflow</link></li>
+        <li><link href="https://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html" type="external">What to know before debating type systems</link></li>
+        <li><em>Practical Foundations for Programming Languages</em>, Robert Harper</li></ul>
+</mainmatter> </tree></mainmatter> </tree>
+    <tree expanded="false" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb></trail> <anchor>208</anchor>   <addr>projects</addr>  <route>projects.xml</route>   <title>Projects</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb> <crumb>1</crumb></trail> <anchor>209</anchor>  <taxon>Project</taxon> <addr>proj-0001</addr>  <route>proj-0001.xml</route>   <title>Command Lisp</title> </frontmatter> <mainmatter><p><link href="https://github.com/CAIMEOX/CommandLisp" type="external">Command Lisp</link> is a simplified language designed for Minecraft Bedrock Command System, characterized by a very high level of abstraction, which is also a dialect of Lisp.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb> <crumb>2</crumb></trail> <anchor>210</anchor>  <taxon>Project</taxon> <addr>proj-0002</addr>  <route>proj-0002.xml</route>   <title>Pure Eval</title> </frontmatter> <mainmatter><p><link href="https://github.com/PureEval/PureEval" type="external">Pure Eval</link> was created for the <link href="proj-0003.xml" type="local" title="Voxel Geometry">VoxelGeometry</link> project, aiming to build a compact yet powerful JavaScript functional utility toolkit.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb> <crumb>3</crumb></trail> <anchor>211</anchor>  <taxon>Project</taxon> <addr>proj-0003</addr>  <route>proj-0003.xml</route>   <title>Voxel Geometry</title> </frontmatter> <mainmatter><p><link href="https://github.com/CAIMEOX/VoxelGeometry" type="external">Voxel Geometry</link> is voxel geometry library which is used to construct Space (A collection of 3-dimension Vectors) and perform transformation between Spaces.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb> <crumb>4</crumb></trail> <anchor>212</anchor>  <taxon>Project</taxon> <addr>proj-0004</addr>  <route>proj-0004.xml</route>   <title>Minecraft ScriptAPI wrapper</title> </frontmatter> <mainmatter><p>These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.</p><ul><li><link href="https://github.com/CAIMEOX/rescript-bedrock" type="external">ReScript</link></li>
     <li><link href="https://github.com/CAIMEOX/pure_bedrock" type="external">PureScript</link></li>
     <li><link href="https://github.com/CAIMEOX/BedrockFP" type="external">Idris2</link></li></ul></mainmatter> </tree></mainmatter> </tree>
 </mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>
