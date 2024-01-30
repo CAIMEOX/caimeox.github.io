@@ -1,0 +1,7 @@
+\title{Inductive Type}
+\taxon{Definition}
+\p{
+    In type theory, a system has \strong{inductive type} if it can create new types from
+    constants and functions that create terms of that type.
+    Inductive types usually come with a function to prove properties about them.
+}

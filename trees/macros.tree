@@ -2,3 +2,11 @@
 % camel case for outer environment
 \def\spn{\text{span}}
 \def\type{\space\text{type}}
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\set[a]{\{ \a \}}
+\def\succ{\text{succ}}
+\def\indn{\text{ind}_\N}

@@ -1,0 +1,123 @@
+\title{Addition over #{\N}}
+\taxon{Definition}
+\import{macros}
+\def\add{\text{add}_\N}
+\def\id{\text{id}_\N}
+\def\add0{\text{add-zero}_\N}
+\def\addS{\text{add-succ}_\N}
+\p{
+    We define addition over #{\N} using the type theoretical induction principle of #{\N}.
+    ##{
+        \add : \N \to (\N \to \N)
+    }
+    which satisfies the following specification:
+    ##{
+        \begin{align*}
+            \add(n, 0)&\equiv n
+            \\
+            \add(m,\succ(n))&\equiv\succ(\add(m,n))
+        \end{align*}
+    }
+    abbreviated as #{m + n} for #{\add(m,n)}.
+}
+\scope{
+    \p{
+        \strong{Construction}
+    }
+    \scope{
+        \p{
+            We construct the additon by perform induction over the second variable #{n}.
+            That is, to construct an element
+            ##{
+                m:\N \vdash \add(m):\N \to \N
+            }
+            The context #{\Gamma \equiv m:\N} is fixed.
+        }
+        Therefore we need to construct:
+        ##{
+            \begin{align*}
+                \Gamma&\vdash \add0(m):\N
+                \\
+                \Gamma&\vdash \addS(m):\N\to\N                
+            \end{align*}   
+        }
+        The #{\add0} is defined to be identity function trivially. To see how #{\addS} is defined, we need to perform induction:
+        ##{
+            \begin{align*}
+                \add(m, \succ(n))&\equiv
+                \indn(\add0(m), \addS(m), \succ(n))
+                \\
+                &\equiv \addS(m,n, \add(m,n))
+                \\
+                &\equiv \succ(\add(m,n))
+            \end{align*}
+        }
+        Hence #{\addS} is defined as:
+        ##{
+            \addS(m,n,x) \equiv \succ(x)
+        }
+        A formal construction of #{\addS} is as follows:
+        ##{
+            \dfrac{
+                \dfrac{
+                    \dfrac{
+                        \dfrac{}{\vdash\N\type}
+                        \quad
+                        \dfrac{
+                            \dfrac{}{\vdash \N\type}
+                            \quad
+                            \dfrac{}{\vdash \succ:\N\to\N}
+                        }{
+                            n:\N\vdash\succ:\N\to\N
+                        }
+                    }{
+                        m:\N, n:\N\vdash \succ:\N\to\N
+                    } 
+                }{
+                    m:\N\vdash\lambda n.\succ : \N\to(\N\to\N)
+                }
+            }{
+                m:\N\vdash \addS(m):\equiv\lambda m.\succ : \N\to(\N\to\N)
+            }\text{Block-1}
+        }
+        Finally we combine the derivation together:
+        % ##{
+        %     \dfrac{
+        %         \dfrac{
+        %             \dfrac{
+        %                 \vdash \N\type
+        %             }{
+        %                 n:\N\vdash n:\N
+        %             }
+        %         }{
+        %             \vdash\lambda n.n:\N\to\N
+        %         }
+        %     }{
+        %         \vdash\id:\equiv \lambda n.n:\N\to\N
+        %     }
+        % }
+        ##{
+            \dfrac{
+                \dfrac{
+                    \dfrac{
+                        \dfrac{
+                            \vdash \N\type
+                        }{
+                            m:\N\vdash m:\N
+                        }
+                    }{
+                        m:\N\vdash\add0(m):\equiv m:\N
+                    }
+                    \quad 
+                    \dfrac{\text{Block-1}}{
+                        m:\N\vdash\addS(m):\N\to(\N\to\N)
+                    }
+                }{
+                    m:\N\vdash\indn (\add0(m), \addS(m)):\N\to\N
+                }
+            }{
+                m:\N\vdash\add(m):\equiv\indn (\add0(m), \addS(m)):\N\to\N
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+\title{Dimension}
+\taxon{Definition}
+\p{
+    The \strong{dimension} of a finite-dimensional vector space #{V} is the length of any basis of the vector space.
+    Denoted by #{\dim V}.
+}

@@ -55,3 +55,50 @@
     For instance, we have standard basis #{\{e_1, \dots, e_n\}} for #{\mathbb{F}^n},
     where #{e_i} is the vector with #{1} at #{i}-th position and #{0} elsewhere.
 }
+\transclude{thm-0005}
+\p{
+    From the [theorem](thm-0005) we can infer a corollary.
+}
+\transclude{thm-0006}
+\p{
+    The next result states for a spanning list can be reduced to a basis.
+    We can adjoin one or more vectors to a linearly independent list to form a basis.
+}
+\transclude{thm-0007}
+\p{
+    Remind the definition of [direct sum](der-000K), we can now show that
+    every subspace of a finite-dimensional vecrtor space can be paired
+    with another subspace to form a direct sum of the whole space.
+}
+\transclude{thm-0008}
+\p{
+    This post discusses about \em{finite-dimensional vector space}.
+    But we have not yet defined what is dimension.
+    We tempted to define the dimension as the length of basis intuitively.
+    With this definition we should prove its well-definedness.
+    That is, every basis has the same length.
+}
+\transclude{thm-0009}
+\p{
+    This can be proved by [Lemma 8](thm-0002).
+    Now we can formally define the dimension of such spaces.
+}
+\transclude{def-001V}
+\p{
+    Every subspace of a finite-dimensional vector space is also finite-dimensional.
+    Hence we can talk about the dimension of a subspace.
+}
+\transclude{thm-000A}
+\p{
+    According to the definition of [linearly independent](def-000P),
+    to show a list of vectors is a basis, we only need to show it is linearly independent,
+    and it spans the whole space.
+    The next theorems simplifies the task:
+}
+\transclude{thm-000B}
+\transclude{thm-000C}
+\p{
+    Now we move to the discussion of the dimension of the sum of two subspaces.
+    This is analogous to the [inclusion-exclusion principle](thm-000E).
+}
+\transclude{thm-000D}

@@ -1,0 +1,67 @@
+\title{Natural Number}
+\taxon{Definition}
+\import{macros}
+\p{
+    In type theory, \strong{natural number} is defined using \strong{peano encoding}.
+    The type #{\N} is formed by the formation rule:
+    ##{
+        \frac{}{\vdash\N\type}\N\text{-form}
+    }
+}
+\p{
+    Peano's first axiom postulates the existence of a natural number #{0}.
+    The introduction rule for #{\N} has a #{0} constructor and a \strong{successor} function.
+    ##{
+        \frac{}{\vdash0:\N}\N\text{-intro-0}
+        \quad
+        \frac{}{\vdash\succ:\N\to\N} \N\text{-intro-succ}
+    }
+}
+\p{
+    The \strong{elimination rule} is actually the type theoretical \strong{induction principle} of #{\N}:
+    In order to show that #{\forall n:\N.P(n)} holds, it suffices to show that #{P(0)} holds and that #{\forall n:\N.P(n)\to P(\succ(n))} holds.
+    The type theoretical induction principle is therefore formulated using a type family #{P} over #{\N}:
+    ##{
+        \frac{
+            \begin{align*}
+                \Gamma&,\,n:\N\vdash P(n)\type
+                \\
+                \Gamma&\vdash p_0:P(0)
+                \\
+                \Gamma&\vdash p_S:\Pi_{(n:\N)}P(n)\to P(\succ(n))
+            \end{align*}
+        }{
+            \Gamma\vdash\indn(p_0,p_S):\Pi_{(n:\N)}P(n)
+        }(\N \text{-ind})
+    }
+    The induction principle tells us what we need to do in order to construct a dependent function #{\indn} of type #{\Pi_{(n:\N)}P(n)}.
+    We might alternatively write the induction principle as:
+    ##{
+        \frac{
+            \Gamma,n:\N\vdash P(n)\type
+        }{
+            \Gamma\vdash\indn:\left(P(0)\to\left(\Pi_{(n:\N)}P(n)\to P(\succ(n))\right)\to\Pi_{(n:\N)}P(n)\right)
+        }(\N \text{-ind})
+    }
+}
+\p{
+    The \strong{computation rule} asserts that the dependent function #{\indn} behaves as expected:
+    ##{
+        \frac{
+            \begin{align*}
+                \Gamma&,n:\N\vdash P(n)\type
+                \\
+                \Gamma&\vdash p_0:P(0)
+                \\
+                \Gamma&\vdash p_S:\Pi_{(n:\N)}P(n)\to P(\succ(n))
+            \end{align*}
+        }{
+            \indn(p_0,p_S,m)\equiv
+            \begin{cases}
+                p_0&\text{if }m=0
+                \\
+                p_S(n,\indn(p_0,p_S,n))&\text{if }m=\succ(n)
+            \end{cases}
+        }(\N \text{-comp})
+    }
+}

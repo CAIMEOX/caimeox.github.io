@@ -1,0 +1,6 @@
+\title{Linearly independent list of the right length is a basis}
+\taxon{Theorem}
+\p{
+    Let #{V} be a finite-dimensional vector space.
+    Then every [linearly independent](def-000P) list of vectors in #{V} with length equal to #{\dim V} is a basis of #{V}.
+}

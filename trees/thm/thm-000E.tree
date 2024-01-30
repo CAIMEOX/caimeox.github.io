@@ -1,0 +1,9 @@
+\title{Inclusion-Exclusion Principle}
+\taxon{Theorem}
+\p{
+    For any finite sets #{A_1, A_2, \ldots, A_n},
+    ##{
+        \left| \bigcap_{i=1}^n A_i \right| = \sum_{\emptyset \neq J \subseteq \{1, 2, \ldots, n\}} (-1)^{|J| - 1} \left| \bigcap_{j \in J} A_j \right|.
+    }
+    where #{|A|} denotes the number of elements in the set #{A}.
+}

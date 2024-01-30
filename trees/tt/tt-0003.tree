@@ -1,0 +1,18 @@
+\title{Natural Numbers #{\mathbb{N}}}
+\date{2024-01-30}
+\taxon{Type Theory}
+\import{macros}
+\p{
+    In classical mathematics, the \strong{Peano axioms} are a set of axioms for the natural numbers,
+    an important object in mathematics.
+}
+\p{
+    In type theory, the type #{\N} of natural number is an [\strong{inductive type}](def-001X).
+    Just like in dependent function type, we need four inference rules to define the natural numbers.
+}
+\transclude{def-001Y}
+\p{
+    Now let's use the type theoretical induction principle of #{\N} to
+    perform some basic construction over #{\N}.
+}
+\transclude{def-001Z}

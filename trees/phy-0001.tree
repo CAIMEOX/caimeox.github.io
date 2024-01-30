@@ -321,3 +321,20 @@
         p^\mu = m u^\mu
     }
 }
+\p{
+    The light-cone components #{p^+} and #{p^-} of the momentum Lorentz vector are obtained:
+    ##{
+        \begin{align*}
+            p^+ = \frac{1}{\sqrt{2}}(p^0+p^1) = -p_-
+            \\
+            p^- = \frac{1}{\sqrt{2}}(p^0-p^1) = -p_+
+        \end{align*}
+    }
+    Note that light-cone coordinates do not transform as Lorentz ones do. 
+    Both #{p^\pm} are energy-like since both are positive for physical particles.
+    ##{
+        p^0 = \frac{E}{c} \sqrt{\vec{p}^2 + m^2c^2} > |\vec{p}|\geq |p^1|
+    }
+    Hence #{p^0\pm p^1 > 0} and #{p^\pm>0}, which both are possible candidates for energy.
+    We finally choose #{p^-} as the component, we explain this later. 
+}

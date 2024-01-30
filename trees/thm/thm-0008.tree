@@ -1,0 +1,8 @@
+\title{Direct Sum of Subspaces of #{V}}
+\taxon{Theorem}
+\p{
+    Suppose #{V} is a finite dimensional vector space,
+    and #{U} is a subspace of #{V}.
+    Then there exists a subspace #{W} of #{V} such that
+    #{V = U \oplus W}.
+}

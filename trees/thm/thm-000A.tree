@@ -1,0 +1,7 @@
+\title{Dimension of a subspace}
+\taxon{Theorem}
+\p{
+    Let #{V} be a finite-dimensional vector space,
+    and #{U} be a subspace of #{V}.
+    Then #{\dim U \leq \dim V}.
+}

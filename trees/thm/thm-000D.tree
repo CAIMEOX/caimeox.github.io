@@ -1,0 +1,10 @@
+\title{Dimension of a sum}
+\taxon{Theorem}
+\p{
+    Let #{V} be a finite-dimensional vector space,
+    and #{U} and #{W} be subspaces of #{V}.
+    Then
+    ##{
+        \dim(U + W) = \dim U + \dim W - \dim(U \cap W).
+    }
+}

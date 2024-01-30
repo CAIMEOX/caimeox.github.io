@@ -1,0 +1,5 @@
+\title{Linearly dependent list extends to a basis}
+\taxon{Theorem}
+\p{
+    Every linearly independent list of vectors in  a finite-dimensional vector space can be extended to a basis.
+}
