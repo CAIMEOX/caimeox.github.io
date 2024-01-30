@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2338</anchor>  <taxon>Definition</taxon> <addr>def-001X</addr>  <route>def-001X.xml</route>   <title>Inductive Type</title> </frontmatter> <mainmatter><p>
+    In type theory, a system has <strong>inductive type</strong> if it can create new types from
+    constants and functions that create terms of that type.
+    Inductive types usually come with a function to prove properties about them.
+</p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2339</anchor>  <taxon>Type Theory</taxon> <addr>tt-0003</addr>  <route>tt-0003.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Natural Numbers <tex>\mathbb {N}</tex></title> </frontmatter> <mainmatter><p>
+    In classical mathematics, the <strong>Peano axioms</strong> are a set of axioms for the natural numbers,
+    an important object in mathematics.
+</p><p>
+    In type theory, the type <tex>\mathbb {N}</tex> of natural number is an <link href="def-001X.xml" type="local" title="Inductive Type"><strong>inductive type</strong></link>.
+    Just like in dependent function type, we need four inference rules to define the natural numbers.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb></trail> <anchor>2340</anchor>  <taxon>Definition</taxon> <addr>def-001Y</addr>  <route>def-001Y.xml</route>   <title>Natural Number</title> </frontmatter> <mainmatter><p>
+    In type theory, <strong>natural number</strong> is defined using <strong>peano encoding</strong>.
+    The type <tex>\mathbb {N}</tex> is formed by the formation rule:
+    <tex display="block">
+         \frac {}{ \vdash \mathbb {N} \space \text {type} } \mathbb {N} \text {-form}
+    </tex></p><p>
+    Peano's first axiom postulates the existence of a natural number <tex>0</tex>.
+    The introduction rule for <tex>\mathbb {N}</tex> has a <tex>0</tex> constructor and a <strong>successor</strong> function.
+    <tex display="block">
+         \frac {}{ \vdash0 : \mathbb {N} } \mathbb {N} \text {-intro-0}
+         \quad 
+         \frac {}{ \vdash \text {succ} : \mathbb {N} \to \mathbb {N} }  \mathbb {N} \text {-intro-succ}
+    </tex></p><p>
+    The <strong>elimination rule</strong> is actually the type theoretical <strong>induction principle</strong> of <tex>\mathbb {N}</tex>:
+    In order to show that <tex>\forall  n: \mathbb {N} .P(n)</tex> holds, it suffices to show that <tex>P(0)</tex> holds and that <tex>\forall  n: \mathbb {N} .P(n) \to  P( \text {succ} (n))</tex> holds.
+    The type theoretical induction principle is therefore formulated using a type family <tex>P</tex> over <tex>\mathbb {N}</tex>:
+    <tex display="block">
+         \frac {
+             \begin {align*}
+                 \Gamma &amp;, \, n: \mathbb {N} \vdash  P(n) \space \text {type} 
+                 \\ 
+                 \Gamma &amp; \vdash  p_0:P(0)
+                 \\ 
+                 \Gamma &amp; \vdash  p_S: \Pi _{(n: \mathbb {N} )}P(n) \to  P( \text {succ} (n))
+             \end {align*}
+        }{
+             \Gamma \vdash \text {ind}_ \mathbb {N} (p_0,p_S): \Pi _{(n: \mathbb {N} )}P(n)
+        }( \mathbb {N}   \text {-ind})
+    </tex>
+    The induction principle tells us what we need to do in order to construct a dependent function <tex>\text {ind}_ \mathbb {N}</tex> of type <tex>\Pi _{(n: \mathbb {N} )}P(n)</tex>.
+    We might alternatively write the induction principle as:
+    <tex display="block">
+         \frac {
+             \Gamma ,n: \mathbb {N} \vdash  P(n) \space \text {type} 
+        }{
+             \Gamma \vdash \text {ind}_ \mathbb {N} : \left (P(0) \to \left ( \Pi _{(n: \mathbb {N} )}P(n) \to  P( \text {succ} (n)) \right ) \to \Pi _{(n: \mathbb {N} )}P(n) \right )
+        }( \mathbb {N}   \text {-ind})
+    </tex></p><p>
+    The <strong>computation rule</strong> asserts that the dependent function <tex>\text {ind}_ \mathbb {N}</tex> behaves as expected:
+    <tex display="block">
+         \frac {
+             \begin {align*}
+                 \Gamma &amp;,n: \mathbb {N} \vdash  P(n) \space \text {type} 
+                 \\ 
+                 \Gamma &amp; \vdash  p_0:P(0)
+                 \\ 
+                 \Gamma &amp; \vdash  p_S: \Pi _{(n: \mathbb {N} )}P(n) \to  P( \text {succ} (n))
+             \end {align*}
+        }{
+             \text {ind}_ \mathbb {N} (p_0,p_S,m) \equiv 
+             \begin {cases}
+                p_0&amp; \text {if }m=0
+                 \\ 
+                p_S(n, \text {ind}_ \mathbb {N} (p_0,p_S,n))&amp; \text {if }m= \text {succ} (n)
+             \end {cases}
+        }( \mathbb {N}   \text {-comp})
+    </tex></p></mainmatter> </tree><p>
+    Now let's use the type theoretical induction principle of <tex>\mathbb {N}</tex> to
+    perform some basic construction over <tex>\mathbb {N}</tex>.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb></trail> <anchor>2341</anchor>  <taxon>Definition</taxon> <addr>def-001Z</addr>  <route>def-001Z.xml</route>   <title>Addition over <tex>\N</tex></title> </frontmatter> <mainmatter><p>
+    We define addition over <tex>\mathbb {N}</tex> using the type theoretical induction principle of <tex>\mathbb {N}</tex>.
+    <tex display="block">
+         \text {add}_ \mathbb {N}  :  \mathbb {N}   \to  ( \mathbb {N}   \to   \mathbb {N} )
+    </tex>
+    which satisfies the following specification:
+    <tex display="block">
+         \begin {align*}
+             \text {add}_ \mathbb {N} (n, 0)&amp; \equiv  n
+             \\ 
+             \text {add}_ \mathbb {N} (m, \text {succ} (n))&amp; \equiv \text {succ} ( \text {add}_ \mathbb {N} (m,n))
+         \end {align*}
+    </tex>
+    abbreviated as <tex>m + n</tex> for <tex>\text {add}_ \mathbb {N} (m,n)</tex>.
+</p>
+    <p><strong>Construction</strong></p>
+    
+        <p>
+            We construct the additon by perform induction over the second variable <tex>n</tex>.
+            That is, to construct an element
+            <tex display="block">
+                m: \mathbb {N}   \vdash   \text {add}_ \mathbb {N} (m): \mathbb {N}   \to   \mathbb {N} 
+            </tex>
+            The context <tex>\Gamma   \equiv  m: \mathbb {N}</tex> is fixed.
+        </p>
+        Therefore we need to construct:
+        <tex display="block">
+             \begin {align*}
+                 \Gamma &amp; \vdash   \text {add-zero}_ \mathbb {N} (m): \mathbb {N} 
+                 \\ 
+                 \Gamma &amp; \vdash   \text {add-succ}_ \mathbb {N} (m): \mathbb {N} \to \mathbb {N}                 
+             \end {align*}   
+        </tex>
+        The <tex>\text {add-zero}_ \mathbb {N}</tex> is defined to be identity function trivially. To see how <tex>\text {add-succ}_ \mathbb {N}</tex> is defined, we need to perform induction:
+        <tex display="block">
+             \begin {align*}
+                 \text {add}_ \mathbb {N} (m,  \text {succ} (n))&amp; \equiv 
+                 \text {ind}_ \mathbb {N} ( \text {add-zero}_ \mathbb {N} (m),  \text {add-succ}_ \mathbb {N} (m),  \text {succ} (n))
+                 \\ 
+                &amp; \equiv   \text {add-succ}_ \mathbb {N} (m,n,  \text {add}_ \mathbb {N} (m,n))
+                 \\ 
+                &amp; \equiv   \text {succ} ( \text {add}_ \mathbb {N} (m,n))
+             \end {align*}
+        </tex>
+        Hence <tex>\text {add-succ}_ \mathbb {N}</tex> is defined as:
+        <tex display="block">
+             \text {add-succ}_ \mathbb {N} (m,n,x)  \equiv   \text {succ} (x)
+        </tex>
+        A formal construction of <tex>\text {add-succ}_ \mathbb {N}</tex> is as follows:
+        <tex display="block">
+             \dfrac {
+                 \dfrac {
+                     \dfrac {
+                         \dfrac {}{ \vdash \mathbb {N} \space \text {type} }
+                         \quad 
+                         \dfrac {
+                             \dfrac {}{ \vdash   \mathbb {N} \space \text {type} }
+                             \quad 
+                             \dfrac {}{ \vdash   \text {succ} : \mathbb {N} \to \mathbb {N} }
+                        }{
+                            n: \mathbb {N} \vdash \text {succ} : \mathbb {N} \to \mathbb {N} 
+                        }
+                    }{
+                        m: \mathbb {N} , n: \mathbb {N} \vdash   \text {succ} : \mathbb {N} \to \mathbb {N} 
+                    } 
+                }{
+                    m: \mathbb {N} \vdash \lambda  n. \text {succ}  :  \mathbb {N} \to ( \mathbb {N} \to \mathbb {N} )
+                }
+            }{
+                m: \mathbb {N} \vdash   \text {add-succ}_ \mathbb {N} (m): \equiv \lambda  m. \text {succ}  :  \mathbb {N} \to ( \mathbb {N} \to \mathbb {N} )
+            } \text {Block-1}
+        </tex>
+        Finally we combine the derivation together:
+                                                                                                                                <tex display="block">
+             \dfrac {
+                 \dfrac {
+                     \dfrac {
+                         \dfrac {
+                             \vdash   \mathbb {N} \space \text {type} 
+                        }{
+                            m: \mathbb {N} \vdash  m: \mathbb {N} 
+                        }
+                    }{
+                        m: \mathbb {N} \vdash \text {add-zero}_ \mathbb {N} (m): \equiv  m: \mathbb {N} 
+                    }
+                     \quad  
+                     \dfrac { \text {Block-1}}{
+                        m: \mathbb {N} \vdash \text {add-succ}_ \mathbb {N} (m): \mathbb {N} \to ( \mathbb {N} \to \mathbb {N} )
+                    }
+                }{
+                    m: \mathbb {N} \vdash \text {ind}_ \mathbb {N}  ( \text {add-zero}_ \mathbb {N} (m),  \text {add-succ}_ \mathbb {N} (m)): \mathbb {N} \to \mathbb {N} 
+                }
+            }{
+                m: \mathbb {N} \vdash \text {add}_ \mathbb {N} (m): \equiv \text {ind}_ \mathbb {N}  ( \text {add-zero}_ \mathbb {N} (m),  \text {add-succ}_ \mathbb {N} (m)): \mathbb {N} \to \mathbb {N} 
+            }
+        </tex>
+    
+</mainmatter> </tree></mainmatter> </tree></backlinks> <references/></backmatter></tree>

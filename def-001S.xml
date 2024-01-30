@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2151</anchor>  <taxon>Definition</taxon> <addr>def-001S</addr>  <route>def-001S.xml</route>   <title>Proper Time</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2278</anchor>  <taxon>Definition</taxon> <addr>def-001S</addr>  <route>def-001S.xml</route>   <title>Proper Time</title> </frontmatter> <mainmatter><p>
     The <strong>proper time</strong> along a timelike world-line is defined as the
     time as measured by a clock following that line. 
-</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2152</anchor>  <taxon>String Theory</taxon> <addr>phy-0001</addr>  <route>phy-0001.xml</route> <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and extra dimensions</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2279</anchor>  <taxon>String Theory</taxon> <addr>phy-0001</addr>  <route>phy-0001.xml</route> <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and extra dimensions</title> </frontmatter> <mainmatter><p>
     Speical relativity is based on the exprimental fact that the speed of light is the same for all inertial observers.
     In comparing the coordinates of events, two inertial observers (<strong>Lorentz observers</strong>) find that the
     appropriate coordinate transformations mix space and time.   
@@ -30,7 +30,7 @@
          \Delta  s ^2 =  \Delta  s'^2
     </tex>
     The minus sign on the left of <tex>\Delta  s^2</tex> implies that <tex>\Delta  s^2 &gt;0</tex> for events that are <strong>timelike separated</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb></trail> <anchor>2153</anchor>  <taxon>Definition</taxon> <addr>def-001H</addr>  <route>def-001H.xml</route>   <title>Timelike Separated Events</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb></trail> <anchor>2280</anchor>  <taxon>Definition</taxon> <addr>def-001H</addr>  <route>def-001H.xml</route>   <title>Timelike Separated Events</title> </frontmatter> <mainmatter><p>
     An event <tex>S</tex> is said to be timelike separated if
     <tex display="block">
         ( \Delta  x^0)^2 &gt; ( \Delta  x^1)^2 + ( \Delta  x^2)^2 + ( \Delta  x^3)^2
@@ -40,10 +40,10 @@
     The history of a particle is represented in spacetime as a curve called a <strong>world-line</strong>.
     Any two events on the world-line are timelike separated, because no particle can 
     move faster than light.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb></trail> <anchor>2154</anchor>  <taxon>Definition</taxon> <addr>def-001I</addr>  <route>def-001I.xml</route>   <title>Lightlike Separated Events</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb></trail> <anchor>2281</anchor>  <taxon>Definition</taxon> <addr>def-001I</addr>  <route>def-001I.xml</route>   <title>Lightlike Separated Events</title> </frontmatter> <mainmatter><p>
     Events connected by the world-line of a <strong>photon</strong> are said to be <strong>lightlike separated</strong>.
     For which <tex>\Delta  s^2 = 0</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb></trail> <anchor>2155</anchor>  <taxon>Definition</taxon> <addr>def-001J</addr>  <route>def-001J.xml</route>   <title>Spacelike Separated Events</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb></trail> <anchor>2282</anchor>  <taxon>Definition</taxon> <addr>def-001J</addr>  <route>def-001J.xml</route>   <title>Spacelike Separated Events</title> </frontmatter> <mainmatter><p>
     Two events for which <tex>\Delta  s^2 &lt; 0</tex> are said to be <strong>spacelike separated</strong>.
     Events that are simultaneous in a Lorentz frame but in different position are spacelike separated.
 </p></mainmatter> </tree><p>
@@ -90,7 +90,7 @@
         -ds^2=  \eta _{ \mu \nu } dx^ \mu  dx^ \nu 
     </tex>
     and the metric is defined by
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>4</crumb></trail> <anchor>2156</anchor>  <taxon>Definition</taxon> <addr>def-001L</addr>  <route>def-001L.xml</route>   <title>Minkowski Metric</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>4</crumb></trail> <anchor>2283</anchor>  <taxon>Definition</taxon> <addr>def-001L</addr>  <route>def-001L.xml</route>   <title>Minkowski Metric</title> </frontmatter> <mainmatter><p>
     The <strong>Minkowski Metric</strong>, aka <strong>Minkowski Tensor</strong>, is a tensor <tex>\eta _{ \mu \nu }</tex> whose elements are defined by the matrix
     <tex display="block">
          \eta _{ \mu \nu } =  \begin {pmatrix}
@@ -147,7 +147,7 @@
          \eta ^{ \mu \rho }  \eta _{ \rho \nu } =  \delta ^ \mu _ \nu 
     </tex>
     where <tex>\delta ^ \mu _ \nu</tex> is the <link href="def-001P.xml" type="local" title="Kronecker Delta">Kronecker Delta</link>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>5</crumb></trail> <anchor>2157</anchor>  <taxon>Trick</taxon> <addr>thm-0004</addr>  <route>thm-0004.xml</route>   <title>Raise Indices</title> </frontmatter> <mainmatter><p><tex display="block">
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>5</crumb></trail> <anchor>2284</anchor>  <taxon>Trick</taxon> <addr>thm-0004</addr>  <route>thm-0004.xml</route>   <title>Raise Indices</title> </frontmatter> <mainmatter><p><tex display="block">
          \eta ^{ \rho \mu }b_ \mu 
         =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )
         =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu 
@@ -158,7 +158,7 @@
 </p></mainmatter> </tree><p><strong>Lorentz transformations</strong> are the relations between coordinates in two different
     inertial frames.
     
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>6</crumb></trail> <anchor>2158</anchor>  <taxon>Definition</taxon> <addr>def-001Q</addr>  <route>def-001Q.xml</route>   <title>Lorentz Transformations</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>6</crumb></trail> <anchor>2285</anchor>  <taxon>Definition</taxon> <addr>def-001Q</addr>  <route>def-001Q.xml</route>   <title>Lorentz Transformations</title> </frontmatter> <mainmatter><p>
     Consider a frame <tex>S</tex> and <tex>S'</tex> which is moving along the <tex>+x</tex> direction of the <tex>S</tex> frame
     with a velocity <tex>v</tex>.
     Assume that the origins of the two frames coincide at <tex>t=t'=0</tex> and coordinate axes are parallel.
@@ -207,7 +207,7 @@
 </p></mainmatter> </tree><p>
     We now introduce a coordinate system that will be extremely useful in string theory,
     the <strong>light-cone coordinates</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>7</crumb></trail> <anchor>2159</anchor>  <taxon>Definition</taxon> <addr>def-001R</addr>  <route>def-001R.xml</route>   <title>Light-cone Coordinates</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>7</crumb></trail> <anchor>2286</anchor>  <taxon>Definition</taxon> <addr>def-001R</addr>  <route>def-001R.xml</route>   <title>Light-cone Coordinates</title> </frontmatter> <mainmatter><p>
     The <strong>light-cone coordinates</strong> can be defined as
     two independent <link href="def-000L.xml" type="local" title="Linear Combination">linear combinations</link> of the time 
     and a chosen spatial coordinate (conventionally <tex>x^1</tex>):
@@ -374,4 +374,20 @@
     We see that the momentum four-vector is just the velocity four-vector multiplied by the rest mass.
     <tex display="block">
         p^ \mu  = m u^ \mu 
-    </tex></p></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>
+    </tex></p><p>
+    The light-cone components <tex>p^+</tex> and <tex>p^-</tex> of the momentum Lorentz vector are obtained:
+    <tex display="block">
+         \begin {align*}
+            p^+ =  \frac {1}{ \sqrt {2}}(p^0+p^1) = -p_-
+             \\ 
+            p^- =  \frac {1}{ \sqrt {2}}(p^0-p^1) = -p_+
+         \end {align*}
+    </tex>
+    Note that light-cone coordinates do not transform as Lorentz ones do. 
+    Both <tex>p^ \pm</tex> are energy-like since both are positive for physical particles.
+    <tex display="block">
+        p^0 =  \frac {E}{c}  \sqrt { \vec {p}^2 + m^2c^2} &gt; | \vec {p}| \geq  |p^1|
+    </tex>
+    Hence <tex>p^0 \pm  p^1 &gt; 0</tex> and <tex>p^ \pm &gt;0</tex>, which both are possible candidates for energy.
+    We finally choose <tex>p^-</tex> as the component, we explain this later. 
+</p></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>

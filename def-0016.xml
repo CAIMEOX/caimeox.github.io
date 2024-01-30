@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>1921</anchor>  <taxon>Definition</taxon> <addr>def-0016</addr>  <route>def-0016.xml</route>   <title>Negative Type</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2048</anchor>  <taxon>Definition</taxon> <addr>def-0016</addr>  <route>def-0016.xml</route>   <title>Negative Type</title> </frontmatter> <mainmatter><p>
     A <strong>negative type</strong> is a type whose eliminators are regarded as primary.
     Its constructors can be derived from eliminators.
 </p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks/> <references/></backmatter></tree>
