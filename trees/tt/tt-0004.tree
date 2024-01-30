@@ -1,0 +1,56 @@
+\title{Inductive types}
+\date{2024-01-30}
+\taxon{Type Theory}
+\import{macros}
+\p{
+    In previous post, we have seen the definition of natural numbers as an inductive type.
+    In this post, we will see more examples of inductive types, such as 
+    unit type, empty type, product type, sum type and etc.
+}
+\p{
+    This section is much more informal than the previous one.
+    Without displaying the inference rules, we will just present the \strong{constructor}
+    and \strong{induction principle} of each inductive type.
+}
+\block{\strong{General Inductive Type}}{
+    \p{
+    Just like #{\N}, other inductive types can be defined by 
+    their constructors and induction principles (and computation rules).
+    }
+    \ul{
+        \li{
+            The constructors specify the structure of the type equipped.
+        }
+        \li{
+            The induction principle specifies the data required to construct 
+            a section of an arbitrary type family over the inductive type.
+        }
+        \li{
+            The computation rules specify the behavior of the constructors.
+        }
+    }
+}
+\transclude{def-0020}
+\p{
+    A degenrate inductive type is the \strong{empty type}.
+    It has no constructor, and its induction principle is trivial.
+    Empty type is connected to the \strong{exfalso quodlibet principle} in logic.
+}
+\transclude{def-0021}
+\p{
+    With the empty type we can define the \strong{negation} of a type
+    and the \strong{proof of negation}.
+}
+\transclude{def-0022}
+\transclude{def-0023}
+\block{\strong{Special Case of Coproduct}}{
+    The special case of coproduct type is also called the \strong{sum type}.
+    ##{
+        \ind{+}: (A \to X) \to (B \to X) \to (A+B \to X)
+    }
+    which is very similar to the \strong{elimination rule} of disjunction in logic.
+    ##{
+        (P\to Q) \to (R\to Q) \to (P\vee R\to Q)
+    }
+}
+\transclude{def-0024}

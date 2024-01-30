@@ -1,0 +1,16 @@
+\title{Unit Type}
+\taxon{Definition}
+\import{macros}
+\p{
+        
+        The \strong{unit type} is the simplest inductive type.
+        It has only one constructor, denoted by #{\star:\unit}.
+    }
+\p{
+        The induction principle of the unit type is trivial.
+        It says that to define a dependent function #{f:\Pi _{(x:\unit)} P(x)}, 
+        it suffices to give a value #{p:P(\star)}.
+        ##{
+            f (\star) :\equiv p
+        }
+}

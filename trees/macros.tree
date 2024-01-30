@@ -9,4 +9,6 @@
 \def\C{\mathbb{C}}
 \def\set[a]{\{ \a \}}
 \def\succ{\text{succ}}
+\def\ind[a]{\text{ind}_\a}
 \def\indn{\text{ind}_\N}
+\def\unit{\textbf{1}}

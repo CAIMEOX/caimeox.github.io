@@ -13,17 +13,14 @@
     which satisfies the following specification:
     ##{
         \begin{align*}
-            \add(n, 0)&\equiv n
+            \add(n, 0)&:\equiv n
             \\
-            \add(m,\succ(n))&\equiv\succ(\add(m,n))
+            \add(m,\succ(n))&:\equiv\succ(\add(m,n))
         \end{align*}
     }
     abbreviated as #{m + n} for #{\add(m,n)}.
 }
-\scope{
-    \p{
-        \strong{Construction}
-    }
+\block{\strong{Construction}}{
     \scope{
         \p{
             We construct the additon by perform induction over the second variable #{n}.
@@ -81,21 +78,6 @@
             }\text{Block-1}
         }
         Finally we combine the derivation together:
-        % ##{
-        %     \dfrac{
-        %         \dfrac{
-        %             \dfrac{
-        %                 \vdash \N\type
-        %             }{
-        %                 n:\N\vdash n:\N
-        %             }
-        %         }{
-        %             \vdash\lambda n.n:\N\to\N
-        %         }
-        %     }{
-        %         \vdash\id:\equiv \lambda n.n:\N\to\N
-        %     }
-        % }
         ##{
             \dfrac{
                 \dfrac{

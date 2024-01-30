@@ -1,0 +1,15 @@
+\title{Empty Type}
+\taxon{Definition}
+\import{macros}
+\p{
+    The \strong{empty type} is a degenerate inductive type #{\emptyset} satisfying 
+    the following induction principle:
+    ##{
+        \ind{\emptyset} : \Pi_{(x:\emptyset)}P(x)
+    }
+    And a special case is \strong{exfalso}:
+    ##{
+        \text{exfalso} :\equiv \ind{\emptyset} : \empty \to A 
+    }
+    which can draw any conclusion.
+}

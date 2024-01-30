@@ -16,3 +16,35 @@
     perform some basic construction over #{\N}.
 }
 \transclude{def-001Z}
+\p{
+    Recall the definition of addition function #{\text{add}: \N\to(\N\to\N)} satisfying the specification:
+    ##{
+        \begin{align*}
+            m + 0 & :\equiv m
+            \\ 
+            m + \succ(n) & :\equiv \succ(m + n)
+        \end{align*}
+    }
+    Such definition is enough to characterize the addition function.
+    Because it postulates te \em{behavior} of #{\text{add}_\N} at the constructor of #{\N}
+}
+\p{
+    More generally, we can define a dependent function #{f:\Pi n:\N.P(n)} by induction on #{n} using
+    ##{
+        \begin{align*}
+            p_0 & : P(0)
+            \\
+            p_S & : \Pi_{(n:\N)}P(n)\to P(\succ(n))
+        \end{align*}
+    }
+    Just present the definition by writing
+    ##{
+        \begin{align*}
+            f(0) & :\equiv p_0
+            \\
+            f(\succ(n)) & :\equiv p_S(n,f(n))
+        \end{align*}
+    }
+    #{f} is said to be defined by \strong{pattern matching} on the variable #{n}.
+}
+\transclude{eg-0001}

@@ -1,0 +1,41 @@
+\title{Coproduct Type}
+\taxon{Definition}
+\import{macros}
+\def\inl{\text{inl}}
+\def\inr{\text{inr}}
+\p{
+    Let #{A} and #{B} be types. The \strong{coproduct (disjoint sum)} #{A+B} is a typed defined by the following constructors:
+    \ul{
+        \li{
+            #{\inl:A\to A+B}
+        }
+        \li{
+            #{\inr:B\to A+B}
+        }
+    }
+    For any type family indexed by #{x:A+B}, satisfies the following induction principle:
+    ##{
+        \ind{+}: (\Pi_{(x:A)}P(\inl(x)))\to(\Pi_{(y:B)}P(\inr(y)))\to\Pi_{(z:A+B)}P(z)
+    }
+    (Note that sometimes we denoted #{\ind{+}(f,g)} as #{[f,g]}) And the computation rule:
+    ##{
+        \begin{align*}
+            \ind{+}(f,g,\inl(x))&\equiv f(x)\\
+            \ind{+}(f,g,\inr(y))&\equiv g(y)
+        \end{align*}
+    }
+    where #{f} and #{g} are defined:
+    ##{
+        \begin{align*}
+            f&:\Pi_{(x:A)}P(\inl(x))\\
+            g&:\Pi_{(y:B)}P(\inr(y))
+        \end{align*}
+    }
+    This can be presented by pattern matching to define a function #{h:\Pi _{(z:A+B)}.P(z)}:
+    ##{
+        \begin{align*}
+            h(\inl(x))&:\equiv f(x)\\
+            h(\inr(y))&:\equiv g(y)
+        \end{align*}
+    }
+}

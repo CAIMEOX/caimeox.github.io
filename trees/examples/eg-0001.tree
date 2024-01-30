@@ -1,0 +1,15 @@
+\title{Fibonacci Function}
+\taxon{Example}
+\p{
+    The \strong{Fibonacci function} is a well-known function in mathematics.
+    It is defined by pattern matching on the variable #{n} as follows:
+    ##{
+        \begin{align*}
+            \text{fib}(0) & :\equiv 0
+            \\
+            \text{fib}(1) & :\equiv 1
+            \\
+            \text{fib}(n+2) & :\equiv \text{fib}(n) + \text{fib}(n+1)
+        \end{align*}
+    }
+}

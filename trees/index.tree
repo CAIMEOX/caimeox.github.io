@@ -7,7 +7,6 @@
 }
 \scope{
     \transclude{posts}
-    \put\transclude/expanded{false}
     \transclude{notes}
     \transclude{projects}
 }

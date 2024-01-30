@@ -1,4 +1,6 @@
 \title{Blog posts}
+\put\transclude/expanded{false}
 \transclude{tt-0002}
 \transclude{tt-0003}
+\transclude{tt-0004}
 \transclude{phy-0001}

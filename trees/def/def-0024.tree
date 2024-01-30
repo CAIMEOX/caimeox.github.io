@@ -1,0 +1,10 @@
+\title{Dependent Pair Type}
+\taxon{Definition}
+\def\pair{\text{pair}}
+\p{
+    Let #{B} be a type family over #{A}. The \strong{dependent pair type} is a inductive type #{\Sigma_{(x:A)}B(x)} 
+    equipped with a \strong{pairing function}:
+    ##{
+        \pair:\Pi _{(x:A)} (B(x)\to \Sigma _{(x:A)}B(x))
+    }
+}
