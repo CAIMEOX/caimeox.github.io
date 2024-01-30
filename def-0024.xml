@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2389</anchor>  <taxon>Definition</taxon> <addr>def-0024</addr>  <route>def-0024.xml</route>   <title>Dependent Pair Type</title> </frontmatter> <mainmatter><p>
+    Let <tex>B</tex> be a type family over <tex>A</tex>. The <strong>dependent pair type</strong> is a inductive type <tex>\Sigma _{(x:A)}B(x)</tex> 
+    equipped with a <strong>pairing function</strong>:
+    <tex display="block">
+         \text {pair} : \Pi  _{(x:A)} (B(x) \to   \Sigma  _{(x:A)}B(x))
+    </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2390</anchor>  <taxon>Type Theory</taxon> <addr>tt-0004</addr>  <route>tt-0004.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Inductive types</title> </frontmatter> <mainmatter><p>
+    In previous post, we have seen the definition of natural numbers as an inductive type.
+    In this post, we will see more examples of inductive types, such as 
+    unit type, empty type, product type, sum type and etc.
+</p><p>
+    This section is much more informal than the previous one.
+    Without displaying the inference rules, we will just present the <strong>constructor</strong>
+    and <strong>induction principle</strong> of each inductive type.
+</p><block open="open"><headline><strong>General Inductive Type</strong></headline> 
+    <p>
+    Just like <tex>\mathbb {N}</tex>, other inductive types can be defined by 
+    their constructors and induction principles (and computation rules).
+    </p>
+    <ul><li>
+            The constructors specify the structure of the type equipped.
+        </li>
+        <li>
+            The induction principle specifies the data required to construct 
+            a section of an arbitrary type family over the inductive type.
+        </li>
+        <li>
+            The computation rules specify the behavior of the constructors.
+        </li></ul>
+</block><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb></trail> <anchor>2391</anchor>  <taxon>Definition</taxon> <addr>def-0020</addr>  <route>def-0020.xml</route>   <title>Unit Type</title> </frontmatter> <mainmatter><p>
+        
+        The <strong>unit type</strong> is the simplest inductive type.
+        It has only one constructor, denoted by <tex>\star : \textbf {1}</tex>.
+    </p><p>
+        The induction principle of the unit type is trivial.
+        It says that to define a dependent function <tex>f: \Pi  _{(x: \textbf {1} )} P(x)</tex>, 
+        it suffices to give a value <tex>p:P( \star )</tex>.
+        <tex display="block">
+            f ( \star ) : \equiv  p
+        </tex></p></mainmatter> </tree><p>
+    A degenrate inductive type is the <strong>empty type</strong>.
+    It has no constructor, and its induction principle is trivial.
+    Empty type is connected to the <strong>exfalso quodlibet principle</strong> in logic.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb></trail> <anchor>2392</anchor>  <taxon>Definition</taxon> <addr>def-0021</addr>  <route>def-0021.xml</route>   <title>Empty Type</title> </frontmatter> <mainmatter><p>
+    The <strong>empty type</strong> is a degenerate inductive type <tex>\emptyset</tex> satisfying 
+    the following induction principle:
+    <tex display="block">
+         \text {ind}_ \emptyset  :  \Pi _{(x: \emptyset )}P(x)
+    </tex>
+    And a special case is <strong>exfalso</strong>:
+    <tex display="block">
+         \text {exfalso} : \equiv   \text {ind}_ \emptyset  :  \empty   \to  A 
+    </tex>
+    which can draw any conclusion.
+</p></mainmatter> </tree><p>
+    With the empty type we can define the <strong>negation</strong> of a type
+    and the <strong>proof of negation</strong>.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>3</crumb></trail> <anchor>2393</anchor>  <taxon>Definition</taxon> <addr>def-0022</addr>  <route>def-0022.xml</route>   <title>Type Negation</title> </frontmatter> <mainmatter><p>
+    The <strong>negation</strong> of type <tex>A</tex> is defined as
+    <tex display="block">
+         \neg  A : \equiv  A  \to   \emptyset 
+    </tex>
+    A type <tex>A</tex> is said to be <strong>empty</strong> if and only if <tex>\neg  A</tex> is inhabited.
+    <tex display="block">
+         \text {empty}(A) : \equiv   \neg  A
+    </tex>
+    <block open="open"><headline><strong>Proof of negation</strong></headline> 
+        <p>
+            To prove <tex>\neg  A</tex>, we need to show that <tex>A</tex> implies a contradiction.
+            In other words, constructing a function of type <tex>A  \to   \emptyset</tex>.
+        </p>
+    </block></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>4</crumb></trail> <anchor>2394</anchor>  <taxon>Definition</taxon> <addr>def-0023</addr>  <route>def-0023.xml</route>   <title>Coproduct Type</title> </frontmatter> <mainmatter><p>
+    Let <tex>A</tex> and <tex>B</tex> be types. The <strong>coproduct (disjoint sum)</strong> <tex>A+B</tex> is a typed defined by the following constructors:
+    <ul><li><tex>\text {inl} :A \to  A+B</tex></li>
+        <li><tex>\text {inr} :B \to  A+B</tex></li></ul>
+    For any type family indexed by <tex>x:A+B</tex>, satisfies the following induction principle:
+    <tex display="block">
+         \text {ind}_ + : ( \Pi _{(x:A)}P( \text {inl} (x))) \to ( \Pi _{(y:B)}P( \text {inr} (y))) \to \Pi _{(z:A+B)}P(z)
+    </tex>
+    (Note that sometimes we denoted <tex>\text {ind}_ + (f,g)</tex> as <tex>[f,g]</tex>) And the computation rule:
+    <tex display="block">
+         \begin {align*}
+             \text {ind}_ + (f,g, \text {inl} (x))&amp; \equiv  f(x) \\ 
+             \text {ind}_ + (f,g, \text {inr} (y))&amp; \equiv  g(y)
+         \end {align*}
+    </tex>
+    where <tex>f</tex> and <tex>g</tex> are defined:
+    <tex display="block">
+         \begin {align*}
+            f&amp;: \Pi _{(x:A)}P( \text {inl} (x)) \\ 
+            g&amp;: \Pi _{(y:B)}P( \text {inr} (y))
+         \end {align*}
+    </tex>
+    This can be presented by pattern matching to define a function <tex>h: \Pi  _{(z:A+B)}.P(z)</tex>:
+    <tex display="block">
+         \begin {align*}
+            h( \text {inl} (x))&amp;: \equiv  f(x) \\ 
+            h( \text {inr} (y))&amp;: \equiv  g(y)
+         \end {align*}
+    </tex></p></mainmatter> </tree><block open="open"><headline><strong>Special Case of Coproduct</strong></headline> 
+    The special case of coproduct type is also called the <strong>sum type</strong>.
+    <tex display="block">
+         \text {ind}_ + : (A  \to  X)  \to  (B  \to  X)  \to  (A+B  \to  X)
+    </tex>
+    which is very similar to the <strong>elimination rule</strong> of disjunction in logic.
+    <tex display="block">
+        (P \to  Q)  \to  (R \to  Q)  \to  (P \vee  R \to  Q)
+    </tex>
+</block></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>
