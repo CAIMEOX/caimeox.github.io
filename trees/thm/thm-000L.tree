@@ -1,0 +1,37 @@
+\title{Universal Property for Pullback}
+\taxon{Lemma}
+\import{macros}
+\p{
+    Suppose the given diagram:
+    \graph{
+        \begin{tikzcd}
+            & Y \\
+            X & Z
+            \arrow["t"', from=2-1, to=2-2]
+            \arrow["u", from=1-2, to=2-2]
+        \end{tikzcd}
+    }
+    For any set #{A} and commutative solid arrow diagram as below
+    (functions #{f:A\to X} and #{g:A\to Y} such that #{t\circ f = u\circ g}):
+    \graph{
+        \usetikzlibrary{arrows}
+        \begin{tikzcd}
+            & {X\times_ZY} \\
+            \\
+            & A \\
+            X && Y \\
+            & Z
+            \arrow["f"', from=3-2, to=4-1]
+            \arrow["g", from=3-2, to=4-3]
+            \arrow["t"', from=4-1, to=5-2]
+            \arrow["u", from=4-3, to=5-2]
+            \arrow["{\exists!}", dashed, from=3-2, to=1-2]
+            \arrow["{\pi_1}"', bend right, from=1-2, to=4-1]
+	        \arrow["{\pi_2}", bend left, from=1-2, to=4-3]
+        \end{tikzcd}
+    }
+    there exists a \em{unique} arrow #{\langle f,g \rangle_Z: A\to X\times_Z Y} such that
+    ##{
+        \pi_1\circ\langle f,g \rangle_Z = f \text{ and } \pi_2\circ\langle f,g \rangle_Z = g
+    }
+}

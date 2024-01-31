@@ -1,0 +1,15 @@
+\title{Preimage}
+\taxon{Definition}
+\p{
+    Let #{f:X\to Y} be a function and #{y\in Y}.
+    The \strong{preimage} of #{y} under #{f}, denoted by #{f^{-1}(y)}, is the subset
+    of #{X} defined by
+    ##{
+        f^{-1}(y) = \set{x \in X \mid f(x) = y}
+    }
+    For a subset #{B \subseteq Y}, the \strong{preimage} of #{B} under #{f} is the subset
+    of #{X} defined by
+    ##{
+        f^{-1}(B) = \set{x \in X \mid f(x) \in B}
+    }
+}

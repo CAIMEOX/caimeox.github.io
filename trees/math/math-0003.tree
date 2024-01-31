@@ -60,3 +60,7 @@
     In this section we discuss the \em{limits} of variously-shaped diagrams of sets.
 }
 \transclude{def-002L}
+\p{
+    The pullback also satisfies the universal property.
+}
+\transclude{thm-000L}

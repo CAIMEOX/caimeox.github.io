@@ -27,10 +27,7 @@ jobs:
       - name: "Install Forester"
         run: opam install -y forester
 
-      - name: "Build forest"
-        run: make release
-
-      - name: Setup TeX Live
+      - name: "Setup TeX Live"
         uses: teatimeguest/setup-texlive-action@v2
         with:
           packages: >-
@@ -55,6 +52,9 @@ jobs:
             fontaxes
             kastrup
             spath3
+
+      - name: "Build forest"
+        run: make release
 
       - name: "Deploy"
         uses: peaceiris/actions-gh-pages@v3
