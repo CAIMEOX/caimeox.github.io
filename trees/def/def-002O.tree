@@ -1,0 +1,31 @@
+\title{Concatenation Operation}
+\taxon{Definition}
+\import{macros}
+\def\concat{\text{concat}}
+
+\p{
+    Let #{A} be a type.
+    The \strong{Concatenation} operation is defined:
+    ##{
+        \concat: (x:A)\to (y:A)\to (z:A)\to (x=_Ay)\to (y=_Az)\to (x=_Az)
+    }
+}
+\block{\strong{Construction}}{
+    We can first construct:
+    ##{
+        f(x):(y:A)\to (x=_Ay)\to(z:A)\to (y=_Az)\to(x=_Az)
+    }
+    For any #{x:A}, it suffices to construct
+    ##{
+        f(x,x,\refl_x) : (z:A) \to (x=_Az)\to(x=_Az)
+    }
+    That is the identity function #{\lambda z. \id_{x=_Az}}.
+    Then we can define by induction:
+    ##{
+        f(x) :\equiv \indeq{x}(\lambda z.\id)
+    }
+    Finally:
+    ##{
+        \concat_{x,y,z}(p,q) :\equiv f(x,y,p,z,q)
+    }
+}

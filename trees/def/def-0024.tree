@@ -1,10 +1,88 @@
 \title{Dependent Pair Type}
 \taxon{Definition}
+\import{macros}
 \def\pair{\text{pair}}
 \p{
-    Let #{B} be a type family over #{A}. The \strong{dependent pair type} is a inductive type #{\Sigma_{(x:A)}B(x)} 
-    equipped with a \strong{pairing function}:
+    The \strong{dependent pair type} is a inductive type #{\Sigma_{(x:A)}B(x)} (#{(x:A) \times B(x)})
+}
+\block{
+    \strong{Formation Rule}
+}{
+    \p{
+        Given a type family #{B} over #{A}, we can form the dependent pair type #{\Sigma_{(x:A)}B(x)}.
+    }
     ##{
-        \pair:\Pi _{(x:A)} (B(x)\to \Sigma _{(x:A)}B(x))
+        \frac{
+            \Gamma\vdash A\type
+            \quad
+            \Gamma,x:A\vdash B(x)\type
+        }{
+            \Gamma\vdash (x:A) \times B(x)\type
+        }
+    }
+}
+\block{
+    \strong{Introduction Rule}
+}{
+    \p{
+        Given a term #{a:A} and a term #{b(a):B(a)}, we can form a term #{\pair(a,b):(x:A)\times B(x)}.
+    }
+    ##{
+        \frac{
+            \Gamma\vdash a:A
+            \quad
+            \Gamma\vdash b(a):B(a)
+        }{
+            \Gamma\vdash (a,b):(x:A)\times B(x)
+        }
+    }
+}
+\block{
+    \strong{Elimination Rule}
+}{
+    \p{
+        The elimination rule is formed with two projections.
+        ##{
+            \frac{
+                \Gamma\vdash p:(x:A)\times B(x)
+            }{
+                \begin{align*}
+                    \Gamma&\vdash \pr{A}(p):A\\
+                    \Gamma&\vdash \pr{B}(p):B(\pr{A}(p))
+                \end{align*}
+            }
+        }
+    }
+}
+\block{
+    \strong{Computation Rule}
+}{
+    \p{
+        ##{
+            \frac{
+                \Gamma\vdash x:A 
+                \quad 
+                \Gamma\vdash y:B(x)
+            }{
+                \begin{align*}
+                    \Gamma&\vdash \pr{A}((x,y))=x:A\\
+                    \Gamma&\vdash \pr{B}((x,y))=y:B(x)
+                \end{align*}
+            }
+        }
+    }
+}
+\block{
+    \strong{Special Case}
+}{
+    \ul{
+        \li{
+            In the special case that #{B(x) = B} is independent of #{A},
+            this reduces to the \strong{product type} #{A\times B}.
+        }
+        \li{
+            In the special case that #{D \equiv \text{Boolean}},
+            this reduces to a [coproduct type](def-0023).
+        }
     }
 }

@@ -53,4 +53,8 @@
         (P\to Q) \to (R\to Q) \to (P\vee R\to Q)
     }
 }
+\p{
+    The dependent version of sum type is called the \strong{dependent sum type (dependent coproduct)} traditionally.
+    Its terms are ordered pairs.
+}
 \transclude{def-0024}

@@ -13,6 +13,7 @@
 \def\succ{\text{succ}}
 \def\ind[a]{\text{ind}_\a}
 \def\indn{\text{ind}_\N}
+\def\indeq[a]{\text{ind-eq}_{\a}}
 \def\unit{\textbf{1}}
 \def\nulls{\text{null }}
 \def\range{\text{range }}
@@ -33,5 +34,7 @@
     \block{\strong{Proof}.}{\body}
   }
 }
+\def\refl{\text{refl}}
 \def\homset{\hom_\text{set}}
 \def\id{\text{id}}
+\def\pr[a]{\text{pr}_\a}

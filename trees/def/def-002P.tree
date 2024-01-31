@@ -1,0 +1,19 @@
+\title{Inverse Operation}
+\taxon{Definition}
+\import{macros}
+\def\inv{\text{inv}}
+\p{
+    Let #{A} be a type. The \strong{inverse oepration} is defined:
+    ##{
+        \inv: (x:A)\to (y:A)\to (x=_Ay)\to (y=_Ax)
+    }
+}
+\block{
+    \strong{Construction}
+}{
+    By induction, it suffices to construct:
+    ##{
+        \inv(x,x,\refl_x) : (x=_Ax)
+    }
+    for any #{x:A}. And trivially we have #{\inv(x,x,\refl_x)\equiv\refl_x}.
+}

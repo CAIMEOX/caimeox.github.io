@@ -1,0 +1,19 @@
+\title{Identity Types}
+\taxon{Type Theory}
+\date{2024-01-31}
+\p{
+    How can we think of \strong{equality} in type theory?
+    Mentioned before, given a type #{A} and two its elements #{a,b:A}
+    we can define a new type #{a=_Ab} which is called the \strong{identity type}.
+    In this case, a term of #{a=_Ab} is said to be a \em{witness} of the equality of #{a} and #{b}.
+    And this witness is itself a type.
+    We can then define their equality.
+    This gives every type a \strong{groupoid structure}.
+}
+\transclude{def-002N}
+\p{
+    The identifications can be \strong{concatenated} and \strong{inverted},
+    which implies the \em{transitivity} and \em{symmetry} of the identity type.
+}
+\transclude{def-002O}
+\transclude{def-002P}
