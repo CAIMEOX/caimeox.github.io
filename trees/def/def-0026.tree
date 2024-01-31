@@ -1,0 +1,10 @@
+\title{#{\mathcal{P}_m (R)}}
+\taxon{Definition}
+\p{
+    The set of all polynomials of degree at most #{m} with coefficients in ring #{R} is denoted by #{\mathcal{P}_m (R)}.
+    In other words,
+    ##{
+        \mathcal{P}_m (R) = \set{ p \in \mathcal{P}(R) | \deg(p) \leq m}
+    }
+    where #{\mathcal{P}(R)} is the [set of all polynomials](def-0027) with coefficients in #{R}.
+}

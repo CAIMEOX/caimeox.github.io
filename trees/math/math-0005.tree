@@ -1,0 +1,55 @@
+\title{Linear Maps}
+\taxon{Linear Algebra}
+\date{2024-01-31}
+\import{macros}
+\p{
+    Now we arrive at the main topic of this chapter: linear maps. 
+    In classic mathematics, to understand the properties of the structure or space,
+    we often study the maps between them.
+    For vector spaces we study the \strong{linear maps}.
+}
+\transclude{def-0025}
+\p{
+    Now we can talk about the set of all linear maps between two vector spaces.
+    ##{
+        \cl(V,W) = \set{ T: V \to W | T \text{ is a linear map}}
+    }
+}
+\transclude{eg-0002}
+\transclude{eg-0003}
+\p{
+    We can find a linear map that takes on \em{whatever values we wish} on the 
+    vectors in a basis by the following theorem.
+}
+\transclude{thm-000F}
+\p{
+    Now let's turn to the algebraic operations over the set of linear maps #{\cl(V,W)}.
+    We begin by defining the addition and scalar multiplication of linear maps.
+    This leads to a surprising result: the set of linear maps is actually a vector space.
+}
+\transclude{def-0029}
+\p{
+    Usually it makes no sense to multiply two linear maps. But we can define
+    an operation called the \strong{product} of linear maps, which is just the composition of the two functions.
+    This can form a \strong{monoid} or even a \strong{group} under certain conditions.
+}
+\transclude{def-002A}
+\p{
+    In algebra, we have a structure named \strong{kernel}, which is the set of all elements that are mapped to the zero element.
+    For linear maps, the kernel is the \strong{null space}
+}
+\transclude{def-002C}
+\p{
+    The injective linear map is defined like normal [injective](def-002D) functions.
+    To check whether a linear map is injective, we can just check whether the null space is trivial.
+}
+\transclude{thm-000G}
+\p{
+    The image of a linear map is the set of all elements that are mapped to by some element in the domain.
+    This is called the \strong{range} of the linear map, just like [range](def-002E) of normal function.
+}
+\transclude{thm-000H}
+\p{
+    The next theorem plays a crucial role in the study of linear maps.
+}
+\transclude{thm-000I}

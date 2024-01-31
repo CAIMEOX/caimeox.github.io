@@ -1,0 +1,11 @@
+\title{Linear Map}
+\taxon{Definition}
+\p{
+    A \strong{linear map} is a function between two vector spaces that preserves the operations of addition and scalar multiplication.
+    In other words, a function #{T: V \to W} where #{V,W} are vector spaces if the following conditions are satisfied:
+    \ul{
+        \li{Additivity: #{T(u+v) = T(u) + T(v)} for all #{u,v \in V}}
+        \li{Homogeneity: #{T(\alpha v) = \alpha T(v)} for all #{\alpha \in \mathbb{F}} and #{v \in V}}
+    }
+    Sometimes we ignore the brackets and write #{T v} instead of #{T(v)}.
+}

@@ -1,0 +1,24 @@
+\title{Function}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{X} and #{Y} be sets then a \strong{function} #{f:X \to Y}
+    is a mapping that sends each element of #{X} to a unique element of #{Y},
+    denoted by #{f(x) = y}.
+    Function is a special case of [relation](def-000W), and it is a relation that is left-total and right-unique.
+    ##{
+        f \in X \times Y \text{ and } \forall x \in X, \exists! y \in Y, (x,y) \in f
+    }
+    #{X} is said to be the \strong{domain} of #{f} and #{Y} is said to be the \strong{codomain} of #{f},
+    where we denote #{X = \dom f} and #{Y = \cod f}.
+}
+\p{
+    Two functions #{f:X\to Y} and #{g:Y\to Z} can be \strong{composed} to form a new function #{g \circ f : X \to Z},
+    where the composition is defined by
+    ##{
+        (g \circ f)(x) = g(f(x)) 
+    }
+}
+\p{
+    The set of all functions from #{X} to #{Y} is denoted by #{\homset(X, Y)}.
+}

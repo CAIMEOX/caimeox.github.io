@@ -12,9 +12,8 @@
     in
     {
       devShells."${system}".default = pkgs.mkShell {
-        buildInputs = [ 
-          pkgs.fswatch
-          pkgs.nodePackages.live-server
+        buildInputs = [
+          pkgs.inotify-tools
           pkgs.texlive.combined.scheme-full
           forester.packages."${system}".default ];
         shellHook = ''

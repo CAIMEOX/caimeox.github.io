@@ -1,0 +1,9 @@
+\title{Surjective}
+\taxon{Definition}
+\import{macros}
+\p{
+    A function #{f: X \to Y} is \strong{surjective} if for any element #{y \in Y}, there exists an element #{x \in X} such that #{f(x) = y}.
+    ##{
+        \range f = Y
+    }
+}

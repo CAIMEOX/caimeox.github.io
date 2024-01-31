@@ -1,0 +1,8 @@
+\title{Injective}
+\taxon{Definition}
+\p{
+    A function #{f: X \to Y} is \strong{injective} if for any two elements #{x_1,x_2 \in X},
+    ##{
+        f(x_1) = f(x_2) \quad \text{implies} \quad x_1 = x_2
+    }   
+}

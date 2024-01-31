@@ -1,0 +1,9 @@
+\title{Range}
+\taxon{Definition}
+\import{macros}
+\p{
+    The \strong{range (image)} of a function #{f: X \to Y} is the set of all elements in #{Y} that are mapped to by some element in #{X}.
+    ##{
+        \range f = \set{y \in Y | \exists x \in X, f(x) = y}
+    }
+}

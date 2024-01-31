@@ -1,0 +1,10 @@
+\title{Cardinality}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{X} be a set and #{n \in \N}. 
+    #{A} si said to have \strong{cardinality} #{n}, denoted by #{ |A|= n},
+    if there exists an isomorphism between #{A} and #{S_n = \set{1,2,\cdots,n}}.
+    If #{A} has finite cardinality, we say #{A} is \strong{finite}, otherwise
+    we say #{A} is \strong{infinite}, denoted by #{|A| \geq \infty}.
+}

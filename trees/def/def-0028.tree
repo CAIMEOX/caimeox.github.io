@@ -1,0 +1,11 @@
+\title{Degree of polynomial}
+\taxon{Definition}
+\p{
+    A [polynomial](def-0027) #{p\in \mathcal{P}(R)} is said to have degree #{n} if
+    there exists coefficients #{a_0, a_1, \ldots, a_n \in R} and #{a_n \neq 0} such that
+    ##{
+        p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
+    }
+    for all #{x \in R}. We denote the degree of #{p} by #{\deg(p) = n}.
+    For the zero polynomial, we define its degree to be #{-\infty}.
+}

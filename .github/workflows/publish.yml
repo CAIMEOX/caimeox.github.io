@@ -30,6 +30,32 @@ jobs:
       - name: "Build forest"
         run: make release
 
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v2
+        with:
+          packages: >-
+            scheme-medium
+            standalone
+            mlmodern
+            amsfonts
+            amssymb
+            amsmath
+            zx-calculus
+            tikz-cd
+            l3packages
+            dvisvgm
+            pgf
+            etoolbox
+            mathtools
+            stmaryrd
+            newtx
+            newpx
+            xstring
+            xpatch
+            fontaxes
+            kastrup
+            spath3
+
       - name: "Deploy"
         uses: peaceiris/actions-gh-pages@v3
         with:

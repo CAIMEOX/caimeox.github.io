@@ -1,0 +1,10 @@
+\title{Fundamental Theorems of Linear Maps}
+\taxon{Theorem}
+\import{macros}
+\p{
+    Let #{V} be finite-dimensional vector space and #{T : V \to W} be a linear map. 
+    Then #{\range T} is finite-dimensional and 
+    ##{
+        \dim V = \dim \range T + \dim \nulls T
+    }
+}

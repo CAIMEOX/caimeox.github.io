@@ -1,0 +1,16 @@
+\title{Set Isomorphism}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{X} and #{Y} be sets and #{f: X \to Y} be a function.
+    The function #{f} is called an \strong{isomorphism} if it is both [injective](def-002D) and [surjective](def-002F).
+    In other words, there exists a function #{g: Y \to X} such that
+    ##{
+        g \circ f = \id_X \text{ and } f \circ g = \id_Y
+    }
+    where #{\id_X} and #{\id_Y} are the \strong{identity functions} on #{X} and #{Y} respectively.
+    And we say #{f} is \strong{invertible} and #{g} is the \strong{inverse} of #{f}.
+    If there is a isomorphism between #{X} and #{Y}, we say #{X} and #{Y} are \strong{isomorphic},
+    denoted by #{X \cong Y}.
+    Isomorphism is an [equivalence relation](def-000X).
+}

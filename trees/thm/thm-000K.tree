@@ -1,0 +1,21 @@
+\title{Universal Property for Coproduct of Sets}
+\taxon{Lemma}
+\import{macros}
+\p{
+    Let #{X} and #{Y} be sets. For any set #{A} and function
+    #{f : X \to A} and #{g : Y \to A}, there exists a \em{unique} function
+    #{h : X \sqcup Y \to A} such that the following diagram commutes:
+    \graph{
+        \begin{tikzcd}
+            & A \\
+            X && Y \\
+            & {X\sqcup Y}
+            \arrow["{i_1}"', from=2-1, to=3-2]
+            \arrow["{i_2}", from=2-3, to=3-2]
+            \arrow["f", from=2-1, to=1-2]
+            \arrow["g"', from=2-3, to=1-2]
+            \arrow["{\exists!}", dashed, from=3-2, to=1-2]
+        \end{tikzcd}   
+    }
+    We might denote the unique as #{f\sqcup g: X \sqcup Y \to A}.
+}

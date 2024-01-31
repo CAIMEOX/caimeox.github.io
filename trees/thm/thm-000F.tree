@@ -1,0 +1,10 @@
+\title{Linear maps and basis of domain}
+\taxon{Theorem}
+\p{
+    Let #{v_1, v_2, \ldots, v_n} be a basis of vector space #{V}.
+    Then for any vector space #{W} and any vectors #{w_1, w_2, \ldots, w_n} in #{W},
+    there exists a unique linear map #{T: V \to W} such that
+    ##{
+        T(v_i) = w_i \quad \text{for all} \quad i = 1,2,\ldots,n
+    }
+} 

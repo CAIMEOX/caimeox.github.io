@@ -1,0 +1,5 @@
+\title{Range is a subspace}
+\taxon{Theorem}
+\p{
+    If #{T: V \to W} is a linear map, then the range of #{T} is a subspace of #{W}.
+}

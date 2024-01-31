@@ -1,0 +1,10 @@
+\title{Null Space}
+\taxon{Definition}
+\import{macros}
+\p{
+    For #{T: V \to W}, the \strong{null space} of #{T} is the set of all vectors in #{V} that are mapped to #{0} in #{W}.
+    ##{
+        \nulls T = \set{v \in V | T(v) = 0}
+    }
+    The null space of #{T} is a subspace of #{V}.
+}

@@ -33,3 +33,30 @@
     With the definition of order, we can define the upper bound and lower bound
 }
 \transclude{def-0011}
+\transclude{def-002G}
+\p{
+    The isomorphism function is defined as follows
+}
+\transclude{def-002H}
+\p{
+    With isomorphism, we can define the cardinality of a set.
+    Two isomorphic sets have the same cardinality.
+}
+\transclude{def-002I}
+\p{
+    The next topic is the product of sets
+}
+\transclude{def-002J}
+\p{
+    This leads to an improtant concept named \strong{universal property}.
+}
+\transclude{thm-000J}
+\p{
+    Dual to the product of sets, we have the coproduct of sets
+}
+\transclude{def-002K}
+\transclude{thm-000K}
+\p{
+    In this section we discuss the \em{limits} of variously-shaped diagrams of sets.
+}
+\transclude{def-002L}

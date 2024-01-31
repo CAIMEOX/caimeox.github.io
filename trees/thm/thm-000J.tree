@@ -1,0 +1,24 @@
+\title{Universal Property for Product of Sets}
+\taxon{Lemma}
+\import{macros}
+\p{
+    Let #{X} and #{Y} be sets.
+    For any set #{A} and function
+    #{f: A \to X} and #{g: A \to Y},
+    there exists a \em{unique} function #{h: A \to X \times Y} such that
+    the following diagram commutes:
+    \graph{
+        \begin{tikzcd}
+            & {X\times Y} \\
+            X && Y \\
+            & A
+            \arrow["{\pi_1}"', from=1-2, to=2-1]
+            \arrow["{\pi_2}", from=1-2, to=2-3]
+            \arrow["f", from=3-2, to=2-1]
+            \arrow["g"', from=3-2, to=2-3]
+            \arrow["{\exists!}", dashed, from=3-2, to=1-2]
+        \end{tikzcd}
+    }
+    We might denote the unique function by #{\langle f,g \rangle: A \to X \times Y}.
+    It is sufficient to define #{\langle f,g \rangle(a) = (f(a),g(a))} for all #{a\in A} as the unique function.
+}

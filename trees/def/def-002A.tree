@@ -1,0 +1,33 @@
+\title{Product of Linear Maps}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{T_1: V \to W} and #{T_2: W \to U} be linear maps.
+    We define the \strong{product} of #{T_1} and #{T_2} as the linear map #{T_2 \circ T_1: V \to U} such that
+    ##{
+        (T_2 \circ T_1)(v) = T_2(T_1(v)) \quad \text{for all} \quad v \in V
+    }
+    Note that this is just the composition of the two functions #{T_1} and #{T_2}. 
+    And we usually denote #{T_2 \circ T_1} by #{T_2T_1}.
+    The product of linear maps is associative, that is,
+    ##{
+        (T_3 \circ T_2) \circ T_1 = T_3 \circ (T_2 \circ T_1)
+    }
+    for any linear maps #{T_1: V \to W}, #{T_2: W \to U}, and #{T_3: U \to X}.
+    The identity map #{I_V: V \to V} is the identity element of the set of linear maps #{\cl(V,V)} under the product operation.
+    That is, for any linear map #{T: V \to V},
+    ##{
+        I_V \circ T = T \circ I_V = T
+    }
+    where #{I_V} is the identity map on #{V}.
+    The set of all linear maps from a vector space to itself, #{\cl(V,V)}, forms a [\strong{monoid}](def-0007) under the product operation.
+    The set of all invertible linear maps from a vector space to itself, #{\cl(V,V)^*}, forms a group under the product operation.
+    The identity map is the identity element of the [\strong{group}](def-0001) #{\cl(V,V)^*}.
+}
+\p{
+    With addition we also have the distributive law for the product of linear maps.
+    That is, for any linear maps #{S,S_1,S_2: V \to W} and #{T,T_1,T_2: U\to V}:
+    ##{
+        (S_1 + S_2)T = S_1T + S_2T \quad \text{and} \quad T(S_1 + S_2) = TS_1 + TS_2
+    }
+}

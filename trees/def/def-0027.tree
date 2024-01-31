@@ -1,0 +1,10 @@
+\title{Polynomial}
+\taxon{Definition}
+\p{
+    A function #{f: R \to R} is a \strong{polynomial} with coefficients in ring #{R} if
+    there exists  #{n \in \N} and #{a_0, a_1, \ldots, a_n \in R} such that
+    ##{
+        f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
+    }
+    for all #{x \in R}. We denote the set all polynomials with coefficients in #{R} by #{\mathcal{P}(R)}.
+}

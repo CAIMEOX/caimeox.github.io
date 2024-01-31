@@ -1,0 +1,12 @@
+\title{Product of Sets}
+\taxon{Definition}
+\p{
+    Let #{X} and #{Y} be sets, then the \strong{Cartesian product} of #{X} and #{Y} is the set
+    ##{
+        X \times Y = \set{(x,y) \mid x \in X \text{ and } y \in Y}
+    }
+    There are two natural projections from the Cartesian product to the original sets, namely
+    ##{
+        \pi_1 : X \times Y \to X \text{ and } \pi_2 : X \times Y \to Y
+    }
+}

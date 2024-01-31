@@ -1,0 +1,14 @@
+\title{Differentiation is linear map}
+\taxon{Example}
+\import{macros}
+\p{
+    Define #{D\in\cl(\mathcal{P}(\R),\mathcal{P}(\R))} (recall that #{\mathcal{P}} means [set of polynomials](def-0027)) by
+    ##{
+        D(f) = f'
+    }
+    We can see that #{D} a linear map.
+    \ul{
+        \li{Additivity: #{D(f+g) = (f+g)' = f' + g' = D(f) + D(g)}}
+        \li{Homogeneity: #{D(\alpha f) = (\alpha f)' = \alpha f' = \alpha D(f)}}
+    }
+}

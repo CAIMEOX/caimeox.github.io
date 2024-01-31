@@ -7,8 +7,31 @@
 \def\Q{\mathbb{Q}}
 \def\R{\mathbb{R}}
 \def\C{\mathbb{C}}
+\def\F{\mathbb{F}}
+\def\cl{\mathcal{L}}
 \def\set[a]{\{ \a \}}
 \def\succ{\text{succ}}
 \def\ind[a]{\text{ind}_\a}
 \def\indn{\text{ind}_\N}
 \def\unit{\textbf{1}}
+\def\nulls{\text{null }}
+\def\range{\text{range }}
+\def\dom{\text{dom }}
+\def\cod{\text{cod }}
+\def\graph[a]{
+    \xml{center}{\tex{
+      \usepackage{tikz-cd}
+      \usepackage{amssymb}
+    }{
+        \a
+    }}
+}
+\def\proof[body]{
+  \iftex{
+    \block{Proof}{\body}
+  }{
+    \block{\strong{Proof}.}{\body}
+  }
+}
+\def\homset{\hom_\text{set}}
+\def\id{\text{id}}

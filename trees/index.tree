@@ -6,6 +6,7 @@
     \transclude{about}
 }
 \scope{
+    \put\transclude/numbered{true}
     \transclude{posts}
     \transclude{notes}
     \transclude{projects}

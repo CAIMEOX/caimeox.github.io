@@ -1,0 +1,15 @@
+\title{Integration is linear map}
+\taxon{Definition}
+\p{
+    Let #{V} be the vector space of all continuous functions on the interval #{[a,b]}.
+    The map #{I: V \to V} defined by
+    ##{
+        I(f) = \int_a^x f(t) dt
+    }
+    is a \strong{linear map}.
+    In other words, #{I} preserves the operations of addition and scalar multiplication:
+    For all #{f,g \in V} and all #{\alpha \in \mathbb{R}},
+    ##{
+        I(f+g) = I(f) + I(g) \quad \text{and} \quad I(\alpha f) = \alpha I(f)
+    }
+}

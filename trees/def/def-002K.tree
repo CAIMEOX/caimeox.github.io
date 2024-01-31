@@ -1,0 +1,10 @@
+\title{Coproduct of Sets}
+\taxon{Definition}
+\p{
+    Let #{X} and #{Y} be sets, then the \strong{coproduct} of #{X} and #{Y} is 
+    defined as the \strong{disjoint union} of #{X} and #{Y}, denoted by #{X \sqcup Y}.
+    There are two natural injections from the original sets to the coproduct, namely
+    ##{
+        i_1 : X \to X \sqcup Y \text{ and } i_2 : Y \to X \sqcup Y
+    }
+}
