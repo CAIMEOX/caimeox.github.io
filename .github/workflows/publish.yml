@@ -35,7 +35,6 @@ jobs:
             standalone
             mlmodern
             amsfonts
-            amssymb
             amsmath
             zx-calculus
             tikz-cd
