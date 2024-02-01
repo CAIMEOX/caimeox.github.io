@@ -1,0 +1,7 @@
+\title{Homogeneous system of linear equations}
+\taxon{Theorem}
+\p{ 
+    A homogeneous system of linear equations
+    with more variables than equations has 
+    a nontrivial solution.
+}   

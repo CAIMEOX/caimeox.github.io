@@ -53,3 +53,54 @@
     The next theorem plays a crucial role in the study of linear maps.
 }
 \transclude{thm-000I}
+\p{
+    Now we can show that no linear map from a finite-dimensional vector space
+    to a \em{smaller} (In dimension) vector space can be [injective](def-002D).
+    This can be easily proved by the fundamental theorem of linear maps.
+}
+\transclude{thm-000M}
+\p{
+    Similarly, we can show that no linear map from a finite-dimensional vector space
+    to a \em{larger} (In dimension) vector space can be [surjective](def-002F).
+}
+\transclude{thm-000N}
+\p{
+    These two lemmas are very important in the study of linear equations.
+    The idea here is to express linear equations system in terms of linear maps.
+}
+\transclude{eg-0004}
+\transclude{thm-000O}
+\p{
+    We have seen that [map to smaller dimension is not injective](thm-000M).
+    #{T} is not injective if #{n > m}. This results the theorem above.
+}
+\transclude{eg-0005}
+\transclude{thm-000P}
+\p{
+    Let #{v_1, v_2, \cdots, v_n} be a basis of #{V}.
+    We know that for any value of a linear map #{T:V\to W},
+    can be determined by values #{\set{T(v_1), T(v_2), \cdots, T(v_n)}}.
+    This leads to the definition of the matrix representation of a linear map.
+}
+\transclude{def-002R}
+\p{
+    Now we can define the matrix representation of a linear map.
+}
+\transclude{def-002S}
+\p{
+    We can see that #{\F^{m\times n}} is itself a vector space.
+}
+\transclude{thm-000Q}
+\p{
+    Consider linear maps #{T:U\to V} and #{S:V\to W}.
+    The composition of linear maps is #{ST}.
+    Does the composition of linear maps have a matrix representation?
+    ##{
+        \mat(ST) = \mat(S)\mat(T)
+    }
+    This makes no sense now but indicates the definition of \strong{matrix multiplication}.
+}
+\transclude{def-002T}
+\p{
+    Now we see that the desired matrix multiplication holds.
+}

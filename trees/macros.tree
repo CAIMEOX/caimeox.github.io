@@ -38,3 +38,4 @@
 \def\homset{\hom_\text{set}}
 \def\id{\text{id}}
 \def\pr[a]{\text{pr}_\a}
+\def\mat{\mathcal{M}}

@@ -1,0 +1,8 @@
+\title{Inhomogeneous system of linear equations}
+\taxon{Theorem}
+\import{macros}
+\p{
+    An inhomogeneous system of linear equations
+    with more equations than variables has 
+    no solution for some choice of the constant term.
+}

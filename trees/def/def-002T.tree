@@ -1,0 +1,29 @@
+\title{Matrix Multiplication}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{A} be a #{m\times n} matrix and #{B} be a #{n\times p} matrix.
+    Then #{AC} is defined as the #{m\times p} matrix #{C} such that
+    ##{
+        C_{ij} = \sum_{k=1}^n A_{ik}B_{kj}
+    }
+}
+\block{
+    \strong{Derivation}
+}{
+    Let #{T:U\to V} and #{S:V\to W} be linear maps.
+    Denote #{A = \mat(S)} and #{C = \mat(T)}.
+    Then the composition of linear maps #{ST} is computed
+    ##{
+        \begin{align*}
+            (ST)(u)_k &= S(\sum_{r=1}^n C_{rk}v_r) \\
+            &= \sum_{r=1}^n C_{rk}S(v_r) \\
+            &= \sum_{r=1}^n C_{rk}\sum_{s=1}^m A _{sr}w_s \\
+            &= \sum_{s=1}^m\left(\sum_{r=1}^n C_{rk}A_{sr}\right)w_s \\
+        \end{align*}
+    }
+    Thus #{\mat(ST)} is the #{m\times p} whose entries are
+    ##{
+        \mat(ST)_{sk} = \sum_{r=1}^n A_{sr}C_{rk}
+    }
+}

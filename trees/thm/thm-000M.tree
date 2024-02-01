@@ -1,1 +1,8 @@
-\date{2024-01-31}
+\title{Map to smaller dimension is not injective}
+\taxon{Lemma}
+\import{macros}
+\p{
+    Let #{V} and #{W} be finite-dimensional vector spaces, 
+    and #{\dim V > \dim W}.
+    Then no linear map #{T:V\to W} is injective.
+}

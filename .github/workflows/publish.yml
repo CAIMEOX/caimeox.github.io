@@ -19,13 +19,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 1
-      - name: "Set-up OCaml"
-        uses: ocaml/setup-ocaml@v2
-        with:
-          ocaml-compiler: "5.1"
-
-      - name: "Install Forester"
-        run: opam install -y forester
 
       - name: "Setup TeX Live"
         uses: teatimeguest/setup-texlive-action@v2
@@ -51,6 +44,17 @@ jobs:
             fontaxes
             kastrup
             spath3
+
+      - name: "Set-up OCaml"
+        uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: "5.1"
+
+      - name: Install Forester
+        run: |
+          git clone https://git.sr.ht/~jonsterling/ocaml-forester
+          cd ocaml-forester
+          opam pin add -y . --locked
 
       - name: "Build forest"
         run: make release

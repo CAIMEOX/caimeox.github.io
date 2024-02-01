@@ -1,0 +1,50 @@
+\title{Matrix of Linear Maps}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{T\in \cl(V,W)},
+    #{\set{v_1,\ldots,v_n}\subset V} be a basis of #{V},
+    and #{\set{w_1,\ldots,w_m}\subset W} be a basis of #{W}.
+    The \strong{matrix of #{T}} with respect to these bases is
+    the #{m\times n} matrix #{\mat(T)} such that
+    ##{
+        T(v_j) = \sum_{i=1}^m \mat(T)_{ij}w_i
+    }
+    Or we denote #{\mat(T)} as #{\mat(T, (v_1,\ldots,v_n), (w_1,\ldots,w_m))}.
+}
+\p{
+    If #{T} maps #{n}-dimensional vector space to #{m}-dimensional vector space,
+    then #{\mat(T)} is a #{m\times n} matrix.
+}
+\block{
+    \strong{Addition}
+}{
+    For two same-size matrix #{A,B},
+    the sum of #{A} and #{B} is the matrix #{C} such that
+    ##{
+        C_{ij} = A_{ij} + B_{ij}
+    }
+    In the language of linear maps #{S,T\in \cl(V,W)},
+    ##{
+        \mat(T+S) = \mat(T) + \mat(S)
+    }
+}
+\block{
+    \strong{Scalar Multiplication}
+}{
+    For a scalar #{c} and a matrix #{A},
+    the product of #{c} and #{A} is the matrix #{B} such that
+    ##{
+        B_{ij} = cA_{ij}
+    }
+    In the language of linear maps #{T\in \cl(V,W)},
+    ##{
+        \mat(cT) = c\mat(T)
+    }
+}
+\block{
+    \strong{Set of Matrices}
+}{
+    The set of all #{m\times n} matrices with elements in #{\F} is denoted as #{\mat_{m\times n}(\F)}
+    or #{\F^{m\times n}}.
+}

@@ -1,0 +1,28 @@
+\title{Inhomogeneous Linear Equations System}
+\taxon{Example}
+\import{macros}
+\block{
+    \strong{Rephrase in terms of a linear map the question of whether a inhomogeneous system linear equations has no solutions
+    for some choice of constant terms.}
+}{
+    Let #{A} be the coefficient matrix of a inhomogeneous linear system.
+    ##{
+        A = \begin{bmatrix}
+            a_{11} & a_{12} & \cdots & a_{1n} \\
+            a_{21} & a_{22} & \cdots & a_{2n} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+    }
+    The equation #{A\vec{x} = \vec{b}} has a solution #{\vec{x} = A^{-1}\vec{b}}.
+    \p{
+        Define #{T: \F^n \to \F^m} by
+        ##{
+            T(\vec{x}) = A\vec{x}
+        }
+        Then the statement that inhomogeneous linear system has no solutions is equivalent to 
+        #{\vec{b} \not\in \range T}.
+        Thus the question is rephrased as not having a solution for some choice of #{\vec{b}}.
+        What condition ensures #{T} is not surjective.
+    }
+}

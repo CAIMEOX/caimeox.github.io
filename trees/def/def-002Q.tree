@@ -1,0 +1,31 @@
+\title{Homogeneous Linear Equations}
+\taxon{Definition}
+\p{
+    A linear equation is called \strong{homogeneous} if it can be written in the form
+    ##{
+        a_1x_1 + a_2x_2 + \cdots + a_nx_n = 0
+    }
+    where #{a_1, a_2, \ldots, a_n} are constants and #{x_1, x_2, \ldots, x_n} are variables.
+    With a set of homogeneous linear equations, we can form a \strong{homogeneous linear system}.    
+    ##{
+        \begin{aligned}
+            a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= 0 \\
+            a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= 0 \\
+            &\vdots \\
+            a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= 0
+        \end{aligned}
+    }
+    This can be written in matrix form as
+    ##{
+        A\vec{x} = \vec{0}
+    }
+    where #{A} is the \strong{coefficient matrix}, #{\vec{x}} is the vector of variables, and #{\vec{0}} is the zero vector.
+    ##{
+        A = \begin{bmatrix}
+            a_{11} & a_{12} & \cdots & a_{1n} \\
+            a_{21} & a_{22} & \cdots & a_{2n} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+    }
+}

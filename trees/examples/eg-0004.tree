@@ -1,0 +1,27 @@
+\title{Homogeneous Linear Equations System}
+\taxon{Example}
+\import{macros}
+\block{
+    \strong{Reprase in terms of a linear map the question of whether a [homogeneous system linear equations](def-002Q) has a nonzero solution.}
+}{
+    Let #{A} be the coefficient matrix of a homogeneous linear system.
+    ##{
+        A = \begin{bmatrix}
+            a_{11} & a_{12} & \cdots & a_{1n} \\
+            a_{21} & a_{22} & \cdots & a_{2n} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+    }
+    The equation #{A\vec{x} = \vec{0}} has a trivial solution #{\vec{x} = \vec{0}}.
+    The question here is whether there is a nontrivial solution.
+    \p{
+        Define #{T: \F^n \to \F^m} by
+        ##{
+            T(\vec{x}) = A\vec{x}
+        }
+        Then the question of whether the homogeneous linear system has a nontrivial solution is equivalent to 
+        asking #{\nulls T} is nontrivial.
+        That is, #{T} is [not injective](thm-000G).
+    }
+}

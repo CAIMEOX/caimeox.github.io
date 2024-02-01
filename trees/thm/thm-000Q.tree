@@ -1,0 +1,6 @@
+\import{macros}
+\title{#{\dim\F^{m\times n} = mn}}
+\taxon{Theorem}
+\p{
+    #{\F^{m\times n}} is a vector space with dimension #{mn}.
+}

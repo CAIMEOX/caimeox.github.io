@@ -1,0 +1,17 @@
+\title{Matrix}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{m,n\in \Z^+}.
+    A #{m\times n} matrix is a rectangular array of elements of a field #{\F}
+    with #{m} \strong{rows} and #{n} \strong{columns}.
+    ##{
+        A = \begin{bmatrix}
+            a_{11} & a_{12} & \cdots & a_{1n} \\
+            a_{21} & a_{22} & \cdots & a_{2n} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+    }
+    The notation #{A_{jk}} refers to the element in the #{j}-th row and #{k}-th column.
+}
