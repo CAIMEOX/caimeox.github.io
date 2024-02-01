@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2395</anchor>  <taxon>Example</taxon> <addr>eg-0001</addr>  <route>eg-0001.xml</route>   <title>Fibonacci Function</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1953</anchor>  <taxon>Example</taxon> <addr>eg-0001</addr>  <route>eg-0001.xml</route>   <title>Fibonacci Function</title> </frontmatter> <mainmatter><p>
     The <strong>Fibonacci function</strong> is a well-known function in mathematics.
     It is defined by pattern matching on the variable <tex>n</tex> as follows:
     <tex display="block">
@@ -11,13 +11,13 @@
              \\ 
              \text {fib}(n+2) &amp; : \equiv   \text {fib}(n) +  \text {fib}(n+1)
          \end {align*}
-    </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" root="false"><frontmatter> <anchor>2396</anchor>  <taxon>Type Theory</taxon> <addr>tt-0003</addr>  <route>tt-0003.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Natural Numbers <tex>\mathbb {N}</tex></title> </frontmatter> <mainmatter><p>
+    </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1954</anchor>  <taxon>Type Theory</taxon> <addr>tt-0003</addr>  <route>tt-0003.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Natural Numbers <tex>\mathbb {N}</tex></title> </frontmatter> <mainmatter><p>
     In classical mathematics, the <strong>Peano axioms</strong> are a set of axioms for the natural numbers,
     an important object in mathematics.
 </p><p>
-    In type theory, the type <tex>\mathbb {N}</tex> of natural number is an <link href="def-001X.xml" type="local" title="Inductive Type"><strong>inductive type</strong></link>.
+    In type theory, the type <tex>\mathbb {N}</tex> of natural number is an <link href="def-001X.xml" type="local" addr="def-001X" title="Inductive Type"><strong>inductive type</strong></link>.
     Just like in dependent function type, we need four inference rules to define the natural numbers.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>1</crumb></trail> <anchor>2397</anchor>  <taxon>Definition</taxon> <addr>def-001Y</addr>  <route>def-001Y.xml</route>   <title>Natural Number</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1955</anchor>  <taxon>Definition</taxon> <addr>def-001Y</addr>  <route>def-001Y.xml</route>   <title>Natural Number</title> </frontmatter> <mainmatter><p>
     In type theory, <strong>natural number</strong> is defined using <strong>peano encoding</strong>.
     The type <tex>\mathbb {N}</tex> is formed by the formation rule:
     <tex display="block">
@@ -76,7 +76,7 @@
     </tex></p></mainmatter> </tree><p>
     Now let's use the type theoretical induction principle of <tex>\mathbb {N}</tex> to
     perform some basic construction over <tex>\mathbb {N}</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" root="false"><frontmatter><trail><crumb>2</crumb></trail> <anchor>2398</anchor>  <taxon>Definition</taxon> <addr>def-001Z</addr>  <route>def-001Z.xml</route>   <title>Addition over <tex>\N</tex></title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1956</anchor>  <taxon>Definition</taxon> <addr>def-001Z</addr>  <route>def-001Z.xml</route>   <title>Addition over <tex>\N</tex></title> </frontmatter> <mainmatter><p>
     We define addition over <tex>\mathbb {N}</tex> using the type theoretical induction principle of <tex>\mathbb {N}</tex>.
     <tex display="block">
          \text {add}_ \mathbb {N}  :  \mathbb {N}   \to  ( \mathbb {N}   \to   \mathbb {N} )
