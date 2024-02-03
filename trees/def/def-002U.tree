@@ -1,0 +1,12 @@
+\title{Equivalence Class}
+\taxon{Definition}
+\p{
+    Let #{\sim} be an [equivalence relation](def-000X) on a set #{A}.
+    For any element #{a\in A}, the \strong{equivalence class} of #{a} is the set
+    #{[a] = \set{b\in A:b\sim a}}.
+    The set of all equivalence classes is denoted by #{A/\sim},
+    which is called the \strong{quotient set} of #{A} by #{\sim}.
+    \p{
+        The equivalence class of #{a} is also denoted by #{\overline{a}}.
+    }
+}

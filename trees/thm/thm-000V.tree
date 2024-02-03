@@ -1,0 +1,10 @@
+\title{Dimension product}
+\taxon{Corollary}
+\import{macros}
+\p{
+    Let #{V} and #{W} be finite-dimensional vector spaces.
+    Then #{\cl(V,W)} is finite-dimensional and
+    ##{
+        \dim(\cl(V,W)) = \dim(V)\dim(W).
+    }
+}

@@ -103,4 +103,29 @@
 \transclude{def-002T}
 \p{
     Now we see that the desired matrix multiplication holds.
+    Matrix multiplication is not commutative in general.
+    However, it satisfies the associative law and the distributive law.
 }
+\transclude{def-002Y}
+\p{
+    With the notation we can think of matrix multiplication in another perspective.
+}
+\transclude{thm-000R}
+\p{
+    We have an interesting observation.
+}
+\transclude{thm-000S}
+\p{
+    Now we begin the study the invertibility of linear maps.
+}
+\transclude{def-002Z}
+\p{
+    A linear map is invertible if and only if
+    it is \strong{bijective}.
+}
+\transclude{thm-000T}
+\transclude{thm-000U}
+\p{
+    This has a trivial corollary.
+}
+\transclude{thm-000V}

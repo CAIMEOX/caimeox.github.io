@@ -40,7 +40,7 @@
         \frac{
             \Gamma\vdash a:A,\quad \Gamma,x:A,p:a=_Ax\vdash P(x,p)\type
         }{
-            \Gamma\vdash \indeq{a}(a,\refl_a): (x:A)\to (p:a=_Ax)\to P(x,p)
+            \Gamma\vdash \indeq{a}(a,\refl_a): P(a,\refl_a) \to (x:A)\to (p:a=_Ax)\to P(x,p)
         }\text{eq-elim}
     }
     ##{

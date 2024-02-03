@@ -1,0 +1,25 @@
+\title{Unit Law Operations}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{A} be a type.
+    We defined the \strong{unit law} operations for #{x=_Ay}:
+    ##{
+        \begin{align*}
+            \text{left-unit} & : (x=_Ay)\to (\refl_x\cdot x = x) \\
+            \text{right-unit} & : (x=_Ay)\to (x\cdot\refl_y = x)
+        \end{align*}
+    }
+}
+\block{
+    \strong{Construction}
+}{
+    By elimination it suffices to construct:
+    ##{
+        \begin{align*}
+            \text{left-unit}(\refl_x) &: \refl_x \cdot \refl_x = \refl_x \\
+            \text{right-unit}(\refl_x) &: \refl_x \cdot \refl_x = \refl_x
+        \end{align*}
+    }
+    In both cases we need only to construct #{\refl_{\refl_x}}.
+}

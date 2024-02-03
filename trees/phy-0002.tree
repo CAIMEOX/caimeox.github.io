@@ -1,0 +1,204 @@
+\title{The wave function}
+\taxon{Quantum Mechanics}
+\date{2024-02-03}
+\import{macros}
+\p{
+    Consider a particle of mass #{m} moving along #{x}-axis
+    subject to force #{F(x, t)}.
+    With Newton's second law, we have:
+    ##{
+        F = ma
+    }
+    For \strong{conservative systems}, the force
+    can be expressed as the derivative of a \strong{potential energy}.
+    ##{
+        F = -\frac{\partial V}{\partial x}
+    }
+    Now the equation of motion becomes:
+    ##{
+        m \frac{d^2x}{dt^2} = -\frac{\partial V}{\partial x}
+    }
+    With appropriate initial conditions we can determine the #{x(t)},
+    this is what we normally do in classic mechanics.
+}
+\p{
+    For \strong{Quantum Mechanics}, we have a different perspective.
+    We would like to look for the \strong{wave function}, #{\psi(x, t)}.
+    To determine it we need to solve the \strong{Schrodinger equation}.
+    ##{
+        i\hbar\frac{\partial}{\partial t}\psi(x,t) = -\frac{\hbar^2}{2m}\frac{\partial^2\psi(x,t)}{\partial x^2} + V(x,t)\psi(x,t)
+    }
+}
+\transclude{def-0030}
+\p{
+    The role of Schrodinger equation is similar to the role of Newton's second law in classic mechanics.
+    Given proper initial conditions,
+    we can determine #{\psi(x, t)} for all the future time.
+}
+\p{
+    The wave function is quite odd, what information does it carry?
+    The wave function is \em{spread out} in space.
+    How can this be related to the \strong{state} of a particle.
+}
+\p{
+    \strong{Born's statistical interpretation} of the wave function provides an answer.
+    For a fixed time #{t}, the probability of finding the particle in the interval #{[a, b]} is given by:
+    ##{
+        P(a, b) = \int_a^b |{\psi(x, t)}|^2 dx
+    }
+}
+\p{
+    Here is where the quantum mechanics differs from classic mechanics and behaves weirdly.
+    The wave function is not a deterministic function, but a \em{statistical} function, which 
+    is an \strong{indeterministic} interpretation.
+}
+\p{
+    Suppose I do \strong{measure} the position of the particle,
+    and find it at #{\vec{r}_0}.
+    Then where it was before the measurement?
+    There are many interpretations of this question,
+    and I will explain three of them.
+}
+\p{
+    \ul{
+        \li{\strong{Realist interpretation}: The particle has a definite position before the measurement, just at #{\vec{r}_0} but we just don't know it.}
+        \li{\strong{Orthodox interpretation}: The particle doesn't have a \em{definite} position before the measurement, it is in a \strong{superposition} of all possible positions.
+        This is also called the \strong{Copenhagen interpretation}.}
+        \li{\strong{Agnostic interpretation}: The question is meaningless, refuse to answer.}
+    }
+}
+\p{
+    Nowadays, the Copenhagen interpretation is the most widely accepted interpretation.
+    The particle does not have a definite position before the measurement.
+    The operation of measurement \strong{collapses} the wave function to a definite position.
+}
+\p{
+    Probability is the key concept in quantum mechanics.
+    Now I will introduce some terimnologies related to continuous probability.
+}
+\transclude{def-0031}
+\p{
+    Now go back to quantum mechanics.
+    We have seen that the squared wave function #{|\psi(x,t)|^2} is a probability density.
+    So it satisfies
+    ##{
+        \int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 1
+    }
+}
+\p{
+    Solve the equations we will get a set of solutions.
+    We should pick a proper factor to make the wave function \strong{normalized}.
+    But if I have normalized the wave function at time #{t_0},
+    will it stay normalized at all future time?
+    Fortunately the Schrodinger equation guarantees the normalization of 
+    the wave function.
+    \proof{
+        Differentiate the normalization condition with respect to time:
+        ##{
+            \frac{d}{dt}\int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 
+            \int_{-\infty}^{\infty} \frac{\partial}{\partial t}|\psi(x,t)|^2 dx
+        }
+        With the product rule:
+        ##{
+            \frac{\partial}{\partial t}|\psi(x,t)|^2 = 
+            \frac{\partial}{\partial t}\psi(x,t)\psi^*(x,t) + \psi(x,t)\frac{\partial}{\partial t}\psi^*(x,t)
+        }
+        where #{\psi^*(x,t)} is the \strong{complex conjugate} of #{\psi(x,t)}.
+        The Schrodinger equation gives
+        ##{
+            \frac{\partial\psi}{\partial t} = \frac{i\hbar}{2m}\frac{\partial^2\psi}{\partial x^2} + \frac{iV}{\hbar}\psi
+        }
+        and also the complex conjugate
+        ##{
+            \frac{\partial\psi^*}{\partial t} = -\frac{i\hbar}{2m}\frac{\partial^2\psi^*}{\partial x^2} + \frac{iV}{\hbar}\psi^*
+        }
+        so
+        ##{
+            \begin{align*}
+                \frac{\partial}{\partial t}|\psi(x,t)|^2 &= 
+                \frac{i\hbar}{2m}\left( \frac{\partial^2\psi}{\partial x^2}\psi^* - \frac{\partial^2\psi^*}{\partial x^2}\psi \right)\\
+                &= \frac{i\hbar}{2m}\frac{\partial}{\partial x}\left( \frac{\partial\psi}{\partial x}\psi^* - \frac{\partial\psi^*}{\partial x}\psi \right)
+            \end{align*}
+        }
+        Now the integral becomes:
+        ##{
+            \frac{d}{dt}\int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 
+            \frac{i\hbar}{2m}\left( \psi\frac{\partial\psi^*}{\partial x} - \psi^*\frac{\partial\psi}{\partial x} \right)\Big|_{-\infty}^{\infty}
+        }
+        Because the \strong{normalization condition}
+        ##{
+            \int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 1
+        }
+        implies that the wave function vanishes at infinity,
+        that is, converges to zero at infinity. Hence we have
+        ##{
+            \lim_{|x|\to\infty}|\psi(x,t)| = 0
+        }
+        this indicates that the integral is zero.
+        ##{
+            \frac{d}{dt}\int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 0
+        }
+        Now we can conclude that the wave function stays normalized at all future time.
+    }
+}
+\p{
+    For a particle in state #{\psi}, we have defined its \strong{expectation value}:
+    ##{
+        \langle x \rangle = \int_{-\infty}^{\infty} x|\psi(x,t)|^2 dx
+    }
+    Can we give a meaning to it? Is it the \strong{average} position of the particle? 
+    No, the first measurement of the position of the particle will give a definite position,
+    and the subsequent measurements will give the same result.
+}
+\p{
+    Actually, the expectation value is the \em{average} of 
+    repeated measurements on an ensemble of identical prepared systems,
+    not the average of repeated measurements on a \em{single} system.
+}
+\block{\strong{Construction.}}{
+    As times goes on, the expectation values varies.
+    We naturally ask how fast it moves?
+    Use simple calculus we can get the answer.
+    ##{
+        \begin{align*}
+            \frac{d}{dt}\langle x \rangle &= \int_{-\infty}^{\infty} x\frac{\partial}{\partial t}|\psi(x,t)|^2 dx \\
+            &= \frac{i\hbar}{2m}\int_{-\infty}^{\infty} x\frac{\partial}{\partial x} (\frac{\partial\psi}{\partial x}\psi^* + \psi\frac{\partial\psi^*}{\partial x}) dx
+        \end{align*}
+    }
+    Simplify using integration by parts, we get
+    ##{
+        \frac{d}{dt}\langle x \rangle = -\frac{i\hbar}{2m}\int_{-\infty}^{\infty} \left( \psi^*\frac{\partial\psi}{\partial x} - \psi\frac{\partial\psi^*}{\partial x} \right) dx
+    }
+    Note that the boundary term was eliminated because the wave function vanishes at infinity.
+    Perform integration by parts again on the second term
+    ##{
+        \langle v \rangle :\equiv\frac{d}{dt}\langle x \rangle = -\frac{i\hbar}{m}\int_{-\infty}^{\infty} \psi^*\frac{\partial\psi}{\partial x} dx
+    }
+    Note that we give a name to the integral, #{v}, indicating the \strong{velocity} of the expectation value.
+}
+\p{
+    To work with \strong{momentum}, we can define:
+    ##{
+        \langle p \rangle = m \langle v \rangle = -i\hbar\int_{-\infty}^{\infty} \psi^*\frac{\partial\psi}{\partial x} dx
+    }
+    Rewrite as an \strong{operator} form:
+    ##{
+        \langle p \rangle = \int_{-\infty}^{\infty} \psi^*\left( \frac{\hbar}{i}\frac{\partial}{\partial x} \right)\psi dx
+    }
+    Compare with 
+    ##{
+        \langle x \rangle = \int_{-\infty}^{\infty} \psi^*(x)\psi dx
+    }
+}
+\p{
+    That's interesting, an operator that acts on the wave function and gives position and momentum.
+    We can generalize this to any function of position and momentum.
+    Just simply do substitution:
+    ##{
+        \langle Q(x,p) \rangle = 
+        \int_{-\infty}^{\infty} \psi^*(x)Q\left( x, -i\hbar\frac{\partial}{\partial x} \right)\psi dx
+    }
+    Momentum and position are just special cases of this general formula.
+    We will give a firmer theoretical foundation to this equation later.
+    Now we just use it as an \em{axiom}.
+}

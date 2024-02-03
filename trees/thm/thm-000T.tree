@@ -1,0 +1,7 @@
+\title{Isomorphism of equal dimensions}
+\taxon{Theorem}
+\import{macros}
+\p{
+    Two finite-dimensional vector spaces over #{\F}
+    are isomorphic iff they have the same [dimension](def-001V).
+}

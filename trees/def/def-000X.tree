@@ -1,4 +1,4 @@
-\title{Equivalence relation}
+\title{Equivalence Relation}
 \taxon{Definition}
 \p{
     An equivalence relation #{R} on a set #{A} is a [relation](def-000W) that is reflexive,
@@ -14,4 +14,5 @@
             #{\forall x,y,z\in A, xRy\land yRz\implies xRz}
         }
     }
+    We often denote the equivalence relation by #{\sim}.
 }

@@ -1,0 +1,12 @@
+\title{Linear Combination of columns}
+\taxon{Lemma}
+\p{
+    Let #{A} be an #{m\times n} matrix,
+    and #{c} is a #{1\times 1} matrix.
+    ##{
+        c = \begin{pmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{pmatrix}
+    }
+    Then #{Ac = c_1A_{\cdot 1} + c_2A_{\cdot 2} + \cdots + c_nA_{\cdot n}}.
+    In other words, #{Ac} is a linear Combination of the columns of #{A},
+    with the scalars that multiply the columns coming from #{c}.
+}

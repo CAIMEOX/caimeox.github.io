@@ -2,9 +2,21 @@
 \date{2024-01-26}
 \taxon{Set Theory}
 \p{
-    We will first start by introducing sets
+    \strong{Set} is a common concept in mathematics.
+    This post is a brief introduction to set theory aimed at 
+    complete all basic knowledge of set theory.
+    The following topics will be covered
+    \ul{
+        \li{\strong{Zermelo-Fraenkel Axioms} and \strong{Axiom of Choice}}
+        \li{Cardinality}
+        \li{Set theory constructions}
+    }
+}
+\p{
+    In this post, we use the Zermelo-Fraenkel set theory with the Axiom of Choice (\strong{ZFC}).
 }
 \transclude{def-000S}
+\transclude{def-002V}
 \p{
     And principles of set theory
 }
@@ -19,6 +31,7 @@
 }
 \transclude{def-000W}
 \transclude{def-000X}
+\transclude{def-002U}
 \p{
     One of the most important relations is the order relation.
     The basic order relation is the preorder.

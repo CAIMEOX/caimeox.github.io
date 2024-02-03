@@ -1,0 +1,29 @@
+\title{Probability Density}
+\taxon{Definition}
+\p{
+    A \strong{probability density} is a function #{p(x)} such that:
+    \ul{
+        \li{
+            #{p(x)\geq 0} for all #{x}.
+        }
+        \li{
+            #{\int_{-\infty}^{\infty} p(x)dx = 1}.
+        }
+    }
+    With this we can define the \strong{probability function} in an interval #{[a,b]} as:
+    ##{
+        P(a, b) = \int_a^b p(x)dx
+    }
+}
+\block{Expectation Value}{
+    The \strong{expectation value} of a function #{f(x)} with respect to the probability density #{p(x)} is defined:
+    ##{
+        \langle f(x) \rangle = \int_{-\infty}^{\infty} f(x)p(x)dx
+    }
+}
+\block{Variance}{
+    The \strong{variance} of a function #{f(x)} with respect to the probability density #{p(x)} is defined:
+    ##{
+        \sigma^2 :\equiv \langle x^2 \rangle - \langle x \rangle^2
+    }
+}

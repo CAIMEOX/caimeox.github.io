@@ -1,0 +1,21 @@
+\title{Schrodinger's equation}
+\taxon{Definition}
+\p{
+    The \strong{Schrodinger equation} is a linear partial differential equation that describes the wave function of a quantum system.
+    It is given by (the general form):
+    ##{
+        i\hbar\frac{\partial}{\partial t}\Psi(\vec{r},t) = \hat{H}\Psi(\vec{r},t)
+    }
+    where:
+    \ul{
+        \li{
+            #{\Psi(\vec{r},t)} is the wave function of the quantum system.
+        }
+        \li{
+            #{\hat{H}} is the \strong{Hamiltonian operator}.
+        }
+        \li{
+            #{\hbar = 1.054573\times10^{-34}\text{Js} } is the reduced \strong{Planck constant}.
+        }
+    }
+}

@@ -28,4 +28,5 @@
     ##{
         \concat_{x,y,z}(p,q) :\equiv f(x,y,p,z,q)
     }
+    Or simply we denote #{\concat(p,q)} as #{p \cdot q}
 }

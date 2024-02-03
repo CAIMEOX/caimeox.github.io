@@ -1,0 +1,10 @@
+\title{Entry pf matrix product}
+\taxon{Lemma}
+\p{
+    Suppose #{A} is an #{m\times n} matrix and #{B} is an #{n\times p} matrix.
+    Then the entry of the product #{AB} is:
+    ##{
+        (AB)_{ij} = A_{i\cdot}B_{\cdot j}
+    }
+    for #{1\leq i\leq m} and #{1\leq j\leq p}.
+}

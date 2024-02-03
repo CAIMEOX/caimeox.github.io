@@ -1,0 +1,15 @@
+\title{#{A_{j\cdot}} and #{A_{\cdot j}}}
+\taxon{Definition}
+\p{
+    Let #{A} be a #{m\times n} matrix.
+    \ul{
+        \li{
+            If #{1\leq j\leq m} then #{A_{j\cdot}} is the #{j}-th row of #{A},
+            defined as a #{1\times n} matrix. (A row vector)
+        }
+        \li{
+            If #{1\leq j\leq n} then #{A_{\cdot j}} is the #{j}-th column of #{A},
+            defined as a #{m\times 1} matrix. (A column vector)
+        }
+    }
+}

@@ -1,0 +1,42 @@
+\title{Associator}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{A} be a type.
+    These are 3 consecutive identifications
+    ##{
+        p:x=_Ay,q:y=_Az, r:z=_Aw
+    }
+    we define the \strong{associator}:
+    ##{
+        \assoc: (p,q,r): (p\cdot q)\cdot r = p\cdot (q\cdot r)
+    }
+}
+\block{
+    \strong{Construction}
+}{
+    By definition it suffices to show that
+    ##{
+        \Pi_{(z:A)}\Pi_{(q:x=_Az)}
+        \Pi_{(w:A)}\Pi_{(r:z=_Aw)}
+        (\refl_x\cdot q)\cdot r = \refl_x\cdot (q\cdot r)
+    }
+    Let #{q:x=_Az} and #{r:z=_Aw}. By computation rule of identity types
+    ##{
+        \refl_x\cdot q \equiv q
+    }
+    Then we can conclude that
+    ##{
+        (\refl_x\cdot q)\cdot r \equiv q\cdot r
+    }
+    similarly #{\refl_x\cdot (q\cdot r) \equiv q\cdot r}.
+    Hence we have the left and right side
+    ##{
+        (\refl_x\cdot q)\cdot r = \refl_x\cdot (q\cdot r)
+    }
+    are judgementally equal, 
+    so we can simply define the associator as
+    ##{
+        \assoc(\refl_x,q,r) :\equiv \refl_{q\cdot r}
+    }
+}

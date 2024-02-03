@@ -1,0 +1,20 @@
+\title{Inverse}
+\taxon{Definition}
+\import{macros}
+\p{
+    A linear map #{T\in\cl(V,W)} is said to be #{invertible} if 
+    there exists a linear map #{S\in\cl(W,V)} such that:
+    ##{
+        \begin{align*}
+            T\cdot S &= \id_V \\
+            S\cdot T &= \id_W
+        \end{align*}
+    }
+    where #{\id} is the identity map.
+    If a linear map #{T} is invertible, 
+    then the map #{S} is \strong{unique} and is called the \strong{inverse} of #{T}, denoted #{T^{-1}}.
+}
+\p{
+    An \strong{isomorphism} is a linear map that is invertible.
+    Two vector spaces are said to be \strong{isomorphic} if there exists an isomorphism between them.
+}

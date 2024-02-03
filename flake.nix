@@ -14,7 +14,7 @@
       devShells."${system}".default = pkgs.mkShell {
         buildInputs = [
           pkgs.inotify-tools
-          pkgs.texlive.combined.scheme-full
+          pkgs.texlive.combined.scheme-basic
           forester.packages."${system}".default ];
         shellHook = ''
           exec fish

@@ -1,0 +1,8 @@
+\import{macros}
+\title{#{\cl(V,W)} is isomorphic to #{\F^{m\times n}}}
+\taxon{Theorem}
+\p{
+    Let #{v_1, v_2, \ldots, v_n} be a basis for #{V},
+    and #{w_1, w_2, \ldots, w_m} be a basis for #{W}.
+    Then #{\mat} is an isomorphism between #{\cl(V,W)} and #{\F^{m\times n}}.
+}

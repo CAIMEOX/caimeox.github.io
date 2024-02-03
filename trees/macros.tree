@@ -39,3 +39,4 @@
 \def\id{\text{id}}
 \def\pr[a]{\text{pr}_\a}
 \def\mat{\mathcal{M}}
+\def\assoc{\text{assoc}}

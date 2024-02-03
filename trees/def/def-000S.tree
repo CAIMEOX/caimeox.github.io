@@ -1,18 +1,53 @@
-\title{Set}
+\title{ZFC Set}
 \taxon{Definition}
+\import{macros}
 \p{
-    A set is a collection of objects.
-}
-\p{
-    \strong{Element}
-    #{x\in A} means #{A} is a collection and #{x} is an element of a collection.
-}
-\p{
-    \strong{Subset}
-    #{A\subseteq B} means #{A} is a \strong{subset} of #{B}.
-    #{A\subset B} means #{A} is a \strong{proper subset} of #{B}.
-}
-\p{
-    \strong{Power Set}
-    #{\mathcal{P}(A)} is the set of all subsets of #{A}.
+    \strong{ZFC} is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
+    The axioms of ZFC are listed below.
+    \ul{
+        \li{
+            \strong{Axiom of Extensionality}:
+            Two sets are equal if and only if they have the same elements.
+        }
+        \li{
+            \strong{Axiom of Pairing}:
+            For any two sets #{a} and #{b},
+            there exists a set #{\set{a,b}} whose elements are exactly #{a} and #{b}.
+        }
+        \li{
+            \strong{Axiom schema of Separation}:
+            Let #{P} is a property of sets.
+            #{P(u)} means #{u} satisfies the property #{P}.
+            then for any set #{X} exists #{Y = \set{u \in X | P(u)}}.
+        }
+        \li{
+            \strong{Axiom of Union}:
+            For any set #{X} (a family of sets), exists union set #{\bigcup X :\equiv \set{
+                u:\exists v\in X \text{ such that } u\in v
+            }}.
+        }
+        \li{
+            \strong{Axiom of Power Set}:
+            For any set #{X}, exists the power #{P(X) :\equiv \set{Y:Y\subseteq X}}.
+        }
+        \li{
+            \strong{Axiom of Infinity}:
+            There exists a set #{\omega} such that #{\emptyset\in\omega} and for any #{x\in\omega}, #{x\cup\set{x}\in\omega}.
+        }
+        \li{
+            \strong{Axiom of Regularity}:
+            For any non-empty set there is a minimal element with respect to the membership relation.
+        }
+        \li{
+            \strong{Axiom schema of Replacement}:
+            Let #{F} be a function where #{\dom f = X}, then for any set #{X} exists a set #{Y = \set{F(x):x\in X}}.
+            \p{
+                This function is not the normal function but some logical stuff.
+            }
+        }
+        \li{
+            \strong{Axiom of Choice}:
+            For any family of non-empty sets #{X}, there exists a function #{f:X\to\bigcup X} such that for any #{x\in X}, #{f(x)\in x}.
+        }
+    }
 }
