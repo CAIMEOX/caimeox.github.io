@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1568</anchor>  <taxon>Definition</taxon> <addr>def-0023</addr>  <route>def-0023.xml</route>   <title>Coproduct Type</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1760</anchor>  <taxon>Definition</taxon> <addr>def-0023</addr>  <route>def-0023.xml</route>   <title>Coproduct Type</title> </frontmatter> <mainmatter><p>
     Let <tex>A</tex> and <tex>B</tex> be types. The <strong>coproduct (disjoint sum)</strong> <tex>A+B</tex> is a typed defined by the following constructors:
     <ul><li><tex>\text {inl} :A \to  A+B</tex></li>
         <li><tex>\text {inr} :B \to  A+B</tex></li></ul>
@@ -28,7 +28,7 @@
             h( \text {inl} (x))&amp;: \equiv  f(x) \\ 
             h( \text {inr} (y))&amp;: \equiv  g(y)
          \end {align*}
-    </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1569</anchor>  <taxon>Type Theory</taxon> <addr>tt-0004</addr>  <route>tt-0004.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Inductive types</title> </frontmatter> <mainmatter><p>
+    </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1761</anchor>  <taxon>Type Theory</taxon> <addr>tt-0004</addr>  <route>tt-0004.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Inductive types</title> </frontmatter> <mainmatter><p>
     In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
@@ -51,7 +51,7 @@
         <li>
             The computation rules specify the behavior of the constructors.
         </li></ul>
-</block><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1570</anchor>  <taxon>Definition</taxon> <addr>def-0020</addr>  <route>def-0020.xml</route>   <title>Unit Type</title> </frontmatter> <mainmatter><p>
+</block><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1762</anchor>  <taxon>Definition</taxon> <addr>def-0020</addr>  <route>def-0020.xml</route>   <title>Unit Type</title> </frontmatter> <mainmatter><p>
         
         The <strong>unit type</strong> is the simplest inductive type.
         It has only one constructor, denoted by <tex>\star : \textbf {1}</tex>.
@@ -65,7 +65,7 @@
     A degenrate inductive type is the <strong>empty type</strong>.
     It has no constructor, and its induction principle is trivial.
     Empty type is connected to the <strong>exfalso quodlibet principle</strong> in logic.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1571</anchor>  <taxon>Definition</taxon> <addr>def-0021</addr>  <route>def-0021.xml</route>   <title>Empty Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1763</anchor>  <taxon>Definition</taxon> <addr>def-0021</addr>  <route>def-0021.xml</route>   <title>Empty Type</title> </frontmatter> <mainmatter><p>
     The <strong>empty type</strong> is a degenerate inductive type <tex>\emptyset</tex> satisfying 
     the following induction principle:
     <tex display="block">
@@ -79,7 +79,7 @@
 </p></mainmatter> </tree><p>
     With the empty type we can define the <strong>negation</strong> of a type
     and the <strong>proof of negation</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1572</anchor>  <taxon>Definition</taxon> <addr>def-0022</addr>  <route>def-0022.xml</route>   <title>Type Negation</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1764</anchor>  <taxon>Definition</taxon> <addr>def-0022</addr>  <route>def-0022.xml</route>   <title>Type Negation</title> </frontmatter> <mainmatter><p>
     The <strong>negation</strong> of type <tex>A</tex> is defined as
     <tex display="block">
          \neg  A : \equiv  A  \to   \emptyset 
@@ -105,7 +105,7 @@
 </block><p>
     The dependent version of sum type is called the <strong>dependent sum type (dependent coproduct)</strong> traditionally.
     Its terms are ordered pairs.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1573</anchor>  <taxon>Definition</taxon> <addr>def-0024</addr>  <route>def-0024.xml</route>   <title>Dependent Pair Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1765</anchor>  <taxon>Definition</taxon> <addr>def-0024</addr>  <route>def-0024.xml</route>   <title>Dependent Pair Type</title> </frontmatter> <mainmatter><p>
     The <strong>dependent pair type</strong> is a inductive type <tex>\Sigma _{(x:A)}B(x)</tex> (<tex>(x:A)  \times  B(x)</tex>)
 </p><block open="open"><headline>
     <strong>Formation Rule</strong>
@@ -178,7 +178,7 @@
             In the special case that <tex>D  \equiv   \text {Boolean}</tex>,
             this reduces to a <link href="def-0023.xml" type="local" addr="def-0023" title="Coproduct Type">coproduct type</link>.
         </li></ul>
-</block></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1574</anchor>  <taxon>Definition</taxon> <addr>def-0024</addr>  <route>def-0024.xml</route>   <title>Dependent Pair Type</title> </frontmatter> <mainmatter><p>
+</block></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1766</anchor>  <taxon>Definition</taxon> <addr>def-0024</addr>  <route>def-0024.xml</route>   <title>Dependent Pair Type</title> </frontmatter> <mainmatter><p>
     The <strong>dependent pair type</strong> is a inductive type <tex>\Sigma _{(x:A)}B(x)</tex> (<tex>(x:A)  \times  B(x)</tex>)
 </p><block open="open"><headline>
     <strong>Formation Rule</strong>

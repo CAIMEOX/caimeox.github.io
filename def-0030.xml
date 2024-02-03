@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4586</anchor>  <taxon>Definition</taxon> <addr>def-0030</addr>  <route>def-0030.xml</route>   <title>Schrodinger's equation</title> </frontmatter> <mainmatter><p>
+    The <strong>Schrodinger equation</strong> is a linear partial differential equation that describes the wave function of a quantum system.
+    It is given by (the general form):
+    <tex display="block">
+        i \hbar \frac { \partial }{ \partial  t} \Psi ( \vec {r},t) =  \hat {H} \Psi ( \vec {r},t)
+    </tex>
+    where:
+    <ul><li><tex>\Psi ( \vec {r},t)</tex> is the wave function of the quantum system.
+        </li>
+        <li><tex>\hat {H}</tex> is the <strong>Hamiltonian operator</strong>.
+        </li>
+        <li><tex>\hbar  = 1.054573 \times10 ^{-34} \text {Js} </tex> is the reduced <strong>Planck constant</strong>.
+        </li></ul></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4587</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr>  <route>phy-0002.xml</route> <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The wave function</title> </frontmatter> <mainmatter><p>
+    Consider a particle of mass <tex>m</tex> moving along <tex>x</tex>-axis
+    subject to force <tex>F(x, t)</tex>.
+    With Newton's second law, we have:
+    <tex display="block">
+        F = ma
+    </tex>
+    For <strong>conservative systems</strong>, the force
+    can be expressed as the derivative of a <strong>potential energy</strong>.
+    <tex display="block">
+        F = - \frac { \partial  V}{ \partial  x}
+    </tex>
+    Now the equation of motion becomes:
+    <tex display="block">
+        m  \frac {d^2x}{dt^2} = - \frac { \partial  V}{ \partial  x}
+    </tex>
+    With appropriate initial conditions we can determine the <tex>x(t)</tex>,
+    this is what we normally do in classic mechanics.
+</p><p>
+    For <strong>Quantum Mechanics</strong>, we have a different perspective.
+    We would like to look for the <strong>wave function</strong>, <tex>\psi (x, t)</tex>.
+    To determine it we need to solve the <strong>Schrodinger equation</strong>.
+    <tex display="block">
+        i \hbar \frac { \partial }{ \partial  t} \psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \psi (x,t)}{ \partial  x^2} + V(x,t) \psi (x,t)
+    </tex></p><p>
+    The role of Schrodinger equation is similar to the role of Newton's second law in classic mechanics.
+    Given proper initial conditions,
+    we can determine <tex>\psi (x, t)</tex> for all the future time.
+</p><p>
+    The wave function is quite odd, what information does it carry?
+    The wave function is <em>spread out</em> in space.
+    How can this be related to the <strong>state</strong> of a particle.
+</p><p><strong>Born's statistical interpretation</strong> of the wave function provides an answer.
+    For a fixed time <tex>t</tex>, the probability of finding the particle in the interval <tex>[a, b]</tex> is given by:
+    <tex display="block">
+        P(a, b) =  \int _a^b |{ \psi (x, t)}|^2 dx
+    </tex></p><p>
+    Here is where the quantum mechanics differs from classic mechanics and behaves weirdly.
+    The wave function is not a deterministic function, but a <em>statistical</em> function, which 
+    is an <strong>indeterministic</strong> interpretation.
+</p><p>
+    Suppose I do <strong>measure</strong> the position of the particle,
+    and find it at <tex>\vec {r}_0</tex>.
+    Then where it was before the measurement?
+    There are many interpretations of this question,
+    and I will explain three of them.
+</p><p><ul><li><strong>Realist interpretation</strong>: The particle has a definite position before the measurement, just at <tex>\vec {r}_0</tex> but we just don't know it.</li>
+        <li><strong>Orthodox interpretation</strong>: The particle doesn't have a <em>definite</em> position before the measurement, it is in a <strong>superposition</strong> of all possible positions.
+        This is also called the <strong>Copenhagen interpretation</strong>.</li>
+        <li><strong>Agnostic interpretation</strong>: The question is meaningless, refuse to answer.</li></ul></p><p>
+    Nowadays, the Copenhagen interpretation is the most widely accepted interpretation.
+    The particle does not have a definite position before the measurement.
+    The operation of measurement <strong>collapses</strong> the wave function to a definite position.
+</p><p>
+    Probability is the key concept in quantum mechanics.
+    Now I will introduce some terimnologies related to continuous probability.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4588</anchor>  <taxon>Definition</taxon> <addr>def-0031</addr>  <route>def-0031.xml</route>   <title>Probability Density</title> </frontmatter> <mainmatter><p>
+    A <strong>probability density</strong> is a function <tex>p(x)</tex> such that:
+    <ul><li><tex>p(x) \geq  0</tex> for all <tex>x</tex>.
+        </li>
+        <li><tex>\int _{- \infty }^{ \infty } p(x)dx = 1</tex>.
+        </li></ul>
+    With this we can define the <strong>probability function</strong> in an interval <tex>[a,b]</tex> as:
+    <tex display="block">
+        P(a, b) =  \int _a^b p(x)dx
+    </tex></p><block open="open"><headline>Expectation Value</headline> 
+    The <strong>expectation value</strong> of a function <tex>f(x)</tex> with respect to the probability density <tex>p(x)</tex> is defined:
+    <tex display="block">
+         \langle  f(x)  \rangle  =  \int _{- \infty }^{ \infty } f(x)p(x)dx
+    </tex>
+</block><block open="open"><headline>Variance</headline> 
+    The <strong>variance</strong> of a function <tex>f(x)</tex> with respect to the probability density <tex>p(x)</tex> is defined:
+    <tex display="block">
+         \sigma ^2 : \equiv   \langle  x^2  \rangle  -  \langle  x  \rangle ^2
+    </tex>
+</block></mainmatter> </tree><p>
+    Now go back to quantum mechanics.
+    We have seen that the squared wave function <tex>| \psi (x,t)|^2</tex> is a probability density.
+    So it satisfies
+    <tex display="block">
+         \int _{- \infty }^{ \infty } | \psi (x,t)|^2 dx = 1
+    </tex></p><p>
+    Solve the equations we will get a set of solutions.
+    We should pick a proper factor to make the wave function <strong>normalized</strong>.
+    But if I have normalized the wave function at time <tex>t_0</tex>,
+    will it stay normalized at all future time?
+    Fortunately the Schrodinger equation guarantees the normalization of 
+    the wave function.
+    
+  
+    <block open="open"><headline><strong>Proof</strong>.</headline> 
+        Differentiate the normalization condition with respect to time:
+        <tex display="block">
+             \frac {d}{dt} \int _{- \infty }^{ \infty } | \psi (x,t)|^2 dx = 
+             \int _{- \infty }^{ \infty }  \frac { \partial }{ \partial  t}| \psi (x,t)|^2 dx
+        </tex>
+        With the product rule:
+        <tex display="block">
+             \frac { \partial }{ \partial  t}| \psi (x,t)|^2 = 
+             \frac { \partial }{ \partial  t} \psi (x,t) \psi ^*(x,t) +  \psi (x,t) \frac { \partial }{ \partial  t} \psi ^*(x,t)
+        </tex>
+        where <tex>\psi ^*(x,t)</tex> is the <strong>complex conjugate</strong> of <tex>\psi (x,t)</tex>.
+        The Schrodinger equation gives
+        <tex display="block">
+             \frac { \partial \psi }{ \partial  t} =  \frac {i \hbar }{2m} \frac { \partial ^2 \psi }{ \partial  x^2} +  \frac {iV}{ \hbar } \psi 
+        </tex>
+        and also the complex conjugate
+        <tex display="block">
+             \frac { \partial \psi ^*}{ \partial  t} = - \frac {i \hbar }{2m} \frac { \partial ^2 \psi ^*}{ \partial  x^2} +  \frac {iV}{ \hbar } \psi ^*
+        </tex>
+        so
+        <tex display="block">
+             \begin {align*}
+                 \frac { \partial }{ \partial  t}| \psi (x,t)|^2 &amp;= 
+                 \frac {i \hbar }{2m} \left (  \frac { \partial ^2 \psi }{ \partial  x^2} \psi ^* -  \frac { \partial ^2 \psi ^*}{ \partial  x^2} \psi   \right ) \\ 
+                &amp;=  \frac {i \hbar }{2m} \frac { \partial }{ \partial  x} \left (  \frac { \partial \psi }{ \partial  x} \psi ^* -  \frac { \partial \psi ^*}{ \partial  x} \psi   \right )
+             \end {align*}
+        </tex>
+        Now the integral becomes:
+        <tex display="block">
+             \frac {d}{dt} \int _{- \infty }^{ \infty } | \psi (x,t)|^2 dx = 
+             \frac {i \hbar }{2m} \left (  \psi \frac { \partial \psi ^*}{ \partial  x} -  \psi ^* \frac { \partial \psi }{ \partial  x}  \right ) \Big |_{- \infty }^{ \infty }
+        </tex>
+        Because the <strong>normalization condition</strong>
+        <tex display="block">
+             \int _{- \infty }^{ \infty } | \psi (x,t)|^2 dx = 1
+        </tex>
+        implies that the wave function vanishes at infinity,
+        that is, converges to zero at infinity. Hence we have
+        <tex display="block">
+             \lim _{|x| \to \infty }| \psi (x,t)| = 0
+        </tex>
+        this indicates that the integral is zero.
+        <tex display="block">
+             \frac {d}{dt} \int _{- \infty }^{ \infty } | \psi (x,t)|^2 dx = 0
+        </tex>
+        Now we can conclude that the wave function stays normalized at all future time.
+    </block>
+  </p><p>
+    For a particle in state <tex>\psi</tex>, we have defined its <strong>expectation value</strong>:
+    <tex display="block">
+         \langle  x  \rangle  =  \int _{- \infty }^{ \infty } x| \psi (x,t)|^2 dx
+    </tex>
+    Can we give a meaning to it? Is it the <strong>average</strong> position of the particle? 
+    No, the first measurement of the position of the particle will give a definite position,
+    and the subsequent measurements will give the same result.
+</p><p>
+    Actually, the expectation value is the <em>average</em> of 
+    repeated measurements on an ensemble of identical prepared systems,
+    not the average of repeated measurements on a <em>single</em> system.
+</p><block open="open"><headline><strong>Construction.</strong></headline> 
+    As times goes on, the expectation values varies.
+    We naturally ask how fast it moves?
+    Use simple calculus we can get the answer.
+    <tex display="block">
+         \begin {align*}
+             \frac {d}{dt} \langle  x  \rangle  &amp;=  \int _{- \infty }^{ \infty } x \frac { \partial }{ \partial  t}| \psi (x,t)|^2 dx  \\ 
+            &amp;=  \frac {i \hbar }{2m} \int _{- \infty }^{ \infty } x \frac { \partial }{ \partial  x} ( \frac { \partial \psi }{ \partial  x} \psi ^* +  \psi \frac { \partial \psi ^*}{ \partial  x}) dx
+         \end {align*}
+    </tex>
+    Simplify using integration by parts, we get
+    <tex display="block">
+         \frac {d}{dt} \langle  x  \rangle  = - \frac {i \hbar }{2m} \int _{- \infty }^{ \infty }  \left (  \psi ^* \frac { \partial \psi }{ \partial  x} -  \psi \frac { \partial \psi ^*}{ \partial  x}  \right ) dx
+    </tex>
+    Note that the boundary term was eliminated because the wave function vanishes at infinity.
+    Perform integration by parts again on the second term
+    <tex display="block">
+         \langle  v  \rangle  : \equiv \frac {d}{dt} \langle  x  \rangle  = - \frac {i \hbar }{m} \int _{- \infty }^{ \infty }  \psi ^* \frac { \partial \psi }{ \partial  x} dx
+    </tex>
+    Note that we give a name to the integral, <tex>v</tex>, indicating the <strong>velocity</strong> of the expectation value.
+</block><p>
+    To work with <strong>momentum</strong>, we can define:
+    <tex display="block">
+         \langle  p  \rangle  = m  \langle  v  \rangle  = -i \hbar \int _{- \infty }^{ \infty }  \psi ^* \frac { \partial \psi }{ \partial  x} dx
+    </tex>
+    Rewrite as an <strong>operator</strong> form:
+    <tex display="block">
+         \langle  p  \rangle  =  \int _{- \infty }^{ \infty }  \psi ^* \left (  \frac { \hbar }{i} \frac { \partial }{ \partial  x}  \right ) \psi  dx
+    </tex>
+    Compare with 
+    <tex display="block">
+         \langle  x  \rangle  =  \int _{- \infty }^{ \infty }  \psi ^*(x) \psi  dx
+    </tex></p><p>
+    That's interesting, an operator that acts on the wave function and gives position and momentum.
+    We can generalize this to any function of position and momentum.
+    Just simply do substitution:
+    <tex display="block">
+         \langle  Q(x,p)  \rangle  = 
+         \int _{- \infty }^{ \infty }  \psi ^*(x)Q \left ( x, -i \hbar \frac { \partial }{ \partial  x}  \right ) \psi  dx
+    </tex>
+    Momentum and position are just special cases of this general formula.
+    We will give a firmer theoretical foundation to this equation later.
+    Now we just use it as an <em>axiom</em>.
+</p></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>

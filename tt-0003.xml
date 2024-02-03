@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>294</anchor>  <taxon>Type Theory</taxon> <addr>tt-0003</addr>  <route>tt-0003.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Natural Numbers <tex>\mathbb {N}</tex></title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>310</anchor>  <taxon>Type Theory</taxon> <addr>tt-0003</addr>  <route>tt-0003.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Natural Numbers <tex>\mathbb {N}</tex></title> </frontmatter> <mainmatter><p>
     In classical mathematics, the <strong>Peano axioms</strong> are a set of axioms for the natural numbers,
     an important object in mathematics.
 </p><p>
     In type theory, the type <tex>\mathbb {N}</tex> of natural number is an <link href="def-001X.xml" type="local" addr="def-001X" title="Inductive Type"><strong>inductive type</strong></link>.
     Just like in dependent function type, we need four inference rules to define the natural numbers.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>295</anchor>  <taxon>Definition</taxon> <addr>def-001Y</addr>  <route>def-001Y.xml</route>   <title>Natural Number</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>311</anchor>  <taxon>Definition</taxon> <addr>def-001Y</addr>  <route>def-001Y.xml</route>   <title>Natural Number</title> </frontmatter> <mainmatter><p>
     In type theory, <strong>natural number</strong> is defined using <strong>peano encoding</strong>.
     The type <tex>\mathbb {N}</tex> is formed by the formation rule:
     <tex display="block">
@@ -65,7 +65,7 @@
     </tex></p></mainmatter> </tree><p>
     Now let's use the type theoretical induction principle of <tex>\mathbb {N}</tex> to
     perform some basic construction over <tex>\mathbb {N}</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>296</anchor>  <taxon>Definition</taxon> <addr>def-001Z</addr>  <route>def-001Z.xml</route>   <title>Addition over <tex>\N</tex></title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>312</anchor>  <taxon>Definition</taxon> <addr>def-001Z</addr>  <route>def-001Z.xml</route>   <title>Addition over <tex>\N</tex></title> </frontmatter> <mainmatter><p>
     We define addition over <tex>\mathbb {N}</tex> using the type theoretical induction principle of <tex>\mathbb {N}</tex>.
     <tex display="block">
          \text {add}_ \mathbb {N}  :  \mathbb {N}   \to  ( \mathbb {N}   \to   \mathbb {N} )
@@ -189,7 +189,7 @@
          \end {align*}
     </tex>
     <tex>f</tex> is said to be defined by <strong>pattern matching</strong> on the variable <tex>n</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>297</anchor>  <taxon>Example</taxon> <addr>eg-0001</addr>  <route>eg-0001.xml</route>   <title>Fibonacci Function</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>313</anchor>  <taxon>Example</taxon> <addr>eg-0001</addr>  <route>eg-0001.xml</route>   <title>Fibonacci Function</title> </frontmatter> <mainmatter><p>
     The <strong>Fibonacci function</strong> is a well-known function in mathematics.
     It is defined by pattern matching on the variable <tex>n</tex> as follows:
     <tex display="block">
@@ -200,7 +200,7 @@
              \\ 
              \text {fib}(n+2) &amp; : \equiv   \text {fib}(n) +  \text {fib}(n+1)
          \end {align*}
-    </tex></p></mainmatter> </tree></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>298</anchor>   <addr>posts</addr>  <route>posts.xml</route>  <authors> <contributor>CAIMEO</contributor></authors> <title>Blog posts</title> </frontmatter> <mainmatter><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>299</anchor>  <taxon>Type Theory</taxon> <addr>tt-0002</addr>  <route>tt-0002.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title> </frontmatter> <mainmatter><p>This is a note on dependent type theory.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
+    </tex></p></mainmatter> </tree></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>314</anchor>   <addr>posts</addr>  <route>posts.xml</route>  <authors> <contributor>CAIMEO</contributor></authors> <title>Blog posts</title> </frontmatter> <mainmatter><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>315</anchor>  <taxon>Type Theory</taxon> <addr>tt-0002</addr>  <route>tt-0002.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title> </frontmatter> <mainmatter><p>This is a note on dependent type theory.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
     The set-theoretic foundation has two two layers:
     <ul><li>the deductive system of first-order logic</li>
         <li>the theory of a particular theory, such as ZFC</li></ul> 
@@ -240,7 +240,7 @@
         In type theory there is also a requirement for a judgment-level equality.
         This is called <strong>judgmental equality</strong>, meaning &quot;equal by definition&quot;.
     </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>300</anchor>  <taxon>Definition</taxon> <addr>def-0015</addr>  <route>def-0015.xml</route>   <title>Judgemental Equality</title> </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>316</anchor>  <taxon>Definition</taxon> <addr>def-0015</addr>  <route>def-0015.xml</route>   <title>Judgemental Equality</title> </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
     <tex display="block">
          \Gamma \vdash  a \equiv  a':A
     </tex>
@@ -262,7 +262,7 @@
     <ul><li>Rules allow us to conclude one judgment from a collection of other judgments.</li>
         <li>Axioms are judgments that are assumed to be true without proof.</li></ul></p><p>
     We start by introduction to Matrin Lof's dependent type theory. 
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>301</anchor>  <taxon>Definition</taxon> <addr>def-0017</addr>  <route>def-0017.xml</route>   <title>Dependent type theory: Judgments</title> </frontmatter> <mainmatter>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>317</anchor>  <taxon>Definition</taxon> <addr>def-0017</addr>  <route>def-0017.xml</route>   <title>Dependent type theory: Judgments</title> </frontmatter> <mainmatter>
     <p>
         There are four kinds of judgments in Martin Lof's dependent type theory:
     </p>
@@ -289,7 +289,7 @@
 
     To introduce types dependent on terms, 
     we need the notation of type families.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>302</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>318</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title> </frontmatter> <mainmatter><p>
     Consider a type <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>family</strong> of types over <tex>A</tex> in context <tex>\Gamma</tex>
     is a type <tex>B(x)</tex> in context <tex>\Gamma , x:A</tex>.
@@ -300,7 +300,7 @@
     Alternatively, we say that <tex>B(x)</tex> is a type <strong>indexed</strong> by <tex>x:A</tex> in context <tex>\Gamma</tex>.
 </p></mainmatter> </tree><p>
     Now we can define a term of a type family, that is, a section of a type family.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>303</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>319</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title> </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" addr="def-0018" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>section</strong> of <tex>B</tex> is a term <tex>b</tex> of type <tex>B(x)</tex> in context <tex>\Gamma ,x:A</tex>.
     <tex display="block">
@@ -316,7 +316,7 @@
         <li>Vairable conversion</li>
         <li>Substitution</li>
         <li>Weakening</li>
-        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>304</anchor>  <taxon>Definition</taxon> <addr>def-001A</addr>  <route>def-001A.xml</route>   <title>
+        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>320</anchor>  <taxon>Definition</taxon> <addr>def-001A</addr>  <route>def-001A.xml</route>   <title>
     Formation of contexts, types and terms
 </title> </frontmatter> <mainmatter><p>
     The following rules follow from the presuppotion
@@ -360,10 +360,10 @@
             }{
                  \Gamma \vdash  b:A
             }
-        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>305</anchor>  <taxon>Definition</taxon> <addr>def-001B</addr>  <route>def-001B.xml</route>   <title>
+        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>321</anchor>  <taxon>Definition</taxon> <addr>def-001B</addr>  <route>def-001B.xml</route>   <title>
     Judgmental equality is equivalence relation
 </title> </frontmatter> <mainmatter><p>
-    Judgmental equality on types and on elements is an <link href="def-000X.xml" type="local" addr="def-000X" title="Equivalence relation">equivalence relation</link> 
+    Judgmental equality on types and on elements is an <link href="def-000X.xml" type="local" addr="def-000X" title="Equivalence Relation">equivalence relation</link> 
     simply postulate that these relations are reflexive, symmetric, and transitive:
 </p><ul><li><tex display="block">
              \frac {
@@ -406,7 +406,7 @@
             }{
                  \Gamma \vdash  A \equiv  C \space \text {type} 
             }
-        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>306</anchor>  <taxon>Definition</taxon> <addr>def-001C</addr>  <route>def-001C.xml</route>   <title>Variable Conversion</title> </frontmatter> <mainmatter><p>
+        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>322</anchor>  <taxon>Definition</taxon> <addr>def-001C</addr>  <route>def-001C.xml</route>   <title>Variable Conversion</title> </frontmatter> <mainmatter><p>
     This rule postulates that we can
     convert the type of a variable to a judgmentally equal type.
     <tex display="block">
@@ -433,7 +433,7 @@
     and we also have a term <tex>a:A</tex>.
     We can simultaneously substitute <tex>a</tex> for all occurrences of <tex>x</tex> in <tex>f</tex>
     to obtain a new term <tex>f[x:=a]:B(a)</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>307</anchor>  <taxon>Definition</taxon> <addr>def-001D</addr>  <route>def-001D.xml</route>   <title>Substitution</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>323</anchor>  <taxon>Definition</taxon> <addr>def-001D</addr>  <route>def-001D.xml</route>   <title>Substitution</title> </frontmatter> <mainmatter><p>
     The substitution rule postulates that we can substitute a term for a variable.
     <tex display="block">
          \frac {
@@ -466,7 +466,7 @@
         }{
              \Gamma , \Delta [x:=a] \vdash  b[x:=a] \equiv  b[x:=a']:A'[x:=a]  \space \text {type} 
         }
-    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>308</anchor>  <taxon>Definition</taxon> <addr>def-001G</addr>  <route>def-001G.xml</route>   <title>Fiber and Value</title> </frontmatter> <mainmatter><p>
+    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>324</anchor>  <taxon>Definition</taxon> <addr>def-001G</addr>  <route>def-001G.xml</route>   <title>Fiber and Value</title> </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" addr="def-0018" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>,
     an a well-formed term <tex>a:A</tex>,
     then we say that <tex>B[x:=a]</tex> is the <strong>fiber</strong> of <tex>B</tex> at <tex>a</tex>, denoted <tex>B(a)</tex>.
@@ -478,7 +478,7 @@
     The process of expanding the context by a fresh variable of type <tex>A</tex> is called weakening (by <tex>A</tex>).
     Intuitively, weakening is the process of adding a new hypothesis to the context.
     And the hypothesis will weaken the conclusion.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>309</anchor>  <taxon>Definition</taxon> <addr>def-001E</addr>  <route>def-001E.xml</route>   <title>Weakening</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>325</anchor>  <taxon>Definition</taxon> <addr>def-001E</addr>  <route>def-001E.xml</route>   <title>Weakening</title> </frontmatter> <mainmatter><p>
     Weakening rule asserts that we can add a variable to the context.
     <tex display="block">
          \frac {
@@ -491,7 +491,7 @@
     </tex></p></mainmatter> </tree><p>
     Finally, the generic elemets rule ensures that
     the variables declared in a context.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>310</anchor>  <taxon>Definition</taxon> <addr>def-001F</addr>  <route>def-001F.xml</route>   <title>Generic Elements</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>326</anchor>  <taxon>Definition</taxon> <addr>def-001F</addr>  <route>def-001F.xml</route>   <title>Generic Elements</title> </frontmatter> <mainmatter><p>
     The rule for the generic element asserts that 
     any hypothetical element <tex>x:A</tex> in context <tex>\Gamma ,x:A</tex>
     is also an element of <tex>A</tex> in context <tex>\Gamma ,x:A</tex>.
@@ -525,7 +525,7 @@
         <li>Elimination rule</li>
         <li>Computation rule</li></ul>
     Besides these we also need the <strong>congruence rule</strong> for judgmental equality.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>311</anchor>  <taxon>Definition</taxon> <addr>def-001T</addr>  <route>def-001T.xml</route>   <title>Dependent Function Type</title> </frontmatter> <mainmatter><p><strong>Formation Rule</strong>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>327</anchor>  <taxon>Definition</taxon> <addr>def-001T</addr>  <route>def-001T.xml</route>   <title>Dependent Function Type</title> </frontmatter> <mainmatter><p><strong>Formation Rule</strong>
     For any type family <tex>B</tex> over <tex>A</tex> in context <tex>\Gamma</tex>:
     <tex display="block">
          \frac {
@@ -594,7 +594,7 @@
         } \eta 
     </tex></p></mainmatter> </tree><p>
     A degenrated case of dependent function type is the ordinary function type.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>312</anchor>  <taxon>Definition</taxon> <addr>def-001U</addr>  <route>def-001U.xml</route>   <title>Ordinary Function Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>328</anchor>  <taxon>Definition</taxon> <addr>def-001U</addr>  <route>def-001U.xml</route>   <title>Ordinary Function Type</title> </frontmatter> <mainmatter><p>
     A special case of <link href="def-001T.xml" type="local" addr="def-001T" title="Dependent Function Type"><tex>\Pi</tex>-type</link> is the <strong>ordinary function type</strong>.
     Using weakening rule we can obtain thee type <tex>A \to  B</tex> of ordinary function from <tex>A</tex> to <tex>B</tex>
     <tex display="block">
@@ -615,7 +615,7 @@
     The type <tex>A</tex> is called <strong>domain</strong> of <tex>f</tex>,
     and type <tex>B</tex> is called <strong>codomain</strong> of <tex>f</tex>.
     The notation <tex>:=</tex> here means to make a definition.
-</p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>313</anchor>  <taxon>Type Theory</taxon> <addr>tt-0004</addr>  <route>tt-0004.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Inductive types</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>329</anchor>  <taxon>Type Theory</taxon> <addr>tt-0004</addr>  <route>tt-0004.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Inductive types</title> </frontmatter> <mainmatter><p>
     In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
@@ -638,7 +638,7 @@
         <li>
             The computation rules specify the behavior of the constructors.
         </li></ul>
-</block><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>314</anchor>  <taxon>Definition</taxon> <addr>def-0020</addr>  <route>def-0020.xml</route>   <title>Unit Type</title> </frontmatter> <mainmatter><p>
+</block><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>330</anchor>  <taxon>Definition</taxon> <addr>def-0020</addr>  <route>def-0020.xml</route>   <title>Unit Type</title> </frontmatter> <mainmatter><p>
         
         The <strong>unit type</strong> is the simplest inductive type.
         It has only one constructor, denoted by <tex>\star : \textbf {1}</tex>.
@@ -652,7 +652,7 @@
     A degenrate inductive type is the <strong>empty type</strong>.
     It has no constructor, and its induction principle is trivial.
     Empty type is connected to the <strong>exfalso quodlibet principle</strong> in logic.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>315</anchor>  <taxon>Definition</taxon> <addr>def-0021</addr>  <route>def-0021.xml</route>   <title>Empty Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>331</anchor>  <taxon>Definition</taxon> <addr>def-0021</addr>  <route>def-0021.xml</route>   <title>Empty Type</title> </frontmatter> <mainmatter><p>
     The <strong>empty type</strong> is a degenerate inductive type <tex>\emptyset</tex> satisfying 
     the following induction principle:
     <tex display="block">
@@ -666,7 +666,7 @@
 </p></mainmatter> </tree><p>
     With the empty type we can define the <strong>negation</strong> of a type
     and the <strong>proof of negation</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>316</anchor>  <taxon>Definition</taxon> <addr>def-0022</addr>  <route>def-0022.xml</route>   <title>Type Negation</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>332</anchor>  <taxon>Definition</taxon> <addr>def-0022</addr>  <route>def-0022.xml</route>   <title>Type Negation</title> </frontmatter> <mainmatter><p>
     The <strong>negation</strong> of type <tex>A</tex> is defined as
     <tex display="block">
          \neg  A : \equiv  A  \to   \emptyset 
@@ -680,7 +680,7 @@
             To prove <tex>\neg  A</tex>, we need to show that <tex>A</tex> implies a contradiction.
             In other words, constructing a function of type <tex>A  \to   \emptyset</tex>.
         </p>
-    </block></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>317</anchor>  <taxon>Definition</taxon> <addr>def-0023</addr>  <route>def-0023.xml</route>   <title>Coproduct Type</title> </frontmatter> <mainmatter><p>
+    </block></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>333</anchor>  <taxon>Definition</taxon> <addr>def-0023</addr>  <route>def-0023.xml</route>   <title>Coproduct Type</title> </frontmatter> <mainmatter><p>
     Let <tex>A</tex> and <tex>B</tex> be types. The <strong>coproduct (disjoint sum)</strong> <tex>A+B</tex> is a typed defined by the following constructors:
     <ul><li><tex>\text {inl} :A \to  A+B</tex></li>
         <li><tex>\text {inr} :B \to  A+B</tex></li></ul>
@@ -720,7 +720,7 @@
 </block><p>
     The dependent version of sum type is called the <strong>dependent sum type (dependent coproduct)</strong> traditionally.
     Its terms are ordered pairs.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>318</anchor>  <taxon>Definition</taxon> <addr>def-0024</addr>  <route>def-0024.xml</route>   <title>Dependent Pair Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>334</anchor>  <taxon>Definition</taxon> <addr>def-0024</addr>  <route>def-0024.xml</route>   <title>Dependent Pair Type</title> </frontmatter> <mainmatter><p>
     The <strong>dependent pair type</strong> is a inductive type <tex>\Sigma _{(x:A)}B(x)</tex> (<tex>(x:A)  \times  B(x)</tex>)
 </p><block open="open"><headline>
     <strong>Formation Rule</strong>
@@ -793,7 +793,7 @@
             In the special case that <tex>D  \equiv   \text {Boolean}</tex>,
             this reduces to a <link href="def-0023.xml" type="local" addr="def-0023" title="Coproduct Type">coproduct type</link>.
         </li></ul>
-</block></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>319</anchor>  <taxon>Type Theory</taxon> <addr>tt-0005</addr>  <route>tt-0005.xml</route> <date><year>2024</year> <month>1</month> <day>31</day></date>  <title>Identity Types</title> </frontmatter> <mainmatter><p>
+</block></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>335</anchor>  <taxon>Type Theory</taxon> <addr>tt-0005</addr>  <route>tt-0005.xml</route> <date><year>2024</year> <month>1</month> <day>31</day></date>  <title>Identity Types</title> </frontmatter> <mainmatter><p>
     How can we think of <strong>equality</strong> in type theory?
     Mentioned before, given a type <tex>A</tex> and two its elements <tex>a,b:A</tex>
     we can define a new type <tex>a=_Ab</tex> which is called the <strong>identity type</strong>.
@@ -801,7 +801,7 @@
     And this witness is itself a type.
     We can then define their equality.
     This gives every type a <strong>groupoid structure</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>320</anchor>  <taxon>Definition</taxon> <addr>def-002N</addr>  <route>def-002N.xml</route>   <title>Identity Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>336</anchor>  <taxon>Definition</taxon> <addr>def-002N</addr>  <route>def-002N.xml</route>   <title>Identity Type</title> </frontmatter> <mainmatter><p>
     The <strong>identity type</strong> is an inductive type,
     generated by just a <strong>reflexivity</strong> <em>identification</em>
     that providing an equality of a term with itself.
@@ -837,7 +837,7 @@
          \frac {
              \Gamma \vdash  a:A, \quad   \Gamma ,x:A,p:a=_Ax \vdash  P(x,p) \space \text {type} 
         }{
-             \Gamma \vdash   \text {ind-eq}_{ a } (a, \text {refl} _a): (x:A) \to  (p:a=_Ax) \to  P(x,p)
+             \Gamma \vdash   \text {ind-eq}_{ a } (a, \text {refl} _a): P(a, \text {refl} _a)  \to  (x:A) \to  (p:a=_Ax) \to  P(x,p)
         } \text {eq-elim}
     </tex>
     <tex display="block">
@@ -868,7 +868,7 @@
 </block></mainmatter> </tree><p>
     The identifications can be <strong>concatenated</strong> and <strong>inverted</strong>,
     which implies the <em>transitivity</em> and <em>symmetry</em> of the identity type.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>321</anchor>  <taxon>Definition</taxon> <addr>def-002O</addr>  <route>def-002O.xml</route>   <title>Concatenation Operation</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>337</anchor>  <taxon>Definition</taxon> <addr>def-002O</addr>  <route>def-002O.xml</route>   <title>Concatenation Operation</title> </frontmatter> <mainmatter><p>
     Let <tex>A</tex> be a type.
     The <strong>Concatenation</strong> operation is defined:
     <tex display="block">
@@ -891,7 +891,8 @@
     <tex display="block">
          \text {concat} _{x,y,z}(p,q) : \equiv  f(x,y,p,z,q)
     </tex>
-</block></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>322</anchor>  <taxon>Definition</taxon> <addr>def-002P</addr>  <route>def-002P.xml</route>   <title>Inverse Operation</title> </frontmatter> <mainmatter><p>
+    Or simply we denote <tex>\text {concat} (p,q)</tex> as <tex>p  \cdot  q</tex>
+</block></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>338</anchor>  <taxon>Definition</taxon> <addr>def-002P</addr>  <route>def-002P.xml</route>   <title>Inverse Operation</title> </frontmatter> <mainmatter><p>
     Let <tex>A</tex> be a type. The <strong>inverse oepration</strong> is defined:
     <tex display="block">
          \text {inv} : (x:A) \to  (y:A) \to  (x=_Ay) \to  (y=_Ax)
@@ -903,7 +904,62 @@
          \text {inv} (x,x, \text {refl} _x) : (x=_Ax)
     </tex>
     for any <tex>x:A</tex>. And trivially we have <tex>\text {inv} (x,x, \text {refl} _x) \equiv \text {refl} _x</tex>.
-</block></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>323</anchor>  <taxon>String Theory</taxon> <addr>phy-0001</addr>  <route>phy-0001.xml</route> <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and extra dimensions</title> </frontmatter> <mainmatter><p>
+</block></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>339</anchor>  <taxon>Definition</taxon> <addr>def-002W</addr>  <route>def-002W.xml</route>   <title>Associator</title> </frontmatter> <mainmatter><p>
+    Let <tex>A</tex> be a type.
+    These are 3 consecutive identifications
+    <tex display="block">
+        p:x=_Ay,q:y=_Az, r:z=_Aw
+    </tex>
+    we define the <strong>associator</strong>:
+    <tex display="block">
+         \text {assoc} : (p,q,r): (p \cdot  q) \cdot  r = p \cdot  (q \cdot  r)
+    </tex></p><block open="open"><headline>
+    <strong>Construction</strong>
+</headline> 
+    By definition it suffices to show that
+    <tex display="block">
+         \Pi _{(z:A)} \Pi _{(q:x=_Az)}
+         \Pi _{(w:A)} \Pi _{(r:z=_Aw)}
+        ( \text {refl} _x \cdot  q) \cdot  r =  \text {refl} _x \cdot  (q \cdot  r)
+    </tex>
+    Let <tex>q:x=_Az</tex> and <tex>r:z=_Aw</tex>. By computation rule of identity types
+    <tex display="block">
+         \text {refl} _x \cdot  q  \equiv  q
+    </tex>
+    Then we can conclude that
+    <tex display="block">
+        ( \text {refl} _x \cdot  q) \cdot  r  \equiv  q \cdot  r
+    </tex>
+    similarly <tex>\text {refl} _x \cdot  (q \cdot  r)  \equiv  q \cdot  r</tex>.
+    Hence we have the left and right side
+    <tex display="block">
+        ( \text {refl} _x \cdot  q) \cdot  r =  \text {refl} _x \cdot  (q \cdot  r)
+    </tex>
+    are judgementally equal, 
+    so we can simply define the associator as
+    <tex display="block">
+         \text {assoc} ( \text {refl} _x,q,r) : \equiv   \text {refl} _{q \cdot  r}
+    </tex>
+</block></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>340</anchor>  <taxon>Definition</taxon> <addr>def-002X</addr>  <route>def-002X.xml</route>   <title>Unit Law Operations</title> </frontmatter> <mainmatter><p>
+    Let <tex>A</tex> be a type.
+    We defined the <strong>unit law</strong> operations for <tex>x=_Ay</tex>:
+    <tex display="block">
+         \begin {align*}
+             \text {left-unit} &amp; : (x=_Ay) \to  ( \text {refl} _x \cdot  x = x)  \\ 
+             \text {right-unit} &amp; : (x=_Ay) \to  (x \cdot \text {refl} _y = x)
+         \end {align*}
+    </tex></p><block open="open"><headline>
+    <strong>Construction</strong>
+</headline> 
+    By elimination it suffices to construct:
+    <tex display="block">
+         \begin {align*}
+             \text {left-unit}( \text {refl} _x) &amp;:  \text {refl} _x  \cdot   \text {refl} _x =  \text {refl} _x  \\ 
+             \text {right-unit}( \text {refl} _x) &amp;:  \text {refl} _x  \cdot   \text {refl} _x =  \text {refl} _x
+         \end {align*}
+    </tex>
+    In both cases we need only to construct <tex>\text {refl} _{ \text {refl} _x}</tex>.
+</block></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>341</anchor>  <taxon>String Theory</taxon> <addr>phy-0001</addr>  <route>phy-0001.xml</route> <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and extra dimensions</title> </frontmatter> <mainmatter><p>
     Speical relativity is based on the exprimental fact that the speed of light is the same for all inertial observers.
     In comparing the coordinates of events, two inertial observers (<strong>Lorentz observers</strong>) find that the
     appropriate coordinate transformations mix space and time.   
@@ -930,7 +986,7 @@
          \Delta  s ^2 =  \Delta  s'^2
     </tex>
     The minus sign on the left of <tex>\Delta  s^2</tex> implies that <tex>\Delta  s^2 &gt;0</tex> for events that are <strong>timelike separated</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>324</anchor>  <taxon>Definition</taxon> <addr>def-001H</addr>  <route>def-001H.xml</route>   <title>Timelike Separated Events</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>342</anchor>  <taxon>Definition</taxon> <addr>def-001H</addr>  <route>def-001H.xml</route>   <title>Timelike Separated Events</title> </frontmatter> <mainmatter><p>
     An event <tex>S</tex> is said to be timelike separated if
     <tex display="block">
         ( \Delta  x^0)^2 &gt; ( \Delta  x^1)^2 + ( \Delta  x^2)^2 + ( \Delta  x^3)^2
@@ -940,10 +996,10 @@
     The history of a particle is represented in spacetime as a curve called a <strong>world-line</strong>.
     Any two events on the world-line are timelike separated, because no particle can 
     move faster than light.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>325</anchor>  <taxon>Definition</taxon> <addr>def-001I</addr>  <route>def-001I.xml</route>   <title>Lightlike Separated Events</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>343</anchor>  <taxon>Definition</taxon> <addr>def-001I</addr>  <route>def-001I.xml</route>   <title>Lightlike Separated Events</title> </frontmatter> <mainmatter><p>
     Events connected by the world-line of a <strong>photon</strong> are said to be <strong>lightlike separated</strong>.
     For which <tex>\Delta  s^2 = 0</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>326</anchor>  <taxon>Definition</taxon> <addr>def-001J</addr>  <route>def-001J.xml</route>   <title>Spacelike Separated Events</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>344</anchor>  <taxon>Definition</taxon> <addr>def-001J</addr>  <route>def-001J.xml</route>   <title>Spacelike Separated Events</title> </frontmatter> <mainmatter><p>
     Two events for which <tex>\Delta  s^2 &lt; 0</tex> are said to be <strong>spacelike separated</strong>.
     Events that are simultaneous in a Lorentz frame but in different position are spacelike separated.
 </p></mainmatter> </tree><p>
@@ -990,7 +1046,7 @@
         -ds^2=  \eta _{ \mu \nu } dx^ \mu  dx^ \nu 
     </tex>
     and the metric is defined by
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>327</anchor>  <taxon>Definition</taxon> <addr>def-001L</addr>  <route>def-001L.xml</route>   <title>Minkowski Metric</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>345</anchor>  <taxon>Definition</taxon> <addr>def-001L</addr>  <route>def-001L.xml</route>   <title>Minkowski Metric</title> </frontmatter> <mainmatter><p>
     The <strong>Minkowski Metric</strong>, aka <strong>Minkowski Tensor</strong>, is a tensor <tex>\eta _{ \mu \nu }</tex> whose elements are defined by the matrix
     <tex display="block">
          \eta _{ \mu \nu } =  \begin {pmatrix}
@@ -1047,7 +1103,7 @@
          \eta ^{ \mu \rho }  \eta _{ \rho \nu } =  \delta ^ \mu _ \nu 
     </tex>
     where <tex>\delta ^ \mu _ \nu</tex> is the <link href="def-001P.xml" type="local" addr="def-001P" title="Kronecker Delta">Kronecker Delta</link>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>328</anchor>  <taxon>Trick</taxon> <addr>thm-0004</addr>  <route>thm-0004.xml</route>   <title>Raise Indices</title> </frontmatter> <mainmatter><p><tex display="block">
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>346</anchor>  <taxon>Trick</taxon> <addr>thm-0004</addr>  <route>thm-0004.xml</route>   <title>Raise Indices</title> </frontmatter> <mainmatter><p><tex display="block">
          \eta ^{ \rho \mu }b_ \mu 
         =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )
         =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu 
@@ -1058,7 +1114,7 @@
 </p></mainmatter> </tree><p><strong>Lorentz transformations</strong> are the relations between coordinates in two different
     inertial frames.
     
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>329</anchor>  <taxon>Definition</taxon> <addr>def-001Q</addr>  <route>def-001Q.xml</route>   <title>Lorentz Transformations</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>347</anchor>  <taxon>Definition</taxon> <addr>def-001Q</addr>  <route>def-001Q.xml</route>   <title>Lorentz Transformations</title> </frontmatter> <mainmatter><p>
     Consider a frame <tex>S</tex> and <tex>S'</tex> which is moving along the <tex>+x</tex> direction of the <tex>S</tex> frame
     with a velocity <tex>v</tex>.
     Assume that the origins of the two frames coincide at <tex>t=t'=0</tex> and coordinate axes are parallel.
@@ -1107,7 +1163,7 @@
 </p></mainmatter> </tree><p>
     We now introduce a coordinate system that will be extremely useful in string theory,
     the <strong>light-cone coordinates</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>330</anchor>  <taxon>Definition</taxon> <addr>def-001R</addr>  <route>def-001R.xml</route>   <title>Light-cone Coordinates</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>348</anchor>  <taxon>Definition</taxon> <addr>def-001R</addr>  <route>def-001R.xml</route>   <title>Light-cone Coordinates</title> </frontmatter> <mainmatter><p>
     The <strong>light-cone coordinates</strong> can be defined as
     two independent <link href="def-000L.xml" type="local" addr="def-000L" title="Linear Combination">linear combinations</link> of the time 
     and a chosen spatial coordinate (conventionally <tex>x^1</tex>):
@@ -1236,7 +1292,7 @@
     Different Lorentz observers will measure different time intervals between the two events.
     But imagine a clock that moves along the world-line.
     The time measured by the clock is called the <strong>proper time</strong> between the two events.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>331</anchor>  <taxon>Definition</taxon> <addr>def-001S</addr>  <route>def-001S.xml</route>   <title>Proper Time</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>349</anchor>  <taxon>Definition</taxon> <addr>def-001S</addr>  <route>def-001S.xml</route>   <title>Proper Time</title> </frontmatter> <mainmatter><p>
     The <strong>proper time</strong> along a timelike world-line is defined as the
     time as measured by a clock following that line. 
 </p></mainmatter> </tree><p>
@@ -1293,7 +1349,7 @@
     </tex>
     Hence <tex>p^0 \pm  p^1 &gt; 0</tex> and <tex>p^ \pm &gt;0</tex>, which both are possible candidates for energy.
     We finally choose <tex>p^-</tex> as the component, we explain this later. 
-</p></mainmatter> </tree></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>332</anchor>  <taxon>Definition</taxon> <addr>def-001X</addr>  <route>def-001X.xml</route>   <title>Inductive Type</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>350</anchor>  <taxon>Definition</taxon> <addr>def-001X</addr>  <route>def-001X.xml</route>   <title>Inductive Type</title> </frontmatter> <mainmatter><p>
     In type theory, a system has <strong>inductive type</strong> if it can create new types from
     constants and functions that create terms of that type.
     Inductive types usually come with a function to prove properties about them.

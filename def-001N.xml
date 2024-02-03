@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4405</anchor>  <taxon>Definition</taxon> <addr>def-001N</addr>  <route>def-001N.xml</route>   <title>Symmetric Matrix</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4939</anchor>  <taxon>Definition</taxon> <addr>def-001N</addr>  <route>def-001N.xml</route>   <title>Symmetric Matrix</title> </frontmatter> <mainmatter><p>
     A square matrix <tex>A</tex> is symmetric if it is equal to its transpose:
     <tex display="block">
         A = A^T
     </tex>
-    This also implies <tex>A^{-1} A^T = I</tex></p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4406</anchor>  <taxon>Definition</taxon> <addr>def-001M</addr>  <route>def-001M.xml</route>   <title>Symmetric and Antisymmetric Part</title> </frontmatter> <mainmatter><p>
+    This also implies <tex>A^{-1} A^T = I</tex></p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4940</anchor>  <taxon>Definition</taxon> <addr>def-001M</addr>  <route>def-001M.xml</route>   <title>Symmetric and Antisymmetric Part</title> </frontmatter> <mainmatter><p>
     Any square matrix <tex>A</tex> can be written as the sum of a symmetric and antisymmetric matrix:
     <tex display="block">
         A = A_S + A_A
