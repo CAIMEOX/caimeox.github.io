@@ -1,37 +1,51 @@
-\title{This website}
+\title{Rabbit Hole}
 \taxon{About}
 \p{
     ##{
         i\hbar \frac{\partial}{\partial t} \Psi(x, t) = \hat{H} \Psi(x, t)
     }
 }
-\p{
-    The choice of the name "\strong{Rabbit Hole}" carries a metaphorical significance inspired by Lewis Carroll's \em{Alice's Adventures 
-    in Wonderland}, meaning to delve into a topic or pursue a line of thought that leads to unexpected or complex places.
+\block{
+    \strong{What is this website about?}
+}{
+    \p{
+        This website is a collection of my notes and posts on various topics in 
+        \strong{computer science, mathematics, physics, and programming language theory}.
+        It is a place where I can organize my thoughts and share my understanding of these topics.
+        I hope it can be helpful to others who are interested in these subjects.
+    }
+}
+\block{
+    \strong{What is the meaning of "Rabbit Hole"?}
+}{
+    The name of this website "\strong{Rabbit Hole}" carries a metaphorical significance inspired by Lewis Carroll's 
+    \em{Alice's Adventures in Wonderland}, 
+    meaning to delve into a topic or pursue a line of thought that leads to unexpected or complex places.
     It can refer to getting deeply involved in researching a subject, exploring a particular interest, or going through 
     a series of trees in the forest that leads to a chain of related topics.
 }
-
-\scope{
+\block{
     \strong{How to navigate?}
+}{    \p{
+        This website is a “\em{forest}” created using the \strong{Forester} tool.
+        To navigate my forest, press \code{Ctrl-K} to search for specific topics or definitions.
+        Or click the nodes to expand the trees of various subjects.
+    }
     \p{
-    This website is a “\em{forest}” created using the \strong{Forester} tool.
-    To navigate my forest, press \code{Ctrl-K}.
-    Here are some standards of this blog.}
-    \ul{
-        \li{All posts starts with a prefix and appends with a hex number}
-        \li{Available post prefixes:
-            \ul{
-                \li{\code{cs} Computer Science}
-                \li{\code{math} Mathematics}
-                \li{\code{phy} Physics}
-                \li{\code{plt} Programming language theory}
-                \li{\code{tt} Type Theory}
-                \li{\code{def} Definitions (For any topic above)}
-                \li{\code{thm} Theorems and propositions (For any topic above)}
-                \li{\code{eg} Examples}
-                \li{\code{proj} My Project}
-            }
-        }
+        A tree in Forester is associated to an unique address of the form \code{xxx-NNNN},
+        where \code{xxx} is the \strong{namespace} and \code{NNNN} is the \strong{ID} (A base-36 number of 4 digits) of the tree.
+        The namespace implies the category of the tree node, for instance,
+        \code{tt} for Type Theory and \code{math} for Mathematics.
+        % \ul{
+        %         \li{\code{cs} Computer Science}
+        %         \li{\code{math} Mathematics}
+        %         \li{\code{phy} Physics}
+        %         \li{\code{plt} Programming language theory}
+        %         \li{\code{tt} Type Theory}
+        %         \li{\code{def} Definitions (For any topic above)}
+        %         \li{\code{thm} Theorems and propositions (For any topic above)}
+        %         \li{\code{eg} Examples}
+        %         \li{\code{proj} My Project}
+        % }
     }
 }

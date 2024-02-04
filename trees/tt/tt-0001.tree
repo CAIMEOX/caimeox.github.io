@@ -2,6 +2,9 @@
 \date{2024-01-26}
 \taxon{Type Theory}
 \p{
+    Refer to [Type Theory and Formal Proof](ttafp-2014).
+}
+\p{
 In dealing with functions there are two \strong{construction principles} and one \strong{evalutaion rule}
 \ul{
 \li{Construction Principles}

@@ -1,7 +1,11 @@
-\title{The wave function}
+\title{The Wave Function}
 \taxon{Quantum Mechanics}
 \date{2024-02-03}
 \import{macros}
+\p{
+    This post introduces the concept of the wave function in quantum mechanics.
+    Refer to [Introduction to Quantum Mechanics](quantum-2018).
+}
 \p{
     Consider a particle of mass #{m} moving along #{x}-axis
     subject to force #{F(x, t)}.
@@ -23,17 +27,17 @@
 }
 \p{
     For \strong{Quantum Mechanics}, we have a different perspective.
-    We would like to look for the \strong{wave function}, #{\psi(x, t)}.
+    We would like to look for the \strong{wave function}, #{\Psi(x, t)}.
     To determine it we need to solve the \strong{Schrodinger equation}.
     ##{
-        i\hbar\frac{\partial}{\partial t}\psi(x,t) = -\frac{\hbar^2}{2m}\frac{\partial^2\psi(x,t)}{\partial x^2} + V(x,t)\psi(x,t)
+        i\hbar\frac{\partial}{\partial t}\Psi(x,t) = -\frac{\hbar^2}{2m}\frac{\partial^2\Psi(x,t)}{\partial x^2} + V(x,t)\Psi(x,t)
     }
 }
 \transclude{def-0030}
 \p{
     The role of Schrodinger equation is similar to the role of Newton's second law in classic mechanics.
     Given proper initial conditions,
-    we can determine #{\psi(x, t)} for all the future time.
+    we can determine #{\Psi(x, t)} for all the future time.
 }
 \p{
     The wave function is quite odd, what information does it carry?
@@ -44,7 +48,7 @@
     \strong{Born's statistical interpretation} of the wave function provides an answer.
     For a fixed time #{t}, the probability of finding the particle in the interval #{[a, b]} is given by:
     ##{
-        P(a, b) = \int_a^b |{\psi(x, t)}|^2 dx
+        P(a, b) = \int_a^b |{\Psi(x, t)}|^2 dx
     }
 }
 \p{
@@ -79,10 +83,10 @@
 \transclude{def-0031}
 \p{
     Now go back to quantum mechanics.
-    We have seen that the squared wave function #{|\psi(x,t)|^2} is a probability density.
+    We have seen that the squared wave function #{|\Psi(x,t)|^2} is a probability density.
     So it satisfies
     ##{
-        \int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 1
+        \int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 1
     }
 }
 \p{
@@ -95,56 +99,56 @@
     \proof{
         Differentiate the normalization condition with respect to time:
         ##{
-            \frac{d}{dt}\int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 
-            \int_{-\infty}^{\infty} \frac{\partial}{\partial t}|\psi(x,t)|^2 dx
+            \frac{d}{dt}\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 
+            \int_{-\infty}^{\infty} \frac{\partial}{\partial t}|\Psi(x,t)|^2 dx
         }
         With the product rule:
         ##{
-            \frac{\partial}{\partial t}|\psi(x,t)|^2 = 
-            \frac{\partial}{\partial t}\psi(x,t)\psi^*(x,t) + \psi(x,t)\frac{\partial}{\partial t}\psi^*(x,t)
+            \frac{\partial}{\partial t}|\Psi(x,t)|^2 = 
+            \frac{\partial}{\partial t}\Psi(x,t)\Psi^*(x,t) + \Psi(x,t)\frac{\partial}{\partial t}\Psi^*(x,t)
         }
-        where #{\psi^*(x,t)} is the \strong{complex conjugate} of #{\psi(x,t)}.
+        where #{\Psi^*(x,t)} is the \strong{complex conjugate} of #{\Psi(x,t)}.
         The Schrodinger equation gives
         ##{
-            \frac{\partial\psi}{\partial t} = \frac{i\hbar}{2m}\frac{\partial^2\psi}{\partial x^2} + \frac{iV}{\hbar}\psi
+            \frac{\partial\Psi}{\partial t} = \frac{i\hbar}{2m}\frac{\partial^2\Psi}{\partial x^2} + \frac{iV}{\hbar}\Psi
         }
         and also the complex conjugate
         ##{
-            \frac{\partial\psi^*}{\partial t} = -\frac{i\hbar}{2m}\frac{\partial^2\psi^*}{\partial x^2} + \frac{iV}{\hbar}\psi^*
+            \frac{\partial\Psi^*}{\partial t} = -\frac{i\hbar}{2m}\frac{\partial^2\Psi^*}{\partial x^2} + \frac{iV}{\hbar}\Psi^*
         }
         so
         ##{
             \begin{align*}
-                \frac{\partial}{\partial t}|\psi(x,t)|^2 &= 
-                \frac{i\hbar}{2m}\left( \frac{\partial^2\psi}{\partial x^2}\psi^* - \frac{\partial^2\psi^*}{\partial x^2}\psi \right)\\
-                &= \frac{i\hbar}{2m}\frac{\partial}{\partial x}\left( \frac{\partial\psi}{\partial x}\psi^* - \frac{\partial\psi^*}{\partial x}\psi \right)
+                \frac{\partial}{\partial t}|\Psi(x,t)|^2 &= 
+                \frac{i\hbar}{2m}\left( \frac{\partial^2\Psi}{\partial x^2}\Psi^* - \frac{\partial^2\Psi^*}{\partial x^2}\Psi \right)\\
+                &= \frac{i\hbar}{2m}\frac{\partial}{\partial x}\left( \frac{\partial\Psi}{\partial x}\Psi^* - \frac{\partial\Psi^*}{\partial x}\Psi \right)
             \end{align*}
         }
         Now the integral becomes:
         ##{
-            \frac{d}{dt}\int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 
-            \frac{i\hbar}{2m}\left( \psi\frac{\partial\psi^*}{\partial x} - \psi^*\frac{\partial\psi}{\partial x} \right)\Big|_{-\infty}^{\infty}
+            \frac{d}{dt}\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 
+            \frac{i\hbar}{2m}\left( \Psi\frac{\partial\Psi^*}{\partial x} - \Psi^*\frac{\partial\Psi}{\partial x} \right)\Big|_{-\infty}^{\infty}
         }
         Because the \strong{normalization condition}
         ##{
-            \int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 1
+            \int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 1
         }
         implies that the wave function vanishes at infinity,
         that is, converges to zero at infinity. Hence we have
         ##{
-            \lim_{|x|\to\infty}|\psi(x,t)| = 0
+            \lim_{|x|\to\infty}|\Psi(x,t)| = 0
         }
         this indicates that the integral is zero.
         ##{
-            \frac{d}{dt}\int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 0
+            \frac{d}{dt}\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 0
         }
         Now we can conclude that the wave function stays normalized at all future time.
     }
 }
 \p{
-    For a particle in state #{\psi}, we have defined its \strong{expectation value}:
+    For a particle in state #{\Psi}, we have defined its \strong{expectation value}:
     ##{
-        \langle x \rangle = \int_{-\infty}^{\infty} x|\psi(x,t)|^2 dx
+        \langle x \rangle = \int_{-\infty}^{\infty} x|\Psi(x,t)|^2 dx
     }
     Can we give a meaning to it? Is it the \strong{average} position of the particle? 
     No, the first measurement of the position of the particle will give a definite position,
@@ -161,33 +165,33 @@
     Use simple calculus we can get the answer.
     ##{
         \begin{align*}
-            \frac{d}{dt}\langle x \rangle &= \int_{-\infty}^{\infty} x\frac{\partial}{\partial t}|\psi(x,t)|^2 dx \\
-            &= \frac{i\hbar}{2m}\int_{-\infty}^{\infty} x\frac{\partial}{\partial x} (\frac{\partial\psi}{\partial x}\psi^* + \psi\frac{\partial\psi^*}{\partial x}) dx
+            \frac{d}{dt}\langle x \rangle &= \int_{-\infty}^{\infty} x\frac{\partial}{\partial t}|\Psi(x,t)|^2 dx \\
+            &= \frac{i\hbar}{2m}\int_{-\infty}^{\infty} x\frac{\partial}{\partial x} (\frac{\partial\Psi}{\partial x}\Psi^* + \Psi\frac{\partial\Psi^*}{\partial x}) dx
         \end{align*}
     }
     Simplify using integration by parts, we get
     ##{
-        \frac{d}{dt}\langle x \rangle = -\frac{i\hbar}{2m}\int_{-\infty}^{\infty} \left( \psi^*\frac{\partial\psi}{\partial x} - \psi\frac{\partial\psi^*}{\partial x} \right) dx
+        \frac{d}{dt}\langle x \rangle = -\frac{i\hbar}{2m}\int_{-\infty}^{\infty} \left( \Psi^*\frac{\partial\Psi}{\partial x} - \Psi\frac{\partial\Psi^*}{\partial x} \right) dx
     }
     Note that the boundary term was eliminated because the wave function vanishes at infinity.
     Perform integration by parts again on the second term
     ##{
-        \langle v \rangle :\equiv\frac{d}{dt}\langle x \rangle = -\frac{i\hbar}{m}\int_{-\infty}^{\infty} \psi^*\frac{\partial\psi}{\partial x} dx
+        \langle v \rangle :\equiv\frac{d}{dt}\langle x \rangle = -\frac{i\hbar}{m}\int_{-\infty}^{\infty} \Psi^*\frac{\partial\Psi}{\partial x} dx
     }
     Note that we give a name to the integral, #{v}, indicating the \strong{velocity} of the expectation value.
 }
 \p{
     To work with \strong{momentum}, we can define:
     ##{
-        \langle p \rangle = m \langle v \rangle = -i\hbar\int_{-\infty}^{\infty} \psi^*\frac{\partial\psi}{\partial x} dx
+        \langle p \rangle = m \langle v \rangle = -i\hbar\int_{-\infty}^{\infty} \Psi^*\frac{\partial\Psi}{\partial x} dx
     }
     Rewrite as an \strong{operator} form:
     ##{
-        \langle p \rangle = \int_{-\infty}^{\infty} \psi^*\left( \frac{\hbar}{i}\frac{\partial}{\partial x} \right)\psi dx
+        \langle p \rangle = \int_{-\infty}^{\infty} \Psi^*\left( \frac{\hbar}{i}\frac{\partial}{\partial x} \right)\Psi dx
     }
     Compare with 
     ##{
-        \langle x \rangle = \int_{-\infty}^{\infty} \psi^*(x)\psi dx
+        \langle x \rangle = \int_{-\infty}^{\infty} \Psi^*(x)\Psi dx
     }
 }
 \p{
@@ -196,7 +200,7 @@
     Just simply do substitution:
     ##{
         \langle Q(x,p) \rangle = 
-        \int_{-\infty}^{\infty} \psi^*(x)Q\left( x, -i\hbar\frac{\partial}{\partial x} \right)\psi dx
+        \int_{-\infty}^{\infty} \Psi^*(x)Q\left( x, -i\hbar\frac{\partial}{\partial x} \right)\Psi dx
     }
     Momentum and position are just special cases of this general formula.
     We will give a firmer theoretical foundation to this equation later.
@@ -209,7 +213,7 @@
     For this moment we only concerned with the qualitative argument.
 }
 \p{
-    The wavelength of a wave function #{\psi} is related to the momentum of the particle.
+    The wavelength of a wave function #{\Psi} is related to the momentum of the particle.
     This result from the \strong{de Broglie formula}.
     ##{
         p = \frac{h}{\lambda} = \frac{2\pi\hbar}{\lambda}

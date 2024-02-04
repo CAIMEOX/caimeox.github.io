@@ -1,12 +1,10 @@
 \title{CAIMEO}
 \taxon{person}
+\meta{position}{Student}
+\meta{external}{https://github.com/CAIMEOX}
 \p{
     A student interested in math, physics and computer science.
 }
-
-\meta{position}{Student}
-\meta{external}{https://github.com/CAIMEOX} % optional
-
 \p{
     \ul{
         \li{Learning Programming Language Theory and Type Theory}

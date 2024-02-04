@@ -1,4 +1,4 @@
-\title{Inductive types}
+\title{Inductive Types}
 \date{2024-01-30}
 \taxon{Type Theory}
 \import{macros}
@@ -6,6 +6,7 @@
     In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
+    Refer to [Egbert Rijke's Book](hott-2022).
 }
 \p{
     This section is much more informal than the previous one.

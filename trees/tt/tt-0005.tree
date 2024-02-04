@@ -2,6 +2,10 @@
 \taxon{Type Theory}
 \date{2024-01-31}
 \p{
+    This post discuss the identity types in type theory.
+    Refer to [Introduction to Homotopy Type Theory](hott-2022).
+}
+\p{
     How can we think of \strong{equality} in type theory?
     Mentioned before, given a type #{A} and two its elements #{a,b:A}
     we can define a new type #{a=_Ab} which is called the \strong{identity type}.

@@ -3,6 +3,10 @@
 \date{2024-01-31}
 \import{macros}
 \p{
+    This note introduces the concept of linear maps.
+    Refer to [Linear Algebra Done Right](linear-algebra-2015).
+}
+\p{
     Now we arrive at the main topic of this chapter: linear maps. 
     In classic mathematics, to understand the properties of the structure or space,
     we often study the maps between them.

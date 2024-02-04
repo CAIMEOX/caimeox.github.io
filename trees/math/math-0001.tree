@@ -1,6 +1,10 @@
-\title{Vector Space}
+\title{Introduction to Vector Space}
 \date{2024-01-26}
 \taxon{Linear Algebra}
+\p{
+    This note introduces the concept of vector space.
+    Refer to [Linear Algebra Done Right](linear-algebra-2015).
+}
 \p{
     The motivation for the definition of a vector space comes from the properties
     of vectors in Euclidean space #{\mathbb{R}^n} and #{\mathbb{C}^n}.

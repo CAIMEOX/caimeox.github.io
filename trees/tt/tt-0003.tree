@@ -3,6 +3,11 @@
 \taxon{Type Theory}
 \import{macros}
 \p{
+    In previous post, we have seen the basic inference rules of type theory.
+    Now we will see the definition of natural numbers as an inductive type.
+    Refer to [HoTT Book](hott-book-2013) and [Egbert Rijke's](hott-2022).
+}
+\p{
     In classical mathematics, the \strong{Peano axioms} are a set of axioms for the natural numbers,
     an important object in mathematics.
 }

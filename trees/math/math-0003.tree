@@ -2,6 +2,9 @@
 \date{2024-01-26}
 \taxon{Set Theory}
 \p{
+    Refer to [Category Theory for Scientists](cat-sci-2013).
+}
+\p{
     \strong{Set} is a common concept in mathematics.
     This post is a brief introduction to set theory aimed at 
     complete all basic knowledge of set theory.

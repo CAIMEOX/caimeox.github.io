@@ -1,0 +1,133 @@
+\title{Time-independent Schrodinger Equation}
+\taxon{Quantum Mechanics}
+\date{2024-02-04}
+\import{macros}
+\p{
+    Refer to chapter 2 in [Introduction to Quantum Mechanics](quantum-2018)
+}
+\p{
+    In previous section we use the [Schrodinger equation](def-0030) to compute things.
+    The variable #{t} is annoying which makes things complicated, and we would like to get rid of it.
+    In this section we shall assume that the potential energy #{V} is independent of time.
+    In that case the Schrodinger equation becomes:
+    ##{
+        i\hbar\frac{\partial}{\partial t}\psi(x,t) = -\frac{\hbar^2}{2m}\frac{\partial^2\psi(x,t)}{\partial x^2} + V(x)\psi(x,t)
+    }
+    This equation can be solved by \strong{separation of variables}.
+    We assume the spatial and time dependencies of the solution can be separated.
+    In other words we look for solutions of the \em{product form}:
+    ##{
+        \Psi(x,t) = \psi(x)\phi(t)
+    }
+    This is an absurd restriction, but it works and we can get interesting results.
+}
+\block{\strong{Solve the equation}}{
+    \p{
+        Now substitute the product form into the Schrodinger equation:
+        ##{
+            i\hbar \psi(x) \frac{\partial}{\partial t}(\phi(t)) = -\frac{\hbar^2}{2m}\phi(t)\frac{\partial^2(\psi(x))}{\partial x^2} + V(x)\psi(x)\phi(t)
+        }
+        Divide both sides by #{\psi(x)\phi(t)}:
+        ##{
+            i\hbar \frac{1}{\phi(t)} \frac{\partial}{\partial t}(\phi(t)) = -\frac{\hbar^2}{2m\psi(x)}\frac{\partial^2(\psi(x))}{\partial x^2} + V(x)
+        }
+        Notice that the left side depends only on #{t} and the right side depends only on #{x}.
+        They are equal if and only if they are both equal to a \em{constant}.
+        Otherwise if I change the left side and level the right side unchanged, I get a contradiction.
+        The constant is the energy of the system, and we denote it by #{E}.
+        ##{
+            E:\equiv i\hbar \frac{1}{\phi(t)} \frac{\partial}{\partial t}(\phi(t)) 
+        }
+        and 
+        ##{
+            E:\equiv -\frac{\hbar^2}{2m\psi(x)}\frac{\partial^2(\psi(x))}{\partial x^2} + V(x)
+        }
+        We have two equations:
+        ##{
+            \begin{align*}
+                \frac{d\phi}{dt} &= -\frac{iE}{\hbar}\phi\\
+                -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} + V\psi &= E\psi
+            \end{align*}
+        }
+        Now the partial differential equation has been reduced to two \strong{ordinary differential equations}.
+        The first one is easy to solve:
+        ##{
+            \phi(t) = \phi(0)e^{-iEt/\hbar}
+        }
+        Thus the complete solution is (note that the constant #{\phi(0)} was absorbed into #{\psi(x)}):
+        ##{
+            \Psi(x,t) = \psi(x)e^{-iEt/\hbar}
+        }
+        The second one is the \strong{time-independent Schrodinger equation},
+        we can't go further unless we know the potential energy #{V(x)}.
+    }
+}
+\p{
+    Now we give a name to the time-independent Schrodinger equation.
+}
+\transclude{def-0034}
+\p{
+    Thought the wave function is time-dependent,
+    ##{
+        \Psi(x,t) = \psi(x)e^{-iEt/\hbar}
+    }
+    But if we compute the probability density, it is time-independent:
+    ##{
+        |\Psi(x,t)|^2 = \psi^*(x)e^{+iEt/\hbar}\psi(x)e^{-iEt/\hbar} = |\psi(x)|^2 
+    }
+    Hence the expectation value is constant in time. 
+    Then #{\langle p \rangle = 0} all the time.
+    Nothing happens in the stationary state.
+}
+\block{
+    \strong{Conservation of energy}
+}{
+    This also means that the energy of the system is conserved.
+    In classical mechanics, the \strong{total energy} (kinetic + potential) of a system is called the \strong{Hamiltonian}.
+    ##{
+        H(x,p) = \frac{p^2}{2m} + V(x)
+    }
+    In quantum mechanics, the Hamiltonian is an operator,
+    obtained by substituting #{p\to -i\hbar\frac{\partial}{\partial x}}:
+    ##{
+        \hat{H} = -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + V(x)
+    }
+    Thus the time-independent Schrodinger equation can be written as:
+    ##{
+        \hat{H}\psi(x) = E\psi(x)
+    }
+    The expectation value of the total energy gives the energy of the system:
+    ##{
+        \begin{align*}
+            \langle H \rangle &= \int \psi^*(x)\hat{H}\psi(x)dx 
+            \\
+            &= \int \psi^*(x)E\psi(x)dx
+            \\
+            &= E\int |\psi(x)|^2dx
+            \\
+            &= E\int |\Psi(x)|^2dx
+            \\
+            &= E           
+        \end{align*}
+    }
+    and
+    ##{
+        \begin{align*}
+            \langle H^2 \rangle &= 
+            \int \psi^*(x)\hat{H}^2\psi(x)dx
+            \\
+            &= E^2\int |\psi(x)|^2 dx      
+            \\
+            &= E^2      
+        \end{align*}
+    }
+    where 
+    ##{
+        \hat{H}^2\psi = \hat{H}(\hat{H}\psi) = \hat{H}(E\psi) = E(\hat{H}\psi) = E^2\psi
+    }
+    Hence the variance of the energy is zero given by
+    ##{
+        \Delta H = \sqrt{\langle H^2 \rangle - \langle H \rangle^2} = 0
+    }
+    This implies that the energy of the system is conserved.
+}

@@ -1,7 +1,7 @@
 \title{Introduction to Type Theory}
 \taxon{Type Theory}
 \date{2024-01-27}
-\p{This is a note on dependent type theory.}
+\p{This is a note on dependent type theory. Refer to [HoTT Book](hott-book-2013) and [Egbert Rijke's](hott-2022).}
 \p{
     \strong{Homotopy type theory} is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
     The set-theoretic foundation has two two layers:

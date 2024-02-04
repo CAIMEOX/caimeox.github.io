@@ -1,8 +1,12 @@
-\title{Special Relativity and extra dimensions}
+\title{Special Relativity and Extra Dimensions}
 \date{2024-01-29}
 \author{CAIMEO}
 \taxon{String Theory}
 \import{macros}
+\p{
+    This is a summary of the first chapter of [A First Course in String Theory](string-theory-2009) by Barton Zwiebach.
+    I will make it as understandable as possible.
+}
 \p{
     Speical relativity is based on the exprimental fact that the speed of light is the same for all inertial observers.
     In comparing the coordinates of events, two inertial observers (\strong{Lorentz observers}) find that the

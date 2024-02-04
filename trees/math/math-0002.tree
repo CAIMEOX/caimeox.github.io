@@ -3,6 +3,10 @@
 \taxon{Linear Algebra}
 \import{macros}
 \p{
+    This note introduces the concept of finite-dimensional vector space.
+    Refer to [Linear Algebra Done Right](linear-algebra-2015).
+}
+\p{
     Adding up scalar mulitples of vectors in a list gives a linear combination.
 }
 \transclude{def-000L}
