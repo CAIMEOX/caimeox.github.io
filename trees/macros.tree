@@ -40,3 +40,8 @@
 \def\pr[a]{\text{pr}_\a}
 \def\mat{\mathcal{M}}
 \def\assoc{\text{assoc}}
+\def\codeblock[lang][body]{
+  \pre{
+    \xml{code}[class]{\lang}{\body}
+  }
+}

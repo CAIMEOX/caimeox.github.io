@@ -52,6 +52,7 @@ jobs:
         uses: ocaml/setup-ocaml@v2
         with:
           ocaml-compiler: "5.1"
+          dune-cache : true
 
       - name: Install Forester
         run: |
