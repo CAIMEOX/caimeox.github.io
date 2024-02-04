@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4536</anchor>  <taxon>Definition</taxon> <addr>def-0030</addr>  <route>def-0030.xml</route>   <title>Schrodinger's equation</title> </frontmatter> <mainmatter><p>
-    The <strong>Schrodinger equation</strong> is a linear partial differential equation that describes the wave function of a quantum system.
-    It is given by (the general form):
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2529</anchor>  <taxon>Definition</taxon> <addr>def-0033</addr>  <route>def-0033.xml</route>   <title>Heisenberg Uncertainty Principle</title> </frontmatter> <mainmatter><p>
+    The <strong>Heisenberg Uncertainty Principle</strong> states that
+    it is impossible to measure simultaneously the position and the momentum of a particle
+    with arbitrary precision.
+    The product of the uncertainties in position and momentum is bounded by:
     <tex display="block">
-        i \hbar \frac { \partial }{ \partial  t} \Psi ( \vec {r},t) =  \hat {H} \Psi ( \vec {r},t)
+         \Delta  x  \Delta  p  \geq   \frac { \hbar }{2}
     </tex>
-    where:
-    <ul><li><tex>\Psi ( \vec {r},t)</tex> is the wave function of the quantum system.
-        </li>
-        <li><tex>\hat {H}</tex> is the <strong>Hamiltonian operator</strong>.
-        </li>
-        <li><tex>\hbar  = 1.054573 \times10 ^{-34} \text {Js} </tex> is the reduced <strong>Planck constant</strong>.
-        </li></ul></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4537</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr>  <route>phy-0002.xml</route> <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The wave function</title> </frontmatter> <mainmatter><p>
+    where <tex>\Delta  x</tex> and <tex>\Delta  p</tex> are the uncertainties in position and momentum, respectively.
+    The constant <tex>\hbar</tex> is the reduced Planck constant.
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2530</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr>  <route>phy-0002.xml</route> <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The wave function</title> </frontmatter> <mainmatter><p>
     Consider a particle of mass <tex>m</tex> moving along <tex>x</tex>-axis
     subject to force <tex>F(x, t)</tex>.
     With Newton's second law, we have:
@@ -36,7 +34,19 @@
     To determine it we need to solve the <strong>Schrodinger equation</strong>.
     <tex display="block">
         i \hbar \frac { \partial }{ \partial  t} \psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \psi (x,t)}{ \partial  x^2} + V(x,t) \psi (x,t)
-    </tex></p><p>
+    </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2531</anchor>  <taxon>Definition</taxon> <addr>def-0030</addr>  <route>def-0030.xml</route>   <title>Schrodinger's equation</title> </frontmatter> <mainmatter><p>
+    The <strong>Schrodinger equation</strong> is a linear partial differential equation that describes the wave function of a quantum system.
+    It is given by (the general form):
+    <tex display="block">
+        i \hbar \frac { \partial }{ \partial  t} \Psi ( \vec {r},t) =  \hat {H} \Psi ( \vec {r},t)
+    </tex>
+    where:
+    <ul><li><tex>\Psi ( \vec {r},t)</tex> is the wave function of the quantum system.
+        </li>
+        <li><tex>\hat {H}</tex> is the <strong>Hamiltonian operator</strong>.
+        </li>
+        <li><tex>\hbar  = 1.054573 \times10 ^{-34} \text {Js} </tex> is the reduced <strong>Planck constant</strong>.
+        </li></ul></p></mainmatter> </tree><p>
     The role of Schrodinger equation is similar to the role of Newton's second law in classic mechanics.
     Given proper initial conditions,
     we can determine <tex>\psi (x, t)</tex> for all the future time.
@@ -68,7 +78,7 @@
 </p><p>
     Probability is the key concept in quantum mechanics.
     Now I will introduce some terimnologies related to continuous probability.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4538</anchor>  <taxon>Definition</taxon> <addr>def-0031</addr>  <route>def-0031.xml</route>   <title>Probability Density</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2532</anchor>  <taxon>Definition</taxon> <addr>def-0031</addr>  <route>def-0031.xml</route>   <title>Probability Density</title> </frontmatter> <mainmatter><p>
     A <strong>probability density</strong> is a function <tex>p(x)</tex> such that:
     <ul><li><tex>p(x) \geq  0</tex> for all <tex>x</tex>.
         </li>
@@ -217,14 +227,4 @@
         p =  \frac {h}{ \lambda } =  \frac {2 \pi \hbar }{ \lambda }
     </tex>
     Now we can give a qualitative argument for the uncertainty principle.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4539</anchor>  <taxon>Definition</taxon> <addr>def-0033</addr>  <route>def-0033.xml</route>   <title>Heisenberg Uncertainty Principle</title> </frontmatter> <mainmatter><p>
-    The <strong>Heisenberg Uncertainty Principle</strong> states that
-    it is impossible to measure simultaneously the position and the momentum of a particle
-    with arbitrary precision.
-    The product of the uncertainties in position and momentum is bounded by:
-    <tex display="block">
-         \Delta  x  \Delta  p  \geq   \frac { \hbar }{2}
-    </tex>
-    where <tex>\Delta  x</tex> and <tex>\Delta  p</tex> are the uncertainties in position and momentum, respectively.
-    The constant <tex>\hbar</tex> is the reduced Planck constant.
-</p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>
+</p></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>

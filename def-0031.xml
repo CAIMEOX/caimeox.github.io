@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4193</anchor>  <taxon>Definition</taxon> <addr>def-0031</addr>  <route>def-0031.xml</route>   <title>Probability Density</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4138</anchor>  <taxon>Definition</taxon> <addr>def-0031</addr>  <route>def-0031.xml</route>   <title>Probability Density</title> </frontmatter> <mainmatter><p>
     A <strong>probability density</strong> is a function <tex>p(x)</tex> such that:
     <ul><li><tex>p(x) \geq  0</tex> for all <tex>x</tex>.
         </li>
@@ -19,7 +19,7 @@
     <tex display="block">
          \sigma ^2 : \equiv   \langle  x^2  \rangle  -  \langle  x  \rangle ^2
     </tex>
-</block></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4194</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr>  <route>phy-0002.xml</route> <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The wave function</title> </frontmatter> <mainmatter><p>
+</block></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4139</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr>  <route>phy-0002.xml</route> <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The wave function</title> </frontmatter> <mainmatter><p>
     Consider a particle of mass <tex>m</tex> moving along <tex>x</tex>-axis
     subject to force <tex>F(x, t)</tex>.
     With Newton's second law, we have:
@@ -43,7 +43,7 @@
     To determine it we need to solve the <strong>Schrodinger equation</strong>.
     <tex display="block">
         i \hbar \frac { \partial }{ \partial  t} \psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \psi (x,t)}{ \partial  x^2} + V(x,t) \psi (x,t)
-    </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4195</anchor>  <taxon>Definition</taxon> <addr>def-0030</addr>  <route>def-0030.xml</route>   <title>Schrodinger's equation</title> </frontmatter> <mainmatter><p>
+    </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4140</anchor>  <taxon>Definition</taxon> <addr>def-0030</addr>  <route>def-0030.xml</route>   <title>Schrodinger's equation</title> </frontmatter> <mainmatter><p>
     The <strong>Schrodinger equation</strong> is a linear partial differential equation that describes the wave function of a quantum system.
     It is given by (the general form):
     <tex display="block">
@@ -205,4 +205,26 @@
     Momentum and position are just special cases of this general formula.
     We will give a firmer theoretical foundation to this equation later.
     Now we just use it as an <em>axiom</em>.
-</p></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>
+</p><p>
+    Now we discuss about the <strong>uncertainty principle</strong>.
+    The more precise a wave's position is, the less precise its momentum (or the wavelength) is, and vice versa.
+    A theorem in Fourier Analysis gives a precise statement of this principle (explain later).
+    For this moment we only concerned with the qualitative argument.
+</p><p>
+    The wavelength of a wave function <tex>\psi</tex> is related to the momentum of the particle.
+    This result from the <strong>de Broglie formula</strong>.
+    <tex display="block">
+        p =  \frac {h}{ \lambda } =  \frac {2 \pi \hbar }{ \lambda }
+    </tex>
+    Now we can give a qualitative argument for the uncertainty principle.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4141</anchor>  <taxon>Definition</taxon> <addr>def-0033</addr>  <route>def-0033.xml</route>   <title>Heisenberg Uncertainty Principle</title> </frontmatter> <mainmatter><p>
+    The <strong>Heisenberg Uncertainty Principle</strong> states that
+    it is impossible to measure simultaneously the position and the momentum of a particle
+    with arbitrary precision.
+    The product of the uncertainties in position and momentum is bounded by:
+    <tex display="block">
+         \Delta  x  \Delta  p  \geq   \frac { \hbar }{2}
+    </tex>
+    where <tex>\Delta  x</tex> and <tex>\Delta  p</tex> are the uncertainties in position and momentum, respectively.
+    The constant <tex>\hbar</tex> is the reduced Planck constant.
+</p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>

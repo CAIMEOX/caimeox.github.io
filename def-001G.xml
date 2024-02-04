@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2221</anchor>  <taxon>Definition</taxon> <addr>def-001G</addr>  <route>def-001G.xml</route>   <title>Fiber and Value</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2158</anchor>  <taxon>Definition</taxon> <addr>def-001G</addr>  <route>def-001G.xml</route>   <title>Fiber and Value</title> </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" addr="def-0018" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>,
     an a well-formed term <tex>a:A</tex>,
     then we say that <tex>B[x:=a]</tex> is the <strong>fiber</strong> of <tex>B</tex> at <tex>a</tex>, denoted <tex>B(a)</tex>.
@@ -8,7 +8,7 @@
     Let <tex>b</tex> a <link href="def-0019.xml" type="local" addr="def-0019" title="Section of Type Family">section</link> of <tex>B</tex> over <tex>A</tex> in context <tex>\Gamma</tex>,
     then we say that <tex>b(a): \equiv  b[x:=a]</tex> is the <strong>value</strong> of <tex>b</tex> at <tex>a</tex>.
 
-</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2222</anchor>  <taxon>Type Theory</taxon> <addr>tt-0002</addr>  <route>tt-0002.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title> </frontmatter> <mainmatter><p>This is a note on dependent type theory.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2159</anchor>  <taxon>Type Theory</taxon> <addr>tt-0002</addr>  <route>tt-0002.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title> </frontmatter> <mainmatter><p>This is a note on dependent type theory.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
     The set-theoretic foundation has two two layers:
     <ul><li>the deductive system of first-order logic</li>
         <li>the theory of a particular theory, such as ZFC</li></ul> 
@@ -48,7 +48,7 @@
         In type theory there is also a requirement for a judgment-level equality.
         This is called <strong>judgmental equality</strong>, meaning &quot;equal by definition&quot;.
     </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2223</anchor>  <taxon>Definition</taxon> <addr>def-0015</addr>  <route>def-0015.xml</route>   <title>Judgemental Equality</title> </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2160</anchor>  <taxon>Definition</taxon> <addr>def-0015</addr>  <route>def-0015.xml</route>   <title>Judgemental Equality</title> </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
     <tex display="block">
          \Gamma \vdash  a \equiv  a':A
     </tex>
@@ -70,7 +70,7 @@
     <ul><li>Rules allow us to conclude one judgment from a collection of other judgments.</li>
         <li>Axioms are judgments that are assumed to be true without proof.</li></ul></p><p>
     We start by introduction to Matrin Lof's dependent type theory. 
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2224</anchor>  <taxon>Definition</taxon> <addr>def-0017</addr>  <route>def-0017.xml</route>   <title>Dependent type theory: Judgments</title> </frontmatter> <mainmatter>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2161</anchor>  <taxon>Definition</taxon> <addr>def-0017</addr>  <route>def-0017.xml</route>   <title>Dependent type theory: Judgments</title> </frontmatter> <mainmatter>
     <p>
         There are four kinds of judgments in Martin Lof's dependent type theory:
     </p>
@@ -97,7 +97,7 @@
 
     To introduce types dependent on terms, 
     we need the notation of type families.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2225</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2162</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title> </frontmatter> <mainmatter><p>
     Consider a type <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>family</strong> of types over <tex>A</tex> in context <tex>\Gamma</tex>
     is a type <tex>B(x)</tex> in context <tex>\Gamma , x:A</tex>.
@@ -108,7 +108,7 @@
     Alternatively, we say that <tex>B(x)</tex> is a type <strong>indexed</strong> by <tex>x:A</tex> in context <tex>\Gamma</tex>.
 </p></mainmatter> </tree><p>
     Now we can define a term of a type family, that is, a section of a type family.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2226</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2163</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title> </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" addr="def-0018" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>section</strong> of <tex>B</tex> is a term <tex>b</tex> of type <tex>B(x)</tex> in context <tex>\Gamma ,x:A</tex>.
     <tex display="block">
@@ -124,7 +124,7 @@
         <li>Vairable conversion</li>
         <li>Substitution</li>
         <li>Weakening</li>
-        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2227</anchor>  <taxon>Definition</taxon> <addr>def-001A</addr>  <route>def-001A.xml</route>   <title>
+        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2164</anchor>  <taxon>Definition</taxon> <addr>def-001A</addr>  <route>def-001A.xml</route>   <title>
     Formation of contexts, types and terms
 </title> </frontmatter> <mainmatter><p>
     The following rules follow from the presuppotion
@@ -168,7 +168,7 @@
             }{
                  \Gamma \vdash  b:A
             }
-        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2228</anchor>  <taxon>Definition</taxon> <addr>def-001B</addr>  <route>def-001B.xml</route>   <title>
+        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2165</anchor>  <taxon>Definition</taxon> <addr>def-001B</addr>  <route>def-001B.xml</route>   <title>
     Judgmental equality is equivalence relation
 </title> </frontmatter> <mainmatter><p>
     Judgmental equality on types and on elements is an <link href="def-000X.xml" type="local" addr="def-000X" title="Equivalence Relation">equivalence relation</link> 
@@ -214,7 +214,7 @@
             }{
                  \Gamma \vdash  A \equiv  C \space \text {type} 
             }
-        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2229</anchor>  <taxon>Definition</taxon> <addr>def-001C</addr>  <route>def-001C.xml</route>   <title>Variable Conversion</title> </frontmatter> <mainmatter><p>
+        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2166</anchor>  <taxon>Definition</taxon> <addr>def-001C</addr>  <route>def-001C.xml</route>   <title>Variable Conversion</title> </frontmatter> <mainmatter><p>
     This rule postulates that we can
     convert the type of a variable to a judgmentally equal type.
     <tex display="block">
@@ -241,7 +241,7 @@
     and we also have a term <tex>a:A</tex>.
     We can simultaneously substitute <tex>a</tex> for all occurrences of <tex>x</tex> in <tex>f</tex>
     to obtain a new term <tex>f[x:=a]:B(a)</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2230</anchor>  <taxon>Definition</taxon> <addr>def-001D</addr>  <route>def-001D.xml</route>   <title>Substitution</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2167</anchor>  <taxon>Definition</taxon> <addr>def-001D</addr>  <route>def-001D.xml</route>   <title>Substitution</title> </frontmatter> <mainmatter><p>
     The substitution rule postulates that we can substitute a term for a variable.
     <tex display="block">
          \frac {
@@ -278,7 +278,7 @@
     The process of expanding the context by a fresh variable of type <tex>A</tex> is called weakening (by <tex>A</tex>).
     Intuitively, weakening is the process of adding a new hypothesis to the context.
     And the hypothesis will weaken the conclusion.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2231</anchor>  <taxon>Definition</taxon> <addr>def-001E</addr>  <route>def-001E.xml</route>   <title>Weakening</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2168</anchor>  <taxon>Definition</taxon> <addr>def-001E</addr>  <route>def-001E.xml</route>   <title>Weakening</title> </frontmatter> <mainmatter><p>
     Weakening rule asserts that we can add a variable to the context.
     <tex display="block">
          \frac {
@@ -291,7 +291,7 @@
     </tex></p></mainmatter> </tree><p>
     Finally, the generic elemets rule ensures that
     the variables declared in a context.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2232</anchor>  <taxon>Definition</taxon> <addr>def-001F</addr>  <route>def-001F.xml</route>   <title>Generic Elements</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2169</anchor>  <taxon>Definition</taxon> <addr>def-001F</addr>  <route>def-001F.xml</route>   <title>Generic Elements</title> </frontmatter> <mainmatter><p>
     The rule for the generic element asserts that 
     any hypothetical element <tex>x:A</tex> in context <tex>\Gamma ,x:A</tex>
     is also an element of <tex>A</tex> in context <tex>\Gamma ,x:A</tex>.
@@ -325,7 +325,7 @@
         <li>Elimination rule</li>
         <li>Computation rule</li></ul>
     Besides these we also need the <strong>congruence rule</strong> for judgmental equality.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2233</anchor>  <taxon>Definition</taxon> <addr>def-001T</addr>  <route>def-001T.xml</route>   <title>Dependent Function Type</title> </frontmatter> <mainmatter><p><strong>Formation Rule</strong>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2170</anchor>  <taxon>Definition</taxon> <addr>def-001T</addr>  <route>def-001T.xml</route>   <title>Dependent Function Type</title> </frontmatter> <mainmatter><p><strong>Formation Rule</strong>
     For any type family <tex>B</tex> over <tex>A</tex> in context <tex>\Gamma</tex>:
     <tex display="block">
          \frac {
@@ -394,7 +394,7 @@
         } \eta 
     </tex></p></mainmatter> </tree><p>
     A degenrated case of dependent function type is the ordinary function type.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2234</anchor>  <taxon>Definition</taxon> <addr>def-001U</addr>  <route>def-001U.xml</route>   <title>Ordinary Function Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2171</anchor>  <taxon>Definition</taxon> <addr>def-001U</addr>  <route>def-001U.xml</route>   <title>Ordinary Function Type</title> </frontmatter> <mainmatter><p>
     A special case of <link href="def-001T.xml" type="local" addr="def-001T" title="Dependent Function Type"><tex>\Pi</tex>-type</link> is the <strong>ordinary function type</strong>.
     Using weakening rule we can obtain thee type <tex>A \to  B</tex> of ordinary function from <tex>A</tex> to <tex>B</tex>
     <tex display="block">
@@ -415,14 +415,14 @@
     The type <tex>A</tex> is called <strong>domain</strong> of <tex>f</tex>,
     and type <tex>B</tex> is called <strong>codomain</strong> of <tex>f</tex>.
     The notation <tex>:=</tex> here means to make a definition.
-</p></mainmatter> </tree></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2235</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2172</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title> </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" addr="def-0018" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>section</strong> of <tex>B</tex> is a term <tex>b</tex> of type <tex>B(x)</tex> in context <tex>\Gamma ,x:A</tex>.
     <tex display="block">
          \Gamma , x:A  \vdash  b : B(x)
     </tex>
     Alternatively, we say that <tex>b</tex> is a term of <tex>B(x)</tex> indexed by <tex>x:A</tex> in context <tex>\Gamma</tex>.
-</p></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2236</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2173</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title> </frontmatter> <mainmatter><p>
     Consider a type <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>family</strong> of types over <tex>A</tex> in context <tex>\Gamma</tex>
     is a type <tex>B(x)</tex> in context <tex>\Gamma , x:A</tex>.

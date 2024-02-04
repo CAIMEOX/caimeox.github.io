@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2340</anchor>  <taxon>Definition</taxon> <addr>def-002G</addr>  <route>def-002G.xml</route>   <title>Function</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2277</anchor>  <taxon>Definition</taxon> <addr>def-002G</addr>  <route>def-002G.xml</route>   <title>Function</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets then a <strong>function</strong> <tex>f:X  \to  Y</tex>
     is a mapping that sends each element of <tex>X</tex> to a unique element of <tex>Y</tex>,
     denoted by <tex>f(x) = y</tex>.
@@ -17,7 +17,7 @@
         (g  \circ  f)(x) = g(f(x)) 
     </tex></p><p>
     The set of all functions from <tex>X</tex> to <tex>Y</tex> is denoted by <tex>\hom _ \text {set} (X, Y)</tex>.
-</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2341</anchor>  <taxon>Set Theory</taxon> <addr>math-0003</addr>  <route>math-0003.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Set Theory</title> </frontmatter> <mainmatter><p><strong>Set</strong> is a common concept in mathematics.
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2278</anchor>  <taxon>Set Theory</taxon> <addr>math-0003</addr>  <route>math-0003.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Set Theory</title> </frontmatter> <mainmatter><p><strong>Set</strong> is a common concept in mathematics.
     This post is a brief introduction to set theory aimed at 
     complete all basic knowledge of set theory.
     The following topics will be covered
@@ -25,7 +25,7 @@
         <li>Cardinality</li>
         <li>Set theory constructions</li></ul></p><p>
     In this post, we use the Zermelo-Fraenkel set theory with the Axiom of Choice (<strong>ZFC</strong>).
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2342</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>ZFC Set</title> </frontmatter> <mainmatter><p><strong>ZFC</strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2279</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>ZFC Set</title> </frontmatter> <mainmatter><p><strong>ZFC</strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
     The axioms of ZFC are listed below.
     <ul><li><strong>Axiom of Extensionality</strong>:
             Two sets are equal if and only if they have the same elements.
@@ -60,7 +60,7 @@
             </p></li>
         <li><strong>Axiom of Choice</strong>:
             For any family of non-empty sets <tex>X</tex>, there exists a function <tex>f:X \to \bigcup  X</tex> such that for any <tex>x \in  X</tex>, <tex>f(x) \in  x</tex>.
-        </li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2343</anchor>  <taxon>Definition</taxon> <addr>def-002V</addr>  <route>def-002V.xml</route>   <title>Set Operations</title> </frontmatter> <mainmatter><p>
+        </li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2280</anchor>  <taxon>Definition</taxon> <addr>def-002V</addr>  <route>def-002V.xml</route>   <title>Set Operations</title> </frontmatter> <mainmatter><p>
     Let <tex>(X_i)_{i \in  I}</tex> be a family of sets.
 </p><block open="open"><headline><strong>Union</strong></headline> 
     <tex display="block">
@@ -81,25 +81,25 @@
     </tex>
 </block></mainmatter> </tree><p>
     And principles of set theory
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2344</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2281</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
     Two sets are equal if and only if they have the same elements.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2345</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2282</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
     Given a set <tex>A</tex> and a property <tex>P(x)</tex>, there exists a set <tex>B</tex> such that
     <tex>x \in  B  \iff  x \in  A  \land  P(x)</tex>.
 </p></mainmatter> </tree><p>
     We then define the Cartesian product of two sets
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2346</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2283</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
     Given two sets <tex>A</tex> and <tex>B</tex>, the Cartesian product <tex>A \times  B</tex> is the set
     of all ordered pairs <tex>(a,b)</tex> where <tex>a \in  A</tex> and <tex>b \in  B</tex>.
 </p></mainmatter> </tree><p>
     With the Cartesian product, we can define the relation
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2347</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2284</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
     A <strong>relation</strong> <tex>R</tex> is a subset of the Cartesian product of two sets <tex>A</tex> and
     <tex>B</tex>, i.e. <tex>R \subseteq  A \times  B</tex>.
     If <tex>(a,b) \in  R</tex>, we write <tex>aRb</tex>.
 
     A relation that between <tex>X</tex> and itself is called <strong>homogeneous relation</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2348</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence Relation</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2285</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence Relation</title> </frontmatter> <mainmatter><p>
     An equivalence relation <tex>R</tex> on a set <tex>A</tex> is a <link href="def-000W.xml" type="local" addr="def-000W" title="Relation">relation</link> that is reflexive,
     symmetric, and transitive.
     <ul><li>Reflexive:
@@ -109,7 +109,7 @@
         <li>Transitive:
             <tex>\forall  x,y,z \in  A, xRy \land  yRz \implies  xRz</tex></li></ul>
     We often denote the equivalence relation by <tex>\sim</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2349</anchor>  <taxon>Definition</taxon> <addr>def-002U</addr>  <route>def-002U.xml</route>   <title>Equivalence Class</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2286</anchor>  <taxon>Definition</taxon> <addr>def-002U</addr>  <route>def-002U.xml</route>   <title>Equivalence Class</title> </frontmatter> <mainmatter><p>
     Let <tex>\sim</tex> be an <link href="def-000X.xml" type="local" addr="def-000X" title="Equivalence Relation">equivalence relation</link> on a set <tex>A</tex>.
     For any element <tex>a \in  A</tex>, the <strong>equivalence class</strong> of <tex>a</tex> is the set
     <tex>[a] =  \set {b \in  A:b \sim  a}</tex>.
@@ -120,10 +120,10 @@
     </p></p></mainmatter> </tree><p>
     One of the most important relations is the order relation.
     The basic order relation is the preorder.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2350</anchor>  <taxon>Definition</taxon> <addr>def-000Z</addr>  <route>def-000Z.xml</route>   <title>Preorder</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2287</anchor>  <taxon>Definition</taxon> <addr>def-000Z</addr>  <route>def-000Z.xml</route>   <title>Preorder</title> </frontmatter> <mainmatter><p>
     A <strong>preorder</strong> is a relation <tex>\leq</tex> that is reflexive and transitive.
     <ul><li>Reflexive: <tex>a \leq  a</tex></li>
-        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2351</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
+        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2288</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
     A <strong>(non-strict) partial order</strong> is a relation <tex>\leq</tex> that is reflexive, antisymmetric and transitive.
     <ul><li>Reflexive: <tex>a \leq  a</tex></li>
         <li>Antisymmetric: <tex>a \leq  b</tex> and <tex>b \leq  a</tex> implies <tex>a=b</tex></li>
@@ -131,13 +131,13 @@
     A non-strict partial order is also known as an antisymmetric <link href="def-000Z.xml" type="local" addr="def-000Z" title="Preorder">preorder</link>.
 </p></mainmatter> </tree><p>
     And the strict partial order (notice the difference between asymmetric and antisymmetric)
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2352</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2289</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
     A strict partial order is a relation <tex>&lt;</tex> that is irreflexive, asymmetric and transitive.
     <ul><li>Irreflexive: <tex>\neg (a&lt;a)</tex></li>
         <li>Asymmetric: <tex>a&lt;b</tex> implies <tex>\neg (b&lt;a)</tex></li>
         <li>Transitive: <tex>a&lt;b</tex> and <tex>b&lt;c</tex> implies <tex>a&lt;c</tex></li></ul></p></mainmatter> </tree><p>
     With the definition of order, we can define the upper bound and lower bound
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2353</anchor>  <taxon>Definition</taxon> <addr>def-0011</addr>  <route>def-0011.xml</route>   <title>Upper Bound and Lower Bound</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2290</anchor>  <taxon>Definition</taxon> <addr>def-0011</addr>  <route>def-0011.xml</route>   <title>Upper Bound and Lower Bound</title> </frontmatter> <mainmatter><p>
     Let a subset <tex>S</tex> of a <link href="def-000Y.xml" type="local" addr="def-000Y" title="Partial Order">partially ordered</link> set <tex>(P,  \leq )</tex>,
     <tex>S</tex> is bounded above if there exists <tex>x  \in  P</tex> such that <tex>\forall  y  \in  S, y  \leq  x</tex>. And <tex>x</tex> is called an <strong>upper bound</strong> of <tex>S</tex>.
     Dually, <tex>S</tex> is bounded below if there exists <tex>x  \in  P</tex> such that <tex>\forall  y  \in  S, x  \leq  y</tex>. And <tex>x</tex> is called a <strong>lower bound</strong> of <tex>S</tex>.
@@ -156,7 +156,7 @@
     </p>
 </mainmatter> </tree><p>
     The isomorphism function is defined as follows
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2354</anchor>  <taxon>Definition</taxon> <addr>def-002H</addr>  <route>def-002H.xml</route>   <title>Set Isomorphism</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2291</anchor>  <taxon>Definition</taxon> <addr>def-002H</addr>  <route>def-002H.xml</route>   <title>Set Isomorphism</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets and <tex>f: X  \to  Y</tex> be a function.
     The function <tex>f</tex> is called an <strong>isomorphism</strong> if it is both <link href="def-002D.xml" type="local" addr="def-002D" title="Injective">injective</link> and <link href="def-002F.xml" type="local" addr="def-002F" title="Surjective">surjective</link>.
     In other words, there exists a function <tex>g: Y  \to  X</tex> such that
@@ -171,7 +171,7 @@
 </p></mainmatter> </tree><p>
     With isomorphism, we can define the cardinality of a set.
     Two isomorphic sets have the same cardinality.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2355</anchor>  <taxon>Definition</taxon> <addr>def-002I</addr>  <route>def-002I.xml</route>   <title>Cardinality</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2292</anchor>  <taxon>Definition</taxon> <addr>def-002I</addr>  <route>def-002I.xml</route>   <title>Cardinality</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> be a set and <tex>n  \in   \mathbb {N}</tex>. 
     <tex>A</tex> si said to have <strong>cardinality</strong> <tex>n</tex>, denoted by <tex> |A|= n</tex>,
     if there exists an isomorphism between <tex>A</tex> and <tex>S_n =  \{   1,2, \cdots ,n   \}</tex>.
@@ -179,7 +179,7 @@
     we say <tex>A</tex> is <strong>infinite</strong>, denoted by <tex>|A|  \geq   \infty</tex>.
 </p></mainmatter> </tree><p>
     The next topic is the product of sets
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2356</anchor>  <taxon>Definition</taxon> <addr>def-002J</addr>  <route>def-002J.xml</route>   <title>Product of Sets</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2293</anchor>  <taxon>Definition</taxon> <addr>def-002J</addr>  <route>def-002J.xml</route>   <title>Product of Sets</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets, then the <strong>Cartesian product</strong> of <tex>X</tex> and <tex>Y</tex> is the set
     <tex display="block">
         X  \times  Y =  \set {(x,y)  \mid  x  \in  X  \text { and } y  \in  Y}
@@ -189,7 +189,7 @@
          \pi _1 : X  \times  Y  \to  X  \text { and }  \pi _2 : X  \times  Y  \to  Y
     </tex></p></mainmatter> </tree><p>
     This leads to an improtant concept named <strong>universal property</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2357</anchor>  <taxon>Lemma</taxon> <addr>thm-000J</addr>  <route>thm-000J.xml</route>   <title>Universal Property for Product of Sets</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2294</anchor>  <taxon>Lemma</taxon> <addr>thm-000J</addr>  <route>thm-000J.xml</route>   <title>Universal Property for Product of Sets</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets.
     For any set <tex>A</tex> and function
     <tex>f: A  \to  X</tex> and <tex>g: A  \to  Y</tex>,
@@ -202,13 +202,13 @@
     It is sufficient to define <tex>\langle  f,g  \rangle (a) = (f(a),g(a))</tex> for all <tex>a \in  A</tex> as the unique function.
 </p></mainmatter> </tree><p>
     Dual to the product of sets, we have the coproduct of sets
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2358</anchor>  <taxon>Definition</taxon> <addr>def-002K</addr>  <route>def-002K.xml</route>   <title>Coproduct of Sets</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2295</anchor>  <taxon>Definition</taxon> <addr>def-002K</addr>  <route>def-002K.xml</route>   <title>Coproduct of Sets</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets, then the <strong>coproduct</strong> of <tex>X</tex> and <tex>Y</tex> is 
     defined as the <strong>disjoint union</strong> of <tex>X</tex> and <tex>Y</tex>, denoted by <tex>X  \sqcup  Y</tex>.
     There are two natural injections from the original sets to the coproduct, namely
     <tex display="block">
         i_1 : X  \to  X  \sqcup  Y  \text { and } i_2 : Y  \to  X  \sqcup  Y
-    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2359</anchor>  <taxon>Lemma</taxon> <addr>thm-000K</addr>  <route>thm-000K.xml</route>   <title>Universal Property for Coproduct of Sets</title> </frontmatter> <mainmatter><p>
+    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2296</anchor>  <taxon>Lemma</taxon> <addr>thm-000K</addr>  <route>thm-000K.xml</route>   <title>Universal Property for Coproduct of Sets</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets. For any set <tex>A</tex> and function
     <tex>f : X  \to  A</tex> and <tex>g : Y  \to  A</tex>, there exists a <em>unique</em> function
     <tex>h : X  \sqcup  Y  \to  A</tex> such that the following diagram commutes:
@@ -218,7 +218,7 @@
     We might denote the unique as <tex>f \sqcup  g: X  \sqcup  Y  \to  A</tex>.
 </p></mainmatter> </tree><p>
     In this section we discuss the <em>limits</em> of variously-shaped diagrams of sets.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2360</anchor>  <taxon>Definition</taxon> <addr>def-002L</addr>  <route>def-002L.xml</route>   <title>Pullback of Sets</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2297</anchor>  <taxon>Definition</taxon> <addr>def-002L</addr>  <route>def-002L.xml</route>   <title>Pullback of Sets</title> </frontmatter> <mainmatter><p>
     Suppose we have sets <tex>X</tex>, <tex>Y</tex>, and <tex>Z</tex> and functions
     <tex>f : X  \to  Z</tex> and <tex>g : Y  \to  Z</tex>.
     
@@ -239,7 +239,7 @@
     The <strong>pullback</strong> is defined to be any set <tex>W  \cong  X \times _Z Y</tex>
     The corner symbol indicates <tex>W</tex> is a <em>pullback</em></p></mainmatter> </tree><p>
     The pullback also satisfies the universal property.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2361</anchor>  <taxon>Lemma</taxon> <addr>thm-000L</addr>  <route>thm-000L.xml</route>   <title>Universal Property for Pullback</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2298</anchor>  <taxon>Lemma</taxon> <addr>thm-000L</addr>  <route>thm-000L.xml</route>   <title>Universal Property for Pullback</title> </frontmatter> <mainmatter><p>
     Suppose the given diagram:
     
     <center><img src="resources/5e6f2da5af96f3d2b5aa340ada59f646.svg"/></center>
@@ -252,7 +252,7 @@
     there exists a <em>unique</em> arrow <tex>\langle  f,g  \rangle _Z: A \to  X \times _Z Y</tex> such that
     <tex display="block">
          \pi _1 \circ \langle  f,g  \rangle _Z = f  \text { and }  \pi _2 \circ \langle  f,g  \rangle _Z = g
-    </tex></p></mainmatter> </tree></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2362</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
+    </tex></p></mainmatter> </tree></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2299</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
     A <strong>relation</strong> <tex>R</tex> is a subset of the Cartesian product of two sets <tex>A</tex> and
     <tex>B</tex>, i.e. <tex>R \subseteq  A \times  B</tex>.
     If <tex>(a,b) \in  R</tex>, we write <tex>aRb</tex>.

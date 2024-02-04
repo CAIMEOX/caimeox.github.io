@@ -149,6 +149,7 @@
       <head>
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="prism.css" />
         <link rel="stylesheet" href="katex.min.css" />
         <xsl:apply-templates select="/tree/frontmatter/rss" />
 
@@ -161,6 +162,7 @@
         </script>
 
         <script type="module" src="forester.js"></script>
+        <script type="module" src="prism.js"></script>
         <title>
           <xsl:value-of select="/tree/frontmatter/title" />
         </title>
