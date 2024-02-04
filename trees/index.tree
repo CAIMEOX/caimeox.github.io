@@ -2,7 +2,9 @@
 \author{CAIMEO}
 \scope{
     \put\transclude/numbered{false}
+    \put\transclude/expanded{false}
     \transclude{caimeo}
+    \put\transclude/expanded{true}
     \transclude{about}
 }
 \scope{

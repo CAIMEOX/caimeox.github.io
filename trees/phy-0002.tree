@@ -202,3 +202,18 @@
     We will give a firmer theoretical foundation to this equation later.
     Now we just use it as an \em{axiom}.
 }
+\p{
+    Now we discuss about the \strong{uncertainty principle}.
+    The more precise a wave's position is, the less precise its momentum (or the wavelength) is, and vice versa.
+    A theorem in Fourier Analysis gives a precise statement of this principle (explain later).
+    For this moment we only concerned with the qualitative argument.
+}
+\p{
+    The wavelength of a wave function #{\psi} is related to the momentum of the particle.
+    This result from the \strong{de Broglie formula}.
+    ##{
+        p = \frac{h}{\lambda} = \frac{2\pi\hbar}{\lambda}
+    }
+    Now we can give a qualitative argument for the uncertainty principle.
+}
+\transclude{def-0033}

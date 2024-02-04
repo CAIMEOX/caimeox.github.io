@@ -1,4 +1,10 @@
-\title{About this website}
+\title{This website}
+\taxon{About}
+\p{
+    ##{
+        i\hbar \frac{\partial}{\partial t} \Psi(x, t) = \hat{H} \Psi(x, t)
+    }
+}
 \p{
     The choice of the name "\strong{Rabbit Hole}" carries a metaphorical significance inspired by Lewis Carroll's \em{Alice's Adventures 
     in Wonderland}, meaning to delve into a topic or pursue a line of thought that leads to unexpected or complex places.
@@ -8,7 +14,8 @@
 
 \scope{
     \strong{How to navigate?}
-    \p{This website is a “\em{forest}” created using the \strong{Forester} tool.
+    \p{
+    This website is a “\em{forest}” created using the \strong{Forester} tool.
     To navigate my forest, press \code{Ctrl-K}.
     Here are some standards of this blog.}
     \ul{

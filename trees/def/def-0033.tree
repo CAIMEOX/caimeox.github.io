@@ -1,0 +1,13 @@
+\title{Heisenberg Uncertainty Principle}
+\taxon{Definition}
+\p{
+    The \strong{Heisenberg Uncertainty Principle} states that
+    it is impossible to measure simultaneously the position and the momentum of a particle
+    with arbitrary precision.
+    The product of the uncertainties in position and momentum is bounded by:
+    ##{
+        \Delta x \Delta p \geq \frac{\hbar}{2}
+    }
+    where #{\Delta x} and #{\Delta p} are the uncertainties in position and momentum, respectively.
+    The constant #{\hbar} is the reduced Planck constant.
+}

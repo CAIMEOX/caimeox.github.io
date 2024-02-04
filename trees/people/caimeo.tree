@@ -6,12 +6,12 @@
 
 \meta{position}{Student}
 \meta{external}{https://github.com/CAIMEOX} % optional
-##{
-    i\hbar \frac{\partial}{\partial t} \Psi(x, t) = \hat{H} \Psi(x, t)
-}
-\ul{
-    \li{Learning Programming Language Theory and Type Theory}
-    \li{Attend in writing articles about String Theory}
-    \li{Reading Type Theory and Formal Proof and Homotopy Type Theory}
-    \li{Working on CommandLisp}
+
+\p{
+    \ul{
+        \li{Learning Programming Language Theory and Type Theory}
+        \li{Attend in writing articles about String Theory}
+        \li{Reading Type Theory and Formal Proof and Homotopy Type Theory}
+        \li{Working on CommandLisp}
+    }
 }
