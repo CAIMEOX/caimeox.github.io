@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2989</anchor>  <taxon>Reference</taxon> <addr>quantum-2018</addr>  <route>quantum-2018.xml</route>  <authors><author>David J. Griffiths</author><author>Darrell F. Schroeter</author> </authors> <title>Introduction to Quantum Mechanics</title> <meta name="doi">10.1017/9781316995433</meta><meta name="venue">Electronic, Optoelectronic Devices, and Nanotechnology, Engineering, Physics and Astronomy, Quantum Physics and Quantum Information</meta></frontmatter> <mainmatter><p>
+    Provides clear and accessible explanations of the foundations of quantum mechanics, using an attractive and informal style.
+</p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2990</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0003</addr>  <route>phy-0003.xml</route> <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>Time-independent Schrodinger Equation</title> </frontmatter> <mainmatter><p>
+    Refer to chapter 2 in <link href="quantum-2018.xml" type="local" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</link></p><p>
+    In previous section we use the <link href="def-0030.xml" type="local" addr="def-0030" title="Schrodinger's equation">Schrodinger equation</link> to compute things.
+    The variable <tex>t</tex> is annoying which makes things complicated, and we would like to get rid of it.
+    In this section we shall assume that the potential energy <tex>V</tex> is independent of time.
+    In that case the Schrodinger equation becomes:
+    <tex display="block">
+        i \hbar \frac { \partial }{ \partial  t} \psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \psi (x,t)}{ \partial  x^2} + V(x) \psi (x,t)
+    </tex>
+    This equation can be solved by <strong>separation of variables</strong>.
+    We assume the spatial and time dependencies of the solution can be separated.
+    In other words we look for solutions of the <em>product form</em>:
+    <tex display="block">
+         \Psi (x,t) =  \psi (x) \phi (t)
+    </tex>
+    This is an absurd restriction, but it works and we can get interesting results.
+</p><block open="open"><headline><strong>Solve the equation</strong></headline> 
+    <p>
+        Now substitute the product form into the Schrodinger equation:
+        <tex display="block">
+            i \hbar   \psi (x)  \frac { \partial }{ \partial  t}( \phi (t)) = - \frac { \hbar ^2}{2m} \phi (t) \frac { \partial ^2( \psi (x))}{ \partial  x^2} + V(x) \psi (x) \phi (t)
+        </tex>
+        Divide both sides by <tex>\psi (x) \phi (t)</tex>:
+        <tex display="block">
+            i \hbar   \frac {1}{ \phi (t)}  \frac { \partial }{ \partial  t}( \phi (t)) = - \frac { \hbar ^2}{2m \psi (x)} \frac { \partial ^2( \psi (x))}{ \partial  x^2} + V(x)
+        </tex>
+        Notice that the left side depends only on <tex>t</tex> and the right side depends only on <tex>x</tex>.
+        They are equal if and only if they are both equal to a <em>constant</em>.
+        Otherwise if I change the left side and level the right side unchanged, I get a contradiction.
+        The constant is the energy of the system, and we denote it by <tex>E</tex>.
+        <tex display="block">
+            E: \equiv  i \hbar   \frac {1}{ \phi (t)}  \frac { \partial }{ \partial  t}( \phi (t)) 
+        </tex>
+        and 
+        <tex display="block">
+            E: \equiv  - \frac { \hbar ^2}{2m \psi (x)} \frac { \partial ^2( \psi (x))}{ \partial  x^2} + V(x)
+        </tex>
+        We have two equations:
+        <tex display="block">
+             \begin {align*}
+                 \frac {d \phi }{dt} &amp;= - \frac {iE}{ \hbar } \phi \\ 
+                - \frac { \hbar ^2}{2m} \frac {d^2 \psi }{dx^2} + V \psi  &amp;= E \psi 
+             \end {align*}
+        </tex>
+        Now the partial differential equation has been reduced to two <strong>ordinary differential equations</strong>.
+        The first one is easy to solve:
+        <tex display="block">
+             \phi (t) =  \phi (0)e^{-iEt/ \hbar }
+        </tex>
+        Thus the complete solution is (note that the constant <tex>\phi (0)</tex> was absorbed into <tex>\psi (x)</tex>):
+        <tex display="block">
+             \Psi (x,t) =  \psi (x)e^{-iEt/ \hbar }
+        </tex>
+        The second one is the <strong>time-independent Schrodinger equation</strong>,
+        we can't go further unless we know the potential energy <tex>V(x)</tex>.
+    </p>
+</block><p>
+    Now we give a name to the time-independent Schrodinger equation.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2991</anchor>  <taxon>Definition</taxon> <addr>def-0034</addr>  <route>def-0034.xml</route>   <title>Stationary State</title> </frontmatter> <mainmatter><p>
+    A <strong>stationary state</strong> is a quantum state with all observables independent of time.
+</p></mainmatter> </tree><p>
+    Thought the wave function is time-dependent,
+    <tex display="block">
+         \Psi (x,t) =  \psi (x)e^{-iEt/ \hbar }
+    </tex>
+    But if we compute the probability density, it is time-independent:
+    <tex display="block">
+        | \Psi (x,t)|^2 =  \psi ^*(x)e^{+iEt/ \hbar } \psi (x)e^{-iEt/ \hbar } = | \psi (x)|^2 
+    </tex>
+    Hence the expectation value is constant in time. 
+    Then <tex>\langle  p  \rangle  = 0</tex> all the time.
+    Nothing happens in the stationary state.
+</p><block open="open"><headline>
+    <strong>Conservation of energy</strong>
+</headline> 
+    This also means that the energy of the system is conserved.
+    In classical mechanics, the <strong>total energy</strong> (kinetic + potential) of a system is called the <strong>Hamiltonian</strong>.
+    <tex display="block">
+        H(x,p) =  \frac {p^2}{2m} + V(x)
+    </tex>
+    In quantum mechanics, the Hamiltonian is an operator,
+    obtained by substituting <tex>p \to  -i \hbar \frac { \partial }{ \partial  x}</tex>:
+    <tex display="block">
+         \hat {H} = - \frac { \hbar ^2}{2m} \frac { \partial ^2}{ \partial  x^2} + V(x)
+    </tex>
+    Thus the time-independent Schrodinger equation can be written as:
+    <tex display="block">
+         \hat {H} \psi (x) = E \psi (x)
+    </tex>
+    The expectation value of the total energy gives the energy of the system:
+    <tex display="block">
+         \begin {align*}
+             \langle  H  \rangle  &amp;=  \int   \psi ^*(x) \hat {H} \psi (x)dx 
+             \\ 
+            &amp;=  \int   \psi ^*(x)E \psi (x)dx
+             \\ 
+            &amp;= E \int  | \psi (x)|^2dx
+             \\ 
+            &amp;= E \int  | \Psi (x)|^2dx
+             \\ 
+            &amp;= E           
+         \end {align*}
+    </tex>
+    and
+    <tex display="block">
+         \begin {align*}
+             \langle  H^2  \rangle  &amp;= 
+             \int   \psi ^*(x) \hat {H}^2 \psi (x)dx
+             \\ 
+            &amp;= E^2 \int  | \psi (x)|^2 dx      
+             \\ 
+            &amp;= E^2      
+         \end {align*}
+    </tex>
+    where 
+    <tex display="block">
+         \hat {H}^2 \psi  =  \hat {H}( \hat {H} \psi ) =  \hat {H}(E \psi ) = E( \hat {H} \psi ) = E^2 \psi 
+    </tex>
+    Hence the variance of the energy is zero given by
+    <tex display="block">
+         \Delta  H =  \sqrt { \langle  H^2  \rangle  -  \langle  H  \rangle ^2} = 0
+    </tex>
+    This implies that the energy of the system is conserved.
+</block></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2992</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr>  <route>phy-0002.xml</route> <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The Wave Function</title> </frontmatter> <mainmatter><p>
+    This post introduces the concept of the wave function in quantum mechanics.
+    Refer to <link href="quantum-2018.xml" type="local" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</link>.
+</p><p>
+    Consider a particle of mass <tex>m</tex> moving along <tex>x</tex>-axis
+    subject to force <tex>F(x, t)</tex>.
+    With Newton's second law, we have:
+    <tex display="block">
+        F = ma
+    </tex>
+    For <strong>conservative systems</strong>, the force
+    can be expressed as the derivative of a <strong>potential energy</strong>.
+    <tex display="block">
+        F = - \frac { \partial  V}{ \partial  x}
+    </tex>
+    Now the equation of motion becomes:
+    <tex display="block">
+        m  \frac {d^2x}{dt^2} = - \frac { \partial  V}{ \partial  x}
+    </tex>
+    With appropriate initial conditions we can determine the <tex>x(t)</tex>,
+    this is what we normally do in classic mechanics.
+</p><p>
+    For <strong>Quantum Mechanics</strong>, we have a different perspective.
+    We would like to look for the <strong>wave function</strong>, <tex>\Psi (x, t)</tex>.
+    To determine it we need to solve the <strong>Schrodinger equation</strong>.
+    <tex display="block">
+        i \hbar \frac { \partial }{ \partial  t} \Psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \Psi (x,t)}{ \partial  x^2} + V(x,t) \Psi (x,t)
+    </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2993</anchor>  <taxon>Definition</taxon> <addr>def-0030</addr>  <route>def-0030.xml</route>   <title>Schrodinger's equation</title> </frontmatter> <mainmatter><p>
+    The <strong>Schrodinger equation</strong> is a linear partial differential equation that describes the wave function of a quantum system.
+    It is given by (the general form):
+    <tex display="block">
+        i \hbar \frac { \partial }{ \partial  t} \Psi ( \vec {r},t) =  \hat {H} \Psi ( \vec {r},t)
+    </tex>
+    where:
+    <ul><li><tex>\Psi ( \vec {r},t)</tex> is the wave function of the quantum system.
+        </li>
+        <li><tex>\hat {H}</tex> is the <strong>Hamiltonian operator</strong>.
+        </li>
+        <li><tex>\hbar  = 1.054573 \times10 ^{-34} \text {Js} </tex> is the reduced <strong>Planck constant</strong>.
+        </li></ul></p></mainmatter> </tree><p>
+    The role of Schrodinger equation is similar to the role of Newton's second law in classic mechanics.
+    Given proper initial conditions,
+    we can determine <tex>\Psi (x, t)</tex> for all the future time.
+</p><p>
+    The wave function is quite odd, what information does it carry?
+    The wave function is <em>spread out</em> in space.
+    How can this be related to the <strong>state</strong> of a particle.
+</p><p><strong>Born's statistical interpretation</strong> of the wave function provides an answer.
+    For a fixed time <tex>t</tex>, the probability of finding the particle in the interval <tex>[a, b]</tex> is given by:
+    <tex display="block">
+        P(a, b) =  \int _a^b |{ \Psi (x, t)}|^2 dx
+    </tex></p><p>
+    Here is where the quantum mechanics differs from classic mechanics and behaves weirdly.
+    The wave function is not a deterministic function, but a <em>statistical</em> function, which 
+    is an <strong>indeterministic</strong> interpretation.
+</p><p>
+    Suppose I do <strong>measure</strong> the position of the particle,
+    and find it at <tex>\vec {r}_0</tex>.
+    Then where it was before the measurement?
+    There are many interpretations of this question,
+    and I will explain three of them.
+</p><p><ul><li><strong>Realist interpretation</strong>: The particle has a definite position before the measurement, just at <tex>\vec {r}_0</tex> but we just don't know it.</li>
+        <li><strong>Orthodox interpretation</strong>: The particle doesn't have a <em>definite</em> position before the measurement, it is in a <strong>superposition</strong> of all possible positions.
+        This is also called the <strong>Copenhagen interpretation</strong>.</li>
+        <li><strong>Agnostic interpretation</strong>: The question is meaningless, refuse to answer.</li></ul></p><p>
+    Nowadays, the Copenhagen interpretation is the most widely accepted interpretation.
+    The particle does not have a definite position before the measurement.
+    The operation of measurement <strong>collapses</strong> the wave function to a definite position.
+</p><p>
+    Probability is the key concept in quantum mechanics.
+    Now I will introduce some terimnologies related to continuous probability.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2994</anchor>  <taxon>Definition</taxon> <addr>def-0031</addr>  <route>def-0031.xml</route>   <title>Probability Density</title> </frontmatter> <mainmatter><p>
+    A <strong>probability density</strong> is a function <tex>p(x)</tex> such that:
+    <ul><li><tex>p(x) \geq  0</tex> for all <tex>x</tex>.
+        </li>
+        <li><tex>\int _{- \infty }^{ \infty } p(x)dx = 1</tex>.
+        </li></ul>
+    With this we can define the <strong>probability function</strong> in an interval <tex>[a,b]</tex> as:
+    <tex display="block">
+        P(a, b) =  \int _a^b p(x)dx
+    </tex></p><block open="open"><headline>Expectation Value</headline> 
+    The <strong>expectation value</strong> of a function <tex>f(x)</tex> with respect to the probability density <tex>p(x)</tex> is defined:
+    <tex display="block">
+         \langle  f(x)  \rangle  =  \int _{- \infty }^{ \infty } f(x)p(x)dx
+    </tex>
+</block><block open="open"><headline>Variance</headline> 
+    The <strong>variance</strong> of a function <tex>f(x)</tex> with respect to the probability density <tex>p(x)</tex> is defined:
+    <tex display="block">
+         \sigma ^2 : \equiv   \langle  x^2  \rangle  -  \langle  x  \rangle ^2
+    </tex>
+</block></mainmatter> </tree><p>
+    Now go back to quantum mechanics.
+    We have seen that the squared wave function <tex>| \Psi (x,t)|^2</tex> is a probability density.
+    So it satisfies
+    <tex display="block">
+         \int _{- \infty }^{ \infty } | \Psi (x,t)|^2 dx = 1
+    </tex></p><p>
+    Solve the equations we will get a set of solutions.
+    We should pick a proper factor to make the wave function <strong>normalized</strong>.
+    But if I have normalized the wave function at time <tex>t_0</tex>,
+    will it stay normalized at all future time?
+    Fortunately the Schrodinger equation guarantees the normalization of 
+    the wave function.
+    
+  
+    <block open="open"><headline><strong>Proof</strong>.</headline> 
+        Differentiate the normalization condition with respect to time:
+        <tex display="block">
+             \frac {d}{dt} \int _{- \infty }^{ \infty } | \Psi (x,t)|^2 dx = 
+             \int _{- \infty }^{ \infty }  \frac { \partial }{ \partial  t}| \Psi (x,t)|^2 dx
+        </tex>
+        With the product rule:
+        <tex display="block">
+             \frac { \partial }{ \partial  t}| \Psi (x,t)|^2 = 
+             \frac { \partial }{ \partial  t} \Psi (x,t) \Psi ^*(x,t) +  \Psi (x,t) \frac { \partial }{ \partial  t} \Psi ^*(x,t)
+        </tex>
+        where <tex>\Psi ^*(x,t)</tex> is the <strong>complex conjugate</strong> of <tex>\Psi (x,t)</tex>.
+        The Schrodinger equation gives
+        <tex display="block">
+             \frac { \partial \Psi }{ \partial  t} =  \frac {i \hbar }{2m} \frac { \partial ^2 \Psi }{ \partial  x^2} +  \frac {iV}{ \hbar } \Psi 
+        </tex>
+        and also the complex conjugate
+        <tex display="block">
+             \frac { \partial \Psi ^*}{ \partial  t} = - \frac {i \hbar }{2m} \frac { \partial ^2 \Psi ^*}{ \partial  x^2} +  \frac {iV}{ \hbar } \Psi ^*
+        </tex>
+        so
+        <tex display="block">
+             \begin {align*}
+                 \frac { \partial }{ \partial  t}| \Psi (x,t)|^2 &amp;= 
+                 \frac {i \hbar }{2m} \left (  \frac { \partial ^2 \Psi }{ \partial  x^2} \Psi ^* -  \frac { \partial ^2 \Psi ^*}{ \partial  x^2} \Psi   \right ) \\ 
+                &amp;=  \frac {i \hbar }{2m} \frac { \partial }{ \partial  x} \left (  \frac { \partial \Psi }{ \partial  x} \Psi ^* -  \frac { \partial \Psi ^*}{ \partial  x} \Psi   \right )
+             \end {align*}
+        </tex>
+        Now the integral becomes:
+        <tex display="block">
+             \frac {d}{dt} \int _{- \infty }^{ \infty } | \Psi (x,t)|^2 dx = 
+             \frac {i \hbar }{2m} \left (  \Psi \frac { \partial \Psi ^*}{ \partial  x} -  \Psi ^* \frac { \partial \Psi }{ \partial  x}  \right ) \Big |_{- \infty }^{ \infty }
+        </tex>
+        Because the <strong>normalization condition</strong>
+        <tex display="block">
+             \int _{- \infty }^{ \infty } | \Psi (x,t)|^2 dx = 1
+        </tex>
+        implies that the wave function vanishes at infinity,
+        that is, converges to zero at infinity. Hence we have
+        <tex display="block">
+             \lim _{|x| \to \infty }| \Psi (x,t)| = 0
+        </tex>
+        this indicates that the integral is zero.
+        <tex display="block">
+             \frac {d}{dt} \int _{- \infty }^{ \infty } | \Psi (x,t)|^2 dx = 0
+        </tex>
+        Now we can conclude that the wave function stays normalized at all future time.
+    </block>
+  </p><p>
+    For a particle in state <tex>\Psi</tex>, we have defined its <strong>expectation value</strong>:
+    <tex display="block">
+         \langle  x  \rangle  =  \int _{- \infty }^{ \infty } x| \Psi (x,t)|^2 dx
+    </tex>
+    Can we give a meaning to it? Is it the <strong>average</strong> position of the particle? 
+    No, the first measurement of the position of the particle will give a definite position,
+    and the subsequent measurements will give the same result.
+</p><p>
+    Actually, the expectation value is the <em>average</em> of 
+    repeated measurements on an ensemble of identical prepared systems,
+    not the average of repeated measurements on a <em>single</em> system.
+</p><block open="open"><headline><strong>Construction.</strong></headline> 
+    As times goes on, the expectation values varies.
+    We naturally ask how fast it moves?
+    Use simple calculus we can get the answer.
+    <tex display="block">
+         \begin {align*}
+             \frac {d}{dt} \langle  x  \rangle  &amp;=  \int _{- \infty }^{ \infty } x \frac { \partial }{ \partial  t}| \Psi (x,t)|^2 dx  \\ 
+            &amp;=  \frac {i \hbar }{2m} \int _{- \infty }^{ \infty } x \frac { \partial }{ \partial  x} ( \frac { \partial \Psi }{ \partial  x} \Psi ^* +  \Psi \frac { \partial \Psi ^*}{ \partial  x}) dx
+         \end {align*}
+    </tex>
+    Simplify using integration by parts, we get
+    <tex display="block">
+         \frac {d}{dt} \langle  x  \rangle  = - \frac {i \hbar }{2m} \int _{- \infty }^{ \infty }  \left (  \Psi ^* \frac { \partial \Psi }{ \partial  x} -  \Psi \frac { \partial \Psi ^*}{ \partial  x}  \right ) dx
+    </tex>
+    Note that the boundary term was eliminated because the wave function vanishes at infinity.
+    Perform integration by parts again on the second term
+    <tex display="block">
+         \langle  v  \rangle  : \equiv \frac {d}{dt} \langle  x  \rangle  = - \frac {i \hbar }{m} \int _{- \infty }^{ \infty }  \Psi ^* \frac { \partial \Psi }{ \partial  x} dx
+    </tex>
+    Note that we give a name to the integral, <tex>v</tex>, indicating the <strong>velocity</strong> of the expectation value.
+</block><p>
+    To work with <strong>momentum</strong>, we can define:
+    <tex display="block">
+         \langle  p  \rangle  = m  \langle  v  \rangle  = -i \hbar \int _{- \infty }^{ \infty }  \Psi ^* \frac { \partial \Psi }{ \partial  x} dx
+    </tex>
+    Rewrite as an <strong>operator</strong> form:
+    <tex display="block">
+         \langle  p  \rangle  =  \int _{- \infty }^{ \infty }  \Psi ^* \left (  \frac { \hbar }{i} \frac { \partial }{ \partial  x}  \right ) \Psi  dx
+    </tex>
+    Compare with 
+    <tex display="block">
+         \langle  x  \rangle  =  \int _{- \infty }^{ \infty }  \Psi ^*(x) \Psi  dx
+    </tex></p><p>
+    That's interesting, an operator that acts on the wave function and gives position and momentum.
+    We can generalize this to any function of position and momentum.
+    Just simply do substitution:
+    <tex display="block">
+         \langle  Q(x,p)  \rangle  = 
+         \int _{- \infty }^{ \infty }  \Psi ^*(x)Q \left ( x, -i \hbar \frac { \partial }{ \partial  x}  \right ) \Psi  dx
+    </tex>
+    Momentum and position are just special cases of this general formula.
+    We will give a firmer theoretical foundation to this equation later.
+    Now we just use it as an <em>axiom</em>.
+</p><p>
+    Now we discuss about the <strong>uncertainty principle</strong>.
+    The more precise a wave's position is, the less precise its momentum (or the wavelength) is, and vice versa.
+    A theorem in Fourier Analysis gives a precise statement of this principle (explain later).
+    For this moment we only concerned with the qualitative argument.
+</p><p>
+    The wavelength of a wave function <tex>\Psi</tex> is related to the momentum of the particle.
+    This result from the <strong>de Broglie formula</strong>.
+    <tex display="block">
+        p =  \frac {h}{ \lambda } =  \frac {2 \pi \hbar }{ \lambda }
+    </tex>
+    Now we can give a qualitative argument for the uncertainty principle.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2995</anchor>  <taxon>Definition</taxon> <addr>def-0033</addr>  <route>def-0033.xml</route>   <title>Heisenberg Uncertainty Principle</title> </frontmatter> <mainmatter><p>
+    The <strong>Heisenberg Uncertainty Principle</strong> states that
+    it is impossible to measure simultaneously the position and the momentum of a particle
+    with arbitrary precision.
+    The product of the uncertainties in position and momentum is bounded by:
+    <tex display="block">
+         \Delta  x  \Delta  p  \geq   \frac { \hbar }{2}
+    </tex>
+    where <tex>\Delta  x</tex> and <tex>\Delta  p</tex> are the uncertainties in position and momentum, respectively.
+    The constant <tex>\hbar</tex> is the reduced Planck constant.
+</p></mainmatter> </tree></mainmatter> </tree></backlinks> <references/></backmatter></tree>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4433</anchor>  <taxon>Definition</taxon> <addr>def-0014</addr>  <route>def-0014.xml</route>   <title>Real Number System</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4804</anchor>  <taxon>Definition</taxon> <addr>def-0014</addr>  <route>def-0014.xml</route>   <title>Real Number System</title> </frontmatter> <mainmatter><p>
     The element of <tex>\mathbb {R}</tex> is a <link href="def-0013.xml" type="local" addr="def-0013" title="Dedekind cuts">Dedekind Cut</link> in <tex>\mathbb {Q}</tex>.
     <tex display="block">
          \mathbb {R} :=  \{  L | (L,R)  \text { is a Dedekind Cut}  \} 
-    </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4434</anchor>  <taxon>Math Analysis</taxon> <addr>math-0004</addr>  <route>math-0004.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>The construction of <tex>\mathbb {R}</tex></title> </frontmatter> <mainmatter><p>
+    </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4805</anchor>  <taxon>Math Analysis</taxon> <addr>math-0004</addr>  <route>math-0004.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>The Construction of <tex>\mathbb {R}</tex></title> </frontmatter> <mainmatter><p>
     We start constructing <tex>\mathbb {R}</tex> from <tex>\mathbb {Q}</tex> by a way that it satisfies the existence theorem,
     the core of construction.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4435</anchor>  <taxon>Theorem</taxon> <addr>thm-0003</addr>  <route>thm-0003.xml</route>   <title>Existence theorem</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4806</anchor>  <taxon>Theorem</taxon> <addr>thm-0003</addr>  <route>thm-0003.xml</route>   <title>Existence theorem</title> </frontmatter> <mainmatter><p>
     There exists an ordered field <tex>\mathbb {R}</tex> that satisfies the <link href="def-0012.xml" type="local" addr="def-0012" title="Least upper bound property">least upper bound property</link>.
     Moreover <tex>\mathbb {R}</tex> contains <tex>\mathbb {Q}</tex> as a subfield.
 </p></mainmatter> </tree><p>
     The least-upper-bound property mentioned above is defined:
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4436</anchor>  <taxon>Definition</taxon> <addr>def-0012</addr>  <route>def-0012.xml</route>   <title>Least upper bound property</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4807</anchor>  <taxon>Definition</taxon> <addr>def-0012</addr>  <route>def-0012.xml</route>   <title>Least upper bound property</title> </frontmatter> <mainmatter><p>
     A set <tex>S</tex> has the least upper bound property if every non-empty subset <tex>T</tex> of <tex>S</tex> that is bounded above has a least upper bound <tex>\sup  T</tex>.
 </p></mainmatter> </tree><p>
     Why do we need the least-upper-bound property?
@@ -36,7 +36,7 @@
         <li>Closed downward</li>
         <li>Contains not the largest number</li></ul>
     A formal definition is given below:
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4437</anchor>  <taxon>Definition</taxon> <addr>def-0013</addr>  <route>def-0013.xml</route>   <title>Dedekind cuts</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4808</anchor>  <taxon>Definition</taxon> <addr>def-0013</addr>  <route>def-0013.xml</route>   <title>Dedekind cuts</title> </frontmatter> <mainmatter><p>
     A Dedekind cut is a partition of the rationals <tex>\mathbb {Q}</tex> into two non-empty sets <tex>L</tex> and <tex>R</tex> such that:
     <ul><li><tex>L \neq \emptyset</tex></li>
         <li><tex>R \neq \emptyset</tex></li>
@@ -47,7 +47,7 @@
     Now define the order relation on <tex>\mathbb {R}</tex>.
     We have defined <tex>\mathbb {R}</tex> as the set of Dedekind cuts, so we can define the strict partial order relation <tex>&lt;</tex> on <tex>\mathbb {R}</tex> by the set operation <tex>\subset</tex>.
     The irreflexive, asymmetric and transitive properties are trivial. 
-</p></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4438</anchor>  <taxon>Definition</taxon> <addr>def-0013</addr>  <route>def-0013.xml</route>   <title>Dedekind cuts</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4809</anchor>  <taxon>Definition</taxon> <addr>def-0013</addr>  <route>def-0013.xml</route>   <title>Dedekind cuts</title> </frontmatter> <mainmatter><p>
     A Dedekind cut is a partition of the rationals <tex>\mathbb {Q}</tex> into two non-empty sets <tex>L</tex> and <tex>R</tex> such that:
     <ul><li><tex>L \neq \emptyset</tex></li>
         <li><tex>R \neq \emptyset</tex></li>

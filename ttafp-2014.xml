@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5483</anchor>  <taxon>Reference</taxon> <addr>ttafp-2014</addr>  <route>ttafp-2014.xml</route>  <authors><author>Rob Nederpelt</author><author>Darrell F. Schroeter</author> </authors> <title>Type Theory and Formal Proofs</title> <meta name="doi">10.1017/CBO9781139567725</meta><meta name="venue">Mathematics, Logic, Categories and Sets, Computer Science, Programming Languages and Applied Logic</meta></frontmatter> <mainmatter/> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5484</anchor>  <taxon>Type Theory</taxon> <addr>tt-0001</addr>  <route>tt-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Untyped Lambda Calculus</title> </frontmatter> <mainmatter><p>
+    Refer to <link href="ttafp-2014.xml" type="local" addr="ttafp-2014" title="Type Theory and Formal Proofs">Type Theory and Formal Proof</link>.
+</p><p>
+In dealing with functions there are two <strong>construction principles</strong> and one <strong>evalutaion rule</strong>
+<ul><li>Construction Principles</li>
+<ul><li>Function Abstraction: <tex>\lambda  x.M</tex></li>
+<li>Function Application: <tex>M N</tex></li></ul>
+<li>Evaluation Rule</li>
+<ul><li>Beta Reduction: <tex>( \lambda  x.M)N \to  M[N/x]</tex></li></ul></ul>
+The beta reduction makes use of the <strong>substitution</strong> <tex>M[N/x]</tex> which represents the result of replacing all free occurences of <tex>x</tex> in <tex>M</tex> with <tex>N</tex>.
+</p>
+<p>Expressions in the lambda calculus is called <strong>terms</strong>. The set of terms is denoted <tex>\Lambda</tex>.</p>
+<tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5485</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title> </frontmatter> <mainmatter><p>
+Let <tex>\Lambda</tex> be the set of lambda terms. Then <tex>\Lambda</tex> is defined inductively as follows:
+(<tex>V</tex> is the set of variables)
+<ul><li>Variable: <tex>\forall  x \in  V, x \in   \Lambda</tex></li>
+<li>Abstraction: <tex>\forall  x \in  V, M \in   \Lambda ,  \lambda  x.M \in   \Lambda</tex></li>
+<li>Application: <tex>\forall  M,N \in   \Lambda , (MN) \in   \Lambda</tex></li></ul></p><p>
+Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 possibilities are separated by <code>|</code>):
+<tex display="block">\Lambda  = V |  \lambda  V. \Lambda  |  \Lambda \Lambda</tex></p></mainmatter> </tree> 
+</mainmatter> </tree></backlinks> <references/></backmatter></tree>

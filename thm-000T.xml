@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2859</anchor>  <taxon>Theorem</taxon> <addr>thm-000T</addr>  <route>thm-000T.xml</route>   <title>Isomorphism of equal dimensions</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3030</anchor>  <taxon>Theorem</taxon> <addr>thm-000T</addr>  <route>thm-000T.xml</route>   <title>Isomorphism of equal dimensions</title> </frontmatter> <mainmatter><p>
     Two finite-dimensional vector spaces over <tex>\mathbb {F}</tex>
     are isomorphic iff they have the same <link href="def-001V.xml" type="local" addr="def-001V" title="Dimension">dimension</link>.
-</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2860</anchor>  <taxon>Linear Algebra</taxon> <addr>math-0005</addr>  <route>math-0005.xml</route> <date><year>2024</year> <month>1</month> <day>31</day></date>  <title>Linear Maps</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3031</anchor>  <taxon>Linear Algebra</taxon> <addr>math-0005</addr>  <route>math-0005.xml</route> <date><year>2024</year> <month>1</month> <day>31</day></date>  <title>Linear Maps</title> </frontmatter> <mainmatter><p>
+    This note introduces the concept of linear maps.
+    Refer to <link href="linear-algebra-2015.xml" type="local" addr="linear-algebra-2015" title="Linear Algebra Done Right">Linear Algebra Done Right</link>.
+</p><p>
     Now we arrive at the main topic of this chapter: linear maps. 
     In classic mathematics, to understand the properties of the structure or space,
     we often study the maps between them.
     For vector spaces we study the <strong>linear maps</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2861</anchor>  <taxon>Definition</taxon> <addr>def-0025</addr>  <route>def-0025.xml</route>   <title>Linear Map</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3032</anchor>  <taxon>Definition</taxon> <addr>def-0025</addr>  <route>def-0025.xml</route>   <title>Linear Map</title> </frontmatter> <mainmatter><p>
     A <strong>linear map</strong> is a function between two vector spaces that preserves the operations of addition and scalar multiplication.
     In other words, a function <tex>T: V  \to  W</tex> where <tex>V,W</tex> are vector spaces if the following conditions are satisfied:
     <ul><li>Additivity: <tex>T(u+v) = T(u) + T(v)</tex> for all <tex>u,v  \in  V</tex></li>
@@ -18,14 +21,14 @@
     Now we can talk about the set of all linear maps between two vector spaces.
     <tex display="block">
          \mathcal {L} (V,W) =  \{    T: V  \to  W | T  \text { is a linear map}   \} 
-    </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2862</anchor>  <taxon>Example</taxon> <addr>eg-0002</addr>  <route>eg-0002.xml</route>   <title>Differentiation is linear map</title> </frontmatter> <mainmatter><p>
+    </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3033</anchor>  <taxon>Example</taxon> <addr>eg-0002</addr>  <route>eg-0002.xml</route>   <title>Differentiation is linear map</title> </frontmatter> <mainmatter><p>
     Define <tex>D \in \mathcal {L} ( \mathcal {P}( \mathbb {R} ), \mathcal {P}( \mathbb {R} ))</tex> (recall that <tex>\mathcal {P}</tex> means <link href="def-0027.xml" type="local" addr="def-0027" title="Polynomial">set of polynomials</link>) by
     <tex display="block">
         D(f) = f'
     </tex>
     We can see that <tex>D</tex> a linear map.
     <ul><li>Additivity: <tex>D(f+g) = (f+g)' = f' + g' = D(f) + D(g)</tex></li>
-        <li>Homogeneity: <tex>D( \alpha  f) = ( \alpha  f)' =  \alpha  f' =  \alpha  D(f)</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2863</anchor>  <taxon>Definition</taxon> <addr>eg-0003</addr>  <route>eg-0003.xml</route>   <title>Integration is linear map</title> </frontmatter> <mainmatter><p>
+        <li>Homogeneity: <tex>D( \alpha  f) = ( \alpha  f)' =  \alpha  f' =  \alpha  D(f)</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3034</anchor>  <taxon>Definition</taxon> <addr>eg-0003</addr>  <route>eg-0003.xml</route>   <title>Integration is linear map</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be the vector space of all continuous functions on the interval <tex>[a,b]</tex>.
     The map <tex>I: V  \to  V</tex> defined by
     <tex display="block">
@@ -39,7 +42,7 @@
     </tex></p></mainmatter> </tree><p>
     We can find a linear map that takes on <em>whatever values we wish</em> on the 
     vectors in a basis by the following theorem.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2864</anchor>  <taxon>Theorem</taxon> <addr>thm-000F</addr>  <route>thm-000F.xml</route>   <title>Linear maps and basis of domain</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3035</anchor>  <taxon>Theorem</taxon> <addr>thm-000F</addr>  <route>thm-000F.xml</route>   <title>Linear maps and basis of domain</title> </frontmatter> <mainmatter><p>
     Let <tex>v_1, v_2,  \ldots , v_n</tex> be a basis of vector space <tex>V</tex>.
     Then for any vector space <tex>W</tex> and any vectors <tex>w_1, w_2,  \ldots , w_n</tex> in <tex>W</tex>,
     there exists a unique linear map <tex>T: V  \to  W</tex> such that
@@ -49,7 +52,7 @@
     Now let's turn to the algebraic operations over the set of linear maps <tex>\mathcal {L} (V,W)</tex>.
     We begin by defining the addition and scalar multiplication of linear maps.
     This leads to a surprising result: the set of linear maps is actually a vector space.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2865</anchor>  <taxon>Definition</taxon> <addr>def-0029</addr>  <route>def-0029.xml</route>   <title>Addition and scalar multiplication over <tex>\mathcal {L} (V,W)</tex></title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3036</anchor>  <taxon>Definition</taxon> <addr>def-0029</addr>  <route>def-0029.xml</route>   <title>Addition and scalar multiplication over <tex>\mathcal {L} (V,W)</tex></title> </frontmatter> <mainmatter><p>
     Let <tex>T_1, T_2  \in   \mathcal {L} (V,W)</tex>.
     We define the <strong>addition</strong> of <tex>T_1</tex> and <tex>T_2</tex> as the linear map <tex>T_1 + T_2: V  \to  W</tex> such that
     <tex display="block">
@@ -67,7 +70,7 @@
     Usually it makes no sense to multiply two linear maps. But we can define
     an operation called the <strong>product</strong> of linear maps, which is just the composition of the two functions.
     This can form a <strong>monoid</strong> or even a <strong>group</strong> under certain conditions.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2866</anchor>  <taxon>Definition</taxon> <addr>def-002A</addr>  <route>def-002A.xml</route>   <title>Product of Linear Maps</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3037</anchor>  <taxon>Definition</taxon> <addr>def-002A</addr>  <route>def-002A.xml</route>   <title>Product of Linear Maps</title> </frontmatter> <mainmatter><p>
     Let <tex>T_1: V  \to  W</tex> and <tex>T_2: W  \to  U</tex> be linear maps.
     We define the <strong>product</strong> of <tex>T_1</tex> and <tex>T_2</tex> as the linear map <tex>T_2  \circ  T_1: V  \to  U</tex> such that
     <tex display="block">
@@ -96,7 +99,7 @@
         (S_1 + S_2)T = S_1T + S_2T  \quad   \text {and}  \quad  T(S_1 + S_2) = TS_1 + TS_2
     </tex></p></mainmatter> </tree><p>
     In algebra, we have a structure named <strong>kernel</strong>, which is the set of all elements that are mapped to the zero element.
-    For linear maps, the kernel is the <strong>null space</strong></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2867</anchor>  <taxon>Definition</taxon> <addr>def-002C</addr>  <route>def-002C.xml</route>   <title>Null Space</title> </frontmatter> <mainmatter><p>
+    For linear maps, the kernel is the <strong>null space</strong></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3038</anchor>  <taxon>Definition</taxon> <addr>def-002C</addr>  <route>def-002C.xml</route>   <title>Null Space</title> </frontmatter> <mainmatter><p>
     For <tex>T: V  \to  W</tex>, the <strong>null space</strong> of <tex>T</tex> is the set of all vectors in <tex>V</tex> that are mapped to <tex>0</tex> in <tex>W</tex>.
     <tex display="block">
          \text {null }  T =  \{   v  \in  V | T(v) = 0   \} 
@@ -105,16 +108,16 @@
 </p></mainmatter> </tree><p>
     The injective linear map is defined like normal <link href="def-002D.xml" type="local" addr="def-002D" title="Injective">injective</link> functions.
     To check whether a linear map is injective, we can just check whether the null space is trivial.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2868</anchor>  <taxon>Theorem</taxon> <addr>thm-000G</addr>  <route>thm-000G.xml</route>   <title>Injectivity equivalent to Kernel Triviality</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3039</anchor>  <taxon>Theorem</taxon> <addr>thm-000G</addr>  <route>thm-000G.xml</route>   <title>Injectivity equivalent to Kernel Triviality</title> </frontmatter> <mainmatter><p>
     Let <tex>T: V  \to  W</tex> be a linear map. Then <tex>T</tex> is injective if and only if <tex>\text {null }  T =  \{   0   \}</tex>.
 </p></mainmatter> </tree><p>
     The image of a linear map is the set of all elements that are mapped to by some element in the domain.
     This is called the <strong>range</strong> of the linear map, just like <link href="def-002E.xml" type="local" addr="def-002E" title="Range">range</link> of normal function.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2869</anchor>  <taxon>Theorem</taxon> <addr>thm-000H</addr>  <route>thm-000H.xml</route>   <title>Range is a subspace</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3040</anchor>  <taxon>Theorem</taxon> <addr>thm-000H</addr>  <route>thm-000H.xml</route>   <title>Range is a subspace</title> </frontmatter> <mainmatter><p>
     If <tex>T: V  \to  W</tex> is a linear map, then the range of <tex>T</tex> is a subspace of <tex>W</tex>.
 </p></mainmatter> </tree><p>
     The next theorem plays a crucial role in the study of linear maps.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2870</anchor>  <taxon>Theorem</taxon> <addr>thm-000I</addr>  <route>thm-000I.xml</route>   <title>Fundamental Theorems of Linear Maps</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3041</anchor>  <taxon>Theorem</taxon> <addr>thm-000I</addr>  <route>thm-000I.xml</route>   <title>Fundamental Theorems of Linear Maps</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be finite-dimensional vector space and <tex>T : V  \to  W</tex> be a linear map. 
     Then <tex>\text {range }  T</tex> is finite-dimensional and 
     <tex display="block">
@@ -123,21 +126,21 @@
     Now we can show that no linear map from a finite-dimensional vector space
     to a <em>smaller</em> (In dimension) vector space can be <link href="def-002D.xml" type="local" addr="def-002D" title="Injective">injective</link>.
     This can be easily proved by the fundamental theorem of linear maps.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2871</anchor>  <taxon>Lemma</taxon> <addr>thm-000M</addr>  <route>thm-000M.xml</route>   <title>Map to smaller dimension is not injective</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3042</anchor>  <taxon>Lemma</taxon> <addr>thm-000M</addr>  <route>thm-000M.xml</route>   <title>Map to smaller dimension is not injective</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> and <tex>W</tex> be finite-dimensional vector spaces, 
     and <tex>\dim  V &gt;  \dim  W</tex>.
     Then no linear map <tex>T:V \to  W</tex> is injective.
 </p></mainmatter> </tree><p>
     Similarly, we can show that no linear map from a finite-dimensional vector space
     to a <em>larger</em> (In dimension) vector space can be <link href="def-002F.xml" type="local" addr="def-002F" title="Surjective">surjective</link>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2872</anchor>  <taxon>Lemma</taxon> <addr>thm-000N</addr>  <route>thm-000N.xml</route>   <title>Map to bigger dimension is not surjective</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3043</anchor>  <taxon>Lemma</taxon> <addr>thm-000N</addr>  <route>thm-000N.xml</route>   <title>Map to bigger dimension is not surjective</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> and <tex>W</tex> be finite-dimensional vector spaces, 
     and <tex>\dim  V &lt;  \dim  W</tex>.
     Then no linear map <tex>T:V \to  W</tex> is surjective.
 </p></mainmatter> </tree><p>
     These two lemmas are very important in the study of linear equations.
     The idea here is to express linear equations system in terms of linear maps.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2873</anchor>  <taxon>Example</taxon> <addr>eg-0004</addr>  <route>eg-0004.xml</route>   <title>Homogeneous Linear Equations System</title> </frontmatter> <mainmatter><block open="open"><headline>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3044</anchor>  <taxon>Example</taxon> <addr>eg-0004</addr>  <route>eg-0004.xml</route>   <title>Homogeneous Linear Equations System</title> </frontmatter> <mainmatter><block open="open"><headline>
     <strong>Reprase in terms of a linear map the question of whether a <link href="def-002Q.xml" type="local" addr="def-002Q" title="Homogeneous Linear Equations">homogeneous system linear equations</link> has a nonzero solution.</strong>
 </headline> 
     Let <tex>A</tex> be the coefficient matrix of a homogeneous linear system.
@@ -160,14 +163,14 @@
         asking <tex>\text {null }  T</tex> is nontrivial.
         That is, <tex>T</tex> is <link href="thm-000G.xml" type="local" addr="thm-000G" title="Injectivity equivalent to Kernel Triviality">not injective</link>.
     </p>
-</block></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2874</anchor>  <taxon>Theorem</taxon> <addr>thm-000O</addr>  <route>thm-000O.xml</route>   <title>Homogeneous system of linear equations</title> </frontmatter> <mainmatter><p> 
+</block></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3045</anchor>  <taxon>Theorem</taxon> <addr>thm-000O</addr>  <route>thm-000O.xml</route>   <title>Homogeneous system of linear equations</title> </frontmatter> <mainmatter><p> 
     A homogeneous system of linear equations
     with more variables than equations has 
     a nontrivial solution.
 </p></mainmatter> </tree><p>
     We have seen that <link href="thm-000M.xml" type="local" addr="thm-000M" title="Map to smaller dimension is not injective">map to smaller dimension is not injective</link>.
     <tex>T</tex> is not injective if <tex>n &gt; m</tex>. This results the theorem above.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2875</anchor>  <taxon>Example</taxon> <addr>eg-0005</addr>  <route>eg-0005.xml</route>   <title>Inhomogeneous Linear Equations System</title> </frontmatter> <mainmatter><block open="open"><headline>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3046</anchor>  <taxon>Example</taxon> <addr>eg-0005</addr>  <route>eg-0005.xml</route>   <title>Inhomogeneous Linear Equations System</title> </frontmatter> <mainmatter><block open="open"><headline>
     <strong>Rephrase in terms of a linear map the question of whether a inhomogeneous system linear equations has no solutions
     for some choice of constant terms.</strong>
 </headline> 
@@ -191,7 +194,7 @@
         Thus the question is rephrased as not having a solution for some choice of <tex>\vec {b}</tex>.
         What condition ensures <tex>T</tex> is not surjective.
     </p>
-</block></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2876</anchor>  <taxon>Theorem</taxon> <addr>thm-000P</addr>  <route>thm-000P.xml</route>   <title>Inhomogeneous system of linear equations</title> </frontmatter> <mainmatter><p>
+</block></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3047</anchor>  <taxon>Theorem</taxon> <addr>thm-000P</addr>  <route>thm-000P.xml</route>   <title>Inhomogeneous system of linear equations</title> </frontmatter> <mainmatter><p>
     An inhomogeneous system of linear equations
     with more equations than variables has 
     no solution for some choice of the constant term.
@@ -200,7 +203,7 @@
     We know that for any value of a linear map <tex>T:V \to  W</tex>,
     can be determined by values <tex>\{   T(v_1), T(v_2),  \cdots , T(v_n)   \}</tex>.
     This leads to the definition of the matrix representation of a linear map.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2877</anchor>  <taxon>Definition</taxon> <addr>def-002R</addr>  <route>def-002R.xml</route>   <title>Matrix</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3048</anchor>  <taxon>Definition</taxon> <addr>def-002R</addr>  <route>def-002R.xml</route>   <title>Matrix</title> </frontmatter> <mainmatter><p>
     Let <tex>m,n \in   \mathbb {Z} ^+</tex>.
     A <tex>m \times  n</tex> matrix is a rectangular array of elements of a field <tex>\mathbb {F}</tex>
     with <tex>m</tex> <strong>rows</strong> and <tex>n</tex> <strong>columns</strong>.
@@ -215,7 +218,7 @@
     The notation <tex>A_{jk}</tex> refers to the element in the <tex>j</tex>-th row and <tex>k</tex>-th column.
 </p></mainmatter> </tree><p>
     Now we can define the matrix representation of a linear map.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2878</anchor>  <taxon>Definition</taxon> <addr>def-002S</addr>  <route>def-002S.xml</route>   <title>Matrix of Linear Maps</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3049</anchor>  <taxon>Definition</taxon> <addr>def-002S</addr>  <route>def-002S.xml</route>   <title>Matrix of Linear Maps</title> </frontmatter> <mainmatter><p>
     Let <tex>T \in   \mathcal {L} (V,W)</tex>,
     <tex>\{   v_1, \ldots ,v_n   \} \subset  V</tex> be a basis of <tex>V</tex>,
     and <tex>\{   w_1, \ldots ,w_m   \} \subset  W</tex> be a basis of <tex>W</tex>.
@@ -259,7 +262,7 @@
     or <tex>\mathbb {F} ^{m \times  n}</tex>.
 </block></mainmatter> </tree><p>
     We can see that <tex>\mathbb {F} ^{m \times  n}</tex> is itself a vector space.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2879</anchor>  <taxon>Theorem</taxon> <addr>thm-000Q</addr>  <route>thm-000Q.xml</route>   <title><tex>\dim \mathbb {F} ^{m \times  n} = mn</tex></title> </frontmatter> <mainmatter><p><tex>\mathbb {F} ^{m \times  n}</tex> is a vector space with dimension <tex>mn</tex>.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3050</anchor>  <taxon>Theorem</taxon> <addr>thm-000Q</addr>  <route>thm-000Q.xml</route>   <title><tex>\dim \mathbb {F} ^{m \times  n} = mn</tex></title> </frontmatter> <mainmatter><p><tex>\mathbb {F} ^{m \times  n}</tex> is a vector space with dimension <tex>mn</tex>.
 </p></mainmatter> </tree><p>
     Consider linear maps <tex>T:U \to  V</tex> and <tex>S:V \to  W</tex>.
     The composition of linear maps is <tex>ST</tex>.
@@ -268,7 +271,7 @@
          \mathcal {M} (ST) =  \mathcal {M} (S) \mathcal {M} (T)
     </tex>
     This makes no sense now but indicates the definition of <strong>matrix multiplication</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2880</anchor>  <taxon>Definition</taxon> <addr>def-002T</addr>  <route>def-002T.xml</route>   <title>Matrix Multiplication</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3051</anchor>  <taxon>Definition</taxon> <addr>def-002T</addr>  <route>def-002T.xml</route>   <title>Matrix Multiplication</title> </frontmatter> <mainmatter><p>
     Let <tex>A</tex> be a <tex>m \times  n</tex> matrix and <tex>B</tex> be a <tex>n \times  p</tex> matrix.
     Then <tex>AC</tex> is defined as the <tex>m \times  p</tex> matrix <tex>C</tex> such that
     <tex display="block">
@@ -295,7 +298,7 @@
     Now we see that the desired matrix multiplication holds.
     Matrix multiplication is not commutative in general.
     However, it satisfies the associative law and the distributive law.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2881</anchor>  <taxon>Definition</taxon> <addr>def-002Y</addr>  <route>def-002Y.xml</route>   <title><tex>A_{j \cdot }</tex> and <tex>A_{ \cdot  j}</tex></title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3052</anchor>  <taxon>Definition</taxon> <addr>def-002Y</addr>  <route>def-002Y.xml</route>   <title><tex>A_{j \cdot }</tex> and <tex>A_{ \cdot  j}</tex></title> </frontmatter> <mainmatter><p>
     Let <tex>A</tex> be a <tex>m \times  n</tex> matrix.
     <ul><li>
             If <tex>1 \leq  j \leq  m</tex> then <tex>A_{j \cdot }</tex> is the <tex>j</tex>-th row of <tex>A</tex>,
@@ -306,7 +309,7 @@
             defined as a <tex>m \times  1</tex> matrix. (A column vector)
         </li></ul></p></mainmatter> </tree><p>
     With the notation we can think of matrix multiplication in another perspective.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2882</anchor>  <taxon>Lemma</taxon> <addr>thm-000R</addr>  <route>thm-000R.xml</route>   <title>Entry pf matrix product</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3053</anchor>  <taxon>Lemma</taxon> <addr>thm-000R</addr>  <route>thm-000R.xml</route>   <title>Entry pf matrix product</title> </frontmatter> <mainmatter><p>
     Suppose <tex>A</tex> is an <tex>m \times  n</tex> matrix and <tex>B</tex> is an <tex>n \times  p</tex> matrix.
     Then the entry of the product <tex>AB</tex> is:
     <tex display="block">
@@ -315,7 +318,7 @@
     for <tex>1 \leq  i \leq  m</tex> and <tex>1 \leq  j \leq  p</tex>.
 </p></mainmatter> </tree><p>
     We have an interesting observation.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2883</anchor>  <taxon>Lemma</taxon> <addr>thm-000S</addr>  <route>thm-000S.xml</route>   <title>Linear Combination of columns</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3054</anchor>  <taxon>Lemma</taxon> <addr>thm-000S</addr>  <route>thm-000S.xml</route>   <title>Linear Combination of columns</title> </frontmatter> <mainmatter><p>
     Let <tex>A</tex> be an <tex>m \times  n</tex> matrix,
     and <tex>c</tex> is a <tex>1 \times  1</tex> matrix.
     <tex display="block">
@@ -326,7 +329,7 @@
     with the scalars that multiply the columns coming from <tex>c</tex>.
 </p></mainmatter> </tree><p>
     Now we begin the study the invertibility of linear maps.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2884</anchor>  <taxon>Definition</taxon> <addr>def-002Z</addr>  <route>def-002Z.xml</route>   <title>Inverse</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3055</anchor>  <taxon>Definition</taxon> <addr>def-002Z</addr>  <route>def-002Z.xml</route>   <title>Inverse</title> </frontmatter> <mainmatter><p>
     A linear map <tex>T \in \mathcal {L} (V,W)</tex> is said to be <tex>invertible</tex> if 
     there exists a linear map <tex>S \in \mathcal {L} (W,V)</tex> such that:
     <tex display="block">
@@ -344,18 +347,18 @@
 </p></mainmatter> </tree><p>
     A linear map is invertible if and only if
     it is <strong>bijective</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2885</anchor>  <taxon>Theorem</taxon> <addr>thm-000U</addr>  <route>thm-000U.xml</route>   <title><tex>\mathcal {L} (V,W)</tex> is isomorphic to <tex>\mathbb {F} ^{m \times  n}</tex></title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3056</anchor>  <taxon>Theorem</taxon> <addr>thm-000U</addr>  <route>thm-000U.xml</route>   <title><tex>\mathcal {L} (V,W)</tex> is isomorphic to <tex>\mathbb {F} ^{m \times  n}</tex></title> </frontmatter> <mainmatter><p>
     Let <tex>v_1, v_2,  \ldots , v_n</tex> be a basis for <tex>V</tex>,
     and <tex>w_1, w_2,  \ldots , w_m</tex> be a basis for <tex>W</tex>.
     Then <tex>\mathcal {M}</tex> is an isomorphism between <tex>\mathcal {L} (V,W)</tex> and <tex>\mathbb {F} ^{m \times  n}</tex>.
 </p></mainmatter> </tree><p>
     This has a trivial corollary.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2886</anchor>  <taxon>Corollary</taxon> <addr>thm-000V</addr>  <route>thm-000V.xml</route>   <title>Dimension product</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3057</anchor>  <taxon>Corollary</taxon> <addr>thm-000V</addr>  <route>thm-000V.xml</route>   <title>Dimension product</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> and <tex>W</tex> be finite-dimensional vector spaces.
     Then <tex>\mathcal {L} (V,W)</tex> is finite-dimensional and
     <tex display="block">
          \dim ( \mathcal {L} (V,W)) =  \dim (V) \dim (W).
-    </tex></p></mainmatter> </tree></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2887</anchor>  <taxon>Definition</taxon> <addr>def-001V</addr>  <route>def-001V.xml</route>   <title>Dimension</title> </frontmatter> <mainmatter><p>
+    </tex></p></mainmatter> </tree></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3058</anchor>  <taxon>Definition</taxon> <addr>def-001V</addr>  <route>def-001V.xml</route>   <title>Dimension</title> </frontmatter> <mainmatter><p>
     The <strong>dimension</strong> of a finite-dimensional vector space <tex>V</tex> is the length of any basis of the vector space.
     Denoted by <tex>\dim  V</tex>.
 </p></mainmatter> </tree></related> <backlinks/> <references/></backmatter></tree>

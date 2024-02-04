@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3963</anchor>  <taxon>Definition</taxon> <addr>def-000Z</addr>  <route>def-000Z.xml</route>   <title>Preorder</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4193</anchor>  <taxon>Definition</taxon> <addr>def-000Z</addr>  <route>def-000Z.xml</route>   <title>Preorder</title> </frontmatter> <mainmatter><p>
     A <strong>preorder</strong> is a relation <tex>\leq</tex> that is reflexive and transitive.
     <ul><li>Reflexive: <tex>a \leq  a</tex></li>
-        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3964</anchor>  <taxon>Set Theory</taxon> <addr>math-0003</addr>  <route>math-0003.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Set Theory</title> </frontmatter> <mainmatter><p><strong>Set</strong> is a common concept in mathematics.
+        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4194</anchor>  <taxon>Set Theory</taxon> <addr>math-0003</addr>  <route>math-0003.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Set Theory</title> </frontmatter> <mainmatter><p>
+    Refer to <link href="cat-sci-2013.xml" type="local" addr="cat-sci-2013" title="Category theory for scientists">Category Theory for Scientists</link>.
+</p><p><strong>Set</strong> is a common concept in mathematics.
     This post is a brief introduction to set theory aimed at 
     complete all basic knowledge of set theory.
     The following topics will be covered
@@ -11,7 +13,7 @@
         <li>Cardinality</li>
         <li>Set theory constructions</li></ul></p><p>
     In this post, we use the Zermelo-Fraenkel set theory with the Axiom of Choice (<strong>ZFC</strong>).
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3965</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>ZFC Set</title> </frontmatter> <mainmatter><p><strong>ZFC</strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4195</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>ZFC Set</title> </frontmatter> <mainmatter><p><strong>ZFC</strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
     The axioms of ZFC are listed below.
     <ul><li><strong>Axiom of Extensionality</strong>:
             Two sets are equal if and only if they have the same elements.
@@ -46,7 +48,7 @@
             </p></li>
         <li><strong>Axiom of Choice</strong>:
             For any family of non-empty sets <tex>X</tex>, there exists a function <tex>f:X \to \bigcup  X</tex> such that for any <tex>x \in  X</tex>, <tex>f(x) \in  x</tex>.
-        </li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3966</anchor>  <taxon>Definition</taxon> <addr>def-002V</addr>  <route>def-002V.xml</route>   <title>Set Operations</title> </frontmatter> <mainmatter><p>
+        </li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4196</anchor>  <taxon>Definition</taxon> <addr>def-002V</addr>  <route>def-002V.xml</route>   <title>Set Operations</title> </frontmatter> <mainmatter><p>
     Let <tex>(X_i)_{i \in  I}</tex> be a family of sets.
 </p><block open="open"><headline><strong>Union</strong></headline> 
     <tex display="block">
@@ -67,25 +69,25 @@
     </tex>
 </block></mainmatter> </tree><p>
     And principles of set theory
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3967</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4197</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
     Two sets are equal if and only if they have the same elements.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3968</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4198</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
     Given a set <tex>A</tex> and a property <tex>P(x)</tex>, there exists a set <tex>B</tex> such that
     <tex>x \in  B  \iff  x \in  A  \land  P(x)</tex>.
 </p></mainmatter> </tree><p>
     We then define the Cartesian product of two sets
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3969</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4199</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
     Given two sets <tex>A</tex> and <tex>B</tex>, the Cartesian product <tex>A \times  B</tex> is the set
     of all ordered pairs <tex>(a,b)</tex> where <tex>a \in  A</tex> and <tex>b \in  B</tex>.
 </p></mainmatter> </tree><p>
     With the Cartesian product, we can define the relation
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3970</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4200</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
     A <strong>relation</strong> <tex>R</tex> is a subset of the Cartesian product of two sets <tex>A</tex> and
     <tex>B</tex>, i.e. <tex>R \subseteq  A \times  B</tex>.
     If <tex>(a,b) \in  R</tex>, we write <tex>aRb</tex>.
 
     A relation that between <tex>X</tex> and itself is called <strong>homogeneous relation</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3971</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence Relation</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4201</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence Relation</title> </frontmatter> <mainmatter><p>
     An equivalence relation <tex>R</tex> on a set <tex>A</tex> is a <link href="def-000W.xml" type="local" addr="def-000W" title="Relation">relation</link> that is reflexive,
     symmetric, and transitive.
     <ul><li>Reflexive:
@@ -95,7 +97,7 @@
         <li>Transitive:
             <tex>\forall  x,y,z \in  A, xRy \land  yRz \implies  xRz</tex></li></ul>
     We often denote the equivalence relation by <tex>\sim</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3972</anchor>  <taxon>Definition</taxon> <addr>def-002U</addr>  <route>def-002U.xml</route>   <title>Equivalence Class</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4202</anchor>  <taxon>Definition</taxon> <addr>def-002U</addr>  <route>def-002U.xml</route>   <title>Equivalence Class</title> </frontmatter> <mainmatter><p>
     Let <tex>\sim</tex> be an <link href="def-000X.xml" type="local" addr="def-000X" title="Equivalence Relation">equivalence relation</link> on a set <tex>A</tex>.
     For any element <tex>a \in  A</tex>, the <strong>equivalence class</strong> of <tex>a</tex> is the set
     <tex>[a] =  \set {b \in  A:b \sim  a}</tex>.
@@ -106,7 +108,7 @@
     </p></p></mainmatter> </tree><p>
     One of the most important relations is the order relation.
     The basic order relation is the preorder.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3973</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4203</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
     A <strong>(non-strict) partial order</strong> is a relation <tex>\leq</tex> that is reflexive, antisymmetric and transitive.
     <ul><li>Reflexive: <tex>a \leq  a</tex></li>
         <li>Antisymmetric: <tex>a \leq  b</tex> and <tex>b \leq  a</tex> implies <tex>a=b</tex></li>
@@ -114,13 +116,13 @@
     A non-strict partial order is also known as an antisymmetric <link href="def-000Z.xml" type="local" addr="def-000Z" title="Preorder">preorder</link>.
 </p></mainmatter> </tree><p>
     And the strict partial order (notice the difference between asymmetric and antisymmetric)
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3974</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4204</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
     A strict partial order is a relation <tex>&lt;</tex> that is irreflexive, asymmetric and transitive.
     <ul><li>Irreflexive: <tex>\neg (a&lt;a)</tex></li>
         <li>Asymmetric: <tex>a&lt;b</tex> implies <tex>\neg (b&lt;a)</tex></li>
         <li>Transitive: <tex>a&lt;b</tex> and <tex>b&lt;c</tex> implies <tex>a&lt;c</tex></li></ul></p></mainmatter> </tree><p>
     With the definition of order, we can define the upper bound and lower bound
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3975</anchor>  <taxon>Definition</taxon> <addr>def-0011</addr>  <route>def-0011.xml</route>   <title>Upper Bound and Lower Bound</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4205</anchor>  <taxon>Definition</taxon> <addr>def-0011</addr>  <route>def-0011.xml</route>   <title>Upper Bound and Lower Bound</title> </frontmatter> <mainmatter><p>
     Let a subset <tex>S</tex> of a <link href="def-000Y.xml" type="local" addr="def-000Y" title="Partial Order">partially ordered</link> set <tex>(P,  \leq )</tex>,
     <tex>S</tex> is bounded above if there exists <tex>x  \in  P</tex> such that <tex>\forall  y  \in  S, y  \leq  x</tex>. And <tex>x</tex> is called an <strong>upper bound</strong> of <tex>S</tex>.
     Dually, <tex>S</tex> is bounded below if there exists <tex>x  \in  P</tex> such that <tex>\forall  y  \in  S, x  \leq  y</tex>. And <tex>x</tex> is called a <strong>lower bound</strong> of <tex>S</tex>.
@@ -137,7 +139,7 @@
     if for all lower bounds <tex>z  \in  P</tex> of <tex>S</tex>, <tex>z  \leq  x</tex>.
     Denoted as <tex>x =  \inf  S</tex>.
     </p>
-</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3976</anchor>  <taxon>Definition</taxon> <addr>def-002G</addr>  <route>def-002G.xml</route>   <title>Function</title> </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4206</anchor>  <taxon>Definition</taxon> <addr>def-002G</addr>  <route>def-002G.xml</route>   <title>Function</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets then a <strong>function</strong> <tex>f:X  \to  Y</tex>
     is a mapping that sends each element of <tex>X</tex> to a unique element of <tex>Y</tex>,
     denoted by <tex>f(x) = y</tex>.
@@ -156,7 +158,7 @@
     The set of all functions from <tex>X</tex> to <tex>Y</tex> is denoted by <tex>\hom _ \text {set} (X, Y)</tex>.
 </p></mainmatter> </tree><p>
     The isomorphism function is defined as follows
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3977</anchor>  <taxon>Definition</taxon> <addr>def-002H</addr>  <route>def-002H.xml</route>   <title>Set Isomorphism</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4207</anchor>  <taxon>Definition</taxon> <addr>def-002H</addr>  <route>def-002H.xml</route>   <title>Set Isomorphism</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets and <tex>f: X  \to  Y</tex> be a function.
     The function <tex>f</tex> is called an <strong>isomorphism</strong> if it is both <link href="def-002D.xml" type="local" addr="def-002D" title="Injective">injective</link> and <link href="def-002F.xml" type="local" addr="def-002F" title="Surjective">surjective</link>.
     In other words, there exists a function <tex>g: Y  \to  X</tex> such that
@@ -171,7 +173,7 @@
 </p></mainmatter> </tree><p>
     With isomorphism, we can define the cardinality of a set.
     Two isomorphic sets have the same cardinality.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3978</anchor>  <taxon>Definition</taxon> <addr>def-002I</addr>  <route>def-002I.xml</route>   <title>Cardinality</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4208</anchor>  <taxon>Definition</taxon> <addr>def-002I</addr>  <route>def-002I.xml</route>   <title>Cardinality</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> be a set and <tex>n  \in   \mathbb {N}</tex>. 
     <tex>A</tex> si said to have <strong>cardinality</strong> <tex>n</tex>, denoted by <tex> |A|= n</tex>,
     if there exists an isomorphism between <tex>A</tex> and <tex>S_n =  \{   1,2, \cdots ,n   \}</tex>.
@@ -179,7 +181,7 @@
     we say <tex>A</tex> is <strong>infinite</strong>, denoted by <tex>|A|  \geq   \infty</tex>.
 </p></mainmatter> </tree><p>
     The next topic is the product of sets
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3979</anchor>  <taxon>Definition</taxon> <addr>def-002J</addr>  <route>def-002J.xml</route>   <title>Product of Sets</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4209</anchor>  <taxon>Definition</taxon> <addr>def-002J</addr>  <route>def-002J.xml</route>   <title>Product of Sets</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets, then the <strong>Cartesian product</strong> of <tex>X</tex> and <tex>Y</tex> is the set
     <tex display="block">
         X  \times  Y =  \set {(x,y)  \mid  x  \in  X  \text { and } y  \in  Y}
@@ -189,40 +191,84 @@
          \pi _1 : X  \times  Y  \to  X  \text { and }  \pi _2 : X  \times  Y  \to  Y
     </tex></p></mainmatter> </tree><p>
     This leads to an improtant concept named <strong>universal property</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3980</anchor>  <taxon>Lemma</taxon> <addr>thm-000J</addr>  <route>thm-000J.xml</route>   <title>Universal Property for Product of Sets</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4210</anchor>  <taxon>Lemma</taxon> <addr>thm-000J</addr>  <route>thm-000J.xml</route>   <title>Universal Property for Product of Sets</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets.
     For any set <tex>A</tex> and function
     <tex>f: A  \to  X</tex> and <tex>g: A  \to  Y</tex>,
     there exists a <em>unique</em> function <tex>h: A  \to  X  \times  Y</tex> such that
     the following diagram commutes:
     
-    <center><img src="resources/4157eb89f51117c585cb94d00d036a56.svg"/></center>
+    <center><embedded-tex hash="4157eb89f51117c585cb94d00d036a56"><embedded-tex-preamble>
+       \usepackage {tikz-cd}
+       \usepackage {amssymb}
+    </embedded-tex-preamble> <embedded-tex-body>
+         
+         \begin {tikzcd}
+            &amp; {X \times  Y}  \\ 
+            X &amp;&amp; Y  \\ 
+            &amp; A
+             \arrow [&quot;{ \pi _1}&quot;', from=1-2, to=2-1]
+             \arrow [&quot;{ \pi _2}&quot;, from=1-2, to=2-3]
+             \arrow [&quot;f&quot;, from=3-2, to=2-1]
+             \arrow [&quot;g&quot;', from=3-2, to=2-3]
+             \arrow [&quot;{ \exists !}&quot;, dashed, from=3-2, to=1-2]
+         \end {tikzcd}
+     
+    </embedded-tex-body></embedded-tex></center>
 
     We might denote the unique function by <tex>\langle  f,g  \rangle : A  \to  X  \times  Y</tex>.
     It is sufficient to define <tex>\langle  f,g  \rangle (a) = (f(a),g(a))</tex> for all <tex>a \in  A</tex> as the unique function.
 </p></mainmatter> </tree><p>
     Dual to the product of sets, we have the coproduct of sets
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3981</anchor>  <taxon>Definition</taxon> <addr>def-002K</addr>  <route>def-002K.xml</route>   <title>Coproduct of Sets</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4211</anchor>  <taxon>Definition</taxon> <addr>def-002K</addr>  <route>def-002K.xml</route>   <title>Coproduct of Sets</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets, then the <strong>coproduct</strong> of <tex>X</tex> and <tex>Y</tex> is 
     defined as the <strong>disjoint union</strong> of <tex>X</tex> and <tex>Y</tex>, denoted by <tex>X  \sqcup  Y</tex>.
     There are two natural injections from the original sets to the coproduct, namely
     <tex display="block">
         i_1 : X  \to  X  \sqcup  Y  \text { and } i_2 : Y  \to  X  \sqcup  Y
-    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3982</anchor>  <taxon>Lemma</taxon> <addr>thm-000K</addr>  <route>thm-000K.xml</route>   <title>Universal Property for Coproduct of Sets</title> </frontmatter> <mainmatter><p>
+    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4212</anchor>  <taxon>Lemma</taxon> <addr>thm-000K</addr>  <route>thm-000K.xml</route>   <title>Universal Property for Coproduct of Sets</title> </frontmatter> <mainmatter><p>
     Let <tex>X</tex> and <tex>Y</tex> be sets. For any set <tex>A</tex> and function
     <tex>f : X  \to  A</tex> and <tex>g : Y  \to  A</tex>, there exists a <em>unique</em> function
     <tex>h : X  \sqcup  Y  \to  A</tex> such that the following diagram commutes:
     
-    <center><img src="resources/31473672edfba5d6215d76dd08a01a24.svg"/></center>
+    <center><embedded-tex hash="31473672edfba5d6215d76dd08a01a24"><embedded-tex-preamble>
+       \usepackage {tikz-cd}
+       \usepackage {amssymb}
+    </embedded-tex-preamble> <embedded-tex-body>
+         
+         \begin {tikzcd}
+            &amp; A  \\ 
+            X &amp;&amp; Y  \\ 
+            &amp; {X \sqcup  Y}
+             \arrow [&quot;{i_1}&quot;', from=2-1, to=3-2]
+             \arrow [&quot;{i_2}&quot;, from=2-3, to=3-2]
+             \arrow [&quot;f&quot;, from=2-1, to=1-2]
+             \arrow [&quot;g&quot;', from=2-3, to=1-2]
+             \arrow [&quot;{ \exists !}&quot;, dashed, from=3-2, to=1-2]
+         \end {tikzcd}   
+     
+    </embedded-tex-body></embedded-tex></center>
 
     We might denote the unique as <tex>f \sqcup  g: X  \sqcup  Y  \to  A</tex>.
 </p></mainmatter> </tree><p>
     In this section we discuss the <em>limits</em> of variously-shaped diagrams of sets.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3983</anchor>  <taxon>Definition</taxon> <addr>def-002L</addr>  <route>def-002L.xml</route>   <title>Pullback of Sets</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4213</anchor>  <taxon>Definition</taxon> <addr>def-002L</addr>  <route>def-002L.xml</route>   <title>Pullback of Sets</title> </frontmatter> <mainmatter><p>
     Suppose we have sets <tex>X</tex>, <tex>Y</tex>, and <tex>Z</tex> and functions
     <tex>f : X  \to  Z</tex> and <tex>g : Y  \to  Z</tex>.
     
-    <center><img src="resources/aea0109fc5888410344cbfd1c2bfad2d.svg"/></center>
+    <center><embedded-tex hash="aea0109fc5888410344cbfd1c2bfad2d"><embedded-tex-preamble>
+       \usepackage {tikz-cd}
+       \usepackage {amssymb}
+    </embedded-tex-preamble> <embedded-tex-body>
+         
+         \begin {tikzcd}
+            &amp; Y  \\ 
+            X &amp; Z
+             \arrow [&quot;f&quot;', from=2-1, to=2-2]
+             \arrow [&quot;g&quot;, from=1-2, to=2-2]
+         \end {tikzcd}
+     
+    </embedded-tex-body></embedded-tex></center>
 
     Its <strong>fiber product</strong> is the set
     <tex display="block">
@@ -234,71 +280,119 @@
     </tex>
     such that the following diagram commutes (<tex>W = X  \times _Z Y</tex>):
     
-    <center><img src="resources/9194755931a1b27a68b010256252d579.svg"/></center>
+    <center><embedded-tex hash="9194755931a1b27a68b010256252d579"><embedded-tex-preamble>
+       \usepackage {tikz-cd}
+       \usepackage {amssymb}
+    </embedded-tex-preamble> <embedded-tex-body>
+         
+         \begin {tikzcd}
+            W &amp; Y  \\ 
+            X &amp; Z
+             \arrow [&quot;f&quot;', from=2-1, to=2-2]
+             \arrow [&quot;g&quot;, from=1-2, to=2-2]
+             \arrow [&quot;{ \pi _2}&quot;, from=1-1, to=1-2]
+             \arrow [&quot;{ \pi _1}&quot;', from=1-1, to=2-1]
+             \arrow [&quot; \lrcorner &quot;{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+         \end {tikzcd}
+     
+    </embedded-tex-body></embedded-tex></center>
 
     The <strong>pullback</strong> is defined to be any set <tex>W  \cong  X \times _Z Y</tex>
     The corner symbol indicates <tex>W</tex> is a <em>pullback</em></p></mainmatter> </tree><p>
     The pullback also satisfies the universal property.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3984</anchor>  <taxon>Lemma</taxon> <addr>thm-000L</addr>  <route>thm-000L.xml</route>   <title>Universal Property for Pullback</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4214</anchor>  <taxon>Lemma</taxon> <addr>thm-000L</addr>  <route>thm-000L.xml</route>   <title>Universal Property for Pullback</title> </frontmatter> <mainmatter><p>
     Suppose the given diagram:
     
-    <center><img src="resources/5e6f2da5af96f3d2b5aa340ada59f646.svg"/></center>
+    <center><embedded-tex hash="5e6f2da5af96f3d2b5aa340ada59f646"><embedded-tex-preamble>
+       \usepackage {tikz-cd}
+       \usepackage {amssymb}
+    </embedded-tex-preamble> <embedded-tex-body>
+         
+         \begin {tikzcd}
+            &amp; Y  \\ 
+            X &amp; Z
+             \arrow [&quot;t&quot;', from=2-1, to=2-2]
+             \arrow [&quot;u&quot;, from=1-2, to=2-2]
+         \end {tikzcd}
+     
+    </embedded-tex-body></embedded-tex></center>
 
     For any set <tex>A</tex> and commutative solid arrow diagram as below
     (functions <tex>f:A \to  X</tex> and <tex>g:A \to  Y</tex> such that <tex>t \circ  f = u \circ  g</tex>):
     
-    <center><img src="resources/2d3ff6bcdbabe8193a5f90642c805f62.svg"/></center>
+    <center><embedded-tex hash="2d3ff6bcdbabe8193a5f90642c805f62"><embedded-tex-preamble>
+       \usepackage {tikz-cd}
+       \usepackage {amssymb}
+    </embedded-tex-preamble> <embedded-tex-body>
+         
+         \usetikzlibrary {arrows}
+         \begin {tikzcd}
+            &amp; {X \times _ZY}  \\ 
+             \\ 
+            &amp; A  \\ 
+            X &amp;&amp; Y  \\ 
+            &amp; Z
+             \arrow [&quot;f&quot;', from=3-2, to=4-1]
+             \arrow [&quot;g&quot;, from=3-2, to=4-3]
+             \arrow [&quot;t&quot;', from=4-1, to=5-2]
+             \arrow [&quot;u&quot;, from=4-3, to=5-2]
+             \arrow [&quot;{ \exists !}&quot;, dashed, from=3-2, to=1-2]
+             \arrow [&quot;{ \pi _1}&quot;', bend right, from=1-2, to=4-1]
+	         \arrow [&quot;{ \pi _2}&quot;, bend left, from=1-2, to=4-3]
+         \end {tikzcd}
+     
+    </embedded-tex-body></embedded-tex></center>
 
     there exists a <em>unique</em> arrow <tex>\langle  f,g  \rangle _Z: A \to  X \times _Z Y</tex> such that
     <tex display="block">
          \pi _1 \circ \langle  f,g  \rangle _Z = f  \text { and }  \pi _2 \circ \langle  f,g  \rangle _Z = g
-    </tex></p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3985</anchor>   <addr>def</addr>  <route>def.xml</route>   <title>Definitions Collection</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3986</anchor>  <taxon>Definition</taxon> <addr>def-0001</addr>  <route>def-0001.xml</route>   <title>Group</title> </frontmatter> <mainmatter><p>
+    </tex></p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4215</anchor>   <addr>def</addr>  <route>def.xml</route>   <title>Definitions Collection</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4216</anchor>  <taxon>Definition</taxon> <addr>def-0001</addr>  <route>def-0001.xml</route>   <title>Group</title> </frontmatter> <mainmatter><p>
 A <strong>group</strong> is a set <tex>G</tex> with a binary operation <tex>\circ</tex> satisfies the following properties:
 <ul><li>Closure: <tex>\forall  a,b \in  G,a  \circ  b \in  G</tex></li>
 <li>Associativity: <tex>\forall  a,b,c \in  G, (a \circ  b)  \circ  c= a  \circ  (b  \circ  c)</tex></li>
 <li>Identity: <tex>\exists  e \in  G</tex> such that <tex>\forall  g \in  G, g \circ  e=e \circ  g = g</tex></li>
-<li>Inverse: <tex>\forall  g \in  G, \exists  g^{-1} \in  G</tex> such that <tex>g \circ  g^{-1}=e</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3987</anchor>  <taxon>Definition</taxon> <addr>def-0002</addr>  <route>def-0002.xml</route>   <title>Abel Group</title> </frontmatter> <mainmatter><p>
+<li>Inverse: <tex>\forall  g \in  G, \exists  g^{-1} \in  G</tex> such that <tex>g \circ  g^{-1}=e</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4217</anchor>  <taxon>Definition</taxon> <addr>def-0002</addr>  <route>def-0002.xml</route>   <title>Abel Group</title> </frontmatter> <mainmatter><p>
 If in a <link href="def-0001.xml" type="local" addr="def-0001" title="Group">group</link> <tex>G</tex>, <tex>\forall  a,b \in  G, a \circ  b=b \circ  a</tex> then <tex>G</tex> is called an <strong>abelian (commutative) group</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3988</anchor>  <taxon>Definition</taxon> <addr>def-0003</addr>  <route>def-0003.xml</route>   <title>Group Element Order</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4218</anchor>  <taxon>Definition</taxon> <addr>def-0003</addr>  <route>def-0003.xml</route>   <title>Group Element Order</title> </frontmatter> <mainmatter><p>
 For a group <tex>G</tex> an <tex>x \in  G</tex> define the <strong>order</strong> of <tex>x</tex> be the smallest positive integer <tex>n</tex> (denotes <tex>|x|</tex>) st <tex>x^n=1</tex>. If such <tex>n</tex> does not exist then <tex>x</tex> is said to be of infinite order.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3989</anchor>  <taxon>Definition</taxon> <addr>def-0004</addr>  <route>def-0004.xml</route>   <title>Multiplication Table</title> </frontmatter> <mainmatter><p>
-Let <tex>G=  \{ g_1, g_2,  \cdots , g_n \}</tex> is finite group. The multiplication table is the <tex>n \times  n</tex> matrix whose <tex>i,j</tex> entry is the group element <tex>g_i  \circ  g_j</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3990</anchor>  <taxon>Definition</taxon> <addr>def-0005</addr>  <route>def-0005.xml</route>   <title>Generator</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4219</anchor>  <taxon>Definition</taxon> <addr>def-0004</addr>  <route>def-0004.xml</route>   <title>Multiplication Table</title> </frontmatter> <mainmatter><p>
+Let <tex>G=  \{ g_1, g_2,  \cdots , g_n \}</tex> is finite group. The multiplication table is the <tex>n \times  n</tex> matrix whose <tex>i,j</tex> entry is the group element <tex>g_i  \circ  g_j</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4220</anchor>  <taxon>Definition</taxon> <addr>def-0005</addr>  <route>def-0005.xml</route>   <title>Generator</title> </frontmatter> <mainmatter><p>
 A subset <tex>S \in  G</tex> where <tex>\forall  g \in  G</tex> can be written as a (finite) product of <tex>s \in  S</tex> and <tex>s^{-1}</tex> is called a set of <strong>generators</strong> of <tex>G</tex>
-<tex>G= \braket {S}</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3991</anchor>  <taxon>Definition</taxon> <addr>def-0006</addr>  <route>def-0006.xml</route>   <title>Field</title> </frontmatter> <mainmatter><p>
+<tex>G= \braket {S}</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4221</anchor>  <taxon>Definition</taxon> <addr>def-0006</addr>  <route>def-0006.xml</route>   <title>Field</title> </frontmatter> <mainmatter><p>
 A field is a set <tex>F</tex> together with two binary operations <tex>+</tex> and <tex>\times</tex> on <tex>F</tex> st <tex>(F,+)</tex> is an <link href="def-0002.xml" type="local" addr="def-0002" title="Abel Group">abelian group</link> (identity is <tex>0</tex>) and <tex>(F- \{ 0 \} , \times )</tex> is also an abelian group such that
-<tex>a \times (b+c)=a \times  b+a \times  c, \forall  a,b,c \in  F</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3992</anchor>  <taxon>Definition</taxon> <addr>def-0007</addr>  <route>def-0007.xml</route>   <title>Monoid</title> </frontmatter> <mainmatter><p>
+<tex>a \times (b+c)=a \times  b+a \times  c, \forall  a,b,c \in  F</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4222</anchor>  <taxon>Definition</taxon> <addr>def-0007</addr>  <route>def-0007.xml</route>   <title>Monoid</title> </frontmatter> <mainmatter><p>
 A set <tex>S</tex> equipped with a binary operation <tex>S \times  S \to  S</tex>, which we will denote <tex>\circ</tex>, is a <strong>monoid</strong> if it satisfies the following two axioms:
 <ul><li>Associativity: <tex>\forall  a,b,c \in  S, (a \circ  b)  \circ  c= a  \circ  (b  \circ  c)</tex></li>
-<li>Identity: <tex>\exists  e \in  S</tex> such that <tex>\forall  g \in  S, g \circ  e=e \circ  g = g</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3993</anchor>  <taxon>Definition</taxon> <addr>def-0008</addr>  <route>def-0008.xml</route>   <title>Group Action</title> </frontmatter> <mainmatter><p>
+<li>Identity: <tex>\exists  e \in  S</tex> such that <tex>\forall  g \in  S, g \circ  e=e \circ  g = g</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4223</anchor>  <taxon>Definition</taxon> <addr>def-0008</addr>  <route>def-0008.xml</route>   <title>Group Action</title> </frontmatter> <mainmatter><p>
 A group action of a group <tex>G</tex> on a set <tex>A</tex> is a map from <tex>G \times  A  \to  A</tex> (<tex>g \cdot  a</tex>), <tex>\forall  g \in  G</tex> and <tex>a \in  A</tex> satisfying the following properties:
 <ul><li><tex>g_1 \cdot  (g_2 \cdot  a)=(g_1g_2) \cdot  a</tex></li>
-<li><tex>\forall  a \in  A,1 \cdot  a = a</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3994</anchor>  <taxon>Definition</taxon> <addr>def-0009</addr>  <route>def-0009.xml</route>   <title>Group Homomorphism</title> </frontmatter> <mainmatter><p>
+<li><tex>\forall  a \in  A,1 \cdot  a = a</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4224</anchor>  <taxon>Definition</taxon> <addr>def-0009</addr>  <route>def-0009.xml</route>   <title>Group Homomorphism</title> </frontmatter> <mainmatter><p>
 Let <tex>(G, \times )</tex> and <tex>(H, \circ )</tex> be groups. A map <tex>\phi  : G \to  H</tex> such that
 <tex>\forall  x,y \in  G, \phi (x \times  y)= \phi (x) \circ \phi (y)</tex> is called a <strong>group homomorphism</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3995</anchor>  <taxon>Definition</taxon> <addr>def-000A</addr>  <route>def-000A.xml</route>   <title>Subgroups</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4225</anchor>  <taxon>Definition</taxon> <addr>def-000A</addr>  <route>def-000A.xml</route>   <title>Subgroups</title> </frontmatter> <mainmatter><p>
 Let <tex>G</tex> be a group and <tex>H</tex> be a nonempty subset of <tex>G</tex> which is closed under operation <tex>\times</tex> and :
 <ul><li><tex>\forall  a,b \in  H,a \times  b \in  H</tex></li>
 <li><tex>\forall  h \in  H,h^{-1} \in  H</tex></li></ul>
-then <tex>H</tex> is a subgroup of <tex>G</tex>. <tex>e=h \times  h^{-1}</tex> is always in group <tex>H</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3996</anchor>  <taxon>Definition</taxon> <addr>def-000B</addr>  <route>def-000B.xml</route>   <title>Euclidean Topology</title> </frontmatter> <mainmatter><p>
+then <tex>H</tex> is a subgroup of <tex>G</tex>. <tex>e=h \times  h^{-1}</tex> is always in group <tex>H</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4226</anchor>  <taxon>Definition</taxon> <addr>def-000B</addr>  <route>def-000B.xml</route>   <title>Euclidean Topology</title> </frontmatter> <mainmatter><p>
 A subset <tex>S</tex> of <tex>\mathbb {R}</tex> is said to be open in the <strong>euclidean topology</strong> on <tex>\mathbb {R}</tex> if <tex>\forall  x \in  S</tex> there exists <tex>a,b \in \mathbb {R}</tex> with <tex>a&lt;b</tex> st <tex>x \in (a,b) \in  S</tex>.
 </p><p>The dual definition (using closed sets) is also valid.</p><p>
 For each <tex>a</tex> and <tex>b</tex> in <tex>\mathbb {R}</tex> with <tex>a&lt;b</tex> the closed intervcal <tex>[a,b]</tex> is a closed set in the euclidean topology in <tex>\mathbb {R}</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3997</anchor>  <taxon>Definition</taxon> <addr>def-000C</addr>  <route>def-000C.xml</route>   <title>Topological Space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4227</anchor>  <taxon>Definition</taxon> <addr>def-000C</addr>  <route>def-000C.xml</route>   <title>Topological Space</title> </frontmatter> <mainmatter><p>
 A <strong>topological space</strong> is a set <tex>S</tex> together with a collection <tex>\tau</tex> of subsets called open sets such that
 <ul><li>T1: <tex>S, \varnothing \in \tau</tex></li>
 <li>T2: <tex>\forall  U,V \in \tau , U \cap  V \in \tau</tex></li>
-<li>T3: The union of any collection of open sets is open.</li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3998</anchor>  <taxon>Definition</taxon> <addr>def-000D</addr>  <route>def-000D.xml</route>   <title>Relative Topology</title> </frontmatter> <mainmatter><p>
+<li>T3: The union of any collection of open sets is open.</li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4228</anchor>  <taxon>Definition</taxon> <addr>def-000D</addr>  <route>def-000D.xml</route>   <title>Relative Topology</title> </frontmatter> <mainmatter><p>
 Let <tex>(X, \tau )</tex> be a topological space and <tex>A \subseteq  X</tex>. Then <tex>\tau _A= \{ U \cap  A \mid  U \in \tau \}</tex> is a topology on <tex>A</tex> called the <strong>relative topology</strong> on <tex>A</tex> induced by <tex>\tau</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3999</anchor>  <taxon>Definition</taxon> <addr>def-000E</addr>  <route>def-000E.xml</route>   <title>Co-finite Topology</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4229</anchor>  <taxon>Definition</taxon> <addr>def-000E</addr>  <route>def-000E.xml</route>   <title>Co-finite Topology</title> </frontmatter> <mainmatter><p>
 Let <tex>X</tex> be a set. The <strong>co-finite topology</strong> on <tex>X</tex> is the topology <tex>\tau</tex> on <tex>X</tex> whose open sets are <tex>\emptyset</tex> and all subsets of <tex>X</tex> whose complement is finite.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4000</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4230</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title> </frontmatter> <mainmatter><p>
 Let <tex>\Lambda</tex> be the set of lambda terms. Then <tex>\Lambda</tex> is defined inductively as follows:
 (<tex>V</tex> is the set of variables)
 <ul><li>Variable: <tex>\forall  x \in  V, x \in   \Lambda</tex></li>
 <li>Abstraction: <tex>\forall  x \in  V, M \in   \Lambda ,  \lambda  x.M \in   \Lambda</tex></li>
 <li>Application: <tex>\forall  M,N \in   \Lambda , (MN) \in   \Lambda</tex></li></ul></p><p>
 Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 possibilities are separated by <code>|</code>):
-<tex display="block">\Lambda  = V |  \lambda  V. \Lambda  |  \Lambda \Lambda</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4001</anchor>  <taxon>Definition</taxon> <addr>def-000G</addr>  <route>def-000G.xml</route>   <title>List</title> </frontmatter> <mainmatter><p>
+<tex display="block">\Lambda  = V |  \lambda  V. \Lambda  |  \Lambda \Lambda</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4231</anchor>  <taxon>Definition</taxon> <addr>def-000G</addr>  <route>def-000G.xml</route>   <title>List</title> </frontmatter> <mainmatter><p>
     Let <tex>n</tex> be a natural number. A <strong>list</strong> of length <tex>n</tex> is an ordered collection of <tex>n</tex> elements.
     <tex display="block">
         (x_1, x_2,  \dots , x_n)
@@ -310,7 +404,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     Let <tex>n</tex> be a natural number. Let <tex>x=(x_1, x_2,  \dots , x_n)</tex> be a list of length <tex>n</tex>. The <strong>additive inverse</strong> of this list is the list <tex>-x=(-x_1, -x_2,  \dots , -x_n)</tex>.
 </p><strong>Scalar Multiplication in Lists</strong><p>
     Let <tex>n</tex> be a natural number. Let <tex>x=(x_1, x_2,  \dots , x_n)</tex> be a list of length <tex>n</tex>. Let <tex>c</tex> be a real number. The <strong>scalar multiplication</strong> of <tex>c</tex> and <tex>x</tex> is the list <tex>cx=(cx_1, cx_2,  \dots , cx_n)</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4002</anchor>  <taxon>Definition</taxon> <addr>def-000H</addr>  <route>def-000H.xml</route>   <title>Vector Space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4232</anchor>  <taxon>Definition</taxon> <addr>def-000H</addr>  <route>def-000H.xml</route>   <title>Vector Space</title> </frontmatter> <mainmatter><p>
     A vector space over a <link href="def-0006.xml" type="local" addr="def-0006" title="Field">field</link> <tex>F</tex> is a non-empty set <tex>V</tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
     In this context, the elements of <tex>F</tex> are commonly called <strong>vectors</strong>, and the elements of <tex>F</tex> are called <strong>scalars</strong>.
     <ul><li>Commutativity: <tex>
@@ -332,16 +426,16 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
              \forall  x, y  \in  V,  \forall  c, d  \in  F, c(x + y) = cx + cy, (c + d)x = cx + dx
         </tex></li></ul></p><p>
     Elements of a vector space are called <strong>vectors</strong> or <strong>points</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4003</anchor>  <taxon>Definition</taxon> <addr>def-000I</addr>  <route>def-000I.xml</route>   <title>Linear Subspace</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4233</anchor>  <taxon>Definition</taxon> <addr>def-000I</addr>  <route>def-000I.xml</route>   <title>Linear Subspace</title> </frontmatter> <mainmatter><p>
     A subset <tex>U</tex> of a vector space <tex>V</tex> over a field <tex>F</tex> is called a <strong>subspace</strong> of <tex>V</tex> if <tex>U</tex> is itself a <strong>vector space</strong> over <tex>F</tex> with the operations of addition and scalar multiplication on <tex>V</tex>.
     The subset also satisfies the following axioms (vice versa):
     <ul><li>Additive identity: <tex>0 \in  U</tex></li>
         <li>Closure: <tex>\forall  u,v \in  U, u+v \in  U</tex></li>
-        <li>Closed Scalar multiplication: <tex>\forall  u \in  U,  \forall  c \in  F, cu \in  U</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4004</anchor>  <taxon>Definition</taxon> <addr>def-000J</addr>  <route>def-000J.xml</route>   <title>Sum of subsets</title> </frontmatter> <mainmatter><p>
+        <li>Closed Scalar multiplication: <tex>\forall  u \in  U,  \forall  c \in  F, cu \in  U</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4234</anchor>  <taxon>Definition</taxon> <addr>def-000J</addr>  <route>def-000J.xml</route>   <title>Sum of subsets</title> </frontmatter> <mainmatter><p>
     Let <tex>U_1,  \dots , U_n</tex> be subsets of a vector space <tex>V</tex>.
     The <strong>sum</strong> of <tex>U_1,  \dots , U_n</tex> is defined as
     <tex display="block">U_1 +  \dots  + U_n =  \{ u_1 +  \dots  + u_n  \mid  u_i  \in  U_i \}</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4005</anchor>  <taxon>Definition</taxon> <addr>def-000K</addr>  <route>def-000K.xml</route>   <title>Direct Sum</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4235</anchor>  <taxon>Definition</taxon> <addr>def-000K</addr>  <route>def-000K.xml</route>   <title>Direct Sum</title> </frontmatter> <mainmatter><p>
     Let <tex>U_1,  \dots , U_n</tex> be subspaces of a vector space <tex>V</tex>.
     The <strong>direct sum</strong> of <tex>U_1,  \dots , U_n</tex> is defined as
     <tex display="block">
@@ -349,7 +443,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     </tex>
     if every element in <tex>U_1  \oplus   \dots   \oplus  U_n</tex> can be written as <tex>u_1 +  \dots  + u_n </tex> in only one way.
     This definition requires every vector in the sum have a unique representation.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4006</anchor>  <taxon>Definition</taxon> <addr>def-000L</addr>  <route>def-000L.xml</route>   <title>Linear Combination</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4236</anchor>  <taxon>Definition</taxon> <addr>def-000L</addr>  <route>def-000L.xml</route>   <title>Linear Combination</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a <link href="def-000H.xml" type="local" addr="def-000H" title="Vector Space">vector space</link> over a field <tex>F</tex>.
     Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
     A <strong>linear combination</strong> of <tex>v_1,  \dots , v_n</tex> is an expression of the form
@@ -357,7 +451,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
         a_1 v_1 +  \dots  + a_n v_n
     </tex>
     where <tex>a_1,  \dots , a_n  \in  F</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4007</anchor>  <taxon>Definition</taxon> <addr>def-000M</addr>  <route>def-000M.xml</route>   <title>Linear Span</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4237</anchor>  <taxon>Definition</taxon> <addr>def-000M</addr>  <route>def-000M.xml</route>   <title>Linear Span</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a vector space over a field <tex>F</tex>.
     Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
     The <strong>span</strong> of <tex>v_1,  \dots , v_n</tex> is defined as
@@ -367,26 +461,26 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     The span of empty set is defined to be <tex>\{ 0 \}</tex>.    
 </p><p>
     If <tex>\text {span} (v_1,  \dots , v_n) = V</tex>, we say that <tex>v_1,  \dots , v_n</tex> <strong>spans</strong> <tex>V</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4008</anchor>  <taxon>Definition</taxon> <addr>def-000N</addr>  <route>def-000N.xml</route>   <title>Finite-Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4238</anchor>  <taxon>Definition</taxon> <addr>def-000N</addr>  <route>def-000N.xml</route>   <title>Finite-Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
     A <link href="def-000H.xml" type="local" addr="def-000H" title="Vector Space">vector space</link> <tex>V</tex> is called <strong>finite-dimensional</strong> if some <link href="def-000G.xml" type="local" addr="def-000G" title="List">list</link> of vectors <tex>v_1,  \dots , v_n</tex> <link href="def-000M.xml" type="local" addr="def-000M" title="Linear Span">spans</link> <tex>V</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4009</anchor>  <taxon>Definition</taxon> <addr>def-000O</addr>  <route>def-000O.xml</route>   <title>Infinite-dimensional vector space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4239</anchor>  <taxon>Definition</taxon> <addr>def-000O</addr>  <route>def-000O.xml</route>   <title>Infinite-dimensional vector space</title> </frontmatter> <mainmatter><p>
     A vector space <tex>V</tex> is called <strong>infinite-dimensional</strong> if it is not <link href="def-000N.xml" type="local" addr="def-000N" title="Finite-Dimensional Vector Space">finite-dimensional</link>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4010</anchor>  <taxon>Definition</taxon> <addr>def-000P</addr>  <route>def-000P.xml</route>   <title>Linearly independent</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4240</anchor>  <taxon>Definition</taxon> <addr>def-000P</addr>  <route>def-000P.xml</route>   <title>Linearly independent</title> </frontmatter> <mainmatter><p>
     A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly independent</strong> if
     <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
     implies that <tex>a_1 =  \dots  = a_n = 0</tex>.
     The trivial case of <tex>\{ 0 \}</tex> is also considered linearly independent.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4011</anchor>  <taxon>Definition</taxon> <addr>def-000Q</addr>  <route>def-000Q.xml</route>   <title>Linearly dependent</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4241</anchor>  <taxon>Definition</taxon> <addr>def-000Q</addr>  <route>def-000Q.xml</route>   <title>Linearly dependent</title> </frontmatter> <mainmatter><p>
     A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly dependent</strong> if
     <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
     for some <tex>a_1,  \dots , a_n  \in   \mathbb {F}</tex> with at least one <tex>a_i  \neq  0</tex> (not all <tex>0</tex>).
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4012</anchor>  <taxon>Definition</taxon> <addr>def-000R</addr>  <route>def-000R.xml</route>   <title>Basis</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4242</anchor>  <taxon>Definition</taxon> <addr>def-000R</addr>  <route>def-000R.xml</route>   <title>Basis</title> </frontmatter> <mainmatter><p>
     A basis of <tex>V</tex> is a list of vectors in <tex>V</tex>
     that is linearly independent and spans <tex>V</tex>. 
 </p><p><strong>Criterion for basis</strong>
     A list of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is a basis of <tex>V</tex> if and only if
     every <tex>v  \in  V</tex> can be written <strong>uniquely</strong> as a linear combination of <tex>v_1,  \dots , v_n</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4013</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>ZFC Set</title> </frontmatter> <mainmatter><p><strong>ZFC</strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4243</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>ZFC Set</title> </frontmatter> <mainmatter><p><strong>ZFC</strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
     The axioms of ZFC are listed below.
     <ul><li><strong>Axiom of Extensionality</strong>:
             Two sets are equal if and only if they have the same elements.
@@ -421,21 +515,21 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
             </p></li>
         <li><strong>Axiom of Choice</strong>:
             For any family of non-empty sets <tex>X</tex>, there exists a function <tex>f:X \to \bigcup  X</tex> such that for any <tex>x \in  X</tex>, <tex>f(x) \in  x</tex>.
-        </li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4014</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
+        </li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4244</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
     Two sets are equal if and only if they have the same elements.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4015</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4245</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
     Given a set <tex>A</tex> and a property <tex>P(x)</tex>, there exists a set <tex>B</tex> such that
     <tex>x \in  B  \iff  x \in  A  \land  P(x)</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4016</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4246</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
     Given two sets <tex>A</tex> and <tex>B</tex>, the Cartesian product <tex>A \times  B</tex> is the set
     of all ordered pairs <tex>(a,b)</tex> where <tex>a \in  A</tex> and <tex>b \in  B</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4017</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4247</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
     A <strong>relation</strong> <tex>R</tex> is a subset of the Cartesian product of two sets <tex>A</tex> and
     <tex>B</tex>, i.e. <tex>R \subseteq  A \times  B</tex>.
     If <tex>(a,b) \in  R</tex>, we write <tex>aRb</tex>.
 
     A relation that between <tex>X</tex> and itself is called <strong>homogeneous relation</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4018</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence Relation</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4248</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence Relation</title> </frontmatter> <mainmatter><p>
     An equivalence relation <tex>R</tex> on a set <tex>A</tex> is a <link href="def-000W.xml" type="local" addr="def-000W" title="Relation">relation</link> that is reflexive,
     symmetric, and transitive.
     <ul><li>Reflexive:
@@ -445,17 +539,17 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
         <li>Transitive:
             <tex>\forall  x,y,z \in  A, xRy \land  yRz \implies  xRz</tex></li></ul>
     We often denote the equivalence relation by <tex>\sim</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4019</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4249</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
     A <strong>(non-strict) partial order</strong> is a relation <tex>\leq</tex> that is reflexive, antisymmetric and transitive.
     <ul><li>Reflexive: <tex>a \leq  a</tex></li>
         <li>Antisymmetric: <tex>a \leq  b</tex> and <tex>b \leq  a</tex> implies <tex>a=b</tex></li>
         <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul>
     A non-strict partial order is also known as an antisymmetric <link href="def-000Z.xml" type="local" addr="def-000Z" title="Preorder">preorder</link>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4020</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4250</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
     A strict partial order is a relation <tex>&lt;</tex> that is irreflexive, asymmetric and transitive.
     <ul><li>Irreflexive: <tex>\neg (a&lt;a)</tex></li>
         <li>Asymmetric: <tex>a&lt;b</tex> implies <tex>\neg (b&lt;a)</tex></li>
-        <li>Transitive: <tex>a&lt;b</tex> and <tex>b&lt;c</tex> implies <tex>a&lt;c</tex></li></ul></p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4021</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
+        <li>Transitive: <tex>a&lt;b</tex> and <tex>b&lt;c</tex> implies <tex>a&lt;c</tex></li></ul></p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4251</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
     A <strong>(non-strict) partial order</strong> is a relation <tex>\leq</tex> that is reflexive, antisymmetric and transitive.
     <ul><li>Reflexive: <tex>a \leq  a</tex></li>
         <li>Antisymmetric: <tex>a \leq  b</tex> and <tex>b \leq  a</tex> implies <tex>a=b</tex></li>
