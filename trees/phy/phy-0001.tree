@@ -253,7 +253,7 @@
     ##{
         E = \gamma mc^2,
         \quad 
-        \vec{p} = \gamma m\vec{m}
+        \vec{p} = \gamma m\vec{v}
     }
     The energy and momentum can be used to define a momentum four-vector
     ##{

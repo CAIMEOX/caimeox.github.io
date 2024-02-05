@@ -1,8 +1,8 @@
-\title{Beta Reduction}
+\title{Divergent Combinator}
 \taxon{Example}
 \import{macros}
 \p{
-    An interesting example of beta reduction is the following:
+    An interesting example named \strong{omega combinator} of beta reduction is the following:
     ##{
         \appl{(\lambda x.\appl{x}{x})}{(\lambda x.\appl{x}{x})}
         \tob
