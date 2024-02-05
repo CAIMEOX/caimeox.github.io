@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2647</anchor>  <taxon>Definition</taxon> <addr>def-002Q</addr>  <route>def-002Q.xml</route>   <title>Homogeneous Linear Equations</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2858</anchor>  <taxon>Definition</taxon> <addr>def-002Q</addr>  <route>def-002Q.xml</route>   <title>Homogeneous Linear Equations</title> </frontmatter> <mainmatter><p>
     A linear equation is called <strong>homogeneous</strong> if it can be written in the form
     <tex display="block">
         a_1x_1 + a_2x_2 +  \cdots  + a_nx_n = 0
@@ -27,7 +27,7 @@
              \vdots  &amp;  \vdots  &amp;  \ddots  &amp;  \vdots   \\ 
             a_{m1} &amp; a_{m2} &amp;  \cdots  &amp; a_{mn}
          \end {bmatrix}
-    </tex></p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2648</anchor>  <taxon>Example</taxon> <addr>eg-0004</addr>  <route>eg-0004.xml</route>   <title>Homogeneous Linear Equations System</title> </frontmatter> <mainmatter><block open="open"><headline>
+    </tex></p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2859</anchor>  <taxon>Example</taxon> <addr>eg-0004</addr>  <route>eg-0004.xml</route>   <title>Homogeneous Linear Equations System</title> </frontmatter> <mainmatter><block open="open"><headline>
     <strong>Reprase in terms of a linear map the question of whether a <link href="def-002Q.xml" type="local" addr="def-002Q" title="Homogeneous Linear Equations">homogeneous system linear equations</link> has a nonzero solution.</strong>
 </headline> 
     Let <tex>A</tex> be the coefficient matrix of a homogeneous linear system.

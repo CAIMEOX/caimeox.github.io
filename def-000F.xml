@@ -1,65 +1,345 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4976</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5344</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title> </frontmatter> <mainmatter><p>
 Let <tex>\Lambda</tex> be the set of lambda terms. Then <tex>\Lambda</tex> is defined inductively as follows:
 (<tex>V</tex> is the set of variables)
 <ul><li>Variable: <tex>\forall  x \in  V, x \in   \Lambda</tex></li>
 <li>Abstraction: <tex>\forall  x \in  V, M \in   \Lambda ,  \lambda  x.M \in   \Lambda</tex></li>
 <li>Application: <tex>\forall  M,N \in   \Lambda , (MN) \in   \Lambda</tex></li></ul></p><p>
 Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 possibilities are separated by <code>|</code>):
-<tex display="block">\Lambda  = V |  \lambda  V. \Lambda  |  \Lambda \Lambda</tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4977</anchor>  <taxon>Type Theory</taxon> <addr>tt-0001</addr>  <route>tt-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Untyped Lambda Calculus</title> </frontmatter> <mainmatter><p>
+<tex display="block">\Lambda  = V |  \lambda  V. \Lambda  |  \Lambda \Lambda</tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5345</anchor>  <taxon>Type Theory</taxon> <addr>tt-0001</addr>  <route>tt-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Untyped Lambda Calculus</title> </frontmatter> <mainmatter><p>
     Refer to <link href="ttafp-2014.xml" type="local" addr="ttafp-2014" title="Type Theory and Formal Proofs">Type Theory and Formal Proof</link>.
 </p><p>
-In dealing with functions there are two <strong>construction principles</strong> and one <strong>evalutaion rule</strong>
-<ul><li>Construction Principles</li>
-<ul><li>Function Abstraction: <tex>\lambda  x.M</tex></li>
-<li>Function Application: <tex>M N</tex></li></ul>
-<li>Evaluation Rule</li>
-<ul><li>Beta Reduction: <tex>( \lambda  x.M)N \to  M[N/x]</tex></li></ul></ul>
-The beta reduction makes use of the <strong>substitution</strong> <tex>M[N/x]</tex> which represents the result of replacing all free occurences of <tex>x</tex> in <tex>M</tex> with <tex>N</tex>.
+    The idea to generalize the behavior of functions in mathematics and logic led to the development of the lambda calculus.
+    The lambda calculus is a formal system for expressing computation based on function abstraction and application using <em>variable binding</em> and <em>substitution</em>. 
+    In dealing with functions there are two <strong>construction principles</strong> and one <strong>evalutaion rule</strong>.
+    <ul><li><strong>Construction Principles</strong>: note that expressions do not force to be meaningful.</li>
+        <ul><li>Function Abstraction: <tex>\lambda  x.M</tex></li>
+            <li>Function Application: <tex>M N</tex>, this only produces a new expression,
+            in which the function has not yet been executed.</li></ul>
+    <li><strong>Evaluation Rule</strong></li>
+        <ul><li>Beta Reduction: <tex>( \lambda  x.M)N \to  M[x:=N]</tex></li></ul></ul>
+    The beta reduction makes use of the <strong>substitution</strong> <tex>M[x:=N]</tex> which represents the result of replacing all free occurrences of <tex>x</tex> in <tex>M</tex> with <tex>N</tex>.
+    Note that the application is <strong>left associative</strong>, that is, <tex>MNP</tex> means <tex>(MN)P</tex>.
+    And application has the highest precedence, that is, <tex>\lambda  x.MN</tex> means <tex>\lambda  x.(MN)</tex>.
+</p><p>
+    The multi-argument function <tex>\lambda  x_1 \ldots  x_n.M</tex> is defined as <tex>\lambda  x_1.( \lambda  x_2.( \ldots ( \lambda  x_n.M) \ldots ))</tex> (right associative),
+    that is, simulated by a sequence of single-argument functions. The later function is called <strong>curried function</strong> and the
+    process of transforming a multi-argument function into a sequence of single-argument functions is called <strong>currying</strong>.
 </p>
-<p>Expressions in the lambda calculus is called <strong>terms</strong>. The set of terms is denoted <tex>\Lambda</tex>.</p>
+    <strong>Lambda Terms</strong>
+    <p>Expressions in the lambda calculus is called <strong>terms</strong>. The set of terms is denoted <tex>\Lambda</tex>.</p>
+    
+<p>
+    With the following recursive definition we can determine 
+    what the <strong>subterms</strong> of a give 
+    
+        <tex>\lambda \text {-term}</tex>
+    
+ are. Here we use 
+    a concept named <link href="def-0035.xml" type="local" addr="def-0035" title="Multiset">multiset</link>.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5346</anchor>  <taxon>Definition</taxon> <addr>def-0036</addr>  <route>def-0036.xml</route>   <title>Multiset of Subterms</title> </frontmatter> <mainmatter><p>
+    We define a map <tex>\text {Sub}</tex>:
+    <ul><li><strong>Basis</strong>: <tex>\forall  x \in  V, \text {Sub} (x) = \{   x   \}</tex></li>
+        <li><strong>Application</strong>: <tex>\forall  M,N \in \Lambda , \text {Sub} (MN) =  \text {Sub} (M) \cup \text {Sub} (N) \cup \{   MN   \}</tex></li>
+        <li><strong>Abstraction</strong>: <tex>\forall  x \in  V,M \in \Lambda , \text {Sub} ( \lambda  x.M) =  \text {Sub} (M) \cup \{   \lambda  x.M   \}</tex></li></ul>
+    <tex>L</tex> is a subterm of <tex>M</tex> if <tex>L \in \text {Sub} (M)</tex>.
+    If <tex>L \not \equiv  M</tex> then we say <tex>L</tex> is a <strong>proper subterm</strong> of <tex>M</tex>.
+</p></mainmatter> </tree><p>
+    The definition above uses a notation <tex>\equiv</tex> which means <em>syntactic equality</em> here.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5347</anchor>  <taxon>Example</taxon> <addr>eg-0006</addr>  <route>eg-0006.xml</route>   <title>Subterms</title> </frontmatter> <mainmatter><ul><li><tex>\text {Sub} ( ( x \space z ) )</tex> = <tex>\{   x,z, ( x \space z )   \}</tex></li>
+    <li><tex>
+             \text {Sub} ( \lambda  x. ( x \space x ) ) 
+            =  \{   \lambda  x. ( x \space x ) , ( x \space x ) ,x,x   \} 
+        </tex></li></ul></mainmatter> </tree><p>
+    The substerm mapping satisfies the following lemma.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5348</anchor>  <taxon>Lemma</taxon> <addr>thm-000W</addr>  <route>thm-000W.xml</route>   <title>Lemma of subterms</title> </frontmatter> <mainmatter><p><ul><li><strong>Reflexivity</strong>: <tex>\forall  M \in \Lambda ,M \in \text {Sub} (M)</tex></li>
+        <li><strong>Transitivity</strong>: <tex>\forall  L,M,N \in \Lambda ,L \in \text {Sub} (M) \land  M \in \text {Sub} (N) \implies  L \in \text {Sub} (N)</tex></li></ul></p></mainmatter> </tree><p>
+    Variable occurrences in a 
+    
+        <tex>\lambda \text {-term}</tex>
+    
+ can be divided into 3 categories:
+    <ul><li>Bound Occurrences: <tex>x</tex> is bound in <tex>M</tex> if <tex>x</tex> is the argument of an <strong>abstraction</strong> in <tex>M</tex>.</li>
+        <li>Free Occurrences: <tex>x</tex> is free in <tex>M</tex> if <tex>x</tex> is not bound by any <strong>abstraction</strong> in <tex>M</tex>.</li>
+        <li>Binding Occurrences: something after a lambda notation <tex>\lambda</tex></li></ul>
+    We mainly focus on the <strong>free variables</strong> of a term.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5349</anchor>  <taxon>Definition</taxon> <addr>def-0037</addr>  <route>def-0037.xml</route>   <title>Set of Free Variables</title> </frontmatter> <mainmatter><p>
+    Let <tex>FV(L)</tex> be the set of free variables in a term <tex>L</tex>.
+    <ul><li><strong>Variable</strong>: <tex>\forall  x \in  V, \text {FV} (x) =  \{   x   \}</tex></li>
+        <li><strong>Application</strong>: <tex>\forall  M,N \in \Lambda , \text {FV} (MN) =  \text {FV} (M) \cup \text {FV} (N)</tex></li>
+        <li><strong>Abstraction</strong>: <tex>\forall  x \in  V,M \in \Lambda , \text {FV} ( \lambda  x.M) =  \text {FV} (M) \setminus \{   x   \}</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5350</anchor>  <taxon>Definition</taxon> <addr>def-0038</addr>  <route>def-0038.xml</route>   <title>Closed Lambda Terms</title> </frontmatter> <mainmatter><p>
+    The 
+    
+        <tex>\lambda \text {-term}</tex>
+    
+ <tex>M</tex> is <strong>closed</strong> if <tex>\text {FV} (M) =  \emptyset</tex>.
+    A closed 
+    
+        <tex>\lambda \text {-term}</tex>
+    
+ is also called a <strong>combinator</strong>.
+    The set of all combinators is denoted by <tex>\Lambda ^0</tex>.
+</p></mainmatter> </tree><block open="open"><headline><strong>Alpha conversion</strong></headline> 
+    Functions in <tex>\lambda \text {-calculus}</tex> have the property that the name of 
+    the binding variables is irrelevant.
+    In order to describe this equality we need to define a relation
+    called <tex>\alpha \text {-conversion}</tex> or <tex>\alpha \text {-equivalence}</tex>,
+    which is based on the process of renaming binding variables.
+</block><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5351</anchor>  <taxon>Definition</taxon> <addr>def-0039</addr>  <route>def-0039.xml</route>   <title>Renaming</title> </frontmatter> <mainmatter><p>
+    Let 
+  
+    <tex>M ^{ x \to y }</tex>
+  
+ be the result of replacing all free occurrences of <tex>x</tex> in <tex>M</tex> with <tex>y</tex>.
+    The relation <strong>renaming</strong> is expression with the symbol <tex>=_ \alpha</tex>:
+    <tex>\lambda  x.M =_ \alpha \lambda  y. 
+   
+     M ^{ x \to y } 
+   
+</tex> if <tex>y \not \in \text {FV} (M)</tex> and <tex>y</tex> is not a binding variable in <tex>M</tex>.
+</p></mainmatter> </tree><p>
+    The definition of <strong>renaming</strong> should be extended to more general terms.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5352</anchor>  <taxon>Definition</taxon> <addr>def-003A</addr>  <route>def-003A.xml</route>   <title>Alpha Equivalence</title> </frontmatter> <mainmatter><p>
+    The <tex>\alpha</tex> equivalence is a relation between 
+    
+        <tex>\lambda \text {-term}</tex>
+    
+, defined as follows:
+    <ul><li><strong>Renaming</strong>: <tex>\lambda  x. M  =_ \alpha   \lambda  y.  
+   
+     M ^{ x \to y } 
+   
+</tex> if <tex>y \not \in \text {FV} (M)</tex> and <tex>y</tex> is not a binding variable in <tex>M</tex>.
+        </li>
+        <li><strong>Compatibility</strong>: If <tex>M =_ \alpha  N</tex> then <tex>\lambda  x.M =_ \alpha \lambda  x.N</tex> and <tex>ML  =_ \alpha  NL, LM  =_ \alpha  LN</tex>.
+        </li>
+        <li><strong>Reflexivity</strong>: <tex>M =_ \alpha  M</tex>.
+        </li>
+        <li><strong>Symmetry</strong>: If <tex>M =_ \alpha  N</tex> then <tex>N =_ \alpha  M</tex>.
+        </li>
+        <li><strong>Transitivity</strong>: If <tex>M =_ \alpha  N</tex> and <tex>N =_ \alpha  L</tex> then <tex>M =_ \alpha  L</tex>.
+        </li></ul>
+    The first principle is the basis of alpha equivalence, which is the same as <link href="def-0039.xml" type="local" addr="def-0039" title="Renaming">renaming</link>.
+    The last 3 properties ensures that <tex>=_ \alpha</tex> is an <link href="def-000X.xml" type="local" addr="def-000X" title="Equivalence Relation">equivalence relation</link>.
+    
+</p><p>
+    If <tex>M =_ \alpha  N</tex> then we say <tex>M</tex> and <tex>N</tex> are <tex>\alpha \text {-equivalent}</tex> or <tex>\alpha \text {-convertible}</tex>.
+    <tex>M</tex> is an <tex>\alpha \text {-variant}</tex> of <tex>N</tex> and vice versa.
+
+</p></mainmatter> </tree><p>
+    In previous sections we informally mentioned the concept of <strong>substitution</strong>.
+    Now we give a precise formulation
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5353</anchor>  <taxon>Definition</taxon> <addr>def-003B</addr>  <route>def-003B.xml</route>   <title>Substitution</title> </frontmatter> <mainmatter><p>
+    The <strong>substitution</strong> is defined by the following rules:
+    <ul><li><tex>
+   
+     M [ x := N ] 
+   
+ : \equiv  N</tex></li>
+        <li><tex>
+   
+     y [ x := N ] 
+   
+ : \equiv  y</tex> if <tex>y \not \equiv  x</tex></li>
+        <li><tex>
+   
+     (PQ) [ x := N ] 
+   
+ : \equiv ( 
+   
+     P [ x := N ] 
+   
+ )( 
+   
+     Q [ x := N ] 
+   
+ )</tex></li>
+        <li><tex>
+   
+     ( \lambda  y.P) [ x := N ] 
+   
+ : \equiv \lambda  z. 
+   
+     
+   
+     P ^{ y \to z } 
+   
+ [ x := N ] 
+   
+</tex> 
+            if <tex>\lambda  z. 
+   
+     P ^{ y \to z } 
+   
+   =_ \alpha   \lambda  y.P</tex> and <tex>z \not \in \text {FV} (N)</tex></li></ul>
+    The terms with form <tex>
+   
+     P [ x := N ] 
+   
+</tex> are not 
+    
+        <tex>\lambda \text {-term}</tex>
+    
+,
+    but we can regard them as a <em>meta notation</em> that appears
+    in the substitution process and the result contains no such terms.
+</p></mainmatter> </tree><p>
+    Renaming can be considered as a special case of substitution.
+    We can show that <tex>
+   
+     M ^{ x \to u } 
+   
+ =_ \alpha 
+   
+     M [ x := u ] 
+   
+</tex> if the conditions of renaming are satisfied.
+</p><p>
+    We may do <strong>sequential substitution</strong> in a term,
+    that is, doing a number of substitutions consecutively.
+    And we have the following lemma, which states that the order of substitution is important.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5354</anchor>  <taxon>Lemma</taxon> <addr>thm-000X</addr>  <route>thm-000X.xml</route>   <title>Substitution is not commutative</title> </frontmatter> <mainmatter><p>
+    Let <tex>x \not \equiv  y</tex> and assume <tex>x \not \in \text {FV} (L)</tex>.
+    Then <tex>L[y:=N][x:=M]  \equiv  L[x:=M][y:=N[x:=M]]</tex>.
+</p></mainmatter> </tree><block open="open"><headline>
+    <strong>
+        <tex>\lambda \text {-term}</tex>
+    
+ modulo <tex>\alpha \text {-equivalence}</tex></strong>
+</headline> 
+    As we have seen, the relation <tex>=_ \alpha</tex> is an equivalence relation.
+    Hence we can define the set of equivalence classes of terms with respect to <tex>=_ \alpha</tex>.
+    Now we can identify a term with its equivalence class.
+    We still use <tex>\equiv</tex> for syntactic equality modulo <tex>\alpha \text {-equivalence}</tex>.
+</block><p><tex>\alpha \text {-equivalence}</tex> is a congruence relation, which means that it is conserved by elementary process of term construction.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5355</anchor>  <taxon>Lemma</taxon> <addr>thm-000Y</addr>  <route>thm-000Y.xml</route>   <title>Congruence Property of Substitution</title> </frontmatter> <mainmatter><p>
+    Let <tex>L =_ \alpha  M</tex> and <tex>N =_ \alpha  P</tex>.
+    <ul><li><tex>
+                LN  =_ \alpha  MP
+            </tex></li>
+        <li><tex>
+                 \lambda  x.L  =_ \alpha   \lambda  x.M
+            </tex></li>
+        <li><tex>
+                 
+   
+     L [ x := N ] 
+   
+   =_ \alpha   
+   
+     M [ x := P ] 
+   
  
-</mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4978</anchor>   <addr>def</addr>  <route>def.xml</route>   <title>Definitions Collection</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4979</anchor>  <taxon>Definition</taxon> <addr>def-0001</addr>  <route>def-0001.xml</route>   <title>Group</title> </frontmatter> <mainmatter><p>
+            </tex></li></ul></p></mainmatter> </tree><block open="open"><headline>
+    <strong>Barendregt Convention</strong>
+</headline> 
+    The Barendregt Convention states that we should avoid using the same variable name in different abstractions.
+    This is to avoid the confusion of free variables. It states that 
+    we choose the names for the binding variables in a 
+    
+        <tex>\lambda \text {-term}</tex>
+    
+ in such a manner
+    that they are all different, and each of them differs from 
+    all free variables occurring in the term.
+</block><block open="open"><headline>
+    <strong>Beta Reduction</strong>
+</headline> 
+    Since we have formally defined the <strong>substitution</strong>,
+    we can rephrase the reduction as a relation on 
+    
+        <tex>\lambda \text {-term}</tex>
+    
+, namely <tex>\beta \text {-reduction}</tex>.
+</block><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5356</anchor>  <taxon>Definition</taxon> <addr>def-003C</addr>  <route>def-003C.xml</route>   <title>One Step Beta Reduction</title> </frontmatter> <mainmatter><p><strong>One step beta reduction</strong> (<tex>\to _ \beta</tex>) is defined as follows:
+    <ul><li><strong>Basis</strong>:
+            <tex>
+                ( \lambda  x.M)N \to _ \beta 
+   
+     M [ x := N ] 
+   
+ 
+            </tex></li>
+        <li><strong>Compatibility</strong>:
+            If <tex>M \to _ \beta  N</tex> then <tex>\lambda  x.M \to _ \beta \lambda  x.N</tex>,
+            <tex>ML \to _ \beta  NL</tex> and <tex>LM \to _ \beta  LN</tex>.
+        </li></ul></p><p>
+    The term of the form <tex>( \lambda  x.M)N</tex> is called a <strong>redex (reducible expression)</strong>.
+    The term of the form <tex>
+   
+     M [ x := N ] 
+   
+</tex> is called the <strong>contractum</strong> (of the redex).
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5357</anchor>  <taxon>Example</taxon> <addr>eg-0007</addr>  <route>eg-0007.xml</route>   <title>Divergent Combinator</title> </frontmatter> <mainmatter><p>
+    An interesting example named <strong>omega combinator</strong> of beta reduction is the following:
+    <tex display="block">
+         ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) ) 
+         \to _ \beta 
+         ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) ) 
+    </tex>
+    The result of the beta reduction is the same term as the original term,
+    and never terminates.
+</p></mainmatter> </tree><p>
+    We can often perform a sequence of beta reductions. This leads to the definition.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5358</anchor>  <taxon>Definition</taxon> <addr>def-003D</addr>  <route>def-003D.xml</route>   <title>Beta Reduction</title> </frontmatter> <mainmatter><p>
+    The <strong>(zero-or-more-step) beta reduction</strong> (<tex>\twoheadrightarrow _{ \beta }</tex>) is a
+    generalized version of the <link href="def-003C.xml" type="local" addr="def-003C" title="One Step Beta Reduction">one step beta reduction</link>.
+    <tex>M \twoheadrightarrow _{ \beta }  N</tex> if there exists <tex>n \geq  0</tex> and there are terms <tex>M_0,M_1, \ldots ,M_n</tex>
+    such that <tex>M_0=M</tex>, <tex>M_n=N</tex> and <tex>M_i \to _ \beta  M_{i+1}</tex> for <tex>0 \leq  i&lt;n</tex>.
+    In other words there exists a chain of one-step beta reductions from <tex>M</tex> to <tex>N</tex>.
+    <tex display="block">
+        M \equiv  M_0 \to _ \beta  M_1 \to _ \beta \cdots \to _ \beta  M_n \equiv  N
+    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5359</anchor>  <taxon>Lemma</taxon> <addr>thm-000Z</addr>  <route>thm-000Z.xml</route>   <title>Properties of Beta Reduction</title> </frontmatter> <mainmatter><p><ul><li><strong>Compatibility</strong>:
+            <tex>\twoheadrightarrow _{ \beta }</tex> extends <tex>\to _ \beta</tex>, i.e. if <tex>M \to _ \beta  N</tex> then <tex>M \twoheadrightarrow _{ \beta }  N</tex>.
+        </li>
+        <li><strong>Reflixivity</strong>:
+            <tex>
+                M \twoheadrightarrow _{ \beta }  M
+            </tex></li>
+        <li><strong>Transitivity</strong>:
+            <tex>
+                M \twoheadrightarrow _{ \beta }  N  \land  N \twoheadrightarrow _{ \beta }  P  \implies  M \twoheadrightarrow _{ \beta }  P
+            </tex></li></ul></p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5360</anchor>   <addr>def</addr>  <route>def.xml</route>   <title>Definitions Collection</title> </frontmatter> <mainmatter><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5361</anchor>  <taxon>Definition</taxon> <addr>def-0001</addr>  <route>def-0001.xml</route>   <title>Group</title> </frontmatter> <mainmatter><p>
 A <strong>group</strong> is a set <tex>G</tex> with a binary operation <tex>\circ</tex> satisfies the following properties:
 <ul><li>Closure: <tex>\forall  a,b \in  G,a  \circ  b \in  G</tex></li>
 <li>Associativity: <tex>\forall  a,b,c \in  G, (a \circ  b)  \circ  c= a  \circ  (b  \circ  c)</tex></li>
 <li>Identity: <tex>\exists  e \in  G</tex> such that <tex>\forall  g \in  G, g \circ  e=e \circ  g = g</tex></li>
-<li>Inverse: <tex>\forall  g \in  G, \exists  g^{-1} \in  G</tex> such that <tex>g \circ  g^{-1}=e</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4980</anchor>  <taxon>Definition</taxon> <addr>def-0002</addr>  <route>def-0002.xml</route>   <title>Abel Group</title> </frontmatter> <mainmatter><p>
+<li>Inverse: <tex>\forall  g \in  G, \exists  g^{-1} \in  G</tex> such that <tex>g \circ  g^{-1}=e</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5362</anchor>  <taxon>Definition</taxon> <addr>def-0002</addr>  <route>def-0002.xml</route>   <title>Abel Group</title> </frontmatter> <mainmatter><p>
 If in a <link href="def-0001.xml" type="local" addr="def-0001" title="Group">group</link> <tex>G</tex>, <tex>\forall  a,b \in  G, a \circ  b=b \circ  a</tex> then <tex>G</tex> is called an <strong>abelian (commutative) group</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4981</anchor>  <taxon>Definition</taxon> <addr>def-0003</addr>  <route>def-0003.xml</route>   <title>Group Element Order</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5363</anchor>  <taxon>Definition</taxon> <addr>def-0003</addr>  <route>def-0003.xml</route>   <title>Group Element Order</title> </frontmatter> <mainmatter><p>
 For a group <tex>G</tex> an <tex>x \in  G</tex> define the <strong>order</strong> of <tex>x</tex> be the smallest positive integer <tex>n</tex> (denotes <tex>|x|</tex>) st <tex>x^n=1</tex>. If such <tex>n</tex> does not exist then <tex>x</tex> is said to be of infinite order.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4982</anchor>  <taxon>Definition</taxon> <addr>def-0004</addr>  <route>def-0004.xml</route>   <title>Multiplication Table</title> </frontmatter> <mainmatter><p>
-Let <tex>G=  \{ g_1, g_2,  \cdots , g_n \}</tex> is finite group. The multiplication table is the <tex>n \times  n</tex> matrix whose <tex>i,j</tex> entry is the group element <tex>g_i  \circ  g_j</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4983</anchor>  <taxon>Definition</taxon> <addr>def-0005</addr>  <route>def-0005.xml</route>   <title>Generator</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5364</anchor>  <taxon>Definition</taxon> <addr>def-0004</addr>  <route>def-0004.xml</route>   <title>Multiplication Table</title> </frontmatter> <mainmatter><p>
+Let <tex>G=  \{ g_1, g_2,  \cdots , g_n \}</tex> is finite group. The multiplication table is the <tex>n \times  n</tex> matrix whose <tex>i,j</tex> entry is the group element <tex>g_i  \circ  g_j</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5365</anchor>  <taxon>Definition</taxon> <addr>def-0005</addr>  <route>def-0005.xml</route>   <title>Generator</title> </frontmatter> <mainmatter><p>
 A subset <tex>S \in  G</tex> where <tex>\forall  g \in  G</tex> can be written as a (finite) product of <tex>s \in  S</tex> and <tex>s^{-1}</tex> is called a set of <strong>generators</strong> of <tex>G</tex>
-<tex>G= \braket {S}</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4984</anchor>  <taxon>Definition</taxon> <addr>def-0006</addr>  <route>def-0006.xml</route>   <title>Field</title> </frontmatter> <mainmatter><p>
+<tex>G= \braket {S}</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5366</anchor>  <taxon>Definition</taxon> <addr>def-0006</addr>  <route>def-0006.xml</route>   <title>Field</title> </frontmatter> <mainmatter><p>
 A field is a set <tex>F</tex> together with two binary operations <tex>+</tex> and <tex>\times</tex> on <tex>F</tex> st <tex>(F,+)</tex> is an <link href="def-0002.xml" type="local" addr="def-0002" title="Abel Group">abelian group</link> (identity is <tex>0</tex>) and <tex>(F- \{ 0 \} , \times )</tex> is also an abelian group such that
-<tex>a \times (b+c)=a \times  b+a \times  c, \forall  a,b,c \in  F</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4985</anchor>  <taxon>Definition</taxon> <addr>def-0007</addr>  <route>def-0007.xml</route>   <title>Monoid</title> </frontmatter> <mainmatter><p>
+<tex>a \times (b+c)=a \times  b+a \times  c, \forall  a,b,c \in  F</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5367</anchor>  <taxon>Definition</taxon> <addr>def-0007</addr>  <route>def-0007.xml</route>   <title>Monoid</title> </frontmatter> <mainmatter><p>
 A set <tex>S</tex> equipped with a binary operation <tex>S \times  S \to  S</tex>, which we will denote <tex>\circ</tex>, is a <strong>monoid</strong> if it satisfies the following two axioms:
 <ul><li>Associativity: <tex>\forall  a,b,c \in  S, (a \circ  b)  \circ  c= a  \circ  (b  \circ  c)</tex></li>
-<li>Identity: <tex>\exists  e \in  S</tex> such that <tex>\forall  g \in  S, g \circ  e=e \circ  g = g</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4986</anchor>  <taxon>Definition</taxon> <addr>def-0008</addr>  <route>def-0008.xml</route>   <title>Group Action</title> </frontmatter> <mainmatter><p>
+<li>Identity: <tex>\exists  e \in  S</tex> such that <tex>\forall  g \in  S, g \circ  e=e \circ  g = g</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5368</anchor>  <taxon>Definition</taxon> <addr>def-0008</addr>  <route>def-0008.xml</route>   <title>Group Action</title> </frontmatter> <mainmatter><p>
 A group action of a group <tex>G</tex> on a set <tex>A</tex> is a map from <tex>G \times  A  \to  A</tex> (<tex>g \cdot  a</tex>), <tex>\forall  g \in  G</tex> and <tex>a \in  A</tex> satisfying the following properties:
 <ul><li><tex>g_1 \cdot  (g_2 \cdot  a)=(g_1g_2) \cdot  a</tex></li>
-<li><tex>\forall  a \in  A,1 \cdot  a = a</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4987</anchor>  <taxon>Definition</taxon> <addr>def-0009</addr>  <route>def-0009.xml</route>   <title>Group Homomorphism</title> </frontmatter> <mainmatter><p>
+<li><tex>\forall  a \in  A,1 \cdot  a = a</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5369</anchor>  <taxon>Definition</taxon> <addr>def-0009</addr>  <route>def-0009.xml</route>   <title>Group Homomorphism</title> </frontmatter> <mainmatter><p>
 Let <tex>(G, \times )</tex> and <tex>(H, \circ )</tex> be groups. A map <tex>\phi  : G \to  H</tex> such that
 <tex>\forall  x,y \in  G, \phi (x \times  y)= \phi (x) \circ \phi (y)</tex> is called a <strong>group homomorphism</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4988</anchor>  <taxon>Definition</taxon> <addr>def-000A</addr>  <route>def-000A.xml</route>   <title>Subgroups</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5370</anchor>  <taxon>Definition</taxon> <addr>def-000A</addr>  <route>def-000A.xml</route>   <title>Subgroups</title> </frontmatter> <mainmatter><p>
 Let <tex>G</tex> be a group and <tex>H</tex> be a nonempty subset of <tex>G</tex> which is closed under operation <tex>\times</tex> and :
 <ul><li><tex>\forall  a,b \in  H,a \times  b \in  H</tex></li>
 <li><tex>\forall  h \in  H,h^{-1} \in  H</tex></li></ul>
-then <tex>H</tex> is a subgroup of <tex>G</tex>. <tex>e=h \times  h^{-1}</tex> is always in group <tex>H</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4989</anchor>  <taxon>Definition</taxon> <addr>def-000B</addr>  <route>def-000B.xml</route>   <title>Euclidean Topology</title> </frontmatter> <mainmatter><p>
+then <tex>H</tex> is a subgroup of <tex>G</tex>. <tex>e=h \times  h^{-1}</tex> is always in group <tex>H</tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5371</anchor>  <taxon>Definition</taxon> <addr>def-000B</addr>  <route>def-000B.xml</route>   <title>Euclidean Topology</title> </frontmatter> <mainmatter><p>
 A subset <tex>S</tex> of <tex>\mathbb {R}</tex> is said to be open in the <strong>euclidean topology</strong> on <tex>\mathbb {R}</tex> if <tex>\forall  x \in  S</tex> there exists <tex>a,b \in \mathbb {R}</tex> with <tex>a&lt;b</tex> st <tex>x \in (a,b) \in  S</tex>.
 </p><p>The dual definition (using closed sets) is also valid.</p><p>
 For each <tex>a</tex> and <tex>b</tex> in <tex>\mathbb {R}</tex> with <tex>a&lt;b</tex> the closed intervcal <tex>[a,b]</tex> is a closed set in the euclidean topology in <tex>\mathbb {R}</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4990</anchor>  <taxon>Definition</taxon> <addr>def-000C</addr>  <route>def-000C.xml</route>   <title>Topological Space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5372</anchor>  <taxon>Definition</taxon> <addr>def-000C</addr>  <route>def-000C.xml</route>   <title>Topological Space</title> </frontmatter> <mainmatter><p>
 A <strong>topological space</strong> is a set <tex>S</tex> together with a collection <tex>\tau</tex> of subsets called open sets such that
 <ul><li>T1: <tex>S, \varnothing \in \tau</tex></li>
 <li>T2: <tex>\forall  U,V \in \tau , U \cap  V \in \tau</tex></li>
-<li>T3: The union of any collection of open sets is open.</li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4991</anchor>  <taxon>Definition</taxon> <addr>def-000D</addr>  <route>def-000D.xml</route>   <title>Relative Topology</title> </frontmatter> <mainmatter><p>
+<li>T3: The union of any collection of open sets is open.</li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5373</anchor>  <taxon>Definition</taxon> <addr>def-000D</addr>  <route>def-000D.xml</route>   <title>Relative Topology</title> </frontmatter> <mainmatter><p>
 Let <tex>(X, \tau )</tex> be a topological space and <tex>A \subseteq  X</tex>. Then <tex>\tau _A= \{ U \cap  A \mid  U \in \tau \}</tex> is a topology on <tex>A</tex> called the <strong>relative topology</strong> on <tex>A</tex> induced by <tex>\tau</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4992</anchor>  <taxon>Definition</taxon> <addr>def-000E</addr>  <route>def-000E.xml</route>   <title>Co-finite Topology</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5374</anchor>  <taxon>Definition</taxon> <addr>def-000E</addr>  <route>def-000E.xml</route>   <title>Co-finite Topology</title> </frontmatter> <mainmatter><p>
 Let <tex>X</tex> be a set. The <strong>co-finite topology</strong> on <tex>X</tex> is the topology <tex>\tau</tex> on <tex>X</tex> whose open sets are <tex>\emptyset</tex> and all subsets of <tex>X</tex> whose complement is finite.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4993</anchor>  <taxon>Definition</taxon> <addr>def-000G</addr>  <route>def-000G.xml</route>   <title>List</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5375</anchor>  <taxon>Definition</taxon> <addr>def-000G</addr>  <route>def-000G.xml</route>   <title>List</title> </frontmatter> <mainmatter><p>
     Let <tex>n</tex> be a natural number. A <strong>list</strong> of length <tex>n</tex> is an ordered collection of <tex>n</tex> elements.
     <tex display="block">
         (x_1, x_2,  \dots , x_n)
@@ -71,7 +351,7 @@ Let <tex>X</tex> be a set. The <strong>co-finite topology</strong> on <tex>X</te
     Let <tex>n</tex> be a natural number. Let <tex>x=(x_1, x_2,  \dots , x_n)</tex> be a list of length <tex>n</tex>. The <strong>additive inverse</strong> of this list is the list <tex>-x=(-x_1, -x_2,  \dots , -x_n)</tex>.
 </p><strong>Scalar Multiplication in Lists</strong><p>
     Let <tex>n</tex> be a natural number. Let <tex>x=(x_1, x_2,  \dots , x_n)</tex> be a list of length <tex>n</tex>. Let <tex>c</tex> be a real number. The <strong>scalar multiplication</strong> of <tex>c</tex> and <tex>x</tex> is the list <tex>cx=(cx_1, cx_2,  \dots , cx_n)</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4994</anchor>  <taxon>Definition</taxon> <addr>def-000H</addr>  <route>def-000H.xml</route>   <title>Vector Space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5376</anchor>  <taxon>Definition</taxon> <addr>def-000H</addr>  <route>def-000H.xml</route>   <title>Vector Space</title> </frontmatter> <mainmatter><p>
     A vector space over a <link href="def-0006.xml" type="local" addr="def-0006" title="Field">field</link> <tex>F</tex> is a non-empty set <tex>V</tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
     In this context, the elements of <tex>F</tex> are commonly called <strong>vectors</strong>, and the elements of <tex>F</tex> are called <strong>scalars</strong>.
     <ul><li>Commutativity: <tex>
@@ -93,16 +373,16 @@ Let <tex>X</tex> be a set. The <strong>co-finite topology</strong> on <tex>X</te
              \forall  x, y  \in  V,  \forall  c, d  \in  F, c(x + y) = cx + cy, (c + d)x = cx + dx
         </tex></li></ul></p><p>
     Elements of a vector space are called <strong>vectors</strong> or <strong>points</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4995</anchor>  <taxon>Definition</taxon> <addr>def-000I</addr>  <route>def-000I.xml</route>   <title>Linear Subspace</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5377</anchor>  <taxon>Definition</taxon> <addr>def-000I</addr>  <route>def-000I.xml</route>   <title>Linear Subspace</title> </frontmatter> <mainmatter><p>
     A subset <tex>U</tex> of a vector space <tex>V</tex> over a field <tex>F</tex> is called a <strong>subspace</strong> of <tex>V</tex> if <tex>U</tex> is itself a <strong>vector space</strong> over <tex>F</tex> with the operations of addition and scalar multiplication on <tex>V</tex>.
     The subset also satisfies the following axioms (vice versa):
     <ul><li>Additive identity: <tex>0 \in  U</tex></li>
         <li>Closure: <tex>\forall  u,v \in  U, u+v \in  U</tex></li>
-        <li>Closed Scalar multiplication: <tex>\forall  u \in  U,  \forall  c \in  F, cu \in  U</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4996</anchor>  <taxon>Definition</taxon> <addr>def-000J</addr>  <route>def-000J.xml</route>   <title>Sum of subsets</title> </frontmatter> <mainmatter><p>
+        <li>Closed Scalar multiplication: <tex>\forall  u \in  U,  \forall  c \in  F, cu \in  U</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5378</anchor>  <taxon>Definition</taxon> <addr>def-000J</addr>  <route>def-000J.xml</route>   <title>Sum of subsets</title> </frontmatter> <mainmatter><p>
     Let <tex>U_1,  \dots , U_n</tex> be subsets of a vector space <tex>V</tex>.
     The <strong>sum</strong> of <tex>U_1,  \dots , U_n</tex> is defined as
     <tex display="block">U_1 +  \dots  + U_n =  \{ u_1 +  \dots  + u_n  \mid  u_i  \in  U_i \}</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4997</anchor>  <taxon>Definition</taxon> <addr>def-000K</addr>  <route>def-000K.xml</route>   <title>Direct Sum</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5379</anchor>  <taxon>Definition</taxon> <addr>def-000K</addr>  <route>def-000K.xml</route>   <title>Direct Sum</title> </frontmatter> <mainmatter><p>
     Let <tex>U_1,  \dots , U_n</tex> be subspaces of a vector space <tex>V</tex>.
     The <strong>direct sum</strong> of <tex>U_1,  \dots , U_n</tex> is defined as
     <tex display="block">
@@ -110,7 +390,7 @@ Let <tex>X</tex> be a set. The <strong>co-finite topology</strong> on <tex>X</te
     </tex>
     if every element in <tex>U_1  \oplus   \dots   \oplus  U_n</tex> can be written as <tex>u_1 +  \dots  + u_n </tex> in only one way.
     This definition requires every vector in the sum have a unique representation.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4998</anchor>  <taxon>Definition</taxon> <addr>def-000L</addr>  <route>def-000L.xml</route>   <title>Linear Combination</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5380</anchor>  <taxon>Definition</taxon> <addr>def-000L</addr>  <route>def-000L.xml</route>   <title>Linear Combination</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a <link href="def-000H.xml" type="local" addr="def-000H" title="Vector Space">vector space</link> over a field <tex>F</tex>.
     Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
     A <strong>linear combination</strong> of <tex>v_1,  \dots , v_n</tex> is an expression of the form
@@ -118,7 +398,7 @@ Let <tex>X</tex> be a set. The <strong>co-finite topology</strong> on <tex>X</te
         a_1 v_1 +  \dots  + a_n v_n
     </tex>
     where <tex>a_1,  \dots , a_n  \in  F</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4999</anchor>  <taxon>Definition</taxon> <addr>def-000M</addr>  <route>def-000M.xml</route>   <title>Linear Span</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5381</anchor>  <taxon>Definition</taxon> <addr>def-000M</addr>  <route>def-000M.xml</route>   <title>Linear Span</title> </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a vector space over a field <tex>F</tex>.
     Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
     The <strong>span</strong> of <tex>v_1,  \dots , v_n</tex> is defined as
@@ -128,26 +408,26 @@ Let <tex>X</tex> be a set. The <strong>co-finite topology</strong> on <tex>X</te
     The span of empty set is defined to be <tex>\{ 0 \}</tex>.    
 </p><p>
     If <tex>\text {span} (v_1,  \dots , v_n) = V</tex>, we say that <tex>v_1,  \dots , v_n</tex> <strong>spans</strong> <tex>V</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5000</anchor>  <taxon>Definition</taxon> <addr>def-000N</addr>  <route>def-000N.xml</route>   <title>Finite-Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5382</anchor>  <taxon>Definition</taxon> <addr>def-000N</addr>  <route>def-000N.xml</route>   <title>Finite-Dimensional Vector Space</title> </frontmatter> <mainmatter><p>
     A <link href="def-000H.xml" type="local" addr="def-000H" title="Vector Space">vector space</link> <tex>V</tex> is called <strong>finite-dimensional</strong> if some <link href="def-000G.xml" type="local" addr="def-000G" title="List">list</link> of vectors <tex>v_1,  \dots , v_n</tex> <link href="def-000M.xml" type="local" addr="def-000M" title="Linear Span">spans</link> <tex>V</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5001</anchor>  <taxon>Definition</taxon> <addr>def-000O</addr>  <route>def-000O.xml</route>   <title>Infinite-dimensional vector space</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5383</anchor>  <taxon>Definition</taxon> <addr>def-000O</addr>  <route>def-000O.xml</route>   <title>Infinite-dimensional vector space</title> </frontmatter> <mainmatter><p>
     A vector space <tex>V</tex> is called <strong>infinite-dimensional</strong> if it is not <link href="def-000N.xml" type="local" addr="def-000N" title="Finite-Dimensional Vector Space">finite-dimensional</link>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5002</anchor>  <taxon>Definition</taxon> <addr>def-000P</addr>  <route>def-000P.xml</route>   <title>Linearly independent</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5384</anchor>  <taxon>Definition</taxon> <addr>def-000P</addr>  <route>def-000P.xml</route>   <title>Linearly independent</title> </frontmatter> <mainmatter><p>
     A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly independent</strong> if
     <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
     implies that <tex>a_1 =  \dots  = a_n = 0</tex>.
     The trivial case of <tex>\{ 0 \}</tex> is also considered linearly independent.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5003</anchor>  <taxon>Definition</taxon> <addr>def-000Q</addr>  <route>def-000Q.xml</route>   <title>Linearly dependent</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5385</anchor>  <taxon>Definition</taxon> <addr>def-000Q</addr>  <route>def-000Q.xml</route>   <title>Linearly dependent</title> </frontmatter> <mainmatter><p>
     A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly dependent</strong> if
     <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
     for some <tex>a_1,  \dots , a_n  \in   \mathbb {F}</tex> with at least one <tex>a_i  \neq  0</tex> (not all <tex>0</tex>).
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5004</anchor>  <taxon>Definition</taxon> <addr>def-000R</addr>  <route>def-000R.xml</route>   <title>Basis</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5386</anchor>  <taxon>Definition</taxon> <addr>def-000R</addr>  <route>def-000R.xml</route>   <title>Basis</title> </frontmatter> <mainmatter><p>
     A basis of <tex>V</tex> is a list of vectors in <tex>V</tex>
     that is linearly independent and spans <tex>V</tex>. 
 </p><p><strong>Criterion for basis</strong>
     A list of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is a basis of <tex>V</tex> if and only if
     every <tex>v  \in  V</tex> can be written <strong>uniquely</strong> as a linear combination of <tex>v_1,  \dots , v_n</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5005</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>ZFC Set</title> </frontmatter> <mainmatter><p><strong>ZFC</strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5387</anchor>  <taxon>Definition</taxon> <addr>def-000S</addr>  <route>def-000S.xml</route>   <title>ZFC Set</title> </frontmatter> <mainmatter><p><strong>ZFC</strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
     The axioms of ZFC are listed below.
     <ul><li><strong>Axiom of Extensionality</strong>:
             Two sets are equal if and only if they have the same elements.
@@ -182,21 +462,21 @@ Let <tex>X</tex> be a set. The <strong>co-finite topology</strong> on <tex>X</te
             </p></li>
         <li><strong>Axiom of Choice</strong>:
             For any family of non-empty sets <tex>X</tex>, there exists a function <tex>f:X \to \bigcup  X</tex> such that for any <tex>x \in  X</tex>, <tex>f(x) \in  x</tex>.
-        </li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5006</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
+        </li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5388</anchor>  <taxon>Definition</taxon> <addr>def-000T</addr>  <route>def-000T.xml</route>   <title>Principle of Extensionality</title> </frontmatter> <mainmatter><p>
     Two sets are equal if and only if they have the same elements.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5007</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5389</anchor>  <taxon>Definition</taxon> <addr>def-000U</addr>  <route>def-000U.xml</route>   <title>Principle of Comprehension</title> </frontmatter> <mainmatter><p>
     Given a set <tex>A</tex> and a property <tex>P(x)</tex>, there exists a set <tex>B</tex> such that
     <tex>x \in  B  \iff  x \in  A  \land  P(x)</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5008</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5390</anchor>  <taxon>Definition</taxon> <addr>def-000V</addr>  <route>def-000V.xml</route>   <title>Cartesian product</title> </frontmatter> <mainmatter><p>
     Given two sets <tex>A</tex> and <tex>B</tex>, the Cartesian product <tex>A \times  B</tex> is the set
     of all ordered pairs <tex>(a,b)</tex> where <tex>a \in  A</tex> and <tex>b \in  B</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5009</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5391</anchor>  <taxon>Definition</taxon> <addr>def-000W</addr>  <route>def-000W.xml</route>   <title>Relation</title> </frontmatter> <mainmatter><p>
     A <strong>relation</strong> <tex>R</tex> is a subset of the Cartesian product of two sets <tex>A</tex> and
     <tex>B</tex>, i.e. <tex>R \subseteq  A \times  B</tex>.
     If <tex>(a,b) \in  R</tex>, we write <tex>aRb</tex>.
 
     A relation that between <tex>X</tex> and itself is called <strong>homogeneous relation</strong>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5010</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence Relation</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5392</anchor>  <taxon>Definition</taxon> <addr>def-000X</addr>  <route>def-000X.xml</route>   <title>Equivalence Relation</title> </frontmatter> <mainmatter><p>
     An equivalence relation <tex>R</tex> on a set <tex>A</tex> is a <link href="def-000W.xml" type="local" addr="def-000W" title="Relation">relation</link> that is reflexive,
     symmetric, and transitive.
     <ul><li>Reflexive:
@@ -206,16 +486,16 @@ Let <tex>X</tex> be a set. The <strong>co-finite topology</strong> on <tex>X</te
         <li>Transitive:
             <tex>\forall  x,y,z \in  A, xRy \land  yRz \implies  xRz</tex></li></ul>
     We often denote the equivalence relation by <tex>\sim</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5011</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5393</anchor>  <taxon>Definition</taxon> <addr>def-000Y</addr>  <route>def-000Y.xml</route>   <title>Partial Order</title> </frontmatter> <mainmatter><p>
     A <strong>(non-strict) partial order</strong> is a relation <tex>\leq</tex> that is reflexive, antisymmetric and transitive.
     <ul><li>Reflexive: <tex>a \leq  a</tex></li>
         <li>Antisymmetric: <tex>a \leq  b</tex> and <tex>b \leq  a</tex> implies <tex>a=b</tex></li>
         <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul>
     A non-strict partial order is also known as an antisymmetric <link href="def-000Z.xml" type="local" addr="def-000Z" title="Preorder">preorder</link>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5012</anchor>  <taxon>Definition</taxon> <addr>def-000Z</addr>  <route>def-000Z.xml</route>   <title>Preorder</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5394</anchor>  <taxon>Definition</taxon> <addr>def-000Z</addr>  <route>def-000Z.xml</route>   <title>Preorder</title> </frontmatter> <mainmatter><p>
     A <strong>preorder</strong> is a relation <tex>\leq</tex> that is reflexive and transitive.
     <ul><li>Reflexive: <tex>a \leq  a</tex></li>
-        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5013</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
+        <li>Transitive: <tex>a \leq  b</tex> and <tex>b \leq  c</tex> implies <tex>a \leq  c</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5395</anchor>  <taxon>Definition</taxon> <addr>def-0010</addr>  <route>def-0010.xml</route>   <title>Strict partial orders</title> </frontmatter> <mainmatter><p>
     A strict partial order is a relation <tex>&lt;</tex> that is irreflexive, asymmetric and transitive.
     <ul><li>Irreflexive: <tex>\neg (a&lt;a)</tex></li>
         <li>Asymmetric: <tex>a&lt;b</tex> implies <tex>\neg (b&lt;a)</tex></li>

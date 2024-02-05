@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4907</anchor>  <taxon>Definition</taxon> <addr>def-0030</addr>  <route>def-0030.xml</route>   <title>Schrodinger's equation</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5259</anchor>  <taxon>Definition</taxon> <addr>def-0030</addr>  <route>def-0030.xml</route>   <title>Schrodinger's equation</title> </frontmatter> <mainmatter><p>
     The <strong>Schrodinger equation</strong> is a linear partial differential equation that describes the wave function of a quantum system.
     It is given by (the general form):
     <tex display="block">
@@ -12,7 +12,7 @@
         <li><tex>\hat {H}</tex> is the <strong>Hamiltonian operator</strong>.
         </li>
         <li><tex>\hbar  = 1.054573 \times10 ^{-34} \text {Js} </tex> is the reduced <strong>Planck constant</strong>.
-        </li></ul></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4908</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr>  <route>phy-0002.xml</route> <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The Wave Function</title> </frontmatter> <mainmatter><p>
+        </li></ul></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5260</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr>  <route>phy-0002.xml</route> <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The Wave Function</title> </frontmatter> <mainmatter><p>
     This post introduces the concept of the wave function in quantum mechanics.
     Refer to <link href="quantum-2018.xml" type="local" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</link>.
 </p><p>
@@ -71,7 +71,7 @@
 </p><p>
     Probability is the key concept in quantum mechanics.
     Now I will introduce some terimnologies related to continuous probability.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4909</anchor>  <taxon>Definition</taxon> <addr>def-0031</addr>  <route>def-0031.xml</route>   <title>Probability Density</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5261</anchor>  <taxon>Definition</taxon> <addr>def-0031</addr>  <route>def-0031.xml</route>   <title>Probability Density</title> </frontmatter> <mainmatter><p>
     A <strong>probability density</strong> is a function <tex>p(x)</tex> such that:
     <ul><li><tex>p(x) \geq  0</tex> for all <tex>x</tex>.
         </li>
@@ -220,7 +220,7 @@
         p =  \frac {h}{ \lambda } =  \frac {2 \pi \hbar }{ \lambda }
     </tex>
     Now we can give a qualitative argument for the uncertainty principle.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4910</anchor>  <taxon>Definition</taxon> <addr>def-0033</addr>  <route>def-0033.xml</route>   <title>Heisenberg Uncertainty Principle</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5262</anchor>  <taxon>Definition</taxon> <addr>def-0033</addr>  <route>def-0033.xml</route>   <title>Heisenberg Uncertainty Principle</title> </frontmatter> <mainmatter><p>
     The <strong>Heisenberg Uncertainty Principle</strong> states that
     it is impossible to measure simultaneously the position and the momentum of a particle
     with arbitrary precision.
@@ -230,7 +230,7 @@
     </tex>
     where <tex>\Delta  x</tex> and <tex>\Delta  p</tex> are the uncertainties in position and momentum, respectively.
     The constant <tex>\hbar</tex> is the reduced Planck constant.
-</p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4911</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0003</addr>  <route>phy-0003.xml</route> <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>Time-independent Schrodinger Equation</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5263</anchor>  <taxon>Quantum Mechanics</taxon> <addr>phy-0003</addr>  <route>phy-0003.xml</route> <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>Time-independent Schrodinger Equation</title> </frontmatter> <mainmatter><p>
     Refer to chapter 2 in <link href="quantum-2018.xml" type="local" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</link></p><p>
     In previous section we use the <link href="def-0030.xml" type="local" addr="def-0030" title="Schrodinger's equation">Schrodinger equation</link> to compute things.
     The variable <tex>t</tex> is annoying which makes things complicated, and we would like to get rid of it.
@@ -288,7 +288,7 @@
     </p>
 </block><p>
     Now we give a name to the time-independent Schrodinger equation.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4912</anchor>  <taxon>Definition</taxon> <addr>def-0034</addr>  <route>def-0034.xml</route>   <title>Stationary State</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5264</anchor>  <taxon>Definition</taxon> <addr>def-0034</addr>  <route>def-0034.xml</route>   <title>Stationary State</title> </frontmatter> <mainmatter><p>
     A <strong>stationary state</strong> is a quantum state with all observables independent of time.
 </p></mainmatter> </tree><p>
     Thought the wave function is time-dependent,
