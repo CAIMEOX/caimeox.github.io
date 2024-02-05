@@ -1,0 +1,21 @@
+\title{One Step Beta Reduction}
+\taxon{Definition}
+\import{macros}
+\p{
+    \strong{One step beta reduction} (#{\tob}) is defined as follows:
+    \ul{
+        \li{\strong{Basis}:
+            #{
+                (\lambda x.M)N\tob\subst{M}{x}{N}
+            }
+        }
+        \li{\strong{Compatibility}:
+            If #{M\tob N} then #{\lambda x.M\tob\lambda x.N},
+            #{ML\tob NL} and #{LM\tob LN}.
+        }
+    }
+}
+\p{
+    The term of the form #{(\lambda x.M)N} is called a \strong{redex (reducible expression)}.
+    The term of the form #{\subst{M}{x}{N}} is called the \strong{contractum} (of the redex).
+}

@@ -1,0 +1,23 @@
+\title{Congruence Property of Substitution}
+\taxon{Lemma}
+\import{macros}
+\p{
+    Let #{L\aeq M} and #{N\aeq P}.
+    \ul{
+        \li{
+            #{
+                LN \aeq MP
+            }
+        }
+        \li{
+            #{
+                \lambda x.L \aeq \lambda x.M
+            }
+        }
+        \li{
+            #{
+                \subst{L}{x}{N} \aeq \subst{M}{x}{P}
+            }
+        }
+    }
+}

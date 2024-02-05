@@ -45,3 +45,25 @@
     \xml{code}[class]{\lang}{\body}
   }
 }
+\def\subt{\text{Sub}}
+\def\appl[a][b]{(\a\space\b)}
+\def\lt{
+    \iftex{\lambda\text{-term}}{
+        #{\lambda\text{-term}}
+    }
+}
+\def\fv{\text{FV}}
+\def\rename[M][x][y]{
+  \iftex{\M^{\x\to\y}}{
+    #{\M^{\x\to\y}}
+  }
+}
+\def\aeq{=_\alpha}
+\def\defeq{:\equiv}
+\def\subst[M][x][N]{
+  \iftex{\M[\x:=\N]}{
+    #{\M[\x:=\N]}
+  }
+}
+\def\tob{\to_\beta}
+\def\tobm{\twoheadrightarrow_{\beta}}

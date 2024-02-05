@@ -1,0 +1,14 @@
+\title{Subterms}
+\taxon{Example}
+\import{macros}
+\ul{
+    \li{
+        #{\subt(\appl{x}{z})} = #{\set{x,z,\appl{x}{z}}}
+    }
+    \li{
+        #{
+            \subt(\lambda x.\appl{x}{x}) 
+            = \set{\lambda x.\appl{x}{x},\appl{x}{x},x,x}
+        }
+    }
+}

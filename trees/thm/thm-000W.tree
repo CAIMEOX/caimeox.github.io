@@ -1,0 +1,13 @@
+\title{Lemma of subterms}
+\taxon{Lemma}
+\import{macros}
+\p{
+    \ul{
+        \li{
+            \strong{Reflexivity}: #{\forall M\in\Lambda,M\in\subt(M)}
+        }
+        \li{
+            \strong{Transitivity}: #{\forall L,M,N\in\Lambda,L\in\subt(M)\land M\in\subt(N)\implies L\in\subt(N)}
+        }
+    }
+}

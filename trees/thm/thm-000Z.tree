@@ -1,0 +1,23 @@
+\title{Properties of Beta Reduction}
+\taxon{Lemma}
+\import{macros}
+\p{
+    \ul{
+        \li{
+            \strong{Compatibility}:
+            #{\tobm} extends #{\tob}, i.e. if #{M\tob N} then #{M\tobm N}.
+        }
+        \li{
+            \strong{Reflixivity}:
+            #{
+                M\tobm M
+            }
+        }
+        \li{
+            \strong{Transitivity}:
+            #{
+                M\tobm N \land N\tobm P \implies M\tobm P
+            }
+        }
+    }
+}

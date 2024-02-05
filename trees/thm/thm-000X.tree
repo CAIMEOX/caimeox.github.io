@@ -1,0 +1,7 @@
+\title{Substitution is not commutative}
+\taxon{Lemma}
+\import{macros}
+\p{
+    Let #{x\not\equiv y} and assume #{x\not\in\fv(L)}.
+    Then #{L[y:=N][x:=M] \equiv L[x:=M][y:=N[x:=M]]}.
+}

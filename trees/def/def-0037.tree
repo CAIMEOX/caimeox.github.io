@@ -1,0 +1,17 @@
+\title{Set of Free Variables}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{FV(L)} be the set of free variables in a term #{L}.
+    \ul{
+        \li{
+            \strong{Variable}: #{\forall x\in V,\fv(x) = \set{x}}
+        }
+        \li{
+            \strong{Application}: #{\forall M,N\in\Lambda,\fv(MN) = \fv(M)\cup\fv(N)}
+        }
+        \li{
+            \strong{Abstraction}: #{\forall x\in V,M\in\Lambda,\fv(\lambda x.M) = \fv(M)\setminus\set{x}}
+        }
+    }
+}

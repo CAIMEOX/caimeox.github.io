@@ -1,0 +1,31 @@
+\title{Alpha Equivalence}
+\taxon{Definition}
+\import{macros}
+\p{
+    The #{\alpha} equivalence is a relation between \lt, defined as follows:
+    \ul{
+        \li{
+            \strong{Renaming}: #{\lambda x. M \aeq \lambda y. \rename{M}{x}{y}} if #{y\not\in\fv(M)} and #{y} is not a binding variable in #{M}.
+        }
+        \li{
+            \strong{Compatibility}: If #{M\aeq N} then #{\lambda x.M\aeq\lambda x.N} and #{ML \aeq NL, LM \aeq LN}.
+        }
+        \li{
+            \strong{Reflexivity}: #{M\aeq M}.
+        }
+        \li{
+            \strong{Symmetry}: If #{M\aeq N} then #{N\aeq M}.
+        }
+        \li{
+            \strong{Transitivity}: If #{M\aeq N} and #{N\aeq L} then #{M\aeq L}.
+        }
+    }
+    The first principle is the basis of alpha equivalence, which is the same as [renaming](def-0039).
+    The last 3 properties ensures that #{\aeq} is an [equivalence relation](def-000X).
+    
+}
+\p{
+    If #{M\aeq N} then we say #{M} and #{N} are #{\alpha\text{-equivalent}} or #{\alpha\text{-convertible}}.
+    #{M} is an #{\alpha\text{-variant}} of #{N} and vice versa.
+
+}

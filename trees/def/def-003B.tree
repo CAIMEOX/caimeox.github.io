@@ -1,0 +1,24 @@
+\title{Substitution}
+\taxon{Definition}
+\import{macros}
+\p{
+    The \strong{substitution} is defined by the following rules:
+    \ul{
+        \li{
+            #{\subst{M}{x}{N}\defeq N}
+        }
+        \li{
+            #{\subst{y}{x}{N}\defeq y} if #{y\not\equiv x}
+        }
+        \li{
+            #{\subst{(PQ)}{x}{N}\defeq(\subst{P}{x}{N})(\subst{Q}{x}{N})}
+        }
+        \li{
+            #{\subst{(\lambda y.P)}{x}{N}\defeq\lambda z.\subst{\rename{P}{y}{z}}{x}{N}} 
+            if #{\lambda z.\rename{P}{y}{z} \aeq \lambda y.P} and #{z\not\in\fv(N)}
+        }
+    }
+    The terms with form #{\subst{P}{x}{N}} are not \lt,
+    but we can regard them as a \em{meta notation} that appears
+    in the substitution process and the result contains no such terms.
+}

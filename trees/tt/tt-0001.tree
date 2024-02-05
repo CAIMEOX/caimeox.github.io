@@ -1,25 +1,124 @@
 \title{Untyped Lambda Calculus}
 \date{2024-01-26}
 \taxon{Type Theory}
+\def\lc{#{\lambda\text{-calculus}}}
+\import{macros}
 \p{
     Refer to [Type Theory and Formal Proof](ttafp-2014).
 }
 \p{
-In dealing with functions there are two \strong{construction principles} and one \strong{evalutaion rule}
-\ul{
-\li{Construction Principles}
-\ul{
-\li{Function Abstraction: #{\lambda x.M}}
-\li{Function Application: #{M N}}
+    The idea to generalize the behavior of functions in mathematics and logic led to the development of the lambda calculus.
+    The lambda calculus is a formal system for expressing computation based on function abstraction and application using \em{variable binding} and \em{substitution}. 
+    In dealing with functions there are two \strong{construction principles} and one \strong{evalutaion rule}.
+    \ul{
+        \li{\strong{Construction Principles}: note that expressions do not force to be meaningful.}
+        \ul{
+            \li{Function Abstraction: #{\lambda x.M}}
+            \li{Function Application: #{M N}, this only produces a new expression,
+            in which the function has not yet been executed.}
+        }
+    \li{\strong{Evaluation Rule}}
+        \ul{
+            \li{Beta Reduction: #{(\lambda x.M)N\to M[x:=N]}}
+        }
+    }
+    The beta reduction makes use of the \strong{substitution} #{M[x:=N]} which represents the result of replacing all free occurrences of #{x} in #{M} with #{N}.
+    Note that the application is \strong{left associative}, that is, #{MNP} means #{(MN)P}.
+    And application has the highest precedence, that is, #{\lambda x.MN} means #{\lambda x.(MN)}.
 }
-\li{Evaluation Rule}
-\ul{
-\li{Beta Reduction: #{(\lambda x.M)N\to M[N/x]}}
+\p{
+    The multi-argument function #{\lambda x_1\ldots x_n.M} is defined as #{\lambda x_1.(\lambda x_2.(\ldots(\lambda x_n.M)\ldots))} (right associative),
+    that is, simulated by a sequence of single-argument functions. The later function is called \strong{curried function} and the
+    process of transforming a multi-argument function into a sequence of single-argument functions is called \strong{currying}.
 }
-}
-The beta reduction makes use of the \strong{substitution} #{M[N/x]} which represents the result of replacing all free occurences of #{x} in #{M} with #{N}.
-} 
 \scope{
-\p{Expressions in the lambda calculus is called \strong{terms}. The set of terms is denoted #{\Lambda}.}
-\transclude{def-000F} 
+    \strong{Lambda Terms}
+    \p{Expressions in the lambda calculus is called \strong{terms}. The set of terms is denoted #{\Lambda}.}
+    \transclude{def-000F}
 }
+\p{
+    With the following recursive definition we can determine 
+    what the \strong{subterms} of a give \lt are. Here we use 
+    a concept named [multiset](def-0035).
+}
+\transclude{def-0036}
+\p{
+    The definition above uses a notation #{\equiv} which means \em{syntactic equality} here.
+}
+\transclude{eg-0006}
+\p{
+    The substerm mapping satisfies the following lemma.
+}
+\transclude{thm-000W}
+\p{
+    Variable occurrences in a \lt can be divided into 3 categories:
+    \ul{
+        \li{Bound Occurrences: #{x} is bound in #{M} if #{x} is the argument of an \strong{abstraction} in #{M}.}
+        \li{Free Occurrences: #{x} is free in #{M} if #{x} is not bound by any \strong{abstraction} in #{M}.}
+        \li{Binding Occurrences: something after a lambda notation #{\lambda}}
+    }
+    We mainly focus on the \strong{free variables} of a term.
+}
+\transclude{def-0037}
+\transclude{def-0038}
+\block{\strong{Alpha conversion}}{
+    Functions in \lc have the property that the name of 
+    the binding variables is irrelevant.
+    In order to describe this equality we need to define a relation
+    called #{\alpha\text{-conversion}} or #{\alpha\text{-equivalence}},
+    which is based on the process of renaming binding variables.
+}
+\transclude{def-0039}
+\p{
+    The definition of \strong{renaming} should be extended to more general terms.
+}
+\transclude{def-003A}
+\p{
+    In previous sections we informally mentioned the concept of \strong{substitution}.
+    Now we give a precise formulation
+}
+\transclude{def-003B}
+\p{
+    Renaming can be considered as a special case of substitution.
+    We can show that #{\rename{M}{x}{u}\aeq\subst{M}{x}{u}} if the conditions of renaming are satisfied.
+}
+\p{
+    We may do \strong{sequential substitution} in a term,
+    that is, doing a number of substitutions consecutively.
+    And we have the following lemma, which states that the order of substitution is important.
+}
+\transclude{thm-000X}
+\block{
+    \strong{\lt modulo #{\alpha\text{-equivalence}}}
+}{
+    As we have seen, the relation #{\aeq} is an equivalence relation.
+    Hence we can define the set of equivalence classes of terms with respect to #{\aeq}.
+    Now we can identify a term with its equivalence class.
+    We still use #{\equiv} for syntactic equality modulo #{\alpha\text{-equivalence}}.
+}
+\p{
+    #{\alpha\text{-equivalence}} is a congruence relation, which means that it is conserved by elementary process of term construction.
+}
+\transclude{thm-000Y}
+\block{
+    \strong{Barendregt Convention}
+}{
+    The Barendregt Convention states that we should avoid using the same variable name in different abstractions.
+    This is to avoid the confusion of free variables. It states that 
+    we choose the names for the binding variables in a \lt in such a manner
+    that they are all different, and each of them differs from 
+    all free variables occurring in the term.
+}
+\block{
+    \strong{Beta Reduction}
+}{
+    Since we have formally defined the \strong{substitution},
+    we can rephrase the reduction as a relation on \lt, namely #{\beta\text{-reduction}}.
+}
+\transclude{def-003C}
+\transclude{eg-0007}
+\p{
+    We can often perform a sequence of beta reductions. This leads to the definition.
+}
+\transclude{def-003D}
+\transclude{thm-000Z}

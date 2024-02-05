@@ -1,0 +1,13 @@
+\title{Beta Reduction}
+\taxon{Example}
+\import{macros}
+\p{
+    An interesting example of beta reduction is the following:
+    ##{
+        \appl{(\lambda x.\appl{x}{x})}{(\lambda x.\appl{x}{x})}
+        \tob
+        \appl{(\lambda x.\appl{x}{x})}{(\lambda x.\appl{x}{x})}
+    }
+    The result of the beta reduction is the same term as the original term,
+    and never terminates.
+}

@@ -1,0 +1,13 @@
+\title{Beta Reduction}
+\taxon{Definition}
+\import{macros}
+\p{
+    The \strong{(zero-or-more-step) beta reduction} (#{\tobm}) is a
+    generalized version of the [one step beta reduction](def-003C).
+    #{M\tobm N} if there exists #{n\geq 0} and there are terms #{M_0,M_1,\ldots,M_n}
+    such that #{M_0=M}, #{M_n=N} and #{M_i\tob M_{i+1}} for #{0\leq i<n}.
+    In other words there exists a chain of one-step beta reductions from #{M} to #{N}.
+    ##{
+        M\equiv M_0\tob M_1\tob\cdots\tob M_n\equiv N
+    }
+}

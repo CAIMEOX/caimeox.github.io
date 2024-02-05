@@ -1,0 +1,7 @@
+\title{Multiset}
+\taxon{Definition}
+\p{
+    A \strong{multiset} is defined as an ordered pair #{(X, f)} where 
+    #{X} is the underlying set and #{f} is a function #{f:X\to\mathbb{Z}^+},
+    giving the \strong{multiplicity} of each element in #{X}.
+}

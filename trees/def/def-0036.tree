@@ -1,0 +1,13 @@
+\title{Multiset of Subterms}
+\taxon{Definition}
+\import{macros}
+\p{
+    We define a map #{\subt}:
+    \ul{
+        \li{\strong{Basis}: #{\forall x\in V,\subt(x) =\set{x}}}
+        \li{\strong{Application}: #{\forall M,N\in\Lambda,\subt(MN) = \subt(M)\cup\subt(N)\cup\set{MN}}}
+        \li{\strong{Abstraction}: #{\forall x\in V,M\in\Lambda,\subt(\lambda x.M) = \subt(M)\cup\set{\lambda x.M}}}
+    }
+    #{L} is a subterm of #{M} if #{L\in\subt(M)}.
+    If #{L\not\equiv M} then we say #{L} is a \strong{proper subterm} of #{M}.
+}
