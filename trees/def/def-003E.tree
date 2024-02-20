@@ -1,0 +1,67 @@
+\title{Category}
+\taxon{Definition}
+\import{macros}
+\block{\strong{With one collection}}{
+    A \strong{category} #{C} consists
+    \ul{
+        \li{
+            A collection of \strong{objects} #{C_0} (#{\obj(C)}).
+        }
+        \li{
+            A collection #{C_1} (#{\mor(C)}) of \strong{morphisms} (arrows).
+        }
+        \li{
+            For every morphism #{f} there are an object #{s(f)} (\strong{source}, domain) and an object #{t(f)} (\strong{target}, codomain).
+        }
+        \li{
+            For every pair of morphisms #{f, g} such that #{t(f) = s(g)}, there is a morphism #{g \circ f} (\strong{composition}) (Also written #{gf} or #{f;g}).
+        }
+        \li{
+            For every object #{x}, there is a morphism #{\id_x} (or #{1_x}) called \strong{identity}.
+        }
+        \li{
+            The following properties hold:
+            \ul{
+                \li{
+                    #{s(g \circ f) = s(f)} and #{t(g \circ f) = t(g)}.
+                }
+                \li{
+                    #{s(1_x) = x} and #{t(1_x) = x}.
+                }
+                \li{
+                    Composition is \strong{associative}: #{h \circ (g \circ f) = (h \circ g) \circ f} when #{t(f) = s(g)}, and #{t(g) = s(h)}.
+                }
+                \li{
+                    Composition satifies the \strong{identity laws}: #{f \circ \id_x = f} and #{\id_y \circ f = f} if #{}
+                }
+            }
+        }
+    }
+    If the identity map and its axioms are omitted then one speaks of a \strong{semicategory}.
+}
+\block{\strong{With a family of collections of morphisms}}{
+    A \strong{category} #{C} consists
+    \ul{
+        \li{
+            A collection of \strong{objects} #{C_0} (#{\obj(C)}).
+        }
+        \li{
+            For every pair of objects #{x, y}, a collection #{C_1(x, y)} (#{\hom_C(x,y)}) of \strong{morphisms} from #{x} to #{y}.
+        }
+        \li{
+            For each pair of morphisms #{f} in #{C_1(x,y)} and #{g} in #{C_1(y,z)}, a morphism #{g \circ f} in #{C_1(x,z)}.
+            called their \strong{composition}.
+        }
+        \li{
+            For each object #{x}, a morphism #{\id_x} in #{C_1(x,x)} called the \strong{identity} on #{x}.
+        }
+        \li{
+            The following properties hold:
+            \ul{      
+                \li{Composition is \strong{associative}: #{h \circ (g \circ f) = (h \circ g) \circ f} for all #{f} in #{C_1(x,y)}, #{g} in #{C_1(y,z)}, and #{h} in #{C_1(z,w)}.}
+                \li{Composition satifies the \strong{identity laws}: #{f \circ \id_x = f} and #{\id_y \circ f = f} for all #{f} in #{C_1(x,y)}.}
+            }
+        }
+    }
+    Usually we write #{\mor(C)} for the disjoint union #{\bigsqcup_{x,y \in C_0} C_1(x,y)}.
+}

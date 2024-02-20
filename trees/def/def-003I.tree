@@ -1,0 +1,15 @@
+\title{Functor Category}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{C} and #{D} be categories, the functor category #{D^C} 
+    (or #{[C,D]}) is the category whose
+    \ul{
+        \li{
+            objects are functors from #{C} to #{D}.
+        }
+        \li{
+            morphisms are \strong{natural transformations} between functors.
+        }
+    }
+}

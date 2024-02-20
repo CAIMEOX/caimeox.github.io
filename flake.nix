@@ -7,15 +7,16 @@
 
   outputs = inputs@{ self, forester, nixpkgs, flake-utils }:
     let
-      system = "x86_64-linux"; 
+      system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system inputs; };
     in
     {
       devShells."${system}".default = pkgs.mkShell {
-        buildInputs = [
-          pkgs.inotify-tools
-          pkgs.texlive.combined.scheme-basic
-          forester.packages."${system}".default ];
+        buildInputs = with pkgs; [
+          inotify-tools
+          (texlive.combine { inherit (texlive) scheme-medium standalone tikz-cd; })
+          forester.packages."${system}".default
+        ];
         shellHook = ''
           exec fish
         '';

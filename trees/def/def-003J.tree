@@ -1,0 +1,21 @@
+\title{Natural Transformation}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{C} and #{D} be categories and #{F,G:C\to D} be functors.
+    A \strong{natural transformation} #{\alpha:F\Rightarrow  G} is 
+    an assignment to every object #{x\in C} of a morphism #{\alpha_x:F(x)\to G(x)} in #{D},
+    (called the \strong{component} of #{\alpha} at #{x})
+    the following diagram commutes in #{D}:
+    \graph{
+        \begin{tikzcd}
+            {F(x)} && {F(y)} \\
+            \\
+            {G(x)} && {G(y)}
+            \arrow["{F(f)}", from=1-1, to=1-3]
+            \arrow["{G(f)}", from=3-1, to=3-3]
+            \arrow["{\alpha_x}", from=1-1, to=3-1]
+            \arrow["{\alpha_y}", from=1-3, to=3-3]
+        \end{tikzcd}
+    }
+}

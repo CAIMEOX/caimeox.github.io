@@ -1,0 +1,7 @@
+\title{Diagram}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{C} be a category and #{J} be a small category.
+    A \strong{diagram} of shape #{J} in #{C} is a functor #{X:J\to C}.
+}

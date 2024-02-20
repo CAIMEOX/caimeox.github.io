@@ -5,5 +5,10 @@
   "liveServer.settings.fullReload": true,
   "liveServer.settings.useWebExt": true,
   "nixEnvSelector.nixFile": "${workspaceRoot}/flake.nix",
-  "cmake.configureOnOpen": false
+  "cmake.configureOnOpen": false,
+  "cSpell.words": [
+    "functors",
+    "morphism",
+    "morphisms"
+  ]
 }

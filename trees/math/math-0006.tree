@@ -1,0 +1,51 @@
+\title{Category Theory of Utilitarianism}
+\taxon{Category Theory}
+\p{
+    This note is about the category theory and its applications.
+    Instead of reading a well-organized book, I prefer to write down the things I learned
+    from [ncatlab](ncatlab) and papers.
+}
+\block{
+    \strong{Ideas}}{
+        Intuitively, a category is a collection of objects and arrows between them,
+        such arrows can be composed and there is an identity arrow for each object.
+    \p{
+        There are commonly two ways to define a category, which are equivalent in usual 
+        foundations of mathematics. One of them generalizes the notion of \strong{internal category}
+        nicely while the other one is more convenient for \strong{enriched category}.
+    }
+    \p{
+        The major difference is whether they use a single collection of all morphisms or
+        several collections of morphisms (\strong{family of collections} indexed by pairs of objects)
+    }
+}
+\transclude{def-003E}
+\p{
+    Its common to talk about some objects and their morphisms.
+    Informally, a \strong{diagram} in a category #{C} consists of some 
+    objects of #{C} connected by some morphisms of #{C}.
+}
+\p{
+    This terminology is often used when speaking about \strong{limits} or 
+    \strong{colimits} of a diagram.
+}
+\p{
+    One formal way to define a diagram is to use a \strong{functor} from a (very) small category to #{C}.
+    That is, a functor whose domain is a small category.
+}
+\transclude{def-003F}
+\p{
+    We did not explain what a \strong{functor} is, but it is very natural thought.
+    Briefly, a functor is a \strong{homomorphism} between two categories.
+    It maps objects to objects and morphisms to morphisms, preserving the structure of the categories.
+}
+\transclude{def-003G}
+\p{
+    For the sake of completeness, we state the definition of the \strong{functor category}
+    and the \strong{natural transformations} between functors.
+}
+\transclude{def-003I}
+\transclude{def-003J}
+\p{
+    We state the concise functorial definition of diagrams of the shape of categories.
+}

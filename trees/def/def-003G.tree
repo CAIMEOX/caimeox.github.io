@@ -1,0 +1,16 @@
+\title{Functor}
+\import{macros}
+\taxon{Definition}
+\p{
+    A \strong{functor} #{F} from a category #{C} to a category #{D} is a map
+    sending each #{x\in C} to an object #{F(x)\in D} and each morphism
+    #{f:x\to y} in #{C} to morphism #{F(f):F(x)\to F(y)} in #{D}, such that 
+    \ul{
+        \li{
+            Composition is preserved: #{F(g\circ f) = F(g)\circ F(f)}.
+        }
+        \li{
+            Identity is preserved: #{F(\id_x) = \id_{F(x)}}.
+        }
+    }
+}

@@ -67,3 +67,15 @@
 }
 \def\tob{\to_\beta}
 \def\tobm{\twoheadrightarrow_{\beta}}
+
+% category theory
+\def\obj{
+    \iftex{\text{Ob}}{
+        #{\text{Ob}}
+    }
+}
+\def\mor{
+    \iftex{\text{Mor}}{
+        #{\text{Mor}}
+    }
+}
