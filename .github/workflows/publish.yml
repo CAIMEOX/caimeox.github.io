@@ -55,9 +55,10 @@ jobs:
 
       - name: Install Forester
         run: |
-          git clone https://git.sr.ht/~jonsterling/ocaml-forester
-          cd ocaml-forester
-          opam pin add -y . --locked
+          # git clone https://git.sr.ht/~jonsterling/ocaml-forester
+          # cd ocaml-forester
+          # opam pin add -y . --locked
+          opam install -y forester
 
       - name: "Build forest"
         run: make release

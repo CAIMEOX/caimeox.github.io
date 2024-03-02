@@ -1,1 +1,84 @@
-\title{None}
+\title{Recursion}
+\date{2024-03-02}
+\taxon{Computer Science}
+\import{macros}
+\p{
+    In this note we complete the development of \strong{recursion}.
+    Refer to [TAPL](tapl)
+}
+\block{\strong{General Recursion}}{
+    Let's first consider the \strong{greatest common divisor} function #{\gcd(a,b)}
+    ##{
+        \begin{align*}
+            \gcd\space a\space a &= a \\
+            \gcd\space a\space b &= \gcd\space (a-b)\space b  \text{ if } b > a \\
+            \gcd\space a\space b &= \gcd\space a\space (b-a)  \text{ if } a > b
+        \end{align*}
+    }
+    This recursion is terminating because the arguments are decreasing.
+    We can deal with this case currently and let's be hold.
+    We consider the most general schema of recursion.
+    ##{
+        f = h\space f
+    }
+    which means that in the right-hand side we can make arbitrary recursive
+    calls to the function #{f}. For #{\gcd} we have
+    ##{
+        h = \lambda gab. \text{if } (a=b)\space a\space((
+            \text{if }\space(a>b)\space(g\space (a-b)\space b)\space(g\space a\space (b-a))
+        ))
+    }
+    How can we define #{f} explicitly when given #{h} so that #{f = h\space f},
+    which called a \strong{fixed point} pf #{h}. If we believe \strong{Church-Turing thesis},
+    then any partial recursive function should be representable on Church numerals in lambda calculus.
+    Hence we can find such #{f} and the answer is called \strong{Y-combinator}.
+    We want that if #{f = Y\space h} and #{f=h\space f}, so we get #{Y\space h = h \space (Y\space h)}.
+    ##{
+        Y\space h = h\space (Y\space h) = h\space (h\space (Y\space h)) = h\space (h\space (h\space (Y\space h))) = \cdots
+    }
+    This iterates infinitely. The definition of #{Y} is:
+    ##{
+        Y = \lambda h.(\lambda x. h\space (x\space x))\space (\lambda x. h\space (x\space x))
+    }
+    The application #{x\space x} will replicate #{Y\space h}:
+    ##{
+        \begin{align*}
+            Y\space h &= (\lambda x. h\space (x\space x))\space (\lambda x. h\space (x\space x)) \\
+            &= h\space ((\lambda x. h\space (x\space x))\space (\lambda x. h\space (x\space x))) \\
+            &= h\space (Y\space h)
+        \end{align*}
+    }
+    The partial recursive functions include functions that are \strong{undefined} (have no normal form) 
+    on some arguments, hence we can't always find an answer.
+    Consider #{f=f} as a recursion schema and #{h=\id}.
+    ##{
+        Y\space h = Y\space \id = (\lambda x. \id\space (x\space x))\space (\lambda x. \id\space (x\space x))
+        = (\lambda x. x\space x)\space (\lambda x. x\space x) = \Omega
+    }
+    The function #{f=\Omega} solves the equation #{f=f} by giving a divergent result.
+}
+\block{\strong{Define Functions By Recursion}}{
+    Consider the factorial function:
+    ##{
+        \text{fact}\space n = \text{if } (n=0)\space 1\space (n\space \text{fact}\space (n-1))
+    }
+    This requires a test #{\text{if0}} satisfies:
+    ##{
+        \begin{align*}
+            \text{if0}(0,c,d) &=c\\
+            \text{if0}(n+1,c,d) &=d
+        \end{align*}
+    }
+    We can define #{\text{if0}} by (Recall that #{K=\lambda xy.x}):
+    ##{
+        \text{if0} = \lambda ncd. n\space(K\space d)\space c
+    }
+    The argument of Y combinator is defined:
+    ##{
+        h_\text{fact} = \lambda g. \lambda n. \text{if0}\space n\space 1\space (n\space g\space (n-1))
+    }
+    and
+    ##{
+        \text{fact} = Y\space h_\text{fact}
+    }
+}
