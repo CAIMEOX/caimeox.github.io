@@ -45,6 +45,8 @@
     \xml{code}[class]{\lang}{\body}
   }
 }
+
+% Lambda calculus
 \def\subt{\text{Sub}}
 \def\appl[a][b]{(\a\space\b)}
 \def\lt{
@@ -67,7 +69,7 @@
 }
 \def\tob{\to_\beta}
 \def\tobm{\twoheadrightarrow_{\beta}}
-
+\def\etaeq{=_\eta}
 % category theory
 \def\obj{
     \iftex{\text{Ob}}{

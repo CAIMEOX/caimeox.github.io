@@ -1,0 +1,5 @@
+\title{2-category}
+\taxon{Definition}
+\p{
+    A \strong{2-category} consists of a collection of objects, a collection of morphisms, and a collection of 2-morphisms (between morphisms).
+}

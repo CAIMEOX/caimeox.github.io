@@ -49,3 +49,9 @@
 \p{
     We state the concise functorial definition of diagrams of the shape of categories.
 }
+\transclude{def-003H}
+\p{
+    A limit of a diagram #{F:D\to C} is an object #{\lim F} of #{C}
+    equipped with morphisms to the objects #{F(d)} for all #{d\in D},
+    such that everything in sight commutes.
+}

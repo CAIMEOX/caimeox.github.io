@@ -4,4 +4,5 @@
 \p{
     Let #{C} be a category and #{J} be a small category.
     A \strong{diagram} of shape #{J} in #{C} is a functor #{X:J\to C}.
+    The category of #{J}-shaped diagrams in #{C} is the [functor category](def-003I) #{C^J}.
 }

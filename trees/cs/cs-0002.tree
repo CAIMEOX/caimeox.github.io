@@ -1,3 +1,267 @@
-\title{Representing Control}
+\title{Primitive Recursion in Lambda Calculus}
 \taxon{Compute Science}
 \import{macros}
+\p{ 
+    We begin with the \strong{schema of iteration} and then proceed 
+    the more complex schema of primitive recursion and general recursion.
+    Refer to [TAPL](tapl).
+}
+\block{\strong{Function Composition}}{
+    Giving two functions #{f, g} we can compose then to get a new function #{f\circ g = f(g(x))}.
+    Using #{\lambda}-notation, we can define the composition of two functions as follows:
+    ##{
+        f\circ g = \lambda x.f(g(x))
+    }
+    And the composition operation is also a lambda abstraction.
+    ##{
+        \circ = B = \lambda f.\lambda g.\lambda x.f(g(x))
+    }
+    Composing identity function with any function does not change the function.
+    We expect the following equation to hold:
+    ##{
+        f\circ I = f = I\circ f
+    }
+    where #{I} is the identity function. This can be verified by the following calculation:
+    ##{
+        \begin{align*}
+            B\space f\space I &= (\lambda f.\lambda g.\lambda x.f(g(x)))\space f\space I \\
+            &\tob \lambda g.\lambda x.f(g(x))\space I \\
+            &\tob \lambda x.f(I(x)) \\
+            &\tob \lambda x.f(x) \\
+            &\etaeq f
+        \end{align*}
+    }
+    The last step requires an extensional equality, which is the called \strong{eta-conversion}.
+    ##{
+        \text{for}\space x\not\in\fv(f) ,\lambda x.f(x) \etaeq f
+    }
+    It makes more sense to use the equation from right to left called \strong{eta-expansion} 
+    (And more discipline has to be imposed or expansion does not terminate).
+}
+\block{\strong{Non-termination}}{
+    \p{
+        The well-known [\strong{divergent combinator}](eg-0007) implies that 
+        the lambda calculus is not strongly normalizing.
+    }
+    \p{
+        However, we can always compute a normal form if one exists.
+        Though there are many reduction strategies,
+        there is a complete one for expressions that have normal form.
+        This kind of reduction strategy is called \strong{normal order reduction} or
+        \strong{leftmost-outermost reduction}. It scans through the expression from left to right
+        and when it find a redex, it reduces it by applying beta reduction and returns to the beginning.
+    }
+    \p{
+        The notation of leftmost-outermost reduction is closely related to the 
+        notion of \strong{call-by-name evaluation} in programming languages.
+        (A little more distance to \strong{call-by-need} evaluation in Haskell)
+    }
+    \p{
+        In contrast, \strong{call-by-value} evaluation is not complete, which would 
+        reduce the argument of a function before applying beta reduction.
+    }
+}
+\block{\strong{Church-Rosser Property}}{
+    The outcome of a computation #{e} is its normal form.
+    It is naturally to ask the question whether the normal form is unique.
+    The key to this question is the \strong{Church-Rosser property} or \strong{confluence}:
+    If #{e\to^* e_1} and #{e\to^* e_2}, then there exists a term #{e_3} such that
+    ##{
+        e_1\to^* e_3\space\text{and}\space e_2\to^* e_3
+    }
+    This implies the uniqueness of the normal form.
+}
+\block{\strong{Representing Natural Numbers}}{
+    \p{
+        We can represent natural numbers in lambda calculus by using the 
+        \strong{Church numerals} or \strong{Church encoding}.
+        The two abstractions should be related in some ways: 
+        one #{x} stands for zero and the other #{f} stands for the successor function.
+    }
+    \p{
+        The Church numeral #{n} is a function that takes two arguments #{f} and #{x} and applies #{f} to #{x} #{n} times.
+        The Church numeral #{0} is defined as the identity function #{\lambda f.\lambda x.x}.
+        The Church numeral #{1} is defined as the successor of #{0}:
+        ##{
+            1 = \lambda f.\lambda x.f(x)
+        }
+        The Church numeral #{2} is defined as the successor of #{1}:
+        ##{
+            2 = \lambda f.\lambda x.f(f(x))
+        }
+        And so on.
+    }
+    \p{
+        The Church numeral #{n} is defined as the successor of #{n-1}:
+        ##{
+            n = \lambda f.\lambda x.f^n(x)
+        }
+        where #{f^n(x)} means applying #{f} to #{x} #{n} times.
+    }
+    \p{
+        The successor function is defined as follows:
+        ##{
+            S = \lambda n.\lambda f.\lambda x.f(n\space f\space x)
+        }
+        \proof{
+            ##{
+                \begin{align*}
+                    S\space n &= (\lambda n.\lambda f.\lambda x.f(n\space f\space x))\space n \\
+                    &\tob \lambda f.\lambda x.f(n\space f\space x) \\
+                    &\tob \lambda f.\lambda x.f^n(x) \\
+                    &\tob n+1
+                \end{align*}
+            }
+        }
+    }
+    \p{
+        Using the iteration property we can define mathematical functions 
+        over the natural numbers in lambda calculus.
+        The addition of two Church numerals #{m} and #{n} is defined as follows:
+        ##{
+            m+n = \lambda n.\lambda k. n\space S\space k
+        }
+    }
+    \p{
+        The multiplication of two Church numerals #{m} and #{n} is defined by
+        iterating the addition function #{m} times:
+        ##{
+            m*n = \lambda n.\lambda k. n\space (k + ) \space 0
+        }
+    }
+    \p{
+        The exponentiation of two Church numerals #{m} and #{n} is defined as follows:
+        ##{
+            m^n = \lambda m.\lambda n. n\space (m *) \space 1
+        }
+    }
+}
+\block{\strong{The Schema of Iteration}}{
+    \p{
+        As we saw before, a natural number #{n} is represented by a function 
+        that iterates its first argument #{n} times on its second argument.
+        ##{
+            n = \lambda g.\lambda c.g^n(c)
+        }
+        Another way to specify such a function schematically is 
+        ##{
+            \begin{align*}
+                f \space0 &= c \\
+                f (n+1) &= g\space (f\space n)
+            \end{align*}
+        }
+        If such a function satisfies such a \strong{schema of iteration}, then it can 
+        be defined in the lambda calculus on Church numerals as
+        ##{
+            f = \lambda n.n \space g \space c
+        }
+        This definition is \strong{total} which means it is defined for all natural numbers.
+        Let's define the multiplication again
+        ##{
+            \begin{align*}
+                m*0 &= 0 \\
+                m*(n+1) &= m + (m*n)
+            \end{align*}
+        }
+        To fit our schema of iteration, we can define the multiplication by abstracting over #{k}:
+        ##{
+            \begin{align*}
+                \text{times}\space 0 &= \lambda k.0 \\
+                \text{times}\space (n+1) &= \lambda k.k + (\text{times}\space n\space k)
+            \end{align*}
+        }
+        where the #{c} and #{g} are
+        ##{
+            \begin{align*}
+                c &= \lambda k.0 \\
+                g &= \lambda r.\lambda k.k+(r\space k)
+            \end{align*}
+        }
+        and we obtain
+        ##{
+            \text{times} = \lambda n.n(\lambda rk. k + (r\space k))(\lambda k.0)
+        }
+    }
+}
+\block{\strong{The Schema of Primitive Recursion}}{
+    Everything appears simply until we think of a very simple function,
+    the \strong{predecessor function} #{\text{pred}} defined by
+    ##{
+        \begin{align*}
+            \text{pred}\space 0 = 0 \\
+            \text{pred}\space (n+1) = n
+        \end{align*}
+    }
+    What we would need is the \strong{schema of primitive recursion}
+    ##{
+        \begin{align*}
+            f\space 0 &= c \\
+            f\space (n+1) &= g\space n\space (f\space n)
+        \end{align*}
+    }
+    With which we can define the predecessor function by 
+    ##{
+        g = \lambda x.\lambda y.x
+    }
+    \block{\strong{Define predecessor function}}{
+        The key idea is to gain access to #{n} in the schema of 
+        primitive recursion by rebuilding it during the iteration.
+        ##{
+            \text{pred}_2\space n = \langle n, \text{pred}\space n \rangle
+        }
+        The key step is to express the definition by a schema of iteration
+        rather than primitive recursion.
+        ##{
+            \text{pred}_2\space 0 = \langle 0, 0 \rangle
+        }
+        We need a helper function for the successor case
+        ##{
+            \text{letPair}\space\langle e_1,e_2\rangle\space k = k\space e_1\space e_2
+        }
+        This function passes the elements of the pair to a \strong{continuation} #{k}.
+        ##{
+            \text{pred}_2 (n+1) = \text{letPair}\space (\text{pred}_2\space n)\space (\lambda xy. \langle x+1, x \rangle) 
+        }
+    }
+    \block{\strong{Define Pairs}}{
+        Now we need to define pairs and #{\text{letPair}}.
+        The idea is to simply abstract over the continuation itself.
+        ##{
+            \begin{align*}
+                \langle x,y\rangle &= \lambda k.k\space x\space y \\
+                \text{pair} &= \lambda x.\lambda y.\lambda k.k\space x\space y \\ 
+                \text{letPair} &= \lambda p.p
+            \end{align*}
+        }
+        The letPair is not really needed here.
+    }
+    \block{\strong{Summary}}{
+        Summarizing the above and we obtain the full definition of the predecessor function.
+        ##{
+            \begin{align*}
+                \text{pred}_2 &= \lambda n.n\space (\lambda p.p (\lambda xy.\text{pair} \space (x+1) \space x))\space \text{pair} (\space 0 \space 0)\\ 
+                \text{pred} &= \lambda n. (\text{pred}_2\space n) \space (\lambda xy.y)
+            \end{align*}   
+        }
+    }
+    \block{\strong{General Primitive Recursion}}{
+        The general case of primitive recursion follows by a similar pattern.
+        We begin by defining a function #{f_2}:
+        ##{
+            f_2\space n = \langle n, f\space n \rangle
+        }
+        We can define #{f_2} using the schema of iteration
+        ##{
+            \begin{align*}
+                f_2\space 0 &= \langle 0, c \rangle \\
+                f_2\space (n+1) &= \text{letPair}\space (f_2\space n)\space (\lambda xy.\langle x+1, g\space x\space y \rangle) \\
+                f\space n &= \text{letPair}\space (f_2\space n)\space (\lambda xy.y)
+            \end{align*}
+        }
+    }
+}
+\p{
+    When computing over natural numbers we can restrict the functions that can be 
+    formed in schematic ways to obtain a language in which all functions \strong{terminate}.
+    Because if #{c} and #{g} are terminating then so is #{f} formed from them by primitive recursion.
+}
