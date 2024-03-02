@@ -38,7 +38,7 @@
 }
 \p{
     With the following recursive definition we can determine 
-    what the \strong{subterms} of a give \lt are. Here we use 
+    what the \strong{subterms} of a give #{\lt} are. Here we use 
     a concept named [multiset](def-0035).
 }
 \transclude{def-0036}
@@ -51,7 +51,7 @@
 }
 \transclude{thm-000W}
 \p{
-    Variable occurrences in a \lt can be divided into 3 categories:
+    Variable occurrences in a #{\lt} can be divided into 3 categories:
     \ul{
         \li{Bound Occurrences: #{x} is bound in #{M} if #{x} is the argument of an \strong{abstraction} in #{M}.}
         \li{Free Occurrences: #{x} is free in #{M} if #{x} is not bound by any \strong{abstraction} in #{M}.}
@@ -61,12 +61,13 @@
 }
 \transclude{def-0037}
 \transclude{def-0038}
-\block{\strong{Alpha conversion}}{
-    Functions in \lc have the property that the name of 
+\subtree{
+    \title{Alpha conversion}
+    \p{Functions in \lc have the property that the name of 
     the binding variables is irrelevant.
     In order to describe this equality we need to define a relation
     called #{\alpha\text{-conversion}} or #{\alpha\text{-equivalence}},
-    which is based on the process of renaming binding variables.
+    which is based on the process of renaming binding variables.}
 }
 \transclude{def-0039}
 \p{
@@ -88,33 +89,33 @@
     And we have the following lemma, which states that the order of substitution is important.
 }
 \transclude{thm-000X}
-\block{
-    \strong{\lt modulo #{\alpha\text{-equivalence}}}
-}{
-    As we have seen, the relation #{\aeq} is an equivalence relation.
+\subtree{
+    \title{#{\lt} modulo #{\alpha\text{-equivalence}}}
+    \p{As we have seen, the relation #{\aeq} is an equivalence relation.
     Hence we can define the set of equivalence classes of terms with respect to #{\aeq}.
     Now we can identify a term with its equivalence class.
     We still use #{\equiv} for syntactic equality modulo #{\alpha\text{-equivalence}}.
+    }
 }
 \p{
     #{\alpha\text{-equivalence}} is a congruence relation, which means that it is conserved by elementary process of term construction.
 }
 \transclude{thm-000Y}
-\block{
-    \strong{Barendregt Convention}
-}{
-    The Barendregt Convention states that we should avoid using the same variable name in different abstractions.
+\subtree{
+    \title{Barendregt Convention}
+    \p{The Barendregt Convention states that we should avoid using the same variable name in different abstractions.
     This is to avoid the confusion of free variables. It states that 
-    we choose the names for the binding variables in a \lt in such a manner
+    we choose the names for the binding variables in a #{\lt} in such a manner
     that they are all different, and each of them differs from 
-    all free variables occurring in the term.
+    all free variables occurring in the term.}
 }
-\block{
-    \strong{Beta Reduction}
-}{
-    Since we have formally defined the \strong{substitution},
-    we can rephrase the reduction as a relation on \lt, namely #{\beta\text{-reduction}}.
-}
+\subtree{
+    \title{Beta Reduction}
+    \p{
+        Since we have formally defined the \strong{substitution},
+        we can rephrase the reduction as a relation on #{\lt}, namely #{\beta\text{-reduction}}.
+    }
+    }
 \transclude{def-003C}
 \transclude{eg-0007}
 \p{

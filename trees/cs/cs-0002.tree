@@ -103,7 +103,8 @@
         ##{
             S = \lambda n.\lambda f.\lambda x.f(n\space f\space x)
         }
-        \proof{
+    }
+    \proof{
             ##{
                 \begin{align*}
                     S\space n &= (\lambda n.\lambda f.\lambda x.f(n\space f\space x))\space n \\
@@ -113,7 +114,6 @@
                 \end{align*}
             }
         }
-    }
     \p{
         Using the iteration property we can define mathematical functions 
         over the natural numbers in lambda calculus.

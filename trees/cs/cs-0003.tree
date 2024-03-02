@@ -6,8 +6,10 @@
     In this note we complete the development of \strong{recursion}.
     Refer to [TAPL](tapl)
 }
-\block{\strong{General Recursion}}{
-    Let's first consider the \strong{greatest common divisor} function #{\gcd(a,b)}
+\section{\strong{General Recursion}}{
+    \p{
+        Let's first consider the \strong{greatest common divisor} function #{\gcd(a,b)}
+    }
     ##{
         \begin{align*}
             \gcd\space a\space a &= a \\
@@ -57,8 +59,8 @@
     }
     The function #{f=\Omega} solves the equation #{f=f} by giving a divergent result.
 }
-\block{\strong{Define Functions By Recursion}}{
-    Consider the factorial function:
+\section{\strong{Define Functions By Recursion}}{
+    \p{Consider the factorial function:}
     ##{
         \text{fact}\space n = \text{if } (n=0)\space 1\space (n\space \text{fact}\space (n-1))
     }

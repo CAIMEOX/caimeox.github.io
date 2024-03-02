@@ -96,7 +96,9 @@
     will it stay normalized at all future time?
     Fortunately the Schrodinger equation guarantees the normalization of 
     the wave function.
-    \proof{
+    
+}
+\proof{
         Differentiate the normalization condition with respect to time:
         ##{
             \frac{d}{dt}\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 
@@ -144,7 +146,6 @@
         }
         Now we can conclude that the wave function stays normalized at all future time.
     }
-}
 \p{
     For a particle in state #{\Psi}, we have defined its \strong{expectation value}:
     ##{

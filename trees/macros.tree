@@ -1,5 +1,37 @@
-% snake case for inline math
-% camel case for outer environment
+% Common utils
+\def\hr{
+  \xml{hr}{}
+}
+\def\block[tit][body]{ 
+  \scope{
+    \put\transclude/toc{false}
+    \subtree{
+      \tit
+      \p{}
+      \body
+    }
+  }
+}
+\def\section[tit][body]{
+  \scope{
+    \put\transclude/toc{false}
+    \subtree{
+      \tit
+      \body
+    }
+  }
+}
+\def\example[tit][body]{
+  \scope{
+    \subtree{
+      \p{\strong{\tit}}
+      \body
+    }
+  }
+}
+
+
+
 \def\spn{\text{span}}
 \def\type{\space\text{type}}
 \def\N{\mathbb{N}}
@@ -28,11 +60,13 @@
     }}
 }
 \def\proof[body]{
-  \iftex{
-    \block{Proof}{\body}
-  }{
-    \block{\strong{Proof}.}{\body}
-  }
+ \scope{
+   \put\transclude/toc{false}
+   \subtree{
+     \taxon{proof}
+     \body
+   }
+ }
 }
 \def\refl{\text{refl}}
 \def\homset{\hom_\text{set}}
@@ -42,42 +76,25 @@
 \def\assoc{\text{assoc}}
 \def\codeblock[lang][body]{
   \pre{
-    \xml{code}[class]{\lang}{\body}
+    \xml{code}[class]{\lang}{
+      \body
+      }
   }
 }
 
 % Lambda calculus
 \def\subt{\text{Sub}}
 \def\appl[a][b]{(\a\space\b)}
-\def\lt{
-    \iftex{\lambda\text{-term}}{
-        #{\lambda\text{-term}}
-    }
-}
+\def\lt{\lambda\text{-term}}
 \def\fv{\text{FV}}
-\def\rename[M][x][y]{
-  \iftex{\M^{\x\to\y}}{
-    #{\M^{\x\to\y}}
-  }
-}
+\def\rename[M][x][y]{\M^{\x\to\y}}
 \def\aeq{=_\alpha}
 \def\defeq{:\equiv}
-\def\subst[M][x][N]{
-  \iftex{\M[\x:=\N]}{
-    #{\M[\x:=\N]}
-  }
-}
+\def\subst[M][x][N]{\M[\x:=\N]}
 \def\tob{\to_\beta}
 \def\tobm{\twoheadrightarrow_{\beta}}
 \def\etaeq{=_\eta}
+
 % category theory
-\def\obj{
-    \iftex{\text{Ob}}{
-        #{\text{Ob}}
-    }
-}
-\def\mor{
-    \iftex{\text{Mor}}{
-        #{\text{Mor}}
-    }
-}
+\def\obj{\text{Ob}}
+\def\mor{\text{Mor}}

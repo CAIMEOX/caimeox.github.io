@@ -2,7 +2,7 @@
 \import{macros}
 \taxon{Definition}
 \p{
-    Let \rename{M}{x}{y} be the result of replacing all free occurrences of #{x} in #{M} with #{y}.
+    Let #{\rename{M}{x}{y}} be the result of replacing all free occurrences of #{x} in #{M} with #{y}.
     The relation \strong{renaming} is expression with the symbol #{\aeq}:
     #{\lambda x.M\aeq\lambda y.\rename{M}{x}{y}} if #{y\not\in\fv(M)} and #{y} is not a binding variable in #{M}.
 }

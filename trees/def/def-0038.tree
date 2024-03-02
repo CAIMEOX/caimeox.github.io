@@ -2,7 +2,7 @@
 \title{Closed Lambda Terms}
 \taxon{Definition}
 \p{
-    The \lt #{M} is \strong{closed} if #{\fv(M) = \emptyset}.
-    A closed \lt is also called a \strong{combinator}.
+    The #{\lt} #{M} is \strong{closed} if #{\fv(M) = \emptyset}.
+    A closed #{\lt} is also called a \strong{combinator}.
     The set of all combinators is denoted by #{\Lambda^0}.
 }

@@ -1,5 +1,6 @@
 \title{Category Theory of Utilitarianism}
 \taxon{Category Theory}
+\import{macros}
 \p{
     This note is about the category theory and its applications.
     Instead of reading a well-organized book, I prefer to write down the things I learned

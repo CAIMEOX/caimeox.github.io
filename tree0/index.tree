@@ -1,0 +1,22 @@
+\title{caimeo}
+\author{caimeo}
+\subtree{
+  \scope{
+  \title{my title}
+  \p{my body}
+  \subtree{
+    \title{goodbye}
+    \p{
+      \subtree{
+        \title{233}
+        \p{not}
+      }
+     abc
+    }
+  }
+  }
+}
+\def\lt{\lambda\text{-term}}
+\p{
+  #{\lt}
+}

@@ -1,5 +1,6 @@
 \title{Type Negation}
 \taxon{Definition}
+\import{macros}
 \p{
     The \strong{negation} of type #{A} is defined as
     ##{
@@ -9,10 +10,10 @@
     ##{
         \text{empty}(A) :\equiv \neg A
     }
-    \block{\strong{Proof of negation}}{
+}
+\block{\strong{Proof of negation}}{
         \p{
             To prove #{\neg A}, we need to show that #{A} implies a contradiction.
             In other words, constructing a function of type #{A \to \emptyset}.
         }
     }
-}

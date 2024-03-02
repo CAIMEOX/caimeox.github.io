@@ -1,10 +1,10 @@
 \title{Inhomogeneous Linear Equations System}
 \taxon{Example}
 \import{macros}
-\block{
-    \strong{Rephrase in terms of a linear map the question of whether a inhomogeneous system linear equations has no solutions
+\subtree{
+    \title{Rephrase in terms of a linear map the question of whether a inhomogeneous system linear equations has no solutions
     for some choice of constant terms.}
-}{
+    \p{
     Let #{A} be the coefficient matrix of a inhomogeneous linear system.
     ##{
         A = \begin{bmatrix}
@@ -15,6 +15,7 @@
         \end{bmatrix}
     }
     The equation #{A\vec{x} = \vec{b}} has a solution #{\vec{x} = A^{-1}\vec{b}}.
+    }
     \p{
         Define #{T: \F^n \to \F^m} by
         ##{

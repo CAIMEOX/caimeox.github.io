@@ -1,5 +1,7 @@
 \title{Probability Density}
 \taxon{Definition}
+\import{macros}
+
 \p{
     A \strong{probability density} is a function #{p(x)} such that:
     \ul{

@@ -3,24 +3,24 @@
 \p{
     Let #{(X_i)_{i\in I}} be a family of sets.
 }
-\block{\strong{Union}}{
+\subtree{\title{Union}\p{
     ##{
         \bigcup_{i\in I}X_i = \set{x:\exists i\in I \text{ such that } x\in X_i}
     }
-}
-\block{\strong{Intersection}}{
+}}
+\subtree{\title{Intersection}\p{
     ##{
         \bigcap_{i\in I}X_i = \set{x:\forall i\in I, x\in X_i}
     }
     Note that #{I \neq \emptyset} here.
-}
-\block{\strong{Disjoint Union}}{
+}}
+\subtree{\title{Disjoint Union}\p{
     ##{
         \bigsqcup_{i\in I}X_i = \set{(x,i):x\in X_i, i\in I}
     }
-}
-\block{\strong{Product}}{
+}}
+\subtree{\title{Product}\p{
     ##{
         \prod_{i\in I}X_i = \set{(x_i)_{i\in I}:\forall i\in I, x_i\in X_i}
     }
-}
+}}

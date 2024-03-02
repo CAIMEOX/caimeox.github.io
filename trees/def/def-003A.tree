@@ -2,7 +2,7 @@
 \taxon{Definition}
 \import{macros}
 \p{
-    The #{\alpha} equivalence is a relation between \lt, defined as follows:
+    The #{\alpha} equivalence is a relation between #{\lt}, defined as follows:
     \ul{
         \li{
             \strong{Renaming}: #{\lambda x. M \aeq \lambda y. \rename{M}{x}{y}} if #{y\not\in\fv(M)} and #{y} is not a binding variable in #{M}.
