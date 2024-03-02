@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5795</anchor>  <taxon>Definition</taxon> <addr>def-003J</addr>  <route>def-003J.xml</route>   <title>Natural Transformation</title>  </frontmatter> <mainmatter><p>
+    Let <tex>C</tex> and <tex>D</tex> be categories and <tex>F,G:C \to  D</tex> be functors.
+    A <strong>natural transformation</strong> <tex>\alpha :F \Rightarrow   G</tex> is 
+    an assignment to every object <tex>x \in  C</tex> of a morphism <tex>\alpha _x:F(x) \to  G(x)</tex> in <tex>D</tex>,
+    (called the <strong>component</strong> of <tex>\alpha</tex> at <tex>x</tex>)
+    the following diagram commutes in <tex>D</tex>:
+    
+    <center><embedded-tex hash="bce411235fd5c6731abb602d7c12b697"><embedded-tex-preamble>
+       \usepackage {tikz-cd}
+       \usepackage {amssymb}
+    </embedded-tex-preamble> <embedded-tex-body>
+         
+         \begin {tikzcd}
+            {F(x)} &amp;&amp; {F(y)}  \\ 
+             \\ 
+            {G(x)} &amp;&amp; {G(y)}
+             \arrow [&quot;{F(f)}&quot;, from=1-1, to=1-3]
+             \arrow [&quot;{G(f)}&quot;, from=3-1, to=3-3]
+             \arrow [&quot;{ \alpha _x}&quot;, from=1-1, to=3-1]
+             \arrow [&quot;{ \alpha _y}&quot;, from=1-3, to=3-3]
+         \end {tikzcd}
+     
+    </embedded-tex-body></embedded-tex></center></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5796</anchor>  <taxon>Category Theory</taxon> <addr>math-0006</addr>  <route>math-0006.xml</route>   <title>Category Theory of Utilitarianism</title>  </frontmatter> <mainmatter><p>
+    This note is about the category theory and its applications.
+    Instead of reading a well-organized book, I prefer to write down the things I learned
+    from <link href="ncatlab.xml" type="local" addr="ncatlab" title="NLab">ncatlab</link> and papers.
+</p> 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>5797</anchor>         <parent>math-0006</parent> </frontmatter> <mainmatter>
+    <strong>Ideas</strong><p/>
+        Intuitively, a category is a collection of objects and arrows between them,
+        such arrows can be composed and there is an identity arrow for each object.
+    <p>
+        There are commonly two ways to define a category, which are equivalent in usual 
+        foundations of mathematics. One of them generalizes the notion of <strong>internal category</strong>
+        nicely while the other one is more convenient for <strong>enriched category</strong>.
+    </p>
+    <p>
+        The major difference is whether they use a single collection of all morphisms or
+        several collections of morphisms (<strong>family of collections</strong> indexed by pairs of objects)
+    </p>
+</mainmatter> </tree>
+  
+<tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5798</anchor>  <taxon>Definition</taxon> <addr>def-003E</addr>  <route>def-003E.xml</route>   <title>Category</title>  </frontmatter> <mainmatter> 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>5799</anchor>          </frontmatter> <mainmatter><strong>With one collection</strong><p/>
+    A <strong>category</strong> <tex>C</tex> consists
+    <ul><li>
+            A collection of <strong>objects</strong> <tex>C_0</tex> (<tex>\text {Ob} (C)</tex>).
+        </li>
+        <li>
+            A collection <tex>C_1</tex> (<tex>\text {Mor} (C)</tex>) of <strong>morphisms</strong> (arrows).
+        </li>
+        <li>
+            For every morphism <tex>f</tex> there are an object <tex>s(f)</tex> (<strong>source</strong>, domain) and an object <tex>t(f)</tex> (<strong>target</strong>, codomain).
+        </li>
+        <li>
+            For every pair of morphisms <tex>f, g</tex> such that <tex>t(f) = s(g)</tex>, there is a morphism <tex>g  \circ  f</tex> (<strong>composition</strong>) (Also written <tex>gf</tex> or <tex>f;g</tex>).
+        </li>
+        <li>
+            For every object <tex>x</tex>, there is a morphism <tex>\text {id} _x</tex> (or <tex>1_x</tex>) called <strong>identity</strong>.
+        </li>
+        <li>
+            The following properties hold:
+            <ul><li><tex>s(g  \circ  f) = s(f)</tex> and <tex>t(g  \circ  f) = t(g)</tex>.
+                </li>
+                <li><tex>s(1_x) = x</tex> and <tex>t(1_x) = x</tex>.
+                </li>
+                <li>
+                    Composition is <strong>associative</strong>: <tex>h  \circ  (g  \circ  f) = (h  \circ  g)  \circ  f</tex> when <tex>t(f) = s(g)</tex>, and <tex>t(g) = s(h)</tex>.
+                </li>
+                <li>
+                    Composition satifies the <strong>identity laws</strong>: <tex>f  \circ   \text {id} _x = f</tex> and <tex>\text {id} _y  \circ  f = f</tex> if <tex></tex></li></ul></li></ul>
+    If the identity map and its axioms are omitted then one speaks of a <strong>semicategory</strong>.
+</mainmatter> </tree>
+  
+ 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>5800</anchor>          </frontmatter> <mainmatter><strong>With a family of collections of morphisms</strong><p/>
+    A <strong>category</strong> <tex>C</tex> consists
+    <ul><li>
+            A collection of <strong>objects</strong> <tex>C_0</tex> (<tex>\text {Ob} (C)</tex>).
+        </li>
+        <li>
+            For every pair of objects <tex>x, y</tex>, a collection <tex>C_1(x, y)</tex> (<tex>\hom _C(x,y)</tex>) of <strong>morphisms</strong> from <tex>x</tex> to <tex>y</tex>.
+        </li>
+        <li>
+            For each pair of morphisms <tex>f</tex> in <tex>C_1(x,y)</tex> and <tex>g</tex> in <tex>C_1(y,z)</tex>, a morphism <tex>g  \circ  f</tex> in <tex>C_1(x,z)</tex>.
+            called their <strong>composition</strong>.
+        </li>
+        <li>
+            For each object <tex>x</tex>, a morphism <tex>\text {id} _x</tex> in <tex>C_1(x,x)</tex> called the <strong>identity</strong> on <tex>x</tex>.
+        </li>
+        <li>
+            The following properties hold:
+            <ul><li>Composition is <strong>associative</strong>: <tex>h  \circ  (g  \circ  f) = (h  \circ  g)  \circ  f</tex> for all <tex>f</tex> in <tex>C_1(x,y)</tex>, <tex>g</tex> in <tex>C_1(y,z)</tex>, and <tex>h</tex> in <tex>C_1(z,w)</tex>.</li>
+                <li>Composition satifies the <strong>identity laws</strong>: <tex>f  \circ   \text {id} _x = f</tex> and <tex>\text {id} _y  \circ  f = f</tex> for all <tex>f</tex> in <tex>C_1(x,y)</tex>.</li></ul></li></ul>
+    Usually we write <tex>\text {Mor} (C)</tex> for the disjoint union <tex>\bigsqcup _{x,y  \in  C_0} C_1(x,y)</tex>.
+</mainmatter> </tree>
+  
+</mainmatter> </tree><p>
+    Its common to talk about some objects and their morphisms.
+    Informally, a <strong>diagram</strong> in a category <tex>C</tex> consists of some 
+    objects of <tex>C</tex> connected by some morphisms of <tex>C</tex>.
+</p><p>
+    This terminology is often used when speaking about <strong>limits</strong> or 
+    <strong>colimits</strong> of a diagram.
+</p><p>
+    One formal way to define a diagram is to use a <strong>functor</strong> from a (very) small category to <tex>C</tex>.
+    That is, a functor whose domain is a small category.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5801</anchor>  <taxon>Definition</taxon> <addr>def-003F</addr>  <route>def-003F.xml</route>   <title>Small Category</title>  </frontmatter> <mainmatter><p>
+    A <link href="def-003E.xml" type="local" addr="def-003E" title="Category">category</link> is said to be <strong>small</strong> 
+    if it has a <strong>samll set</strong> (i.e. a set but not a proper class) of objects and morphisms.
+    In other words a small category is an <strong>internal category</strong> in category of sets.
+</p></mainmatter> </tree><p>
+    We did not explain what a <strong>functor</strong> is, but it is very natural thought.
+    Briefly, a functor is a <strong>homomorphism</strong> between two categories.
+    It maps objects to objects and morphisms to morphisms, preserving the structure of the categories.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5802</anchor>  <taxon>Definition</taxon> <addr>def-003G</addr>  <route>def-003G.xml</route>   <title>Functor</title>  </frontmatter> <mainmatter><p>
+    A <strong>functor</strong> <tex>F</tex> from a category <tex>C</tex> to a category <tex>D</tex> is a map
+    sending each <tex>x \in  C</tex> to an object <tex>F(x) \in  D</tex> and each morphism
+    <tex>f:x \to  y</tex> in <tex>C</tex> to morphism <tex>F(f):F(x) \to  F(y)</tex> in <tex>D</tex>, such that 
+    <ul><li>
+            Composition is preserved: <tex>F(g \circ  f) = F(g) \circ  F(f)</tex>.
+        </li>
+        <li>
+            Identity is preserved: <tex>F( \text {id} _x) =  \text {id} _{F(x)}</tex>.
+        </li></ul></p></mainmatter> </tree><p>
+    For the sake of completeness, we state the definition of the <strong>functor category</strong>
+    and the <strong>natural transformations</strong> between functors.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5803</anchor>  <taxon>Definition</taxon> <addr>def-003I</addr>  <route>def-003I.xml</route>   <title>Functor Category</title>  </frontmatter> <mainmatter><p>
+    Let <tex>C</tex> and <tex>D</tex> be categories, the functor category <tex>D^C</tex> 
+    (or <tex>[C,D]</tex>) is the category whose
+    <ul><li>
+            objects are functors from <tex>C</tex> to <tex>D</tex>.
+        </li>
+        <li>
+            morphisms are <strong>natural transformations</strong> between functors.
+        </li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5804</anchor>  <taxon>Definition</taxon> <addr>def-003J</addr>  <route>def-003J.xml</route>   <title>Natural Transformation</title>  </frontmatter> <mainmatter><p>
+    Let <tex>C</tex> and <tex>D</tex> be categories and <tex>F,G:C \to  D</tex> be functors.
+    A <strong>natural transformation</strong> <tex>\alpha :F \Rightarrow   G</tex> is 
+    an assignment to every object <tex>x \in  C</tex> of a morphism <tex>\alpha _x:F(x) \to  G(x)</tex> in <tex>D</tex>,
+    (called the <strong>component</strong> of <tex>\alpha</tex> at <tex>x</tex>)
+    the following diagram commutes in <tex>D</tex>:
+    
+    <center><embedded-tex hash="bce411235fd5c6731abb602d7c12b697"><embedded-tex-preamble>
+       \usepackage {tikz-cd}
+       \usepackage {amssymb}
+    </embedded-tex-preamble> <embedded-tex-body>
+         
+         \begin {tikzcd}
+            {F(x)} &amp;&amp; {F(y)}  \\ 
+             \\ 
+            {G(x)} &amp;&amp; {G(y)}
+             \arrow [&quot;{F(f)}&quot;, from=1-1, to=1-3]
+             \arrow [&quot;{G(f)}&quot;, from=3-1, to=3-3]
+             \arrow [&quot;{ \alpha _x}&quot;, from=1-1, to=3-1]
+             \arrow [&quot;{ \alpha _y}&quot;, from=1-3, to=3-3]
+         \end {tikzcd}
+     
+    </embedded-tex-body></embedded-tex></center></p></mainmatter> </tree><p>
+    We state the concise functorial definition of diagrams of the shape of categories.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5805</anchor>  <taxon>Definition</taxon> <addr>def-003H</addr>  <route>def-003H.xml</route>   <title>Diagram</title>  </frontmatter> <mainmatter><p>
+    Let <tex>C</tex> be a category and <tex>J</tex> be a small category.
+    A <strong>diagram</strong> of shape <tex>J</tex> in <tex>C</tex> is a functor <tex>X:J \to  C</tex>.
+    The category of <tex>J</tex>-shaped diagrams in <tex>C</tex> is the <link href="def-003I.xml" type="local" addr="def-003I" title="Functor Category">functor category</link> <tex>C^J</tex>.
+</p></mainmatter> </tree><p>
+    A limit of a diagram <tex>F:D \to  C</tex> is an object <tex>\lim  F</tex> of <tex>C</tex>
+    equipped with morphisms to the objects <tex>F(d)</tex> for all <tex>d \in  D</tex>,
+    such that everything in sight commutes.
+</p></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2077</anchor>  <taxon>Definition</taxon> <addr>def-0028</addr>  <route>def-0028.xml</route>   <title>Degree of polynomial</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3302</anchor>  <taxon>Definition</taxon> <addr>def-0028</addr>  <route>def-0028.xml</route>   <title>Degree of polynomial</title>  </frontmatter> <mainmatter><p>
     A <link href="def-0027.xml" type="local" addr="def-0027" title="Polynomial">polynomial</link> <tex>p \in   \mathcal {P}(R)</tex> is said to have degree <tex>n</tex> if
     there exists coefficients <tex>a_0, a_1,  \ldots , a_n  \in  R</tex> and <tex>a_n  \neq  0</tex> such that
-    <tex display="block">
-        p(x) = a_0 + a_1 x + a_2 x^2 +  \cdots  + a_n x^n
-    </tex>
+    <tex display="block">         p(x) = a_0 + a_1 x + a_2 x^2 +  \cdots  + a_n x^n     </tex>
     for all <tex>x  \in  R</tex>. We denote the degree of <tex>p</tex> by <tex>\deg (p) = n</tex>.
     For the zero polynomial, we define its degree to be <tex>- \infty</tex>.
-</p></mainmatter> <backmatter><contributions/> <context/> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2078</anchor>  <taxon>Definition</taxon> <addr>def-0027</addr>  <route>def-0027.xml</route>   <title>Polynomial</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> <backmatter><contributions/> <context/> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3303</anchor>  <taxon>Definition</taxon> <addr>def-0027</addr>  <route>def-0027.xml</route>   <title>Polynomial</title>  </frontmatter> <mainmatter><p>
     A function <tex>f: R  \to  R</tex> is a <strong>polynomial</strong> with coefficients in ring <tex>R</tex> if
     there exists  <tex>n  \in   \N</tex> and <tex>a_0, a_1,  \ldots , a_n  \in  R</tex> such that
-    <tex display="block">
-        f(x) = a_0 + a_1 x + a_2 x^2 +  \cdots  + a_n x^n
-    </tex>
+    <tex display="block">         f(x) = a_0 + a_1 x + a_2 x^2 +  \cdots  + a_n x^n     </tex>
     for all <tex>x  \in  R</tex>. We denote the set all polynomials with coefficients in <tex>R</tex> by <tex>\mathcal {P}(R)</tex>.
 </p></mainmatter> </tree></related> <backlinks/> <references/></backmatter></tree>

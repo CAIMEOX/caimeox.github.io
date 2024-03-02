@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>6110</anchor>  <taxon>Definition</taxon> <addr>def-001E</addr>  <route>def-001E.xml</route>   <title>Weakening</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8520</anchor>  <taxon>Definition</taxon> <addr>def-001E</addr>  <route>def-001E.xml</route>   <title>Weakening</title>  </frontmatter> <mainmatter><p>
     Weakening rule asserts that we can add a variable to the context.
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  A \space \text {type} 
-             \quad  
-             \Gamma , \Delta \vdash   \mathcal {J}
-        }{
-             \Gamma ,x:A, \Delta \vdash   \mathcal {J}
-        }W 
-    </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>6111</anchor>  <taxon>Type Theory</taxon> <addr>tt-0002</addr>  <route>tt-0002.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title> </frontmatter> <mainmatter><p>This is a note on dependent type theory. Refer to <link href="hott-book-2013.xml" type="local" addr="hott-book-2013" title="Homotopy Type Theory: Univalent Foundations of Mathematics">HoTT Book</link> and <link href="hott-2022.xml" type="local" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke's</link>.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
+    <tex display="block">          \frac {              \Gamma \vdash  A \space \text {type}               \quad                \Gamma , \Delta \vdash   \mathcal {J}         }{              \Gamma ,x:A, \Delta \vdash   \mathcal {J}         }W      </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8521</anchor>  <taxon>Type Theory</taxon> <addr>tt-0002</addr>  <route>tt-0002.xml</route> <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title>  </frontmatter> <mainmatter><p>This is a note on dependent type theory. Refer to <link href="hott-book-2013.xml" type="local" addr="hott-book-2013" title="Homotopy Type Theory: Univalent Foundations of Mathematics">HoTT Book</link> and <link href="hott-2022.xml" type="local" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke's</link>.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
     The set-theoretic foundation has two two layers:
     <ul><li>the deductive system of first-order logic</li>
         <li>the theory of a particular theory, such as ZFC</li></ul> 
@@ -50,10 +42,8 @@
         In type theory there is also a requirement for a judgment-level equality.
         This is called <strong>judgmental equality</strong>, meaning &quot;equal by definition&quot;.
     </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6112</anchor>  <taxon>Definition</taxon> <addr>def-0015</addr>  <route>def-0015.xml</route>   <title>Judgemental Equality</title> </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
-    <tex display="block">
-         \Gamma \vdash  a \equiv  a':A
-    </tex>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8522</anchor>  <taxon>Definition</taxon> <addr>def-0015</addr>  <route>def-0015.xml</route>   <title>Judgemental Equality</title>  </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
+    <tex display="block">          \Gamma \vdash  a \equiv  a':A     </tex>
     <tex>a</tex> and <tex>a'</tex> are judgementally equal terms of type <tex>A</tex> in context <tex>\Gamma</tex>.
 </p><p>
     Note that the notation <tex>\equiv</tex> binds more loosely than anything else.
@@ -72,26 +62,18 @@
     <ul><li>Rules allow us to conclude one judgment from a collection of other judgments.</li>
         <li>Axioms are judgments that are assumed to be true without proof.</li></ul></p><p>
     We start by introduction to Matrin Lof's dependent type theory. 
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6113</anchor>  <taxon>Definition</taxon> <addr>def-0017</addr>  <route>def-0017.xml</route>   <title>Dependent type theory: Judgments</title> </frontmatter> <mainmatter>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8523</anchor>  <taxon>Definition</taxon> <addr>def-0017</addr>  <route>def-0017.xml</route>   <title>Dependent type theory: Judgments</title>  </frontmatter> <mainmatter>
     <p>
         There are four kinds of judgments in Martin Lof's dependent type theory:
     </p>
     <ul><li><tex>A</tex> is a well-formed type in context <tex>\Gamma</tex>
-            <tex display="block">
-                 \Gamma   \vdash  A  \space \text {type} 
-            </tex></li>
+            <tex display="block">                  \Gamma   \vdash  A  \space \text {type}              </tex></li>
         <li><tex>A</tex> and <tex>B</tex> are judgmentally equal types in context <tex>\Gamma</tex>
-            <tex display="block">
-                 \Gamma   \vdash  A  \equiv  B  \space \text {type} 
-            </tex></li>
+            <tex display="block">                  \Gamma   \vdash  A  \equiv  B  \space \text {type}              </tex></li>
         <li><tex>a</tex> is a term of type <tex>A</tex> in context <tex>\Gamma</tex>
-            <tex display="block">
-                 \Gamma   \vdash  a : A
-            </tex></li>
+            <tex display="block">                  \Gamma   \vdash  a : A             </tex></li>
         <li><tex>a</tex> and <tex>b</tex> are judgmentally equal terms of type <tex>A</tex> in context <tex>\Gamma</tex>
-            <tex display="block">
-                 \Gamma   \vdash  a  \equiv  b : A
-            </tex></li></ul>
+            <tex display="block">                  \Gamma   \vdash  a  \equiv  b : A             </tex></li></ul>
 </mainmatter> </tree><p>
     All judgments are context dependent, 
     and indeed that even the types of the variables in a context
@@ -99,23 +81,19 @@
 
     To introduce types dependent on terms, 
     we need the notation of type families.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6114</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8524</anchor>  <taxon>Definition</taxon> <addr>def-0018</addr>  <route>def-0018.xml</route>   <title>Type Family</title>  </frontmatter> <mainmatter><p>
     Consider a type <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>family</strong> of types over <tex>A</tex> in context <tex>\Gamma</tex>
     is a type <tex>B(x)</tex> in context <tex>\Gamma , x:A</tex>.
-    <tex display="block">
-         \Gamma , x:A  \vdash  B(x)  \space \text {type} 
-    </tex>
+    <tex display="block">          \Gamma , x:A  \vdash  B(x)  \space \text {type}      </tex>
     <tex>B</tex> is a family of types over <tex>A</tex> in context <tex>\Gamma</tex>.
     Alternatively, we say that <tex>B(x)</tex> is a type <strong>indexed</strong> by <tex>x:A</tex> in context <tex>\Gamma</tex>.
 </p></mainmatter> </tree><p>
     Now we can define a term of a type family, that is, a section of a type family.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6115</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8525</anchor>  <taxon>Definition</taxon> <addr>def-0019</addr>  <route>def-0019.xml</route>   <title>Section of Type Family</title>  </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" addr="def-0018" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>section</strong> of <tex>B</tex> is a term <tex>b</tex> of type <tex>B(x)</tex> in context <tex>\Gamma ,x:A</tex>.
-    <tex display="block">
-         \Gamma , x:A  \vdash  b : B(x)
-    </tex>
+    <tex display="block">          \Gamma , x:A  \vdash  b : B(x)     </tex>
     Alternatively, we say that <tex>b</tex> is a term of <tex>B(x)</tex> indexed by <tex>x:A</tex> in context <tex>\Gamma</tex>.
 </p></mainmatter> </tree><p>
     We now ready to present the inference rules for dependent type theory.
@@ -126,157 +104,41 @@
         <li>Vairable conversion</li>
         <li>Substitution</li>
         <li>Weakening</li>
-        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6116</anchor>  <taxon>Definition</taxon> <addr>def-001A</addr>  <route>def-001A.xml</route>   <title>
+        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8526</anchor>  <taxon>Definition</taxon> <addr>def-001A</addr>  <route>def-001A.xml</route>   <title>
     Formation of contexts, types and terms
-</title> </frontmatter> <mainmatter><p>
+</title>  </frontmatter> <mainmatter><p>
     The following rules follow from the presuppotion
     about contexts, types and terms, can be used freely.
-</p><ul><li><tex display="block">
-             \frac {
-                 \Gamma ,x:A \vdash  B(x) \space \text {type} 
-            }{
-                 \Gamma \vdash  A \space \text {type} 
-            }
-        </tex></li>
-    <li><tex display="block">
-             \frac {
-                 \Gamma \vdash  A \equiv  B \space \text {type} 
-            }{
-                 \Gamma \vdash  A \space \text {type} 
-            }
-             \quad 
-             \frac {
-                 \Gamma \vdash  A \equiv  B \space \text {type} 
-            }{
-                 \Gamma \vdash  B \space \text {type} 
-            }
-        </tex></li>
-    <li><tex display="block">
-             \frac {
-                 \Gamma \vdash  a:A
-            }{
-                 \Gamma \vdash  A \space \text {type} 
-            }
-        </tex></li>
-    <li><tex display="block">
-             \frac {
-                 \Gamma \vdash  a \equiv  b:A
-            }{
-                 \Gamma \vdash  a:A
-            }
-             \quad  
-             \frac {
-                 \Gamma \vdash  a \equiv  b:A
-            }{
-                 \Gamma \vdash  b:A
-            }
-        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6117</anchor>  <taxon>Definition</taxon> <addr>def-001B</addr>  <route>def-001B.xml</route>   <title>
+</p><ul><li><tex display="block">              \frac {                  \Gamma ,x:A \vdash  B(x) \space \text {type}              }{                  \Gamma \vdash  A \space \text {type}              }         </tex></li>
+    <li><tex display="block">              \frac {                  \Gamma \vdash  A \equiv  B \space \text {type}              }{                  \Gamma \vdash  A \space \text {type}              }              \quad               \frac {                  \Gamma \vdash  A \equiv  B \space \text {type}              }{                  \Gamma \vdash  B \space \text {type}              }         </tex></li>
+    <li><tex display="block">              \frac {                  \Gamma \vdash  a:A             }{                  \Gamma \vdash  A \space \text {type}              }         </tex></li>
+    <li><tex display="block">              \frac {                  \Gamma \vdash  a \equiv  b:A             }{                  \Gamma \vdash  a:A             }              \quad                \frac {                  \Gamma \vdash  a \equiv  b:A             }{                  \Gamma \vdash  b:A             }         </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8527</anchor>  <taxon>Definition</taxon> <addr>def-001B</addr>  <route>def-001B.xml</route>   <title>
     Judgmental equality is equivalence relation
-</title> </frontmatter> <mainmatter><p>
+</title>  </frontmatter> <mainmatter><p>
     Judgmental equality on types and on elements is an <link href="def-000X.xml" type="local" addr="def-000X" title="Equivalence Relation">equivalence relation</link> 
     simply postulate that these relations are reflexive, symmetric, and transitive:
-</p><ul><li><tex display="block">
-             \frac {
-                 \Gamma \vdash  a:A
-            }{
-                 \Gamma \vdash  a \equiv  a:A
-            }
-             \quad 
-             \frac {
-                 \Gamma \vdash  a \equiv  b:A
-            }{
-                 \Gamma \vdash  b \equiv  a:A
-            }
-             \quad 
-             \frac {
-                 \Gamma \vdash  a \equiv  b:A
-                 \quad 
-                 \Gamma \vdash  b \equiv  c:A
-            }{
-                 \Gamma \vdash  a \equiv  c:A
-            }
-        </tex></li>
-    <li><tex display="block">
-             \frac {
-                 \Gamma \vdash  A \space \text {type} 
-            }{
-                 \Gamma \vdash  A \equiv  A \space \text {type} 
-            }
-             \quad 
-             \frac {
-                 \Gamma \vdash  A \equiv  B \space \text {type} 
-            }{
-                 \Gamma \vdash  B \equiv  A \space \text {type} 
-            }
-             \quad 
-             \frac {
-                 \Gamma \vdash  A \equiv  B \space \text {type} 
-                 \quad 
-                 \Gamma \vdash  B \equiv  C \space \text {type} 
-            }{
-                 \Gamma \vdash  A \equiv  C \space \text {type} 
-            }
-        </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6118</anchor>  <taxon>Definition</taxon> <addr>def-001C</addr>  <route>def-001C.xml</route>   <title>Variable Conversion</title> </frontmatter> <mainmatter><p>
+</p><ul><li><tex display="block">              \frac {                  \Gamma \vdash  a:A             }{                  \Gamma \vdash  a \equiv  a:A             }              \quad               \frac {                  \Gamma \vdash  a \equiv  b:A             }{                  \Gamma \vdash  b \equiv  a:A             }              \quad               \frac {                  \Gamma \vdash  a \equiv  b:A                  \quad                   \Gamma \vdash  b \equiv  c:A             }{                  \Gamma \vdash  a \equiv  c:A             }         </tex></li>
+    <li><tex display="block">              \frac {                  \Gamma \vdash  A \space \text {type}              }{                  \Gamma \vdash  A \equiv  A \space \text {type}              }              \quad               \frac {                  \Gamma \vdash  A \equiv  B \space \text {type}              }{                  \Gamma \vdash  B \equiv  A \space \text {type}              }              \quad               \frac {                  \Gamma \vdash  A \equiv  B \space \text {type}                   \quad                   \Gamma \vdash  B \equiv  C \space \text {type}              }{                  \Gamma \vdash  A \equiv  C \space \text {type}              }         </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8528</anchor>  <taxon>Definition</taxon> <addr>def-001C</addr>  <route>def-001C.xml</route>   <title>Variable Conversion</title>  </frontmatter> <mainmatter><p>
     This rule postulates that we can
     convert the type of a variable to a judgmentally equal type.
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  A \equiv  A' \space \text {type} 
-             \quad 
-             \Gamma ,x:A, \Delta \vdash  B(x) \space \text {type} 
-        }{
-             \Gamma ,x:A', \Delta \vdash  B(x) \space \text {type} 
-        }
-    </tex>
+    <tex display="block">          \frac {              \Gamma \vdash  A \equiv  A' \space \text {type}               \quad               \Gamma ,x:A, \Delta \vdash  B(x) \space \text {type}          }{              \Gamma ,x:A', \Delta \vdash  B(x) \space \text {type}          }     </tex>
     Similarly, we can convert judgmental equality of types and terms.
     We state all of them at once using a <em>generic judgment thesis</em> <tex>\mathcal {J}</tex>.
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  A \equiv  A' \space \text {type} 
-             \quad 
-             \Gamma ,x:A, \Delta \vdash   \mathcal {J}
-        }{
-             \Gamma ,x:A', \Delta \vdash   \mathcal {J}
-        }VC
-    </tex></p></mainmatter> </tree><p>
+    <tex display="block">          \frac {              \Gamma \vdash  A \equiv  A' \space \text {type}               \quad               \Gamma ,x:A, \Delta \vdash   \mathcal {J}         }{              \Gamma ,x:A', \Delta \vdash   \mathcal {J}         }VC     </tex></p></mainmatter> </tree><p>
     Consider a term <tex>f:B(x)</tex> indexed by <tex>x:A</tex> in context <tex>\Gamma</tex>,
     and we also have a term <tex>a:A</tex>.
     We can simultaneously substitute <tex>a</tex> for all occurrences of <tex>x</tex> in <tex>f</tex>
     to obtain a new term <tex>f[x:=a]:B(a)</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6119</anchor>  <taxon>Definition</taxon> <addr>def-001D</addr>  <route>def-001D.xml</route>   <title>Substitution</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8529</anchor>  <taxon>Definition</taxon> <addr>def-001D</addr>  <route>def-001D.xml</route>   <title>Substitution</title>  </frontmatter> <mainmatter><p>
     The substitution rule postulates that we can substitute a term for a variable.
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  a:A
-             \quad 
-             \Gamma ,x:A, \Delta \vdash   \mathcal {J}
-        }{
-             \Gamma , \Delta [x:=a] \vdash   \mathcal {J}[x:=a]
-        }S
-    </tex>
+    <tex display="block">          \frac {              \Gamma \vdash  a:A              \quad               \Gamma ,x:A, \Delta \vdash   \mathcal {J}         }{              \Gamma , \Delta [x:=a] \vdash   \mathcal {J}[x:=a]         }S     </tex>
     The notation <tex>\Gamma , \Delta [x:=a]</tex> means that we substitute <tex>a</tex> for <tex>x</tex> in <tex>\Delta</tex>.
 </p><p>
     With the substitution rule, we need two more <em>congruence rules</em> to
     convert judgmental equality of terms and types.
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  a \equiv  a':A
-             \quad 
-             \Gamma ,x:A, \Delta \vdash  B  \space \text {type} 
-        }{
-             \Gamma , \Delta [x:=a] \vdash  B[x:=a] \equiv  B[x:=a']  \space \text {type} 
-        }
-    </tex>
+    <tex display="block">          \frac {              \Gamma \vdash  a \equiv  a':A              \quad               \Gamma ,x:A, \Delta \vdash  B  \space \text {type}          }{              \Gamma , \Delta [x:=a] \vdash  B[x:=a] \equiv  B[x:=a']  \space \text {type}          }     </tex>
 
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  A \equiv  A' \space \text {type} 
-             \quad 
-             \Gamma ,x:A, \Delta \vdash  b:A
-        }{
-             \Gamma , \Delta [x:=a] \vdash  b[x:=a] \equiv  b[x:=a']:A'[x:=a]  \space \text {type} 
-        }
-    </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6120</anchor>  <taxon>Definition</taxon> <addr>def-001G</addr>  <route>def-001G.xml</route>   <title>Fiber and Value</title> </frontmatter> <mainmatter><p>
+    <tex display="block">          \frac {              \Gamma \vdash  A \equiv  A' \space \text {type}               \quad               \Gamma ,x:A, \Delta \vdash  b:A         }{              \Gamma , \Delta [x:=a] \vdash  b[x:=a] \equiv  b[x:=a']:A'[x:=a]  \space \text {type}          }     </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8530</anchor>  <taxon>Definition</taxon> <addr>def-001G</addr>  <route>def-001G.xml</route>   <title>Fiber and Value</title>  </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" addr="def-0018" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>,
     an a well-formed term <tex>a:A</tex>,
     then we say that <tex>B[x:=a]</tex> is the <strong>fiber</strong> of <tex>B</tex> at <tex>a</tex>, denoted <tex>B(a)</tex>.
@@ -288,130 +150,60 @@
     The process of expanding the context by a fresh variable of type <tex>A</tex> is called weakening (by <tex>A</tex>).
     Intuitively, weakening is the process of adding a new hypothesis to the context.
     And the hypothesis will weaken the conclusion.
-</p><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8531</anchor>  <taxon>Definition</taxon> <addr>def-001E</addr>  <route>def-001E.xml</route>   <title>Weakening</title>  </frontmatter> <mainmatter><p>
+    Weakening rule asserts that we can add a variable to the context.
+    <tex display="block">          \frac {              \Gamma \vdash  A \space \text {type}               \quad                \Gamma , \Delta \vdash   \mathcal {J}         }{              \Gamma ,x:A, \Delta \vdash   \mathcal {J}         }W      </tex></p></mainmatter> </tree><p>
     Finally, the generic elemets rule ensures that
     the variables declared in a context.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6121</anchor>  <taxon>Definition</taxon> <addr>def-001F</addr>  <route>def-001F.xml</route>   <title>Generic Elements</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8532</anchor>  <taxon>Definition</taxon> <addr>def-001F</addr>  <route>def-001F.xml</route>   <title>Generic Elements</title>  </frontmatter> <mainmatter><p>
     The rule for the generic element asserts that 
     any hypothetical element <tex>x:A</tex> in context <tex>\Gamma ,x:A</tex>
     is also an element of <tex>A</tex> in context <tex>\Gamma ,x:A</tex>.
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  A \space \text {type} 
-        }{
-             \Gamma ,x:A \vdash  x:A
-        } \delta 
-    </tex>
+    <tex display="block">          \frac {              \Gamma \vdash  A \space \text {type}          }{              \Gamma ,x:A \vdash  x:A         } \delta      </tex>
     This rule is also called the <strong>variable rule</strong>.   
 </p></mainmatter> </tree><p>
     The next topic is the dependent function type, a fundamental concept of dependent type theory.
     Simply put, a dependent function type is a function whose type of output may depend on the input.
 </p><p>
     Consider a section <tex>b</tex> of a family <tex>B</tex> over <tex>A</tex> in context <tex>\Gamma</tex>:
-    <tex display="block">
-         \Gamma ,x:A \vdash  b(x):B(x)
-    </tex>
+    <tex display="block">          \Gamma ,x:A \vdash  b(x):B(x)     </tex>
     Such a section <tex>b</tex> is an operation or assignment <tex>x \mapsto  b(x)</tex> that assigns to each element <tex>x:A</tex>
     to a term <tex>b(x):B(x)</tex>.
     We may see <tex>b</tex> as a function takes <tex>x:A</tex> to <tex>b(x):B(x)</tex>.
     The function <tex>x \mapsto  b(x)</tex> is called a <strong>dependent function</strong>.
     The type of all dependent functions from <tex>A</tex> to <tex>B</tex> is called the <strong>dependent function type</strong>.
-    <tex display="block">
-         \Pi _{(x:A)}B(x)  \text { or } (x:A) \to  B(x)
-    </tex></p><p>
+    <tex display="block">          \Pi _{(x:A)}B(x)  \text { or } (x:A) \to  B(x)     </tex></p><p>
     To introduce a type we need the following four rules:
     <ul><li>Formation rule</li>
         <li>Introduction rule</li>
         <li>Elimination rule</li>
         <li>Computation rule</li></ul>
     Besides these we also need the <strong>congruence rule</strong> for judgmental equality.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6122</anchor>  <taxon>Definition</taxon> <addr>def-001T</addr>  <route>def-001T.xml</route>   <title>Dependent Function Type</title> </frontmatter> <mainmatter><p><strong>Formation Rule</strong>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8533</anchor>  <taxon>Definition</taxon> <addr>def-001T</addr>  <route>def-001T.xml</route>   <title>Dependent Function Type</title>  </frontmatter> <mainmatter><p><strong>Formation Rule</strong>
     For any type family <tex>B</tex> over <tex>A</tex> in context <tex>\Gamma</tex>:
-    <tex display="block">
-         \frac {
-             \Gamma ,x:A \vdash  B(x) \space \text {type} 
-        }{
-             \Gamma \vdash   \Pi _{(x:A)}B(x) \space \text {type} 
-        } \Pi 
-    </tex>
+    <tex display="block">          \frac {              \Gamma ,x:A \vdash  B(x) \space \text {type}          }{              \Gamma \vdash   \Pi _{(x:A)}B(x) \space \text {type}          } \Pi      </tex>
     We also require that the operation of forming dependent function types
     respects judgmental equality.
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  A \equiv  A' \space \text {type} 
-             \quad 
-             \Gamma ,x:A \vdash  B(x) \equiv  B'(x) \space \text {type} 
-        }{
-             \Gamma \vdash   \Pi _{(x:A)}B(x) \equiv   \Pi _{(x:A')}B'(x) \space \text {type} 
-        } \Pi \text {-eq}
-    </tex></p><p><strong>Introduction Rule (<tex>\lambda</tex>-abstraction)</strong>
+    <tex display="block">          \frac {              \Gamma \vdash  A \equiv  A' \space \text {type}               \quad               \Gamma ,x:A \vdash  B(x) \equiv  B'(x) \space \text {type}          }{              \Gamma \vdash   \Pi _{(x:A)}B(x) \equiv   \Pi _{(x:A')}B'(x) \space \text {type}          } \Pi \text {-eq}     </tex></p><p><strong>Introduction Rule (<tex>\lambda</tex>-abstraction)</strong>
     In order to construct a dependent function we have to
     construct a term <tex>f(x):B(x)</tex> indexed by <tex>x:A</tex> in context <tex>\Gamma</tex>:
-    <tex display="block">
-         \frac {
-             \Gamma ,x:A \vdash  b(x):B(x)
-        }{
-             \Gamma \vdash   \lambda  x.b(x): \Pi _{(x:A)}B(x)
-        } \lambda 
-    </tex>
+    <tex display="block">          \frac {              \Gamma ,x:A \vdash  b(x):B(x)         }{              \Gamma \vdash   \lambda  x.b(x): \Pi _{(x:A)}B(x)         } \lambda      </tex>
     And the congruence rule:
-    <tex display="block">
-         \frac {
-             \Gamma ,x:A \vdash  b(x) \equiv  b'(x):B(x)
-        }{
-             \Gamma \vdash   \lambda  x.b(x) \equiv   \lambda  x.b'(x): \Pi _{(x:A)}B(x)
-        } \lambda \text {-eq}
-    </tex></p><p><strong>Elimination Rule (Evaluation Rule)</strong>
+    <tex display="block">          \frac {              \Gamma ,x:A \vdash  b(x) \equiv  b'(x):B(x)         }{              \Gamma \vdash   \lambda  x.b(x) \equiv   \lambda  x.b'(x): \Pi _{(x:A)}B(x)         } \lambda \text {-eq}     </tex></p><p><strong>Elimination Rule (Evaluation Rule)</strong>
     In order to use dependent function we need to provide an argument of the domain type.
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  f: \Pi _{(x:A)}B(x)
-        }{
-             \Gamma ,x:A \vdash  f(x):B(x)
-        }ev
-    </tex>
+    <tex display="block">          \frac {              \Gamma \vdash  f: \Pi _{(x:A)}B(x)         }{              \Gamma ,x:A \vdash  f(x):B(x)         }ev     </tex>
     Again we require the judgmental equality to be respected:
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  f \equiv  f': \Pi _{(x:A)}B(x)
-        }{
-             \Gamma ,x:A \vdash  f(x) \equiv  f'(x):B(x)
-        }ev \text {-eq}
-    </tex></p><p><strong>Computation Rule (<tex>\beta</tex>-reduction)</strong>
-    <tex display="block">
-         \frac {
-             \Gamma ,x:A \vdash  b(x):B(x)
-        }{
-             \Gamma ,x:A \vdash  ( \lambda  y.b(y))(x) \equiv  b(x):B(x)
-        } \beta 
-    </tex>
+    <tex display="block">          \frac {              \Gamma \vdash  f \equiv  f': \Pi _{(x:A)}B(x)         }{              \Gamma ,x:A \vdash  f(x) \equiv  f'(x):B(x)         }ev \text {-eq}     </tex></p><p><strong>Computation Rule (<tex>\beta</tex>-reduction)</strong>
+    <tex display="block">          \frac {              \Gamma ,x:A \vdash  b(x):B(x)         }{              \Gamma ,x:A \vdash  ( \lambda  y.b(y))(x) \equiv  b(x):B(x)         } \beta      </tex>
     We postulate that all elements of a dependent function type are dependent functions.
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  f: \Pi _{(x:A)}B(x)
-        }{
-             \Gamma \vdash  f \equiv   \lambda  x.f(x): \Pi _{(x:A)}B(x)
-        } \eta 
-    </tex></p></mainmatter> </tree><p>
+    <tex display="block">          \frac {              \Gamma \vdash  f: \Pi _{(x:A)}B(x)         }{              \Gamma \vdash  f \equiv   \lambda  x.f(x): \Pi _{(x:A)}B(x)         } \eta      </tex></p></mainmatter> </tree><p>
     A degenrated case of dependent function type is the ordinary function type.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>6123</anchor>  <taxon>Definition</taxon> <addr>def-001U</addr>  <route>def-001U.xml</route>   <title>Ordinary Function Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8534</anchor>  <taxon>Definition</taxon> <addr>def-001U</addr>  <route>def-001U.xml</route>   <title>Ordinary Function Type</title>  </frontmatter> <mainmatter><p>
     A special case of <link href="def-001T.xml" type="local" addr="def-001T" title="Dependent Function Type"><tex>\Pi</tex>-type</link> is the <strong>ordinary function type</strong>.
     Using weakening rule we can obtain thee type <tex>A \to  B</tex> of ordinary function from <tex>A</tex> to <tex>B</tex>
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  A \space \text {type} 
-             \quad 
-             \Gamma \vdash  B \space \text {type} 
-        }{ \dfrac {
-             \Gamma ,x:A \vdash  B \space \text {type} 
-        }{
-             \Gamma \vdash   \Pi _{(x:A)}B \space \text {type} 
-        } \Pi }W
-    </tex>
+    <tex display="block">          \frac {              \Gamma \vdash  A \space \text {type}               \quad               \Gamma \vdash  B \space \text {type}          }{ \dfrac {              \Gamma ,x:A \vdash  B \space \text {type}          }{              \Gamma \vdash   \Pi _{(x:A)}B \space \text {type}          } \Pi }W     </tex>
     A term <tex>f:  \Pi _{(x:A)}B</tex> is an ordinary function. The type <tex>A  \to  B</tex> is defined:
-    <tex display="block">
-        A \to  B :=  \Pi _{(x:A)}B
-    </tex>
+    <tex display="block">         A \to  B :=  \Pi _{(x:A)}B     </tex>
     The type <tex>A</tex> is called <strong>domain</strong> of <tex>f</tex>,
     and type <tex>B</tex> is called <strong>codomain</strong> of <tex>f</tex>.
     The notation <tex>:=</tex> here means to make a definition.

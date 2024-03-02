@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5921</anchor>  <taxon>Definition</taxon> <addr>def-0022</addr>  <route>def-0022.xml</route>   <title>Type Negation</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8260</anchor>  <taxon>Definition</taxon> <addr>def-0022</addr>  <route>def-0022.xml</route>   <title>Type Negation</title>  </frontmatter> <mainmatter><p>
     The <strong>negation</strong> of type <tex>A</tex> is defined as
-    <tex display="block">
-         \neg  A : \equiv  A  \to   \emptyset 
-    </tex>
+    <tex display="block">          \neg  A : \equiv  A  \to   \emptyset      </tex>
     A type <tex>A</tex> is said to be <strong>empty</strong> if and only if <tex>\neg  A</tex> is inhabited.
-    <tex display="block">
-         \text {empty}(A) : \equiv   \neg  A
-    </tex>
-    <block open="open"><headline><strong>Proof of negation</strong></headline> 
+    <tex display="block">          \text {empty}(A) : \equiv   \neg  A     </tex></p> 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8261</anchor>          </frontmatter> <mainmatter><strong>Proof of negation</strong><p/>
         <p>
             To prove <tex>\neg  A</tex>, we need to show that <tex>A</tex> implies a contradiction.
             In other words, constructing a function of type <tex>A  \to   \emptyset</tex>.
         </p>
-    </block></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5922</anchor>  <taxon>Type Theory</taxon> <addr>tt-0004</addr>  <route>tt-0004.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Inductive Types</title> </frontmatter> <mainmatter><p>
+    </mainmatter> </tree>
+  
+</mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8262</anchor>  <taxon>Type Theory</taxon> <addr>tt-0004</addr>  <route>tt-0004.xml</route> <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Inductive Types</title>  </frontmatter> <mainmatter><p>
     In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
@@ -23,7 +23,10 @@
     This section is much more informal than the previous one.
     Without displaying the inference rules, we will just present the <strong>constructor</strong>
     and <strong>induction principle</strong> of each inductive type.
-</p><block open="open"><headline><strong>General Inductive Type</strong></headline> 
+</p> 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8263</anchor>      <date><year>2024</year> <month>1</month> <day>30</day></date>   <parent>tt-0004</parent> </frontmatter> <mainmatter><strong>General Inductive Type</strong><p/>
     <p>
     Just like <tex>\mathbb {N}</tex>, other inductive types can be defined by 
     their constructors and induction principles (and computation rules).
@@ -38,7 +41,9 @@
         <li>
             The computation rules specify the behavior of the constructors.
         </li></ul>
-</block><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5923</anchor>  <taxon>Definition</taxon> <addr>def-0020</addr>  <route>def-0020.xml</route>   <title>Unit Type</title> </frontmatter> <mainmatter><p>
+</mainmatter> </tree>
+  
+<tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8264</anchor>  <taxon>Definition</taxon> <addr>def-0020</addr>  <route>def-0020.xml</route>   <title>Unit Type</title>  </frontmatter> <mainmatter><p>
         
         The <strong>unit type</strong> is the simplest inductive type.
         It has only one constructor, denoted by <tex>\star : \textbf {1}</tex>.
@@ -46,131 +51,110 @@
         The induction principle of the unit type is trivial.
         It says that to define a dependent function <tex>f: \Pi  _{(x: \textbf {1} )} P(x)</tex>, 
         it suffices to give a value <tex>p:P( \star )</tex>.
-        <tex display="block">
-            f ( \star ) : \equiv  p
-        </tex></p></mainmatter> </tree><p>
+        <tex display="block">             f ( \star ) : \equiv  p         </tex></p></mainmatter> </tree><p>
     A degenrate inductive type is the <strong>empty type</strong>.
     It has no constructor, and its induction principle is trivial.
     Empty type is connected to the <strong>exfalso quodlibet principle</strong> in logic.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5924</anchor>  <taxon>Definition</taxon> <addr>def-0021</addr>  <route>def-0021.xml</route>   <title>Empty Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8265</anchor>  <taxon>Definition</taxon> <addr>def-0021</addr>  <route>def-0021.xml</route>   <title>Empty Type</title>  </frontmatter> <mainmatter><p>
     The <strong>empty type</strong> is a degenerate inductive type <tex>\emptyset</tex> satisfying 
     the following induction principle:
-    <tex display="block">
-         \text {ind}_ \emptyset  :  \Pi _{(x: \emptyset )}P(x)
-    </tex>
+    <tex display="block">          \text {ind}_ \emptyset  :  \Pi _{(x: \emptyset )}P(x)     </tex>
     And a special case is <strong>exfalso</strong>:
-    <tex display="block">
-         \text {exfalso} : \equiv   \text {ind}_ \emptyset  :  \empty   \to  A 
-    </tex>
+    <tex display="block">          \text {exfalso} : \equiv   \text {ind}_ \emptyset  :  \empty   \to  A      </tex>
     which can draw any conclusion.
 </p></mainmatter> </tree><p>
     With the empty type we can define the <strong>negation</strong> of a type
     and the <strong>proof of negation</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5925</anchor>  <taxon>Definition</taxon> <addr>def-0023</addr>  <route>def-0023.xml</route>   <title>Coproduct Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8266</anchor>  <taxon>Definition</taxon> <addr>def-0022</addr>  <route>def-0022.xml</route>   <title>Type Negation</title>  </frontmatter> <mainmatter><p>
+    The <strong>negation</strong> of type <tex>A</tex> is defined as
+    <tex display="block">          \neg  A : \equiv  A  \to   \emptyset      </tex>
+    A type <tex>A</tex> is said to be <strong>empty</strong> if and only if <tex>\neg  A</tex> is inhabited.
+    <tex display="block">          \text {empty}(A) : \equiv   \neg  A     </tex></p> 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8267</anchor>          </frontmatter> <mainmatter><strong>Proof of negation</strong><p/>
+        <p>
+            To prove <tex>\neg  A</tex>, we need to show that <tex>A</tex> implies a contradiction.
+            In other words, constructing a function of type <tex>A  \to   \emptyset</tex>.
+        </p>
+    </mainmatter> </tree>
+  
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8268</anchor>  <taxon>Definition</taxon> <addr>def-0023</addr>  <route>def-0023.xml</route>   <title>Coproduct Type</title>  </frontmatter> <mainmatter><p>
     Let <tex>A</tex> and <tex>B</tex> be types. The <strong>coproduct (disjoint sum)</strong> <tex>A+B</tex> is a typed defined by the following constructors:
     <ul><li><tex>\text {inl} :A \to  A+B</tex></li>
         <li><tex>\text {inr} :B \to  A+B</tex></li></ul>
     For any type family indexed by <tex>x:A+B</tex>, satisfies the following induction principle:
-    <tex display="block">
-         \text {ind}_ + : ( \Pi _{(x:A)}P( \text {inl} (x))) \to ( \Pi _{(y:B)}P( \text {inr} (y))) \to \Pi _{(z:A+B)}P(z)
-    </tex>
+    <tex display="block">          \text {ind}_ + : ( \Pi _{(x:A)}P( \text {inl} (x))) \to ( \Pi _{(y:B)}P( \text {inr} (y))) \to \Pi _{(z:A+B)}P(z)     </tex>
     (Note that sometimes we denoted <tex>\text {ind}_ + (f,g)</tex> as <tex>[f,g]</tex>) And the computation rule:
-    <tex display="block">
-         \begin {align*}
-             \text {ind}_ + (f,g, \text {inl} (x))&amp; \equiv  f(x) \\ 
-             \text {ind}_ + (f,g, \text {inr} (y))&amp; \equiv  g(y)
-         \end {align*}
-    </tex>
+    <tex display="block">          \begin {align*}              \text {ind}_ + (f,g, \text {inl} (x))&amp; \equiv  f(x) \\               \text {ind}_ + (f,g, \text {inr} (y))&amp; \equiv  g(y)          \end {align*}     </tex>
     where <tex>f</tex> and <tex>g</tex> are defined:
-    <tex display="block">
-         \begin {align*}
-            f&amp;: \Pi _{(x:A)}P( \text {inl} (x)) \\ 
-            g&amp;: \Pi _{(y:B)}P( \text {inr} (y))
-         \end {align*}
-    </tex>
+    <tex display="block">          \begin {align*}             f&amp;: \Pi _{(x:A)}P( \text {inl} (x)) \\              g&amp;: \Pi _{(y:B)}P( \text {inr} (y))          \end {align*}     </tex>
     This can be presented by pattern matching to define a function <tex>h: \Pi  _{(z:A+B)}.P(z)</tex>:
-    <tex display="block">
-         \begin {align*}
-            h( \text {inl} (x))&amp;: \equiv  f(x) \\ 
-            h( \text {inr} (y))&amp;: \equiv  g(y)
-         \end {align*}
-    </tex></p></mainmatter> </tree><block open="open"><headline><strong>Special Case of Coproduct</strong></headline> 
+    <tex display="block">          \begin {align*}             h( \text {inl} (x))&amp;: \equiv  f(x) \\              h( \text {inr} (y))&amp;: \equiv  g(y)          \end {align*}     </tex></p></mainmatter> </tree> 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8269</anchor>      <date><year>2024</year> <month>1</month> <day>30</day></date>   <parent>tt-0004</parent> </frontmatter> <mainmatter><strong>Special Case of Coproduct</strong><p/>
     The special case of coproduct type is also called the <strong>sum type</strong>.
-    <tex display="block">
-         \text {ind}_ + : (A  \to  X)  \to  (B  \to  X)  \to  (A+B  \to  X)
-    </tex>
+    <tex display="block">          \text {ind}_ + : (A  \to  X)  \to  (B  \to  X)  \to  (A+B  \to  X)     </tex>
     which is very similar to the <strong>elimination rule</strong> of disjunction in logic.
-    <tex display="block">
-        (P \to  Q)  \to  (R \to  Q)  \to  (P \vee  R \to  Q)
-    </tex>
-</block><p>
+    <tex display="block">         (P \to  Q)  \to  (R \to  Q)  \to  (P \vee  R \to  Q)     </tex>
+</mainmatter> </tree>
+  
+<p>
     The dependent version of sum type is called the <strong>dependent sum type (dependent coproduct)</strong> traditionally.
     Its terms are ordered pairs.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5926</anchor>  <taxon>Definition</taxon> <addr>def-0024</addr>  <route>def-0024.xml</route>   <title>Dependent Pair Type</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8270</anchor>  <taxon>Definition</taxon> <addr>def-0024</addr>  <route>def-0024.xml</route>   <title>Dependent Pair Type</title>  </frontmatter> <mainmatter><p>
     The <strong>dependent pair type</strong> is a inductive type <tex>\Sigma _{(x:A)}B(x)</tex> (<tex>(x:A)  \times  B(x)</tex>)
-</p><block open="open"><headline>
+</p> 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8271</anchor>          </frontmatter> <mainmatter>
     <strong>Formation Rule</strong>
-</headline> 
+<p/>
     <p>
         Given a type family <tex>B</tex> over <tex>A</tex>, we can form the dependent pair type <tex>\Sigma _{(x:A)}B(x)</tex>.
     </p>
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  A \space \text {type} 
-             \quad 
-             \Gamma ,x:A \vdash  B(x) \space \text {type} 
-        }{
-             \Gamma \vdash  (x:A)  \times  B(x) \space \text {type} 
-        }
-    </tex>
-</block><block open="open"><headline>
+    <tex display="block">          \frac {              \Gamma \vdash  A \space \text {type}               \quad               \Gamma ,x:A \vdash  B(x) \space \text {type}          }{              \Gamma \vdash  (x:A)  \times  B(x) \space \text {type}          }     </tex>
+</mainmatter> </tree>
+  
+ 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8272</anchor>          </frontmatter> <mainmatter>
     <strong>Introduction Rule</strong>
-</headline> 
+<p/>
     <p>
         Given a term <tex>a:A</tex> and a term <tex>b(a):B(a)</tex>, we can form a term <tex>\text {pair} (a,b):(x:A) \times  B(x)</tex>.
     </p>
-    <tex display="block">
-         \frac {
-             \Gamma \vdash  a:A
-             \quad 
-             \Gamma \vdash  b(a):B(a)
-        }{
-             \Gamma \vdash  (a,b):(x:A) \times  B(x)
-        }
-    </tex>
-</block><block open="open"><headline>
+    <tex display="block">          \frac {              \Gamma \vdash  a:A              \quad               \Gamma \vdash  b(a):B(a)         }{              \Gamma \vdash  (a,b):(x:A) \times  B(x)         }     </tex>
+</mainmatter> </tree>
+  
+ 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8273</anchor>          </frontmatter> <mainmatter>
     <strong>Elimination Rule</strong>
-</headline> 
+<p/>
     <p>
         The elimination rule is formed with two projections.
-        <tex display="block">
-             \frac {
-                 \Gamma \vdash  p:(x:A) \times  B(x)
-            }{
-                 \begin {align*}
-                     \Gamma &amp; \vdash   \text {pr}_ A (p):A \\ 
-                     \Gamma &amp; \vdash   \text {pr}_ B (p):B( \text {pr}_ A (p))
-                 \end {align*}
-            }
-        </tex></p>
-</block><block open="open"><headline>
+        <tex display="block">              \frac {                  \Gamma \vdash  p:(x:A) \times  B(x)             }{                  \begin {align*}                      \Gamma &amp; \vdash   \text {pr}_ A (p):A \\                       \Gamma &amp; \vdash   \text {pr}_ B (p):B( \text {pr}_ A (p))                  \end {align*}             }         </tex></p>
+</mainmatter> </tree>
+  
+ 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8274</anchor>          </frontmatter> <mainmatter>
     <strong>Computation Rule</strong>
-</headline> 
-    <p><tex display="block">
-             \frac {
-                 \Gamma \vdash  x:A 
-                 \quad  
-                 \Gamma \vdash  y:B(x)
-            }{
-                 \begin {align*}
-                     \Gamma &amp; \vdash   \text {pr}_ A ((x,y))=x:A \\ 
-                     \Gamma &amp; \vdash   \text {pr}_ B ((x,y))=y:B(x)
-                 \end {align*}
-            }
-        </tex></p>
-</block><block open="open"><headline>
+<p/>
+    <p><tex display="block">              \frac {                  \Gamma \vdash  x:A                   \quad                    \Gamma \vdash  y:B(x)             }{                  \begin {align*}                      \Gamma &amp; \vdash   \text {pr}_ A ((x,y))=x:A \\                       \Gamma &amp; \vdash   \text {pr}_ B ((x,y))=y:B(x)                  \end {align*}             }         </tex></p>
+</mainmatter> </tree>
+  
+ 
+  
+    
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8275</anchor>          </frontmatter> <mainmatter>
     <strong>Special Case</strong>
-</headline> 
+<p/>
     <ul><li>
             In the special case that <tex>B(x) = B</tex> is independent of <tex>A</tex>,
             this reduces to the <strong>product type</strong> <tex>A \times  B</tex>.
@@ -179,4 +163,6 @@
             In the special case that <tex>D  \equiv   \text {Boolean}</tex>,
             this reduces to a <link href="def-0023.xml" type="local" addr="def-0023" title="Coproduct Type">coproduct type</link>.
         </li></ul>
-</block></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>
+</mainmatter> </tree>
+  
+</mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>

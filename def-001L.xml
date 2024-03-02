@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4082</anchor>  <taxon>Definition</taxon> <addr>def-001L</addr>  <route>def-001L.xml</route>   <title>Minkowski Metric</title> </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5660</anchor>  <taxon>Definition</taxon> <addr>def-001L</addr>  <route>def-001L.xml</route>   <title>Minkowski Metric</title>  </frontmatter> <mainmatter><p>
     The <strong>Minkowski Metric</strong>, aka <strong>Minkowski Tensor</strong>, is a tensor <tex>\eta _{ \mu \nu }</tex> whose elements are defined by the matrix
-    <tex display="block">
-         \eta _{ \mu \nu } =  \begin {pmatrix}
-            -1 &amp; 0 &amp; 0 &amp; 0  \\ 
-            0 &amp; 1 &amp; 0 &amp; 0  \\ 
-            0 &amp; 0 &amp; 1 &amp; 0  \\ 
-            0 &amp; 0 &amp; 0 &amp; 1 
-         \end {pmatrix}
-    </tex>
+    <tex display="block">          \eta _{ \mu \nu } =  \begin {pmatrix}             -1 &amp; 0 &amp; 0 &amp; 0  \\              0 &amp; 1 &amp; 0 &amp; 0  \\              0 &amp; 0 &amp; 1 &amp; 0  \\              0 &amp; 0 &amp; 0 &amp; 1           \end {pmatrix}     </tex>
     where <tex>\mu</tex> and <tex>\nu</tex> are Lorentz indices run over <tex>0,1,2,3</tex>.
-</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4083</anchor>  <taxon>String Theory</taxon> <addr>phy-0001</addr>  <route>phy-0001.xml</route> <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and Extra Dimensions</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5661</anchor>  <taxon>String Theory</taxon> <addr>phy-0001</addr>  <route>phy-0001.xml</route> <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and Extra Dimensions</title>  </frontmatter> <mainmatter><p>
     This is a summary of the first chapter of <link href="string-theory-2009.xml" type="local" addr="string-theory-2009" title="A First Course in String Theory">A First Course in String Theory</link> by Barton Zwiebach.
     I will make it as understandable as possible.
 </p><p>
@@ -31,192 +24,106 @@
     <tex>x'^ \mu</tex> and <tex>x'^ \mu  +  \Delta  x'^ \mu</tex>.
     The value of <tex>x'^ \mu</tex> is different from <tex>x^ \mu</tex> and so as <tex>\Delta  x'^ \mu</tex> from <tex>\Delta  x^ \mu</tex>.
     However there is an invariant <strong>interval</strong> <tex>\Delta  s^2</tex> defined by
-    <tex display="block">
-        - \Delta  s^2 = -( \Delta  x^0)^2 + ( \Delta  x^1)^2 + ( \Delta  x^2)^2 + ( \Delta  x^3)^2
-    </tex>
+    <tex display="block">         - \Delta  s^2 = -( \Delta  x^0)^2 + ( \Delta  x^1)^2 + ( \Delta  x^2)^2 + ( \Delta  x^3)^2     </tex>
     The minus sign in front of <tex>(x^0)^2</tex> encodes the fundamental difference between space and time coordinates.
 </p><p>
     The invariant interval implies the following equation:
-    <tex display="block">
-         \Delta  s ^2 =  \Delta  s'^2
-    </tex>
+    <tex display="block">          \Delta  s ^2 =  \Delta  s'^2     </tex>
     The minus sign on the left of <tex>\Delta  s^2</tex> implies that <tex>\Delta  s^2 &gt;0</tex> for events that are <strong>timelike separated</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4084</anchor>  <taxon>Definition</taxon> <addr>def-001H</addr>  <route>def-001H.xml</route>   <title>Timelike Separated Events</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5662</anchor>  <taxon>Definition</taxon> <addr>def-001H</addr>  <route>def-001H.xml</route>   <title>Timelike Separated Events</title>  </frontmatter> <mainmatter><p>
     An event <tex>S</tex> is said to be timelike separated if
-    <tex display="block">
-        ( \Delta  x^0)^2 &gt; ( \Delta  x^1)^2 + ( \Delta  x^2)^2 + ( \Delta  x^3)^2
-    </tex>
+    <tex display="block">         ( \Delta  x^0)^2 &gt; ( \Delta  x^1)^2 + ( \Delta  x^2)^2 + ( \Delta  x^3)^2     </tex>
     or briefly <tex>\Delta  s^2 &gt; 0</tex>. The spatial separation is less than the distance light travels.
 </p></mainmatter> </tree><p>
     The history of a particle is represented in spacetime as a curve called a <strong>world-line</strong>.
     Any two events on the world-line are timelike separated, because no particle can 
     move faster than light.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4085</anchor>  <taxon>Definition</taxon> <addr>def-001I</addr>  <route>def-001I.xml</route>   <title>Lightlike Separated Events</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5663</anchor>  <taxon>Definition</taxon> <addr>def-001I</addr>  <route>def-001I.xml</route>   <title>Lightlike Separated Events</title>  </frontmatter> <mainmatter><p>
     Events connected by the world-line of a <strong>photon</strong> are said to be <strong>lightlike separated</strong>.
     For which <tex>\Delta  s^2 = 0</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4086</anchor>  <taxon>Definition</taxon> <addr>def-001J</addr>  <route>def-001J.xml</route>   <title>Spacelike Separated Events</title> </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5664</anchor>  <taxon>Definition</taxon> <addr>def-001J</addr>  <route>def-001J.xml</route>   <title>Spacelike Separated Events</title>  </frontmatter> <mainmatter><p>
     Two events for which <tex>\Delta  s^2 &lt; 0</tex> are said to be <strong>spacelike separated</strong>.
     Events that are simultaneous in a Lorentz frame but in different position are spacelike separated.
 </p></mainmatter> </tree><p>
     For timelike event we can define
-    <tex display="block">
-         \Delta  s  \equiv   \sqrt { \Delta  s^2}
-    </tex></p><p>
+    <tex display="block">          \Delta  s  \equiv   \sqrt { \Delta  s^2}     </tex></p><p>
     It is useful to consider events that are <em>infinitesimally close</em> to each other.
     Small coordinate difference are needed to define velocity.
     Infinitesimal coordinate differences are written as <tex>dx^ \mu</tex>.
-    <tex display="block">
-        -ds^2 = -(dx^0)^2 + (dx^1)^2 + (dx^2)^2 + (dx^3)^2
-    </tex>
+    <tex display="block">         -ds^2 = -(dx^0)^2 + (dx^1)^2 + (dx^2)^2 + (dx^3)^2     </tex>
     The equality of intervals is the statement
-    <tex display="block">
-        ds^2 = ds'^2
-    </tex>
+    <tex display="block">         ds^2 = ds'^2     </tex>
     Let's define a better notation:
-    <tex display="block">
-        dx_0  \equiv  -dx^0,
-        dx_1  \equiv  dx^1,
-        dx_2  \equiv  dx^2,
-        dx_3  \equiv  dx^3
-        
-    </tex>
+    <tex display="block">         dx_0  \equiv  -dx^0,         dx_1  \equiv  dx^1,         dx_2  \equiv  dx^2,         dx_3  \equiv  dx^3               </tex>
     Notice that the inclusion of the minus sign in the definition of <tex>dx_0</tex> is a matter of convention.
-    <tex display="block">
-        dx_ \mu  = (dx_0,dx_1,dx_2,dx_3)
-    </tex>
+    <tex display="block">         dx_ \mu  = (dx_0,dx_1,dx_2,dx_3)     </tex>
     Now rewrite <tex>ds^2</tex> in terms of <tex>dx_ \mu</tex> and <tex>dx^ \mu</tex>:
-    <tex display="block">
-        -ds^2 = dx_0dx^0 + dx_1dx^1 + dx_2dx^2 + dx_3dx^3 =  \sum _{ \mu =0}^3 dx_ \mu  dx^ \mu 
-    </tex>
+    <tex display="block">         -ds^2 = dx_0dx^0 + dx_1dx^1 + dx_2dx^2 + dx_3dx^3 =  \sum _{ \mu =0}^3 dx_ \mu  dx^ \mu      </tex>
     Using <link href="def-001K.xml" type="local" addr="def-001K" title="Einstein's Summation Convention">Einstein's Summation Convention</link> we can rewrite
-    <tex display="block">
-        ds^2 = dx_ \mu  dx^ \mu 
-    </tex>
+    <tex display="block">         ds^2 = dx_ \mu  dx^ \mu      </tex>
     And for Infinitesimal timelike intervals we can define
-    <tex display="block">
-        ds  \equiv   \sqrt {ds^2} 
-    </tex>
+    <tex display="block">         ds  \equiv   \sqrt {ds^2}      </tex>
     We can also express the interval <tex>ds^2</tex> using the <strong>Minkowski Metric</strong>:
-    <tex display="block">
-        -ds^2=  \eta _{ \mu \nu } dx^ \mu  dx^ \nu 
-    </tex>
+    <tex display="block">         -ds^2=  \eta _{ \mu \nu } dx^ \mu  dx^ \nu      </tex>
     and the metric is defined by
-</p><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5665</anchor>  <taxon>Definition</taxon> <addr>def-001L</addr>  <route>def-001L.xml</route>   <title>Minkowski Metric</title>  </frontmatter> <mainmatter><p>
+    The <strong>Minkowski Metric</strong>, aka <strong>Minkowski Tensor</strong>, is a tensor <tex>\eta _{ \mu \nu }</tex> whose elements are defined by the matrix
+    <tex display="block">          \eta _{ \mu \nu } =  \begin {pmatrix}             -1 &amp; 0 &amp; 0 &amp; 0  \\              0 &amp; 1 &amp; 0 &amp; 0  \\              0 &amp; 0 &amp; 1 &amp; 0  \\              0 &amp; 0 &amp; 0 &amp; 1           \end {pmatrix}     </tex>
+    where <tex>\mu</tex> and <tex>\nu</tex> are Lorentz indices run over <tex>0,1,2,3</tex>.
+</p></mainmatter> </tree><p>
     How can we derive the Minkowski Metric? First we require <tex>\eta _{ \mu \nu }</tex> to be a symmetric matrix,
     because any antisymmetric part would not contribute to the interval.
-    <tex display="block">
-         \eta _{ \mu \nu } =  \eta _{ \nu \mu }
-    </tex>
+    <tex display="block">          \eta _{ \mu \nu } =  \eta _{ \nu \mu }     </tex>
     And for any two-indexed object <tex>M_{ \mu \nu }</tex> can be decomposed into symmetric and antisymmetric parts:
-    <tex display="block">
-        M_{ \mu \nu } =  \frac {1}{2}(M_{ \mu \nu } + M_{ \nu \mu }) +  \frac {1}{2}(M_{ \mu \nu } - M_{ \nu \mu })
-    </tex>
+    <tex display="block">         M_{ \mu \nu } =  \frac {1}{2}(M_{ \mu \nu } + M_{ \nu \mu }) +  \frac {1}{2}(M_{ \mu \nu } - M_{ \nu \mu })     </tex>
     With the antisymmetric part (denoted <tex>\delta</tex>) which we can see
-    <tex display="block">
-         \delta _{ \mu \nu }dx^ \mu  dx^ \nu  = (- \delta _{ \nu \mu }) dx^ \mu  dx^ \nu  = - \delta _{ \mu \nu }dx^ \nu  dx^ \mu  = - \delta _{ \mu \nu }dx^ \mu  dx^ \nu 
-    </tex>
+    <tex display="block">          \delta _{ \mu \nu }dx^ \mu  dx^ \nu  = (- \delta _{ \nu \mu }) dx^ \mu  dx^ \nu  = - \delta _{ \mu \nu }dx^ \nu  dx^ \mu  = - \delta _{ \mu \nu }dx^ \mu  dx^ \nu      </tex>
     Note that the second step relabeled the dummy indices <tex>\mu</tex> and <tex>\nu</tex>.
     The third step we swapped the order of the two terms. Hence the antisymmetric part is zero.
 </p><p>
     The equation <tex>dx_ \mu  = (dx_0,dx_1,dx_2,dx_3)</tex> can be rewritten as
-    <tex display="block">
-        dx_ \mu  =  \eta _{ \mu \nu } dx^ \nu 
-    </tex>
+    <tex display="block">         dx_ \mu  =  \eta _{ \mu \nu } dx^ \nu      </tex>
     For more general case:
-    <tex display="block">
-        b_ \mu   \equiv   \eta _{ \mu \nu } b^ \nu 
-    </tex>
+    <tex display="block">         b_ \mu   \equiv   \eta _{ \mu \nu } b^ \nu      </tex>
     Given <tex>a^ \mu</tex> and <tex>b^ \mu</tex> we can define the dot scalar product as 
-    <tex display="block">
-        a  \cdot  b  \equiv  a^ \mu  b_ \mu  = a^ \mu   \eta _{ \mu \nu } b^ \nu  = -a^0 b^0 + a^1 b^1 + a^2 b^2 + a^3 b^3
-    </tex>
+    <tex display="block">         a  \cdot  b  \equiv  a^ \mu  b_ \mu  = a^ \mu   \eta _{ \mu \nu } b^ \nu  = -a^0 b^0 + a^1 b^1 + a^2 b^2 + a^3 b^3     </tex>
     Note that <tex>a^ \mu  b_ \mu  = a_ \mu  b^ \mu</tex> because <tex>\eta _{ \mu \nu }</tex> is symmetric.
 </p><p>
     It's convenient to introduce the inverse matrix of <tex>\eta _{ \mu \nu }</tex>:
-    <tex display="block">
-         \eta ^{ \mu \nu } = 
-         \begin {pmatrix}
-            -1 &amp; 0 &amp; 0 &amp; 0  \\ 
-            0 &amp; 1 &amp; 0 &amp; 0  \\ 
-            0 &amp; 0 &amp; 1 &amp; 0  \\ 
-            0 &amp; 0 &amp; 0 &amp; 1
-         \end {pmatrix}
-    </tex>
+    <tex display="block">          \eta ^{ \mu \nu } =           \begin {pmatrix}             -1 &amp; 0 &amp; 0 &amp; 0  \\              0 &amp; 1 &amp; 0 &amp; 0  \\              0 &amp; 0 &amp; 1 &amp; 0  \\              0 &amp; 0 &amp; 0 &amp; 1          \end {pmatrix}     </tex>
     And the inverse property is
-    <tex display="block">
-         \eta ^{ \mu \rho }  \eta _{ \rho \nu } =  \delta ^ \mu _ \nu 
-    </tex>
+    <tex display="block">          \eta ^{ \mu \rho }  \eta _{ \rho \nu } =  \delta ^ \mu _ \nu      </tex>
     where <tex>\delta ^ \mu _ \nu</tex> is the <link href="def-001P.xml" type="local" addr="def-001P" title="Kronecker Delta">Kronecker Delta</link>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4087</anchor>  <taxon>Trick</taxon> <addr>thm-0004</addr>  <route>thm-0004.xml</route>   <title>Raise Indices</title> </frontmatter> <mainmatter><p><tex display="block">
-         \eta ^{ \rho \mu }b_ \mu 
-        =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )
-        =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu 
-        =  \delta ^ \rho _ \nu  b^ \nu 
-        = b^ \rho 
-    </tex>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5666</anchor>  <taxon>Trick</taxon> <addr>thm-0004</addr>  <route>thm-0004.xml</route>   <title>Raise Indices</title>  </frontmatter> <mainmatter><p><tex display="block">          \eta ^{ \rho \mu }b_ \mu          =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )         =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu          =  \delta ^ \rho _ \nu  b^ \nu          = b^ \rho      </tex>
     The lower index of <tex>b_ \mu</tex> is raised to <tex>b^ \rho</tex> by <tex>\eta ^{ \rho \mu }</tex>.
 </p></mainmatter> </tree><p><strong>Lorentz transformations</strong> are the relations between coordinates in two different
     inertial frames.
     
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4088</anchor>  <taxon>Definition</taxon> <addr>def-001Q</addr>  <route>def-001Q.xml</route>   <title>Lorentz Transformations</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5667</anchor>  <taxon>Definition</taxon> <addr>def-001Q</addr>  <route>def-001Q.xml</route>   <title>Lorentz Transformations</title>  </frontmatter> <mainmatter><p>
     Consider a frame <tex>S</tex> and <tex>S'</tex> which is moving along the <tex>+x</tex> direction of the <tex>S</tex> frame
     with a velocity <tex>v</tex>.
     Assume that the origins of the two frames coincide at <tex>t=t'=0</tex> and coordinate axes are parallel.
 
     We say that <tex>S'</tex> is boosted along the <tex>x</tex> direction with velocity parameter <tex>\beta \equiv \frac {v}{c}</tex>.
     The <strong>Lorentz transformations</strong> are defined by a set of equations that relate the coordinates of an event in the two frames.
-    <tex display="block">
-         \begin {align*}
-            x' &amp;=  \gamma (x- \beta  ct)  \\ 
-            y' &amp;= y  \\ 
-            z' &amp;= z  \\ 
-            ct' &amp;=  \gamma (ct- \beta  x)
-         \end {align*}
-    </tex>
+    <tex display="block">          \begin {align*}             x' &amp;=  \gamma (x- \beta  ct)  \\              y' &amp;= y  \\              z' &amp;= z  \\              ct' &amp;=  \gamma (ct- \beta  x)          \end {align*}     </tex>
     where <tex>\gamma \equiv \dfrac {1}{ \sqrt {1- \beta ^2}} =  \dfrac {1}{ \sqrt {1- \frac {v^2}{c^2}}}</tex> is the <strong>Lorentz factor</strong>.
     The coordinates orthogonal to the <tex>x</tex> direction remains unchanged.
 </p><p>
     Lorentz transformations are the linear transformations of coordinates that remains the <tex>\Delta  s^2</tex> unchanged. 
     We can write the Lorentz transformations in matrix form:
-    <tex display="block">
-         \begin {pmatrix}
-            ct'  \\ 
-            x'  \\ 
-            y'  \\ 
-            z' 
-         \end {pmatrix}
-        =
-         \begin {pmatrix}
-             \gamma  &amp; - \beta \gamma  &amp; 0 &amp; 0  \\ 
-            - \beta \gamma  &amp;  \gamma  &amp; 0 &amp; 0  \\ 
-            0 &amp; 0 &amp; 1 &amp; 0  \\ 
-            0 &amp; 0 &amp; 0 &amp; 1 
-         \end {pmatrix}
-         \begin {pmatrix}
-            ct  \\ 
-            x  \\ 
-            y  \\ 
-            z 
-         \end {pmatrix}
-    </tex>
+    <tex display="block">          \begin {pmatrix}             ct'  \\              x'  \\              y'  \\              z'           \end {pmatrix}         =          \begin {pmatrix}              \gamma  &amp; - \beta \gamma  &amp; 0 &amp; 0  \\              - \beta \gamma  &amp;  \gamma  &amp; 0 &amp; 0  \\              0 &amp; 0 &amp; 1 &amp; 0  \\              0 &amp; 0 &amp; 0 &amp; 1           \end {pmatrix}          \begin {pmatrix}             ct  \\              x  \\              y  \\              z           \end {pmatrix}     </tex>
     Or in a more compact form:
-    <tex display="block">
-        x'^ \mu  = L^ \mu _ \nu  x^ \nu 
-    </tex>
+    <tex display="block">         x'^ \mu  = L^ \mu _ \nu  x^ \nu      </tex>
     where <tex>L^ \mu _ \nu</tex> is the <strong>Lorentz transformation matrix</strong> presented above.
 </p></mainmatter> </tree><p>
     We now introduce a coordinate system that will be extremely useful in string theory,
     the <strong>light-cone coordinates</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4089</anchor>  <taxon>Definition</taxon> <addr>def-001R</addr>  <route>def-001R.xml</route>   <title>Light-cone Coordinates</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5668</anchor>  <taxon>Definition</taxon> <addr>def-001R</addr>  <route>def-001R.xml</route>   <title>Light-cone Coordinates</title>  </frontmatter> <mainmatter><p>
     The <strong>light-cone coordinates</strong> can be defined as
     two independent <link href="def-000L.xml" type="local" addr="def-000L" title="Linear Combination">linear combinations</link> of the time 
     and a chosen spatial coordinate (conventionally <tex>x^1</tex>):
-    <tex display="block">
-         \begin {align*}
-            x^+  \equiv   \frac {1}{ \sqrt {2}} (X^0 + X^1)  \\ 
-            x^-  \equiv   \frac {1}{ \sqrt {2}} (X^0 - X^1)
-         \end {align*}
-    </tex>
+    <tex display="block">          \begin {align*}             x^+  \equiv   \frac {1}{ \sqrt {2}} (X^0 + X^1)  \\              x^-  \equiv   \frac {1}{ \sqrt {2}} (X^0 - X^1)          \end {align*}     </tex>
     while other spatial coordinates remain unchanged. Thus the complete set of 
     light-cone coordinates is <tex>(x^+,x^-,x^2,x^3)</tex>.
 </p></mainmatter> </tree><p>
@@ -239,27 +146,13 @@
     For definiteness we will take <tex>x^+</tex> as the light-cone time coordinate and <tex>x^-</tex> as the spatial coordinate.
 </p><p>
     Take differentials and multiply of the light-cone coordinates:
-    <tex display="block">
-        2dx^+ dx^- = (dx^0 + dx^1)(dx^0 - dx^1) = (dx^0)^2 - (dx^1)^2
-    </tex>
+    <tex display="block">         2dx^+ dx^- = (dx^0 + dx^1)(dx^0 - dx^1) = (dx^0)^2 - (dx^1)^2     </tex>
     which follows the invariant interval
-    <tex display="block">
-        -ds^2 = -2dx^+ dx^- + (dx^2)^2 + (dx^3)^2
-    </tex>
+    <tex display="block">         -ds^2 = -2dx^+ dx^- + (dx^2)^2 + (dx^3)^2     </tex>
     As we did before, we can represent this with index notation:
-    <tex display="block">
-        -ds^2 =  \hat { \eta }_{ \mu \nu } dx^ \mu  dx^ \nu 
-    </tex>
+    <tex display="block">         -ds^2 =  \hat { \eta }_{ \mu \nu } dx^ \mu  dx^ \nu      </tex>
     where the <strong>light-cone metric</strong> is
-    <tex display="block">
-         \hat { \eta }_{ \mu \nu } = 
-         \begin {pmatrix}
-            0 &amp; -1 &amp; 0 &amp; 0  \\ 
-            -1 &amp; 0 &amp; 0 &amp; 0  \\ 
-            0 &amp; 0 &amp; 1 &amp; 0  \\ 
-            0 &amp; 0 &amp; 0 &amp; 1
-         \end {pmatrix}
-    </tex>
+    <tex display="block">          \hat { \eta }_{ \mu \nu } =           \begin {pmatrix}             0 &amp; -1 &amp; 0 &amp; 0  \\              -1 &amp; 0 &amp; 0 &amp; 0  \\              0 &amp; 0 &amp; 1 &amp; 0  \\              0 &amp; 0 &amp; 0 &amp; 1          \end {pmatrix}     </tex>
     This is easy to derive from the symmetric.
 </p><p>
     The light-cone coordinates looks unusual but if you see some
@@ -268,25 +161,11 @@
     Consider a particle moving in the <tex>x^1</tex> direction with velocity <tex>v</tex>.
     At the initial time the positions are all <tex>0</tex>.
     (The velocity parameter is denote <tex>\beta</tex>)
-    <tex display="block">
-         \begin {align*}
-            x^1 = vt =  \beta  x^0
-             \\ 
-            x^2(t) = x^3(t) = 0
-         \end {align*}
-    </tex>
+    <tex display="block">          \begin {align*}             x^1 = vt =  \beta  x^0              \\              x^2(t) = x^3(t) = 0          \end {align*}     </tex>
     Now compute the light-cone coordinates:
-    <tex display="block">
-         \begin {align*}
-            x^+ =  \frac {1}{ \sqrt {2}}(x^0 + x^1) =  \frac {1}{ \sqrt {2}}(x^0 +  \beta  x^0) =  \frac {1+ \beta }{ \sqrt {2}}x^0
-             \\ 
-            x^- =  \frac {1}{ \sqrt {2}}(x^0 - x^1) =  \frac {1}{ \sqrt {2}}(x^0 -  \beta  x^0) =  \frac {1- \beta }{ \sqrt {2}}x^0
-         \end {align*}
-    </tex>
+    <tex display="block">          \begin {align*}             x^+ =  \frac {1}{ \sqrt {2}}(x^0 + x^1) =  \frac {1}{ \sqrt {2}}(x^0 +  \beta  x^0) =  \frac {1+ \beta }{ \sqrt {2}}x^0              \\              x^- =  \frac {1}{ \sqrt {2}}(x^0 - x^1) =  \frac {1}{ \sqrt {2}}(x^0 -  \beta  x^0) =  \frac {1- \beta }{ \sqrt {2}}x^0          \end {align*}     </tex>
     And we identify the ratio 
-    <tex display="block">
-         \frac {dx^+}{dx^-} =  \frac {1+ \beta }{1- \beta }
-    </tex>
+    <tex display="block">          \frac {dx^+}{dx^-} =  \frac {1+ \beta }{1- \beta }     </tex>
     as the light-cone velocity of the particle. This looks strange:
     <ul><li>
             For <tex>\beta =-1</tex> the light-cone velocity is <tex>\infty</tex>.
@@ -301,96 +180,56 @@
 </p><p>
     Just get the idea of the light-cone coordinates, now let's dive into the relativistic energy and momentum.
     In special relativity there is relationship between energy and momentum.
-    <tex display="block">
-         \frac {E^2}{c^2}- \vec {p}^2 = m^2c^2
-    </tex>
+    <tex display="block">          \frac {E^2}{c^2}- \vec {p}^2 = m^2c^2     </tex>
     where <tex>m</tex> is the rest mass of the particle, and <tex>c</tex> is the speed of light.
-    <tex display="block">
-        E =  \gamma  mc^2,
-         \quad  
-         \vec {p} =  \gamma  m \vec {v}
-    </tex>
+    <tex display="block">         E =  \gamma  mc^2,          \quad            \vec {p} =  \gamma  m \vec {v}     </tex>
     The energy and momentum can be used to define a momentum four-vector
-    <tex display="block">
-        p^ \mu  = ( \frac {E}{c},p_x, p_y, p_z)
-    </tex>
+    <tex display="block">         p^ \mu  = ( \frac {E}{c},p_x, p_y, p_z)     </tex>
     or shortly
-    <tex display="block">
-        p^ \mu  = ( \frac {E}{c}, \vec {p}) = m \gamma  (c,  \vec {v})
-    </tex>
+    <tex display="block">         p^ \mu  = ( \frac {E}{c}, \vec {p}) = m \gamma  (c,  \vec {v})     </tex>
     Using operator <tex>\eta _{ \mu \nu }</tex> to lower the index:
-    <tex display="block">
-        p_ \mu  = (p_0, p_1, p_2, p_3) =  \eta _{ \mu \nu } p^ \nu  = (- \frac {E}{c},p_x, p_y, p_z)
-    </tex>
+    <tex display="block">         p_ \mu  = (p_0, p_1, p_2, p_3) =  \eta _{ \mu \nu } p^ \nu  = (- \frac {E}{c},p_x, p_y, p_z)     </tex>
     And make use of the relationship above.
-    <tex display="block">
-        p_ \mu  p^ \mu  =  \eta _{ \mu \nu } p^ \mu  p^ \nu  = - \frac {E^2}{c^2} + p_x^2 + p_y^2 + p_z^2 = -m^2c^2
-    </tex>
+    <tex display="block">         p_ \mu  p^ \mu  =  \eta _{ \mu \nu } p^ \mu  p^ \nu  = - \frac {E^2}{c^2} + p_x^2 + p_y^2 + p_z^2 = -m^2c^2     </tex>
     Using the relativistic scalar product notation:
-    <tex display="block">
-        p ^2  \equiv  p  \cdot  p = p_ \mu  p^ \mu  = -m^2c^2
-    </tex></p><p>
+    <tex display="block">         p ^2  \equiv  p  \cdot  p = p_ \mu  p^ \mu  = -m^2c^2     </tex></p><p>
     A central concept in special relativity is <strong>proper time</strong>,
     which is a Lorentz invariant measure of time.
     Consider a world-line and two events <tex>A</tex> and <tex>B</tex> on the world-line.
     Different Lorentz observers will measure different time intervals between the two events.
     But imagine a clock that moves along the world-line.
     The time measured by the clock is called the <strong>proper time</strong> between the two events.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4090</anchor>  <taxon>Definition</taxon> <addr>def-001S</addr>  <route>def-001S.xml</route>   <title>Proper Time</title> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5669</anchor>  <taxon>Definition</taxon> <addr>def-001S</addr>  <route>def-001S.xml</route>   <title>Proper Time</title>  </frontmatter> <mainmatter><p>
     The <strong>proper time</strong> along a timelike world-line is defined as the
     time as measured by a clock following that line. 
 </p></mainmatter> </tree><p>
     By this definition, proper time is a invariant. Consider an invariant interval 
     for the motion of a particle along <tex>x</tex> axis:
-    <tex display="block">
-        -ds^2 = -c^2 dt^2 + dx^2 = -c^2 dt^2 (1 -  \beta ^2)
-    </tex>
+    <tex display="block">         -ds^2 = -c^2 dt^2 + dx^2 = -c^2 dt^2 (1 -  \beta ^2)     </tex>
     Now attach a Lorentz frame to the particle does not move
     and the time is recorded by the clock that is moving with the particle.
     Hence <tex>dx=0</tex> and <tex>dt=dt_p</tex> is the proper time.
-    <tex display="block">
-        -ds^2 = -c^2 dt_p^2 
-    </tex>
+    <tex display="block">         -ds^2 = -c^2 dt_p^2      </tex>
     Cancel the minus sign and the square root
-    <tex display="block">
-        dt_p = c dt_p
-    </tex>
+    <tex display="block">         dt_p = c dt_p     </tex>
     This shows that for timelike intervals,
     the <strong>proper time interval</strong> is <tex>\frac {ds}{c}</tex>.
     Similarly, 
-    <tex display="block">
-        ds = cdt  \sqrt {1- \beta ^2}  \implies   \frac {dt}{ds} =  \frac { \gamma }{c}
-    </tex>
+    <tex display="block">         ds = cdt  \sqrt {1- \beta ^2}  \implies   \frac {dt}{ds} =  \frac { \gamma }{c}     </tex>
     The invariant <tex>ds</tex> can be used to construct nre Lorentz vectors.
     For instance, we can construct velocity four-vector:
-    <tex display="block">
-        u^ \mu  = c  \frac {dx^ \mu }{ds} = c ( \frac {d(ct)}{ds},  \frac {dx}{ds},  \frac {dy}{ds},  \frac {dz}{ds})
-    </tex>
+    <tex display="block">         u^ \mu  = c  \frac {dx^ \mu }{ds} = c ( \frac {d(ct)}{ds},  \frac {dx}{ds},  \frac {dy}{ds},  \frac {dz}{ds})     </tex>
     This can be simplified by using the definition of proper time:
-    <tex display="block">
-         \frac {dx}{ds} =  \frac {dx}{dt}  \frac {dt}{ds} =  \frac {v_x \gamma }{c}
-    </tex>
+    <tex display="block">          \frac {dx}{ds} =  \frac {dx}{dt}  \frac {dt}{ds} =  \frac {v_x \gamma }{c}     </tex>
     Hence we find
-    <tex display="block">
-        u^ \mu  = ( \gamma  c,  \gamma  v_x,  \gamma  v_y,  \gamma  v_z) =  \gamma  (c,  \vec {v})
-    </tex>
+    <tex display="block">         u^ \mu  = ( \gamma  c,  \gamma  v_x,  \gamma  v_y,  \gamma  v_z) =  \gamma  (c,  \vec {v})     </tex>
     We see that the momentum four-vector is just the velocity four-vector multiplied by the rest mass.
-    <tex display="block">
-        p^ \mu  = m u^ \mu 
-    </tex></p><p>
+    <tex display="block">         p^ \mu  = m u^ \mu      </tex></p><p>
     The light-cone components <tex>p^+</tex> and <tex>p^-</tex> of the momentum Lorentz vector are obtained:
-    <tex display="block">
-         \begin {align*}
-            p^+ =  \frac {1}{ \sqrt {2}}(p^0+p^1) = -p_-
-             \\ 
-            p^- =  \frac {1}{ \sqrt {2}}(p^0-p^1) = -p_+
-         \end {align*}
-    </tex>
+    <tex display="block">          \begin {align*}             p^+ =  \frac {1}{ \sqrt {2}}(p^0+p^1) = -p_-              \\              p^- =  \frac {1}{ \sqrt {2}}(p^0-p^1) = -p_+          \end {align*}     </tex>
     Note that light-cone coordinates do not transform as Lorentz ones do. 
     Both <tex>p^ \pm</tex> are energy-like since both are positive for physical particles.
-    <tex display="block">
-        p^0 =  \frac {E}{c}  \sqrt { \vec {p}^2 + m^2c^2} &gt; | \vec {p}| \geq  |p^1|
-    </tex>
+    <tex display="block">         p^0 =  \frac {E}{c}  \sqrt { \vec {p}^2 + m^2c^2} &gt; | \vec {p}| \geq  |p^1|     </tex>
     Hence <tex>p^0 \pm  p^1 &gt; 0</tex> and <tex>p^ \pm &gt;0</tex>, which both are possible candidates for energy.
     We finally choose <tex>p^-</tex> as the component, we explain this later. 
 </p></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>
