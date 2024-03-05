@@ -1,3 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3625</anchor>  <taxon>Reference</taxon> <addr>eng-compiler-2022</addr>  <route>eng-compiler-2022.xml</route>  <authors><author>Keith D. Cooper</author><author>Linda Torczon</author> </authors> <title>Engineering a Compiler</title>  <meta name="doi">doi.org/10.1016/C2014-0-01395-0</meta></frontmatter> <mainmatter/> <backmatter><contributions/> <context/> <related/> <backlinks/> <references/></backmatter></tree>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3970</anchor>  <taxon>Reference</taxon> <addr>eng-compiler-2022</addr>  <route>eng-compiler-2022.xml</route>  <authors><author>Keith D. Cooper</author><author>Linda Torczon</author> </authors> <title>Engineering a Compiler</title>  <meta name="doi">doi.org/10.1016/C2014-0-01395-0</meta></frontmatter> <mainmatter/> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3971</anchor>  <taxon>Computer Science</taxon> <addr>cs-0004</addr>  <route>cs-0004.xml</route>   <title>Scanners</title>  </frontmatter> <mainmatter><p>
+    The scanner's task is to transform a stream of characters into a stream 
+    of words in the input language. Each word must be classified into a 
+    <strong>syntactic category</strong>.
+    This note refers to <link href="eng-compiler-2022.xml" type="local" addr="eng-compiler-2022" title="Engineering a Compiler">Engineering a compiler</link></p><p>
+    The first stage of a compiler is to perform <strong>lexical analysis</strong> by a scanner.
+    The parser or <strong>syntax analyzer</strong> will fit the stream of words to a grammatical 
+    model of the input language.
+</p><p>
+    Scanner construction has a strong foundation in formal language theory.
+    Scanners are based on <strong>recognizers</strong> that simulate <strong>deterministic finite automata</strong>.
+    We can specify the lexical structure using a set of <strong>regular expression</strong>.
+</p><p>
+    Each time a scanner recognizes a word, it will return a <strong>token</strong> that
+    contains the word (<strong>lexeme</strong>) and its syntactic category.
+    The scanner uses <strong>microsyntax</strong> (the lexical structure of a language) to 
+    find and classify words. <strong>Keywords</strong> are <strong>identifiers</strong> but have special meanings.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3972</anchor>        <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › A first look at recognizers</title> <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
+        A char-by-char algorithm to recognize words is trivial.
+        Consider we want to recognize the word <code>new</code>.
+        We can write down the following code.
+    </p><pre>    c &lt;- nextChar();
+    if (c == 'n') {
+        c &lt;- nextChar();
+        if (c == 'e') {
+            c &lt;- nextChar();
+            if (c == 'w') {
+                return newToken();
+            }
+        }
+    }
+    reportError();</pre><p>
+        We can also represent the code fragment using the simple <strong>transition diagram</strong>.
+    </p>
+    <center><embedded-tex hash="6e7465cf950ac87387ac76b9da5fb72d"><embedded-tex-preamble>
+       \usepackage {tikz-cd}
+       \usepackage {amssymb}
+    </embedded-tex-preamble> <embedded-tex-body>
+         
+         \begin {tikzcd}
+            {S_0} &amp; {S_1} &amp; {S_2} &amp; {S_3}
+             \arrow [&quot;n&quot;, from=1-1, to=1-2]
+             \arrow [&quot;e&quot;, from=1-2, to=1-3]
+             \arrow [&quot;w&quot;, from=1-3, to=1-4]
+         \end {tikzcd}
+     
+    </embedded-tex-body></embedded-tex></center>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3973</anchor>        <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › A formalism for recognizers</title> <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
+        Transition diagrams can be viewed as formal mathematics objects called <strong>finite automata</strong>.
+    </p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3974</anchor>  <taxon>Definition</taxon> <addr>def-003M</addr>  <route>def-003M.xml</route>   <title>Finite Automata</title>  </frontmatter> <mainmatter><p>
+    A <strong>finite automata (FA)</strong> is a five-tuple <tex>(S, \Sigma , \delta ,s_0,S_A)</tex> where
+    <ul><li><tex>S</tex> is the finite set of states in the recognizer including <tex>s_e</tex>,
+            the error state.
+        </li>
+        <li><tex>\Sigma</tex> is the finite alphabet used by the recognizer. 
+            <tex>\Sigma</tex> is the union of the edge labels in the transition diagram.
+        </li>
+        <li><tex>\delta (s, c)</tex> is the recognizer's transition function, which 
+            maps each state <tex>s \in  S</tex> and character <tex>c \in \Sigma</tex> into some next state.
+            In state <tex>s_i</tex> with input character <tex>c</tex> the FA takes the transition
+            <tex>s_i  \xrightarrow {c}  \delta (s_i, c)</tex>.
+        </li>
+        <li><tex>s_0 \in  S</tex> is the initial state of the recognizer.
+        </li>
+        <li><tex>S_A</tex> is the set of accepting states, <tex>S_A \subseteq  S</tex>.
+        </li></ul>
+    <tex>\delta</tex> is only partially defined. For all other combinations of the 
+    state <tex>s_i</tex> and input char <tex>c</tex> we can define <tex>\delta (s_i,c)=s_e</tex>.
+</p></mainmatter> </tree><p>
+        An FA <strong>accpets</strong> a string <tex>x</tex> and iff starting in <tex>s_0</tex>,
+        the sequence of chars in  <tex>x</tex> takes the FA to an accepting state
+        when the entire string has been consumed.
+    </p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3975</anchor>  <taxon>Definition</taxon> <addr>def-003N</addr>  <route>def-003N.xml</route>   <title>Accepts</title>  </frontmatter> <mainmatter><p>
+    If the string <tex>x</tex> consists characters <tex>x_1, x_2,  \ldots , x_n</tex> then the
+    FA <tex>(S, \Sigma , \delta ,s_0,S_A)</tex> <strong>accpets</strong> <tex>x</tex> iff there is a sequence
+    <tex display="block">          \delta (              \delta (                  \dots \delta ( \delta (                      \delta (s_0,x_1),x_2),x_3) \dots ,                 x_{n-1}             )             ,x_n         ) \in  S_A     </tex></p></mainmatter> </tree></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3976</anchor>        <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › Recognize more complex words</title> <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
+        The char-by-char model is very simple and now we consider about numbers.
+        For simplicity, we consider only unsigned integers: An unsigned integer is either
+        zero or series of one or more digits where the first one is non-zero.
+    </p>
+    <center><embedded-tex hash="50bfeb9a1f9d7a5d006a58e636b046a2"><embedded-tex-preamble>
+       \usepackage {tikz-cd}
+       \usepackage {amssymb}
+    </embedded-tex-preamble> <embedded-tex-body>
+         
+         \begin {tikzcd}
+            &amp; {S_2}
+             \arrow [out=65, in=25 ,loop,&quot;0..9&quot;]
+             \\ 
+            {S_0}  \\ 
+            &amp; {S_1}
+             \arrow [&quot;0&quot;, from=2-1, to=3-2]
+             \arrow [&quot;{1..9}&quot;, from=2-1, to=1-2]
+         \end {tikzcd}
+     
+    </embedded-tex-body></embedded-tex></center>
+<p>
+        And the code implementation can be:
+    </p><pre>    state &lt;- s0;
+    char &lt;-nextChar();
+    while (state != se and char != eof) {
+        state &lt;- delta(state, char);
+        char &lt;- nextChar();
+    }
+    if (state in SA) {
+        return Acceptance();
+    } else {
+        reportError();
+    }
+    </pre><p>
+        Another example is to recognize <strong>identifiers</strong> which are sequences of letters and digits,
+        starting with a letter. Many languages include other special characters for identifiers.
+        The FA for unsigned integers and identifiers are different in syntactic categories.
+    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3977</anchor>        <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › Regular Expressions</title> <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
+        The set of words accpeted by a finite automata <tex>F</tex> forms a language <tex>L(F)</tex>.
+        The transition diagram of <tex>F</tex> specifies the syntactic structure of <tex>L(F)</tex>.
+        But such representation is complex and non-intuitive.
+        Most systems use a notation called <strong>regular expressions</strong> to specify the language.
+        Any language described by an RE is considered a <strong>regular language</strong>.
+        RE is equivalent to FA.
+    </p><p>
+        To work with REs in a rigorous way, we need a foraml definition.
+    </p></mainmatter> </tree></mainmatter> </tree></backlinks> <references/></backmatter></tree>

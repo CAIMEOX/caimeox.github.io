@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>7760</anchor>  <taxon>Theorem</taxon> <addr>thm-0010</addr>  <route>thm-0010.xml</route>   <title>Reduction and normal forms</title>  </frontmatter> <mainmatter><p>
+    For every expression <tex>e</tex>, either <tex>e \to  e'</tex> for some expression <tex>e'</tex> or <tex>e</tex> is a normal form.
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>7761</anchor>  <taxon>Computer Science</taxon> <addr>cs-0005</addr>  <route>cs-0005.xml</route> <date><year>2024</year> <month>3</month> <day>5</day></date>  <title>Simply Typed Lambda Calculus and Representation Theorems</title>  </frontmatter> <mainmatter><p>
+    We have explored the power of lambda calculus.
+    Church's original purpose of the pure calculus of functions 
+    was a new foundations of mathematics distinct from set theory.
+    Unfortunately the original lambda calculus is <strong>inconsistent</strong> (Every proposition has a proof).
+    Church returned to the ideas by Russell and Whitehead and developed the <strong>Church's Simple Theory of Types</strong>.
+    <strong>SLTC</strong> is a typed interpretation of the lambda calculus with only one type constructor <tex>\to</tex>
+    that builds function types. 
+</p><p>
+    We follow the converntion that function type constructor <tex>\to</tex> is right-associative.
+    We write <tex>e: \tau</tex> if expression <tex>e</tex> has type <tex>\tau</tex>.
+    <tex display="block">          \lambda  x.x: \tau \to \tau      </tex>
+    But the type is not unique. The booleans can be typed:
+    <tex display="block">          \begin {align*}              \text {true} &amp;=  \lambda  x. \lambda  y.x :  \alpha \to ( \beta \to \alpha ) \\               \text {false} &amp;=  \lambda  x. \lambda  y.y :  \alpha \to ( \beta \to \beta )          \end {align*}     </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7762</anchor>      <date><year>2024</year> <month>3</month> <day>5</day></date>  <title><link href="cs-0005.xml" type="local" addr="cs-0005" title="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</link> › Typing Judgment</title> <parent>cs-0005</parent> </frontmatter> <mainmatter><p>
+        Wem can formalize judgments about expressions and types using <strong>inference rules</strong>.
+        For instance:
+        <tex display="block">              \frac {                 e_1: \tau _1 \quad  e_2: \tau _2             }{                 e_1 \space  e_2: \tau _2             }         </tex>
+        The application <tex>e_1 \space  e_2</tex> has type <tex>\tau _2</tex> if <tex>e_1</tex> has type 
+        <tex>\tau _1 \to \tau _2</tex> and <tex>e_2</tex> has type <tex>\tau _1</tex>.
+    </p><p>
+        We can record the types of variable in a <strong>typing context</strong>.
+        <tex display="block">              \Gamma  : \equiv  x_1: \tau _1, \ldots ,x_n: \tau _n         </tex>
+        And we always assume that all variables declared in a context are distinct.
+        This avoids any ambiguity when we try to determine the type of a variable.
+        The typing judgment now becomes
+        <tex display="block">              \Gamma \vdash  e: \tau          </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7763</anchor>      <date><year>2024</year> <month>3</month> <day>5</day></date>  <title><link href="cs-0005.xml" type="local" addr="cs-0005" title="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</link> › The Limits of Simple Types</title> <parent>cs-0005</parent> </frontmatter> <mainmatter><p>
+        Are there expressions that cannot be typed in the simple type system?
+        Yes, for example, <tex>\Omega = \lambda  x.x \space  x</tex> cannot be typed.
+        But how do we prove that  <tex>\Omega</tex> cannot be typed?
+    </p><p>
+        We can apply the typing rules and get a contradiction.
+        <tex>\Omega</tex> is a lambda abstraction hence we can assume that it has type <tex>\tau \to \sigma</tex>.
+        Then <tex>x</tex> has type <tex>\tau</tex> and <tex>x \space  x</tex> has type <tex>\sigma</tex>.
+        By the application of <tex>x \space  x</tex> we get that <tex>\tau = \tau \to \sigma</tex>, 
+        which does not exist.
+    </p><p>
+        To recover from this in full generality we need <strong>recursive types</strong>.
+        <tex display="block">              \tau  =F \tau          </tex>
+        where <tex>F= \lambda \alpha . \alpha \to \sigma</tex> and we might have a solution with 
+        <tex>\tau =Y \space  F</tex>. But such solution is not available to us. We do not have 
+        function from types to types <tex>F</tex> and a type level Y combinator.
+        However it is ok to construct recursive types (we would do later).
+    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7764</anchor>      <date><year>2024</year> <month>3</month> <day>5</day></date>  <title><link href="cs-0005.xml" type="local" addr="cs-0005" title="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</link> › Characterizing the Booleans</title> <parent>cs-0005</parent> </frontmatter> <mainmatter><p>
+        We now show that the representation of the booleans is correct.
+    </p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7765</anchor>      <date><year>2024</year> <month>3</month> <day>5</day></date>  <title>Representation of Booleans</title>  </frontmatter> <mainmatter><p>
+            If <tex>\emptyset \vdash  e: \alpha \to ( \alpha \to \alpha )</tex> and <tex>e</tex> is a normal form, 
+            then <tex>e =  \text {true}</tex> or <tex>e =  \text {false}</tex>.
+        </p></mainmatter> </tree><p>We will later combine this with the following theorems which yields 
+    correctness of the representation of the booleans.</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7766</anchor>  <taxon>Definition</taxon> <addr>def-003O</addr>  <route>def-003O.xml</route>   <title>Weak Normalization</title>  </frontmatter> <mainmatter><p>
+    If <tex>\Gamma \vdash  e: \tau</tex> then <tex>e \to _{ \beta }^*e'</tex> for a <strong>normal form</strong> <tex>e'</tex>.
+    And we can define <strong>subject reduction</strong>, if <tex>\Gamma \vdash  e: \tau</tex> and <tex>e \to _{ \beta }e'</tex> then <tex>\Gamma \vdash  e': \tau</tex>.
+</p></mainmatter> </tree></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7767</anchor>      <date><year>2024</year> <month>3</month> <day>5</day></date>  <title><link href="cs-0005.xml" type="local" addr="cs-0005" title="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</link> › Reduction revised</title> <parent>cs-0005</parent> </frontmatter> <mainmatter><p>
+        Our characterization of normal forms is quite simple: terms that do not reduce.
+        However, this is a <strong>negative</strong> condition, which is difficult to work with in proofs.
+        We would like to have a <strong>positive</strong> condition, which is easier to work with.
+    </p><p>
+        We tend to give definitions in the form of inference rules.
+        The property then holds if the judgment can be derived using the rules.
+        (This closely related to the <strong>inductive deefintion</strong>).
+        Before defining the normal forms we formally define <strong>beta reduction</strong>.
+        The judgment here <tex>e \to  e'</tex> expressing that <tex>e</tex> reduces to <tex>e'</tex>.
+        <tex display="block">              \begin {align*}                  \frac {}{( \lambda  x.e_1)e_2 \to  e_1[x:=e_2]} ( \text {red/beta})  \\                   \frac {e \to  e'}{ \lambda  x.e  \to   \lambda  x.e'} ( \text {red/lam})  \\                   \frac {e_1 \to  e_1'}{e_1 \space  e_2 \to  e_1' \space  e_2} ( \text {red/app}_1)  \\                   \frac {e_2 \to  e_2'}{e_1 \space  e_2 \to  e_1 \space  e_2'} ( \text {red/app}_2)                              \end {align*}         </tex></p><p>
+        A <strong>normal form</strong> is an expression that does not reduce.
+        To give a proper formalization,, we need a separate judgment for <strong>neutral terms</strong>
+        which do not create a redex when applied to an argument.
+        <tex display="block">                                        \begin {align*}                  \frac {e \text { normal} }{ \lambda  x.e \text { normal} } ( \text {normal/lam})  \\                   \frac {e \text { neutral} }{e \text { normal} } ( \text {normal/var})  \\                   \frac {}{x \text { neutral} } ( \text {neutral/var})  \\                   \frac {e_1 \text { neutral} \quad  e_2 \text { normal} }{e_1 \space  e_2 \text { neutral} } ( \text {neutral/app})  \\               \end {align*}         </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7768</anchor>      <date><year>2024</year> <month>3</month> <day>5</day></date>  <title><link href="cs-0005.xml" type="local" addr="cs-0005" title="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</link> › Normal Forms and Reduction</title> <parent>cs-0005</parent> </frontmatter> <mainmatter><p>
+        The characterization of normal forms via inference rules is compact,
+        but is it really the same as saying that an expression does not reduce?
+        We break this down into the following two properties.
+        <ul><li>
+                For all expressions <tex>e</tex>, either <tex>e</tex> reduces or <tex>e</tex> is normal
+            </li>
+            <li>
+                For all expressions <tex>e</tex>, it is not that case <tex>e</tex> reduces and <tex>e</tex> is normal
+            </li></ul></p><p>
+        We have theorem that ensures that the first property holds. (Proof is omitted).
+    </p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7769</anchor>  <taxon>Theorem</taxon> <addr>thm-0010</addr>  <route>thm-0010.xml</route>   <title>Reduction and normal forms</title>  </frontmatter> <mainmatter><p>
+    For every expression <tex>e</tex>, either <tex>e \to  e'</tex> for some expression <tex>e'</tex> or <tex>e</tex> is a normal form.
+</p></mainmatter> </tree></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>

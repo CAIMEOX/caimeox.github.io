@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>6307</anchor>  <taxon>Definition</taxon> <addr>def-002M</addr>  <route>def-002M.xml</route>   <title>Preimage</title>  </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>6700</anchor>  <taxon>Definition</taxon> <addr>def-002M</addr>  <route>def-002M.xml</route>   <title>Preimage</title>  </frontmatter> <mainmatter><p>
     Let <tex>f:X \to  Y</tex> be a function and <tex>y \in  Y</tex>.
     The <strong>preimage</strong> of <tex>y</tex> under <tex>f</tex>, denoted by <tex>f^{-1}(y)</tex>, is the subset
     of <tex>X</tex> defined by

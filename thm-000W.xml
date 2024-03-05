@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4780</anchor>  <taxon>Lemma</taxon> <addr>thm-000W</addr>  <route>thm-000W.xml</route>   <title>Lemma of subterms</title>  </frontmatter> <mainmatter><p><ul><li><strong>Reflexivity</strong>: <tex>\forall  M \in \Lambda ,M \in \text {Sub} (M)</tex></li>
-        <li><strong>Transitivity</strong>: <tex>\forall  L,M,N \in \Lambda ,L \in \text {Sub} (M) \land  M \in \text {Sub} (N) \implies  L \in \text {Sub} (N)</tex></li></ul></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4781</anchor>  <taxon>Type Theory</taxon> <addr>tt-0001</addr>  <route>tt-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Untyped Lambda Calculus</title>  </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5140</anchor>  <taxon>Lemma</taxon> <addr>thm-000W</addr>  <route>thm-000W.xml</route>   <title>Lemma of subterms</title>  </frontmatter> <mainmatter><p><ul><li><strong>Reflexivity</strong>: <tex>\forall  M \in \Lambda ,M \in \text {Sub} (M)</tex></li>
+        <li><strong>Transitivity</strong>: <tex>\forall  L,M,N \in \Lambda ,L \in \text {Sub} (M) \land  M \in \text {Sub} (N) \implies  L \in \text {Sub} (N)</tex></li></ul></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5141</anchor>  <taxon>Type Theory</taxon> <addr>tt-0001</addr>  <route>tt-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Untyped Lambda Calculus</title>  </frontmatter> <mainmatter><p>
     Refer to <link href="ttafp-2014.xml" type="local" addr="ttafp-2014" title="Type Theory and Formal Proofs">Type Theory and Formal Proof</link>.
 </p><p>
     The idea to generalize the behavior of functions in mathematics and logic led to the development of the lambda calculus.
@@ -23,7 +23,7 @@
 </p>
     <strong>Lambda Terms</strong>
     <p>Expressions in the lambda calculus is called <strong>terms</strong>. The set of terms is denoted <tex>\Lambda</tex>.</p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4782</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title>  </frontmatter> <mainmatter><p>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5142</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title>  </frontmatter> <mainmatter><p>
 Let <tex>\Lambda</tex> be the set of lambda terms. Then <tex>\Lambda</tex> is defined inductively as follows:
 (<tex>V</tex> is the set of variables)
 <ul><li>Variable: <tex>\forall  x \in  V, x \in   \Lambda</tex></li>
@@ -35,7 +35,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     With the following recursive definition we can determine 
     what the <strong>subterms</strong> of a give <tex>\lambda \text {-term}</tex> are. Here we use 
     a concept named <link href="def-0035.xml" type="local" addr="def-0035" title="Multiset">multiset</link>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4783</anchor>  <taxon>Definition</taxon> <addr>def-0036</addr>  <route>def-0036.xml</route>   <title>Multiset of Subterms</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5143</anchor>  <taxon>Definition</taxon> <addr>def-0036</addr>  <route>def-0036.xml</route>   <title>Multiset of Subterms</title>  </frontmatter> <mainmatter><p>
     We define a map <tex>\text {Sub}</tex>:
     <ul><li><strong>Basis</strong>: <tex>\forall  x \in  V, \text {Sub} (x) = \{   x   \}</tex></li>
         <li><strong>Application</strong>: <tex>\forall  M,N \in \Lambda , \text {Sub} (MN) =  \text {Sub} (M) \cup \text {Sub} (N) \cup \{   MN   \}</tex></li>
@@ -44,35 +44,35 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     If <tex>L \not \equiv  M</tex> then we say <tex>L</tex> is a <strong>proper subterm</strong> of <tex>M</tex>.
 </p></mainmatter> </tree><p>
     The definition above uses a notation <tex>\equiv</tex> which means <em>syntactic equality</em> here.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4784</anchor>  <taxon>Example</taxon> <addr>eg-0006</addr>  <route>eg-0006.xml</route>   <title>Subterms</title>  </frontmatter> <mainmatter><ul><li><tex>\text {Sub} ( ( x \space z ) )</tex> = <tex>\{   x,z, ( x \space z )   \}</tex></li>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5144</anchor>  <taxon>Example</taxon> <addr>eg-0006</addr>  <route>eg-0006.xml</route>   <title>Subterms</title>  </frontmatter> <mainmatter><ul><li><tex>\text {Sub} ( ( x \space z ) )</tex> = <tex>\{   x,z, ( x \space z )   \}</tex></li>
     <li><tex>              \text {Sub} ( \lambda  x. ( x \space x ) )              =  \{   \lambda  x. ( x \space x ) , ( x \space x ) ,x,x   \}          </tex></li></ul></mainmatter> </tree><p>
     The substerm mapping satisfies the following lemma.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4785</anchor>  <taxon>Lemma</taxon> <addr>thm-000W</addr>  <route>thm-000W.xml</route>   <title>Lemma of subterms</title>  </frontmatter> <mainmatter><p><ul><li><strong>Reflexivity</strong>: <tex>\forall  M \in \Lambda ,M \in \text {Sub} (M)</tex></li>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5145</anchor>  <taxon>Lemma</taxon> <addr>thm-000W</addr>  <route>thm-000W.xml</route>   <title>Lemma of subterms</title>  </frontmatter> <mainmatter><p><ul><li><strong>Reflexivity</strong>: <tex>\forall  M \in \Lambda ,M \in \text {Sub} (M)</tex></li>
         <li><strong>Transitivity</strong>: <tex>\forall  L,M,N \in \Lambda ,L \in \text {Sub} (M) \land  M \in \text {Sub} (N) \implies  L \in \text {Sub} (N)</tex></li></ul></p></mainmatter> </tree><p>
     Variable occurrences in a <tex>\lambda \text {-term}</tex> can be divided into 3 categories:
     <ul><li>Bound Occurrences: <tex>x</tex> is bound in <tex>M</tex> if <tex>x</tex> is the argument of an <strong>abstraction</strong> in <tex>M</tex>.</li>
         <li>Free Occurrences: <tex>x</tex> is free in <tex>M</tex> if <tex>x</tex> is not bound by any <strong>abstraction</strong> in <tex>M</tex>.</li>
         <li>Binding Occurrences: something after a lambda notation <tex>\lambda</tex></li></ul>
     We mainly focus on the <strong>free variables</strong> of a term.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4786</anchor>  <taxon>Definition</taxon> <addr>def-0037</addr>  <route>def-0037.xml</route>   <title>Set of Free Variables</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5146</anchor>  <taxon>Definition</taxon> <addr>def-0037</addr>  <route>def-0037.xml</route>   <title>Set of Free Variables</title>  </frontmatter> <mainmatter><p>
     Let <tex>FV(L)</tex> be the set of free variables in a term <tex>L</tex>.
     <ul><li><strong>Variable</strong>: <tex>\forall  x \in  V, \text {FV} (x) =  \{   x   \}</tex></li>
         <li><strong>Application</strong>: <tex>\forall  M,N \in \Lambda , \text {FV} (MN) =  \text {FV} (M) \cup \text {FV} (N)</tex></li>
-        <li><strong>Abstraction</strong>: <tex>\forall  x \in  V,M \in \Lambda , \text {FV} ( \lambda  x.M) =  \text {FV} (M) \setminus \{   x   \}</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4787</anchor>  <taxon>Definition</taxon> <addr>def-0038</addr>  <route>def-0038.xml</route>   <title>Closed Lambda Terms</title>  </frontmatter> <mainmatter><p>
+        <li><strong>Abstraction</strong>: <tex>\forall  x \in  V,M \in \Lambda , \text {FV} ( \lambda  x.M) =  \text {FV} (M) \setminus \{   x   \}</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5147</anchor>  <taxon>Definition</taxon> <addr>def-0038</addr>  <route>def-0038.xml</route>   <title>Closed Lambda Terms</title>  </frontmatter> <mainmatter><p>
     The <tex>\lambda \text {-term}</tex> <tex>M</tex> is <strong>closed</strong> if <tex>\text {FV} (M) =  \emptyset</tex>.
     A closed <tex>\lambda \text {-term}</tex> is also called a <strong>combinator</strong>.
     The set of all combinators is denoted by <tex>\Lambda ^0</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4788</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Alpha conversion</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>Functions in <tex>\lambda \text {-calculus}</tex> have the property that the name of 
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5148</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Alpha conversion</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>Functions in <tex>\lambda \text {-calculus}</tex> have the property that the name of 
     the binding variables is irrelevant.
     In order to describe this equality we need to define a relation
     called <tex>\alpha \text {-conversion}</tex> or <tex>\alpha \text {-equivalence}</tex>,
-    which is based on the process of renaming binding variables.</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4789</anchor>  <taxon>Definition</taxon> <addr>def-0039</addr>  <route>def-0039.xml</route>   <title>Renaming</title>  </frontmatter> <mainmatter><p>
+    which is based on the process of renaming binding variables.</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5149</anchor>  <taxon>Definition</taxon> <addr>def-0039</addr>  <route>def-0039.xml</route>   <title>Renaming</title>  </frontmatter> <mainmatter><p>
     Let <tex>M ^{ x \to y }</tex> be the result of replacing all free occurrences of <tex>x</tex> in <tex>M</tex> with <tex>y</tex>.
     The relation <strong>renaming</strong> is expression with the symbol <tex>=_ \alpha</tex>:
     <tex>\lambda  x.M =_ \alpha \lambda  y. M ^{ x \to y }</tex> if <tex>y \not \in \text {FV} (M)</tex> and <tex>y</tex> is not a binding variable in <tex>M</tex>.
 </p></mainmatter> </tree><p>
     The definition of <strong>renaming</strong> should be extended to more general terms.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4790</anchor>  <taxon>Definition</taxon> <addr>def-003A</addr>  <route>def-003A.xml</route>   <title>Alpha Equivalence</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5150</anchor>  <taxon>Definition</taxon> <addr>def-003A</addr>  <route>def-003A.xml</route>   <title>Alpha Equivalence</title>  </frontmatter> <mainmatter><p>
     The <tex>\alpha</tex> equivalence is a relation between <tex>\lambda \text {-term}</tex>, defined as follows:
     <ul><li><strong>Renaming</strong>: <tex>\lambda  x. M  =_ \alpha   \lambda  y.  M ^{ x \to y }</tex> if <tex>y \not \in \text {FV} (M)</tex> and <tex>y</tex> is not a binding variable in <tex>M</tex>.
         </li>
@@ -94,7 +94,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
 </p></mainmatter> </tree><p>
     In previous sections we informally mentioned the concept of <strong>substitution</strong>.
     Now we give a precise formulation
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4791</anchor>  <taxon>Definition</taxon> <addr>def-003B</addr>  <route>def-003B.xml</route>   <title>Substitution</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5151</anchor>  <taxon>Definition</taxon> <addr>def-003B</addr>  <route>def-003B.xml</route>   <title>Substitution</title>  </frontmatter> <mainmatter><p>
     The <strong>substitution</strong> is defined by the following rules:
     <ul><li><tex>M [ x := N ] : \equiv  N</tex></li>
         <li><tex>y [ x := N ] : \equiv  y</tex> if <tex>y \not \equiv  x</tex></li>
@@ -111,26 +111,26 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     We may do <strong>sequential substitution</strong> in a term,
     that is, doing a number of substitutions consecutively.
     And we have the following lemma, which states that the order of substitution is important.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4792</anchor>  <taxon>Lemma</taxon> <addr>thm-000X</addr>  <route>thm-000X.xml</route>   <title>Substitution is not commutative</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5152</anchor>  <taxon>Lemma</taxon> <addr>thm-000X</addr>  <route>thm-000X.xml</route>   <title>Substitution is not commutative</title>  </frontmatter> <mainmatter><p>
     Let <tex>x \not \equiv  y</tex> and assume <tex>x \not \in \text {FV} (L)</tex>.
     Then <tex>L[y:=N][x:=M]  \equiv  L[x:=M][y:=N[x:=M]]</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4793</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › <tex>\lambda \text {-term}</tex> modulo <tex>\alpha \text {-equivalence}</tex></title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>As we have seen, the relation <tex>=_ \alpha</tex> is an equivalence relation.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5153</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › <tex>\lambda \text {-term}</tex> modulo <tex>\alpha \text {-equivalence}</tex></title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>As we have seen, the relation <tex>=_ \alpha</tex> is an equivalence relation.
     Hence we can define the set of equivalence classes of terms with respect to <tex>=_ \alpha</tex>.
     Now we can identify a term with its equivalence class.
     We still use <tex>\equiv</tex> for syntactic equality modulo <tex>\alpha \text {-equivalence}</tex>.
     </p></mainmatter> </tree><p><tex>\alpha \text {-equivalence}</tex> is a congruence relation, which means that it is conserved by elementary process of term construction.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4794</anchor>  <taxon>Lemma</taxon> <addr>thm-000Y</addr>  <route>thm-000Y.xml</route>   <title>Congruence Property of Substitution</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5154</anchor>  <taxon>Lemma</taxon> <addr>thm-000Y</addr>  <route>thm-000Y.xml</route>   <title>Congruence Property of Substitution</title>  </frontmatter> <mainmatter><p>
     Let <tex>L =_ \alpha  M</tex> and <tex>N =_ \alpha  P</tex>.
     <ul><li><tex>                 LN  =_ \alpha  MP             </tex></li>
         <li><tex>                  \lambda  x.L  =_ \alpha   \lambda  x.M             </tex></li>
-        <li><tex>                  L [ x := N ]   =_ \alpha   M [ x := P ]              </tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4795</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Barendregt Convention</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>The Barendregt Convention states that we should avoid using the same variable name in different abstractions.
+        <li><tex>                  L [ x := N ]   =_ \alpha   M [ x := P ]              </tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5155</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Barendregt Convention</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>The Barendregt Convention states that we should avoid using the same variable name in different abstractions.
     This is to avoid the confusion of free variables. It states that 
     we choose the names for the binding variables in a <tex>\lambda \text {-term}</tex> in such a manner
     that they are all different, and each of them differs from 
-    all free variables occurring in the term.</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4796</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Beta Reduction</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>
+    all free variables occurring in the term.</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5156</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Beta Reduction</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>
         Since we have formally defined the <strong>substitution</strong>,
         we can rephrase the reduction as a relation on <tex>\lambda \text {-term}</tex>, namely <tex>\beta \text {-reduction}</tex>.
-    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4797</anchor>  <taxon>Definition</taxon> <addr>def-003C</addr>  <route>def-003C.xml</route>   <title>One Step Beta Reduction</title>  </frontmatter> <mainmatter><p><strong>One step beta reduction</strong> (<tex>\to _ \beta</tex>) is defined as follows:
+    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5157</anchor>  <taxon>Definition</taxon> <addr>def-003C</addr>  <route>def-003C.xml</route>   <title>One Step Beta Reduction</title>  </frontmatter> <mainmatter><p><strong>One step beta reduction</strong> (<tex>\to _ \beta</tex>) is defined as follows:
     <ul><li><strong>Basis</strong>:
             <tex>                 ( \lambda  x.M)N \to _ \beta M [ x := N ]              </tex></li>
         <li><strong>Compatibility</strong>:
@@ -139,20 +139,20 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
         </li></ul></p><p>
     The term of the form <tex>( \lambda  x.M)N</tex> is called a <strong>redex (reducible expression)</strong>.
     The term of the form <tex>M [ x := N ]</tex> is called the <strong>contractum</strong> (of the redex).
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4798</anchor>  <taxon>Example</taxon> <addr>eg-0007</addr>  <route>eg-0007.xml</route>   <title>Divergent Combinator</title>  </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5158</anchor>  <taxon>Example</taxon> <addr>eg-0007</addr>  <route>eg-0007.xml</route>   <title>Divergent Combinator</title>  </frontmatter> <mainmatter><p>
     An interesting example named <strong>omega combinator</strong> of beta reduction is the following:
     <tex display="block">          ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) )           \to _ \beta           ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) )      </tex>
     The result of the beta reduction is the same term as the original term,
     and never terminates.
 </p></mainmatter> </tree><p>
     We can often perform a sequence of beta reductions. This leads to the definition.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4799</anchor>  <taxon>Definition</taxon> <addr>def-003D</addr>  <route>def-003D.xml</route>   <title>Beta Reduction</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5159</anchor>  <taxon>Definition</taxon> <addr>def-003D</addr>  <route>def-003D.xml</route>   <title>Beta Reduction</title>  </frontmatter> <mainmatter><p>
     The <strong>(zero-or-more-step) beta reduction</strong> (<tex>\twoheadrightarrow _{ \beta }</tex>) is a
     generalized version of the <link href="def-003C.xml" type="local" addr="def-003C" title="One Step Beta Reduction">one step beta reduction</link>.
     <tex>M \twoheadrightarrow _{ \beta }  N</tex> if there exists <tex>n \geq  0</tex> and there are terms <tex>M_0,M_1, \ldots ,M_n</tex>
     such that <tex>M_0=M</tex>, <tex>M_n=N</tex> and <tex>M_i \to _ \beta  M_{i+1}</tex> for <tex>0 \leq  i&lt;n</tex>.
     In other words there exists a chain of one-step beta reductions from <tex>M</tex> to <tex>N</tex>.
-    <tex display="block">         M \equiv  M_0 \to _ \beta  M_1 \to _ \beta \cdots \to _ \beta  M_n \equiv  N     </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4800</anchor>  <taxon>Lemma</taxon> <addr>thm-000Z</addr>  <route>thm-000Z.xml</route>   <title>Properties of Beta Reduction</title>  </frontmatter> <mainmatter><p><ul><li><strong>Compatibility</strong>:
+    <tex display="block">         M \equiv  M_0 \to _ \beta  M_1 \to _ \beta \cdots \to _ \beta  M_n \equiv  N     </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5160</anchor>  <taxon>Lemma</taxon> <addr>thm-000Z</addr>  <route>thm-000Z.xml</route>   <title>Properties of Beta Reduction</title>  </frontmatter> <mainmatter><p><ul><li><strong>Compatibility</strong>:
             <tex>\twoheadrightarrow _{ \beta }</tex> extends <tex>\to _ \beta</tex>, i.e. if <tex>M \to _ \beta  N</tex> then <tex>M \twoheadrightarrow _{ \beta }  N</tex>.
         </li>
         <li><strong>Reflixivity</strong>:

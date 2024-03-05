@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3567</anchor>  <taxon>Example</taxon> <addr>eg-0007</addr>  <route>eg-0007.xml</route>   <title>Divergent Combinator</title>  </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3912</anchor>  <taxon>Example</taxon> <addr>eg-0007</addr>  <route>eg-0007.xml</route>   <title>Divergent Combinator</title>  </frontmatter> <mainmatter><p>
     An interesting example named <strong>omega combinator</strong> of beta reduction is the following:
     <tex display="block">          ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) )           \to _ \beta           ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) )      </tex>
     The result of the beta reduction is the same term as the original term,
     and never terminates.
-</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3568</anchor>  <taxon>Type Theory</taxon> <addr>tt-0001</addr>  <route>tt-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Untyped Lambda Calculus</title>  </frontmatter> <mainmatter><p>
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3913</anchor>  <taxon>Type Theory</taxon> <addr>tt-0001</addr>  <route>tt-0001.xml</route> <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Untyped Lambda Calculus</title>  </frontmatter> <mainmatter><p>
     Refer to <link href="ttafp-2014.xml" type="local" addr="ttafp-2014" title="Type Theory and Formal Proofs">Type Theory and Formal Proof</link>.
 </p><p>
     The idea to generalize the behavior of functions in mathematics and logic led to the development of the lambda calculus.
@@ -27,7 +27,7 @@
 </p>
     <strong>Lambda Terms</strong>
     <p>Expressions in the lambda calculus is called <strong>terms</strong>. The set of terms is denoted <tex>\Lambda</tex>.</p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3569</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title>  </frontmatter> <mainmatter><p>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3914</anchor>  <taxon>Definition</taxon> <addr>def-000F</addr>  <route>def-000F.xml</route>   <title>Set of Lambda Terms</title>  </frontmatter> <mainmatter><p>
 Let <tex>\Lambda</tex> be the set of lambda terms. Then <tex>\Lambda</tex> is defined inductively as follows:
 (<tex>V</tex> is the set of variables)
 <ul><li>Variable: <tex>\forall  x \in  V, x \in   \Lambda</tex></li>
@@ -39,7 +39,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     With the following recursive definition we can determine 
     what the <strong>subterms</strong> of a give <tex>\lambda \text {-term}</tex> are. Here we use 
     a concept named <link href="def-0035.xml" type="local" addr="def-0035" title="Multiset">multiset</link>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3570</anchor>  <taxon>Definition</taxon> <addr>def-0036</addr>  <route>def-0036.xml</route>   <title>Multiset of Subterms</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3915</anchor>  <taxon>Definition</taxon> <addr>def-0036</addr>  <route>def-0036.xml</route>   <title>Multiset of Subterms</title>  </frontmatter> <mainmatter><p>
     We define a map <tex>\text {Sub}</tex>:
     <ul><li><strong>Basis</strong>: <tex>\forall  x \in  V, \text {Sub} (x) = \{   x   \}</tex></li>
         <li><strong>Application</strong>: <tex>\forall  M,N \in \Lambda , \text {Sub} (MN) =  \text {Sub} (M) \cup \text {Sub} (N) \cup \{   MN   \}</tex></li>
@@ -48,35 +48,35 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     If <tex>L \not \equiv  M</tex> then we say <tex>L</tex> is a <strong>proper subterm</strong> of <tex>M</tex>.
 </p></mainmatter> </tree><p>
     The definition above uses a notation <tex>\equiv</tex> which means <em>syntactic equality</em> here.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3571</anchor>  <taxon>Example</taxon> <addr>eg-0006</addr>  <route>eg-0006.xml</route>   <title>Subterms</title>  </frontmatter> <mainmatter><ul><li><tex>\text {Sub} ( ( x \space z ) )</tex> = <tex>\{   x,z, ( x \space z )   \}</tex></li>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3916</anchor>  <taxon>Example</taxon> <addr>eg-0006</addr>  <route>eg-0006.xml</route>   <title>Subterms</title>  </frontmatter> <mainmatter><ul><li><tex>\text {Sub} ( ( x \space z ) )</tex> = <tex>\{   x,z, ( x \space z )   \}</tex></li>
     <li><tex>              \text {Sub} ( \lambda  x. ( x \space x ) )              =  \{   \lambda  x. ( x \space x ) , ( x \space x ) ,x,x   \}          </tex></li></ul></mainmatter> </tree><p>
     The substerm mapping satisfies the following lemma.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3572</anchor>  <taxon>Lemma</taxon> <addr>thm-000W</addr>  <route>thm-000W.xml</route>   <title>Lemma of subterms</title>  </frontmatter> <mainmatter><p><ul><li><strong>Reflexivity</strong>: <tex>\forall  M \in \Lambda ,M \in \text {Sub} (M)</tex></li>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3917</anchor>  <taxon>Lemma</taxon> <addr>thm-000W</addr>  <route>thm-000W.xml</route>   <title>Lemma of subterms</title>  </frontmatter> <mainmatter><p><ul><li><strong>Reflexivity</strong>: <tex>\forall  M \in \Lambda ,M \in \text {Sub} (M)</tex></li>
         <li><strong>Transitivity</strong>: <tex>\forall  L,M,N \in \Lambda ,L \in \text {Sub} (M) \land  M \in \text {Sub} (N) \implies  L \in \text {Sub} (N)</tex></li></ul></p></mainmatter> </tree><p>
     Variable occurrences in a <tex>\lambda \text {-term}</tex> can be divided into 3 categories:
     <ul><li>Bound Occurrences: <tex>x</tex> is bound in <tex>M</tex> if <tex>x</tex> is the argument of an <strong>abstraction</strong> in <tex>M</tex>.</li>
         <li>Free Occurrences: <tex>x</tex> is free in <tex>M</tex> if <tex>x</tex> is not bound by any <strong>abstraction</strong> in <tex>M</tex>.</li>
         <li>Binding Occurrences: something after a lambda notation <tex>\lambda</tex></li></ul>
     We mainly focus on the <strong>free variables</strong> of a term.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3573</anchor>  <taxon>Definition</taxon> <addr>def-0037</addr>  <route>def-0037.xml</route>   <title>Set of Free Variables</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3918</anchor>  <taxon>Definition</taxon> <addr>def-0037</addr>  <route>def-0037.xml</route>   <title>Set of Free Variables</title>  </frontmatter> <mainmatter><p>
     Let <tex>FV(L)</tex> be the set of free variables in a term <tex>L</tex>.
     <ul><li><strong>Variable</strong>: <tex>\forall  x \in  V, \text {FV} (x) =  \{   x   \}</tex></li>
         <li><strong>Application</strong>: <tex>\forall  M,N \in \Lambda , \text {FV} (MN) =  \text {FV} (M) \cup \text {FV} (N)</tex></li>
-        <li><strong>Abstraction</strong>: <tex>\forall  x \in  V,M \in \Lambda , \text {FV} ( \lambda  x.M) =  \text {FV} (M) \setminus \{   x   \}</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3574</anchor>  <taxon>Definition</taxon> <addr>def-0038</addr>  <route>def-0038.xml</route>   <title>Closed Lambda Terms</title>  </frontmatter> <mainmatter><p>
+        <li><strong>Abstraction</strong>: <tex>\forall  x \in  V,M \in \Lambda , \text {FV} ( \lambda  x.M) =  \text {FV} (M) \setminus \{   x   \}</tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3919</anchor>  <taxon>Definition</taxon> <addr>def-0038</addr>  <route>def-0038.xml</route>   <title>Closed Lambda Terms</title>  </frontmatter> <mainmatter><p>
     The <tex>\lambda \text {-term}</tex> <tex>M</tex> is <strong>closed</strong> if <tex>\text {FV} (M) =  \emptyset</tex>.
     A closed <tex>\lambda \text {-term}</tex> is also called a <strong>combinator</strong>.
     The set of all combinators is denoted by <tex>\Lambda ^0</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3575</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Alpha conversion</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>Functions in <tex>\lambda \text {-calculus}</tex> have the property that the name of 
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3920</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Alpha conversion</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>Functions in <tex>\lambda \text {-calculus}</tex> have the property that the name of 
     the binding variables is irrelevant.
     In order to describe this equality we need to define a relation
     called <tex>\alpha \text {-conversion}</tex> or <tex>\alpha \text {-equivalence}</tex>,
-    which is based on the process of renaming binding variables.</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3576</anchor>  <taxon>Definition</taxon> <addr>def-0039</addr>  <route>def-0039.xml</route>   <title>Renaming</title>  </frontmatter> <mainmatter><p>
+    which is based on the process of renaming binding variables.</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3921</anchor>  <taxon>Definition</taxon> <addr>def-0039</addr>  <route>def-0039.xml</route>   <title>Renaming</title>  </frontmatter> <mainmatter><p>
     Let <tex>M ^{ x \to y }</tex> be the result of replacing all free occurrences of <tex>x</tex> in <tex>M</tex> with <tex>y</tex>.
     The relation <strong>renaming</strong> is expression with the symbol <tex>=_ \alpha</tex>:
     <tex>\lambda  x.M =_ \alpha \lambda  y. M ^{ x \to y }</tex> if <tex>y \not \in \text {FV} (M)</tex> and <tex>y</tex> is not a binding variable in <tex>M</tex>.
 </p></mainmatter> </tree><p>
     The definition of <strong>renaming</strong> should be extended to more general terms.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3577</anchor>  <taxon>Definition</taxon> <addr>def-003A</addr>  <route>def-003A.xml</route>   <title>Alpha Equivalence</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3922</anchor>  <taxon>Definition</taxon> <addr>def-003A</addr>  <route>def-003A.xml</route>   <title>Alpha Equivalence</title>  </frontmatter> <mainmatter><p>
     The <tex>\alpha</tex> equivalence is a relation between <tex>\lambda \text {-term}</tex>, defined as follows:
     <ul><li><strong>Renaming</strong>: <tex>\lambda  x. M  =_ \alpha   \lambda  y.  M ^{ x \to y }</tex> if <tex>y \not \in \text {FV} (M)</tex> and <tex>y</tex> is not a binding variable in <tex>M</tex>.
         </li>
@@ -98,7 +98,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
 </p></mainmatter> </tree><p>
     In previous sections we informally mentioned the concept of <strong>substitution</strong>.
     Now we give a precise formulation
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3578</anchor>  <taxon>Definition</taxon> <addr>def-003B</addr>  <route>def-003B.xml</route>   <title>Substitution</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3923</anchor>  <taxon>Definition</taxon> <addr>def-003B</addr>  <route>def-003B.xml</route>   <title>Substitution</title>  </frontmatter> <mainmatter><p>
     The <strong>substitution</strong> is defined by the following rules:
     <ul><li><tex>M [ x := N ] : \equiv  N</tex></li>
         <li><tex>y [ x := N ] : \equiv  y</tex> if <tex>y \not \equiv  x</tex></li>
@@ -115,26 +115,26 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     We may do <strong>sequential substitution</strong> in a term,
     that is, doing a number of substitutions consecutively.
     And we have the following lemma, which states that the order of substitution is important.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3579</anchor>  <taxon>Lemma</taxon> <addr>thm-000X</addr>  <route>thm-000X.xml</route>   <title>Substitution is not commutative</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3924</anchor>  <taxon>Lemma</taxon> <addr>thm-000X</addr>  <route>thm-000X.xml</route>   <title>Substitution is not commutative</title>  </frontmatter> <mainmatter><p>
     Let <tex>x \not \equiv  y</tex> and assume <tex>x \not \in \text {FV} (L)</tex>.
     Then <tex>L[y:=N][x:=M]  \equiv  L[x:=M][y:=N[x:=M]]</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3580</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › <tex>\lambda \text {-term}</tex> modulo <tex>\alpha \text {-equivalence}</tex></title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>As we have seen, the relation <tex>=_ \alpha</tex> is an equivalence relation.
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3925</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › <tex>\lambda \text {-term}</tex> modulo <tex>\alpha \text {-equivalence}</tex></title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>As we have seen, the relation <tex>=_ \alpha</tex> is an equivalence relation.
     Hence we can define the set of equivalence classes of terms with respect to <tex>=_ \alpha</tex>.
     Now we can identify a term with its equivalence class.
     We still use <tex>\equiv</tex> for syntactic equality modulo <tex>\alpha \text {-equivalence}</tex>.
     </p></mainmatter> </tree><p><tex>\alpha \text {-equivalence}</tex> is a congruence relation, which means that it is conserved by elementary process of term construction.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3581</anchor>  <taxon>Lemma</taxon> <addr>thm-000Y</addr>  <route>thm-000Y.xml</route>   <title>Congruence Property of Substitution</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3926</anchor>  <taxon>Lemma</taxon> <addr>thm-000Y</addr>  <route>thm-000Y.xml</route>   <title>Congruence Property of Substitution</title>  </frontmatter> <mainmatter><p>
     Let <tex>L =_ \alpha  M</tex> and <tex>N =_ \alpha  P</tex>.
     <ul><li><tex>                 LN  =_ \alpha  MP             </tex></li>
         <li><tex>                  \lambda  x.L  =_ \alpha   \lambda  x.M             </tex></li>
-        <li><tex>                  L [ x := N ]   =_ \alpha   M [ x := P ]              </tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3582</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Barendregt Convention</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>The Barendregt Convention states that we should avoid using the same variable name in different abstractions.
+        <li><tex>                  L [ x := N ]   =_ \alpha   M [ x := P ]              </tex></li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3927</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Barendregt Convention</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>The Barendregt Convention states that we should avoid using the same variable name in different abstractions.
     This is to avoid the confusion of free variables. It states that 
     we choose the names for the binding variables in a <tex>\lambda \text {-term}</tex> in such a manner
     that they are all different, and each of them differs from 
-    all free variables occurring in the term.</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3583</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Beta Reduction</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>
+    all free variables occurring in the term.</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3928</anchor>      <date><year>2024</year> <month>1</month> <day>26</day></date>  <title><link href="tt-0001.xml" type="local" addr="tt-0001" title="Untyped Lambda Calculus">Untyped Lambda Calculus</link> › Beta Reduction</title> <parent>tt-0001</parent> </frontmatter> <mainmatter><p>
         Since we have formally defined the <strong>substitution</strong>,
         we can rephrase the reduction as a relation on <tex>\lambda \text {-term}</tex>, namely <tex>\beta \text {-reduction}</tex>.
-    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3584</anchor>  <taxon>Definition</taxon> <addr>def-003C</addr>  <route>def-003C.xml</route>   <title>One Step Beta Reduction</title>  </frontmatter> <mainmatter><p><strong>One step beta reduction</strong> (<tex>\to _ \beta</tex>) is defined as follows:
+    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3929</anchor>  <taxon>Definition</taxon> <addr>def-003C</addr>  <route>def-003C.xml</route>   <title>One Step Beta Reduction</title>  </frontmatter> <mainmatter><p><strong>One step beta reduction</strong> (<tex>\to _ \beta</tex>) is defined as follows:
     <ul><li><strong>Basis</strong>:
             <tex>                 ( \lambda  x.M)N \to _ \beta M [ x := N ]              </tex></li>
         <li><strong>Compatibility</strong>:
@@ -143,33 +143,31 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
         </li></ul></p><p>
     The term of the form <tex>( \lambda  x.M)N</tex> is called a <strong>redex (reducible expression)</strong>.
     The term of the form <tex>M [ x := N ]</tex> is called the <strong>contractum</strong> (of the redex).
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3585</anchor>  <taxon>Example</taxon> <addr>eg-0007</addr>  <route>eg-0007.xml</route>   <title>Divergent Combinator</title>  </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3930</anchor>  <taxon>Example</taxon> <addr>eg-0007</addr>  <route>eg-0007.xml</route>   <title>Divergent Combinator</title>  </frontmatter> <mainmatter><p>
     An interesting example named <strong>omega combinator</strong> of beta reduction is the following:
     <tex display="block">          ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) )           \to _ \beta           ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) )      </tex>
     The result of the beta reduction is the same term as the original term,
     and never terminates.
 </p></mainmatter> </tree><p>
     We can often perform a sequence of beta reductions. This leads to the definition.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3586</anchor>  <taxon>Definition</taxon> <addr>def-003D</addr>  <route>def-003D.xml</route>   <title>Beta Reduction</title>  </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3931</anchor>  <taxon>Definition</taxon> <addr>def-003D</addr>  <route>def-003D.xml</route>   <title>Beta Reduction</title>  </frontmatter> <mainmatter><p>
     The <strong>(zero-or-more-step) beta reduction</strong> (<tex>\twoheadrightarrow _{ \beta }</tex>) is a
     generalized version of the <link href="def-003C.xml" type="local" addr="def-003C" title="One Step Beta Reduction">one step beta reduction</link>.
     <tex>M \twoheadrightarrow _{ \beta }  N</tex> if there exists <tex>n \geq  0</tex> and there are terms <tex>M_0,M_1, \ldots ,M_n</tex>
     such that <tex>M_0=M</tex>, <tex>M_n=N</tex> and <tex>M_i \to _ \beta  M_{i+1}</tex> for <tex>0 \leq  i&lt;n</tex>.
     In other words there exists a chain of one-step beta reductions from <tex>M</tex> to <tex>N</tex>.
-    <tex display="block">         M \equiv  M_0 \to _ \beta  M_1 \to _ \beta \cdots \to _ \beta  M_n \equiv  N     </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3587</anchor>  <taxon>Lemma</taxon> <addr>thm-000Z</addr>  <route>thm-000Z.xml</route>   <title>Properties of Beta Reduction</title>  </frontmatter> <mainmatter><p><ul><li><strong>Compatibility</strong>:
+    <tex display="block">         M \equiv  M_0 \to _ \beta  M_1 \to _ \beta \cdots \to _ \beta  M_n \equiv  N     </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3932</anchor>  <taxon>Lemma</taxon> <addr>thm-000Z</addr>  <route>thm-000Z.xml</route>   <title>Properties of Beta Reduction</title>  </frontmatter> <mainmatter><p><ul><li><strong>Compatibility</strong>:
             <tex>\twoheadrightarrow _{ \beta }</tex> extends <tex>\to _ \beta</tex>, i.e. if <tex>M \to _ \beta  N</tex> then <tex>M \twoheadrightarrow _{ \beta }  N</tex>.
         </li>
         <li><strong>Reflixivity</strong>:
             <tex>                 M \twoheadrightarrow _{ \beta }  M             </tex></li>
         <li><strong>Transitivity</strong>:
-            <tex>                 M \twoheadrightarrow _{ \beta }  N  \land  N \twoheadrightarrow _{ \beta }  P  \implies  M \twoheadrightarrow _{ \beta }  P             </tex></li></ul></p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3588</anchor>  <taxon>Compute Science</taxon> <addr>cs-0002</addr>  <route>cs-0002.xml</route>   <title>Primitive Recursion in Lambda Calculus</title>  </frontmatter> <mainmatter><p> 
+            <tex>                 M \twoheadrightarrow _{ \beta }  N  \land  N \twoheadrightarrow _{ \beta }  P  \implies  M \twoheadrightarrow _{ \beta }  P             </tex></li></ul></p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>3933</anchor>  <taxon>Compute Science</taxon> <addr>cs-0002</addr>  <route>cs-0002.xml</route>   <title>Primitive Recursion in Lambda Calculus</title>  </frontmatter> <mainmatter><p> 
     We begin with the <strong>schema of iteration</strong> and then proceed 
     the more complex schema of primitive recursion and general recursion.
     Refer to <link href="tapl.xml" type="local" addr="tapl" title="Types and Programming Languages">TAPL</link>.
-</p> 
-  
-    
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3589</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Function Composition</strong><p/>
+</p>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3934</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Function Composition</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
     Giving two functions <tex>f, g</tex> we can compose then to get a new function <tex>f \circ  g = f(g(x))</tex>.
     Using <tex>\lambda</tex>-notation, we can define the composition of two functions as follows:
     <tex display="block">         f \circ  g =  \lambda  x.f(g(x))     </tex>
@@ -185,11 +183,8 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     It makes more sense to use the equation from right to left called <strong>eta-expansion</strong> 
     (And more discipline has to be imposed or expansion does not terminate).
 </mainmatter> </tree>
-  
- 
-  
-    
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3590</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Non-termination</strong><p/>
+
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3935</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Non-termination</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
     <p>
         The well-known <link href="eg-0007.xml" type="local" addr="eg-0007" title="Divergent Combinator"><strong>divergent combinator</strong></link> implies that 
         the lambda calculus is not strongly normalizing.
@@ -212,11 +207,8 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
         reduce the argument of a function before applying beta reduction.
     </p>
 </mainmatter> </tree>
-  
- 
-  
-    
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3591</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Church-Rosser Property</strong><p/>
+
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3936</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Church-Rosser Property</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
     The outcome of a computation <tex>e</tex> is its normal form.
     It is naturally to ask the question whether the normal form is unique.
     The key to this question is the <strong>Church-Rosser property</strong> or <strong>confluence</strong>:
@@ -224,11 +216,8 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     <tex display="block">         e_1 \to ^* e_3 \space \text {and} \space  e_2 \to ^* e_3     </tex>
     This implies the uniqueness of the normal form.
 </mainmatter> </tree>
-  
- 
-  
-    
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3592</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Representing Natural Numbers</strong><p/>
+
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3937</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Representing Natural Numbers</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
     <p>
         We can represent natural numbers in lambda calculus by using the 
         <strong>Church numerals</strong> or <strong>Church encoding</strong>.
@@ -255,7 +244,7 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
     
  
    
-   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3593</anchor>  <taxon>Proof</taxon>       <parent>cs-0002</parent> </frontmatter> <mainmatter>
+   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3938</anchor>  <taxon>Proof</taxon>       <parent>cs-0002</parent> </frontmatter> <mainmatter>
             <tex display="block">                  \begin {align*}                     S \space  n &amp;= ( \lambda  n. \lambda  f. \lambda  x.f(n \space  f \space  x)) \space  n  \\                      &amp; \to _ \beta   \lambda  f. \lambda  x.f(n \space  f \space  x)  \\                      &amp; \to _ \beta   \lambda  f. \lambda  x.f^n(x)  \\                      &amp; \to _ \beta  n+1                  \end {align*}             </tex>
         </mainmatter> </tree>
  
@@ -273,11 +262,8 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
         The exponentiation of two Church numerals <tex>m</tex> and <tex>n</tex> is defined as follows:
         <tex display="block">             m^n =  \lambda  m. \lambda  n. n \space  (m *)  \space  1         </tex></p>
 </mainmatter> </tree>
-  
- 
-  
-    
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3594</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>The Schema of Iteration</strong><p/>
+
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3939</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>The Schema of Iteration</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
     <p>
         As we saw before, a natural number <tex>n</tex> is represented by a function 
         that iterates its first argument <tex>n</tex> times on its second argument.
@@ -297,22 +283,19 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
         and we obtain
         <tex display="block">              \text {times} =  \lambda  n.n( \lambda  rk. k + (r \space  k))( \lambda  k.0)         </tex></p>
 </mainmatter> </tree>
-  
- 
-  
+
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3940</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>The Schema of Primitive Recursion</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
+    <p>
+        Everything appears simply until we think of a very simple function,
+        the <strong>predecessor function</strong> <tex>\text {pred}</tex> defined by
+        <tex display="block">              \begin {align*}                  \text {pred} \space  0 = 0  \\                   \text {pred} \space  (n+1) = n              \end {align*}         </tex>
+        What we would need is the <strong>schema of primitive recursion</strong>
+        <tex display="block">              \begin {align*}                 f \space  0 &amp;= c  \\                  f \space  (n+1) &amp;= g \space  n \space  (f \space  n)              \end {align*}         </tex>
+        With which we can define the predecessor function by 
+        <tex display="block">             g =  \lambda  x. \lambda  y.x         </tex></p>
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3595</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>The Schema of Primitive Recursion</strong><p/>
-    Everything appears simply until we think of a very simple function,
-    the <strong>predecessor function</strong> <tex>\text {pred}</tex> defined by
-    <tex display="block">          \begin {align*}              \text {pred} \space  0 = 0  \\               \text {pred} \space  (n+1) = n          \end {align*}     </tex>
-    What we would need is the <strong>schema of primitive recursion</strong>
-    <tex display="block">          \begin {align*}             f \space  0 &amp;= c  \\              f \space  (n+1) &amp;= g \space  n \space  (f \space  n)          \end {align*}     </tex>
-    With which we can define the predecessor function by 
-    <tex display="block">         g =  \lambda  x. \lambda  y.x     </tex>
-     
-  
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3596</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Define predecessor function</strong><p/>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3941</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Define predecessor function</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
         The key idea is to gain access to <tex>n</tex> in the schema of 
         primitive recursion by rebuilding it during the iteration.
         <tex display="block">              \text {pred}_2 \space  n =  \langle  n,  \text {pred} \space  n  \rangle          </tex>
@@ -324,42 +307,31 @@ Another way to define <tex>\Lambda</tex> is to use the following grammar (The 3 
         This function passes the elements of the pair to a <strong>continuation</strong> <tex>k</tex>.
         <tex display="block">              \text {pred}_2 (n+1) =  \text {letPair} \space  ( \text {pred}_2 \space  n) \space  ( \lambda  xy.  \langle  x+1, x  \rangle )          </tex>
     </mainmatter> </tree>
-  
 
-     
-  
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3597</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Define Pairs</strong><p/>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3942</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Define Pairs</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
         Now we need to define pairs and <tex>\text {letPair}</tex>.
         The idea is to simply abstract over the continuation itself.
         <tex display="block">              \begin {align*}                  \langle  x,y \rangle  &amp;=  \lambda  k.k \space  x \space  y  \\                   \text {pair} &amp;=  \lambda  x. \lambda  y. \lambda  k.k \space  x \space  y  \\                    \text {letPair} &amp;=  \lambda  p.p              \end {align*}         </tex>
         The letPair is not really needed here.
     </mainmatter> </tree>
-  
 
-     
-  
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3598</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Summary</strong><p/>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3943</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Summary</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
         Summarizing the above and we obtain the full definition of the predecessor function.
         <tex display="block">              \begin {align*}                  \text {pred}_2 &amp;=  \lambda  n.n \space  ( \lambda  p.p ( \lambda  xy. \text {pair}  \space  (x+1)  \space  x)) \space   \text {pair} ( \space  0  \space  0) \\                    \text {pred} &amp;=  \lambda  n. ( \text {pred}_2 \space  n)  \space  ( \lambda  xy.y)              \end {align*}            </tex>
     </mainmatter> </tree>
-  
 
-     
-  
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>3599</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>General Primitive Recursion</strong><p/>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>3944</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>General Primitive Recursion</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
         The general case of primitive recursion follows by a similar pattern.
         We begin by defining a function <tex>f_2</tex>:
         <tex display="block">             f_2 \space  n =  \langle  n, f \space  n  \rangle          </tex>
         We can define <tex>f_2</tex> using the schema of iteration
         <tex display="block">              \begin {align*}                 f_2 \space  0 &amp;=  \langle  0, c  \rangle   \\                  f_2 \space  (n+1) &amp;=  \text {letPair} \space  (f_2 \space  n) \space  ( \lambda  xy. \langle  x+1, g \space  x \space  y  \rangle )  \\                  f \space  n &amp;=  \text {letPair} \space  (f_2 \space  n) \space  ( \lambda  xy.y)              \end {align*}         </tex>
     </mainmatter> </tree>
-  
 
 </mainmatter> </tree>
-  
 <p>
     When computing over natural numbers we can restrict the functions that can be 
     formed in schematic ways to obtain a language in which all functions <strong>terminate</strong>.

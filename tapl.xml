@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8297</anchor>  <taxon>Reference</taxon> <addr>tapl</addr>  <route>tapl.xml</route>  <authors><author>Benjamin C. Pierce</author> </authors> <title>Types and Programming Languages</title>  <meta name="venue">Computer Science</meta></frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8926</anchor>  <taxon>Reference</taxon> <addr>tapl</addr>  <route>tapl.xml</route>  <authors><author>Benjamin C. Pierce</author> </authors> <title>Types and Programming Languages</title>  <meta name="venue">Computer Science</meta></frontmatter> <mainmatter><p>
     This text provides a comprehensive introduction both to type systems in computer science and to the basic theory of programming languages. 
-</p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8298</anchor>  <taxon>Computer Science</taxon> <addr>cs-0003</addr>  <route>cs-0003.xml</route> <date><year>2024</year> <month>3</month> <day>2</day></date>  <title>Recursion</title>  </frontmatter> <mainmatter><p>
+</p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8927</anchor>  <taxon>Computer Science</taxon> <addr>cs-0003</addr>  <route>cs-0003.xml</route> <date><year>2024</year> <month>3</month> <day>2</day></date>  <title>Recursion</title>  </frontmatter> <mainmatter><p>
     In this note we complete the development of <strong>recursion</strong>.
     Refer to <link href="tapl.xml" type="local" addr="tapl" title="Types and Programming Languages">TAPL</link></p>
   
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8299</anchor>      <date><year>2024</year> <month>3</month> <day>2</day></date>   <parent>cs-0003</parent> </frontmatter> <mainmatter><strong>General Recursion</strong>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8928</anchor>      <date><year>2024</year> <month>3</month> <day>2</day></date>   <parent>cs-0003</parent> </frontmatter> <mainmatter><strong>General Recursion</strong>
     <p>
         Let's first consider the <strong>greatest common divisor</strong> function <tex>\gcd (a,b)</tex></p>
     <tex display="block">          \begin {align*}              \gcd \space  a \space  a &amp;= a  \\               \gcd \space  a \space  b &amp;=  \gcd \space  (a-b) \space  b   \text { if } b &gt; a  \\               \gcd \space  a \space  b &amp;=  \gcd \space  a \space  (b-a)   \text { if } a &gt; b          \end {align*}     </tex>
@@ -38,7 +38,7 @@
 
   
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8300</anchor>      <date><year>2024</year> <month>3</month> <day>2</day></date>   <parent>cs-0003</parent> </frontmatter> <mainmatter><strong>Define Functions By Recursion</strong>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8929</anchor>      <date><year>2024</year> <month>3</month> <day>2</day></date>   <parent>cs-0003</parent> </frontmatter> <mainmatter><strong>Define Functions By Recursion</strong>
     <p>Consider the factorial function:</p>
     <tex display="block">          \text {fact} \space  n =  \text {if } (n=0) \space  1 \space  (n \space   \text {fact} \space  (n-1))     </tex>
     This requires a test <tex>\text {if0}</tex> satisfies:
@@ -51,14 +51,12 @@
     <tex display="block">          \text {fact} = Y \space  h_ \text {fact}     </tex>
 </mainmatter> </tree>
   
-</mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8301</anchor>  <taxon>Compute Science</taxon> <addr>cs-0002</addr>  <route>cs-0002.xml</route>   <title>Primitive Recursion in Lambda Calculus</title>  </frontmatter> <mainmatter><p> 
+</mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8930</anchor>  <taxon>Compute Science</taxon> <addr>cs-0002</addr>  <route>cs-0002.xml</route>   <title>Primitive Recursion in Lambda Calculus</title>  </frontmatter> <mainmatter><p> 
     We begin with the <strong>schema of iteration</strong> and then proceed 
     the more complex schema of primitive recursion and general recursion.
     Refer to <link href="tapl.xml" type="local" addr="tapl" title="Types and Programming Languages">TAPL</link>.
-</p> 
-  
-    
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8302</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Function Composition</strong><p/>
+</p>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8931</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Function Composition</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
     Giving two functions <tex>f, g</tex> we can compose then to get a new function <tex>f \circ  g = f(g(x))</tex>.
     Using <tex>\lambda</tex>-notation, we can define the composition of two functions as follows:
     <tex display="block">         f \circ  g =  \lambda  x.f(g(x))     </tex>
@@ -74,11 +72,8 @@
     It makes more sense to use the equation from right to left called <strong>eta-expansion</strong> 
     (And more discipline has to be imposed or expansion does not terminate).
 </mainmatter> </tree>
-  
- 
-  
-    
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8303</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Non-termination</strong><p/>
+
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8932</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Non-termination</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
     <p>
         The well-known <link href="eg-0007.xml" type="local" addr="eg-0007" title="Divergent Combinator"><strong>divergent combinator</strong></link> implies that 
         the lambda calculus is not strongly normalizing.
@@ -101,11 +96,8 @@
         reduce the argument of a function before applying beta reduction.
     </p>
 </mainmatter> </tree>
-  
- 
-  
-    
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8304</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Church-Rosser Property</strong><p/>
+
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8933</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Church-Rosser Property</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
     The outcome of a computation <tex>e</tex> is its normal form.
     It is naturally to ask the question whether the normal form is unique.
     The key to this question is the <strong>Church-Rosser property</strong> or <strong>confluence</strong>:
@@ -113,11 +105,8 @@
     <tex display="block">         e_1 \to ^* e_3 \space \text {and} \space  e_2 \to ^* e_3     </tex>
     This implies the uniqueness of the normal form.
 </mainmatter> </tree>
-  
- 
-  
-    
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8305</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Representing Natural Numbers</strong><p/>
+
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8934</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Representing Natural Numbers</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
     <p>
         We can represent natural numbers in lambda calculus by using the 
         <strong>Church numerals</strong> or <strong>Church encoding</strong>.
@@ -144,7 +133,7 @@
     
  
    
-   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8306</anchor>  <taxon>Proof</taxon>       <parent>cs-0002</parent> </frontmatter> <mainmatter>
+   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8935</anchor>  <taxon>Proof</taxon>       <parent>cs-0002</parent> </frontmatter> <mainmatter>
             <tex display="block">                  \begin {align*}                     S \space  n &amp;= ( \lambda  n. \lambda  f. \lambda  x.f(n \space  f \space  x)) \space  n  \\                      &amp; \to _ \beta   \lambda  f. \lambda  x.f(n \space  f \space  x)  \\                      &amp; \to _ \beta   \lambda  f. \lambda  x.f^n(x)  \\                      &amp; \to _ \beta  n+1                  \end {align*}             </tex>
         </mainmatter> </tree>
  
@@ -162,11 +151,8 @@
         The exponentiation of two Church numerals <tex>m</tex> and <tex>n</tex> is defined as follows:
         <tex display="block">             m^n =  \lambda  m. \lambda  n. n \space  (m *)  \space  1         </tex></p>
 </mainmatter> </tree>
-  
- 
-  
-    
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8307</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>The Schema of Iteration</strong><p/>
+
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8936</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>The Schema of Iteration</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
     <p>
         As we saw before, a natural number <tex>n</tex> is represented by a function 
         that iterates its first argument <tex>n</tex> times on its second argument.
@@ -186,22 +172,19 @@
         and we obtain
         <tex display="block">              \text {times} =  \lambda  n.n( \lambda  rk. k + (r \space  k))( \lambda  k.0)         </tex></p>
 </mainmatter> </tree>
-  
- 
-  
+
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8937</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>The Schema of Primitive Recursion</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
+    <p>
+        Everything appears simply until we think of a very simple function,
+        the <strong>predecessor function</strong> <tex>\text {pred}</tex> defined by
+        <tex display="block">              \begin {align*}                  \text {pred} \space  0 = 0  \\                   \text {pred} \space  (n+1) = n              \end {align*}         </tex>
+        What we would need is the <strong>schema of primitive recursion</strong>
+        <tex display="block">              \begin {align*}                 f \space  0 &amp;= c  \\                  f \space  (n+1) &amp;= g \space  n \space  (f \space  n)              \end {align*}         </tex>
+        With which we can define the predecessor function by 
+        <tex display="block">             g =  \lambda  x. \lambda  y.x         </tex></p>
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8308</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>The Schema of Primitive Recursion</strong><p/>
-    Everything appears simply until we think of a very simple function,
-    the <strong>predecessor function</strong> <tex>\text {pred}</tex> defined by
-    <tex display="block">          \begin {align*}              \text {pred} \space  0 = 0  \\               \text {pred} \space  (n+1) = n          \end {align*}     </tex>
-    What we would need is the <strong>schema of primitive recursion</strong>
-    <tex display="block">          \begin {align*}             f \space  0 &amp;= c  \\              f \space  (n+1) &amp;= g \space  n \space  (f \space  n)          \end {align*}     </tex>
-    With which we can define the predecessor function by 
-    <tex display="block">         g =  \lambda  x. \lambda  y.x     </tex>
-     
-  
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8309</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Define predecessor function</strong><p/>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8938</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Define predecessor function</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
         The key idea is to gain access to <tex>n</tex> in the schema of 
         primitive recursion by rebuilding it during the iteration.
         <tex display="block">              \text {pred}_2 \space  n =  \langle  n,  \text {pred} \space  n  \rangle          </tex>
@@ -213,42 +196,31 @@
         This function passes the elements of the pair to a <strong>continuation</strong> <tex>k</tex>.
         <tex display="block">              \text {pred}_2 (n+1) =  \text {letPair} \space  ( \text {pred}_2 \space  n) \space  ( \lambda  xy.  \langle  x+1, x  \rangle )          </tex>
     </mainmatter> </tree>
-  
 
-     
-  
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8310</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Define Pairs</strong><p/>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8939</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Define Pairs</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
         Now we need to define pairs and <tex>\text {letPair}</tex>.
         The idea is to simply abstract over the continuation itself.
         <tex display="block">              \begin {align*}                  \langle  x,y \rangle  &amp;=  \lambda  k.k \space  x \space  y  \\                   \text {pair} &amp;=  \lambda  x. \lambda  y. \lambda  k.k \space  x \space  y  \\                    \text {letPair} &amp;=  \lambda  p.p              \end {align*}         </tex>
         The letPair is not really needed here.
     </mainmatter> </tree>
-  
 
-     
-  
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8311</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>Summary</strong><p/>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8940</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>Summary</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
         Summarizing the above and we obtain the full definition of the predecessor function.
         <tex display="block">              \begin {align*}                  \text {pred}_2 &amp;=  \lambda  n.n \space  ( \lambda  p.p ( \lambda  xy. \text {pair}  \space  (x+1)  \space  x)) \space   \text {pair} ( \space  0  \space  0) \\                    \text {pred} &amp;=  \lambda  n. ( \text {pred}_2 \space  n)  \space  ( \lambda  xy.y)              \end {align*}            </tex>
     </mainmatter> </tree>
-  
 
-     
-  
     
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>8312</anchor>         <parent>cs-0002</parent> </frontmatter> <mainmatter><strong>General Primitive Recursion</strong><p/>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8941</anchor>        <title><link href="cs-0002.xml" type="local" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</link> › <strong>General Primitive Recursion</strong></title> <parent>cs-0002</parent> </frontmatter> <mainmatter>
         The general case of primitive recursion follows by a similar pattern.
         We begin by defining a function <tex>f_2</tex>:
         <tex display="block">             f_2 \space  n =  \langle  n, f \space  n  \rangle          </tex>
         We can define <tex>f_2</tex> using the schema of iteration
         <tex display="block">              \begin {align*}                 f_2 \space  0 &amp;=  \langle  0, c  \rangle   \\                  f_2 \space  (n+1) &amp;=  \text {letPair} \space  (f_2 \space  n) \space  ( \lambda  xy. \langle  x+1, g \space  x \space  y  \rangle )  \\                  f \space  n &amp;=  \text {letPair} \space  (f_2 \space  n) \space  ( \lambda  xy.y)              \end {align*}         </tex>
     </mainmatter> </tree>
-  
 
 </mainmatter> </tree>
-  
 <p>
     When computing over natural numbers we can restrict the functions that can be 
     formed in schematic ways to obtain a language in which all functions <strong>terminate</strong>.
