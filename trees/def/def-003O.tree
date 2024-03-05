@@ -1,0 +1,6 @@
+\title{Weak Normalization}
+\taxon{Definition}
+\p{
+    If #{\Gamma\vdash e:\tau} then #{e\to_{\beta}^*e'} for a \strong{normal form} #{e'}.
+    And we can define \strong{subject reduction}, if #{\Gamma\vdash e:\tau} and #{e\to_{\beta}e'} then #{\Gamma\vdash e':\tau}.
+}

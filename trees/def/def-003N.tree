@@ -1,0 +1,16 @@
+\title{Accepts}
+\taxon{Definition}
+\p{
+    If the string #{x} consists characters #{x_1, x_2, \ldots, x_n} then the
+    FA #{(S,\Sigma,\delta,s_0,S_A)} \strong{accpets} #{x} iff there is a sequence
+    ##{
+        \delta(
+            \delta(
+                \dots\delta(\delta(
+                    \delta(s_0,x_1),x_2),x_3)\dots,
+                x_{n-1}
+            )
+            ,x_n
+        )\in S_A
+    }
+}

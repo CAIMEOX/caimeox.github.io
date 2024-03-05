@@ -1,0 +1,153 @@
+\title{Simply Typed Lambda Calculus and Representation Theorems}
+\date{2024-03-05}
+\taxon{Computer Science}
+\p{
+    We have explored the power of lambda calculus.
+    Church's original purpose of the pure calculus of functions 
+    was a new foundations of mathematics distinct from set theory.
+    Unfortunately the original lambda calculus is \strong{inconsistent} (Every proposition has a proof).
+    Church returned to the ideas by Russell and Whitehead and developed the \strong{Church's Simple Theory of Types}.
+    \strong{SLTC} is a typed interpretation of the lambda calculus with only one type constructor #{\to}
+    that builds function types. 
+}
+\p{
+    We follow the converntion that function type constructor #{\to} is right-associative.
+    We write #{e:\tau} if expression #{e} has type #{\tau}.
+    ##{
+        \lambda x.x:\tau\to\tau
+    }
+    But the type is not unique. The booleans can be typed:
+    ##{
+        \begin{align*}
+            \text{true} &= \lambda x.\lambda y.x : \alpha\to(\beta\to\alpha)\\
+            \text{false} &= \lambda x.\lambda y.y : \alpha\to(\beta\to\beta)
+        \end{align*}
+    }
+}
+\subtree{
+    \title{Typing Judgment}
+    \p{
+        Wem can formalize judgments about expressions and types using \strong{inference rules}.
+        For instance:
+        ##{
+            \frac{
+                e_1:\tau_1\quad e_2:\tau_2
+            }{
+                e_1\space e_2:\tau_2
+            }
+        }
+        The application #{e_1\space e_2} has type #{\tau_2} if #{e_1} has type 
+        #{\tau_1\to\tau_2} and #{e_2} has type #{\tau_1}.
+    }
+    \p{
+        We can record the types of variable in a \strong{typing context}.
+        ##{
+            \Gamma :\equiv x_1:\tau_1,\ldots,x_n:\tau_n
+        }
+        And we always assume that all variables declared in a context are distinct.
+        This avoids any ambiguity when we try to determine the type of a variable.
+        The typing judgment now becomes
+        ##{
+            \Gamma\vdash e:\tau
+        }
+    }
+}
+\subtree{
+    \title{The Limits of Simple Types}
+    \p{
+        Are there expressions that cannot be typed in the simple type system?
+        Yes, for example, #{\Omega=\lambda x.x\space x} cannot be typed.
+        But how do we prove that  #{\Omega} cannot be typed?
+    }
+    \p{
+        We can apply the typing rules and get a contradiction.
+        #{\Omega} is a lambda abstraction hence we can assume that it has type #{\tau\to\sigma}.
+        Then #{x} has type #{\tau} and #{x\space x} has type #{\sigma}.
+        By the application of #{x\space x} we get that #{\tau=\tau\to\sigma}, 
+        which does not exist.
+    }
+    \p{
+        To recover from this in full generality we need \strong{recursive types}.
+        ##{
+            \tau =F\tau
+        }
+        where #{F=\lambda\alpha.\alpha\to\sigma} and we might have a solution with 
+        #{\tau=Y\space F}. But such solution is not available to us. We do not have 
+        function from types to types #{F} and a type level Y combinator.
+        However it is ok to construct recursive types (we would do later).
+    }
+}
+\subtree{
+    \title{Characterizing the Booleans}
+    \p{
+        We now show that the representation of the booleans is correct.
+    }
+    \subtree{
+        \title{Representation of Booleans}
+        \p{
+            If #{\emptyset\vdash e:\alpha\to(\alpha\to\alpha)} and #{e} is a normal form, 
+            then #{e = \text{true}} or #{e = \text{false}}.
+        }
+    }
+    \p{We will later combine this with the following theorems which yields 
+    correctness of the representation of the booleans.}
+    \transclude{def-003O}
+}
+\subtree{
+    \title{Reduction revised}
+    \p{
+        Our characterization of normal forms is quite simple: terms that do not reduce.
+        However, this is a \strong{negative} condition, which is difficult to work with in proofs.
+        We would like to have a \strong{positive} condition, which is easier to work with.
+    }
+    \p{
+        We tend to give definitions in the form of inference rules.
+        The property then holds if the judgment can be derived using the rules.
+        (This closely related to the \strong{inductive deefintion}).
+        Before defining the normal forms we formally define \strong{beta reduction}.
+        The judgment here #{e\to e'} expressing that #{e} reduces to #{e'}.
+        ##{
+            \begin{align*}
+                \frac{}{(\lambda x.e_1)e_2\to e_1[x:=e_2]} (\text{red/beta}) \\
+                \frac{e\to e'}{\lambda x.e \to \lambda x.e'} (\text{red/lam}) \\
+                \frac{e_1\to e_1'}{e_1\space e_2\to e_1'\space e_2} (\text{red/app}_1) \\
+                \frac{e_2\to e_2'}{e_1\space e_2\to e_1\space e_2'} (\text{red/app}_2)                
+            \end{align*}
+        }
+    }
+    \p{
+        A \strong{normal form} is an expression that does not reduce.
+        To give a proper formalization,, we need a separate judgment for \strong{neutral terms}
+        which do not create a redex when applied to an argument.
+        ##{
+            \def\normal{\text{ normal}}
+            \def\neutral{\text{ neutral}}
+            \begin{align*}
+                \frac{e\normal}{\lambda x.e\normal} (\text{normal/lam}) \\
+                \frac{e\neutral}{e\normal} (\text{normal/var}) \\
+                \frac{}{x\neutral} (\text{neutral/var}) \\
+                \frac{e_1\neutral\quad e_2\normal}{e_1\space e_2\neutral} (\text{neutral/app}) \\
+            \end{align*}
+        }
+    }
+}
+\subtree{
+    \title{Normal Forms and Reduction}
+    \p{
+        The characterization of normal forms via inference rules is compact,
+        but is it really the same as saying that an expression does not reduce?
+        We break this down into the following two properties.
+        \ul{
+            \li{
+                For all expressions #{e}, either #{e} reduces or #{e} is normal
+            }
+            \li{
+                For all expressions #{e}, it is not that case #{e} reduces and #{e} is normal
+            }
+        }
+    }
+    \p{
+        We have theorem that ensures that the first property holds. (Proof is omitted).
+    }
+    \transclude{thm-0010}
+}

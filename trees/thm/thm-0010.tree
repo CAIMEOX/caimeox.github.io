@@ -1,0 +1,5 @@
+\title{Reduction and normal forms}
+\taxon{Theorem}
+\p{
+    For every expression #{e}, either #{e\to e'} for some expression #{e'} or #{e} is a normal form.
+}

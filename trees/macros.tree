@@ -1,16 +1,14 @@
+\title{basic macros}
+
 % Common utils
 \def\hr{
   \xml{hr}{}
 }
-\def\block[tit][body]{ 
-  \scope{
-    \put\transclude/toc{false}
+\def\block[tit][body]{
     \subtree{
-      \tit
-      \p{}
+      \title{\tit}
       \body
     }
-  }
 }
 \def\section[tit][body]{
   \scope{

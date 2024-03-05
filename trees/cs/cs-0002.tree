@@ -184,25 +184,28 @@
     }
 }
 \block{\strong{The Schema of Primitive Recursion}}{
-    Everything appears simply until we think of a very simple function,
-    the \strong{predecessor function} #{\text{pred}} defined by
-    ##{
-        \begin{align*}
-            \text{pred}\space 0 = 0 \\
-            \text{pred}\space (n+1) = n
-        \end{align*}
+    \p{
+        Everything appears simply until we think of a very simple function,
+        the \strong{predecessor function} #{\text{pred}} defined by
+        ##{
+            \begin{align*}
+                \text{pred}\space 0 = 0 \\
+                \text{pred}\space (n+1) = n
+            \end{align*}
+        }
+        What we would need is the \strong{schema of primitive recursion}
+        ##{
+            \begin{align*}
+                f\space 0 &= c \\
+                f\space (n+1) &= g\space n\space (f\space n)
+            \end{align*}
+        }
+        With which we can define the predecessor function by 
+        ##{
+            g = \lambda x.\lambda y.x
+        }
     }
-    What we would need is the \strong{schema of primitive recursion}
-    ##{
-        \begin{align*}
-            f\space 0 &= c \\
-            f\space (n+1) &= g\space n\space (f\space n)
-        \end{align*}
-    }
-    With which we can define the predecessor function by 
-    ##{
-        g = \lambda x.\lambda y.x
-    }
+    
     \block{\strong{Define predecessor function}}{
         The key idea is to gain access to #{n} in the schema of 
         primitive recursion by rebuilding it during the iteration.

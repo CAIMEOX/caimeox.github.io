@@ -1,0 +1,123 @@
+\title{Scanners}
+\taxon{Computer Science}
+\import{macros}
+\p{
+    The scanner's task is to transform a stream of characters into a stream 
+    of words in the input language. Each word must be classified into a 
+    \strong{syntactic category}.
+    This note refers to [Engineering a compiler](eng-compiler-2022)
+}
+\p{
+    The first stage of a compiler is to perform \strong{lexical analysis} by a scanner.
+    The parser or \strong{syntax analyzer} will fit the stream of words to a grammatical 
+    model of the input language.
+}
+\p{
+    Scanner construction has a strong foundation in formal language theory.
+    Scanners are based on \strong{recognizers} that simulate \strong{deterministic finite automata}.
+    We can specify the lexical structure using a set of \strong{regular expression}.
+}
+\p{
+    Each time a scanner recognizes a word, it will return a \strong{token} that
+    contains the word (\strong{lexeme}) and its syntactic category.
+    The scanner uses \strong{microsyntax} (the lexical structure of a language) to 
+    find and classify words. \strong{Keywords} are \strong{identifiers} but have special meanings.
+}
+\subtree{
+    \title{A first look at recognizers}
+    \p{
+        A char-by-char algorithm to recognize words is trivial.
+        Consider we want to recognize the word \code{new}.
+        We can write down the following code.
+    }
+    \pre{\startverb
+    c <- nextChar();
+    if (c == 'n') {
+        c <- nextChar();
+        if (c == 'e') {
+            c <- nextChar();
+            if (c == 'w') {
+                return newToken();
+            }
+        }
+    }
+    reportError();\stopverb}
+    \p{
+        We can also represent the code fragment using the simple \strong{transition diagram}.
+    }
+    \graph{
+        \begin{tikzcd}
+            {S_0} & {S_1} & {S_2} & {S_3}
+            \arrow["n", from=1-1, to=1-2]
+            \arrow["e", from=1-2, to=1-3]
+            \arrow["w", from=1-3, to=1-4]
+        \end{tikzcd}
+    }
+}
+\subtree{
+    \title{A formalism for recognizers}
+    \p{
+        Transition diagrams can be viewed as formal mathematics objects called \strong{finite automata}.
+    }
+    \transclude{def-003M}
+    \p{
+        An FA \strong{accpets} a string #{x} and iff starting in #{s_0},
+        the sequence of chars in  #{x} takes the FA to an accepting state
+        when the entire string has been consumed.
+    }
+    \transclude{def-003N}
+}
+\subtree{
+    \title{Recognize more complex words}
+    \p{
+        The char-by-char model is very simple and now we consider about numbers.
+        For simplicity, we consider only unsigned integers: An unsigned integer is either
+        zero or series of one or more digits where the first one is non-zero.
+    }
+    \graph{
+        \begin{tikzcd}
+            & {S_2}
+            \arrow[out=65, in=25 ,loop,"0..9"]
+            \\
+            {S_0} \\
+            & {S_1}
+            \arrow["0", from=2-1, to=3-2]
+            \arrow["{1..9}", from=2-1, to=1-2]
+        \end{tikzcd}
+    }
+    \p{
+        And the code implementation can be:
+    }
+    \pre{\startverb
+    state <- s0;
+    char <-nextChar();
+    while (state != se and char != eof) {
+        state <- delta(state, char);
+        char <- nextChar();
+    }
+    if (state in SA) {
+        return Acceptance();
+    } else {
+        reportError();
+    }
+    \stopverb}
+    \p{
+        Another example is to recognize \strong{identifiers} which are sequences of letters and digits,
+        starting with a letter. Many languages include other special characters for identifiers.
+        The FA for unsigned integers and identifiers are different in syntactic categories.
+    }
+}
+\subtree{
+    \title{Regular Expressions}
+    \p{
+        The set of words accpeted by a finite automata #{F} forms a language #{L(F)}.
+        The transition diagram of #{F} specifies the syntactic structure of #{L(F)}.
+        But such representation is complex and non-intuitive.
+        Most systems use a notation called \strong{regular expressions} to specify the language.
+        Any language described by an RE is considered a \strong{regular language}.
+        RE is equivalent to FA.
+    }
+    \p{
+        To work with REs in a rigorous way, we need a foraml definition.
+    }
+}
