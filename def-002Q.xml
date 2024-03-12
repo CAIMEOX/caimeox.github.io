@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4590</anchor>  <taxon>Definition</taxon> <addr>def-002Q</addr>  <route>def-002Q.xml</route>   <title>Homogeneous Linear Equations</title>  </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4842</anchor> <taxon>Definition</taxon> <addr>def-002Q</addr><route>def-002Q.xml</route>    <title>Homogeneous Linear Equations</title>   </frontmatter> <mainmatter><p>
     A linear equation is called <strong>homogeneous</strong> if it can be written in the form
     <tex display="block">         a_1x_1 + a_2x_2 +  \cdots  + a_nx_n = 0     </tex>
     where <tex>a_1, a_2,  \ldots , a_n</tex> are constants and <tex>x_1, x_2,  \ldots , x_n</tex> are variables.

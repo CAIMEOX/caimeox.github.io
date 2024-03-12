@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2413</anchor>  <taxon>Definition</taxon> <addr>def-003N</addr>  <route>def-003N.xml</route>   <title>Accepts</title>  </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2644</anchor> <taxon>Definition</taxon> <addr>def-003N</addr><route>def-003N.xml</route>    <title>Accepts</title>   </frontmatter> <mainmatter><p>
     If the string <tex>x</tex> consists characters <tex>x_1, x_2,  \ldots , x_n</tex> then the
     FA <tex>(S, \Sigma , \delta ,s_0,S_A)</tex> <strong>accpets</strong> <tex>x</tex> iff there is a sequence
-    <tex display="block">          \delta (              \delta (                  \dots \delta ( \delta (                      \delta (s_0,x_1),x_2),x_3) \dots ,                 x_{n-1}             )             ,x_n         ) \in  S_A     </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2414</anchor>  <taxon>Computer Science</taxon> <addr>cs-0004</addr>  <route>cs-0004.xml</route>   <title>Scanners</title>  </frontmatter> <mainmatter><p>
+    <tex display="block">          \delta (              \delta (                  \dots \delta ( \delta (                      \delta (s_0,x_1),x_2),x_3) \dots ,                 x_{n-1}             )             ,x_n         ) \in  S_A     </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2645</anchor> <taxon>Computer Science</taxon> <addr>cs-0004</addr><route>cs-0004.xml</route>    <title>Scanners</title>   </frontmatter> <mainmatter><p>
     The scanner's task is to transform a stream of characters into a stream 
     of words in the input language. Each word must be classified into a 
     <strong>syntactic category</strong>.
@@ -20,7 +20,7 @@
     contains the word (<strong>lexeme</strong>) and its syntactic category.
     The scanner uses <strong>microsyntax</strong> (the lexical structure of a language) to 
     find and classify words. <strong>Keywords</strong> are <strong>identifiers</strong> but have special meanings.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2415</anchor>        <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › A first look at recognizers</title> <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2646</anchor>      <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › A first look at recognizers</title>  <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
         A char-by-char algorithm to recognize words is trivial.
         Consider we want to recognize the word <code>new</code>.
         We can write down the following code.
@@ -50,9 +50,9 @@
          \end {tikzcd}
      
     </embedded-tex-body></embedded-tex></center>
-</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2416</anchor>        <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › A formalism for recognizers</title> <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2647</anchor>      <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › A formalism for recognizers</title>  <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
         Transition diagrams can be viewed as formal mathematics objects called <strong>finite automata</strong>.
-    </p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2417</anchor>  <taxon>Definition</taxon> <addr>def-003M</addr>  <route>def-003M.xml</route>   <title>Finite Automata</title>  </frontmatter> <mainmatter><p>
+    </p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2648</anchor> <taxon>Definition</taxon> <addr>def-003M</addr><route>def-003M.xml</route>    <title>Finite Automata</title>   </frontmatter> <mainmatter><p>
     A <strong>finite automata (FA)</strong> is a five-tuple <tex>(S, \Sigma , \delta ,s_0,S_A)</tex> where
     <ul><li><tex>S</tex> is the finite set of states in the recognizer including <tex>s_e</tex>,
             the error state.
@@ -75,10 +75,10 @@
         An FA <strong>accpets</strong> a string <tex>x</tex> and iff starting in <tex>s_0</tex>,
         the sequence of chars in  <tex>x</tex> takes the FA to an accepting state
         when the entire string has been consumed.
-    </p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2418</anchor>  <taxon>Definition</taxon> <addr>def-003N</addr>  <route>def-003N.xml</route>   <title>Accepts</title>  </frontmatter> <mainmatter><p>
+    </p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2649</anchor> <taxon>Definition</taxon> <addr>def-003N</addr><route>def-003N.xml</route>    <title>Accepts</title>   </frontmatter> <mainmatter><p>
     If the string <tex>x</tex> consists characters <tex>x_1, x_2,  \ldots , x_n</tex> then the
     FA <tex>(S, \Sigma , \delta ,s_0,S_A)</tex> <strong>accpets</strong> <tex>x</tex> iff there is a sequence
-    <tex display="block">          \delta (              \delta (                  \dots \delta ( \delta (                      \delta (s_0,x_1),x_2),x_3) \dots ,                 x_{n-1}             )             ,x_n         ) \in  S_A     </tex></p></mainmatter> </tree></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2419</anchor>        <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › Recognize more complex words</title> <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
+    <tex display="block">          \delta (              \delta (                  \dots \delta ( \delta (                      \delta (s_0,x_1),x_2),x_3) \dots ,                 x_{n-1}             )             ,x_n         ) \in  S_A     </tex></p></mainmatter> </tree></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2650</anchor>      <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › Recognize more complex words</title>  <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
         The char-by-char model is very simple and now we consider about numbers.
         For simplicity, we consider only unsigned integers: An unsigned integer is either
         zero or series of one or more digits where the first one is non-zero.
@@ -111,12 +111,11 @@
         return Acceptance();
     } else {
         reportError();
-    }
-    </pre><p>
+    }</pre><p>
         Another example is to recognize <strong>identifiers</strong> which are sequences of letters and digits,
         starting with a letter. Many languages include other special characters for identifiers.
         The FA for unsigned integers and identifiers are different in syntactic categories.
-    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2420</anchor>        <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › Regular Expressions</title> <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
+    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>2651</anchor>      <title><link href="cs-0004.xml" type="local" addr="cs-0004" title="Scanners">Scanners</link> › Regular Expressions</title>  <parent>cs-0004</parent> </frontmatter> <mainmatter><p>
         The set of words accpeted by a finite automata <tex>F</tex> forms a language <tex>L(F)</tex>.
         The transition diagram of <tex>F</tex> specifies the syntactic structure of <tex>L(F)</tex>.
         But such representation is complex and non-intuitive.

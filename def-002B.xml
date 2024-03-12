@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5122</anchor>  <taxon>Definition</taxon> <addr>def-002B</addr>  <route>def-002B.xml</route>   <title>Kernel</title>  </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5374</anchor> <taxon>Definition</taxon> <addr>def-002B</addr><route>def-002B.xml</route>    <title>Kernel</title>   </frontmatter> <mainmatter><p>
     The <strong>kernel</strong> of a homomorphism is generally the inverse image of <tex>0</tex></p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks/> <references/></backmatter></tree>

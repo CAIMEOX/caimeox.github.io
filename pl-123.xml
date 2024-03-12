@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="forest.xsl"?>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>7410</anchor> <taxon>Reference</taxon> <addr>pl-123</addr><route>pl-123.xml</route>   <authors><author>GRAHAM HUTTON</author> </authors> <title>Programming language semantics: It's easy as 1,2,3</title>   <meta name="doi">10.1017/s0956796823000072</meta></frontmatter> <mainmatter><p>
+    Programming language semantics is an important topic in theoretical computer science, but one that beginners often find challenging. This article provides a tutorial introduction to the subject, in which the language of integers and addition is used as a minimal setting in which to present a range of semantic concepts in simple manner
+</p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>7411</anchor> <taxon>Computer Science</taxon> <addr>cs-0006</addr><route>cs-0006.xml</route>  <date><year>2024</year> <month>3</month> <day>11</day></date>  <title>Introduction to Programming Language Semantic</title>   </frontmatter> <mainmatter><p>
+    I decided to read one paper or article every week.
+    This week's topic is programming language semantics, refer to <strong>Graham Huttons</strong>'s 
+    paper <link href="pl-123.xml" type="local" addr="pl-123" title="Programming language semantics: It's easy as 1,2,3">Programming language semantics: It's easy as 1,2,3</link>.
+</p><p><strong>Semantics</strong> is the general term for the study of meaning.
+    <strong>Programming language semantics</strong> gives precise mathematical meaning to programs.
+    We use a simple <strong>arithmetic expression language</strong> 
+    (including integers and addition only) to illustrate the basic concepts.
+    This is an example of <strong>Occam's razor</strong>, a philosophical principle that favours the 
+    simplest explanation for a phenomenon.
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7412</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Arithmetic Expressions</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+        Now let's define our language of arithmetic expressions
+        built up from the set of integers and the operation of addition.
+        Use a <strong>context-free</strong> grammar.
+        <tex display="block">             E: \equiv \mathbb {Z} | E+E         </tex></p><p>
+        An expression is either an integer value or the addition of two sub-expressions.
+        We assume that parentheses can be <strong>freely</strong> used as required to disambiguate expressions 
+        written in normal textual form. This grammar can be easily translated into 
+        a <strong>Haskell</strong> data type.
+    </p>
+  <pre><code class="language-haskell">data Expr = Val Integer | Add Expr Expr</code></pre>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7413</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Denotational Semantics</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+        Now we consider <strong>denotational semantics</strong>, 
+        where the terms in a language is defined using a 
+        <strong>valuation function</strong> that maps terms into values in an appropriate <strong>semantic domain</strong>.
+    </p><p>
+        Formally, for a language <tex>T</tex> of syntactic terms comprises
+        two components: a set <tex>V</tex> of <strong>semantic values</strong> and a 
+        <strong>valuation function</strong> of type <tex>T \to  V</tex> that maps terms to 
+        their meanings as values.
+        This function is written by enclosing a term in a <strong>semantic brackets</strong> 
+        (Also known as Oxford or Strachey brackets),
+        writing <tex>\llbracket  t \rrbracket</tex> for the value of term <tex>t</tex>.
+        In addition, the valuation function is required to be <strong>compositional</strong>,
+        the meaning  of a <strong>compound term</strong> is defined purely in terms of the meaning
+        of its sub-terms.
+    </p><p>
+        Compositionality aids understanding by ensuring that the semantics is modular
+        and supports the use of simple <strong>equational reasoning</strong> techniques for proving properties of
+        the semantics. When the set of semantic values is clear, a denotational semantics is often
+        identified with the underlying valuation function.
+    </p><p>
+        Taking <tex>V</tex> the Haskell type <code>Integer</code> of integers and define a valuation function
+        of type <code>Expr -&gt; Integer</code> (by following equations) we can define the denotational semantics of our expression language.
+        <tex display="block">              \begin {align*}                  \llbracket \text {Val}   \space  n \rrbracket  &amp;= n  \\                   \llbracket \text {Add}   \space  e_1 \space  e_2 \rrbracket  &amp;=  \llbracket  e_1 \rrbracket  +  \llbracket  e_2 \rrbracket               \end {align*}         </tex>
+        This definition satisfies the compositionality requirement obviously.
+        Note that the symbol <tex>+</tex> has two different purposes.
+        On the left side, it is a <strong>syntactic</strong> constructor for building terms,
+        while on the right side, it is a <strong>semantic</strong> operator for adding integers. 
+    </p><p>
+        Compositionality simplifies reasoning because it allows us to 
+        replace <strong>equals by equals</strong>. For example,
+        <tex display="block">              \frac {                  \llbracket  e_1 \rrbracket  = n_1  \quad   \llbracket  e_2 \rrbracket  = n_2             }{                  \llbracket \text {Add}   \space  e_1 \space  e_2 \rrbracket  =                  \llbracket \text {Add}   \space  n_1 \space  n_2 \rrbracket              }         </tex>
+        we can freely replace the two argument expressions of an addition by other expressions with the same meanings, 
+        and the meaning of the whole addition will remain unchanged.
+        Using the definition of the valuation function, we can prove this property.
+        <tex display="block">              \begin {align*}                  \llbracket \text {Add}   \space  e_1 \space  e_2 \rrbracket  &amp;=                   \llbracket  e_1 \rrbracket  +  \llbracket  e_2 \rrbracket  ( \text {By definition of }  \llbracket- \rrbracket )  \\                  &amp;=  \llbracket  n_1 \rrbracket  +  \llbracket  n_2 \rrbracket  ( \text {Assumptions})  \\                   &amp;=  \llbracket \text {Add}   \space  n_1 \space  n_2 \rrbracket  ( \text {By definition of }  \llbracket- \rrbracket )              \end {align*}         </tex></p><p>
+        Given that terms and their semantics are built up <strong>inductively</strong>,
+        proofs about denotational semantics typically  proceed using <strong>structural induction</strong>.
+        Let us show that our expression semantics is <strong>total</strong>,
+        that is, for every expression <tex>e</tex> there is an integer <tex>n</tex> such that <tex>\llbracket  e \rrbracket  = n</tex>.
+    </p>
+ 
+   
+   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>7414</anchor> <taxon>Proof</taxon>   <date><year>2024</year> <month>3</month> <day>11</day></date>     </frontmatter> <mainmatter>
+        For the base case <tex>e =  \text {Val}   \space  n</tex>, we have <tex>\llbracket  e \rrbracket  = n</tex> trivially.
+        For the inductive case <tex>e =  \text {Add}   \space  e_1 \space  e_2</tex>,
+        we can assume by induction that <tex>\llbracket  e_1 \rrbracket  = n_1</tex> and <tex>\llbracket  e_2 \rrbracket  = n_2</tex>
+        for some integers <tex>n_1</tex> and <tex>n_2</tex>. Then <tex>\llbracket  e \rrbracket  = n_1 + n_2</tex> by definition of the valuation function,
+        indicates this case is also true. Therefore, the semantics is total.
+    </mainmatter> </tree>
+ 
+<p>
+        The valuation function can be translated into a Haskell function
+    </p>
+  <pre><code class="language-haskell">eval :: Expr -&gt; Integer
+eval (Val n) = n
+eval (Add x y) = eval x + eval y</code></pre>
+<p>
+        More generally, a denotational semantics can be viewed as an evaluator (or <strong>interpreter</strong>).
+        Even <strong>eval</strong> is defined recursively, the semantics is compositional its behavior
+        can be understood  as simply replacing the <strong>constructors</strong> for expressions by other functions.
+        In this manner, a denotational semantics can also be viewed as an evaluation function that
+        is defined by <strong>folding</strong> over the syntax of the source language.
+    </p>
+  <pre><code class="language-haskell">eval :: Expr -&gt; Integer
+eval = fold id (+)</code></pre>
+<p>
+        The fold operator captures the ideas of replacing constructors
+        of the language by other functions
+    </p>
+  <pre><code class="language-haskell">fold :: (Integer -&gt; a) -&gt; (a -&gt; a -&gt; a) -&gt; Expr -&gt; a 
+fold f g (Val n) = f n
+fold f g (Add x y) = g (fold f g x) (fold f g y)</code></pre>
+<p>
+        Note that the above semantics for expressions does not specify the order
+        of evaluation. If we do wish to make evaluation order explicit 
+        this requires the introduction of additional structure into the semantics,
+        named <strong>abstract machines</strong> (Discuss later).
+    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7415</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Small-Step Operational Semantics</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+        Another popular approach to semantics is the <strong>operational approach</strong>,
+        where the meaning of terms is defined using an <strong>execution relation</strong>
+        that specifies how terms can be executed in an appropriate machine model.
+        There are two basic forms of operational semantics:
+        <ul><li><strong>small-step</strong>: describes the individual steps of execution
+            </li>
+            <li><strong>big-step</strong>: describes the overall results of execution
+            </li></ul>
+        In this section we consider the small-step approach, 
+        which is also known as <strong>structural operational semantics</strong>.
+    </p><p>
+        Formally, a small-step operational semantics for a language <tex>T</tex> of syntactic terms
+        comprises two components:
+        a set <tex>S</tex> of <strong>execution states</strong> and 
+        a <strong>transition relation</strong> of type <tex>S \to  S</tex> that specifies how terms can be executed.
+        If there is a transition from state <tex>s</tex> to state <tex>s'</tex> in a single execution step, we write <tex>s \to  s'</tex>.
+    </p><p>
+        Arithmetic expressions have a simple small-step operational semantics,
+        given by taking <tex>S</tex> as the Haskell type. And we define transition relation 
+        on <code>Expr</code> by the following inference rules.
+        <tex display="block">              \begin {align*}                  \frac {}{                      \text {Add} \space ( \text {Val} \space  n_1) \space ( \text {Val} \space  n_2) \to \text {Val} \space (n_1+n_2)                 }  \\                   \frac {x \to  x'}{ \text {Add}   \space  x \space  y \to \text {Add}   \space  x' \space  y}                   \quad                    \frac {y \to  y'}{ \text {Add}   \space  x \space  y \to \text {Add}   \space  x \space  y'}              \end {align*}         </tex></p><p>
+        The first rule states that two values can be added to give a single value and is called a
+        <strong>reduction</strong> (or <strong>contraction</strong>) rule.
+        An expression that matches such a rule is termed a reducible expression or <strong>redex</strong>.
+        The last two rules are called <strong>structural</strong> (or <strong>congruence</strong>) rules as 
+        they specify how larger terms can be reduced.
+    </p><p>
+        The semantics is <strong>non-deterministic</strong> because an expression
+        may have more than one possible transition.
+        This is obviously from the structural rules, which allow either sub-expression to be reduced first.
+    </p><p>
+        We can now capture a the relation between the denotational and operational semantics,
+        namely that making a transition does not change the denotation of an expression.
+        <tex display="block">              \frac {                 e \to  e'             }{                  \llbracket e \rrbracket  =  \llbracket e' \rrbracket              }         </tex>
+        This property can be proved by induction on the structure of the expression <tex>e</tex>.
+        Note that by using the &quot;equals by equals&quot; and the assumption <tex>x \to  x'</tex> we can easily 
+        prove the inductive case. The details are omitted here as it involves quite a bit of 
+        case analysis. We will later see the <strong>principle of rule induction</strong>, which gives 
+        a simpler and more direct way to prove such properties.
+    </p><p>
+        Evaluation of an expression using the small-step semantics proceeds by a series of zero
+        or more transition steps. Formally we can write <tex>e \to ^* e'</tex> to indicate that <tex>e</tex> can be
+        reduced to <tex>e'</tex> in zero or more steps.
+        We can generate a transition tree that captures all possible execution
+        paths for an expression. Using the list comprehension we can define a 
+        function that returns the list of all expressions that can be reduced 
+        from a given expression <tex>e</tex> in a single transition.
+    </p>
+  <pre><code class="language-haskell">trans :: Expr -&gt; [Expr]
+trans (Val n) = []
+trans (Add (Val n) (Val m)) = [Val (n + m)]
+trans (Add x y) = [Add x' y | x' &lt;- trans x] ++ [Add x y' | y' &lt;- trans y]</code></pre>
+<p>
+        We can define a Haskell datatype for transition trees 
+        and an execution function that converts expressions into 
+        transition trees.
+    </p>
+  <pre><code class="language-haskell">data Tree a = Node a [Tree a]
+exec :: Expr -&gt; Tree Expr
+exec e = Node e [exec e' | e' &lt;- trans e]</code></pre>
+<p>
+        Though <code>exec</code> is defined recursively, its behavior can be understood as simply applying
+        the identity function to give the root of the tree and the transition function to generate a 
+        list of residual expressions to be processed to give the subtrees.
+        A small-step semantics can be viewed as giving rise to an execution
+        function that is defined by <strong>unfolding</strong> to transition trees.
+    </p>
+  <pre><code class="language-haskell">exec :: Expr -&gt; Tree Expr
+exec = unfold id trans</code></pre>
+<p>
+        The <code>unfold</code> function captures the idea of generating a tree 
+        from a seed value <tex>x</tex> by applying a function <tex>f</tex> to give the root 
+        and a function <tex>g</tex> to give a list of residual values to be processed
+        for the subtrees.
+    </p>
+  <pre><code class="language-haskell">unfold :: (t -&gt; a) -&gt; (t -&gt; [t]) -&gt; t -&gt; Tree a
+unfold f g x = Node (f x) [unfold f g x' | x' &lt;- g x]</code></pre>
+<p>
+        The operational semantics corresponds to <strong>unfolding to transition trees</strong>,
+        while denotational semantics corresponds to <strong>folding over syntax trees</strong>.
+        Thinking about semantics in terms of recursion operators reveals a duality
+    </p><p>
+        The above semantics for expressions does not specify the order of evaluation.
+        But we can modify the inference rules to achieve this. Replace the second <tex>\text {Add}</tex> 
+        rule by the following rule ensures the first argument of addition is 
+        always reduced first.
+        <tex display="block">              \frac {                 y \to  y'             }{                  \text {Add}  ( \text {Val} \space  n) \space  y  \to   \text {Add}  ( \text {Val} \space  n) \space  y'             }         </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7416</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Rule induction</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+        For denotational semantics we have structural induction,
+        dual to this, for operational semantics we have <strong>rule induction</strong>.
+        This allows us to perform proofs by considering the structure of the rules 
+        that are used to define the semantics.
+    </p><p>
+        We introduce the idea of rule induction using a simple numeric example.
+        We begin by inductively defining a set of natural numbers.
+        <tex display="block">                  \frac {}{0 \in \mathbb {N} }  \quad                    \frac {n \in \mathbb {N} }{n+1 \in \mathbb {N} }         </tex>
+        This is the standard definition of the natural numbers using peano axioms,
+        where the first rule states that zero is a natural number and the second rule states that
+        if <tex>n</tex> is a natural number then so is <tex>n+1</tex>.
+    </p><p>
+        For the inductively defined set <tex>\mathbb {N}</tex>. The principle of rule induction
+        states that in order to prove a property <tex>P(n)</tex> for all natural numbers <tex>n</tex>,
+        it suffices to prove that <tex>P(0)</tex> holds and that if <tex>P(n)</tex> holds then <tex>P(n+1)</tex> holds.
+        <tex display="block">              \frac {                 P(0) \quad \forall  n \in \mathbb {N} . P(n) \to  P(n+1)             }{                  \forall  n \in \mathbb {N} . P(n)             }         </tex>
+        Notice that this is the well-known <strong>principle of mathematical induction</strong>.
+    </p><p>
+        The concept of rule induction can easily be generalised to multiple base and 
+        inductive cases, to rule with multiple preconditions and so on.
+        For the small-step semantics of expressions, we have one base case and two inductive cases.
+        Hence if we want to show that some property <tex>P(e,e')</tex> on pairs of expression holds for 
+        all transition <tex>e \to  e'</tex>, we can use rule induction:
+        <tex display="block">              \frac {                  \begin {align*}                     P( \text {Add} \space ( \text {Val} \space  n_1) \space ( \text {Val} \space  n_2), \text {Val} \space (n_1+n_2))  \\                       \forall  x \to  x'. P(x,x') \to  P( \text {Add} \space  x \space  y, \text {Add} \space  x' \space  y)  \\                       \forall  y \to  y'. P(y,y') \to  P( \text {Add} \space  x \space  y, \text {Add} \space  x \space  y')                  \end {align*}             }{                  \forall  e \to  e'. P(e,e')             }         </tex>
+        We write <tex>\forall  x \to  y.P(x,y)</tex> as shorthand for 
+        <tex display="block">\forall  x,y.x \to  y \Rightarrow  P(x,y)</tex>. Now we give the proof 
+        of the property <tex>\llbracket e \rrbracket  =  \llbracket e' \rrbracket</tex> for all transitions <tex>e \to  e'</tex>.
+        <tex display="block">              \forall  e \to  e'.  \llbracket e \rrbracket  =  \llbracket e' \rrbracket          </tex></p>
+ 
+   
+   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>7417</anchor> <taxon>Proof</taxon>   <date><year>2024</year> <month>3</month> <day>11</day></date>     </frontmatter> <mainmatter>
+        The proof consists of three parts: the base case, the reduction rule and the structural rule.
+        <tex display="block">              \begin {align*}                  \llbracket \text {Add} \space ( \text {Val} \space  n) \space ( \text {Val} \space  m) \rrbracket                  &amp;=  \llbracket \text {Val} \space  n \rrbracket  +  \llbracket \text {Val} \space  m \rrbracket   \\                  &amp;= n + m  \\                  &amp;=  \llbracket \text {Val} \space (n+m) \rrbracket               \end {align*}         </tex>
+        and
+        <tex display="block">              \begin {align*}                  \llbracket \text {Add} \space  x \space  y \rrbracket                  &amp;=  \llbracket x \rrbracket  +  \llbracket y \rrbracket    \\                  &amp;=  \llbracket x' \rrbracket  +  \llbracket y \rrbracket  ( \text {By assumption } \llbracket x \rrbracket = \llbracket x' \rrbracket )  \\                  &amp;=  \llbracket \text {Add} \space  x' \space  y \rrbracket               \end {align*}         </tex>
+        and 
+        <tex display="block">              \begin {align*}                  \llbracket \text {Add} \space  x \space  y \rrbracket                  &amp;=  \llbracket x \rrbracket  +  \llbracket y \rrbracket    \\                  &amp;=  \llbracket x \rrbracket  +  \llbracket y' \rrbracket  ( \text {By assumption } \llbracket y \rrbracket = \llbracket y' \rrbracket )  \\                   &amp;=  \llbracket \text {Add} \space  x \space  y' \rrbracket               \end {align*}         </tex>
+    </mainmatter> </tree>
+ 
+</mainmatter> </tree></mainmatter> </tree></backlinks> <references/></backmatter></tree>

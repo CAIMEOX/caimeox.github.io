@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2362</anchor>  <taxon>Definition</taxon> <addr>def-003K</addr>  <route>def-003K.xml</route>   <title>2-Category</title>  </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>2593</anchor> <taxon>Definition</taxon> <addr>def-003K</addr><route>def-003K.xml</route>    <title>2-Category</title>   </frontmatter> <mainmatter><p>
     A <strong>2-category</strong> consists of a collection of objects, a collection of morphisms, and a collection of 2-morphisms (between morphisms).
 </p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks/> <references/></backmatter></tree>
