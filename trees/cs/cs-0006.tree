@@ -1,0 +1,367 @@
+\title{Introduction to Programming Language Semantic}
+\date{2024-03-11}
+\taxon{Computer Science}
+\import{macros}
+\def\val{\text{Val}}
+\def\add{\text{Add}}
+\def\valuation[body]{\llbracket\body\rrbracket}
+\p{
+    I decided to read one paper or article every week.
+    This week's topic is programming language semantics, refer to \strong{Graham Huttons}'s 
+    paper [Programming language semantics: It's easy as 1,2,3](pl-123).
+}
+\p{
+    \strong{Semantics} is the general term for the study of meaning.
+    \strong{Programming language semantics} gives precise mathematical meaning to programs.
+    We use a simple \strong{arithmetic expression language} 
+    (including integers and addition only) to illustrate the basic concepts.
+    This is an example of \strong{Occam's razor}, a philosophical principle that favours the 
+    simplest explanation for a phenomenon.
+}
+\subtree{
+    \title{Arithmetic Expressions}
+    \p{
+        Now let's define our language of arithmetic expressions
+        built up from the set of integers and the operation of addition.
+        Use a \strong{context-free} grammar.
+        ##{
+            E:\equiv\mathbb{Z} | E+E
+        }
+    }
+    \p{
+        An expression is either an integer value or the addition of two sub-expressions.
+        We assume that parentheses can be \strong{freely} used as required to disambiguate expressions 
+        written in normal textual form. This grammar can be easily translated into 
+        a \strong{Haskell} data type.
+    }
+    \codeblock{language-haskell}{data Expr = Val Integer | Add Expr Expr}
+}
+\subtree{
+    \title{Denotational Semantics}
+    \p{
+        Now we consider \strong{denotational semantics}, 
+        where the terms in a language is defined using a 
+        \strong{valuation function} that maps terms into values in an appropriate \strong{semantic domain}.
+    }
+    \p{
+        Formally, for a language #{T} of syntactic terms comprises
+        two components: a set #{V} of \strong{semantic values} and a 
+        \strong{valuation function} of type #{T\to V} that maps terms to 
+        their meanings as values.
+        This function is written by enclosing a term in a \strong{semantic brackets} 
+        (Also known as Oxford or Strachey brackets),
+        writing #{\llbracket t\rrbracket} for the value of term #{t}.
+        In addition, the valuation function is required to be \strong{compositional},
+        the meaning  of a \strong{compound term} is defined purely in terms of the meaning
+        of its sub-terms.
+    }
+    \p{
+        Compositionality aids understanding by ensuring that the semantics is modular
+        and supports the use of simple \strong{equational reasoning} techniques for proving properties of
+        the semantics. When the set of semantic values is clear, a denotational semantics is often
+        identified with the underlying valuation function.
+    }
+    \p{
+        Taking #{V} the Haskell type \code{Integer} of integers and define a valuation function
+        of type \code{Expr -> Integer} (by following equations) we can define the denotational semantics of our expression language.
+        ##{
+            \begin{align*}
+                \llbracket\val \space n\rrbracket &= n \\
+                \llbracket\add \space e_1\space e_2\rrbracket &= \llbracket e_1\rrbracket + \llbracket e_2\rrbracket
+            \end{align*}
+        }
+        This definition satisfies the compositionality requirement obviously.
+        Note that the symbol #{+} has two different purposes.
+        On the left side, it is a \strong{syntactic} constructor for building terms,
+        while on the right side, it is a \strong{semantic} operator for adding integers. 
+    }
+    \p{
+        Compositionality simplifies reasoning because it allows us to 
+        replace \strong{equals by equals}. For example,
+        ##{
+            \frac{
+                \llbracket e_1\rrbracket = n_1 \quad \llbracket e_2\rrbracket = n_2
+            }{
+                \llbracket\add \space e_1\space e_2\rrbracket =
+                \llbracket\add \space n_1\space n_2\rrbracket
+            }
+        }
+        we can freely replace the two argument expressions of an addition by other expressions with the same meanings, 
+        and the meaning of the whole addition will remain unchanged.
+        Using the definition of the valuation function, we can prove this property.
+        ##{
+            \begin{align*}
+                \llbracket\add \space e_1\space e_2\rrbracket &= 
+                \llbracket e_1\rrbracket + \llbracket e_2\rrbracket (\text{By definition of } \llbracket-\rrbracket) \\
+                &= \llbracket n_1\rrbracket + \llbracket n_2\rrbracket (\text{Assumptions}) \\ 
+                &= \llbracket\add \space n_1\space n_2\rrbracket (\text{By definition of } \llbracket-\rrbracket)
+            \end{align*}
+        }
+    }
+    \p{
+        Given that terms and their semantics are built up \strong{inductively},
+        proofs about denotational semantics typically  proceed using \strong{structural induction}.
+        Let us show that our expression semantics is \strong{total},
+        that is, for every expression #{e} there is an integer #{n} such that #{\llbracket e\rrbracket = n}.
+    }
+    \proof{
+        For the base case #{e = \val \space n}, we have #{\llbracket e\rrbracket = n} trivially.
+        For the inductive case #{e = \add \space e_1\space e_2},
+        we can assume by induction that #{\llbracket e_1\rrbracket = n_1} and #{\llbracket e_2\rrbracket = n_2}
+        for some integers #{n_1} and #{n_2}. Then #{\llbracket e\rrbracket = n_1 + n_2} by definition of the valuation function,
+        indicates this case is also true. Therefore, the semantics is total.
+    }
+    \p{
+        The valuation function can be translated into a Haskell function
+    }
+    \codeblock{language-haskell}{\startverb
+eval :: Expr -> Integer
+eval (Val n) = n
+eval (Add x y) = eval x + eval y
+\stopverb}
+    \p{
+        More generally, a denotational semantics can be viewed as an evaluator (or \strong{interpreter}).
+        Even \strong{eval} is defined recursively, the semantics is compositional its behavior
+        can be understood  as simply replacing the \strong{constructors} for expressions by other functions.
+        In this manner, a denotational semantics can also be viewed as an evaluation function that
+        is defined by \strong{folding} over the syntax of the source language.
+    }
+    \codeblock{language-haskell}{\startverb
+eval :: Expr -> Integer
+eval = fold id (+)
+\stopverb}
+    \p{
+        The fold operator captures the ideas of replacing constructors
+        of the language by other functions
+    }
+    \codeblock{language-haskell}{\startverb
+fold :: (Integer -> a) -> (a -> a -> a) -> Expr -> a 
+fold f g (Val n) = f n
+fold f g (Add x y) = g (fold f g x) (fold f g y)
+\stopverb}
+    \p{
+        Note that the above semantics for expressions does not specify the order
+        of evaluation. If we do wish to make evaluation order explicit 
+        this requires the introduction of additional structure into the semantics,
+        named \strong{abstract machines} (Discuss later).
+    }
+}
+\subtree{
+    \title{Small-Step Operational Semantics}
+    \p{
+        Another popular approach to semantics is the \strong{operational approach},
+        where the meaning of terms is defined using an \strong{execution relation}
+        that specifies how terms can be executed in an appropriate machine model.
+        There are two basic forms of operational semantics:
+        \ul{
+            \li{
+                \strong{small-step}: describes the individual steps of execution
+            }
+            \li{
+                \strong{big-step}: describes the overall results of execution
+            }
+        }
+        In this section we consider the small-step approach, 
+        which is also known as \strong{structural operational semantics}.
+    }
+    \p{
+        Formally, a small-step operational semantics for a language #{T} of syntactic terms
+        comprises two components:
+        a set #{S} of \strong{execution states} and 
+        a \strong{transition relation} of type #{S\to S} that specifies how terms can be executed.
+        If there is a transition from state #{s} to state #{s'} in a single execution step, we write #{s\to s'}.
+    }
+    \p{
+        Arithmetic expressions have a simple small-step operational semantics,
+        given by taking #{S} as the Haskell type. And we define transition relation 
+        on \code{Expr} by the following inference rules.
+        ##{
+            \begin{align*}
+                \frac{}{
+                    \add\space(\val\space n_1)\space(\val\space n_2)\to\val\space(n_1+n_2)
+                } \\
+                \frac{x\to x'}{\add \space x\space y\to\add \space x'\space y} 
+                \quad 
+                \frac{y\to y'}{\add \space x\space y\to\add \space x\space y'}
+            \end{align*}
+        }
+    }
+    \p{
+        The first rule states that two values can be added to give a single value and is called a
+        \strong{reduction} (or \strong{contraction}) rule.
+        An expression that matches such a rule is termed a reducible expression or \strong{redex}.
+        The last two rules are called \strong{structural} (or \strong{congruence}) rules as 
+        they specify how larger terms can be reduced.
+    }
+    \p{
+        The semantics is \strong{non-deterministic} because an expression
+        may have more than one possible transition.
+        This is obviously from the structural rules, which allow either sub-expression to be reduced first.
+    }
+    \p{
+        We can now capture a the relation between the denotational and operational semantics,
+        namely that making a transition does not change the denotation of an expression.
+        ##{
+            \frac{
+                e\to e'
+            }{
+                \valuation{e} = \valuation{e'}
+            }
+        }
+        This property can be proved by induction on the structure of the expression #{e}.
+        Note that by using the "equals by equals" and the assumption #{x\to x'} we can easily 
+        prove the inductive case. The details are omitted here as it involves quite a bit of 
+        case analysis. We will later see the \strong{principle of rule induction}, which gives 
+        a simpler and more direct way to prove such properties.
+    }
+    \p{
+        Evaluation of an expression using the small-step semantics proceeds by a series of zero
+        or more transition steps. Formally we can write #{e\to^* e'} to indicate that #{e} can be
+        reduced to #{e'} in zero or more steps.
+        We can generate a transition tree that captures all possible execution
+        paths for an expression. Using the list comprehension we can define a 
+        function that returns the list of all expressions that can be reduced 
+        from a given expression #{e} in a single transition.
+    }
+    \codeblock{language-haskell}{\startverb
+trans :: Expr -> [Expr]
+trans (Val n) = []
+trans (Add (Val n) (Val m)) = [Val (n + m)]
+trans (Add x y) = [Add x' y | x' <- trans x] ++ [Add x y' | y' <- trans y]
+\stopverb}
+    \p{
+        We can define a Haskell datatype for transition trees 
+        and an execution function that converts expressions into 
+        transition trees.
+    }
+    \codeblock{language-haskell}{\startverb
+data Tree a = Node a [Tree a]
+exec :: Expr -> Tree Expr
+exec e = Node e [exec e' | e' <- trans e]
+\stopverb}
+    \p{
+        Though \code{exec} is defined recursively, its behavior can be understood as simply applying
+        the identity function to give the root of the tree and the transition function to generate a 
+        list of residual expressions to be processed to give the subtrees.
+        A small-step semantics can be viewed as giving rise to an execution
+        function that is defined by \strong{unfolding} to transition trees.
+    }
+    \codeblock{language-haskell}{\startverb
+exec :: Expr -> Tree Expr
+exec = unfold id trans 
+\stopverb}
+    \p{
+        The \code{unfold} function captures the idea of generating a tree 
+        from a seed value #{x} by applying a function #{f} to give the root 
+        and a function #{g} to give a list of residual values to be processed
+        for the subtrees.
+    }
+    \codeblock{language-haskell}{\startverb
+unfold :: (t -> a) -> (t -> [t]) -> t -> Tree a
+unfold f g x = Node (f x) [unfold f g x' | x' <- g x]
+\stopverb}
+    \p{
+        The operational semantics corresponds to \strong{unfolding to transition trees},
+        while denotational semantics corresponds to \strong{folding over syntax trees}.
+        Thinking about semantics in terms of recursion operators reveals a duality
+    }
+    \p{
+        The above semantics for expressions does not specify the order of evaluation.
+        But we can modify the inference rules to achieve this. Replace the second #{\add} 
+        rule by the following rule ensures the first argument of addition is 
+        always reduced first.
+        ##{
+            \frac{
+                y\to y'
+            }{
+                \add (\val\space n)\space y \to \add (\val\space n)\space y'
+            }
+        }
+    }
+}
+\subtree{
+    \title{Rule induction}
+    \p{
+        For denotational semantics we have structural induction,
+        dual to this, for operational semantics we have \strong{rule induction}.
+        This allows us to perform proofs by considering the structure of the rules 
+        that are used to define the semantics.
+    }
+    \p{
+        We introduce the idea of rule induction using a simple numeric example.
+        We begin by inductively defining a set of natural numbers.
+        ##{
+                \frac{}{0\in\N} \quad 
+                \frac{n\in\N}{n+1\in\N}
+        }
+        This is the standard definition of the natural numbers using peano axioms,
+        where the first rule states that zero is a natural number and the second rule states that
+        if #{n} is a natural number then so is #{n+1}.
+    }
+    \p{
+        For the inductively defined set #{\N}. The principle of rule induction
+        states that in order to prove a property #{P(n)} for all natural numbers #{n},
+        it suffices to prove that #{P(0)} holds and that if #{P(n)} holds then #{P(n+1)} holds.
+        ##{
+            \frac{
+                P(0)\quad\forall n\in\N. P(n)\to P(n+1)
+            }{
+                \forall n\in\N. P(n)
+            }
+        }
+        Notice that this is the well-known \strong{principle of mathematical induction}.
+    }
+    \p{
+        The concept of rule induction can easily be generalised to multiple base and 
+        inductive cases, to rule with multiple preconditions and so on.
+        For the small-step semantics of expressions, we have one base case and two inductive cases.
+        Hence if we want to show that some property #{P(e,e')} on pairs of expression holds for 
+        all transition #{e\to e'}, we can use rule induction:
+        ##{
+            \frac{
+                \begin{align*}
+                    P(\add\space(\val\space n_1)\space(\val\space n_2),\val\space(n_1+n_2)) \\
+                    \forall x\to x'. P(x,x')\to P(\add\space x\space y,\add\space x'\space y) \\
+                    \forall y\to y'. P(y,y')\to P(\add\space x\space y,\add\space x\space y')
+                \end{align*}
+            }{
+                \forall e\to e'. P(e,e')
+            }
+        }
+        We write #{\forall x\to y.P(x,y)} as shorthand for 
+        ##{\forall x,y.x\to y\Rightarrow P(x,y)}. Now we give the proof 
+        of the property #{\valuation{e} = \valuation{e'}} for all transitions #{e\to e'}.
+        ##{
+            \forall e\to e'. \valuation{e} = \valuation{e'}
+        }
+    }
+    \proof{
+        The proof consists of three parts: the base case, the reduction rule and the structural rule.
+        ##{
+            \begin{align*}
+                \valuation{\add\space(\val\space n)\space(\val\space m)}
+                &= \valuation{\val\space n} + \valuation{\val\space m} \\
+                &= n + m \\
+                &= \valuation{\val\space(n+m)}
+            \end{align*}
+        }
+        and
+        ##{
+            \begin{align*}
+                \valuation{\add\space x\space y}
+                &= \valuation{x} + \valuation{y}  \\
+                &= \valuation{x'} + \valuation{y} (\text{By assumption }\valuation{x}=\valuation{x'}) \\
+                &= \valuation{\add\space x'\space y}
+            \end{align*}
+        }
+        and 
+        ##{
+            \begin{align*}
+                \valuation{\add\space x\space y}
+                &= \valuation{x} + \valuation{y}  \\
+                &= \valuation{x} + \valuation{y'} (\text{By assumption }\valuation{y}=\valuation{y'}) \\ 
+                &= \valuation{\add\space x\space y'}
+            \end{align*}
+        }
+    }
+}

@@ -73,11 +73,7 @@
 \def\mat{\mathcal{M}}
 \def\assoc{\text{assoc}}
 \def\codeblock[lang][body]{
-  \pre{
-    \xml{code}[class]{\lang}{
-      \body
-      }
-  }
+  \pre{\xml{code}[class]{\lang}{\body}}
 }
 
 % Lambda calculus
