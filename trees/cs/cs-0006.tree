@@ -365,3 +365,255 @@ unfold f g x = Node (f x) [unfold f g x' | x' <- g x]
         }
     }
 }
+\subtree{
+    \def\hole{[-]}
+    \def\addl[a0][a1]{\text{AddL}\space\a0\space\a1}
+    \def\addr[a0][a1]{\text{AddR}\space\a0\space\a1}
+    \title{Contextual Semantics}
+    \p{
+        The small-step semantics for expressions above has one basic reduction rule 
+        for adding values and two structural rules that allow addition to be performed
+        in larger expressions. Separating these two kinds of rules results 
+        the notion of \strong{contextual semantics} (or \strong{reduction semantics}).
+    }
+    \p{
+        Informally, a context in this setting is a term with a "\strong{hole}", 
+        usually written as #{\hole}, which can be filled with another term later.
+        In a contextual semantics, the hole represents the location where a \strong{single}
+        basic step of execution may take place within a term.
+    }
+    \p{
+        Consider the following transition in our small-step semantics.
+        ##{
+            (1+2)+(3+4)\to 3+(3+4)
+        }
+        The addition is performed on the left side.
+        We say that we can perform the basic step #{1+2\to3} in the 
+        \strong{context} #{\hole+(3+4)} where #{\hole} implies the location of the
+        addition takes place.
+    }
+    \p{
+        The language #{C} of contexts of arithmetic expressions can be formally defined by 
+        ##{
+            C:\equiv\hole|C+E|E+C
+        }
+        As previously, we can define a Haskell datatype for contexts.
+    }
+    \codeblock{language-haskell}{data Cont = Hole | Add Cont Expr | Add Expr Cont}
+    \p{
+        The kind of context is known as "outside-in" as locating the hole involves
+        navigating from the outside of the context inwards. To fill the hole in 
+        a context #{c} with an expression #{e} we write #{c\space[e]}:
+        ##{
+            \begin{align*}
+                \text{Hole}\space[e] &= e \\
+                (\addl{c}{r})\space[e] &= \add\space (c\space[e])\space r \\
+                (\addr{l}{c})\space[e] &= \add\space l\space(c\space[e])
+            \end{align*}
+        }
+    }
+    \p{
+        Use the idea of hole filling we can redefine the small-step semantics
+        for expressions in contextual style.
+        ##{
+            \frac{}{
+                \add\space(\val\space n_1)\space(\val\space n_2)\rightarrowtail \val\space(n_1+n_2)
+            } \quad
+            \frac{
+                e \rightarrowtail e'
+            }{
+                c\space [e] \to c\space [e']
+            }
+        }
+        This first rule defines a reduction relation #{\rightarrowtail} that captures the basic behavior of addition,
+        while the second defines a transition relation #{\to} that allows the first rule to be applied in 
+        any context.
+    }
+    \p{
+        We have now refactored the small-step semantics into a single reduction rule and a single structural rule.
+        If we subsequently want to extend the language with other features,
+        it only requires adding new reduction rules and extending the notion of contexts
+        but not need to adding new structural rules.
+    }
+    \p{
+        Now we define the hole filling function in Haskell.
+    }
+    \codeblock{language-haskell}{\startverb
+fill :: Cont -> Expr -> Expr
+fill Hole e = e
+fill (AddL c r) e = Add (fill c e) r
+fill (AddR l c) e = Add l (fill c e)
+\stopverb}
+    \p{The dual operation which splits an expression into all possible pairs of 
+    contexts and expressions can be defined:}
+    \codeblock{language-haskell}{\startverb
+split :: Expr -> [(Cont,Expr)]
+split e = (Hole, e) : case e of
+  Val n -> []
+  Add l r -> [(AddL c r, x) | (c, x) <- split l] ++ 
+             [(AddR l c, x) | (c, x) <- split r]
+\stopverb}
+    \p{
+        A pair #{(c,x)} comprising a context #[c] and an expression #{x} is
+        an element of the list returned by \code{split e} precisely when \code{fill c x = e}.
+        The contextual semantics can be translated into Haskell function that returns
+        the lists of all expressions that can be reached by performing a single reduction step.
+    }
+    \codeblock{language-haskell}{\startverb
+reduce :: Expr -> [Expr]
+reduce (Add (Val n) (Val m)) = [Val (n + m)]
+reduce _ = []
+\stopverb}
+    \p{
+        or a single transition step.
+    }
+    \codeblock{language-haskell}{\startverb
+trans :: Expr -> [Expr]
+trans e = [fill c x' | (c, x) <- split e, x' <- reduce x]
+\stopverb}
+    \p{
+        This function splits the given expression into all possible context 
+        and expression pairs, then considering any reduction that can made by each component
+        expression, and finally filling the hole in the context with the reduced expression.
+    }
+    \p{
+        Notice that the contextual semantics does not specify an evaluation
+        order for addition and is non-deterministic. We can modify the language
+        of contexts to achieve so.
+        ##{
+            C:\equiv\hole|C+E|\Z+C
+        }
+        This version of the semantics also satisfies a \strong{unique decomposition property},
+        that is, any expression #{e} that is not a value can be uniquely decomposed into the 
+        form #{e=c\space[x]} for some context #{c} and reducible expression #{x}. This can be 
+        proved by induction on the expression #{e}.
+    }
+    \p{
+        Contexts are related to a number of other important concepts in
+        programming and semantics, including the use of continuations to make control flow
+        explicit (John C. Reynolds 1972).
+    }
+}
+\subtree{
+    \title{Big-step Semantics}
+    \def\evalto{\Downarrow}
+    \p{
+        Big-step semantics is also known as \strong{natural semantics},
+        which focus on large execution step. For a language T of syntactic terms
+        comprises two components: a set #{V} of values and 
+        an evaluation relation between #{T} and #{V} that relates each term 
+        to all values that can be reached by fully executing the term.
+        If a term #{t} and a value #{v} are related, we say that #{t} can evaluate to #{v} 
+        and write this as #{t\Downarrow v}
+    }
+    ##{
+        \frac{}{
+            \val\space n\evalto n
+        }
+        \quad
+        \frac{
+            x\evalto n\quad y\evalto m 
+        }{
+            \add\space x\space y\evalto n+m
+        }
+    }
+    \p{The Haskell function definition is similar to the small-step semantics,
+    by using the list comprehension.}
+    \codeblock{language-haskell}{\startverb
+eval :: Expr -> [Integer]
+eval (Val n) = [n]
+eval (Add x y) = [n + m | n <- eval x, m <- eval y]
+\stopverb}
+    \p{
+        This is similar to denotational semantics but using inference rules
+        rather than a functional manner.
+        However, there is no need for a big-step semantics to be compositional.
+        Formally, the denotational and big-step semantics for the expression language
+        are equivalent, which can be captured by the following property:
+        ##{
+            \valuation{e} = n \iff e\evalto n
+        }
+        This is easily verified by induction.
+    }
+}
+\subtree{
+    
+    \title{Abstract Machine}
+    \p{
+        All the exmaples we have meet focused on explaining semantic ideas,
+        now we show how language of integers and addition can also be used to help 
+        discover semantic ideas.
+        We show how it can be used as the basis for discovering how to implement 
+        an \strong{abstract machine}.
+    }
+    \p{
+        Remember the evaluation order problem we meet before,
+        if we want to make evaluation order explicit, we can introduce additional
+        structure into the semantics by constructing an abstract machine.
+    }
+    \p{
+        Formally, an abstract machine is usually deifned by a set of syntactic rewrite ruless 
+        that make explicit how each step of evaluation proceeds.
+        This section we show how an abstract machine for our example language can 
+        be systematically derived from the evaluation function using steps
+        based on two important semantic concepts, \strong{continuations} and \strong{defunctionalisation}.
+    }
+    \subtree{
+        \title{Add Continuations}
+        \def\eval1{\text{eval}'}
+        \def\eval{\text{eval}}
+        \p{
+            We want to make the order of evaluation explicit in the semantics itself.
+            A standard technique for achieving this aim is to rewrite the semantics
+            in \strong{continuation-passing style}. 
+        }
+        \p{
+            In our setting, a continuation is a function that will be applied to the result of an
+            evaluation. Formally, for our semantics \code{eval :: Expr -> Integer}, a continuation
+            is a function of type \code{Integer -> Integer} that will be applied to the resulting integer
+            to give a new integer. (This type can be generalized to \code{Integer -> a}, but we do not need now)
+            We capture the notion of such a continuation using the following type declaration:
+        }
+        \codeblock{language-haskell}{type Continuation = Integer -> Integer}
+        \p{
+            We now define a new semantics \code{eval'}, which takes an expression and returns
+            an integer as previously but also takes a continuation as an additional argument,
+            which is applied to the result of evaluating the expression.
+        }
+        \codeblock{language-haskell}{eval' :: Expr -> Continuation -> Integer}
+        \p{
+            The behavior of \code{eval'} should be:
+        }
+        ##{
+            \text{eval' e c} = \text{c (eval e)}
+        }
+        \p{
+            We want to calculate a definition that satisfies the specification.
+            Using structural induction on the expression #{e}, we construct 
+            the term \code{eval' e c} by gradually removing the reference to \code{eval}.
+            For the base case, #{e = \val\space n} we have
+        }
+        ##{
+            \begin{align*}
+                \eval1\space(\val\space n)\space c 
+                &= c\space (\eval\space (\val\space n)) \\
+                &= c\space n
+            \end{align*}
+        }
+        \p{
+            For the inductive case, #{e = \add\space x\space y} we begin in the same way:
+        }
+        ##{
+            \begin{align*}
+                \eval1\space(\add\space x\space y)\space c 
+                &= c\space (\eval\space (\add\space x\space y)) \\
+                &= c\space (\eval\space x + \eval\space y)
+            \end{align*}
+        }
+        \p{
+            However, no further definition can be applied now, so we consider the inductive hypothese:
+            Forall #{c'} and #{c''} we have #{\eval1\space x\space c' = c'(\eval\space x)} and
+            #{\eval1\space y\space c'' = c''(\eval\space y)}. 
+        }
+    }
+}
