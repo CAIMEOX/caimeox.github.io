@@ -812,8 +812,8 @@ data INST = NEXT Expr | ADD Integer}
         \p{
             #{\exec} executes the control stack. If the control stack is empty,
             then just return the integer argument as the result. If the top instruction
-            is #{\NEXT\space y}, we evaluate #{y} and place the instruction #{\ADD\space n}
-            to the stack top. If the top instruction is #{\ADD\space n},evaluation of the 
+            is #{\NEXT\space y}, we evaluate #{y} and place the instruction #{\text{ADD}\space n}
+            to the stack top. If the top instruction is #{\text{ADD}\space n},evaluation of the 
             two arguments of an addition is complete, and we execute the remaining control stack 
             in the context of the sum of the resulting integers.
         }
