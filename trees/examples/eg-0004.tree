@@ -1,8 +1,7 @@
 \title{Homogeneous Linear Equations System}
 \taxon{Example}
 \import{macros}
-\subtree{
-    \title{Reprase in terms of a linear map the question of whether a [homogeneous system linear equations](def-002Q) has a nonzero solution.}
+    \p{Reprase in terms of a linear map the question of whether a [homogeneous system linear equations](def-002Q) has a nonzero solution.}
     \p{
         Let #{A} be the coefficient matrix of a homogeneous linear system.
         ##{
@@ -26,4 +25,3 @@
         asking #{\nulls T} is nontrivial.
         That is, #{T} is [not injective](thm-000G).
     }
-}
