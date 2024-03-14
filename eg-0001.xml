@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4480</anchor> <taxon>Example</taxon> <addr>eg-0001</addr><route>eg-0001.xml</route>    <title>Fibonacci Function</title>   </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4494</anchor> <taxon>Example</taxon> <addr>eg-0001</addr><route>eg-0001.xml</route>    <title>Fibonacci Function</title>   </frontmatter> <mainmatter><p>
     The <strong>Fibonacci function</strong> is a well-known function in mathematics.
     It is defined by pattern matching on the variable <tex>n</tex> as follows:
-    <tex display="block">          \begin {align*}              \text {fib}(0) &amp; : \equiv  0              \\               \text {fib}(1) &amp; : \equiv  1              \\               \text {fib}(n+2) &amp; : \equiv   \text {fib}(n) +  \text {fib}(n+1)          \end {align*}     </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4481</anchor> <taxon>Type Theory</taxon> <addr>tt-0003</addr><route>tt-0003.xml</route>  <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Natural Numbers <tex>\mathbb {N}</tex></title>   </frontmatter> <mainmatter><p>
+    <tex display="block">          \begin {align*}              \text {fib}(0) &amp; : \equiv  0              \\               \text {fib}(1) &amp; : \equiv  1              \\               \text {fib}(n+2) &amp; : \equiv   \text {fib}(n) +  \text {fib}(n+1)          \end {align*}     </tex></p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4495</anchor> <taxon>Type Theory</taxon> <addr>tt-0003</addr><route>tt-0003.xml</route>  <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Natural Numbers <tex>\mathbb {N}</tex></title>   </frontmatter> <mainmatter><p>
     In previous post, we have seen the basic inference rules of type theory.
     Now we will see the definition of natural numbers as an inductive type.
     Refer to <link href="hott-book-2013.xml" type="local" addr="hott-book-2013" title="Homotopy Type Theory: Univalent Foundations of Mathematics">HoTT Book</link> and <link href="hott-2022.xml" type="local" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke's</link>.
@@ -13,7 +13,7 @@
 </p><p>
     In type theory, the type <tex>\mathbb {N}</tex> of natural number is an <link href="def-001X.xml" type="local" addr="def-001X" title="Inductive Type"><strong>inductive type</strong></link>.
     Just like in dependent function type, we need four inference rules to define the natural numbers.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4482</anchor> <taxon>Definition</taxon> <addr>def-001Y</addr><route>def-001Y.xml</route>    <title>Natural Number</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4496</anchor> <taxon>Definition</taxon> <addr>def-001Y</addr><route>def-001Y.xml</route>    <title>Natural Number</title>   </frontmatter> <mainmatter><p>
     In type theory, <strong>natural number</strong> is defined using <strong>peano encoding</strong>.
     The type <tex>\mathbb {N}</tex> is formed by the formation rule:
     <tex display="block">          \frac {}{ \vdash \mathbb {N} \space \text {type} } \mathbb {N} \text {-form}     </tex></p><p>
@@ -31,14 +31,14 @@
     <tex display="block">          \frac {              \begin {align*}                  \Gamma &amp;,n: \mathbb {N} \vdash  P(n) \space \text {type}                   \\                   \Gamma &amp; \vdash  p_0:P(0)                  \\                   \Gamma &amp; \vdash  p_S: \Pi _{(n: \mathbb {N} )}P(n) \to  P( \text {succ} (n))              \end {align*}         }{              \text {ind}_ \mathbb {N} (p_0,p_S,m) \equiv               \begin {cases}                 p_0&amp; \text {if }m=0                  \\                  p_S(n, \text {ind}_ \mathbb {N} (p_0,p_S,n))&amp; \text {if }m= \text {succ} (n)              \end {cases}         }( \mathbb {N}   \text {-comp})     </tex></p></mainmatter> </tree><p>
     Now let's use the type theoretical induction principle of <tex>\mathbb {N}</tex> to
     perform some basic construction over <tex>\mathbb {N}</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4483</anchor> <taxon>Definition</taxon> <addr>def-001Z</addr><route>def-001Z.xml</route>    <title>Addition over <tex>\mathbb {N}</tex></title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4497</anchor> <taxon>Definition</taxon> <addr>def-001Z</addr><route>def-001Z.xml</route>    <title>Addition over <tex>\mathbb {N}</tex></title>   </frontmatter> <mainmatter><p>
     We define addition over <tex>\mathbb {N}</tex> using the type theoretical induction principle of <tex>\mathbb {N}</tex>.
     <tex display="block">          \text {add}_ \mathbb {N}  :  \mathbb {N}   \to  ( \mathbb {N}   \to   \mathbb {N} )     </tex>
     which satisfies the following specification:
     <tex display="block">          \begin {align*}              \text {add}_ \mathbb {N} (n, 0)&amp;: \equiv  n              \\               \text {add}_ \mathbb {N} (m, \text {succ} (n))&amp;: \equiv \text {succ} ( \text {add}_ \mathbb {N} (m,n))          \end {align*}     </tex>
     abbreviated as <tex>m + n</tex> for <tex>\text {add}_ \mathbb {N} (m,n)</tex>.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4484</anchor>      <title><strong>Construction</strong></title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4498</anchor>      <title><strong>Construction</strong></title>   </frontmatter> <mainmatter>
     
         <p>
             We construct the additon by perform induction over the second variable <tex>n</tex>.
@@ -68,7 +68,7 @@
     Just present the definition by writing
     <tex display="block">          \begin {align*}             f(0) &amp; : \equiv  p_0              \\              f( \text {succ} (n)) &amp; : \equiv  p_S(n,f(n))          \end {align*}     </tex>
     <tex>f</tex> is said to be defined by <strong>pattern matching</strong> on the variable <tex>n</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4485</anchor> <taxon>Example</taxon> <addr>eg-0001</addr><route>eg-0001.xml</route>    <title>Fibonacci Function</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>4499</anchor> <taxon>Example</taxon> <addr>eg-0001</addr><route>eg-0001.xml</route>    <title>Fibonacci Function</title>   </frontmatter> <mainmatter><p>
     The <strong>Fibonacci function</strong> is a well-known function in mathematics.
     It is defined by pattern matching on the variable <tex>n</tex> as follows:
     <tex display="block">          \begin {align*}              \text {fib}(0) &amp; : \equiv  0              \\               \text {fib}(1) &amp; : \equiv  1              \\               \text {fib}(n+2) &amp; : \equiv   \text {fib}(n) +  \text {fib}(n+1)          \end {align*}     </tex></p></mainmatter> </tree></mainmatter> </tree></context> <related/> <backlinks/> <references/></backmatter></tree>

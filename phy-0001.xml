@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1429</anchor> <taxon>String Theory</taxon> <addr>phy-0001</addr><route>phy-0001.xml</route>  <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and Extra Dimensions</title>   </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1435</anchor> <taxon>String Theory</taxon> <addr>phy-0001</addr><route>phy-0001.xml</route>  <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and Extra Dimensions</title>   </frontmatter> <mainmatter><p>
     This is a summary of the first chapter of <link href="string-theory-2009.xml" type="local" addr="string-theory-2009" title="A First Course in String Theory">A First Course in String Theory</link> by Barton Zwiebach.
     I will make it as understandable as possible.
 </p><p>
@@ -26,7 +26,7 @@
     The invariant interval implies the following equation:
     <tex display="block">          \Delta  s ^2 =  \Delta  s'^2     </tex>
     The minus sign on the left of <tex>\Delta  s^2</tex> implies that <tex>\Delta  s^2 &gt;0</tex> for events that are <strong>timelike separated</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1430</anchor> <taxon>Definition</taxon> <addr>def-001H</addr><route>def-001H.xml</route>    <title>Timelike Separated Events</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1436</anchor> <taxon>Definition</taxon> <addr>def-001H</addr><route>def-001H.xml</route>    <title>Timelike Separated Events</title>   </frontmatter> <mainmatter><p>
     An event <tex>S</tex> is said to be timelike separated if
     <tex display="block">         ( \Delta  x^0)^2 &gt; ( \Delta  x^1)^2 + ( \Delta  x^2)^2 + ( \Delta  x^3)^2     </tex>
     or briefly <tex>\Delta  s^2 &gt; 0</tex>. The spatial separation is less than the distance light travels.
@@ -34,10 +34,10 @@
     The history of a particle is represented in spacetime as a curve called a <strong>world-line</strong>.
     Any two events on the world-line are timelike separated, because no particle can 
     move faster than light.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1431</anchor> <taxon>Definition</taxon> <addr>def-001I</addr><route>def-001I.xml</route>    <title>Lightlike Separated Events</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1437</anchor> <taxon>Definition</taxon> <addr>def-001I</addr><route>def-001I.xml</route>    <title>Lightlike Separated Events</title>   </frontmatter> <mainmatter><p>
     Events connected by the world-line of a <strong>photon</strong> are said to be <strong>lightlike separated</strong>.
     For which <tex>\Delta  s^2 = 0</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1432</anchor> <taxon>Definition</taxon> <addr>def-001J</addr><route>def-001J.xml</route>    <title>Spacelike Separated Events</title>   </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1438</anchor> <taxon>Definition</taxon> <addr>def-001J</addr><route>def-001J.xml</route>    <title>Spacelike Separated Events</title>   </frontmatter> <mainmatter><p>
     Two events for which <tex>\Delta  s^2 &lt; 0</tex> are said to be <strong>spacelike separated</strong>.
     Events that are simultaneous in a Lorentz frame but in different position are spacelike separated.
 </p></mainmatter> </tree><p>
@@ -62,7 +62,7 @@
     We can also express the interval <tex>ds^2</tex> using the <strong>Minkowski Metric</strong>:
     <tex display="block">         -ds^2=  \eta _{ \mu \nu } dx^ \mu  dx^ \nu      </tex>
     and the metric is defined by
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1433</anchor> <taxon>Definition</taxon> <addr>def-001L</addr><route>def-001L.xml</route>    <title>Minkowski Metric</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1439</anchor> <taxon>Definition</taxon> <addr>def-001L</addr><route>def-001L.xml</route>    <title>Minkowski Metric</title>   </frontmatter> <mainmatter><p>
     The <strong>Minkowski Metric</strong>, aka <strong>Minkowski Tensor</strong>, is a tensor <tex>\eta _{ \mu \nu }</tex> whose elements are defined by the matrix
     <tex display="block">          \eta _{ \mu \nu } =  \begin {pmatrix}             -1 &amp; 0 &amp; 0 &amp; 0  \\              0 &amp; 1 &amp; 0 &amp; 0  \\              0 &amp; 0 &amp; 1 &amp; 0  \\              0 &amp; 0 &amp; 0 &amp; 1           \end {pmatrix}     </tex>
     where <tex>\mu</tex> and <tex>\nu</tex> are Lorentz indices run over <tex>0,1,2,3</tex>.
@@ -90,12 +90,12 @@
     And the inverse property is
     <tex display="block">          \eta ^{ \mu \rho }  \eta _{ \rho \nu } =  \delta ^ \mu _ \nu      </tex>
     where <tex>\delta ^ \mu _ \nu</tex> is the <link href="def-001P.xml" type="local" addr="def-001P" title="Kronecker Delta">Kronecker Delta</link>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1434</anchor> <taxon>Trick</taxon> <addr>thm-0004</addr><route>thm-0004.xml</route>    <title>Raise Indices</title>   </frontmatter> <mainmatter><p><tex display="block">          \eta ^{ \rho \mu }b_ \mu          =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )         =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu          =  \delta ^ \rho _ \nu  b^ \nu          = b^ \rho      </tex>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1440</anchor> <taxon>Trick</taxon> <addr>thm-0004</addr><route>thm-0004.xml</route>    <title>Raise Indices</title>   </frontmatter> <mainmatter><p><tex display="block">          \eta ^{ \rho \mu }b_ \mu          =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )         =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu          =  \delta ^ \rho _ \nu  b^ \nu          = b^ \rho      </tex>
     The lower index of <tex>b_ \mu</tex> is raised to <tex>b^ \rho</tex> by <tex>\eta ^{ \rho \mu }</tex>.
 </p></mainmatter> </tree><p><strong>Lorentz transformations</strong> are the relations between coordinates in two different
     inertial frames.
     
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1435</anchor> <taxon>Definition</taxon> <addr>def-001Q</addr><route>def-001Q.xml</route>    <title>Lorentz Transformations</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1441</anchor> <taxon>Definition</taxon> <addr>def-001Q</addr><route>def-001Q.xml</route>    <title>Lorentz Transformations</title>   </frontmatter> <mainmatter><p>
     Consider a frame <tex>S</tex> and <tex>S'</tex> which is moving along the <tex>+x</tex> direction of the <tex>S</tex> frame
     with a velocity <tex>v</tex>.
     Assume that the origins of the two frames coincide at <tex>t=t'=0</tex> and coordinate axes are parallel.
@@ -115,7 +115,7 @@
 </p></mainmatter> </tree><p>
     We now introduce a coordinate system that will be extremely useful in string theory,
     the <strong>light-cone coordinates</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1436</anchor> <taxon>Definition</taxon> <addr>def-001R</addr><route>def-001R.xml</route>    <title>Light-cone Coordinates</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1442</anchor> <taxon>Definition</taxon> <addr>def-001R</addr><route>def-001R.xml</route>    <title>Light-cone Coordinates</title>   </frontmatter> <mainmatter><p>
     The <strong>light-cone coordinates</strong> can be defined as
     two independent <link href="def-000L.xml" type="local" addr="def-000L" title="Linear Combination">linear combinations</link> of the time 
     and a chosen spatial coordinate (conventionally <tex>x^1</tex>):
@@ -195,7 +195,7 @@
     Different Lorentz observers will measure different time intervals between the two events.
     But imagine a clock that moves along the world-line.
     The time measured by the clock is called the <strong>proper time</strong> between the two events.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1437</anchor> <taxon>Definition</taxon> <addr>def-001S</addr><route>def-001S.xml</route>    <title>Proper Time</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1443</anchor> <taxon>Definition</taxon> <addr>def-001S</addr><route>def-001S.xml</route>    <title>Proper Time</title>   </frontmatter> <mainmatter><p>
     The <strong>proper time</strong> along a timelike world-line is defined as the
     time as measured by a clock following that line. 
 </p></mainmatter> </tree><p>
@@ -228,7 +228,7 @@
     <tex display="block">         p^0 =  \frac {E}{c}  \sqrt { \vec {p}^2 + m^2c^2} &gt; | \vec {p}| \geq  |p^1|     </tex>
     Hence <tex>p^0 \pm  p^1 &gt; 0</tex> and <tex>p^ \pm &gt;0</tex>, which both are possible candidates for energy.
     We finally choose <tex>p^-</tex> as the component, we explain this later. 
-</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1438</anchor>  <addr>posts</addr><route>posts.xml</route>   <authors> <contributor>CAIMEO</contributor></authors> <title>Blog posts</title>   </frontmatter> <mainmatter><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1439</anchor> <taxon>Type Theory</taxon> <addr>tt-0002</addr><route>tt-0002.xml</route>  <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title>   </frontmatter> <mainmatter><p>This is a note on dependent type theory. Refer to <link href="hott-book-2013.xml" type="local" addr="hott-book-2013" title="Homotopy Type Theory: Univalent Foundations of Mathematics">HoTT Book</link> and <link href="hott-2022.xml" type="local" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke's</link>.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1444</anchor>  <addr>posts</addr><route>posts.xml</route>   <authors> <contributor>CAIMEO</contributor></authors> <title>Blog posts</title>   </frontmatter> <mainmatter><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1445</anchor> <taxon>Type Theory</taxon> <addr>tt-0002</addr><route>tt-0002.xml</route>  <date><year>2024</year> <month>1</month> <day>27</day></date>  <title>Introduction to Type Theory</title>   </frontmatter> <mainmatter><p>This is a note on dependent type theory. Refer to <link href="hott-book-2013.xml" type="local" addr="hott-book-2013" title="Homotopy Type Theory: Univalent Foundations of Mathematics">HoTT Book</link> and <link href="hott-2022.xml" type="local" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke's</link>.</p><p><strong>Homotopy type theory</strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
     The set-theoretic foundation has two two layers:
     <ul><li>the deductive system of first-order logic</li>
         <li>the theory of a particular theory, such as ZFC</li></ul> 
@@ -268,7 +268,7 @@
         In type theory there is also a requirement for a judgment-level equality.
         This is called <strong>judgmental equality</strong>, meaning &quot;equal by definition&quot;.
     </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1440</anchor> <taxon>Definition</taxon> <addr>def-0015</addr><route>def-0015.xml</route>    <title>Judgemental Equality</title>   </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1446</anchor> <taxon>Definition</taxon> <addr>def-0015</addr><route>def-0015.xml</route>    <title>Judgemental Equality</title>   </frontmatter> <mainmatter><p><strong>Judgemental equality</strong> of terms is given by the following judgement:
     <tex display="block">          \Gamma \vdash  a \equiv  a':A     </tex>
     <tex>a</tex> and <tex>a'</tex> are judgementally equal terms of type <tex>A</tex> in context <tex>\Gamma</tex>.
 </p><p>
@@ -288,7 +288,7 @@
     <ul><li>Rules allow us to conclude one judgment from a collection of other judgments.</li>
         <li>Axioms are judgments that are assumed to be true without proof.</li></ul></p><p>
     We start by introduction to Matrin Lof's dependent type theory. 
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1441</anchor> <taxon>Definition</taxon> <addr>def-0017</addr><route>def-0017.xml</route>    <title>Dependent type theory: Judgments</title>   </frontmatter> <mainmatter>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1447</anchor> <taxon>Definition</taxon> <addr>def-0017</addr><route>def-0017.xml</route>    <title>Dependent type theory: Judgments</title>   </frontmatter> <mainmatter>
     <p>
         There are four kinds of judgments in Martin Lof's dependent type theory:
     </p>
@@ -307,7 +307,7 @@
 
     To introduce types dependent on terms, 
     we need the notation of type families.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1442</anchor> <taxon>Definition</taxon> <addr>def-0018</addr><route>def-0018.xml</route>    <title>Type Family</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1448</anchor> <taxon>Definition</taxon> <addr>def-0018</addr><route>def-0018.xml</route>    <title>Type Family</title>   </frontmatter> <mainmatter><p>
     Consider a type <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>family</strong> of types over <tex>A</tex> in context <tex>\Gamma</tex>
     is a type <tex>B(x)</tex> in context <tex>\Gamma , x:A</tex>.
@@ -316,7 +316,7 @@
     Alternatively, we say that <tex>B(x)</tex> is a type <strong>indexed</strong> by <tex>x:A</tex> in context <tex>\Gamma</tex>.
 </p></mainmatter> </tree><p>
     Now we can define a term of a type family, that is, a section of a type family.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1443</anchor> <taxon>Definition</taxon> <addr>def-0019</addr><route>def-0019.xml</route>    <title>Section of Type Family</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1449</anchor> <taxon>Definition</taxon> <addr>def-0019</addr><route>def-0019.xml</route>    <title>Section of Type Family</title>   </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" addr="def-0018" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>.
     A <strong>section</strong> of <tex>B</tex> is a term <tex>b</tex> of type <tex>B(x)</tex> in context <tex>\Gamma ,x:A</tex>.
     <tex display="block">          \Gamma , x:A  \vdash  b : B(x)     </tex>
@@ -330,7 +330,7 @@
         <li>Vairable conversion</li>
         <li>Substitution</li>
         <li>Weakening</li>
-        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1444</anchor> <taxon>Definition</taxon> <addr>def-001A</addr><route>def-001A.xml</route>    <title>
+        <li>Generic element</li></ul></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1450</anchor> <taxon>Definition</taxon> <addr>def-001A</addr><route>def-001A.xml</route>    <title>
     Formation of contexts, types and terms
 </title>   </frontmatter> <mainmatter><p>
     The following rules follow from the presuppotion
@@ -338,13 +338,13 @@
 </p><ul><li><tex display="block">              \frac {                  \Gamma ,x:A \vdash  B(x) \space \text {type}              }{                  \Gamma \vdash  A \space \text {type}              }         </tex></li>
     <li><tex display="block">              \frac {                  \Gamma \vdash  A \equiv  B \space \text {type}              }{                  \Gamma \vdash  A \space \text {type}              }              \quad               \frac {                  \Gamma \vdash  A \equiv  B \space \text {type}              }{                  \Gamma \vdash  B \space \text {type}              }         </tex></li>
     <li><tex display="block">              \frac {                  \Gamma \vdash  a:A             }{                  \Gamma \vdash  A \space \text {type}              }         </tex></li>
-    <li><tex display="block">              \frac {                  \Gamma \vdash  a \equiv  b:A             }{                  \Gamma \vdash  a:A             }              \quad                \frac {                  \Gamma \vdash  a \equiv  b:A             }{                  \Gamma \vdash  b:A             }         </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1445</anchor> <taxon>Definition</taxon> <addr>def-001B</addr><route>def-001B.xml</route>    <title>
+    <li><tex display="block">              \frac {                  \Gamma \vdash  a \equiv  b:A             }{                  \Gamma \vdash  a:A             }              \quad                \frac {                  \Gamma \vdash  a \equiv  b:A             }{                  \Gamma \vdash  b:A             }         </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1451</anchor> <taxon>Definition</taxon> <addr>def-001B</addr><route>def-001B.xml</route>    <title>
     Judgmental equality is equivalence relation
 </title>   </frontmatter> <mainmatter><p>
     Judgmental equality on types and on elements is an <link href="def-000X.xml" type="local" addr="def-000X" title="Equivalence Relation">equivalence relation</link> 
     simply postulate that these relations are reflexive, symmetric, and transitive:
 </p><ul><li><tex display="block">              \frac {                  \Gamma \vdash  a:A             }{                  \Gamma \vdash  a \equiv  a:A             }              \quad               \frac {                  \Gamma \vdash  a \equiv  b:A             }{                  \Gamma \vdash  b \equiv  a:A             }              \quad               \frac {                  \Gamma \vdash  a \equiv  b:A                  \quad                   \Gamma \vdash  b \equiv  c:A             }{                  \Gamma \vdash  a \equiv  c:A             }         </tex></li>
-    <li><tex display="block">              \frac {                  \Gamma \vdash  A \space \text {type}              }{                  \Gamma \vdash  A \equiv  A \space \text {type}              }              \quad               \frac {                  \Gamma \vdash  A \equiv  B \space \text {type}              }{                  \Gamma \vdash  B \equiv  A \space \text {type}              }              \quad               \frac {                  \Gamma \vdash  A \equiv  B \space \text {type}                   \quad                   \Gamma \vdash  B \equiv  C \space \text {type}              }{                  \Gamma \vdash  A \equiv  C \space \text {type}              }         </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1446</anchor> <taxon>Definition</taxon> <addr>def-001C</addr><route>def-001C.xml</route>    <title>Variable Conversion</title>   </frontmatter> <mainmatter><p>
+    <li><tex display="block">              \frac {                  \Gamma \vdash  A \space \text {type}              }{                  \Gamma \vdash  A \equiv  A \space \text {type}              }              \quad               \frac {                  \Gamma \vdash  A \equiv  B \space \text {type}              }{                  \Gamma \vdash  B \equiv  A \space \text {type}              }              \quad               \frac {                  \Gamma \vdash  A \equiv  B \space \text {type}                   \quad                   \Gamma \vdash  B \equiv  C \space \text {type}              }{                  \Gamma \vdash  A \equiv  C \space \text {type}              }         </tex></li></ul></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1452</anchor> <taxon>Definition</taxon> <addr>def-001C</addr><route>def-001C.xml</route>    <title>Variable Conversion</title>   </frontmatter> <mainmatter><p>
     This rule postulates that we can
     convert the type of a variable to a judgmentally equal type.
     <tex display="block">          \frac {              \Gamma \vdash  A \equiv  A' \space \text {type}               \quad               \Gamma ,x:A, \Delta \vdash  B(x) \space \text {type}          }{              \Gamma ,x:A', \Delta \vdash  B(x) \space \text {type}          }     </tex>
@@ -355,7 +355,7 @@
     and we also have a term <tex>a:A</tex>.
     We can simultaneously substitute <tex>a</tex> for all occurrences of <tex>x</tex> in <tex>f</tex>
     to obtain a new term <tex>f[x:=a]:B(a)</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1447</anchor> <taxon>Definition</taxon> <addr>def-001D</addr><route>def-001D.xml</route>    <title>Substitution</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1453</anchor> <taxon>Definition</taxon> <addr>def-001D</addr><route>def-001D.xml</route>    <title>Substitution</title>   </frontmatter> <mainmatter><p>
     The substitution rule postulates that we can substitute a term for a variable.
     <tex display="block">          \frac {              \Gamma \vdash  a:A              \quad               \Gamma ,x:A, \Delta \vdash   \mathcal {J}         }{              \Gamma , \Delta [x:=a] \vdash   \mathcal {J}[x:=a]         }S     </tex>
     The notation <tex>\Gamma , \Delta [x:=a]</tex> means that we substitute <tex>a</tex> for <tex>x</tex> in <tex>\Delta</tex>.
@@ -364,7 +364,7 @@
     convert judgmental equality of terms and types.
     <tex display="block">          \frac {              \Gamma \vdash  a \equiv  a':A              \quad               \Gamma ,x:A, \Delta \vdash  B  \space \text {type}          }{              \Gamma , \Delta [x:=a] \vdash  B[x:=a] \equiv  B[x:=a']  \space \text {type}          }     </tex>
 
-    <tex display="block">          \frac {              \Gamma \vdash  A \equiv  A' \space \text {type}               \quad               \Gamma ,x:A, \Delta \vdash  b:A         }{              \Gamma , \Delta [x:=a] \vdash  b[x:=a] \equiv  b[x:=a']:A'[x:=a]  \space \text {type}          }     </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1448</anchor> <taxon>Definition</taxon> <addr>def-001G</addr><route>def-001G.xml</route>    <title>Fiber and Value</title>   </frontmatter> <mainmatter><p>
+    <tex display="block">          \frac {              \Gamma \vdash  A \equiv  A' \space \text {type}               \quad               \Gamma ,x:A, \Delta \vdash  b:A         }{              \Gamma , \Delta [x:=a] \vdash  b[x:=a] \equiv  b[x:=a']:A'[x:=a]  \space \text {type}          }     </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1454</anchor> <taxon>Definition</taxon> <addr>def-001G</addr><route>def-001G.xml</route>    <title>Fiber and Value</title>   </frontmatter> <mainmatter><p>
     Let <tex>B</tex> be a <link href="def-0018.xml" type="local" addr="def-0018" title="Type Family">type family</link> over <tex>A</tex> in context <tex>\Gamma</tex>,
     an a well-formed term <tex>a:A</tex>,
     then we say that <tex>B[x:=a]</tex> is the <strong>fiber</strong> of <tex>B</tex> at <tex>a</tex>, denoted <tex>B(a)</tex>.
@@ -376,12 +376,12 @@
     The process of expanding the context by a fresh variable of type <tex>A</tex> is called weakening (by <tex>A</tex>).
     Intuitively, weakening is the process of adding a new hypothesis to the context.
     And the hypothesis will weaken the conclusion.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1449</anchor> <taxon>Definition</taxon> <addr>def-001E</addr><route>def-001E.xml</route>    <title>Weakening</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1455</anchor> <taxon>Definition</taxon> <addr>def-001E</addr><route>def-001E.xml</route>    <title>Weakening</title>   </frontmatter> <mainmatter><p>
     Weakening rule asserts that we can add a variable to the context.
     <tex display="block">          \frac {              \Gamma \vdash  A \space \text {type}               \quad                \Gamma , \Delta \vdash   \mathcal {J}         }{              \Gamma ,x:A, \Delta \vdash   \mathcal {J}         }W      </tex></p></mainmatter> </tree><p>
     Finally, the generic elemets rule ensures that
     the variables declared in a context.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1450</anchor> <taxon>Definition</taxon> <addr>def-001F</addr><route>def-001F.xml</route>    <title>Generic Elements</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1456</anchor> <taxon>Definition</taxon> <addr>def-001F</addr><route>def-001F.xml</route>    <title>Generic Elements</title>   </frontmatter> <mainmatter><p>
     The rule for the generic element asserts that 
     any hypothetical element <tex>x:A</tex> in context <tex>\Gamma ,x:A</tex>
     is also an element of <tex>A</tex> in context <tex>\Gamma ,x:A</tex>.
@@ -405,7 +405,7 @@
         <li>Elimination rule</li>
         <li>Computation rule</li></ul>
     Besides these we also need the <strong>congruence rule</strong> for judgmental equality.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1451</anchor> <taxon>Definition</taxon> <addr>def-001T</addr><route>def-001T.xml</route>    <title>Dependent Function Type</title>   </frontmatter> <mainmatter><p><strong>Formation Rule</strong>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1457</anchor> <taxon>Definition</taxon> <addr>def-001T</addr><route>def-001T.xml</route>    <title>Dependent Function Type</title>   </frontmatter> <mainmatter><p><strong>Formation Rule</strong>
     For any type family <tex>B</tex> over <tex>A</tex> in context <tex>\Gamma</tex>:
     <tex display="block">          \frac {              \Gamma ,x:A \vdash  B(x) \space \text {type}          }{              \Gamma \vdash   \Pi _{(x:A)}B(x) \space \text {type}          } \Pi      </tex>
     We also require that the operation of forming dependent function types
@@ -424,7 +424,7 @@
     We postulate that all elements of a dependent function type are dependent functions.
     <tex display="block">          \frac {              \Gamma \vdash  f: \Pi _{(x:A)}B(x)         }{              \Gamma \vdash  f \equiv   \lambda  x.f(x): \Pi _{(x:A)}B(x)         } \eta      </tex></p></mainmatter> </tree><p>
     A degenrated case of dependent function type is the ordinary function type.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1452</anchor> <taxon>Definition</taxon> <addr>def-001U</addr><route>def-001U.xml</route>    <title>Ordinary Function Type</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1458</anchor> <taxon>Definition</taxon> <addr>def-001U</addr><route>def-001U.xml</route>    <title>Ordinary Function Type</title>   </frontmatter> <mainmatter><p>
     A special case of <link href="def-001T.xml" type="local" addr="def-001T" title="Dependent Function Type"><tex>\Pi</tex>-type</link> is the <strong>ordinary function type</strong>.
     Using weakening rule we can obtain thee type <tex>A \to  B</tex> of ordinary function from <tex>A</tex> to <tex>B</tex>
     <tex display="block">          \frac {              \Gamma \vdash  A \space \text {type}               \quad               \Gamma \vdash  B \space \text {type}          }{ \dfrac {              \Gamma ,x:A \vdash  B \space \text {type}          }{              \Gamma \vdash   \Pi _{(x:A)}B \space \text {type}          } \Pi }W     </tex>
@@ -433,7 +433,7 @@
     The type <tex>A</tex> is called <strong>domain</strong> of <tex>f</tex>,
     and type <tex>B</tex> is called <strong>codomain</strong> of <tex>f</tex>.
     The notation <tex>:=</tex> here means to make a definition.
-</p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1453</anchor> <taxon>Type Theory</taxon> <addr>tt-0003</addr><route>tt-0003.xml</route>  <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Natural Numbers <tex>\mathbb {N}</tex></title>   </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1459</anchor> <taxon>Type Theory</taxon> <addr>tt-0003</addr><route>tt-0003.xml</route>  <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Natural Numbers <tex>\mathbb {N}</tex></title>   </frontmatter> <mainmatter><p>
     In previous post, we have seen the basic inference rules of type theory.
     Now we will see the definition of natural numbers as an inductive type.
     Refer to <link href="hott-book-2013.xml" type="local" addr="hott-book-2013" title="Homotopy Type Theory: Univalent Foundations of Mathematics">HoTT Book</link> and <link href="hott-2022.xml" type="local" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke's</link>.
@@ -443,7 +443,7 @@
 </p><p>
     In type theory, the type <tex>\mathbb {N}</tex> of natural number is an <link href="def-001X.xml" type="local" addr="def-001X" title="Inductive Type"><strong>inductive type</strong></link>.
     Just like in dependent function type, we need four inference rules to define the natural numbers.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1454</anchor> <taxon>Definition</taxon> <addr>def-001Y</addr><route>def-001Y.xml</route>    <title>Natural Number</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1460</anchor> <taxon>Definition</taxon> <addr>def-001Y</addr><route>def-001Y.xml</route>    <title>Natural Number</title>   </frontmatter> <mainmatter><p>
     In type theory, <strong>natural number</strong> is defined using <strong>peano encoding</strong>.
     The type <tex>\mathbb {N}</tex> is formed by the formation rule:
     <tex display="block">          \frac {}{ \vdash \mathbb {N} \space \text {type} } \mathbb {N} \text {-form}     </tex></p><p>
@@ -461,14 +461,14 @@
     <tex display="block">          \frac {              \begin {align*}                  \Gamma &amp;,n: \mathbb {N} \vdash  P(n) \space \text {type}                   \\                   \Gamma &amp; \vdash  p_0:P(0)                  \\                   \Gamma &amp; \vdash  p_S: \Pi _{(n: \mathbb {N} )}P(n) \to  P( \text {succ} (n))              \end {align*}         }{              \text {ind}_ \mathbb {N} (p_0,p_S,m) \equiv               \begin {cases}                 p_0&amp; \text {if }m=0                  \\                  p_S(n, \text {ind}_ \mathbb {N} (p_0,p_S,n))&amp; \text {if }m= \text {succ} (n)              \end {cases}         }( \mathbb {N}   \text {-comp})     </tex></p></mainmatter> </tree><p>
     Now let's use the type theoretical induction principle of <tex>\mathbb {N}</tex> to
     perform some basic construction over <tex>\mathbb {N}</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1455</anchor> <taxon>Definition</taxon> <addr>def-001Z</addr><route>def-001Z.xml</route>    <title>Addition over <tex>\mathbb {N}</tex></title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1461</anchor> <taxon>Definition</taxon> <addr>def-001Z</addr><route>def-001Z.xml</route>    <title>Addition over <tex>\mathbb {N}</tex></title>   </frontmatter> <mainmatter><p>
     We define addition over <tex>\mathbb {N}</tex> using the type theoretical induction principle of <tex>\mathbb {N}</tex>.
     <tex display="block">          \text {add}_ \mathbb {N}  :  \mathbb {N}   \to  ( \mathbb {N}   \to   \mathbb {N} )     </tex>
     which satisfies the following specification:
     <tex display="block">          \begin {align*}              \text {add}_ \mathbb {N} (n, 0)&amp;: \equiv  n              \\               \text {add}_ \mathbb {N} (m, \text {succ} (n))&amp;: \equiv \text {succ} ( \text {add}_ \mathbb {N} (m,n))          \end {align*}     </tex>
     abbreviated as <tex>m + n</tex> for <tex>\text {add}_ \mathbb {N} (m,n)</tex>.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1456</anchor>      <title><strong>Construction</strong></title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1462</anchor>      <title><strong>Construction</strong></title>   </frontmatter> <mainmatter>
     
         <p>
             We construct the additon by perform induction over the second variable <tex>n</tex>.
@@ -498,10 +498,10 @@
     Just present the definition by writing
     <tex display="block">          \begin {align*}             f(0) &amp; : \equiv  p_0              \\              f( \text {succ} (n)) &amp; : \equiv  p_S(n,f(n))          \end {align*}     </tex>
     <tex>f</tex> is said to be defined by <strong>pattern matching</strong> on the variable <tex>n</tex>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1457</anchor> <taxon>Example</taxon> <addr>eg-0001</addr><route>eg-0001.xml</route>    <title>Fibonacci Function</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1463</anchor> <taxon>Example</taxon> <addr>eg-0001</addr><route>eg-0001.xml</route>    <title>Fibonacci Function</title>   </frontmatter> <mainmatter><p>
     The <strong>Fibonacci function</strong> is a well-known function in mathematics.
     It is defined by pattern matching on the variable <tex>n</tex> as follows:
-    <tex display="block">          \begin {align*}              \text {fib}(0) &amp; : \equiv  0              \\               \text {fib}(1) &amp; : \equiv  1              \\               \text {fib}(n+2) &amp; : \equiv   \text {fib}(n) +  \text {fib}(n+1)          \end {align*}     </tex></p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1458</anchor> <taxon>Type Theory</taxon> <addr>tt-0004</addr><route>tt-0004.xml</route>  <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Inductive Types</title>   </frontmatter> <mainmatter><p>
+    <tex display="block">          \begin {align*}              \text {fib}(0) &amp; : \equiv  0              \\               \text {fib}(1) &amp; : \equiv  1              \\               \text {fib}(n+2) &amp; : \equiv   \text {fib}(n) +  \text {fib}(n+1)          \end {align*}     </tex></p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1464</anchor> <taxon>Type Theory</taxon> <addr>tt-0004</addr><route>tt-0004.xml</route>  <date><year>2024</year> <month>1</month> <day>30</day></date>  <title>Inductive Types</title>   </frontmatter> <mainmatter><p>
     In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
@@ -511,7 +511,7 @@
     Without displaying the inference rules, we will just present the <strong>constructor</strong>
     and <strong>induction principle</strong> of each inductive type.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1459</anchor>    <date><year>2024</year> <month>1</month> <day>30</day></date>  <title><strong>General Inductive Type</strong></title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1465</anchor>    <date><year>2024</year> <month>1</month> <day>30</day></date>  <title><strong>General Inductive Type</strong></title>   </frontmatter> <mainmatter>
     <p>
     Just like <tex>\mathbb {N}</tex>, other inductive types can be defined by 
     their constructors and induction principles (and computation rules).
@@ -527,7 +527,7 @@
             The computation rules specify the behavior of the constructors.
         </li></ul>
 </mainmatter> </tree>
-<tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1460</anchor> <taxon>Definition</taxon> <addr>def-0020</addr><route>def-0020.xml</route>    <title>Unit Type</title>   </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1466</anchor> <taxon>Definition</taxon> <addr>def-0020</addr><route>def-0020.xml</route>    <title>Unit Type</title>   </frontmatter> <mainmatter><p>
         
         The <strong>unit type</strong> is the simplest inductive type.
         It has only one constructor, denoted by <tex>\star : \textbf {1}</tex>.
@@ -539,7 +539,7 @@
     A degenrate inductive type is the <strong>empty type</strong>.
     It has no constructor, and its induction principle is trivial.
     Empty type is connected to the <strong>exfalso quodlibet principle</strong> in logic.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1461</anchor> <taxon>Definition</taxon> <addr>def-0021</addr><route>def-0021.xml</route>    <title>Empty Type</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1467</anchor> <taxon>Definition</taxon> <addr>def-0021</addr><route>def-0021.xml</route>    <title>Empty Type</title>   </frontmatter> <mainmatter><p>
     The <strong>empty type</strong> is a degenerate inductive type <tex>\emptyset</tex> satisfying 
     the following induction principle:
     <tex display="block">          \text {ind}_ \emptyset  :  \Pi _{(x: \emptyset )}P(x)     </tex>
@@ -549,18 +549,18 @@
 </p></mainmatter> </tree><p>
     With the empty type we can define the <strong>negation</strong> of a type
     and the <strong>proof of negation</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1462</anchor> <taxon>Definition</taxon> <addr>def-0022</addr><route>def-0022.xml</route>    <title>Type Negation</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1468</anchor> <taxon>Definition</taxon> <addr>def-0022</addr><route>def-0022.xml</route>    <title>Type Negation</title>   </frontmatter> <mainmatter><p>
     The <strong>negation</strong> of type <tex>A</tex> is defined as
     <tex display="block">          \neg  A : \equiv  A  \to   \emptyset      </tex>
     A type <tex>A</tex> is said to be <strong>empty</strong> if and only if <tex>\neg  A</tex> is inhabited.
     <tex display="block">          \text {empty}(A) : \equiv   \neg  A     </tex></p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1463</anchor>      <title><strong>Proof of negation</strong></title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1469</anchor>      <title><strong>Proof of negation</strong></title>   </frontmatter> <mainmatter>
         <p>
             To prove <tex>\neg  A</tex>, we need to show that <tex>A</tex> implies a contradiction.
             In other words, constructing a function of type <tex>A  \to   \emptyset</tex>.
         </p>
     </mainmatter> </tree>
-</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1464</anchor> <taxon>Definition</taxon> <addr>def-0023</addr><route>def-0023.xml</route>    <title>Coproduct Type</title>   </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1470</anchor> <taxon>Definition</taxon> <addr>def-0023</addr><route>def-0023.xml</route>    <title>Coproduct Type</title>   </frontmatter> <mainmatter><p>
     Let <tex>A</tex> and <tex>B</tex> be types. The <strong>coproduct (disjoint sum)</strong> <tex>A+B</tex> is a typed defined by the following constructors:
     <ul><li><tex>\text {inl} :A \to  A+B</tex></li>
         <li><tex>\text {inr} :B \to  A+B</tex></li></ul>
@@ -572,7 +572,7 @@
     <tex display="block">          \begin {align*}             f&amp;: \Pi _{(x:A)}P( \text {inl} (x)) \\              g&amp;: \Pi _{(y:B)}P( \text {inr} (y))          \end {align*}     </tex>
     This can be presented by pattern matching to define a function <tex>h: \Pi  _{(z:A+B)}.P(z)</tex>:
     <tex display="block">          \begin {align*}             h( \text {inl} (x))&amp;: \equiv  f(x) \\              h( \text {inr} (y))&amp;: \equiv  g(y)          \end {align*}     </tex></p></mainmatter> </tree>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1465</anchor>    <date><year>2024</year> <month>1</month> <day>30</day></date>  <title><strong>Special Case of Coproduct</strong></title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1471</anchor>    <date><year>2024</year> <month>1</month> <day>30</day></date>  <title><strong>Special Case of Coproduct</strong></title>   </frontmatter> <mainmatter>
     The special case of coproduct type is also called the <strong>sum type</strong>.
     <tex display="block">          \text {ind}_ + : (A  \to  X)  \to  (B  \to  X)  \to  (A+B  \to  X)     </tex>
     which is very similar to the <strong>elimination rule</strong> of disjunction in logic.
@@ -581,10 +581,10 @@
 <p>
     The dependent version of sum type is called the <strong>dependent sum type (dependent coproduct)</strong> traditionally.
     Its terms are ordered pairs.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1466</anchor> <taxon>Definition</taxon> <addr>def-0024</addr><route>def-0024.xml</route>    <title>Dependent Pair Type</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1472</anchor> <taxon>Definition</taxon> <addr>def-0024</addr><route>def-0024.xml</route>    <title>Dependent Pair Type</title>   </frontmatter> <mainmatter><p>
     The <strong>dependent pair type</strong> is a inductive type <tex>\Sigma _{(x:A)}B(x)</tex> (<tex>(x:A)  \times  B(x)</tex>)
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1467</anchor>      <title>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1473</anchor>      <title>
     <strong>Formation Rule</strong>
 </title>   </frontmatter> <mainmatter>
     <p>
@@ -593,7 +593,7 @@
     <tex display="block">          \frac {              \Gamma \vdash  A \space \text {type}               \quad               \Gamma ,x:A \vdash  B(x) \space \text {type}          }{              \Gamma \vdash  (x:A)  \times  B(x) \space \text {type}          }     </tex>
 </mainmatter> </tree>
 
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1468</anchor>      <title>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1474</anchor>      <title>
     <strong>Introduction Rule</strong>
 </title>   </frontmatter> <mainmatter>
     <p>
@@ -602,7 +602,7 @@
     <tex display="block">          \frac {              \Gamma \vdash  a:A              \quad               \Gamma \vdash  b(a):B(a)         }{              \Gamma \vdash  (a,b):(x:A) \times  B(x)         }     </tex>
 </mainmatter> </tree>
 
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1469</anchor>      <title>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1475</anchor>      <title>
     <strong>Elimination Rule</strong>
 </title>   </frontmatter> <mainmatter>
     <p>
@@ -610,13 +610,13 @@
         <tex display="block">              \frac {                  \Gamma \vdash  p:(x:A) \times  B(x)             }{                  \begin {align*}                      \Gamma &amp; \vdash   \text {pr}_ A (p):A \\                       \Gamma &amp; \vdash   \text {pr}_ B (p):B( \text {pr}_ A (p))                  \end {align*}             }         </tex></p>
 </mainmatter> </tree>
 
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1470</anchor>      <title>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1476</anchor>      <title>
     <strong>Computation Rule</strong>
 </title>   </frontmatter> <mainmatter>
     <p><tex display="block">              \frac {                  \Gamma \vdash  x:A                   \quad                    \Gamma \vdash  y:B(x)             }{                  \begin {align*}                      \Gamma &amp; \vdash   \text {pr}_ A ((x,y))=x:A \\                       \Gamma &amp; \vdash   \text {pr}_ B ((x,y))=y:B(x)                  \end {align*}             }         </tex></p>
 </mainmatter> </tree>
 
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1471</anchor>      <title>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1477</anchor>      <title>
     <strong>Special Case</strong>
 </title>   </frontmatter> <mainmatter>
     <ul><li>
@@ -628,7 +628,7 @@
             this reduces to a <link href="def-0023.xml" type="local" addr="def-0023" title="Coproduct Type">coproduct type</link>.
         </li></ul>
 </mainmatter> </tree>
-</mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1472</anchor> <taxon>Type Theory</taxon> <addr>tt-0005</addr><route>tt-0005.xml</route>  <date><year>2024</year> <month>1</month> <day>31</day></date>  <title>Identity Types</title>   </frontmatter> <mainmatter><p>
+</mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1478</anchor> <taxon>Type Theory</taxon> <addr>tt-0005</addr><route>tt-0005.xml</route>  <date><year>2024</year> <month>1</month> <day>31</day></date>  <title>Identity Types</title>   </frontmatter> <mainmatter><p>
     This post discuss the identity types in type theory.
     Refer to <link href="hott-2022.xml" type="local" addr="hott-2022" title="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</link>.
 </p><p>
@@ -639,7 +639,7 @@
     And this witness is itself a type.
     We can then define their equality.
     This gives every type a <strong>groupoid structure</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1473</anchor> <taxon>Definition</taxon> <addr>def-002N</addr><route>def-002N.xml</route>    <title>Identity Type</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1479</anchor> <taxon>Definition</taxon> <addr>def-002N</addr><route>def-002N.xml</route>    <title>Identity Type</title>   </frontmatter> <mainmatter><p>
     The <strong>identity type</strong> is an inductive type,
     generated by just a <strong>reflexivity</strong> <em>identification</em>
     that providing an equality of a term with itself.
@@ -650,7 +650,7 @@
     <tex display="block">          \frac {              \Gamma \vdash  a:A         }{              \Gamma ,x:A \vdash  a=_Ax \space \text {type}          }     </tex>
     The only constructor is the refl:
     <tex display="block">          \frac {              \Gamma \vdash  a:A         }{              \Gamma \vdash   \text {refl} _a:a=_Ax         }     </tex></p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1474</anchor>      <title><strong>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1480</anchor>      <title><strong>
     Path Induction / Identification Elimination
 </strong></title>   </frontmatter> <mainmatter>
     The induction principle of the identity type states that
@@ -666,7 +666,7 @@
     A term of <tex>a=_Ax</tex> is called a <strong>identification</strong> of <tex>a</tex> and <tex>x</tex>,
     or the <strong>path</strong> from <tex>a</tex> to <tex>x</tex>.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1475</anchor>      <title><strong>Variable Version</strong></title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1481</anchor>      <title><strong>Variable Version</strong></title>   </frontmatter> <mainmatter>
     We can form an identity type with variables of <tex>A</tex>.
     <tex display="block">          \Gamma ,x:A,y:A \vdash  x=_Ay \space \text {type}      </tex>
     with the following introduction rule:
@@ -676,11 +676,11 @@
 </mainmatter> </tree><p>
     The identifications can be <strong>concatenated</strong> and <strong>inverted</strong>,
     which implies the <em>transitivity</em> and <em>symmetry</em> of the identity type.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1476</anchor> <taxon>Definition</taxon> <addr>def-002O</addr><route>def-002O.xml</route>    <title>Concatenation Operation</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1482</anchor> <taxon>Definition</taxon> <addr>def-002O</addr><route>def-002O.xml</route>    <title>Concatenation Operation</title>   </frontmatter> <mainmatter><p>
     Let <tex>A</tex> be a type.
     The <strong>Concatenation</strong> operation is defined:
     <tex display="block">          \text {concat} : (x:A) \to  (y:A) \to  (z:A) \to  (x=_Ay) \to  (y=_Az) \to  (x=_Az)     </tex></p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1477</anchor>      <title><strong>Construction</strong></title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1483</anchor>      <title><strong>Construction</strong></title>   </frontmatter> <mainmatter>
     We can first construct:
     <tex display="block">         f(x):(y:A) \to  (x=_Ay) \to (z:A) \to  (y=_Az) \to (x=_Az)     </tex>
     For any <tex>x:A</tex>, it suffices to construct
@@ -692,23 +692,23 @@
     <tex display="block">          \text {concat} _{x,y,z}(p,q) : \equiv  f(x,y,p,z,q)     </tex>
     Or simply we denote <tex>\text {concat} (p,q)</tex> as <tex>p  \cdot  q</tex>
 </mainmatter> </tree>
-</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1478</anchor> <taxon>Definition</taxon> <addr>def-002P</addr><route>def-002P.xml</route>    <title>Inverse Operation</title>   </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1484</anchor> <taxon>Definition</taxon> <addr>def-002P</addr><route>def-002P.xml</route>    <title>Inverse Operation</title>   </frontmatter> <mainmatter><p>
     Let <tex>A</tex> be a type. The <strong>inverse oepration</strong> is defined:
     <tex display="block">          \text {inv} : (x:A) \to  (y:A) \to  (x=_Ay) \to  (y=_Ax)     </tex></p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1479</anchor>      <title>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1485</anchor>      <title>
     <strong>Construction</strong>
 </title>   </frontmatter> <mainmatter>
     By induction, it suffices to construct:
     <tex display="block">          \text {inv} (x,x, \text {refl} _x) : (x=_Ax)     </tex>
     for any <tex>x:A</tex>. And trivially we have <tex>\text {inv} (x,x, \text {refl} _x) \equiv \text {refl} _x</tex>.
 </mainmatter> </tree>
-</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1480</anchor> <taxon>Definition</taxon> <addr>def-002W</addr><route>def-002W.xml</route>    <title>Associator</title>   </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1486</anchor> <taxon>Definition</taxon> <addr>def-002W</addr><route>def-002W.xml</route>    <title>Associator</title>   </frontmatter> <mainmatter><p>
     Let <tex>A</tex> be a type.
     These are 3 consecutive identifications
     <tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </tex>
     we define the <strong>associator</strong>:
     <tex display="block">          \text {assoc} : (p,q,r): (p \cdot  q) \cdot  r = p \cdot  (q \cdot  r)     </tex></p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1481</anchor>      <title>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1487</anchor>      <title>
     <strong>Construction</strong>
 </title>   </frontmatter> <mainmatter>
     By definition it suffices to show that
@@ -724,18 +724,18 @@
     so we can simply define the associator as
     <tex display="block">          \text {assoc} ( \text {refl} _x,q,r) : \equiv   \text {refl} _{q \cdot  r}     </tex>
 </mainmatter> </tree>
-</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1482</anchor> <taxon>Definition</taxon> <addr>def-002X</addr><route>def-002X.xml</route>    <title>Unit Law Operations</title>   </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1488</anchor> <taxon>Definition</taxon> <addr>def-002X</addr><route>def-002X.xml</route>    <title>Unit Law Operations</title>   </frontmatter> <mainmatter><p>
     Let <tex>A</tex> be a type.
     We defined the <strong>unit law</strong> operations for <tex>x=_Ay</tex>:
     <tex display="block">          \begin {align*}              \text {left-unit} &amp; : (x=_Ay) \to  ( \text {refl} _x \cdot  x = x)  \\               \text {right-unit} &amp; : (x=_Ay) \to  (x \cdot \text {refl} _y = x)          \end {align*}     </tex></p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1483</anchor>      <title>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1489</anchor>      <title>
     <strong>Construction</strong>
 </title>   </frontmatter> <mainmatter>
     By elimination it suffices to construct:
     <tex display="block">          \begin {align*}              \text {left-unit}( \text {refl} _x) &amp;:  \text {refl} _x  \cdot   \text {refl} _x =  \text {refl} _x  \\               \text {right-unit}( \text {refl} _x) &amp;:  \text {refl} _x  \cdot   \text {refl} _x =  \text {refl} _x          \end {align*}     </tex>
     In both cases we need only to construct <tex>\text {refl} _{ \text {refl} _x}</tex>.
 </mainmatter> </tree>
-</mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1484</anchor> <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr><route>phy-0002.xml</route>  <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The Wave Function</title>   </frontmatter> <mainmatter><p>
+</mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1490</anchor> <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr><route>phy-0002.xml</route>  <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The Wave Function</title>   </frontmatter> <mainmatter><p>
     This post introduces the concept of the wave function in quantum mechanics.
     Refer to <link href="quantum-2018.xml" type="local" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</link>.
 </p><p>
@@ -754,7 +754,7 @@
     For <strong>Quantum Mechanics</strong>, we have a different perspective.
     We would like to look for the <strong>wave function</strong>, <tex>\Psi (x, t)</tex>.
     To determine it we need to solve the <strong>Schrodinger equation</strong>.
-    <tex display="block">         i \hbar \frac { \partial }{ \partial  t} \Psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \Psi (x,t)}{ \partial  x^2} + V(x,t) \Psi (x,t)     </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1485</anchor> <taxon>Definition</taxon> <addr>def-0030</addr><route>def-0030.xml</route>    <title>Schrodinger's equation</title>   </frontmatter> <mainmatter><p>
+    <tex display="block">         i \hbar \frac { \partial }{ \partial  t} \Psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \Psi (x,t)}{ \partial  x^2} + V(x,t) \Psi (x,t)     </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1491</anchor> <taxon>Definition</taxon> <addr>def-0030</addr><route>def-0030.xml</route>    <title>Schrodinger's equation</title>   </frontmatter> <mainmatter><p>
     The <strong>Schrodinger equation</strong> is a linear partial differential equation that describes the wave function of a quantum system.
     It is given by (the general form):
     <tex display="block">         i \hbar \frac { \partial }{ \partial  t} \Psi ( \vec {r},t) =  \hat {H} \Psi ( \vec {r},t)     </tex>
@@ -794,7 +794,7 @@
 </p><p>
     Probability is the key concept in quantum mechanics.
     Now I will introduce some terimnologies related to continuous probability.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1486</anchor> <taxon>Definition</taxon> <addr>def-0031</addr><route>def-0031.xml</route>    <title>Probability Density</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1492</anchor> <taxon>Definition</taxon> <addr>def-0031</addr><route>def-0031.xml</route>    <title>Probability Density</title>   </frontmatter> <mainmatter><p>
     A <strong>probability density</strong> is a function <tex>p(x)</tex> such that:
     <ul><li><tex>p(x) \geq  0</tex> for all <tex>x</tex>.
         </li>
@@ -802,12 +802,12 @@
         </li></ul>
     With this we can define the <strong>probability function</strong> in an interval <tex>[a,b]</tex> as:
     <tex display="block">         P(a, b) =  \int _a^b p(x)dx     </tex></p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1487</anchor>      <title>Expectation Value</title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1493</anchor>      <title>Expectation Value</title>   </frontmatter> <mainmatter>
     The <strong>expectation value</strong> of a function <tex>f(x)</tex> with respect to the probability density <tex>p(x)</tex> is defined:
     <tex display="block">          \langle  f(x)  \rangle  =  \int _{- \infty }^{ \infty } f(x)p(x)dx     </tex>
 </mainmatter> </tree>
 
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1488</anchor>      <title>Variance</title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1494</anchor>      <title>Variance</title>   </frontmatter> <mainmatter>
     The <strong>variance</strong> of a function <tex>f(x)</tex> with respect to the probability density <tex>p(x)</tex> is defined:
     <tex display="block">          \sigma ^2 : \equiv   \langle  x^2  \rangle  -  \langle  x  \rangle ^2     </tex>
 </mainmatter> </tree>
@@ -826,7 +826,7 @@
 </p>
  
    
-   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>1489</anchor> <taxon>Proof</taxon>   <date><year>2024</year> <month>2</month> <day>3</day></date>     </frontmatter> <mainmatter>
+   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>1495</anchor> <taxon>Proof</taxon>   <date><year>2024</year> <month>2</month> <day>3</day></date>     </frontmatter> <mainmatter>
         Differentiate the normalization condition with respect to time:
         <tex display="block">              \frac {d}{dt} \int _{- \infty }^{ \infty } | \Psi (x,t)|^2 dx =               \int _{- \infty }^{ \infty }  \frac { \partial }{ \partial  t}| \Psi (x,t)|^2 dx         </tex>
         With the product rule:
@@ -861,7 +861,7 @@
     repeated measurements on an ensemble of identical prepared systems,
     not the average of repeated measurements on a <em>single</em> system.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1490</anchor>    <date><year>2024</year> <month>2</month> <day>3</day></date>  <title><strong>Construction.</strong></title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1496</anchor>    <date><year>2024</year> <month>2</month> <day>3</day></date>  <title><strong>Construction.</strong></title>   </frontmatter> <mainmatter>
     As times goes on, the expectation values varies.
     We naturally ask how fast it moves?
     Use simple calculus we can get the answer.
@@ -897,7 +897,7 @@
     This result from the <strong>de Broglie formula</strong>.
     <tex display="block">         p =  \frac {h}{ \lambda } =  \frac {2 \pi \hbar }{ \lambda }     </tex>
     Now we can give a qualitative argument for the uncertainty principle.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1491</anchor> <taxon>Definition</taxon> <addr>def-0033</addr><route>def-0033.xml</route>    <title>Heisenberg Uncertainty Principle</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1497</anchor> <taxon>Definition</taxon> <addr>def-0033</addr><route>def-0033.xml</route>    <title>Heisenberg Uncertainty Principle</title>   </frontmatter> <mainmatter><p>
     The <strong>Heisenberg Uncertainty Principle</strong> states that
     it is impossible to measure simultaneously the position and the momentum of a particle
     with arbitrary precision.
@@ -905,7 +905,7 @@
     <tex display="block">          \Delta  x  \Delta  p  \geq   \frac { \hbar }{2}     </tex>
     where <tex>\Delta  x</tex> and <tex>\Delta  p</tex> are the uncertainties in position and momentum, respectively.
     The constant <tex>\hbar</tex> is the reduced Planck constant.
-</p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1492</anchor> <taxon>Quantum Mechanics</taxon> <addr>phy-0003</addr><route>phy-0003.xml</route>  <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>Time-independent Schrodinger Equation</title>   </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1498</anchor> <taxon>Quantum Mechanics</taxon> <addr>phy-0003</addr><route>phy-0003.xml</route>  <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>Time-independent Schrodinger Equation</title>   </frontmatter> <mainmatter><p>
     Refer to chapter 2 in <link href="quantum-2018.xml" type="local" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</link></p><p>
     In previous section we use the <link href="def-0030.xml" type="local" addr="def-0030" title="Schrodinger's equation">Schrodinger equation</link> to compute things.
     The variable <tex>t</tex> is annoying which makes things complicated, and we would like to get rid of it.
@@ -918,7 +918,7 @@
     <tex display="block">          \Psi (x,t) =  \psi (x) \phi (t)     </tex>
     This is an absurd restriction, but it works and we can get interesting results.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1493</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title><strong>Solve the equation</strong></title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1499</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title><strong>Solve the equation</strong></title>   </frontmatter> <mainmatter>
     <p>
         Now substitute the product form into the Schrodinger equation:
         <tex display="block">             i \hbar   \psi (x)  \frac { \partial }{ \partial  t}( \phi (t)) = - \frac { \hbar ^2}{2m} \phi (t) \frac { \partial ^2( \psi (x))}{ \partial  x^2} + V(x) \psi (x) \phi (t)         </tex>
@@ -944,7 +944,7 @@
 </mainmatter> </tree>
 <p>
     Now we give a name to the time-independent Schrodinger equation.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1494</anchor> <taxon>Definition</taxon> <addr>def-0034</addr><route>def-0034.xml</route>    <title>Stationary State</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1500</anchor> <taxon>Definition</taxon> <addr>def-0034</addr><route>def-0034.xml</route>    <title>Stationary State</title>   </frontmatter> <mainmatter><p>
     A <strong>stationary state</strong> is a quantum state with all observables independent of time.
 </p></mainmatter> </tree><p>
     Thought the wave function is time-dependent,
@@ -955,7 +955,7 @@
     Then <tex>\langle  p  \rangle  = 0</tex> all the time.
     Nothing happens in the stationary state.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1495</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1501</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>
     <strong>Conservation of energy</strong>
 </title>   </frontmatter> <mainmatter>
     This also means that the energy of the system is conserved.
@@ -976,7 +976,7 @@
     <tex display="block">          \Delta  H =  \sqrt { \langle  H^2  \rangle  -  \langle  H  \rangle ^2} = 0     </tex>
     This implies that the energy of the system is conserved.
 </mainmatter> </tree>
-</mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1496</anchor> <taxon>String Theory</taxon> <addr>phy-0001</addr><route>phy-0001.xml</route>  <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and Extra Dimensions</title>   </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1502</anchor> <taxon>String Theory</taxon> <addr>phy-0001</addr><route>phy-0001.xml</route>  <date><year>2024</year> <month>1</month> <day>29</day></date> <authors><author>CAIMEO</author> </authors> <title>Special Relativity and Extra Dimensions</title>   </frontmatter> <mainmatter><p>
     This is a summary of the first chapter of <link href="string-theory-2009.xml" type="local" addr="string-theory-2009" title="A First Course in String Theory">A First Course in String Theory</link> by Barton Zwiebach.
     I will make it as understandable as possible.
 </p><p>
@@ -1002,7 +1002,7 @@
     The invariant interval implies the following equation:
     <tex display="block">          \Delta  s ^2 =  \Delta  s'^2     </tex>
     The minus sign on the left of <tex>\Delta  s^2</tex> implies that <tex>\Delta  s^2 &gt;0</tex> for events that are <strong>timelike separated</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1497</anchor> <taxon>Definition</taxon> <addr>def-001H</addr><route>def-001H.xml</route>    <title>Timelike Separated Events</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1503</anchor> <taxon>Definition</taxon> <addr>def-001H</addr><route>def-001H.xml</route>    <title>Timelike Separated Events</title>   </frontmatter> <mainmatter><p>
     An event <tex>S</tex> is said to be timelike separated if
     <tex display="block">         ( \Delta  x^0)^2 &gt; ( \Delta  x^1)^2 + ( \Delta  x^2)^2 + ( \Delta  x^3)^2     </tex>
     or briefly <tex>\Delta  s^2 &gt; 0</tex>. The spatial separation is less than the distance light travels.
@@ -1010,10 +1010,10 @@
     The history of a particle is represented in spacetime as a curve called a <strong>world-line</strong>.
     Any two events on the world-line are timelike separated, because no particle can 
     move faster than light.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1498</anchor> <taxon>Definition</taxon> <addr>def-001I</addr><route>def-001I.xml</route>    <title>Lightlike Separated Events</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1504</anchor> <taxon>Definition</taxon> <addr>def-001I</addr><route>def-001I.xml</route>    <title>Lightlike Separated Events</title>   </frontmatter> <mainmatter><p>
     Events connected by the world-line of a <strong>photon</strong> are said to be <strong>lightlike separated</strong>.
     For which <tex>\Delta  s^2 = 0</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1499</anchor> <taxon>Definition</taxon> <addr>def-001J</addr><route>def-001J.xml</route>    <title>Spacelike Separated Events</title>   </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1505</anchor> <taxon>Definition</taxon> <addr>def-001J</addr><route>def-001J.xml</route>    <title>Spacelike Separated Events</title>   </frontmatter> <mainmatter><p>
     Two events for which <tex>\Delta  s^2 &lt; 0</tex> are said to be <strong>spacelike separated</strong>.
     Events that are simultaneous in a Lorentz frame but in different position are spacelike separated.
 </p></mainmatter> </tree><p>
@@ -1038,7 +1038,7 @@
     We can also express the interval <tex>ds^2</tex> using the <strong>Minkowski Metric</strong>:
     <tex display="block">         -ds^2=  \eta _{ \mu \nu } dx^ \mu  dx^ \nu      </tex>
     and the metric is defined by
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1500</anchor> <taxon>Definition</taxon> <addr>def-001L</addr><route>def-001L.xml</route>    <title>Minkowski Metric</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1506</anchor> <taxon>Definition</taxon> <addr>def-001L</addr><route>def-001L.xml</route>    <title>Minkowski Metric</title>   </frontmatter> <mainmatter><p>
     The <strong>Minkowski Metric</strong>, aka <strong>Minkowski Tensor</strong>, is a tensor <tex>\eta _{ \mu \nu }</tex> whose elements are defined by the matrix
     <tex display="block">          \eta _{ \mu \nu } =  \begin {pmatrix}             -1 &amp; 0 &amp; 0 &amp; 0  \\              0 &amp; 1 &amp; 0 &amp; 0  \\              0 &amp; 0 &amp; 1 &amp; 0  \\              0 &amp; 0 &amp; 0 &amp; 1           \end {pmatrix}     </tex>
     where <tex>\mu</tex> and <tex>\nu</tex> are Lorentz indices run over <tex>0,1,2,3</tex>.
@@ -1066,12 +1066,12 @@
     And the inverse property is
     <tex display="block">          \eta ^{ \mu \rho }  \eta _{ \rho \nu } =  \delta ^ \mu _ \nu      </tex>
     where <tex>\delta ^ \mu _ \nu</tex> is the <link href="def-001P.xml" type="local" addr="def-001P" title="Kronecker Delta">Kronecker Delta</link>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1501</anchor> <taxon>Trick</taxon> <addr>thm-0004</addr><route>thm-0004.xml</route>    <title>Raise Indices</title>   </frontmatter> <mainmatter><p><tex display="block">          \eta ^{ \rho \mu }b_ \mu          =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )         =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu          =  \delta ^ \rho _ \nu  b^ \nu          = b^ \rho      </tex>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1507</anchor> <taxon>Trick</taxon> <addr>thm-0004</addr><route>thm-0004.xml</route>    <title>Raise Indices</title>   </frontmatter> <mainmatter><p><tex display="block">          \eta ^{ \rho \mu }b_ \mu          =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )         =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu          =  \delta ^ \rho _ \nu  b^ \nu          = b^ \rho      </tex>
     The lower index of <tex>b_ \mu</tex> is raised to <tex>b^ \rho</tex> by <tex>\eta ^{ \rho \mu }</tex>.
 </p></mainmatter> </tree><p><strong>Lorentz transformations</strong> are the relations between coordinates in two different
     inertial frames.
     
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1502</anchor> <taxon>Definition</taxon> <addr>def-001Q</addr><route>def-001Q.xml</route>    <title>Lorentz Transformations</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1508</anchor> <taxon>Definition</taxon> <addr>def-001Q</addr><route>def-001Q.xml</route>    <title>Lorentz Transformations</title>   </frontmatter> <mainmatter><p>
     Consider a frame <tex>S</tex> and <tex>S'</tex> which is moving along the <tex>+x</tex> direction of the <tex>S</tex> frame
     with a velocity <tex>v</tex>.
     Assume that the origins of the two frames coincide at <tex>t=t'=0</tex> and coordinate axes are parallel.
@@ -1091,7 +1091,7 @@
 </p></mainmatter> </tree><p>
     We now introduce a coordinate system that will be extremely useful in string theory,
     the <strong>light-cone coordinates</strong>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1503</anchor> <taxon>Definition</taxon> <addr>def-001R</addr><route>def-001R.xml</route>    <title>Light-cone Coordinates</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1509</anchor> <taxon>Definition</taxon> <addr>def-001R</addr><route>def-001R.xml</route>    <title>Light-cone Coordinates</title>   </frontmatter> <mainmatter><p>
     The <strong>light-cone coordinates</strong> can be defined as
     two independent <link href="def-000L.xml" type="local" addr="def-000L" title="Linear Combination">linear combinations</link> of the time 
     and a chosen spatial coordinate (conventionally <tex>x^1</tex>):
@@ -1171,7 +1171,7 @@
     Different Lorentz observers will measure different time intervals between the two events.
     But imagine a clock that moves along the world-line.
     The time measured by the clock is called the <strong>proper time</strong> between the two events.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1504</anchor> <taxon>Definition</taxon> <addr>def-001S</addr><route>def-001S.xml</route>    <title>Proper Time</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>1510</anchor> <taxon>Definition</taxon> <addr>def-001S</addr><route>def-001S.xml</route>    <title>Proper Time</title>   </frontmatter> <mainmatter><p>
     The <strong>proper time</strong> along a timelike world-line is defined as the
     time as measured by a clock following that line. 
 </p></mainmatter> </tree><p>
@@ -1204,15 +1204,15 @@
     <tex display="block">         p^0 =  \frac {E}{c}  \sqrt { \vec {p}^2 + m^2c^2} &gt; | \vec {p}| \geq  |p^1|     </tex>
     Hence <tex>p^0 \pm  p^1 &gt; 0</tex> and <tex>p^ \pm &gt;0</tex>, which both are possible candidates for energy.
     We finally choose <tex>p^-</tex> as the component, we explain this later. 
-</p></mainmatter> </tree></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1505</anchor> <taxon>Definition</taxon> <addr>def-001K</addr><route>def-001K.xml</route>    <title>Einstein's Summation Convention</title>   </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree></mainmatter> </tree></context> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1511</anchor> <taxon>Definition</taxon> <addr>def-001K</addr><route>def-001K.xml</route>    <title>Einstein's Summation Convention</title>   </frontmatter> <mainmatter><p>
     When index variable appears twicec in a single term and
     is not otherwise defined, it is assumed to be summed over.
     If the indices can range over <tex>\{ 1,2,3 \}</tex>,then
     <tex display="block">         s =  \sum _{i=1}^3 a_i b_i = a_1 b_1 + a_2 b_2 + a_3 b_3     </tex>
     can be simplified to
-    <tex display="block">         s = a_i b_i     </tex></p></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1506</anchor> <taxon>Definition</taxon> <addr>def-001P</addr><route>def-001P.xml</route>    <title>Kronecker Delta</title>   </frontmatter> <mainmatter><p>
+    <tex display="block">         s = a_i b_i     </tex></p></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1512</anchor> <taxon>Definition</taxon> <addr>def-001P</addr><route>def-001P.xml</route>    <title>Kronecker Delta</title>   </frontmatter> <mainmatter><p>
     The <strong>Kronecker delta</strong> is defined as
-    <tex display="block">          \delta _{i}^j =  \begin {cases}             1 &amp;  \text {if } i = j  \\              0 &amp;  \text {if } i  \neq  j          \end {cases}     </tex></p></mainmatter> </tree></related> <backlinks/> <references><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1507</anchor> <taxon>Reference</taxon> <addr>string-theory-2009</addr><route>string-theory-2009.xml</route>   <authors><author>Barton Zwiebach</author> </authors> <title>A First Course in String Theory</title>   <meta name="doi">10.1017/CBO9780511841620</meta><meta name="venue">Mathematical Physics, Particle Physics and Quantum Field Theory, Physics and Astronomy</meta></frontmatter> <mainmatter><p>
+    <tex display="block">          \delta _{i}^j =  \begin {cases}             1 &amp;  \text {if } i = j  \\              0 &amp;  \text {if } i  \neq  j          \end {cases}     </tex></p></mainmatter> </tree></related> <backlinks/> <references><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>1513</anchor> <taxon>Reference</taxon> <addr>string-theory-2009</addr><route>string-theory-2009.xml</route>   <authors><author>Barton Zwiebach</author> </authors> <title>A First Course in String Theory</title>   <meta name="doi">10.1017/CBO9780511841620</meta><meta name="venue">Mathematical Physics, Particle Physics and Quantum Field Theory, Physics and Astronomy</meta></frontmatter> <mainmatter><p>
     String theory made understandable. 
     Making string theory accessible to undergraduates.
 </p></mainmatter> </tree></references></backmatter></tree>
