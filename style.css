@@ -1,5 +1,9 @@
 /* SPDX-License-Identifier: CC0-1.0 */
 
+.katex {
+ font-size: 1.15em !important;
+}
+
 /* inria-sans-300 - latin_latin-ext */
 @font-face {
   font-display: swap;
@@ -231,6 +235,7 @@ section .block[data-taxon] details>summary>header>h1 {
 
 span.taxon {
   color: #444;
+  font-weight: bolder;
 }
 
 
@@ -285,7 +290,7 @@ nav#toc a {
   color: #555;
 }
 
-nav#toc a {
+nav#toc .link {
  box-shadow: none;
  text-decoration: none;
 }
@@ -315,14 +320,6 @@ nav#toc li {
  list-style-position: inside;
 }
 
-.toc-item-label {
-  font-weight: bolder;
-}
-
-.katex {
-  font-size: 1.2em;
-}
-
 .block {
   border-radius: var(--radius)
 }
@@ -344,16 +341,6 @@ nav#toc li {
 .highlighted:hover {
   background-color: rgba(255, 255, 140, .6);
   border-color: #aaa;
-}
-
-.block>.block-uid {
-  visibility: hidden;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.block:hover>.block-uid {
-  visibility: visible;
 }
 
 .slug,
@@ -379,27 +366,17 @@ nav#toc li {
   border-radius: 5px;
 }
 
-.block>.toggle-children-button {
-  padding-right: 3pt;
-  visibility: hidden;
-  float: right;
-}
-
-.block:hover>.toggle-children-button {
-  visibility: visible;
-}
-
-a.external {
+.link.external {
   text-decoration: underline;
 }
 
-
-a.local,
+a.link.local,
+.link.local a,
 a.slug {
   box-shadow: none;
-  text-decoration: underline;
+  text-decoration-line: underline;
   text-decoration-style: dotted;
-}
+ }
 
 ninja-keys::part(ninja-action) {
   white-space: nowrap;
@@ -527,12 +504,20 @@ blockquote {
   border-inline-start: 1px solid var(--secondary);
 }
 
-a:hover {
+a.slug:hover,
+a.bullet:hover,
+.edit-button:hover,
+.link:hover {
   background-color: rgba(0, 100, 255, .1);
+}
+
+.link {
+ cursor: pointer;
 }
 
 a {
   color: black;
+  text-decoration: inherit;
 }
 
 .nowrap {
@@ -609,4 +594,10 @@ ol li ol {
 
 ol li ol li ol {
  list-style-type: lower-roman;
+}
+
+.error {
+ background-color: red;
+ font-weight: bold;
+ color: white;
 }

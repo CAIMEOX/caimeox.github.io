@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>7495</anchor> <taxon>Reference</taxon> <addr>pl-123</addr><route>pl-123.xml</route>   <authors><author>GRAHAM HUTTON</author> </authors> <title>Programming language semantics: It's easy as 1,2,3</title>   <meta name="doi">10.1017/s0956796823000072</meta></frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>7402</anchor> <taxon>Reference</taxon> <addr>pl-123</addr><route>pl-123.xml</route>   <authors><author>GRAHAM HUTTON</author> </authors> <title>Programming language semantics: It's easy as 1,2,3</title>   <meta name="doi">10.1017/s0956796823000072</meta></frontmatter> <mainmatter><p>
     Programming language semantics is an important topic in theoretical computer science, but one that beginners often find challenging. This article provides a tutorial introduction to the subject, in which the language of integers and addition is used as a minimal setting in which to present a range of semantic concepts in simple manner
-</p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>7496</anchor> <taxon>Computer Science</taxon> <addr>cs-0006</addr><route>cs-0006.xml</route>  <date><year>2024</year> <month>3</month> <day>11</day></date>  <title>Introduction to Programming Language Semantic</title>   </frontmatter> <mainmatter><p>
+</p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>7403</anchor> <taxon>Computer Science</taxon> <addr>cs-0006</addr><route>cs-0006.xml</route>  <date><year>2024</year> <month>3</month> <day>11</day></date>  <title>Introduction to Programming Language Semantic</title>   </frontmatter> <mainmatter><p>
     I decided to read one paper or article every week.
     This week's topic is programming language semantics, refer to <strong>Graham Huttons</strong>'s 
     paper <link href="pl-123.xml" type="local" addr="pl-123" title="Programming language semantics: It's easy as 1,2,3">Programming language semantics: It's easy as 1,2,3</link>.
@@ -12,7 +12,7 @@
     (including integers and addition only) to illustrate the basic concepts.
     This is an example of <strong>Occam's razor</strong>, a philosophical principle that favours the 
     simplest explanation for a phenomenon.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7497</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Arithmetic Expressions</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7404</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Arithmetic Expressions</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
         Now let's define our language of arithmetic expressions
         built up from the set of integers and the operation of addition.
         Use a <strong>context-free</strong> grammar.
@@ -23,7 +23,7 @@
         a <strong>Haskell</strong> data type.
     </p>
   <pre><code class="language-haskell">data Expr = Val Integer | Add Expr Expr</code></pre>
-</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7498</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Denotational Semantics</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7405</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Denotational Semantics</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
         Now we consider <strong>denotational semantics</strong>, 
         where the terms in a language is defined using a 
         <strong>valuation function</strong> that maps terms into values in an appropriate <strong>semantic domain</strong>.
@@ -66,7 +66,7 @@
     </p>
  
    
-   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>7499</anchor> <taxon>Proof</taxon>   <date><year>2024</year> <month>3</month> <day>11</day></date>     </frontmatter> <mainmatter>
+   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>7406</anchor> <taxon>Proof</taxon>   <date><year>2024</year> <month>3</month> <day>11</day></date>     </frontmatter> <mainmatter>
         For the base case <tex>e =  \text {Val}   \space  n</tex>, we have <tex>\llbracket  e \rrbracket  = n</tex> trivially.
         For the inductive case <tex>e =  \text {Add}   \space  e_1 \space  e_2</tex>,
         we can assume by induction that <tex>\llbracket  e_1 \rrbracket  = n_1</tex> and <tex>\llbracket  e_2 \rrbracket  = n_2</tex>
@@ -101,7 +101,7 @@ fold f g (Add x y) = g (fold f g x) (fold f g y)</code></pre>
         of evaluation. If we do wish to make evaluation order explicit 
         this requires the introduction of additional structure into the semantics,
         named <strong>abstract machines</strong> (Discuss later).
-    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7500</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Small-Step Operational Semantics</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7407</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Small-Step Operational Semantics</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
         Another popular approach to semantics is the <strong>operational approach</strong>,
         where the meaning of terms is defined using an <strong>execution relation</strong>
         that specifies how terms can be executed in an appropriate machine model.
@@ -188,7 +188,7 @@ unfold f g x = Node (f x) [unfold f g x' | x' &lt;- g x]</code></pre>
         But we can modify the inference rules to achieve this. Replace the second <tex>\text {Add}</tex> 
         rule by the following rule ensures the first argument of addition is 
         always reduced first.
-        <tex display="block">              \frac {                 y \to  y'             }{                  \text {Add}  ( \text {Val} \space  n) \space  y  \to   \text {Add}  ( \text {Val} \space  n) \space  y'             }         </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7501</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Rule induction</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+        <tex display="block">              \frac {                 y \to  y'             }{                  \text {Add}  ( \text {Val} \space  n) \space  y  \to   \text {Add}  ( \text {Val} \space  n) \space  y'             }         </tex></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7408</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Rule induction</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
         For denotational semantics we have structural induction,
         dual to this, for operational semantics we have <strong>rule induction</strong>.
         This allows us to perform proofs by considering the structure of the rules 
@@ -219,7 +219,7 @@ unfold f g x = Node (f x) [unfold f g x' | x' &lt;- g x]</code></pre>
         <tex display="block">              \forall  e \to  e'.  \llbracket e \rrbracket  =  \llbracket e' \rrbracket          </tex></p>
  
    
-   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>7502</anchor> <taxon>Proof</taxon>   <date><year>2024</year> <month>3</month> <day>11</day></date>     </frontmatter> <mainmatter>
+   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>7409</anchor> <taxon>Proof</taxon>   <date><year>2024</year> <month>3</month> <day>11</day></date>     </frontmatter> <mainmatter>
         The proof consists of three parts: the base case, the reduction rule and the structural rule.
         <tex display="block">              \begin {align*}                  \llbracket \text {Add} \space ( \text {Val} \space  n) \space ( \text {Val} \space  m) \rrbracket                  &amp;=  \llbracket \text {Val} \space  n \rrbracket  +  \llbracket \text {Val} \space  m \rrbracket   \\                  &amp;= n + m  \\                  &amp;=  \llbracket \text {Val} \space (n+m) \rrbracket               \end {align*}         </tex>
         and
@@ -228,7 +228,7 @@ unfold f g x = Node (f x) [unfold f g x' | x' &lt;- g x]</code></pre>
         <tex display="block">              \begin {align*}                  \llbracket \text {Add} \space  x \space  y \rrbracket                  &amp;=  \llbracket x \rrbracket  +  \llbracket y \rrbracket    \\                  &amp;=  \llbracket x \rrbracket  +  \llbracket y' \rrbracket  ( \text {By assumption } \llbracket y \rrbracket = \llbracket y' \rrbracket )  \\                   &amp;=  \llbracket \text {Add} \space  x \space  y' \rrbracket               \end {align*}         </tex>
     </mainmatter> </tree>
  
-</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7503</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Contextual Semantics</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7410</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Contextual Semantics</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
         The small-step semantics for expressions above has one basic reduction rule 
         for adding values and two structural rules that allow addition to be performed
         in larger expressions. Separating these two kinds of rules results 
@@ -312,7 +312,7 @@ trans e = [fill c x' | (c, x) &lt;- split e, x' &lt;- reduce x]</code></pre>
         Contexts are related to a number of other important concepts in
         programming and semantics, including the use of continuations to make control flow
         explicit (John C. Reynolds 1972).
-    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7504</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Big-step Semantics</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7411</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Big-step Semantics</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
         Big-step semantics is also known as <strong>natural semantics</strong>,
         which focus on large execution step. For a language T of syntactic terms
         comprises two components: a set <tex>V</tex> of values and 
@@ -332,7 +332,7 @@ eval (Add x y) = [n + m | n &lt;- eval x, m &lt;- eval y]</code></pre>
         are equivalent, which can be captured by the following property:
         <tex display="block">              \llbracket e \rrbracket  = n  \iff  e \Downarrow  n         </tex>
         This is easily verified by induction.
-    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7505</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Abstract Machine</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
+    </p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7412</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title><link href="cs-0006.xml" type="local" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</link> › Abstract Machine</title>  <parent>cs-0006</parent> </frontmatter> <mainmatter><p>
         All the exmaples we have meet focused on explaining semantic ideas,
         now we show how language of integers and addition can also be used to help 
         discover semantic ideas.
@@ -348,7 +348,7 @@ eval (Add x y) = [n + m | n &lt;- eval x, m &lt;- eval y]</code></pre>
         This section we show how an abstract machine for our example language can 
         be systematically derived from the evaluation function using steps
         based on two important semantic concepts, <strong>continuations</strong> and <strong>defunctionalisation</strong>.
-    </p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7506</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title>Add Continuations</title>   </frontmatter> <mainmatter><p>
+    </p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7413</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title>Add Continuations</title>   </frontmatter> <mainmatter><p>
             We want to make the order of evaluation explicit in the semantics itself.
             A standard technique for achieving this aim is to rewrite the semantics
             in <strong>continuation-passing style</strong>. 
@@ -391,7 +391,7 @@ eval' (Add x y) c = eval' x (\n -&gt; eval' y (\m -&gt; c (n + m)))</code></pre>
             Our original semantics can be recovered from the new semantics by
             using the identity continuation <tex>\lambda  n  \to  n</tex></p>
   <pre><code class="language-haskell"> eval e = eval' e (\n -&gt; n)</code></pre>
-</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7507</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title>Defunctionalise</title>   </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>7414</anchor>    <date><year>2024</year> <month>3</month> <day>11</day></date>  <title>Defunctionalise</title>   </frontmatter> <mainmatter><p>
             We use continuation to make the order of evaluation explicit in the semantics,
             but this also makes the semantics into a higher-order function.
             Hence our second step is to regain the first-order nature of the original semantics by 

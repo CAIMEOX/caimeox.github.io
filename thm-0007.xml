@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5952</anchor> <taxon>Theorem</taxon> <addr>thm-0007</addr><route>thm-0007.xml</route>    <title>Linearly dependent list extends to a basis</title>   </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5881</anchor> <taxon>Theorem</taxon> <addr>thm-0007</addr><route>thm-0007.xml</route>    <title>Linearly dependent list extends to a basis</title>   </frontmatter> <mainmatter><p>
     Every linearly independent list of vectors in  a finite-dimensional vector space can be extended to a basis.
-</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5953</anchor> <taxon>Linear Algebra</taxon> <addr>math-0002</addr><route>math-0002.xml</route>  <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Finite Dimensional Vector Space</title>   </frontmatter> <mainmatter><p>
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5882</anchor> <taxon>Linear Algebra</taxon> <addr>math-0002</addr><route>math-0002.xml</route>  <date><year>2024</year> <month>1</month> <day>26</day></date>  <title>Finite Dimensional Vector Space</title>   </frontmatter> <mainmatter><p>
     This note introduces the concept of finite-dimensional vector space.
     Refer to <link href="linear-algebra-2015.xml" type="local" addr="linear-algebra-2015" title="Linear Algebra Done Right">Linear Algebra Done Right</link>.
 </p><p>
     Adding up scalar mulitples of vectors in a list gives a linear combination.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5954</anchor> <taxon>Definition</taxon> <addr>def-000L</addr><route>def-000L.xml</route>    <title>Linear Combination</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5883</anchor> <taxon>Definition</taxon> <addr>def-000L</addr><route>def-000L.xml</route>    <title>Linear Combination</title>   </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a <link href="def-000H.xml" type="local" addr="def-000H" title="Vector Space">vector space</link> over a field <tex>F</tex>.
     Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
     A <strong>linear combination</strong> of <tex>v_1,  \dots , v_n</tex> is an expression of the form
@@ -16,7 +16,7 @@
 </p></mainmatter> </tree><p>
     To talk about a structure, we usually define a collection of this structure.
     Hence we have span for linear combinations.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5955</anchor> <taxon>Definition</taxon> <addr>def-000M</addr><route>def-000M.xml</route>    <title>Linear Span</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5884</anchor> <taxon>Definition</taxon> <addr>def-000M</addr><route>def-000M.xml</route>    <title>Linear Span</title>   </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a vector space over a field <tex>F</tex>.
     Let <tex>v_1,  \dots , v_n</tex> be vectors in <tex>V</tex>.
     The <strong>span</strong> of <tex>v_1,  \dots , v_n</tex> is defined as
@@ -32,18 +32,18 @@
     Thus we conclude that <tex>S</tex> is the smallest subspace containing <tex>v_1,  \dots , v_n</tex>.
 </p><p>
     The discussion about <strong>spans</strong> leads to a key definition in linear algebra.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5956</anchor> <taxon>Definition</taxon> <addr>def-000N</addr><route>def-000N.xml</route>    <title>Finite-Dimensional Vector Space</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5885</anchor> <taxon>Definition</taxon> <addr>def-000N</addr><route>def-000N.xml</route>    <title>Finite-Dimensional Vector Space</title>   </frontmatter> <mainmatter><p>
     A <link href="def-000H.xml" type="local" addr="def-000H" title="Vector Space">vector space</link> <tex>V</tex> is called <strong>finite-dimensional</strong> if some <link href="def-000G.xml" type="local" addr="def-000G" title="List">list</link> of vectors <tex>v_1,  \dots , v_n</tex> <link href="def-000M.xml" type="local" addr="def-000M" title="Linear Span">spans</link> <tex>V</tex>.
 </p></mainmatter> </tree><p>
     The opposite of finite-dimensional is infinite-dimensional.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5957</anchor> <taxon>Definition</taxon> <addr>def-000O</addr><route>def-000O.xml</route>    <title>Infinite-dimensional vector space</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5886</anchor> <taxon>Definition</taxon> <addr>def-000O</addr><route>def-000O.xml</route>    <title>Infinite-dimensional vector space</title>   </frontmatter> <mainmatter><p>
     A vector space <tex>V</tex> is called <strong>infinite-dimensional</strong> if it is not <link href="def-000N.xml" type="local" addr="def-000N" title="Finite-Dimensional Vector Space">finite-dimensional</link>.
 </p></mainmatter> </tree><p>
     Consider the situation that there is only one way to
     express a vector <tex>v</tex> as a linear combination of vectors in a list <tex>v_1,  \dots , v_n</tex>.
     What property of the list <tex>v_1,  \dots , v_n</tex> does this situation imply? The answer is
     linear independence.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5958</anchor> <taxon>Definition</taxon> <addr>def-000P</addr><route>def-000P.xml</route>    <title>Linearly independent</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5887</anchor> <taxon>Definition</taxon> <addr>def-000P</addr><route>def-000P.xml</route>    <title>Linearly independent</title>   </frontmatter> <mainmatter><p>
     A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly independent</strong> if
     <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
     implies that <tex>a_1 =  \dots  = a_n = 0</tex>.
@@ -52,7 +52,7 @@
     If some vectors are not linearly independent, then there are more than one way to
     express a vector as a linear combination of vectors in the list. This leads to 
     the following definition.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5959</anchor> <taxon>Definition</taxon> <addr>def-000Q</addr><route>def-000Q.xml</route>    <title>Linearly dependent</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5888</anchor> <taxon>Definition</taxon> <addr>def-000Q</addr><route>def-000Q.xml</route>    <title>Linearly dependent</title>   </frontmatter> <mainmatter><p>
     A set of vectors <tex>\{ v_1,  \dots , v_n \}</tex> is called <strong>linearly dependent</strong> if
     <tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</tex>
     for some <tex>a_1,  \dots , a_n  \in   \mathbb {F}</tex> with at least one <tex>a_i  \neq  0</tex> (not all <tex>0</tex>).
@@ -60,16 +60,16 @@
     The following lemma is a direct consequence of the definition of linear independence.
     It states that for a given linearly dependent list, we can always remove a vector
     without changing the span.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5960</anchor> <taxon>Lemma</taxon> <addr>thm-0001</addr><route>thm-0001.xml</route>    <title>Linear Dependence Lemma</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5889</anchor> <taxon>Lemma</taxon> <addr>thm-0001</addr><route>thm-0001.xml</route>    <title>Linear Dependence Lemma</title>   </frontmatter> <mainmatter><p>
     Let <tex>v_1,  \dots , v_n</tex> be vectors in a vector space <tex>V</tex> over a field <tex>\mathbb {F}</tex>.
     If <tex>v_1,  \dots , v_n</tex> are linearly dependent, then there exists <tex>1  \leq  i  \leq  n</tex> such that
     <ul><li><tex>v_i  \in   \text {span} (v_1,  \dots , v_{i-1})</tex></li>
-        <li>Remove <tex>v_i</tex> from the list <tex>v_1,  \dots , v_n</tex> and the span does not change</li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5961</anchor> <taxon>Lemma</taxon> <addr>thm-0002</addr><route>thm-0002.xml</route>    <title>Length of linearly independent list <tex>\leq</tex> length of spanning list</title>   </frontmatter> <mainmatter><p>
+        <li>Remove <tex>v_i</tex> from the list <tex>v_1,  \dots , v_n</tex> and the span does not change</li></ul></p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5890</anchor> <taxon>Lemma</taxon> <addr>thm-0002</addr><route>thm-0002.xml</route>    <title>Length of linearly independent list <tex>\leq</tex> length of spanning list</title>   </frontmatter> <mainmatter><p>
     In a finite dimensional vector space, the length of a linearly independent list is less than or equal to the length of a spanning list.
 </p></mainmatter> </tree><p>
     We have discussed linear independent lists and spanning lists.
     Now we are ready to define a basis.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5962</anchor> <taxon>Definition</taxon> <addr>def-000R</addr><route>def-000R.xml</route>    <title>Basis</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5891</anchor> <taxon>Definition</taxon> <addr>def-000R</addr><route>def-000R.xml</route>    <title>Basis</title>   </frontmatter> <mainmatter><p>
     A basis of <tex>V</tex> is a list of vectors in <tex>V</tex>
     that is linearly independent and spans <tex>V</tex>. 
 </p><p><strong>Criterion for basis</strong>
@@ -78,22 +78,22 @@
 </p></mainmatter> </tree><p>
     For instance, we have standard basis <tex>\{ e_1,  \dots , e_n \}</tex> for <tex>\mathbb {F}^n</tex>,
     where <tex>e_i</tex> is the vector with <tex>1</tex> at <tex>i</tex>-th position and <tex>0</tex> elsewhere.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5963</anchor> <taxon>Theorem</taxon> <addr>thm-0005</addr><route>thm-0005.xml</route>    <title>Spanning List contains a basis</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5892</anchor> <taxon>Theorem</taxon> <addr>thm-0005</addr><route>thm-0005.xml</route>    <title>Spanning List contains a basis</title>   </frontmatter> <mainmatter><p>
     Every spanning list in a vector space can be reduced to a basis.
 </p></mainmatter> </tree><p>
     From the <link href="thm-0005.xml" type="local" addr="thm-0005" title="Spanning List contains a basis">theorem</link> we can infer a corollary.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5964</anchor> <taxon>Corollary</taxon> <addr>thm-0006</addr><route>thm-0006.xml</route>    <title>Basis of finite-dimensional vector space</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5893</anchor> <taxon>Corollary</taxon> <addr>thm-0006</addr><route>thm-0006.xml</route>    <title>Basis of finite-dimensional vector space</title>   </frontmatter> <mainmatter><p>
     Every finite-dimensional vector space has a basis.
 </p></mainmatter> </tree><p>
     The next result states for a spanning list can be reduced to a basis.
     We can adjoin one or more vectors to a linearly independent list to form a basis.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5965</anchor> <taxon>Theorem</taxon> <addr>thm-0007</addr><route>thm-0007.xml</route>    <title>Linearly dependent list extends to a basis</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5894</anchor> <taxon>Theorem</taxon> <addr>thm-0007</addr><route>thm-0007.xml</route>    <title>Linearly dependent list extends to a basis</title>   </frontmatter> <mainmatter><p>
     Every linearly independent list of vectors in  a finite-dimensional vector space can be extended to a basis.
 </p></mainmatter> </tree><p>
     Remind the definition of <link href="der-000K" type="external">direct sum</link>, we can now show that
     every subspace of a finite-dimensional vecrtor space can be paired
     with another subspace to form a direct sum of the whole space.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5966</anchor> <taxon>Theorem</taxon> <addr>thm-0008</addr><route>thm-0008.xml</route>    <title>Direct Sum of Subspaces of <tex>V</tex></title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5895</anchor> <taxon>Theorem</taxon> <addr>thm-0008</addr><route>thm-0008.xml</route>    <title>Direct Sum of Subspaces of <tex>V</tex></title>   </frontmatter> <mainmatter><p>
     Suppose <tex>V</tex> is a finite dimensional vector space,
     and <tex>U</tex> is a subspace of <tex>V</tex>.
     Then there exists a subspace <tex>W</tex> of <tex>V</tex> such that
@@ -104,19 +104,19 @@
     We tempted to define the dimension as the length of basis intuitively.
     With this definition we should prove its well-definedness.
     That is, every basis has the same length.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5967</anchor> <taxon>Theorem</taxon> <addr>thm-0009</addr><route>thm-0009.xml</route>    <title>Basis length is invariant</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5896</anchor> <taxon>Theorem</taxon> <addr>thm-0009</addr><route>thm-0009.xml</route>    <title>Basis length is invariant</title>   </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a finite-dimensional vector space.
     Then every basis of <tex>V</tex> has the same length.
 </p></mainmatter> </tree><p>
     This can be proved by <link href="thm-0002.xml" type="local" addr="thm-0002" title="Length of linearly independent list  length of spanning list">Lemma 8</link>.
     Now we can formally define the dimension of such spaces.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5968</anchor> <taxon>Definition</taxon> <addr>def-001V</addr><route>def-001V.xml</route>    <title>Dimension</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5897</anchor> <taxon>Definition</taxon> <addr>def-001V</addr><route>def-001V.xml</route>    <title>Dimension</title>   </frontmatter> <mainmatter><p>
     The <strong>dimension</strong> of a finite-dimensional vector space <tex>V</tex> is the length of any basis of the vector space.
     Denoted by <tex>\dim  V</tex>.
 </p></mainmatter> </tree><p>
     Every subspace of a finite-dimensional vector space is also finite-dimensional.
     Hence we can talk about the dimension of a subspace.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5969</anchor> <taxon>Theorem</taxon> <addr>thm-000A</addr><route>thm-000A.xml</route>    <title>Dimension of a subspace</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5898</anchor> <taxon>Theorem</taxon> <addr>thm-000A</addr><route>thm-000A.xml</route>    <title>Dimension of a subspace</title>   </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a finite-dimensional vector space,
     and <tex>U</tex> be a subspace of <tex>V</tex>.
     Then <tex>\dim  U  \leq   \dim  V</tex>.
@@ -125,16 +125,16 @@
     to show a list of vectors is a basis, we only need to show it is linearly independent,
     and it spans the whole space.
     The next theorems simplifies the task:
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5970</anchor> <taxon>Theorem</taxon> <addr>thm-000B</addr><route>thm-000B.xml</route>    <title>Linearly independent list of the right length is a basis</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5899</anchor> <taxon>Theorem</taxon> <addr>thm-000B</addr><route>thm-000B.xml</route>    <title>Linearly independent list of the right length is a basis</title>   </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a finite-dimensional vector space.
     Then every <link href="def-000P.xml" type="local" addr="def-000P" title="Linearly independent">linearly independent</link> list of vectors in <tex>V</tex> with length equal to <tex>\dim  V</tex> is a basis of <tex>V</tex>.
-</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5971</anchor> <taxon>Theorem</taxon> <addr>thm-000C</addr><route>thm-000C.xml</route>    <title>Spanning list of the right length is a basis</title>   </frontmatter> <mainmatter><p>
+</p></mainmatter> </tree><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5900</anchor> <taxon>Theorem</taxon> <addr>thm-000C</addr><route>thm-000C.xml</route>    <title>Spanning list of the right length is a basis</title>   </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a finite-dimensional vector space.
     Then every <link href="def-000M.xml" type="local" addr="def-000M" title="Linear Span">spanning</link> list of vectors in <tex>V</tex> with length equal to <tex>\dim  V</tex> is a basis of <tex>V</tex>.
 </p></mainmatter> </tree><p>
     Now we move to the discussion of the dimension of the sum of two subspaces.
     This is analogous to the <link href="thm-000E.xml" type="local" addr="thm-000E" title="Inclusion-Exclusion Principle">inclusion-exclusion principle</link>.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5972</anchor> <taxon>Theorem</taxon> <addr>thm-000D</addr><route>thm-000D.xml</route>    <title>Dimension of a sum</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5901</anchor> <taxon>Theorem</taxon> <addr>thm-000D</addr><route>thm-000D.xml</route>    <title>Dimension of a sum</title>   </frontmatter> <mainmatter><p>
     Let <tex>V</tex> be a finite-dimensional vector space,
     and <tex>U</tex> and <tex>W</tex> be subspaces of <tex>V</tex>.
     Then

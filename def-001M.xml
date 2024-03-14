@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8988</anchor> <taxon>Definition</taxon> <addr>def-001M</addr><route>def-001M.xml</route>    <title>Symmetric and Antisymmetric Part</title>   </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8883</anchor> <taxon>Definition</taxon> <addr>def-001M</addr><route>def-001M.xml</route>    <title>Symmetric and Antisymmetric Part</title>   </frontmatter> <mainmatter><p>
     Any square matrix <tex>A</tex> can be written as the sum of a symmetric and antisymmetric matrix:
     <tex display="block">         A = A_S + A_A     </tex>
     where <tex>A_S</tex> is the <strong>symmetric part</strong> and <tex>A_A</tex> is the <strong>antisymmetric part</strong>.
     <tex display="block">         A_S =  \frac {1}{2}(A + A^T)     </tex>
     where <tex>A_S</tex> is a <link href="def-001N.xml" type="local" addr="def-001N" title="Symmetric Matrix">symmetric matrix</link>
     <tex display="block">         A_A =  \frac {1}{2}(A - A^T)     </tex>
-    where <tex>A_A</tex> is an <link href="def-001O.xml" type="local" addr="def-001O" title="Antisymmetric Matrix">antisymmetric matrix</link></p></mainmatter> <backmatter><contributions/> <context/> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8989</anchor> <taxon>Definition</taxon> <addr>def-001O</addr><route>def-001O.xml</route>    <title>Antisymmetric Matrix</title>   </frontmatter> <mainmatter><p>
+    where <tex>A_A</tex> is an <link href="def-001O.xml" type="local" addr="def-001O" title="Antisymmetric Matrix">antisymmetric matrix</link></p></mainmatter> <backmatter><contributions/> <context/> <related><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8884</anchor> <taxon>Definition</taxon> <addr>def-001O</addr><route>def-001O.xml</route>    <title>Antisymmetric Matrix</title>   </frontmatter> <mainmatter><p>
     A square matrix <tex>A</tex> is antisymmetric if it is equal to the negative of its transpose:
     <tex display="block">         A = -A^T     </tex>
-    This also implies <tex>A^{-1} A^T = -I</tex></p></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8990</anchor> <taxon>Definition</taxon> <addr>def-001N</addr><route>def-001N.xml</route>    <title>Symmetric Matrix</title>   </frontmatter> <mainmatter><p>
+    This also implies <tex>A^{-1} A^T = -I</tex></p></mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8885</anchor> <taxon>Definition</taxon> <addr>def-001N</addr><route>def-001N.xml</route>    <title>Symmetric Matrix</title>   </frontmatter> <mainmatter><p>
     A square matrix <tex>A</tex> is symmetric if it is equal to its transpose:
     <tex display="block">         A = A^T     </tex>
     This also implies <tex>A^{-1} A^T = I</tex></p></mainmatter> </tree></related> <backlinks/> <references/></backmatter></tree>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4912</anchor> <taxon>Definition</taxon> <addr>def-002Q</addr><route>def-002Q.xml</route>    <title>Homogeneous Linear Equations</title>   </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4868</anchor> <taxon>Definition</taxon> <addr>def-002Q</addr><route>def-002Q.xml</route>    <title>Homogeneous Linear Equations</title>   </frontmatter> <mainmatter><p>
     A linear equation is called <strong>homogeneous</strong> if it can be written in the form
     <tex display="block">         a_1x_1 + a_2x_2 +  \cdots  + a_nx_n = 0     </tex>
     where <tex>a_1, a_2,  \ldots , a_n</tex> are constants and <tex>x_1, x_2,  \ldots , x_n</tex> are variables.
@@ -9,4 +9,15 @@
     This can be written in matrix form as
     <tex display="block">         A \vec {x} =  \vec {0}     </tex>
     where <tex>A</tex> is the <strong>coefficient matrix</strong>, <tex>\vec {x}</tex> is the vector of variables, and <tex>\vec {0}</tex> is the zero vector.
-    <tex display="block">         A =  \begin {bmatrix}             a_{11} &amp; a_{12} &amp;  \cdots  &amp; a_{1n}  \\              a_{21} &amp; a_{22} &amp;  \cdots  &amp; a_{2n}  \\               \vdots  &amp;  \vdots  &amp;  \ddots  &amp;  \vdots   \\              a_{m1} &amp; a_{m2} &amp;  \cdots  &amp; a_{mn}          \end {bmatrix}     </tex></p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks/> <references/></backmatter></tree>
+    <tex display="block">         A =  \begin {bmatrix}             a_{11} &amp; a_{12} &amp;  \cdots  &amp; a_{1n}  \\              a_{21} &amp; a_{22} &amp;  \cdots  &amp; a_{2n}  \\               \vdots  &amp;  \vdots  &amp;  \ddots  &amp;  \vdots   \\              a_{m1} &amp; a_{m2} &amp;  \cdots  &amp; a_{mn}          \end {bmatrix}     </tex></p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>4869</anchor> <taxon>Example</taxon> <addr>eg-0004</addr><route>eg-0004.xml</route>    <title>Homogeneous Linear Equations System</title>   </frontmatter> <mainmatter><p>Reprase in terms of a linear map the question of whether a <link href="def-002Q.xml" type="local" addr="def-002Q" title="Homogeneous Linear Equations">homogeneous system linear equations</link> has a nonzero solution.</p><p>
+        Let <tex>A</tex> be the coefficient matrix of a homogeneous linear system.
+        <tex display="block">             A =  \begin {bmatrix}                 a_{11} &amp; a_{12} &amp;  \cdots  &amp; a_{1n}  \\                  a_{21} &amp; a_{22} &amp;  \cdots  &amp; a_{2n}  \\                   \vdots  &amp;  \vdots  &amp;  \ddots  &amp;  \vdots   \\                  a_{m1} &amp; a_{m2} &amp;  \cdots  &amp; a_{mn}              \end {bmatrix}         </tex>
+        The equation <tex>A \vec {x} =  \vec {0}</tex> has a trivial solution <tex>\vec {x} =  \vec {0}</tex>.
+        The question here is whether there is a nontrivial solution.
+    </p><p>
+        Define <tex>T:  \mathbb {F} ^n  \to   \mathbb {F} ^m</tex> by
+        <tex display="block">             T( \vec {x}) = A \vec {x}         </tex>
+        Then the question of whether the homogeneous linear system has a nontrivial solution is equivalent to 
+        asking <tex>\text {null }  T</tex> is nontrivial.
+        That is, <tex>T</tex> is <link href="thm-000G.xml" type="local" addr="thm-000G" title="Injectivity equivalent to Kernel Triviality">not injective</link>.
+    </p></mainmatter> </tree></backlinks> <references/></backmatter></tree>

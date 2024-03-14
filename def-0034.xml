@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8722</anchor> <taxon>Definition</taxon> <addr>def-0034</addr><route>def-0034.xml</route>    <title>Stationary State</title>   </frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8619</anchor> <taxon>Definition</taxon> <addr>def-0034</addr><route>def-0034.xml</route>    <title>Stationary State</title>   </frontmatter> <mainmatter><p>
     A <strong>stationary state</strong> is a quantum state with all observables independent of time.
-</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8723</anchor> <taxon>Quantum Mechanics</taxon> <addr>phy-0003</addr><route>phy-0003.xml</route>  <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>Time-independent Schrodinger Equation</title>   </frontmatter> <mainmatter><p>
+</p></mainmatter> <backmatter><contributions/> <context><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>8620</anchor> <taxon>Quantum Mechanics</taxon> <addr>phy-0003</addr><route>phy-0003.xml</route>  <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>Time-independent Schrodinger Equation</title>   </frontmatter> <mainmatter><p>
     Refer to chapter 2 in <link href="quantum-2018.xml" type="local" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</link></p><p>
     In previous section we use the <link href="def-0030.xml" type="local" addr="def-0030" title="Schrodinger's equation">Schrodinger equation</link> to compute things.
     The variable <tex>t</tex> is annoying which makes things complicated, and we would like to get rid of it.
@@ -15,7 +15,7 @@
     <tex display="block">          \Psi (x,t) =  \psi (x) \phi (t)     </tex>
     This is an absurd restriction, but it works and we can get interesting results.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8724</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title><link href="phy-0003.xml" type="local" addr="phy-0003" title="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</link> › <strong>Solve the equation</strong></title>  <parent>phy-0003</parent> </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8621</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title><link href="phy-0003.xml" type="local" addr="phy-0003" title="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</link> › <strong>Solve the equation</strong></title>  <parent>phy-0003</parent> </frontmatter> <mainmatter>
     <p>
         Now substitute the product form into the Schrodinger equation:
         <tex display="block">             i \hbar   \psi (x)  \frac { \partial }{ \partial  t}( \phi (t)) = - \frac { \hbar ^2}{2m} \phi (t) \frac { \partial ^2( \psi (x))}{ \partial  x^2} + V(x) \psi (x) \phi (t)         </tex>
@@ -41,7 +41,7 @@
 </mainmatter> </tree>
 <p>
     Now we give a name to the time-independent Schrodinger equation.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8725</anchor> <taxon>Definition</taxon> <addr>def-0034</addr><route>def-0034.xml</route>    <title>Stationary State</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8622</anchor> <taxon>Definition</taxon> <addr>def-0034</addr><route>def-0034.xml</route>    <title>Stationary State</title>   </frontmatter> <mainmatter><p>
     A <strong>stationary state</strong> is a quantum state with all observables independent of time.
 </p></mainmatter> </tree><p>
     Thought the wave function is time-dependent,
@@ -52,7 +52,7 @@
     Then <tex>\langle  p  \rangle  = 0</tex> all the time.
     Nothing happens in the stationary state.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8726</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title><link href="phy-0003.xml" type="local" addr="phy-0003" title="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</link> › 
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>8623</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title><link href="phy-0003.xml" type="local" addr="phy-0003" title="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</link> › 
     <strong>Conservation of energy</strong>
 </title>  <parent>phy-0003</parent> </frontmatter> <mainmatter>
     This also means that the energy of the system is conserved.

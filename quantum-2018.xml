@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="forest.xsl"?>
-<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5331</anchor> <taxon>Reference</taxon> <addr>quantum-2018</addr><route>quantum-2018.xml</route>   <authors><author>David J. Griffiths</author><author>Darrell F. Schroeter</author> </authors> <title>Introduction to Quantum Mechanics</title>   <meta name="doi">10.1017/9781316995433</meta><meta name="venue">Electronic, Optoelectronic Devices, and Nanotechnology, Engineering, Physics and Astronomy, Quantum Physics and Quantum Information</meta></frontmatter> <mainmatter><p>
+<tree expanded="true" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5272</anchor> <taxon>Reference</taxon> <addr>quantum-2018</addr><route>quantum-2018.xml</route>   <authors><author>David J. Griffiths</author><author>Darrell F. Schroeter</author> </authors> <title>Introduction to Quantum Mechanics</title>   <meta name="doi">10.1017/9781316995433</meta><meta name="venue">Electronic, Optoelectronic Devices, and Nanotechnology, Engineering, Physics and Astronomy, Quantum Physics and Quantum Information</meta></frontmatter> <mainmatter><p>
     Provides clear and accessible explanations of the foundations of quantum mechanics, using an attractive and informal style.
-</p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5332</anchor> <taxon>Quantum Mechanics</taxon> <addr>phy-0003</addr><route>phy-0003.xml</route>  <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>Time-independent Schrodinger Equation</title>   </frontmatter> <mainmatter><p>
+</p></mainmatter> <backmatter><contributions/> <context/> <related/> <backlinks><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5273</anchor> <taxon>Quantum Mechanics</taxon> <addr>phy-0003</addr><route>phy-0003.xml</route>  <date><year>2024</year> <month>2</month> <day>4</day></date>  <title>Time-independent Schrodinger Equation</title>   </frontmatter> <mainmatter><p>
     Refer to chapter 2 in <link href="quantum-2018.xml" type="local" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</link></p><p>
     In previous section we use the <link href="def-0030.xml" type="local" addr="def-0030" title="Schrodinger's equation">Schrodinger equation</link> to compute things.
     The variable <tex>t</tex> is annoying which makes things complicated, and we would like to get rid of it.
@@ -15,7 +15,7 @@
     <tex display="block">          \Psi (x,t) =  \psi (x) \phi (t)     </tex>
     This is an absurd restriction, but it works and we can get interesting results.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5333</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title><link href="phy-0003.xml" type="local" addr="phy-0003" title="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</link> › <strong>Solve the equation</strong></title>  <parent>phy-0003</parent> </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5274</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title><link href="phy-0003.xml" type="local" addr="phy-0003" title="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</link> › <strong>Solve the equation</strong></title>  <parent>phy-0003</parent> </frontmatter> <mainmatter>
     <p>
         Now substitute the product form into the Schrodinger equation:
         <tex display="block">             i \hbar   \psi (x)  \frac { \partial }{ \partial  t}( \phi (t)) = - \frac { \hbar ^2}{2m} \phi (t) \frac { \partial ^2( \psi (x))}{ \partial  x^2} + V(x) \psi (x) \phi (t)         </tex>
@@ -41,7 +41,7 @@
 </mainmatter> </tree>
 <p>
     Now we give a name to the time-independent Schrodinger equation.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5334</anchor> <taxon>Definition</taxon> <addr>def-0034</addr><route>def-0034.xml</route>    <title>Stationary State</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5275</anchor> <taxon>Definition</taxon> <addr>def-0034</addr><route>def-0034.xml</route>    <title>Stationary State</title>   </frontmatter> <mainmatter><p>
     A <strong>stationary state</strong> is a quantum state with all observables independent of time.
 </p></mainmatter> </tree><p>
     Thought the wave function is time-dependent,
@@ -52,7 +52,7 @@
     Then <tex>\langle  p  \rangle  = 0</tex> all the time.
     Nothing happens in the stationary state.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5335</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title><link href="phy-0003.xml" type="local" addr="phy-0003" title="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</link> › 
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5276</anchor>    <date><year>2024</year> <month>2</month> <day>4</day></date>  <title><link href="phy-0003.xml" type="local" addr="phy-0003" title="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</link> › 
     <strong>Conservation of energy</strong>
 </title>  <parent>phy-0003</parent> </frontmatter> <mainmatter>
     This also means that the energy of the system is conserved.
@@ -73,7 +73,7 @@
     <tex display="block">          \Delta  H =  \sqrt { \langle  H^2  \rangle  -  \langle  H  \rangle ^2} = 0     </tex>
     This implies that the energy of the system is conserved.
 </mainmatter> </tree>
-</mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5336</anchor> <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr><route>phy-0002.xml</route>  <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The Wave Function</title>   </frontmatter> <mainmatter><p>
+</mainmatter> </tree><tree expanded="false" show-heading="true" show-metadata="true" toc="false" numbered="false" root="false"><frontmatter><anchor>5277</anchor> <taxon>Quantum Mechanics</taxon> <addr>phy-0002</addr><route>phy-0002.xml</route>  <date><year>2024</year> <month>2</month> <day>3</day></date>  <title>The Wave Function</title>   </frontmatter> <mainmatter><p>
     This post introduces the concept of the wave function in quantum mechanics.
     Refer to <link href="quantum-2018.xml" type="local" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</link>.
 </p><p>
@@ -92,7 +92,7 @@
     For <strong>Quantum Mechanics</strong>, we have a different perspective.
     We would like to look for the <strong>wave function</strong>, <tex>\Psi (x, t)</tex>.
     To determine it we need to solve the <strong>Schrodinger equation</strong>.
-    <tex display="block">         i \hbar \frac { \partial }{ \partial  t} \Psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \Psi (x,t)}{ \partial  x^2} + V(x,t) \Psi (x,t)     </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5337</anchor> <taxon>Definition</taxon> <addr>def-0030</addr><route>def-0030.xml</route>    <title>Schrodinger's equation</title>   </frontmatter> <mainmatter><p>
+    <tex display="block">         i \hbar \frac { \partial }{ \partial  t} \Psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \Psi (x,t)}{ \partial  x^2} + V(x,t) \Psi (x,t)     </tex></p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5278</anchor> <taxon>Definition</taxon> <addr>def-0030</addr><route>def-0030.xml</route>    <title>Schrodinger's equation</title>   </frontmatter> <mainmatter><p>
     The <strong>Schrodinger equation</strong> is a linear partial differential equation that describes the wave function of a quantum system.
     It is given by (the general form):
     <tex display="block">         i \hbar \frac { \partial }{ \partial  t} \Psi ( \vec {r},t) =  \hat {H} \Psi ( \vec {r},t)     </tex>
@@ -132,7 +132,7 @@
 </p><p>
     Probability is the key concept in quantum mechanics.
     Now I will introduce some terimnologies related to continuous probability.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5338</anchor> <taxon>Definition</taxon> <addr>def-0031</addr><route>def-0031.xml</route>    <title>Probability Density</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5279</anchor> <taxon>Definition</taxon> <addr>def-0031</addr><route>def-0031.xml</route>    <title>Probability Density</title>   </frontmatter> <mainmatter><p>
     A <strong>probability density</strong> is a function <tex>p(x)</tex> such that:
     <ul><li><tex>p(x) \geq  0</tex> for all <tex>x</tex>.
         </li>
@@ -140,12 +140,12 @@
         </li></ul>
     With this we can define the <strong>probability function</strong> in an interval <tex>[a,b]</tex> as:
     <tex display="block">         P(a, b) =  \int _a^b p(x)dx     </tex></p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5339</anchor>      <title>Expectation Value</title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5280</anchor>      <title>Expectation Value</title>   </frontmatter> <mainmatter>
     The <strong>expectation value</strong> of a function <tex>f(x)</tex> with respect to the probability density <tex>p(x)</tex> is defined:
     <tex display="block">          \langle  f(x)  \rangle  =  \int _{- \infty }^{ \infty } f(x)p(x)dx     </tex>
 </mainmatter> </tree>
 
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5340</anchor>      <title>Variance</title>   </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5281</anchor>      <title>Variance</title>   </frontmatter> <mainmatter>
     The <strong>variance</strong> of a function <tex>f(x)</tex> with respect to the probability density <tex>p(x)</tex> is defined:
     <tex display="block">          \sigma ^2 : \equiv   \langle  x^2  \rangle  -  \langle  x  \rangle ^2     </tex>
 </mainmatter> </tree>
@@ -164,7 +164,7 @@
 </p>
  
    
-   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>5341</anchor> <taxon>Proof</taxon>   <date><year>2024</year> <month>2</month> <day>3</day></date>    <parent>phy-0002</parent> </frontmatter> <mainmatter>
+   <tree expanded="true" show-heading="true" show-metadata="false" toc="false" numbered="true" root="false"><frontmatter><anchor>5282</anchor> <taxon>Proof</taxon>   <date><year>2024</year> <month>2</month> <day>3</day></date>    <parent>phy-0002</parent> </frontmatter> <mainmatter>
         Differentiate the normalization condition with respect to time:
         <tex display="block">              \frac {d}{dt} \int _{- \infty }^{ \infty } | \Psi (x,t)|^2 dx =               \int _{- \infty }^{ \infty }  \frac { \partial }{ \partial  t}| \Psi (x,t)|^2 dx         </tex>
         With the product rule:
@@ -199,7 +199,7 @@
     repeated measurements on an ensemble of identical prepared systems,
     not the average of repeated measurements on a <em>single</em> system.
 </p>
-    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5342</anchor>    <date><year>2024</year> <month>2</month> <day>3</day></date>  <title><link href="phy-0002.xml" type="local" addr="phy-0002" title="The Wave Function">The Wave Function</link> › <strong>Construction.</strong></title>  <parent>phy-0002</parent> </frontmatter> <mainmatter>
+    <tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5283</anchor>    <date><year>2024</year> <month>2</month> <day>3</day></date>  <title><link href="phy-0002.xml" type="local" addr="phy-0002" title="The Wave Function">The Wave Function</link> › <strong>Construction.</strong></title>  <parent>phy-0002</parent> </frontmatter> <mainmatter>
     As times goes on, the expectation values varies.
     We naturally ask how fast it moves?
     Use simple calculus we can get the answer.
@@ -235,7 +235,7 @@
     This result from the <strong>de Broglie formula</strong>.
     <tex display="block">         p =  \frac {h}{ \lambda } =  \frac {2 \pi \hbar }{ \lambda }     </tex>
     Now we can give a qualitative argument for the uncertainty principle.
-</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5343</anchor> <taxon>Definition</taxon> <addr>def-0033</addr><route>def-0033.xml</route>    <title>Heisenberg Uncertainty Principle</title>   </frontmatter> <mainmatter><p>
+</p><tree expanded="true" show-heading="true" show-metadata="false" toc="true" numbered="true" root="false"><frontmatter><anchor>5284</anchor> <taxon>Definition</taxon> <addr>def-0033</addr><route>def-0033.xml</route>    <title>Heisenberg Uncertainty Principle</title>   </frontmatter> <mainmatter><p>
     The <strong>Heisenberg Uncertainty Principle</strong> states that
     it is impossible to measure simultaneously the position and the momentum of a particle
     with arbitrary precision.
