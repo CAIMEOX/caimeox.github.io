@@ -576,21 +576,21 @@ eval (Add x y) = [n + m | n <- eval x, m <- eval y]
         }
         \codeblock{language-haskell}{type Continuation = Integer -> Integer}
         \p{
-            We now define a new semantics \code{eval'}, which takes an expression and returns
+            We now define a new semantics #{\eval1}, which takes an expression and returns
             an integer as previously but also takes a continuation as an additional argument,
             which is applied to the result of evaluating the expression.
         }
         \codeblock{language-haskell}{eval' :: Expr -> Continuation -> Integer}
         \p{
-            The behavior of \code{eval'} should be:
+            The behavior of #{\eval1} should be:
         }
         ##{
-            \text{eval' e c} = \text{c (eval e)}
+            \eval1\space e\space c = \text{c (eval e)}
         }
         \p{
             We want to calculate a definition that satisfies the specification.
             Using structural induction on the expression #{e}, we construct 
-            the term \code{eval' e c} by gradually removing the reference to \code{eval}.
+            the term #{\eval1\space e\space c} by gradually removing the reference to \code{eval}.
             For the base case, #{e = \val\space n} we have
         }
         ##{
@@ -611,9 +611,211 @@ eval (Add x y) = [n + m | n <- eval x, m <- eval y]
             \end{align*}
         }
         \p{
-            However, no further definition can be applied now, so we consider the inductive hypothese:
+            However, no further definition can be applied now, so we consider the inductive hypothesis:
             Forall #{c'} and #{c''} we have #{\eval1\space x\space c' = c'(\eval\space x)} and
-            #{\eval1\space y\space c'' = c''(\eval\space y)}. 
+            #{\eval1\space y\space c'' = c''(\eval\space y)}. This can readily be achieved by 
+            abstracting over #{\eval\space x} and #{\eval\space y} using lambda abstraction.
+        }
+        ##{
+            \begin{align*}
+                & c\space (\eval\space x + \eval\space y) \\
+                =& (\lambda n\to c\space(n+\eval\space y)) \\
+                =& \eval1\space x\space (\lambda n\to c\space(n+\eval\space y)) \\ 
+                =& \eval1\space x\space (\lambda n\to (\lambda m\to c\space(n+m))(\eval\space y)) \\ 
+                =& \eval1\space x\space (\lambda n\to \eval1\space y\space (\lambda m\to c\space(n+m)))
+            \end{align*}
+        }
+        \p{
+            The final term does not refer to #{\eval} now.
+            In summary we have calculated the following definition
+        }
+        \codeblock{language-haskell}{\startverb
+eval' :: Expr -> Continuation -> Integer
+eval' (Val n) c = c n 
+eval' (Add x y) c = eval' x (\n -> eval' y (\m -> c (n + m)))\stopverb}
+        \p{
+            Our original semantics can be recovered from the new semantics by
+            using the identity continuation #{\lambda n \to n}
+        }
+        \codeblock{language-haskell}{\startverb eval e = eval' e (\n -> n) \stopverb}
+    }
+    \subtree{
+        \def\eval2{\text{eval}''}
+        \def\exec{\text{exec}}
+        \def\next{\text{next}}
+        \def\halt{\text{halt}}
+        \def\NEXT{\text{NEXT}}
+        \def\HALT{\text{HALT}}
+        \title{Defunctionalise}
+        \p{
+            We use continuation to make the order of evaluation explicit in the semantics,
+            but this also makes the semantics into a higher-order function.
+            Hence our second step is to regain the first-order nature of the original semantics by 
+            eliminating the use of continuations but \strong{retaining} the explicit order of evaluation they introduced.
+        }
+        \p{
+            A standard technique for eliminating the use of functions as arguments is \strong{defunctionalisation}.
+            We do not usually need the entire function-space of possible argument functions, 
+            there only a few forms of such functions are actually used.
+            Hence we represent the argument functions that we actually need using 
+            a datatype rather than functions.
+        }
+        \p{
+            We begin by defining three combinators \strong{halt}, \strong{next} and \strong{add} 
+            for constructing the continuations we used.
+        }
+        \codeblock{language-haskell}{\startverb
+halt :: Continuation
+halt n = n
+
+next :: Expr -> Continuation -> Continuation
+next y c = \n -> eval' y (add n c)
+
+add :: Integer -> Continuation -> Continuation
+add n c = \m -> c (n + m)
+\stopverb}
+        \p{
+            Use the combinators, our continuation semantics can now be written as:
+        }
+        \codeblock{language-haskell}{\startverb
+eval :: Expr -> Integer
+eavl e = eval' e halt
+
+eval' :: Expr -> Continuation -> Integer
+eval' (Val n) c = c n 
+eval' (Add x y) c = eval' x (next y c)
+\stopverb}
+        \p{
+            Now we declare a new datatype for continuations, consists of three constructors.
+        }
+        \codeblock{language-haskell}{data CONT = HALT | NEXT Expr CONT | ADD Integer CONT}
+        \p{
+            The following translation function forms a denotational semantics for \code{CONT}
+        }
+        \codeblock{language-haskell}{\startverb
+exec :: CONT -> Continuation
+exec HALT = halt
+exec (NEXT y c) = next y (exec c)
+exec (ADD n c) = add n (exec c)
+\stopverb}
+        \p{
+            This function is usually called \strong{apply}, which can be viewed as 
+            applying a representation of a continuation to an integer to give another integer.
+            We want to define a new semantics #{\eval1} which behaves in the same way 
+            as our previous #{\eval1} except that it uses values of type \code{CONT} 
+            rather than \code{Continuation}.
+            \codeblock{language-haskell}{eval'' :: Expr -> CONT -> Integer}
+            The desired behavior of #{\eval2} is:
+            ##{
+                \eval2\space e\space c = \eval1\space e\space (\exec\space c)
+            }
+        }
+        \p{
+            As before, we proceed by structural induction on expression #{e}.
+            The base case #{e=\val\space n} is trivial
+            ##{
+                \begin{align*}
+                    \eval2\space(\val\space n)\space c
+                    &= \eval1\space(\val\space n)\space (\exec\space c) \\
+                    &= \exec\space c\space n \\
+                \end{align*}
+            }
+        }
+        \p{
+            For the inductive case #{e = \add\space x\space y}:
+            ##{
+                \begin{align*}
+                    \eval2\space(\add\space x\space y)\space c 
+                    &= \eval1\space(\add\space x\space y)\space (\exec\space c) \\
+                    &= \eval1\space x\space(\next\space y\space(\exec\space c)) \\ 
+                    &= \eval1\space x\space(\exec\space(\text{NEXT}\space y\space c)) \\
+                    &= \eval2\space x\space (\text{NEXT}\space y\space c)
+                \end{align*}
+            }
+            The last step uses the inductive hypothesis for #{x}
+        }
+        \p{
+            In the basic case, #{\exec} still refers to the semantic #{\eval1},
+            via the combinator #{\next}. Hence we need to compute a new definition 
+            for #{\exec} that refers to our new #{\eval2}.
+        }
+        ##{
+            \begin{align*}
+                \exec\space\HALT\space n 
+                &= \halt\space n
+                \\ 
+                &= n                
+            \end{align*}
+        }
+        \p{The other case is also easy to compute, no need to induction.}
+        ##{
+            \begin{align*}
+                \exec\space(\NEXT\space y\space c)\space n 
+                &= \eval2\space y\space(\text{ADD}\space n\space c)
+                \\ 
+                \exec\space(\text{ADD}\space n\space c)\space m 
+                &= \exec\space c\space(n+m)
+            \end{align*}
+        }
+        \p{
+            Our original semantics #{\eval} can be recovered from the new 
+            semantics #{\eval2} too.
+        }
+        ##{
+            \begin{align*}
+                \eval\space e 
+                &= \eval1\space e\space(\lambda n\to n) \\ 
+                &= \eval1\space e\space\halt \\ 
+                &= \eval1\space e\space(\exec\space\HALT) \\ 
+                &= \eval2\space e\HALT
+            \end{align*}
+        }
+        \p{
+            In summary, we have calculated the following definitions:
+        }
+        \codeblock{language-haskell}{\startverb
+eval'' :: Expr -> CONT -> Integer
+eval'' (Val n) c = exec c n 
+eval'' (Add x y) c = eval'' x (NEXT y c)
+
+exec :: CONT -> Integer -> Integer
+exec HALT n = n 
+exec (NEXT y c) n = eval'' y (ADD n c)
+exec (ADD n c) m = exec c (n + m)
+
+eval :: Expr -> Integer
+eval e = eval'' e HALT
+\stopverb}
+        \p{
+            The four components (#{\eval2}, #{\eval}, #{\exec} and \code{CONT})
+            forms an abstract machine.
+        }
+        \p{
+            \code{CONT} is the type of \strong{control stack} which comprises 
+            instructions that determine how the machine should continue after evaluating
+            the current expression. Sometimes it is called an "eval/continue" machine.
+            The control stack can also be defined as a list of instructions.
+            \codeblock{language-haskell}{type CONT = [INST]
+data INST = NEXT Expr | ADD Integer}
+        }
+        \p{
+            #{\eval} evaluates an expression and give an integer by simply 
+            call the #{\eval2} with empty control stack #{\HALT}.
+        }
+        \p{
+            #{\eval2} evaluates an expression in the context of a control stack.
+            If the expression is an integer, we execute the control stack using this 
+            integer as an argument. If the expression is an addition, 
+            we evaluate the first argument #{x} and place the instruction #{\NEXT\space y}
+            on the top of the control stack.
+        }
+        \p{
+            #{\exec} executes the control stack. If the control stack is empty,
+            then just return the integer argument as the result. If the top instruction
+            is #{\NEXT\space y}, we evaluate #{y} and place the instruction #{\ADD\space n}
+            to the stack top. If the top instruction is #{\ADD\space n},evaluation of the 
+            two arguments of an addition is complete, and we execute the remaining control stack 
+            in the context of the sum of the resulting integers.
         }
     }
 }
