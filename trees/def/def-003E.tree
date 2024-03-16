@@ -32,7 +32,7 @@
                     Composition is \strong{associative}: #{h \circ (g \circ f) = (h \circ g) \circ f} when #{t(f) = s(g)}, and #{t(g) = s(h)}.
                 }
                 \li{
-                    Composition satifies the \strong{identity laws}: #{f \circ \id_x = f} and #{\id_y \circ f = f} if #{}
+                    Composition satifies the \strong{identity laws}: #{f \circ \id_x = f} and #{\id_y \circ f = f}
                 }
             }
         }

@@ -14,6 +14,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+          node-version: [19.x]
     steps:
       - uses: actions/checkout@v3
         with:
@@ -61,6 +64,19 @@ jobs:
 
       - name: "Build forest"
         run: make release
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org
+
+      - name: "Convert to Static Rendered KaTeX"
+        run: | 
+          cp ./theme/package.json .
+          cp ./theme/package-lock.json .
+          npm ci
+          node ./theme/javascript-source/convert.js
 
       - name: "Deploy"
         uses: peaceiris/actions-gh-pages@v3

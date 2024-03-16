@@ -115,10 +115,10 @@
         The valuation function can be translated into a Haskell function
     }
     \codeblock{language-haskell}{\startverb
-eval :: Expr -> Integer
-eval (Val n) = n
-eval (Add x y) = eval x + eval y
-\stopverb}
+        eval :: Expr -> Integer
+        eval (Val n) = n
+        eval (Add x y) = eval x + eval y
+    \stopverb}
     \p{
         More generally, a denotational semantics can be viewed as an evaluator (or \strong{interpreter}).
         Even \strong{eval} is defined recursively, the semantics is compositional its behavior
@@ -127,18 +127,18 @@ eval (Add x y) = eval x + eval y
         is defined by \strong{folding} over the syntax of the source language.
     }
     \codeblock{language-haskell}{\startverb
-eval :: Expr -> Integer
-eval = fold id (+)
-\stopverb}
+        eval :: Expr -> Integer
+        eval = fold id (+)
+    \stopverb}
     \p{
         The fold operator captures the ideas of replacing constructors
         of the language by other functions
     }
     \codeblock{language-haskell}{\startverb
-fold :: (Integer -> a) -> (a -> a -> a) -> Expr -> a 
-fold f g (Val n) = f n
-fold f g (Add x y) = g (fold f g x) (fold f g y)
-\stopverb}
+        fold :: (Integer -> a) -> (a -> a -> a) -> Expr -> a 
+        fold f g (Val n) = f n
+        fold f g (Add x y) = g (fold f g x) (fold f g y)
+    \stopverb}
     \p{
         Note that the above semantics for expressions does not specify the order
         of evaluation. If we do wish to make evaluation order explicit 
@@ -224,21 +224,21 @@ fold f g (Add x y) = g (fold f g x) (fold f g y)
         from a given expression #{e} in a single transition.
     }
     \codeblock{language-haskell}{\startverb
-trans :: Expr -> [Expr]
-trans (Val n) = []
-trans (Add (Val n) (Val m)) = [Val (n + m)]
-trans (Add x y) = [Add x' y | x' <- trans x] ++ [Add x y' | y' <- trans y]
-\stopverb}
+        trans :: Expr -> [Expr]
+        trans (Val n) = []
+        trans (Add (Val n) (Val m)) = [Val (n + m)]
+        trans (Add x y) = [Add x' y | x' <- trans x] ++ [Add x y' | y' <- trans y]
+    \stopverb}
     \p{
         We can define a Haskell datatype for transition trees 
         and an execution function that converts expressions into 
         transition trees.
     }
     \codeblock{language-haskell}{\startverb
-data Tree a = Node a [Tree a]
-exec :: Expr -> Tree Expr
-exec e = Node e [exec e' | e' <- trans e]
-\stopverb}
+        data Tree a = Node a [Tree a]
+        exec :: Expr -> Tree Expr
+        exec e = Node e [exec e' | e' <- trans e]
+    \stopverb}
     \p{
         Though \code{exec} is defined recursively, its behavior can be understood as simply applying
         the identity function to give the root of the tree and the transition function to generate a 
@@ -247,9 +247,9 @@ exec e = Node e [exec e' | e' <- trans e]
         function that is defined by \strong{unfolding} to transition trees.
     }
     \codeblock{language-haskell}{\startverb
-exec :: Expr -> Tree Expr
-exec = unfold id trans 
-\stopverb}
+        exec :: Expr -> Tree Expr
+        exec = unfold id trans 
+    \stopverb}
     \p{
         The \code{unfold} function captures the idea of generating a tree 
         from a seed value #{x} by applying a function #{f} to give the root 
@@ -257,9 +257,9 @@ exec = unfold id trans
         for the subtrees.
     }
     \codeblock{language-haskell}{\startverb
-unfold :: (t -> a) -> (t -> [t]) -> t -> Tree a
-unfold f g x = Node (f x) [unfold f g x' | x' <- g x]
-\stopverb}
+        unfold :: (t -> a) -> (t -> [t]) -> t -> Tree a
+        unfold f g x = Node (f x) [unfold f g x' | x' <- g x]
+    \stopverb}
     \p{
         The operational semantics corresponds to \strong{unfolding to transition trees},
         while denotational semantics corresponds to \strong{folding over syntax trees}.
@@ -439,20 +439,20 @@ unfold f g x = Node (f x) [unfold f g x' | x' <- g x]
         Now we define the hole filling function in Haskell.
     }
     \codeblock{language-haskell}{\startverb
-fill :: Cont -> Expr -> Expr
-fill Hole e = e
-fill (AddL c r) e = Add (fill c e) r
-fill (AddR l c) e = Add l (fill c e)
-\stopverb}
+        fill :: Cont -> Expr -> Expr
+        fill Hole e = e
+        fill (AddL c r) e = Add (fill c e) r
+        fill (AddR l c) e = Add l (fill c e)
+    \stopverb}
     \p{The dual operation which splits an expression into all possible pairs of 
     contexts and expressions can be defined:}
     \codeblock{language-haskell}{\startverb
-split :: Expr -> [(Cont,Expr)]
-split e = (Hole, e) : case e of
-  Val n -> []
-  Add l r -> [(AddL c r, x) | (c, x) <- split l] ++ 
-             [(AddR l c, x) | (c, x) <- split r]
-\stopverb}
+        split :: Expr -> [(Cont,Expr)]
+        split e = (Hole, e) : case e of
+        Val n -> []
+        Add l r -> [(AddL c r, x) | (c, x) <- split l] ++ 
+                    [(AddR l c, x) | (c, x) <- split r]
+    \stopverb}
     \p{
         A pair #{(c,x)} comprising a context #[c] and an expression #{x} is
         an element of the list returned by \code{split e} precisely when \code{fill c x = e}.
@@ -460,17 +460,17 @@ split e = (Hole, e) : case e of
         the lists of all expressions that can be reached by performing a single reduction step.
     }
     \codeblock{language-haskell}{\startverb
-reduce :: Expr -> [Expr]
-reduce (Add (Val n) (Val m)) = [Val (n + m)]
-reduce _ = []
-\stopverb}
+        reduce :: Expr -> [Expr]
+        reduce (Add (Val n) (Val m)) = [Val (n + m)]
+        reduce _ = []
+    \stopverb}
     \p{
         or a single transition step.
     }
     \codeblock{language-haskell}{\startverb
-trans :: Expr -> [Expr]
-trans e = [fill c x' | (c, x) <- split e, x' <- reduce x]
-\stopverb}
+        trans :: Expr -> [Expr]
+        trans e = [fill c x' | (c, x) <- split e, x' <- reduce x]
+    \stopverb}
     \p{
         This function splits the given expression into all possible context 
         and expression pairs, then considering any reduction that can made by each component
@@ -517,13 +517,15 @@ trans e = [fill c x' | (c, x) <- split e, x' <- reduce x]
             \add\space x\space y\evalto n+m
         }
     }
-    \p{The Haskell function definition is similar to the small-step semantics,
-    by using the list comprehension.}
+    \p{
+        The Haskell function definition is similar to the small-step semantics,
+        by using the list comprehension.
+    }
     \codeblock{language-haskell}{\startverb
-eval :: Expr -> [Integer]
-eval (Val n) = [n]
-eval (Add x y) = [n + m | n <- eval x, m <- eval y]
-\stopverb}
+        eval :: Expr -> [Integer]
+        eval (Val n) = [n]
+        eval (Add x y) = [n + m | n <- eval x, m <- eval y]
+    \stopverb}
     \p{
         This is similar to denotational semantics but using inference rules
         rather than a functional manner.
@@ -665,26 +667,26 @@ eval' (Add x y) c = eval' x (\n -> eval' y (\m -> c (n + m)))\stopverb}
             for constructing the continuations we used.
         }
         \codeblock{language-haskell}{\startverb
-halt :: Continuation
-halt n = n
+            halt :: Continuation
+            halt n = n
 
-next :: Expr -> Continuation -> Continuation
-next y c = \n -> eval' y (add n c)
+            next :: Expr -> Continuation -> Continuation
+            next y c = \n -> eval' y (add n c)
 
-add :: Integer -> Continuation -> Continuation
-add n c = \m -> c (n + m)
-\stopverb}
+            add :: Integer -> Continuation -> Continuation
+            add n c = \m -> c (n + m)
+        \stopverb}
         \p{
             Use the combinators, our continuation semantics can now be written as:
         }
         \codeblock{language-haskell}{\startverb
-eval :: Expr -> Integer
-eavl e = eval' e halt
+            eval :: Expr -> Integer
+            eavl e = eval' e halt
 
-eval' :: Expr -> Continuation -> Integer
-eval' (Val n) c = c n 
-eval' (Add x y) c = eval' x (next y c)
-\stopverb}
+            eval' :: Expr -> Continuation -> Integer
+            eval' (Val n) c = c n 
+            eval' (Add x y) c = eval' x (next y c)
+        \stopverb}
         \p{
             Now we declare a new datatype for continuations, consists of three constructors.
         }
@@ -693,11 +695,11 @@ eval' (Add x y) c = eval' x (next y c)
             The following translation function forms a denotational semantics for \code{CONT}
         }
         \codeblock{language-haskell}{\startverb
-exec :: CONT -> Continuation
-exec HALT = halt
-exec (NEXT y c) = next y (exec c)
-exec (ADD n c) = add n (exec c)
-\stopverb}
+            exec :: CONT -> Continuation
+            exec HALT = halt
+            exec (NEXT y c) = next y (exec c)
+            exec (ADD n c) = add n (exec c)
+        \stopverb}
         \p{
             This function is usually called \strong{apply}, which can be viewed as 
             applying a representation of a continuation to an integer to give another integer.
@@ -774,18 +776,18 @@ exec (ADD n c) = add n (exec c)
             In summary, we have calculated the following definitions:
         }
         \codeblock{language-haskell}{\startverb
-eval'' :: Expr -> CONT -> Integer
-eval'' (Val n) c = exec c n 
-eval'' (Add x y) c = eval'' x (NEXT y c)
+            eval'' :: Expr -> CONT -> Integer
+            eval'' (Val n) c = exec c n 
+            eval'' (Add x y) c = eval'' x (NEXT y c)
 
-exec :: CONT -> Integer -> Integer
-exec HALT n = n 
-exec (NEXT y c) n = eval'' y (ADD n c)
-exec (ADD n c) m = exec c (n + m)
+            exec :: CONT -> Integer -> Integer
+            exec HALT n = n 
+            exec (NEXT y c) n = eval'' y (ADD n c)
+            exec (ADD n c) m = exec c (n + m)
 
-eval :: Expr -> Integer
-eval e = eval'' e HALT
-\stopverb}
+            eval :: Expr -> Integer
+            eval e = eval'' e HALT
+        \stopverb}
         \p{
             The four components (#{\eval2}, #{\eval}, #{\exec} and \code{CONT})
             forms an abstract machine.
@@ -795,8 +797,10 @@ eval e = eval'' e HALT
             instructions that determine how the machine should continue after evaluating
             the current expression. Sometimes it is called an "eval/continue" machine.
             The control stack can also be defined as a list of instructions.
-            \codeblock{language-haskell}{type CONT = [INST]
-data INST = NEXT Expr | ADD Integer}
+            \codeblock{language-haskell}{\startverb
+                type CONT = [INST]
+                data INST = NEXT Expr | ADD Integer
+            \stopverb}
         }
         \p{
             #{\eval} evaluates an expression and give an integer by simply 

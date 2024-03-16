@@ -56,16 +56,22 @@
   </span>
  </xsl:template>
 
- <xsl:template match="tex[@display='block']">
-  <xsl:text>\[</xsl:text>
-  <xsl:value-of select="." />
-  <xsl:text>\]</xsl:text>
- </xsl:template>
-
- <xsl:template match="tex[not(@display='block')]">
-  <xsl:text>\(</xsl:text>
-  <xsl:value-of select="." />
-  <xsl:text>\)</xsl:text>
+  <xsl:template match="tex">
+  <xsl:choose>
+   <xsl:when test="rendered">
+    <xsl:value-of select="rendered" disable-output-escaping="yes"/>
+   </xsl:when>
+   <xsl:when test="@display='block'">
+    <xsl:text>\[</xsl:text>
+    <xsl:value-of select="." />
+    <xsl:text>\]</xsl:text>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:text>\(</xsl:text>
+    <xsl:value-of select="." />
+    <xsl:text>\)</xsl:text>
+   </xsl:otherwise>
+  </xsl:choose>
  </xsl:template>
 
  <xsl:template match="/">
