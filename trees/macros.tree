@@ -1,5 +1,5 @@
 \title{basic macros}
-
+\p{This file contains the basic macros used in the site.}
 % Common utils
 \def\hr{
   \xml{hr}{}
@@ -92,3 +92,4 @@
 % category theory
 \def\obj{\text{Ob}}
 \def\mor{\text{Mor}}
+\def\cat{\mathbf{Cat}}

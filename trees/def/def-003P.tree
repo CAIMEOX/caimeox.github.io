@@ -1,0 +1,34 @@
+\title{Cartesian Product}
+\taxon{Definition}
+\import{macros}
+\p{
+    Given any category #{\mathcal{C}}, and any set #{\{X_i\}_{i\in I}} of
+    its objects, the product of all these objects is, if it exists, an object
+    #{
+        \prod_{i\in I} X_i \in \mathcal{C}
+    }
+    equipped with morphisms (projections)
+    ##{
+        p_i : \left(\prod_{i\in I} X_i\right) \to X_i
+    }
+    for each #{i\in I}, such that it is \strong{universal with this property}, i.e.
+    such that given any other object #{Q\in C} with morphisms
+    #{
+        Q \xrightarrow{f_i} X_i 
+    }
+    there is a \strong{unique} morphism
+    ##{
+        (f_i)_{i\in I} : Q \to \prod_{i\in I} X_i
+    }
+    where the following diagram commutes:
+    \graph{
+        \begin{tikzcd}
+            Q \\
+            \\
+            {\prod_{i\in I} X_i} && {X_i}
+            \arrow["{p_i}", from=3-1, to=3-3]
+            \arrow["{f_i}", from=1-1, to=3-3]
+            \arrow["{(f_i)_{i\in I}}"', from=1-1, to=3-1]
+        \end{tikzcd}
+    }
+}

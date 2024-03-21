@@ -9,4 +9,5 @@ release:
 dev:
 	@echo "Build forester (Dev)"
 	@opam exec -- forester build --root index trees/ --dev
+	@cp utils/forester.dev.js output/forester.js
 .PHONY: dev

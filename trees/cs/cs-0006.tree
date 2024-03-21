@@ -632,9 +632,10 @@
             In summary we have calculated the following definition
         }
         \codeblock{language-haskell}{\startverb
-eval' :: Expr -> Continuation -> Integer
-eval' (Val n) c = c n 
-eval' (Add x y) c = eval' x (\n -> eval' y (\m -> c (n + m)))\stopverb}
+            eval' :: Expr -> Continuation -> Integer
+            eval' (Val n) c = c n 
+            eval' (Add x y) c = eval' x (\n -> eval' y (\m -> c (n + m)))
+        \stopverb}
         \p{
             Our original semantics can be recovered from the new semantics by
             using the identity continuation #{\lambda n \to n}
