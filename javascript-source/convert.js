@@ -71,7 +71,6 @@ async function start() {
   const files = await fs.readdir("output");
   for (const file of files) {
     if (file.endsWith("xml")) {
-      if (file.startsWith("about")) continue;
       console.log("Converting", file);
       await convert(path.join("output", file));
     }
