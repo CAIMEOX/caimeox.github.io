@@ -1,0 +1,23 @@
+\title{Coproduct}
+\taxon{Definition}
+\import{macros}
+\p{
+    For #{\mathcal{C}} a category and #{X, Y \in\obj{\mathcal{C}}},
+    the \strong{coproduct} is an object #{X\sqcup  Y} equipped with 
+    two morphisms #{i_X:X\to X\sqcup  Y} and #{i_Y:Y\to X\sqcup  Y} such that
+    it is universal with this property. That is, for any object #{Z} and morphisms
+    #{f:X\to Z} and #{g:Y\to Z}, there exists a unique morphism #{\langle f, g\rangle:X\sqcup  Y\to Z}
+    such that the following diagram commutes:
+    \graph{
+        \begin{tikzcd}
+            X && {X\sqcup Y} && Y \\
+            \\
+            && Z
+            \arrow["{[f,g]}"', dashed, from=1-3, to=3-3]
+            \arrow["f"', from=1-1, to=3-3]
+            \arrow["{i_Y}"', from=1-5, to=1-3]
+            \arrow["{i_X}", from=1-1, to=1-3]
+            \arrow["g", from=1-5, to=3-3]
+        \end{tikzcd}
+    }
+}

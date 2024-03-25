@@ -1,0 +1,7 @@
+\title{Terminal Object}
+\taxon{Definition}
+\p{
+    A \strong{terminal object} in a category #{\mathcal{C}} is an object #{\top} of #{\mathcal{C}} 
+    satisfying the following universal property: for any object #{X} in #{\mathcal{C}},
+    there exists a unique morphism #{!:X\to \top}.
+}

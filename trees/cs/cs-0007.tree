@@ -56,7 +56,65 @@
         Though the theory is already rich by only considering sets and categories, 
         it would not be interesting enough. We want to know a little more about the 
         category that we are working with. To achieve so, we can require some additional
-        structures on the category.
+        structures on the category. A common structure is the cartesian product.
     }
     \transclude{def-003P}
+    \p{
+        With this definition, it is natural to ask what can serve as a \strong{nullary product}.
+        The concept is characterized by terminal objects.
+    }
+    \transclude{def-003Q}
+    \p{
+        When making math statements, we often encounter concepts that are dual to each other.
+        In category theory, this phenomenon is captured by the concept of \strong{duality}.
+        Intuitively, duality offers us free dual theorem from the original one.
+    }
+    \transclude{def-003R}
+    \p{
+        For example, the product in the opposite category, all \strong{universal properties} corresponds
+        to a dual concept.
+    }
+    \transclude{def-003S}
+}
+\subtree{
+    \title{Logic, Types and Categories}
+    \p{
+        One important principle in type theory is the \strong{Curry-Howard Isomorphism} (Propositions as types).
+        It depicts the connection between logic and types. A program can represent a logical argument, and 
+        operations in logic find meaningful correspondences in program execution.
+        The principle was later extended with category theory due to \strong{Lambek}. In his work, he showed
+        a correspondence between STLC and \strong{Cartesian Closed Categories (CCC)} and revealed the connection
+        between types and categories. The correspondence is called the \strong{Curry-Howard-Lambek Isomorphism}.
+    }
+    \subtree{
+        \title{Syntax and Semantics}
+        \p{
+            In general, there are two approaches to understand or design a type system: the \strong{syntactic} view 
+            and \strong{semantic} view.
+
+            The syntactic view focuses on the syntactic structure of types and programs. We study about \strong{subject reduction},
+            \strong{cut elimination} and etc, simply by manipulating the syntax. It is usually more direct and easier to understand
+            as it is often conducted via induction on some syntactic structures. And it also suggest algorithms which can be implemented.
+            The disadvantage is that it is limited and hard to proof some properties like normalization.
+
+            The semantic appoaches are more powerful in general. It is based on mathematics models of type systems.
+            In exchange of the strength and generality, it is usually harder to understand and heavyweight, requries
+            more intuition of the concepts.
+        }
+        \p{
+            One clasical semantic approach to logic is algebraic logic. A logical system is modeled by some algebraic theory.
+            (often related to \strong{lattices} and \strong{semi-lattices}). Famous examples include \strong{Boolean algebras}
+            for classic propositional logic and \strong{Heyting algebras} for intuitionistic counterpart. 
+            The algebraic logic is a powerful tool to study the properties of logical systems, but has a limitation that 
+            all operations are limited in one structured set.
+        }
+    }
+    \subtree{
+        \title{Computations as Monads}
+        \p{
+            An important result from ategorical semantics could be \strong{monads}.
+            In \strong{Moggi}'s paper, he showed that monads can be used to model computational effects.
+        }
+        \transclude{def-003T}
+    }
 }

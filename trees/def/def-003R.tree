@@ -1,0 +1,6 @@
+\title{Opposite Category}
+\taxon{Definition}
+\p{
+    For a category #{\mathcal{C}}, the \strong{opposite category} #{\mathcal{C}^{op}} 
+    has the same objects as #{\mathcal{C}}, but the morphisms are reversed.
+}
