@@ -1,0 +1,8 @@
+\title{Whiskering}
+\taxon{Definition}
+\p{
+    Let #{F,G:C\to D} and #{H,D\to E} be functors and #{\eta:F\to G} be a natural 
+    transformation whose coordinate at any object #{A} of #{C} is #{\eta_A}, then 
+    \strong{whiskering} #{H} and #{\eta} yields the natural transformation 
+    #{H\circ\eta:H\circ F\to H\circ G} whose coordinate at #{A} is #{H(\eta_A)}.
+}

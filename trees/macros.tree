@@ -29,7 +29,7 @@
 }
 
 
-
+\def\sgn{\text{sgn}}
 \def\spn{\text{span}}
 \def\type{\space\text{type}}
 \def\N{\mathbb{N}}

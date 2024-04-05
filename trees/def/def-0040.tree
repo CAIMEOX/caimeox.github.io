@@ -1,0 +1,8 @@
+\title{Sign of Permutation}
+\taxon{Definition}
+\import{macros}
+\p{
+    The \strong{sign} of a [permutation](def-003Y) #{\sigma\in S_n} is a function #{\sgn:S_n\to\{-1,1\}} defined as
+    #{\sgn(\sigma) = 1} if #{\sigma} requires an even number of permutations and 
+    #{\sgn(\sigma) = -1} if #{\sigma} requires an odd number of permutations to get the identity permutation.
+}

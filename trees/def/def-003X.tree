@@ -1,0 +1,9 @@
+\title{Dual Space}
+\taxon{Definition}
+\p{
+    Let #{V} be a vector space over a field #{F}, 
+    the \strong{(algebraic) dual space} #{V^*} (#{V^\lor}) is defined as 
+    the set of all linear maps #{T:V\to F} (linear functionals).
+    The dual space itself is a vector space where the elements are sometimes 
+    called \strong{covectors} or \strong{one forms} or \strong{linear forms}.
+}

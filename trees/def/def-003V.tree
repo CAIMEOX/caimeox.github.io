@@ -1,0 +1,21 @@
+\title{Adjoint Functor}
+\taxon{Definition}
+\p{
+    Let #{\mathcal{C}} and #{\mathcal{D}} be categories and a pair of functors 
+    #{F:\mathcal{C}\to\mathcal{D}} and #{G:\mathcal{D}\to\mathcal{C}}. This is called 
+    pair of \strong{adjoint functors} (or \strong{adjunction}) with #{F} the left adjoint
+    and #{G} the right adjoint denoted 
+    ##{
+        F\dashv G
+    }
+    if there is a natural isomorphism between the hom-functors:
+    ##{
+        \hom_{\mathcal{D}}(F(-),-)\cong\hom_{\mathcal{C}}(-,G(-))
+    }
+    which means forall objects #{C\in\mathcal{C}} and #{D\in\mathcal{D}}, there is a bijection
+    ##{
+        \hom_{\mathcal{D}}(F(C),D)\cong\hom_{\mathcal{C}}(C,G(D)) \\ 
+        (F(C)\xrightarrow{f}D) \mapsto (C\xrightarrow{G(f)}G(D))
+    }
+    which is natural in both #{C} and #{D}.                                                                     
+}

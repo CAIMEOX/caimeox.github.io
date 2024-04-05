@@ -1,0 +1,12 @@
+\title{Matrix Representation of Linear Transformation over #{\R^n}}
+\taxon{Definition}
+\import{macros}
+\p{
+    Suppose that #{T:\R^n\to\R^m} is a linear transformation between vector spaces #{\R^n} and #{\R^m}.
+    Let #{e_1, e_2, \ldots, e_n} be the standard basis of #{\R^n} and #{f_1, f_2, \ldots, f_m} be the standard basis of #{\R^m}.
+    Then the matrix representation of #{T} is the #{m \times n} matrix #{A} such that for #{1\leq j\leq n}:
+    ##{
+        T(e_j) = \sum_{i=1}^m A_{ij} f_i
+    }
+    where the matrix representation of #{T} is given by the #{m\times n} matrix with entries #{A_{ij}}.
+}

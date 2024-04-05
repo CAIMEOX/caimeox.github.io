@@ -116,5 +116,19 @@
             In \strong{Moggi}'s paper, he showed that monads can be used to model computational effects.
         }
         \transclude{def-003T}
+        \p{
+            It requires an operation over functors named \strong{whiskering}
+        }
+        \transclude{def-003U}
+    }
+    \subtree{
+        \title{Logic as Adjoint Functors}
+        \p{
+            Categorical logic is a new approach to logic, due to \strong{Lawvere}. 
+            He showed that logical constructs are fundamentally just \strong{adjoint functors}.
+            This allows us to capture many logical constructs by using only one categorical concept.
+            Adjoint also provides a strong guarantee about the derived syntactic formulation.
+        }
+        \transclude{def-003V}
     }
 }

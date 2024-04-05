@@ -1,0 +1,6 @@
+\title{Transposition}
+\taxon{Definition}
+\p{
+    A [permutation](def-003Y) in which only two elements are exchanged is called a \strong{transposition}.
+    The notation is #{\tau_{i,j}} where #{i} and #{j} are the two elements exchanged while the others remain fixed.
+}

@@ -1,0 +1,18 @@
+\title{Permutation}
+\taxon{Defintion}
+\p{
+    A \strong{permutation} of a set #{S} is a bijection from #{S} to itself.
+    The set of permutation of #{\{1,\cdots, n\}} is usually denoted by #{S_n}.
+    We often denote a particular permutation #{\sigma} by \strong{Cauchy's two-line notation}:
+    ##{
+        \begin{bmatrix}
+            1 & 2 & \cdots & n \\
+            \sigma(1) & \sigma(2) & \cdots & \sigma(n)
+        \end{bmatrix}
+    }
+    or \strong{Cauchy's one-line notation}: #{(\sigma(1),\sigma(2),\cdots,\sigma(n))}.
+    Another common notation is the \strong{cycle notation}:
+    ##{
+        (i_1\ i_2\ \cdots\ i_k)
+    } which means #{i_1 \to i_2 \to \cdots \to i_k \to i_1}.
+}
