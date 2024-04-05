@@ -1,4 +1,4 @@
-\title{Vector Calculus}
+\title{Introduction to Vector Calculus}
 \date{2024-04-05}
 \taxon{Differential Geometry}
 \import{macros}
@@ -198,5 +198,133 @@
             \li{ #{D(A) = D(A^T)}}
         }
         The second statement for transpose of #{A} indicates that all the properties above also holds for row as well. 
+    }
+}
+\subtree{
+    \title{Derivatives of Multivariable Functions}
+    \p{
+        In this section we will introduce the idea of the derivative of a multivariable function. 
+        Recall that a function #{f:\R\to\R} the derivative of #{f} at #{x_0\in\R} is given by
+        ##{
+            f'(x_0) = \lim_{h\to 0} \frac{f(x_0+h) - f(x_0)}{h}
+        }
+        if the limit exists. Now let's do some transformations:
+        ##{
+            \begin{align*}
+                & f'(x_0) = \lim_{h\to 0} \frac{f(x_0+h) - f(x_0)}{h} \\
+                \implies & \lim_{h\to 0} \frac{f(x_0+h) - f(x_0) -f'(x_0)h }{h} = 0 \\
+                \implies & \lim_{x\to x_0} \frac{f(x) - f(x_0) - f'(x_0)(x-x_0)}{x-x_0} = 0 \\ 
+                \implies & \lim_{x\to x_0} \frac{|f(x) - f(x_0) - f'(x_0)(x-x_0)|}{|x-x_0|} = 0
+            \end{align*}
+        }
+    }
+    \p{
+        Since #{f'(x_0)} represents the slope of the line tangent to the graph of #{f} at #{(x_0, f(x_0))},
+        differentiability of #{f} at #{x_0} means that there exists a number #{m} st
+        ##{
+            \lim_{x\to x_0} \frac{|f(x) - f(x_0) - m(x-x_0)|}{|x-x_0|} = 0
+        }
+        Now consider the function #{T:\R\to\R} where #{T(s) = ms}
+        ##{
+            T(s+t) = m(s+t) = ms + mt = T(s) + T(t)
+            \\ 
+            T(cs) = mcs = c(ms) = cT(s)
+        }
+        then #{T} is a linear transformation. In fact #{T} is the linear function that most closely approximates the 
+        function #{f} at the point #{(x_0, f(x_0))}. So for #{x} values that are very close to #{x_0} we have
+        ##{
+            f(x) \approx m(x-x_0) + f(x_0)
+        }
+    }
+    \p{
+        Now let's generalize the concept of derivatives to functions of the form #{f:\R^n\to\R^m}.
+        We assume the function #{f} has the form
+        ##{
+            \begin{align*}
+                &f(x_1, x_2, \cdots, x_n) = 
+                \\ 
+                &(f_1(x_1, x_2, \cdots, x_n), f_2(x_1, x_2, \cdots, x_n), \cdots, f_m(x_1, x_2, \cdots, x_n))
+            \end{align*}
+        }
+        We want to search for this linear transformation which we will denoted by #{Df},
+        that most closely approximates this function #{f:\R^n\to\R^m} at some specific point #{x_0=(x_{1_0}, x_{2_0}, \cdots, x_{n_0}) \in \R^n}.
+        If #{f} is differentiable at #{x_0} then there exists a linear transformation #{Df(x_0):\R^n\to\R^m} such that
+        ##{
+            \lim_{x\to x_0} \frac{
+                \norm{
+                    f(x) - f(x_0) - Df(x_0)(x-x_0)
+                }
+            }{\norm{x-x_0}} = 0
+        }
+        The #{\norm{\cdot}} represents the \strong{Euclidean norm} of the vector (Multi-dimensional version of the absolute value)
+        ##{
+            \norm{\vec{x}} = \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2} = \sqrt{\sum_{i=1}^n x_i^2}
+        }
+        which is just the length of the vector. This allows us to perform dividing.
+    }
+    \p{
+        As before we have
+        ##{
+            f(x) \approx Df(x_0)(x-x_0) + f(x_0)
+        }
+        Now we want to write #{Df(x)} as a matrix. Denote the basis of #{\R^n} as #{e_j} and the basis of #{\R^m} as #{f_i}.
+        Then we want to find #{a_{ij}} st
+        ##{
+            Df(x)(e_j) = \sum_{i=1}^{m} a_{ij} f_j = \begin{bmatrix}
+                a_{1j} \\ a_{2j} \\ \vdots \\ a_{mj}
+            \end{bmatrix}
+        }
+        In other words, the #{i}-th component of the #{j}-th column of #{Df(x)} is just the #{i}-th component of the #{Df(x)(e_j)}
+    }
+    \p{
+        Recall from vector calculus that given a function #{f:\R^n\to\R} we defined the \strong{partial derivative} of #{f} with respect to the #{x_j} as 
+        ##{
+            \frac{\partial f}{\partial x_j} = \lim_{h\to0}
+            \frac{f(x_1,\cdots,x_j+h,\cdots,x_n) - f(x_1,\cdots,x_n)}{h}
+        }
+        Hence we can define the partial derivatives for each #{f_i (1\leq i\leq m)} with respect to each #{x_j (1\leq j\leq n)}.
+        ##{
+            \frac{\partial f_i}{\partial x_j} = \lim_{h\to0}
+            \frac{f_i(x_1,\cdots,x_j+h,\cdots,x_n) - f_i(x_1,\cdots,x_n)}{h}
+        }
+        Thus we have
+        ##{
+            \frac{\partial f_i}{\partial x_j} = a_{ij}
+        }
+        To find #{a_{ij}} of #{Df(x_0)} we need to find the #{i}-th element of #{Df(x_0)(e_j)}. Let
+        ##{
+            x = \begin{bmatrix}
+                x_{1_0} \\ x_{2_0} \\ \vdots \\ x_{n_0}
+            \end{bmatrix} + \begin{bmatrix}
+                0 \\ \vdots \\ 1 \\ \vdots \\ 0
+            \end{bmatrix} = x_0 + he_j
+        }
+        We have 
+        ##{
+            \lim_{x\to x_0}\frac{\norm{f(x)-f(x_0)-Df(x_0)(he_j)}}{\norm{he_j}}
+            \\ \implies 
+            \lim_{h\to0}\frac{\norm{
+                f(x_0+he_j) - f(x_0) -hDf(x_0)(e_j)
+            }}{\norm{h}} = 0
+        }
+        The component is given by 
+        ##{
+            \lim_{h\to0}\frac{\norm{f_i(x_0+he_j)-f_i(x_0)-ha_{ij}}}{\norm{h}} = 0
+            \\ \implies 
+            a_{ij} = \lim_{h\to0}\frac{f_i(x_0+he_j) - f_i(x_0)}{h}
+        }
+        which is exactly #{\frac{\partial f_i}{\partial x_j}}. Thus the matrix representation of #{Df(x)} is given by 
+        a matrix called the \strong{Jacobin matrix} of #{f}.
+        ##{
+            Df(x) = \begin{bmatrix}
+                \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots & \frac{\partial f_1}{\partial x_n} \\
+                \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \cdots & \frac{\partial f_2}{\partial x_n} \\
+                \vdots & \vdots & \ddots & \vdots \\
+                \frac{\partial f_m}{\partial x_1} & \frac{\partial f_m}{\partial x_2} & \cdots & \frac{\partial f_m}{\partial x_n}
+            \end{bmatrix} = \left[
+                \frac{\partial f_i}{\partial x_j}
+            \right]
+        }
+        where #{i} ranges row and #{j} ranges column.
     }
 }

@@ -93,3 +93,6 @@
 \def\obj{\text{Ob}}
 \def\mor{\text{Mor}}
 \def\cat{\mathbf{Cat}}
+
+% calculus
+\def\norm[body]{\lVert\body\rVert}
