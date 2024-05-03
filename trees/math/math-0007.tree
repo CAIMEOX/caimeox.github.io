@@ -1,9 +1,9 @@
-\title{Introduction to Vector Calculus}
+\title{Vector Calculus and Geometry of Space}
 \date{2024-04-05}
 \taxon{Differential Geometry}
 \import{macros}
 \p{
-    Notes about multi-variable calculus and linear algebra.
+    Notes about multi-variable calculus, geometry of space and linear algebra.
     Refer to [df-cm-2018](A Visual Introduction to Differential Forms and Calculus on Manifolds).
 }
 \subtree{
@@ -59,6 +59,39 @@
         }
         This explains wht we always denote elements of the vector space as column vectors, because elements of the dual space 
         are written as row vectors and its very important to distinguish between them.
+    }
+}
+\subtree{
+    \title{Dot Products}
+    \p{
+        In linear algebra, \strong{dot product} or \strong{scalar product} is an operation that takes two vectors and returns a scalar.
+        Geometrically, it is the product of the Euclidean magnitudes of the two vectors and the cosine of the angle between them.
+        Dot product is also used to define lengths and angles.
+    }
+    \transclude{def-0041}
+    \transclude{def-0042}
+    \p{
+        The geometric definition of dot product helps us express the projection of one vector onto another as well as the component of 
+        one vector in the direction of another. By simple geometry we can derive the formula for the \strong{projection}
+        ##{
+            \text{proj}_{\vec{a}}\vec{b} = \frac{\vec{a}\cdot\vec{b}}{\norm{\vec{a}}}\frac{\vec{a}}{\norm{\vec{a}}}
+        }
+        and the \strong{component} of #{\vec{b}} in the direction #{\vec{a}} is given by
+        ##{
+            \text{comp}_{\vec{a}}\vec{b} = \norm{\text{proj}_{\vec{a}}\vec{b}} = \frac{\vec{a}\cdot\vec{b}}{\norm{\vec{a}}}
+        }
+    }
+    \p{
+        Two points determine a line, and so does a point and a vector. Define the base point vector #{\vec{b}=(x,y,z)} and
+        the direction vector #{\vec{v}=(a,b,c)} then the line is given by #{\vec{r}(t)}
+        ##{
+            \vec{r}(t) = t\vec{v} + \vec{b} = (at+x, bt+y, ct+z)
+        }
+        Solving for #{t} in the equation we get
+        ##{
+            t = \frac{x-at}{a} = \frac{y-bt}{b} = \frac{z-ct}{c}
+        }
+        which is the \strong{equation of line}.
     }
 }
 \subtree{

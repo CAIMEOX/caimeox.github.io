@@ -2,7 +2,6 @@
   "dependencies": {
     "esbuild": "^0.18.15",
     "katex": "^0.16.8",
-    "fast-xml-parser": "^4.3.5",
     "ninja-keys": "^1.2.2"
   }
 }

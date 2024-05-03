@@ -1,0 +1,31 @@
+\title{Dot Product (Coordinate Form)}
+\taxon{Definition}
+\p{
+    The \strong{dot product} of two vectors #{\vec{a} = (a_1, a_2, \cdots, a_n)} and #{\vec{b} = (b_1, b_2, \cdots, b_n)} is defined as
+    ##{
+        \vec{a}\cdot\vec{b} = a_1b_1 + a_2b_2 + \cdots + a_nb_n = \sum_{i=1}^n a_ib_i.
+    }
+    The dot product is also called the \strong{inner product} or \strong{scalar product}.
+    The dot product satisfies the following properties:
+    \ul{
+        \li{
+            \strong{Commutative}: #{\vec{a}\cdot\vec{b} = \vec{b}\cdot\vec{a}}
+        }
+        \li{
+            \strong{Distributive}: #{\vec{a}\cdot(\vec{b} + \vec{c}) = \vec{a}\cdot\vec{b} + \vec{a}\cdot\vec{c}}
+        }
+        \li{
+            \strong{Bilinear}: #{\vec{a}\cdot(k\vec{b}) = k(\vec{a}\cdot\vec{b}) = (\vec{a}\cdot k\vec{b})}
+        }
+        \li{
+            \strong{Scalar Multiplication}: #{(c_1\vec{a}) \cdot (c_2\vec{b}) = c_1c_2(\vec{a}\cdot\vec{b})}
+        }
+        \li{
+            \strong{Orthogonality}: If #{\vec{a}\cdot\vec{b} = 0}, then #{\vec{a}} and #{\vec{b}} are \strong{orthogonal}
+        }
+        \li{
+            \strong{Product Rule}: If #{\vec{a}} and #{\vec{b}} are vector valued differentiable functions then the derivative 
+            of #{\vec{a}\cdot\vec{b}} is given by the rule #{(\vec{a}\cdot\vec{b})' = \vec{a}'\cdot\vec{b} + \vec{a}\cdot\vec{b}'}
+        }
+    }
+}

@@ -1,0 +1,11 @@
+\title{Dot Product (Geometric Form)}
+\taxon{Definition}
+\import{macros}
+\p{
+    In \strong{Euclidean space}, a \strong{Euclidean vector} is a geometric object that possesses both 
+    a norm and a direction. The \strong{dot product} of two vectors #{\vec{a}} and #{\vec{b}} is defined as
+    ##{
+        \vec{a}\cdot\vec{b} = \norm{\vec{a}}\norm{\vec{b}}\cos\theta
+    }
+    where #{\theta} is the angle between the two vectors.
+}

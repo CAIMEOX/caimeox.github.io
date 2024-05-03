@@ -1,9 +1,9 @@
 \title{basic macros}
 \p{This file contains the basic macros used in the site.}
+\xmlns:html{http://www.w3.org/1999/xhtml}
+
 % Common utils
-\def\hr{
-  \xml{hr}{}
-}
+\def\hr{\<html:hr>{}}
 \def\block[tit][body]{
     \subtree{
       \title{\tit}
@@ -50,12 +50,12 @@
 \def\dom{\text{dom }}
 \def\cod{\text{cod }}
 \def\graph[a]{
-    \xml{center}{\tex{
+    \tex{
       \usepackage{tikz-cd}
       \usepackage{amssymb}
     }{
         \a
-    }}
+    }
 }
 \def\proof[body]{
  \scope{
@@ -73,7 +73,7 @@
 \def\mat{\mathcal{M}}
 \def\assoc{\text{assoc}}
 \def\codeblock[lang][body]{
-  \pre{\xml{code}[class]{\lang}{\body}}
+  \pre{\<html:code>[class]{\lang}{\body}}
 }
 
 % Lambda calculus

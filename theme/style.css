@@ -120,17 +120,17 @@ pre {
   word-wrap: break-word;
 }
 
-code:not(code[class*="language-"]) {
+/* code {
   border-radius: var(--radius);
   background-color: rgba(0, 100, 100, 0.04);
   padding: 0.2em;
   font-size: 0.9em;
-}
+} */
 
 body {
   font-family: "Inria Sans";
   font-size: 12pt;
-  line-height: 1.5em;
+  line-height: 1.55;
 }
 
 .logo {
@@ -353,10 +353,6 @@ nav#toc li {
 .edit-button {
   color: rgb(180, 180, 180);
   font-weight: 200;
-}
-
-.error {
-  color: rgb(255, 50, 50, .8);
 }
 
 .block {
@@ -596,8 +592,22 @@ ol li ol li ol {
  list-style-type: lower-roman;
 }
 
+.error, .info {
+  border-radius: 4pt;
+  padding-left: 3pt;
+  padding-right: 3pt;
+  padding-top: 1pt;
+  padding-bottom: 2pt;
+  font-weight: bold;
+}
+
 .error {
  background-color: red;
- font-weight: bold;
+ color: white;
+}
+
+
+.info {
+ background-color: #bbb;
  color: white;
 }
