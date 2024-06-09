@@ -1,0 +1,5 @@
+\title{Singular Matrix}
+\taxon{Definition}
+\p{
+    A square matrix that is not \strong{invertible} is called \strong{singular} or degenerate
+}

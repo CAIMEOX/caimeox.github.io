@@ -1,0 +1,17 @@
+\title{Cramer's rule}
+\taxon{Theorem}
+\p{
+    Consider a system of #{n} linear equations for #{n} unknowns, represented in matrix multiplication form as follows:
+    ##{
+        A \cdot X = B
+    }
+    where #{A} is a square matrix of order #{n}, #{X} is a column matrix of order #{n} and #{B} is a column matrix of order #{n}.
+    ##{
+        X = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}
+    }
+    The Cramer's rule states that the solution to the system of equations is given by:
+    ##{
+        x_i = \frac{\text{det}(A_i)}{\text{det}(A)}
+    }
+    where #{A_i} is the matrix obtained by replacing the #{i}th column of #{A} by #{B}.
+}

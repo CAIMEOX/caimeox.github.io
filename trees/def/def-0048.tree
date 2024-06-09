@@ -1,0 +1,10 @@
+\title{Matrix Polynomial}
+\taxon{Definition}
+\p{
+    A \strong{matrix polynomial} is a polynomial with square matrices as variables.
+    The general form of a matrix polynomial is:
+    ##{
+        P(A) = \sum_{i=0}^{n} a_i A^i
+    }
+    where #{A^0 = I} is the identity matrix.
+}

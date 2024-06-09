@@ -7,18 +7,17 @@ function code_render(obj) {
       code_render(obj[key]);
     }
     if (key === "html:code") {
-      if (obj['html:code'].length === 0) return;
-      const code = obj['html:code'][0]["#text"];
+      if (obj["html:code"].length === 0) return;
+      const code = obj["html:code"][0]["#text"];
       const lines = code.split("\n");
       let i = 0;
-      let res = ''
-      while (code[i] === ' ') {
-        i++;
-      }
+      let res = "";
+      while (code[i] === " ") i++;
       for (let j = 0; j < lines.length; j++) {
-        res += lines[j].replace(' '.repeat(i), '') + '\n'
+        res += lines[j].replace(" ".repeat(i), "") + "\n";
       }
-      obj['html:code'][0]['#text'] = res.trim()
+
+      obj["html:code"][0]['#text'] = res.trim()
     }
   }
 }

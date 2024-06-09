@@ -1,0 +1,11 @@
+\title{Determinant}
+\taxon{Definition}
+\p{
+    The determinant of a #{n\times n} square matrix #{A} is commonly denoted #{\det A} or #{|A|}.
+    It satisfies the following properties:
+    \ul{
+        \li{#{\det A^T = \det A} }
+        \li{#{\det AB = \det A \det B}}
+        \li{#{\det \lambda A = \lambda^n \det A}}
+    }
+}

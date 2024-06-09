@@ -1,0 +1,17 @@
+\title{Cofactor Matrix}
+\taxon{Definition}
+\p{
+    The matrix formed by all of the [cofactors](def-0045) of a square matrix #{A} is called the cofactor matrix,
+    or \strong{comatrix}:
+    ##{
+        C = \left[ 
+            \begin{array}{cccc}
+                C_{11} & C_{12} & \cdots & C_{1n} \\
+                C_{21} & C_{22} & \cdots & C_{2n} \\
+                \vdots & \vdots & \ddots & \vdots \\
+                C_{n1} & C_{n2} & \cdots & C_{nn}
+            \end{array}
+        \right]
+    }
+    The \strong{Adjugate matrix} of #{A} is the transpose of the cofactor matrix.
+}

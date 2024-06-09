@@ -1,0 +1,9 @@
+\title{First Minor and Cofactor}
+\taxon{Definition}
+\p{
+    If #{A} is a square matrix, then the \strong{minor} of the entry in the i-th row and j-th 
+    column (also called the #{(i, j)} minor, or a first minor) is the \strong{determinant} of 
+    the sub-matrix formed by deleting the i-th row and j-th column.
+    The #{(i, j)} minor is denoted as #{M_{ij}}.
+    The \strong{Cofactor} is obtained by multiplying the minor by #{(-1)^{i+j}}.
+}

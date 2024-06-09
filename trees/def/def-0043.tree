@@ -1,0 +1,13 @@
+\title{Transpose}
+\taxon{Definition}
+\p{
+    The \strong{transpose} of a matrix #{A}, denoted by #{A^T} is
+    the matrix obtained by swapping the rows and columns of #{A}.
+    It satisfies the following properties:
+    \ul{
+        \li{#{(A^T)^T = A}}
+        \li{#{(A + B)^T = A^T + B^T}}
+        \li{#{(cA)^T = cA^T}}
+        \li{#{(AB)^T = B^TA^T}}
+    }
+}

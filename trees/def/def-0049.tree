@@ -1,0 +1,19 @@
+\title{Matrix Partitioning}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{A \in \C^{m\times n} }. A \strong{partitioning} of #{A} is a representation of #{A} in the form
+    ##{
+        A = \begin{bmatrix}
+            A_{11} & A_{12} & \cdots & A_{1q} \\
+            A_{21} & A_{22} & \cdots & A_{2q} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            A_{p1} & A_{p2} & \cdots & A_{pq}
+        \end{bmatrix}
+    }
+    where #{A_{ij} \in \C^{m_i \times n_j} } for #{1 \leq i \leq p} and #{1 \leq j \leq q} such that
+    ##{
+        \sum_{i=1}^p m_i = m \quad \text{and} \quad \sum_{j=1}^q n_j = n.
+    }
+    The partitioned matrix operations are similar to the operations on the normal matrix. 
+}
