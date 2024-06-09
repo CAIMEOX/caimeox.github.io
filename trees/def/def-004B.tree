@@ -1,0 +1,8 @@
+\title{Column / Row Equivalence}
+\taxon{Definition}
+\p{
+    Two matrices #{A,B} are column / row equivalent if one can 
+    be obtained from the other by a finite sequence of [elementary operations](def-004A),
+    denoted #{A \sim B}.
+    The column / row equivalence is an [equivalence relation](def-000X).
+}

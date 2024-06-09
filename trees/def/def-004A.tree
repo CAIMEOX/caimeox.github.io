@@ -1,0 +1,44 @@
+\title{Elementary Operations}
+\taxon{Definition}
+\p{
+    There are three types of elementary matrices, which correspond to three types of row operations
+    (respectively, column operations, row operations are equivalent to multiplying on the left by the
+    corresponding elementary matrix, and column operations are equivalent to multiplying on the right
+    by the corresponding elementary matrix):
+    \ul{
+        \li{
+            \strong{Row switching}: A row within the matrix can be switched with another row.
+            ##{
+                P_{i,j} = \begin{bmatrix}
+                    1 \\
+                    & \ddots \\
+                    & & 0 & &  1 \\ 
+                    & & & \ddots \\ 
+                    & & 1 & & 0 \\ 
+                    & & & & & \ddots \\
+                    & & & & & & 1
+                \end{bmatrix}
+            }
+        }
+        \li{
+            \strong{Row multiplication}: Each element in a row can be multiplied by a non-zero constant.
+            ##{
+                D_i(k) = \text{diag} (1, \cdots, k, \cdots, 1)
+            }
+        }
+        \li{
+            \strong{Row additio}: A row can be replaced by the sum of that row and a multiple of another row.
+            ##{
+                T_{i,j} = \begin{bmatrix}
+                    1 \\
+                    & \ddots \\
+                    & & 1 & & k \\ 
+                    & & & \ddots \\ 
+                    & & & & 1 \\ 
+                    & & & & & \ddots \\
+                    & & & & & & 1
+                \end{bmatrix}
+            }
+        }
+    }
+}

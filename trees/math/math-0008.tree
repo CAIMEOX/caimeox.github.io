@@ -104,3 +104,19 @@
         We can show that #{A=O\iff A^TA=O}.
     }
 }
+\subtree{
+    \title{Matrix Transformation}
+    \transclude{def-004A}
+    \transclude{def-004B}
+    \p{
+        We can show that a matrix #{A} is invertible iff there are finite elementary matrices
+        #{E_1, E_2, \cdots, E_n} such that
+        ##{
+            A = E_1E_2\cdots E_n
+        }
+    }
+    \p{
+        From above we can deduce that a square matrix #{A} is invertible iff #{A\sim E}.
+        This trick can be used for solving a linear system and computing the inverse of a matrix.
+    }
+}
