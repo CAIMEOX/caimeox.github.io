@@ -1,4 +1,7 @@
 import 'ninja-keys';
+import 'katex';
+
+import autoRenderMath from 'katex/contrib/auto-render';
 
 function partition(array, isValid) {
  return array.reduce(([pass, fail], elem) => {
@@ -7,6 +10,8 @@ function partition(array, isValid) {
 }
 
 window.addEventListener("load", (event) => {
+ autoRenderMath(document.body)
+
  const openAllDetailsAbove = elt => {
   while (elt != null) {
    if (elt.nodeName == 'DETAILS') {
@@ -87,4 +92,5 @@ fetch("./forest.json")
 
   ninja.data = items
  });
+
 
