@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1320</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0043</fr:addr><fr:route>def-0043.xml</fr:route><fr:title>Transpose</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1336</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0043</fr:addr><fr:route>def-0043.xml</fr:route><fr:title>Transpose</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>transpose</fr:strong> of a matrix <fr:tex>A</fr:tex>, denoted by <fr:tex>A^T</fr:tex> is
     the matrix obtained by swapping the rows and columns of <fr:tex>A</fr:tex>.
     It satisfies the following properties:
     <fr:ul><fr:li><fr:tex>(A^T)^T = A</fr:tex></fr:li>
         <fr:li><fr:tex>(A + B)^T = A^T + B^T</fr:tex></fr:li>
         <fr:li><fr:tex>(cA)^T = cA^T</fr:tex></fr:li>
-        <fr:li><fr:tex>(AB)^T = B^TA^T</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1319</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        <fr:li><fr:tex>(AB)^T = B^TA^T</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1335</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     This post shows operations and applications over matrix.
 </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>470</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0043</fr:addr><fr:route>def-0043.xml</fr:route><fr:title>Transpose</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>transpose</fr:strong> of a matrix <fr:tex>A</fr:tex>, denoted by <fr:tex>A^T</fr:tex> is

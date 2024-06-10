@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1184</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002L</fr:addr><fr:route>def-002L.xml</fr:route><fr:title>Pullback of Sets</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1200</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002L</fr:addr><fr:route>def-002L.xml</fr:route><fr:title>Pullback of Sets</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Suppose we have sets <fr:tex>X</fr:tex>, <fr:tex>Y</fr:tex>, and <fr:tex>Z</fr:tex> and functions
     <fr:tex>f : X  \to  Z</fr:tex> and <fr:tex>g : Y  \to  Z</fr:tex>.
     
@@ -41,7 +41,7 @@
     </fr:embedded-tex-body></fr:embedded-tex>
 
     The <fr:strong>pullback</fr:strong> is defined to be any set <fr:tex>W  \cong  X \times _Z Y</fr:tex>
-    The corner symbol indicates <fr:tex>W</fr:tex> is a <fr:em>pullback</fr:em></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1183</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+    The corner symbol indicates <fr:tex>W</fr:tex> is a <fr:em>pullback</fr:em></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1199</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to <fr:link href="cat-sci-2013.xml" type="local" addr="cat-sci-2013">Category Theory for Scientists</fr:link>.
 </fr:p><fr:p><fr:strong>Set</fr:strong> is a common concept in mathematics.
     This post is a brief introduction to set theory aimed at 

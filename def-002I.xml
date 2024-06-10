@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>772</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002I</fr:addr><fr:route>def-002I.xml</fr:route><fr:title>Cardinality</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>786</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002I</fr:addr><fr:route>def-002I.xml</fr:route><fr:title>Cardinality</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>X</fr:tex> be a set and <fr:tex>n  \in   \mathbb {N}</fr:tex>. 
     <fr:tex>A</fr:tex> si said to have <fr:strong>cardinality</fr:strong> <fr:tex>n</fr:tex>, denoted by <fr:tex> |A|= n</fr:tex>,
     if there exists an isomorphism between <fr:tex>A</fr:tex> and <fr:tex>S_n =  \{   1,2, \cdots ,n   \}</fr:tex>.
     If <fr:tex>A</fr:tex> has finite cardinality, we say <fr:tex>A</fr:tex> is <fr:strong>finite</fr:strong>, otherwise
     we say <fr:tex>A</fr:tex> is <fr:strong>infinite</fr:strong>, denoted by <fr:tex>|A|  \geq   \infty</fr:tex>.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>771</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>785</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to <fr:link href="cat-sci-2013.xml" type="local" addr="cat-sci-2013">Category Theory for Scientists</fr:link>.
 </fr:p><fr:p><fr:strong>Set</fr:strong> is a common concept in mathematics.
     This post is a brief introduction to set theory aimed at 

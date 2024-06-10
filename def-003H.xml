@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>835</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003H</fr:addr><fr:route>def-003H.xml</fr:route><fr:title>Diagram</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>851</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003H</fr:addr><fr:route>def-003H.xml</fr:route><fr:title>Diagram</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>C</fr:tex> be a category and <fr:tex>J</fr:tex> be a small category.
     A <fr:strong>diagram</fr:strong> of shape <fr:tex>J</fr:tex> in <fr:tex>C</fr:tex> is a functor <fr:tex>X:J \to  C</fr:tex>.
     The category of <fr:tex>J</fr:tex>-shaped diagrams in <fr:tex>C</fr:tex> is the <fr:link href="def-003I.xml" type="local" addr="def-003I">functor category</fr:link> <fr:tex>C^J</fr:tex>.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>834</fr:anchor><fr:taxon>Category Theory</fr:taxon><fr:addr>math-0006</fr:addr><fr:route>math-0006.xml</fr:route><fr:title>Category Theory of Utilitarianism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>850</fr:anchor><fr:taxon>Category Theory</fr:taxon><fr:addr>math-0006</fr:addr><fr:route>math-0006.xml</fr:route><fr:title>Category Theory of Utilitarianism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     This note is about the category theory and its applications.
     Instead of reading a well-organized book, I prefer to write down the things I learned
     from <fr:link href="ncatlab.xml" type="local" addr="ncatlab">ncatlab</fr:link> and papers.
@@ -145,7 +145,7 @@
     A limit of a diagram <fr:tex>F:D \to  C</fr:tex> is an object <fr:tex>\lim  F</fr:tex> of <fr:tex>C</fr:tex>
     equipped with morphisms to the objects <fr:tex>F(d)</fr:tex> for all <fr:tex>d \in  D</fr:tex>,
     such that everything in sight commutes.
-</fr:p></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>833</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003I</fr:addr><fr:route>def-003I.xml</fr:route><fr:title>Functor Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>849</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003I</fr:addr><fr:route>def-003I.xml</fr:route><fr:title>Functor Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>C</fr:tex> and <fr:tex>D</fr:tex> be categories, the functor category <fr:tex>D^C</fr:tex> 
     (or <fr:tex>[C,D]</fr:tex>) is the category whose
     <fr:ul><fr:li>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>611</fr:anchor><fr:taxon>Compute Science</fr:taxon><fr:addr>cs-0001</fr:addr><fr:route>cs-0001.xml</fr:route><fr:title>Is JavaScript an untyped language?</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>29</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>625</fr:anchor><fr:taxon>Compute Science</fr:taxon><fr:addr>cs-0001</fr:addr><fr:route>cs-0001.xml</fr:route><fr:title>Is JavaScript an untyped language?</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>29</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This is a note about the the argument that JavaScript is an untyped language.
     Most opinions came from the References.
 </fr:p><fr:p>
@@ -37,7 +37,7 @@
         <fr:li><fr:link href="https://stackoverflow.com/questions/964910/is-javascript-an-untyped-language" type="external">stackoverflow</fr:link></fr:li>
         <fr:li><fr:link href="https://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html" type="external">What to know before debating type systems</fr:link></fr:li>
         <fr:li><fr:em>Practical Foundations for Programming Languages</fr:em>, Robert Harper</fr:li></fr:ul>
-</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>610</fr:anchor><fr:addr>notes</fr:addr><fr:route>notes.xml</fr:route><fr:title>Notes</fr:title></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>269</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0001</fr:addr><fr:route>tt-0001.xml</fr:route><fr:title>Untyped Lambda Calculus</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>624</fr:anchor><fr:addr>notes</fr:addr><fr:route>notes.xml</fr:route><fr:title>Notes</fr:title></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>269</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0001</fr:addr><fr:route>tt-0001.xml</fr:route><fr:title>Untyped Lambda Calculus</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to <fr:link href="ttafp-2014.xml" type="local" addr="ttafp-2014">Type Theory and Formal Proof</fr:link>.
 </fr:p><fr:p>
     The idea to generalize the behavior of functions in mathematics and logic led to the development of the lambda calculus.
@@ -2673,4 +2673,133 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
         <fr:tex display="block">             A = E_1E_2 \cdots  E_n         </fr:tex></fr:p><fr:p>
         From above we can deduce that a square matrix <fr:tex>A</fr:tex> is invertible iff <fr:tex>A \sim  E</fr:tex>.
         This trick can be used for solving a linear system and computing the inverse of a matrix.
-    </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>
+    </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>500</fr:anchor><fr:taxon>Mechanics</fr:taxon><fr:addr>phy-0004</fr:addr><fr:route>phy-0004.xml</fr:route><fr:title>Classical Mechanics</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    Notes about the classic mechanics. 
+    Most of the content is based on the Wikipedia page about the subject.
+</fr:p><fr:p>
+    The motion of a body can only be described relative to something else—other bodies, 
+    observers, or a set of spacetime coordinates. These are called <fr:strong>frames of reference</fr:strong>. 
+    All physical laws take their simplest form in an <fr:strong>inertial</fr:strong> frame.
+    <fr:strong>Galilean invariance</fr:strong> or <fr:strong>Galilean relativity</fr:strong> states that the 
+    laws of motion are the same in all <fr:strong>inertial frames of reference</fr:strong>.
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>487</fr:anchor><fr:title>Center of mass</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+        The center of mass of a distribution of mass in space is the unique point 
+        at any given time where the weighted relative position of the distributed mass sums to zero.
+        <fr:ul><fr:li><fr:strong>System of particles</fr:strong>
+                <fr:tex display="block">                      \vec {R} =  \frac { \sum  m_i  \vec {r}_i}{ \sum  m_i}                 </fr:tex></fr:li>
+            <fr:li><fr:strong>Continuous volume</fr:strong>
+                <fr:p>
+                    If the mass is distributed continuously, the center of mass is given by the
+                    following formula:
+                    <fr:tex display="block">                          \vec {R} =  \frac { \int   \vec {r} dm}{ \int  dm}                     </fr:tex></fr:p></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>491</fr:anchor><fr:title>Work and Energy</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Work</fr:strong> is the energy transferred to or from an object via the application of force along a displacement.
+        <fr:ul><fr:li>Positive Work: The force has a component in the direction of the displacement.</fr:li>
+            <fr:li>Negative Work: The force has a component opposite to the direction of the displacement.</fr:li></fr:ul>
+        Both force and displacement are vectors. The work done is given by the dot product of the two vectors,
+        where the result is a scalar. The work can be given by line integrals:
+        <fr:tex display="block">             W =  \int _C  \vec {F}  \cdot  d \vec {r}         </fr:tex>
+        where <fr:tex>d \vec {r}</fr:tex> is the tiny displacement vector along the path <fr:tex>C</fr:tex>.
+        For motion along a straight line, we have a degenerated case of the line integral:
+        <fr:tex display="block">             W =  \vec {F}  \cdot   \vec {r}         </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>488</fr:anchor><fr:taxon>Principle</fr:taxon><fr:addr>thm-0012</fr:addr><fr:route>thm-0012.xml</fr:route><fr:title>Work-Energy Principle</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    An increase in the kinetic energy of a <fr:strong>rigid body</fr:strong> is caused by an equal amount 
+    of positive work done on the body by the resultant force acting on that body. 
+    Conversely, a decrease in kinetic energy is caused by an equal amount of negative work done by the resultant force.
+</fr:p></fr:mainmatter></fr:tree><fr:p>
+        Work on a free (no fields), rigid (no internal degrees of freedom) body, is equal to the change
+        in kinetic energy <fr:tex>E_k</fr:tex> corresponding to the linear velocity and angular velocity of that body.
+        <fr:tex display="block">             W =  \Delta  E_k         </fr:tex></fr:p><fr:p>
+        The work of forces generated by a potential function is known as potential energy 
+        and the forces are said to be <fr:strong>conservative</fr:strong>. 
+        Work on an object that is merely displaced in a conservative force field, without 
+        change in velocity or rotation, is equal to minus the change of potential energy <fr:tex>E_p</fr:tex> of the object
+        <fr:tex display="block">             W = - \Delta  E_p         </fr:tex></fr:p><fr:p>
+        The time derivative of the work is called <fr:strong>power</fr:strong>:
+        <fr:tex display="block">             P =  \frac {dW}{dt}         </fr:tex>
+        <fr:tex>dW</fr:tex> can be written as the dot product of the force and the velocity of the object <fr:tex>dW =  \vec {F}  \cdot  d \vec {r}</fr:tex>,
+        hence the power can be written as:
+        <fr:tex display="block">             P =  \vec {F}  \cdot   \frac {d \vec {r}}{dt} =  \vec {F}  \cdot   \vec {v}         </fr:tex>
+        The work then can be expressed as the integral of the power over time:
+        <fr:tex display="block">             W =  \int _{ \Delta  t} P dt =  \int _{ \Delta  t}  \vec {F}  \cdot   \vec {v} dt          </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>490</fr:anchor><fr:title>Kinetic Energy</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+            The kinetic energy of a point object, or a non-rotating rigid body depends on the 
+            mass of the body as well as its speed.
+            <fr:tex display="block">                 E_k =  \frac {1}{2} m v^2 =  \frac {p^2}{2m}             </fr:tex></fr:p>
+ 
+   
+   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>489</fr:anchor><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+            The work done in accelerating a particle with mass m during the infinitesimal time 
+            interval <fr:tex>dt</fr:tex> is given by the dot product of force <fr:tex>\vec {F}</fr:tex> and the infinitesimal displacement <fr:tex>d \vec {x}</fr:tex>
+            <fr:tex display="block">                 dW =  \vec {F}  \cdot  d \vec {x}                  =  \frac {d \vec {p}}{dt}  \cdot   \vec {v}dt                 =  \vec {v} \cdot  d \vec {p} =  \vec {v}  \cdot  d(m \vec {v})             </fr:tex>
+            Applying the product rule of differentiation, we get:
+            <fr:tex display="block">                 d( \vec {v} \cdot \vec {v}) = 2 \vec {v}  \cdot  d \vec {v}             </fr:tex>
+            Therefore we have:
+            <fr:tex display="block">                  \vec {v}  \cdot  d(m \vec {v}) =  \frac {m}{2} d( \vec {v}  \cdot   \vec {v})              </fr:tex>
+            Since this is a total differential (that is, it only depends on the final state, 
+            not how the particle got there), we can integrate it and call the result kinetic energy:
+            <fr:tex display="block">                 E_k =  \int _{v_1}^{v_2}  \vec {p}  \cdot  d \vec {v} =  \frac {1}{2} m (v_2^2-v_1^2)             </fr:tex>
+        </fr:mainmatter></fr:tree>
+ 
+<fr:p>
+            If a rigid body <fr:tex>Q</fr:tex> is rotating about any line through the center of mass then it has <fr:strong>rotational kinetic energy</fr:strong>
+            (<fr:tex>E_r</fr:tex>) which is simply the sum of the kinetic energies of its moving parts, and is thus given by:
+            <fr:tex display="block">                 E_r =  \int _Q  \frac {v^2dm}{2} =  \int _Q  \frac {(r \omega )^2dm}{2} =  \frac { \omega ^2}{2} \int _Qr^2dm =  \frac {1}{2}I \omega ^2             </fr:tex>
+            <fr:ul><fr:li><fr:tex>I =  \int _Qr^2dm</fr:tex> is the moment of inertia of the body.
+                </fr:li>
+                <fr:li><fr:tex>\omega</fr:tex> is the angular velocity of the body.
+                </fr:li>
+                <fr:li><fr:tex>r</fr:tex> is the distance from the axis of rotation.
+                </fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>497</fr:anchor><fr:title>Momentum</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Momentum</fr:strong> depends on the frame of reference, but in any inertial frame it is a conserved quantity,
+        meaning that if a closed system is not affected by external forces, its total linear momentum does not change.
+    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>492</fr:anchor><fr:title>Definition in Classic Mechanics</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+            For a system with one or more particles, the total momentum is the sum of the momenta of the individual particles.
+            <fr:tex display="block">                  \vec {p} =  \sum  m_i  \vec {v}_i             </fr:tex>
+            Or use the center of mass:
+            <fr:tex display="block">                  \vec {p} = M  \vec {V}             </fr:tex>
+            where <fr:tex>M</fr:tex> is the total mass of the system and <fr:tex>\vec {V}</fr:tex> is the velocity of the center of mass.
+            This formula is known as the <fr:strong>Euler&apos;s first law of motion</fr:strong>.
+        </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>493</fr:anchor><fr:title>Relation to force</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+            From Newton&apos;s second law, the rate of change of the momentum of a particle is equal to the 
+            instantaneous force <fr:tex>F</fr:tex> acting on it
+            <fr:tex display="block">                  \vec {F} =  \frac {d \vec {p}}{dt}             </fr:tex>
+            Hence the change in momentum in time interval <fr:tex>(t_1, t_2)</fr:tex> can be written as:
+            <fr:tex display="block">                 I =  \Delta \vec {p} =  \int _{t_1}^{t_2}  \vec {F} dt =  \int _{ \vec {p_1}}^{ \vec {p_2}} d \vec {p}             </fr:tex>
+            We read this as the <fr:strong>impulse</fr:strong> <fr:tex>I</fr:tex> is equal to the change in momentum.
+        </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>494</fr:anchor><fr:title>Law of Conservation of Momentum</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+            In a closed system the total momentum remains constant.
+            A closed system means that the system is not affected by external forces.
+            Or approximately the external forces are extremely small.
+        </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>496</fr:anchor><fr:title>Angular Momentum</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+            A force applied perpendicularly to a lever multiplied by its distance from the 
+            lever&apos;s fulcrum (the length of the lever arm) is its <fr:strong>torque</fr:strong>.
+            <fr:tex display="block">                  \vec { \tau } =  \vec {r}  \times   \vec {F}             </fr:tex>
+            The magnitude of torque is <fr:tex>\tau  = rF \sin \theta  </fr:tex> (<fr:tex>r</fr:tex> is the magnitude of the
+            <fr:strong>position vector</fr:strong> <fr:tex>\vec {r}</fr:tex> and <fr:tex>\theta</fr:tex> is the angle between the force
+            vector and the lever arm vector).
+        </fr:p><fr:p>
+            In three-dimensional Euclidean Space, the torque can be written as the components:
+            <fr:tex display="block">                  \vec { \tau } =  \begin {pmatrix}                      \tau _x  \\                       \tau _y  \\                       \tau _z                  \end {pmatrix} =  \begin {pmatrix}                     yF_z - zF_y  \\                      zF_x - xF_z  \\                      xF_y - yF_x                  \end {pmatrix}             </fr:tex>
+            The component of torque in the direction of an axis is called the torque to that axis.
+        </fr:p><fr:p>
+            The net torque determines the rate of change of the body&apos;s angular momentum.
+            <fr:tex display="block">                  \vec { \tau } =  \frac {d \vec {L}}{dt}             </fr:tex>
+            The angular momentum of a particle is defined as:
+            <fr:tex display="block">                  \vec {L} =  \vec {r}  \times   \vec {p}             </fr:tex></fr:p>
+ 
+   
+   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>495</fr:anchor><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+            Now we prove the equivalence of definitions.
+            <fr:tex display="block">                  \frac {d \vec {L}}{dt} =  \vec {r} \times \frac {d \vec {p}}{dt} +  \frac {d \vec {r}}{dt} \times \vec {p}             </fr:tex>
+            The rate of change of linear momentum is the force and the rate of change of position is velocity.
+            <fr:tex display="block">                  \frac {d \vec {L}}{dt} =  \vec {r} \times \vec {F} +  \vec {v} \times \vec {p}             </fr:tex>
+            The cross product of <fr:tex>\vec {p}</fr:tex> with <fr:tex>\vec {v}</fr:tex> is <fr:tex>0</fr:tex> because velocity and momentum are parallel.
+            Hence we have:
+            <fr:tex display="block">                  \frac {d \vec {L}}{dt} =  \vec {r} \times \vec {F} =  \tau              </fr:tex>
+        </fr:mainmatter></fr:tree>
+ 
+<fr:p>
+            The above statement leads to the Conservation of Angular Momentum.
+        </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>499</fr:anchor><fr:title>Rigid Body Dynamics</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>498</fr:anchor><fr:title>Moment of Inertia</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+            When a body is free to rotate around an axis, torque must be applied to change its angular momentum.
+            The amount of torque needed to cause any given angular acceleration
+            is proportional to the moment of inertia of the body.
+            The moment of inertia plays the role in rotational kinetics that mass (inertia) plays in linear kinetics,
+            both characterize the resistance of a body to changes in its motion.
+        </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>

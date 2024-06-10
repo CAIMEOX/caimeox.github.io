@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>816</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-0011</fr:addr><fr:route>thm-0011.xml</fr:route><fr:title>Cramer&apos;s rule</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>832</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-0011</fr:addr><fr:route>thm-0011.xml</fr:route><fr:title>Cramer&apos;s rule</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Consider a system of <fr:tex>n</fr:tex> linear equations for <fr:tex>n</fr:tex> unknowns, represented in matrix multiplication form as follows:
     <fr:tex display="block">         A  \cdot  X = B     </fr:tex>
     where <fr:tex>A</fr:tex> is a square matrix of order <fr:tex>n</fr:tex>, <fr:tex>X</fr:tex> is a column matrix of order <fr:tex>n</fr:tex> and <fr:tex>B</fr:tex> is a column matrix of order <fr:tex>n</fr:tex>.
@@ -7,7 +7,7 @@
     The Cramer&apos;s rule states that the solution to the system of equations is given by:
     <fr:tex display="block">         x_i =  \frac { \text {det}(A_i)}{ \text {det}(A)}     </fr:tex>
     where <fr:tex>A_i</fr:tex> is the matrix obtained by replacing the <fr:tex>i</fr:tex>th column of <fr:tex>A</fr:tex> by <fr:tex>B</fr:tex>.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>815</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>831</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     This post shows operations and applications over matrix.
 </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>470</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0043</fr:addr><fr:route>def-0043.xml</fr:route><fr:title>Transpose</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>transpose</fr:strong> of a matrix <fr:tex>A</fr:tex>, denoted by <fr:tex>A^T</fr:tex> is

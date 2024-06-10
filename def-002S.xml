@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1082</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002S</fr:addr><fr:route>def-002S.xml</fr:route><fr:title>Matrix of Linear Maps</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1098</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002S</fr:addr><fr:route>def-002S.xml</fr:route><fr:title>Matrix of Linear Maps</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>T \in   \mathcal {L} (V,W)</fr:tex>,
     <fr:tex>\{   v_1, \ldots ,v_n   \} \subset  V</fr:tex> be a basis of <fr:tex>V</fr:tex>,
     and <fr:tex>\{   w_1, \ldots ,w_m   \} \subset  W</fr:tex> be a basis of <fr:tex>W</fr:tex>.
@@ -37,7 +37,7 @@
     The set of all <fr:tex>m \times  n</fr:tex> matrices with elements in <fr:tex>\mathbb {F}</fr:tex> is denoted as <fr:tex>\mathcal {M} _{m \times  n}( \mathbb {F} )</fr:tex>
     or <fr:tex>\mathbb {F} ^{m \times  n}</fr:tex>.
 </fr:mainmatter></fr:tree>
-</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1081</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0005</fr:addr><fr:route>math-0005.xml</fr:route><fr:title>Linear Maps</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1097</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0005</fr:addr><fr:route>math-0005.xml</fr:route><fr:title>Linear Maps</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This note introduces the concept of linear maps.
     Refer to <fr:link href="linear-algebra-2015.xml" type="local" addr="linear-algebra-2015">Linear Algebra Done Right</fr:link>.
 </fr:p><fr:p>
