@@ -15,11 +15,40 @@
     This gives every type a \strong{groupoid structure}.
 }
 \transclude{def-002N}
-\p{
-    The identifications can be \strong{concatenated} and \strong{inverted},
-    which implies the \em{transitivity} and \em{symmetry} of the identity type.
+\subtree{
+    \title{The groupoid structure of types}
+    \p{
+        The identifications can be \strong{concatenated} and \strong{inverted},
+        which implies the \em{transitivity} and \em{symmetry} of the identity type.
+    }
+    \transclude{def-002O}
+    \transclude{def-002P}
+    \p{
+        It is natural to ask whether the identity type is \em{reflexive}.
+        In the case of associativity we should ask to compare the identifications:
+        ##{
+            (p\cdot q)\cdot r \quad\text{and}\quad p\cdot(q\cdot r)
+        }
+        for any #{p:x=y}, #{q:y=z} and #{r:z=w} in a type #{A}. Both #{ (p\cdot q)\cdot r} and 
+        #{p\cdot(q\cdot r)} are elements of type #{x=w}. We can ask whether there is an
+        identification
+        ##{
+            (p\cdot q)\cdot r = p\cdot(q\cdot r)
+        }
+    }
+    \transclude{def-002W}
+    \transclude{def-002X}
 }
-\transclude{def-002O}
-\transclude{def-002P}
-\transclude{def-002W}
-\transclude{def-002X}
+\subtree{
+    \title{The action on identifications of functions}
+    \p{
+        Every function preserves identifications.
+    }
+    \transclude{def-004C}
+    \p{
+        To construct dependent action on paths if a dependent function #{f:\Pi_{(x:A)}B(x)}.
+        We need a \strong{transport} because type theory can not distinguish between identified 
+        elements from different types.
+    }
+    \transclude{def-004D}
+}

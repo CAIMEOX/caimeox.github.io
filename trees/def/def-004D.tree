@@ -1,0 +1,29 @@
+\title{Transport}
+\taxon{Definition}
+\import{macros}
+\def\tr{\text{tr}}
+\def\apd{\text{apd}}
+\p{
+    Let #{A} be a type and let #{B} be a type family over #{A}.
+    The \strong{transport} operation is defined:
+    ##{
+        \tr_B:\Pi_{(x,y:A)}(x=y)\to B(x)\to B(y)
+    }
+    Simply induction on #{p:x=y} we can construct:
+    ##{
+        \tr_B(\refl_x) \equiv \id_{B(x)}
+    }
+}
+\p{
+    Now for a given dependent function #{f:\Pi_{(a:A)}B(a)} and an identification
+    #{p:x=y} in #{A} we can construct
+    ##{
+        \apd_f(p) : \tr_B(p,f(x)) = f(y)
+    }
+    this can be constructed by the induction principle for identity types,
+    it suffices to construct an identification:
+    ##{
+        \apd_f(\refl_x) : \tr_B(\refl_x,f(x)) = f(x)
+    }
+    which is simply done by taking #{\apd_f(\refl_x)\equiv\refl_{f(x)}}
+}

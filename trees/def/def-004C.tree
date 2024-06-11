@@ -1,0 +1,60 @@
+\title{Action on Paths}
+\taxon{Definition}
+\import{macros}
+\def\ap{\text{ap}}
+\p{
+    Let #{f:A\to B} be a map. We define the \strong{action on paths} of #{f} as an operation:
+    ##{
+        \ap_f : \prod_{x,y:A} (x=y) \to (f(x)=f(y))
+    }
+    This can be defined by induction principle of identity types:
+    ##{
+        \ap_f(\refl_x) \equiv \refl_{f(x)}
+    }
+    And there are operations:
+    ##{
+        \text{ap-id}_A:       \prod_{(x,y:A)}\prod_{(p:x=y)} p = \ap_{\id_A}(p)
+    }
+    Taking
+    ##{
+        \text{ap-id}_A(\refl_x) \equiv \refl_{\refl_x}
+    }
+    Finally we can construct
+    ##{
+        \text{ap-comp}(f, g): \prod_{(x,y:A)}\prod_{(p:x=y)} \ap_{f\circ g}(p) = \ap_f(\ap_g(p))
+    }
+    by taking
+    ##{
+        \text{ap-comp}(f,g,\refl_x) \equiv \refl_{\refl_{g(f(x))}}
+    }
+    There are identifications:
+    \ul{
+        \li{
+            Notice that we have #{\text{ap-id}_A(\refl_x) \equiv \refl_{\refl_x}} so
+            ##{
+                \begin{align*}
+                    \text{ap-refl}(f,x) &:\ap_f(\refl_x) = \refl_{f(x)} \\
+                    \text{ap-refl}(f,x) &\equiv \refl_{\refl_{f(x)}}
+                \end{align*}
+            }
+        }
+        \li{
+            The #{\text{ap-inv}} can be constructed by identification elimination on #{p}.
+            ##{
+                \begin{align*}
+                    &\text{ap-inv}(f,p):\ap_f(p^{-1}) = \ap_f(p)^{-1}\\
+                    &\text{ap-inv}(f,\refl_x)\equiv \refl_{\ap_f(\refl_x)}
+                \end{align*}
+            }
+        }
+        \li{
+            Similarly, the #{\text{ap-concat}} can be constructed by identification elimination on #{p}.
+            ##{
+                \begin{align*}
+                    &\text{ap-concat}(f,p,q):\ap_f(p\cdot q) = \ap_f(p)\cdot \ap_f(q) \\
+                    &\text{ap-concat}(f,\refl_x,q)\equiv \refl_{\ap_f(q)}
+                \end{align*}
+            }
+        }
+    }
+}

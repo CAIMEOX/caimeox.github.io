@@ -2,7 +2,7 @@
 \taxon{Definition}
 \p{
     A vector space over a [field](def-0006) #{F} is a non-empty set #{V} together with a binary operation and a binary function that satisfy the axioms listed below. 
-    In this context, the elements of #{F} are commonly called \strong{vectors}, and the elements of #{F} are called \strong{scalars}.
+    In this context, the elements of #{V} are commonly called \strong{vectors}, and the elements of #{F} are called \strong{scalars}.
     \ul{
         \li{Commutativity: #{
             \forall x, y \in V, x + y = y + x

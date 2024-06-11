@@ -7,13 +7,15 @@
     ##{
         \inv: (x:A)\to (y:A)\to (x=_Ay)\to (y=_Ax)
     }
+    Most of the time we write #{p^{-1}} for #{\inv(p)}.
 }
-\block{
-    \strong{Construction}
-}{
-    By induction, it suffices to construct:
-    ##{
-        \inv(x,x,\refl_x) : (x=_Ax)
+\subtree{
+    \title{Construction of Inverse}
+    \p{
+        By induction, it suffices to construct:
+        ##{
+            \inv(x,x,\refl_x) : (x=_Ax)
+        }
+        for any #{x:A}. And trivially we have #{\inv(x,x,\refl_x)\equiv\refl_x}.
     }
-    for any #{x:A}. And trivially we have #{\inv(x,x,\refl_x)\equiv\refl_x}.
 }
