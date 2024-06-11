@@ -790,7 +790,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
     The definition abstracts and generalizes these properties.
 </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>301</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000H</fr:addr><fr:route>def-000H.xml</fr:route><fr:title>Vector Space</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A vector space over a <fr:link href="def-0006.xml" type="local" addr="def-0006">field</fr:link> <fr:tex>F</fr:tex> is a non-empty set <fr:tex>V</fr:tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
-    In this context, the elements of <fr:tex>F</fr:tex> are commonly called <fr:strong>vectors</fr:strong>, and the elements of <fr:tex>F</fr:tex> are called <fr:strong>scalars</fr:strong>.
+    In this context, the elements of <fr:tex>V</fr:tex> are commonly called <fr:strong>vectors</fr:strong>, and the elements of <fr:tex>F</fr:tex> are called <fr:strong>scalars</fr:strong>.
     <fr:ul><fr:li>Commutativity: <fr:tex>              \forall  x, y  \in  V, x + y = y + x         </fr:tex></fr:li>
         <fr:li>Associativity: <fr:tex>              \forall  x, y, z  \in  V, (x + y) + z = x + (y + z)         </fr:tex></fr:li>
         <fr:li>Additive Identity: <fr:tex>              \exists  0  \in  V  \text { such that }  \forall  x  \in  V, x + 0 = x         </fr:tex></fr:li>
@@ -2609,7 +2609,7 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
         We now start with introducing the vector space over the field of real numbers <fr:tex>\mathbb {R}</fr:tex>.
     </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>456</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000H</fr:addr><fr:route>def-000H.xml</fr:route><fr:title>Vector Space</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A vector space over a <fr:link href="def-0006.xml" type="local" addr="def-0006">field</fr:link> <fr:tex>F</fr:tex> is a non-empty set <fr:tex>V</fr:tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
-    In this context, the elements of <fr:tex>F</fr:tex> are commonly called <fr:strong>vectors</fr:strong>, and the elements of <fr:tex>F</fr:tex> are called <fr:strong>scalars</fr:strong>.
+    In this context, the elements of <fr:tex>V</fr:tex> are commonly called <fr:strong>vectors</fr:strong>, and the elements of <fr:tex>F</fr:tex> are called <fr:strong>scalars</fr:strong>.
     <fr:ul><fr:li>Commutativity: <fr:tex>              \forall  x, y  \in  V, x + y = y + x         </fr:tex></fr:li>
         <fr:li>Associativity: <fr:tex>              \forall  x, y, z  \in  V, (x + y) + z = x + (y + z)         </fr:tex></fr:li>
         <fr:li>Additive Identity: <fr:tex>              \exists  0  \in  V  \text { such that }  \forall  x  \in  V, x + 0 = x         </fr:tex></fr:li>

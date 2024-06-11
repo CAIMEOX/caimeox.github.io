@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1274</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0034</fr:addr><fr:route>def-0034.xml</fr:route><fr:title>Stationary State</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1281</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0034</fr:addr><fr:route>def-0034.xml</fr:route><fr:title>Stationary State</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:strong>stationary state</fr:strong> is a quantum state with all observables independent of time.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1273</fr:anchor><fr:taxon>Quantum Mechanics</fr:taxon><fr:addr>phy-0003</fr:addr><fr:route>phy-0003.xml</fr:route><fr:title>Time-independent Schrodinger Equation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1280</fr:anchor><fr:taxon>Quantum Mechanics</fr:taxon><fr:addr>phy-0003</fr:addr><fr:route>phy-0003.xml</fr:route><fr:title>Time-independent Schrodinger Equation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to chapter 2 in <fr:link href="quantum-2018.xml" type="local" addr="quantum-2018">Introduction to Quantum Mechanics</fr:link></fr:p><fr:p>
     In previous section we use the <fr:link href="def-0030.xml" type="local" addr="def-0030">Schrodinger equation</fr:link> to compute things.
     The variable <fr:tex>t</fr:tex> is annoying which makes things complicated, and we would like to get rid of it.
@@ -14,7 +14,7 @@
     <fr:tex display="block">          \Psi (x,t) =  \psi (x) \phi (t)     </fr:tex>
     This is an absurd restriction, but it works and we can get interesting results.
 </fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>575</fr:anchor><fr:title><fr:strong>Solve the equation</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:parent>phy-0003</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>579</fr:anchor><fr:title><fr:strong>Solve the equation</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:parent>phy-0003</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
         Now substitute the product form into the Schrodinger equation:
         <fr:tex display="block">             i \hbar   \psi (x)  \frac { \partial }{ \partial  t}( \phi (t)) = - \frac { \hbar ^2}{2m} \phi (t) \frac { \partial ^2( \psi (x))}{ \partial  x^2} + V(x) \psi (x) \phi (t)         </fr:tex>
@@ -40,7 +40,7 @@
 </fr:mainmatter></fr:tree>
 <fr:p>
     Now we give a name to the time-independent Schrodinger equation.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>576</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0034</fr:addr><fr:route>def-0034.xml</fr:route><fr:title>Stationary State</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>580</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0034</fr:addr><fr:route>def-0034.xml</fr:route><fr:title>Stationary State</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:strong>stationary state</fr:strong> is a quantum state with all observables independent of time.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     Thought the wave function is time-dependent,
@@ -51,7 +51,7 @@
     Then <fr:tex>\langle  p  \rangle  = 0</fr:tex> all the time.
     Nothing happens in the stationary state.
 </fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>577</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>581</fr:anchor><fr:title>
     <fr:strong>Conservation of energy</fr:strong>
 </fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:parent>phy-0003</fr:parent></fr:frontmatter><fr:mainmatter>
     This also means that the energy of the system is conserved.

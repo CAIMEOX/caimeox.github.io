@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>669</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002Y</fr:addr><fr:route>def-002Y.xml</fr:route><fr:title><fr:tex>A_{j \cdot }</fr:tex> and <fr:tex>A_{ \cdot  j}</fr:tex></fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>673</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002Y</fr:addr><fr:route>def-002Y.xml</fr:route><fr:title><fr:tex>A_{j \cdot }</fr:tex> and <fr:tex>A_{ \cdot  j}</fr:tex></fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be a <fr:tex>m \times  n</fr:tex> matrix.
     <fr:ul><fr:li>
             If <fr:tex>1 \leq  j \leq  m</fr:tex> then <fr:tex>A_{j \cdot }</fr:tex> is the <fr:tex>j</fr:tex>-th row of <fr:tex>A</fr:tex>,
@@ -8,7 +8,7 @@
         <fr:li>
             If <fr:tex>1 \leq  j \leq  n</fr:tex> then <fr:tex>A_{ \cdot  j}</fr:tex> is the <fr:tex>j</fr:tex>-th column of <fr:tex>A</fr:tex>,
             defined as a <fr:tex>m \times  1</fr:tex> matrix. (A column vector)
-        </fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>668</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0005</fr:addr><fr:route>math-0005.xml</fr:route><fr:title>Linear Maps</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+        </fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>672</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0005</fr:addr><fr:route>math-0005.xml</fr:route><fr:title>Linear Maps</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This note introduces the concept of linear maps.
     Refer to <fr:link href="linear-algebra-2015.xml" type="local" addr="linear-algebra-2015">Linear Algebra Done Right</fr:link>.
 </fr:p><fr:p>

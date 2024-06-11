@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1263</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003F</fr:addr><fr:route>def-003F.xml</fr:route><fr:title>Small Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1270</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003F</fr:addr><fr:route>def-003F.xml</fr:route><fr:title>Small Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:link href="def-003E.xml" type="local" addr="def-003E">category</fr:link> is said to be <fr:strong>small</fr:strong> 
     if it has a <fr:strong>samll set</fr:strong> (i.e. a set but not a proper class) of objects and morphisms.
     In other words a small category is an <fr:strong>internal category</fr:strong> in category of sets.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1262</fr:anchor><fr:taxon>Category Theory</fr:taxon><fr:addr>math-0006</fr:addr><fr:route>math-0006.xml</fr:route><fr:title>Category Theory of Utilitarianism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1269</fr:anchor><fr:taxon>Category Theory</fr:taxon><fr:addr>math-0006</fr:addr><fr:route>math-0006.xml</fr:route><fr:title>Category Theory of Utilitarianism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     This note is about the category theory and its applications.
     Instead of reading a well-organized book, I prefer to write down the things I learned
     from <fr:link href="ncatlab.xml" type="local" addr="ncatlab">ncatlab</fr:link> and papers.
@@ -145,7 +145,7 @@
     A limit of a diagram <fr:tex>F:D \to  C</fr:tex> is an object <fr:tex>\lim  F</fr:tex> of <fr:tex>C</fr:tex>
     equipped with morphisms to the objects <fr:tex>F(d)</fr:tex> for all <fr:tex>d \in  D</fr:tex>,
     such that everything in sight commutes.
-</fr:p></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1261</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003E</fr:addr><fr:route>def-003E.xml</fr:route><fr:title>Category</fr:title></fr:frontmatter><fr:mainmatter>
+</fr:p></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1268</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003E</fr:addr><fr:route>def-003E.xml</fr:route><fr:title>Category</fr:title></fr:frontmatter><fr:mainmatter>
     <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>359</fr:anchor><fr:title><fr:strong>With one collection</fr:strong></fr:title><fr:parent>def-003E</fr:parent></fr:frontmatter><fr:mainmatter>
     A <fr:strong>category</fr:strong> <fr:tex>C</fr:tex> consists
     <fr:ul><fr:li>

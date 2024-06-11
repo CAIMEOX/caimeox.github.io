@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1387</fr:anchor><fr:taxon>Principle</fr:taxon><fr:addr>thm-0012</fr:addr><fr:route>thm-0012.xml</fr:route><fr:title>Work-Energy Principle</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1396</fr:anchor><fr:taxon>Principle</fr:taxon><fr:addr>thm-0012</fr:addr><fr:route>thm-0012.xml</fr:route><fr:title>Work-Energy Principle</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     An increase in the kinetic energy of a <fr:strong>rigid body</fr:strong> is caused by an equal amount 
     of positive work done on the body by the resultant force acting on that body. 
     Conversely, a decrease in kinetic energy is caused by an equal amount of negative work done by the resultant force.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1386</fr:anchor><fr:taxon>Mechanics</fr:taxon><fr:addr>phy-0004</fr:addr><fr:route>phy-0004.xml</fr:route><fr:title>Classical Mechanics</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1395</fr:anchor><fr:taxon>Mechanics</fr:taxon><fr:addr>phy-0004</fr:addr><fr:route>phy-0004.xml</fr:route><fr:title>Classical Mechanics</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Notes about the classic mechanics. 
     Most of the content is based on the Wikipedia page about the subject.
 </fr:p><fr:p>

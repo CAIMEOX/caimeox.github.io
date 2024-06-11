@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1044</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000S</fr:addr><fr:route>thm-000S.xml</fr:route><fr:title>Linear Combination of columns</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1050</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000S</fr:addr><fr:route>thm-000S.xml</fr:route><fr:title>Linear Combination of columns</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be an <fr:tex>m \times  n</fr:tex> matrix,
     and <fr:tex>c</fr:tex> is a <fr:tex>1 \times  1</fr:tex> matrix.
     <fr:tex display="block">         c =  \begin {pmatrix} c_1  \\  c_2  \\   \vdots   \\  c_n  \end {pmatrix}     </fr:tex>
     Then <fr:tex>Ac = c_1A_{ \cdot  1} + c_2A_{ \cdot  2} +  \cdots  + c_nA_{ \cdot  n}</fr:tex>.
     In other words, <fr:tex>Ac</fr:tex> is a linear Combination of the columns of <fr:tex>A</fr:tex>,
     with the scalars that multiply the columns coming from <fr:tex>c</fr:tex>.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1043</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0005</fr:addr><fr:route>math-0005.xml</fr:route><fr:title>Linear Maps</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1049</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0005</fr:addr><fr:route>math-0005.xml</fr:route><fr:title>Linear Maps</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This note introduces the concept of linear maps.
     Refer to <fr:link href="linear-algebra-2015.xml" type="local" addr="linear-algebra-2015">Linear Algebra Done Right</fr:link>.
 </fr:p><fr:p>

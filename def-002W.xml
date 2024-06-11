@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>745</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002W</fr:addr><fr:route>def-002W.xml</fr:route><fr:title>Associator</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>751</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002W</fr:addr><fr:route>def-002W.xml</fr:route><fr:title>Associator</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be a type.
     These are 3 consecutive identifications
     <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
     we define the <fr:strong>associator</fr:strong>:
     <fr:tex display="block">          \text {assoc} : (p,q,r): (p \cdot  q) \cdot  r = p \cdot  (q \cdot  r)     </fr:tex></fr:p>
     <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>562</fr:anchor><fr:title>
-    <fr:strong>Construction</fr:strong>
+    <fr:strong>Construction of Associator</fr:strong>
 </fr:title><fr:parent>def-002W</fr:parent></fr:frontmatter><fr:mainmatter>
     By definition it suffices to show that
     <fr:tex display="block">          \Pi _{(z:A)} \Pi _{(q:x=_Az)}          \Pi _{(w:A)} \Pi _{(r:z=_Aw)}         ( \text {refl} _x \cdot  q) \cdot  r =  \text {refl} _x \cdot  (q \cdot  r)     </fr:tex>
@@ -21,7 +21,7 @@
     so we can simply define the associator as
     <fr:tex display="block">          \text {assoc} ( \text {refl} _x,q,r) : \equiv   \text {refl} _{q \cdot  r}     </fr:tex>
 </fr:mainmatter></fr:tree>
-</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>744</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0005</fr:addr><fr:route>tt-0005.xml</fr:route><fr:title>Identity Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>750</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0005</fr:addr><fr:route>tt-0005.xml</fr:route><fr:title>Identity Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This post discuss the identity types in type theory.
     Refer to <fr:link href="hott-2022.xml" type="local" addr="hott-2022">Introduction to Homotopy Type Theory</fr:link>.
 </fr:p><fr:p>
@@ -66,43 +66,45 @@
     <fr:tex display="block">          \frac {              \Gamma ,x:A \vdash  x:A         }{              \Gamma ,x:A \vdash   \text {refl} _x:x=_Ax         }     </fr:tex>
     and similarly the elimination rule and computation rule.
 </fr:mainmatter></fr:tree>
-</fr:mainmatter></fr:tree><fr:p>
-    The identifications can be <fr:strong>concatenated</fr:strong> and <fr:strong>inverted</fr:strong>,
-    which implies the <fr:em>transitivity</fr:em> and <fr:em>symmetry</fr:em> of the identity type.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>559</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002O</fr:addr><fr:route>def-002O.xml</fr:route><fr:title>Concatenation Operation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>566</fr:anchor><fr:title>The groupoid structure of types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:parent>tt-0005</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+        The identifications can be <fr:strong>concatenated</fr:strong> and <fr:strong>inverted</fr:strong>,
+        which implies the <fr:em>transitivity</fr:em> and <fr:em>symmetry</fr:em> of the identity type.
+    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>559</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002O</fr:addr><fr:route>def-002O.xml</fr:route><fr:title>Concatenation Operation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be a type.
     The <fr:strong>Concatenation</fr:strong> operation is defined:
-    <fr:tex display="block">          \text {concat} : (x:A) \to  (y:A) \to  (z:A) \to  (x=_Ay) \to  (y=_Az) \to  (x=_Az)     </fr:tex></fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>558</fr:anchor><fr:title><fr:strong>Construction</fr:strong></fr:title><fr:parent>def-002O</fr:parent></fr:frontmatter><fr:mainmatter>
-    We can first construct:
-    <fr:tex display="block">         f(x):(y:A) \to  (x=_Ay) \to (z:A) \to  (y=_Az) \to (x=_Az)     </fr:tex>
-    For any <fr:tex>x:A</fr:tex>, it suffices to construct
-    <fr:tex display="block">         f(x,x, \text {refl} _x) : (z:A)  \to  (x=_Az) \to (x=_Az)     </fr:tex>
-    That is the identity function <fr:tex>\lambda  z.  \text {id} _{x=_Az}</fr:tex>.
-    Then we can define by induction:
-    <fr:tex display="block">         f(x) : \equiv   \text {ind-eq}_{ x } ( \lambda  z. \text {id} )     </fr:tex>
-    Finally:
-    <fr:tex display="block">          \text {concat} _{x,y,z}(p,q) : \equiv  f(x,y,p,z,q)     </fr:tex>
-    Or simply we denote <fr:tex>\text {concat} (p,q)</fr:tex> as <fr:tex>p  \cdot  q</fr:tex>
-</fr:mainmatter></fr:tree>
-</fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>561</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002P</fr:addr><fr:route>def-002P.xml</fr:route><fr:title>Inverse Operation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tex display="block">          \text {concat} : (x:A) \to  (y:A) \to  (z:A) \to  (x=_Ay) \to  (y=_Az) \to  (x=_Az)     </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>558</fr:anchor><fr:title>Construction of Concatenation</fr:title><fr:parent>def-002O</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+        We can first construct:
+        <fr:tex display="block">             f(x):(y:A) \to  (x=_Ay) \to (z:A) \to  (y=_Az) \to (x=_Az)         </fr:tex>
+        For any <fr:tex>x:A</fr:tex>, it suffices to construct
+        <fr:tex display="block">             f(x,x, \text {refl} _x) : (z:A)  \to  (x=_Az) \to (x=_Az)         </fr:tex>
+        That is the identity function <fr:tex>\lambda  z.  \text {id} _{x=_Az}</fr:tex>.
+        Then we can define by induction:
+        <fr:tex display="block">             f(x) : \equiv   \text {ind-eq}_{ x } ( \lambda  z. \text {id} )         </fr:tex>
+        Finally:
+        <fr:tex display="block">              \text {concat} _{x,y,z}(p,q) : \equiv  f(x,y,p,z,q)         </fr:tex>
+        Or simply we denote <fr:tex>\text {concat} (p,q)</fr:tex> as <fr:tex>p  \cdot  q</fr:tex></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>561</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002P</fr:addr><fr:route>def-002P.xml</fr:route><fr:title>Inverse Operation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be a type. The <fr:strong>inverse oepration</fr:strong> is defined:
-    <fr:tex display="block">          \text {inv} : (x:A) \to  (y:A) \to  (x=_Ay) \to  (y=_Ax)     </fr:tex></fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>560</fr:anchor><fr:title>
-    <fr:strong>Construction</fr:strong>
-</fr:title><fr:parent>def-002P</fr:parent></fr:frontmatter><fr:mainmatter>
-    By induction, it suffices to construct:
-    <fr:tex display="block">          \text {inv} (x,x, \text {refl} _x) : (x=_Ax)     </fr:tex>
-    for any <fr:tex>x:A</fr:tex>. And trivially we have <fr:tex>\text {inv} (x,x, \text {refl} _x) \equiv \text {refl} _x</fr:tex>.
-</fr:mainmatter></fr:tree>
-</fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>563</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002W</fr:addr><fr:route>def-002W.xml</fr:route><fr:title>Associator</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tex display="block">          \text {inv} : (x:A) \to  (y:A) \to  (x=_Ay) \to  (y=_Ax)     </fr:tex>
+    Most of the time we write <fr:tex>p^{-1}</fr:tex> for <fr:tex>\text {inv} (p)</fr:tex>.
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>560</fr:anchor><fr:title>Construction of Inverse</fr:title><fr:parent>def-002P</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+        By induction, it suffices to construct:
+        <fr:tex display="block">              \text {inv} (x,x, \text {refl} _x) : (x=_Ax)         </fr:tex>
+        for any <fr:tex>x:A</fr:tex>. And trivially we have <fr:tex>\text {inv} (x,x, \text {refl} _x) \equiv \text {refl} _x</fr:tex>.
+    </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:p>
+        It is natural to ask whether the identity type is <fr:em>reflexive</fr:em>.
+        In the case of associativity we should ask to compare the identifications:
+        <fr:tex display="block">             (p \cdot  q) \cdot  r  \quad \text {and} \quad  p \cdot (q \cdot  r)         </fr:tex>
+        for any <fr:tex>p:x=y</fr:tex>, <fr:tex>q:y=z</fr:tex> and <fr:tex>r:z=w</fr:tex> in a type <fr:tex>A</fr:tex>. Both <fr:tex> (p \cdot  q) \cdot  r</fr:tex> and 
+        <fr:tex>p \cdot (q \cdot  r)</fr:tex> are elements of type <fr:tex>x=w</fr:tex>. We can ask whether there is an
+        identification
+        <fr:tex display="block">             (p \cdot  q) \cdot  r = p \cdot (q \cdot  r)         </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>563</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002W</fr:addr><fr:route>def-002W.xml</fr:route><fr:title>Associator</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be a type.
     These are 3 consecutive identifications
     <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
     we define the <fr:strong>associator</fr:strong>:
     <fr:tex display="block">          \text {assoc} : (p,q,r): (p \cdot  q) \cdot  r = p \cdot  (q \cdot  r)     </fr:tex></fr:p>
     <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>562</fr:anchor><fr:title>
-    <fr:strong>Construction</fr:strong>
+    <fr:strong>Construction of Associator</fr:strong>
 </fr:title><fr:parent>def-002W</fr:parent></fr:frontmatter><fr:mainmatter>
     By definition it suffices to show that
     <fr:tex display="block">          \Pi _{(z:A)} \Pi _{(q:x=_Az)}          \Pi _{(w:A)} \Pi _{(r:z=_Aw)}         ( \text {refl} _x \cdot  q) \cdot  r =  \text {refl} _x \cdot  (q \cdot  r)     </fr:tex>
@@ -122,10 +124,50 @@
     We defined the <fr:strong>unit law</fr:strong> operations for <fr:tex>x=_Ay</fr:tex>:
     <fr:tex display="block">          \begin {align*}              \text {left-unit} &amp; : (x=_Ay) \to  ( \text {refl} _x \cdot  x = x)  \\               \text {right-unit} &amp; : (x=_Ay) \to  (x \cdot \text {refl} _y = x)          \end {align*}     </fr:tex></fr:p>
     <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>564</fr:anchor><fr:title>
-    <fr:strong>Construction</fr:strong>
+    <fr:strong>Construction of Unit Law</fr:strong>
 </fr:title><fr:parent>def-002X</fr:parent></fr:frontmatter><fr:mainmatter>
     By elimination it suffices to construct:
     <fr:tex display="block">          \begin {align*}              \text {left-unit}( \text {refl} _x) &amp;:  \text {refl} _x  \cdot   \text {refl} _x =  \text {refl} _x  \\               \text {right-unit}( \text {refl} _x) &amp;:  \text {refl} _x  \cdot   \text {refl} _x =  \text {refl} _x          \end {align*}     </fr:tex>
     In both cases we need only to construct <fr:tex>\text {refl} _{ \text {refl} _x}</fr:tex>.
 </fr:mainmatter></fr:tree>
-</fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>
+</fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>569</fr:anchor><fr:title>The action on identifications of functions</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:parent>tt-0005</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+        Every function preserves identifications.
+    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>567</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004C</fr:addr><fr:route>def-004C.xml</fr:route><fr:title>Action on Paths</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    Let <fr:tex>f:A \to  B</fr:tex> be a map. We define the <fr:strong>action on paths</fr:strong> of <fr:tex>f</fr:tex> as an operation:
+    <fr:tex display="block">          \text {ap} _f :  \prod _{x,y:A} (x=y)  \to  (f(x)=f(y))     </fr:tex>
+    This can be defined by induction principle of identity types:
+    <fr:tex display="block">          \text {ap} _f( \text {refl} _x)  \equiv   \text {refl} _{f(x)}     </fr:tex>
+    And there are operations:
+    <fr:tex display="block">          \text {ap-id}_A:        \prod _{(x,y:A)} \prod _{(p:x=y)} p =  \text {ap} _{ \text {id} _A}(p)     </fr:tex>
+    Taking
+    <fr:tex display="block">          \text {ap-id}_A( \text {refl} _x)  \equiv   \text {refl} _{ \text {refl} _x}     </fr:tex>
+    Finally we can construct
+    <fr:tex display="block">          \text {ap-comp}(f, g):  \prod _{(x,y:A)} \prod _{(p:x=y)}  \text {ap} _{f \circ  g}(p) =  \text {ap} _f( \text {ap} _g(p))     </fr:tex>
+    by taking
+    <fr:tex display="block">          \text {ap-comp}(f,g, \text {refl} _x)  \equiv   \text {refl} _{ \text {refl} _{g(f(x))}}     </fr:tex>
+    There are identifications:
+    <fr:ul><fr:li>
+            Notice that we have <fr:tex>\text {ap-id}_A( \text {refl} _x)  \equiv   \text {refl} _{ \text {refl} _x}</fr:tex> so
+            <fr:tex display="block">                  \begin {align*}                      \text {ap-refl}(f,x) &amp;: \text {ap} _f( \text {refl} _x) =  \text {refl} _{f(x)}  \\                       \text {ap-refl}(f,x) &amp; \equiv   \text {refl} _{ \text {refl} _{f(x)}}                  \end {align*}             </fr:tex></fr:li>
+        <fr:li>
+            The <fr:tex>\text {ap-inv}</fr:tex> can be constructed by identification elimination on <fr:tex>p</fr:tex>.
+            <fr:tex display="block">                  \begin {align*}                     &amp; \text {ap-inv}(f,p): \text {ap} _f(p^{-1}) =  \text {ap} _f(p)^{-1} \\                      &amp; \text {ap-inv}(f, \text {refl} _x) \equiv   \text {refl} _{ \text {ap} _f( \text {refl} _x)}                  \end {align*}             </fr:tex></fr:li>
+        <fr:li>
+            Similarly, the <fr:tex>\text {ap-concat}</fr:tex> can be constructed by identification elimination on <fr:tex>p</fr:tex>.
+            <fr:tex display="block">                  \begin {align*}                     &amp; \text {ap-concat}(f,p,q): \text {ap} _f(p \cdot  q) =  \text {ap} _f(p) \cdot   \text {ap} _f(q)  \\                      &amp; \text {ap-concat}(f, \text {refl} _x,q) \equiv   \text {refl} _{ \text {ap} _f(q)}                  \end {align*}             </fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:p>
+        To construct dependent action on paths if a dependent function <fr:tex>f: \Pi _{(x:A)}B(x)</fr:tex>.
+        We need a <fr:strong>transport</fr:strong> because type theory can not distinguish between identified 
+        elements from different types.
+    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>568</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004D</fr:addr><fr:route>def-004D.xml</fr:route><fr:title>Transport</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    Let <fr:tex>A</fr:tex> be a type and let <fr:tex>B</fr:tex> be a type family over <fr:tex>A</fr:tex>.
+    The <fr:strong>transport</fr:strong> operation is defined:
+    <fr:tex display="block">          \text {tr} _B: \Pi _{(x,y:A)}(x=y) \to  B(x) \to  B(y)     </fr:tex>
+    Simply induction on <fr:tex>p:x=y</fr:tex> we can construct:
+    <fr:tex display="block">          \text {tr} _B( \text {refl} _x)  \equiv   \text {id} _{B(x)}     </fr:tex></fr:p><fr:p>
+    Now for a given dependent function <fr:tex>f: \Pi _{(a:A)}B(a)</fr:tex> and an identification
+    <fr:tex>p:x=y</fr:tex> in <fr:tex>A</fr:tex> we can construct
+    <fr:tex display="block">          \text {apd} _f(p) :  \text {tr} _B(p,f(x)) = f(y)     </fr:tex>
+    this can be constructed by the induction principle for identity types,
+    it suffices to construct an identification:
+    <fr:tex display="block">          \text {apd} _f( \text {refl} _x) :  \text {tr} _B( \text {refl} _x,f(x)) = f(x)     </fr:tex>
+    which is simply done by taking <fr:tex>\text {apd} _f( \text {refl} _x) \equiv \text {refl} _{f(x)}</fr:tex></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>

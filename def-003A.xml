@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>741</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003A</fr:addr><fr:route>def-003A.xml</fr:route><fr:title>Alpha Equivalence</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>747</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003A</fr:addr><fr:route>def-003A.xml</fr:route><fr:title>Alpha Equivalence</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:tex>\alpha</fr:tex> equivalence is a relation between <fr:tex>\lambda \text {-term}</fr:tex>, defined as follows:
     <fr:ul><fr:li><fr:strong>Renaming</fr:strong>: <fr:tex>\lambda  x. M  =_ \alpha   \lambda  y.  M ^{ x \to y }</fr:tex> if <fr:tex>y \not \in \text {FV} (M)</fr:tex> and <fr:tex>y</fr:tex> is not a binding variable in <fr:tex>M</fr:tex>.
         </fr:li>
@@ -18,7 +18,7 @@
     If <fr:tex>M =_ \alpha  N</fr:tex> then we say <fr:tex>M</fr:tex> and <fr:tex>N</fr:tex> are <fr:tex>\alpha \text {-equivalent}</fr:tex> or <fr:tex>\alpha \text {-convertible}</fr:tex>.
     <fr:tex>M</fr:tex> is an <fr:tex>\alpha \text {-variant}</fr:tex> of <fr:tex>N</fr:tex> and vice versa.
 
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>740</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0001</fr:addr><fr:route>tt-0001.xml</fr:route><fr:title>Untyped Lambda Calculus</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>746</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0001</fr:addr><fr:route>tt-0001.xml</fr:route><fr:title>Untyped Lambda Calculus</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to <fr:link href="ttafp-2014.xml" type="local" addr="ttafp-2014">Type Theory and Formal Proof</fr:link>.
 </fr:p><fr:p>
     The idea to generalize the behavior of functions in mathematics and logic led to the development of the lambda calculus.
@@ -175,7 +175,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
         <fr:li><fr:strong>Reflixivity</fr:strong>:
             <fr:tex>                 M \twoheadrightarrow _{ \beta }  M             </fr:tex></fr:li>
         <fr:li><fr:strong>Transitivity</fr:strong>:
-            <fr:tex>                 M \twoheadrightarrow _{ \beta }  N  \land  N \twoheadrightarrow _{ \beta }  P  \implies  M \twoheadrightarrow _{ \beta }  P             </fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>738</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000X</fr:addr><fr:route>def-000X.xml</fr:route><fr:title>Equivalence Relation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+            <fr:tex>                 M \twoheadrightarrow _{ \beta }  N  \land  N \twoheadrightarrow _{ \beta }  P  \implies  M \twoheadrightarrow _{ \beta }  P             </fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>744</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000X</fr:addr><fr:route>def-000X.xml</fr:route><fr:title>Equivalence Relation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     An equivalence relation <fr:tex>R</fr:tex> on a set <fr:tex>A</fr:tex> is a <fr:link href="def-000W.xml" type="local" addr="def-000W">relation</fr:link> that is reflexive,
     symmetric, and transitive.
     <fr:ul><fr:li>Reflexive:
@@ -185,7 +185,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
         <fr:li>Transitive:
             <fr:tex>\forall  x,y,z \in  A, xRy \land  yRz \implies  xRz</fr:tex></fr:li></fr:ul>
     We often denote the equivalence relation by <fr:tex>\sim</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>739</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0039</fr:addr><fr:route>def-0039.xml</fr:route><fr:title>Renaming</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>745</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0039</fr:addr><fr:route>def-0039.xml</fr:route><fr:title>Renaming</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>M ^{ x \to y }</fr:tex> be the result of replacing all free occurrences of <fr:tex>x</fr:tex> in <fr:tex>M</fr:tex> with <fr:tex>y</fr:tex>.
     The relation <fr:strong>renaming</fr:strong> is expression with the symbol <fr:tex>=_ \alpha</fr:tex>:
     <fr:tex>\lambda  x.M =_ \alpha \lambda  y. M ^{ x \to y }</fr:tex> if <fr:tex>y \not \in \text {FV} (M)</fr:tex> and <fr:tex>y</fr:tex> is not a binding variable in <fr:tex>M</fr:tex>.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1090</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002T</fr:addr><fr:route>def-002T.xml</fr:route><fr:title>Matrix Multiplication</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1096</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002T</fr:addr><fr:route>def-002T.xml</fr:route><fr:title>Matrix Multiplication</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be a <fr:tex>m \times  n</fr:tex> matrix and <fr:tex>B</fr:tex> be a <fr:tex>n \times  p</fr:tex> matrix.
     Then <fr:tex>AC</fr:tex> is defined as the <fr:tex>m \times  p</fr:tex> matrix <fr:tex>C</fr:tex> such that
     <fr:tex display="block">         C_{ij} =  \sum _{k=1}^n A_{ik}B_{kj}     </fr:tex></fr:p>
@@ -13,7 +13,7 @@
     Thus <fr:tex>\mathcal {M} (ST)</fr:tex> is the <fr:tex>m \times  p</fr:tex> whose entries are
     <fr:tex display="block">          \mathcal {M} (ST)_{sk} =  \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
 </fr:mainmatter></fr:tree>
-</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1089</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0005</fr:addr><fr:route>math-0005.xml</fr:route><fr:title>Linear Maps</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1095</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0005</fr:addr><fr:route>math-0005.xml</fr:route><fr:title>Linear Maps</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This note introduces the concept of linear maps.
     Refer to <fr:link href="linear-algebra-2015.xml" type="local" addr="linear-algebra-2015">Linear Algebra Done Right</fr:link>.
 </fr:p><fr:p>

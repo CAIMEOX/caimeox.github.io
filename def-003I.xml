@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>940</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003I</fr:addr><fr:route>def-003I.xml</fr:route><fr:title>Functor Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>946</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003I</fr:addr><fr:route>def-003I.xml</fr:route><fr:title>Functor Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>C</fr:tex> and <fr:tex>D</fr:tex> be categories, the functor category <fr:tex>D^C</fr:tex> 
     (or <fr:tex>[C,D]</fr:tex>) is the category whose
     <fr:ul><fr:li>
@@ -7,7 +7,7 @@
         </fr:li>
         <fr:li>
             morphisms are <fr:strong>natural transformations</fr:strong> between functors.
-        </fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>938</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>cs-0007</fr:addr><fr:route>cs-0007.xml</fr:route><fr:title>Categorical Semantics for Type Theories</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>21</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+        </fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>944</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>cs-0007</fr:addr><fr:route>cs-0007.xml</fr:route><fr:title>Categorical Semantics for Type Theories</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>21</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This is a collection of notes on categorical semantics for type theories.
     The notes are based on the <fr:link href="cs-tt-2020.xml" type="local" addr="cs-tt-2020">paper</fr:link> by Jason Z.S. Hu and <fr:link href="ncatlab.xml" type="local" addr="ncatlab">NLab</fr:link>.
 </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>437</fr:anchor><fr:title>Introduction</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>21</fr:day></fr:date><fr:parent>cs-0007</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
@@ -278,7 +278,7 @@
     which means forall objects <fr:tex>C \in \mathcal {C}</fr:tex> and <fr:tex>D \in \mathcal {D}</fr:tex>, there is a bijection
     <fr:tex display="block">          \hom _{ \mathcal {D}}(F(C),D) \cong \hom _{ \mathcal {C}}(C,G(D))  \\           (F(C) \xrightarrow {f}D)  \mapsto  (C \xrightarrow {G(f)}G(D))     </fr:tex>
     which is natural in both <fr:tex>C</fr:tex> and <fr:tex>D</fr:tex>.                                                                     
-</fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>939</fr:anchor><fr:taxon>Category Theory</fr:taxon><fr:addr>math-0006</fr:addr><fr:route>math-0006.xml</fr:route><fr:title>Category Theory of Utilitarianism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>945</fr:anchor><fr:taxon>Category Theory</fr:taxon><fr:addr>math-0006</fr:addr><fr:route>math-0006.xml</fr:route><fr:title>Category Theory of Utilitarianism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     This note is about the category theory and its applications.
     Instead of reading a well-organized book, I prefer to write down the things I learned
     from <fr:link href="ncatlab.xml" type="local" addr="ncatlab">ncatlab</fr:link> and papers.
@@ -420,7 +420,7 @@
     A limit of a diagram <fr:tex>F:D \to  C</fr:tex> is an object <fr:tex>\lim  F</fr:tex> of <fr:tex>C</fr:tex>
     equipped with morphisms to the objects <fr:tex>F(d)</fr:tex> for all <fr:tex>d \in  D</fr:tex>,
     such that everything in sight commutes.
-</fr:p></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>937</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003H</fr:addr><fr:route>def-003H.xml</fr:route><fr:title>Diagram</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>943</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003H</fr:addr><fr:route>def-003H.xml</fr:route><fr:title>Diagram</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>C</fr:tex> be a category and <fr:tex>J</fr:tex> be a small category.
     A <fr:strong>diagram</fr:strong> of shape <fr:tex>J</fr:tex> in <fr:tex>C</fr:tex> is a functor <fr:tex>X:J \to  C</fr:tex>.
     The category of <fr:tex>J</fr:tex>-shaped diagrams in <fr:tex>C</fr:tex> is the <fr:link href="def-003I.xml" type="local" addr="def-003I">functor category</fr:link> <fr:tex>C^J</fr:tex>.

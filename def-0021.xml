@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>885</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0021</fr:addr><fr:route>def-0021.xml</fr:route><fr:title>Empty Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>891</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0021</fr:addr><fr:route>def-0021.xml</fr:route><fr:title>Empty Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>empty type</fr:strong> is a degenerate inductive type <fr:tex>\emptyset</fr:tex> satisfying 
     the following induction principle:
     <fr:tex display="block">          \text {ind}_ \emptyset  :  \Pi _{(x: \emptyset )}P(x)     </fr:tex>
     And a special case is <fr:strong>exfalso</fr:strong>:
     <fr:tex display="block">          \text {exfalso} : \equiv   \text {ind}_ \emptyset  :  \empty   \to  A      </fr:tex>
     which can draw any conclusion.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>884</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0004</fr:addr><fr:route>tt-0004.xml</fr:route><fr:title>Inductive Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>890</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0004</fr:addr><fr:route>tt-0004.xml</fr:route><fr:title>Inductive Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
