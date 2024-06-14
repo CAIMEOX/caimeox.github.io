@@ -1,0 +1,69 @@
+\title{Tarski Universe}
+\taxon{Definition}
+\import{macros}
+\p{
+    A \strong{universe} consists of a type #{\U} of which the elements are representations of types.
+    It is equipped with a type family #{\T} indexed by #{\U} called \strong{universal type family}.
+    The universe is closed under all the type constructors in the sense that it comes equipped with the following structure:
+    \ul{
+        \li{
+            #{\U} is closed under #{\Pi}, equipped with a function
+            ##{
+                \check{\Pi}:\Pi_{(X:\U)}(\T(X)\to\U)\to\U
+            }
+            for which the judgemental equality
+            ##{
+                \T(\check{\Pi}(X,P))\equiv\Pi_{(x:\T(X))}\T(P(x))
+            }
+            holds forall #{X:\U} and #{P:\T(X)\to\U}.
+        }
+        \li{
+            #{\U} is closed under #{\Sigma}, equipped with a function
+            ##{
+                \check{\Sigma}:\Pi_{(X:\U)}(\T(X)\to\U)\to\U
+            }
+            for which the judgemental equality
+            ##{
+                \T(\check{\Sigma}(X,P))\equiv\Sigma_{(x:\T(X))}\T(P(x))
+            }
+            holds forall #{X:\U} and #{P:\T(X)\to\U}.
+        }
+        \li{
+            #{\U} is closed under identity types, equipped with a function
+            ##{
+                \check{I}:\Pi_{(X:\U)}\T(X)\to\T(X)\to\U
+            }
+            for which the judgemental equality
+            ##{
+                \T(\check{I}(X,x,y))\equiv (x=y)
+            }
+            holds forall #{X:\U} and #{x,y:\T(X)}.
+        }
+        \li{
+            #{\U} is closed under coproducts, equipped with a function
+            ##{
+                \check{+}:\Pi_{(X:\U)}(\T(X)\to\U)\to\U
+            }
+            that satisfies the judgemental equality #{\T(X\check{+}P)\equiv\T(X)+\T(P)}
+        }
+        \li{
+            #{\U} contains elements #{\check{\unit}, \check{\void}, \check{\N} : \U} that satisfies the judgemental equality
+            ##{
+                \T(\check{\void})\equiv \void,
+                \\ \T(\check{\unit})\equiv \unit,
+                \\ \T(\check{\N})\equiv\N
+            }
+        }
+    }
+    Consider a universe #{\U} and a type #{A} in context #{\Gamma}.
+    We say that #{A} is a type in #{\U} or that #{\U} contains #{A},
+    if there is an element #{\check{A}:\U} such that #{\Gamma\vdash\T(\check{A})\equiv A\space\type} holds.
+}
+\subtree{
+    \title{Enough Universe}
+    \p{
+        Sometimes we may consider the universe #{\U} itself to be a type in some universes.
+        If we have only one #{\U}, the \strong{Russell Paradox} may arise.
+        Therefore we assume that there are \strong{enough universes}
+    }
+}

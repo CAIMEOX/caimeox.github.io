@@ -2,7 +2,7 @@
 \p{This file contains the basic macros used in the site.}
 \xmlns:html{http://www.w3.org/1999/xhtml}
 
-% Common utils
+% Layout utils
 \def\hr{\<html:hr>{}}
 \def\block[tit][body]{
     \subtree{
@@ -27,36 +27,6 @@
     }
   }
 }
-
-
-\def\sgn{\text{sgn}}
-\def\spn{\text{span}}
-\def\type{\space\text{type}}
-\def\N{\mathbb{N}}
-\def\Z{\mathbb{Z}}
-\def\Q{\mathbb{Q}}
-\def\R{\mathbb{R}}
-\def\C{\mathbb{C}}
-\def\F{\mathbb{F}}
-\def\cl{\mathcal{L}}
-\def\set[a]{\{ \a \}}
-\def\succ{\text{succ}}
-\def\ind[a]{\text{ind}_\a}
-\def\indn{\text{ind}_\N}
-\def\indeq[a]{\text{ind-eq}_{\a}}
-\def\unit{\textbf{1}}
-\def\nulls{\text{null }}
-\def\range{\text{range }}
-\def\dom{\text{dom }}
-\def\cod{\text{cod }}
-\def\graph[a]{
-    \tex{
-      \usepackage{tikz-cd}
-      \usepackage{amssymb}
-    }{
-        \a
-    }
-}
 \def\proof[body]{
  \scope{
    \put\transclude/toc{false}
@@ -66,15 +36,51 @@
    }
  }
 }
-\def\refl{\text{refl}}
-\def\homset{\hom_\text{set}}
-\def\id{\text{id}}
-\def\pr[a]{\text{pr}_\a}
-\def\mat{\mathcal{M}}
-\def\assoc{\text{assoc}}
+\def\graph[a]{
+    \tex{
+      \usepackage{tikz-cd}
+      \usepackage{amssymb}
+    }{
+        \a
+    }
+}
 \def\codeblock[lang][body]{
   \pre{\<html:code>[class]{\lang}{\body}}
 }
+
+% Math fundamentals
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\F{\mathbb{F}}
+\def\U{\mathcal{U}}
+\def\T{\mathcal{T}}
+
+% Linear Algebra
+\def\sgn{\text{sgn}}
+\def\spn{\text{span}}
+\def\cl{\mathcal{L}}
+\def\set[a]{\{ \a \}}
+\def\nulls{\text{null }}
+\def\range{\text{range }}
+\def\dom{\text{dom }}
+\def\cod{\text{cod }}
+\def\id{\text{id}}
+\def\mat{\mathcal{M}}
+
+% Type Theory
+\def\type{\space\text{type}}
+\def\succ{\text{succ}}
+\def\refl{\text{refl}}
+\def\assoc{\text{assoc}}
+\def\ind[a]{\text{ind}_\a}
+\def\indn{\text{ind}_\N}
+\def\indeq[a]{\text{ind-eq}_{\a}}
+\def\unit{\textbf{1}}
+\def\void{\textbf{0}}
+\def\pr[a]{\text{pr}_\a}
 
 % Lambda calculus
 \def\subt{\text{Sub}}
@@ -88,11 +94,10 @@
 \def\tob{\to_\beta}
 \def\tobm{\twoheadrightarrow_{\beta}}
 \def\etaeq{=_\eta}
+\def\norm[body]{\lVert\body\rVert}
 
 % category theory
 \def\obj{\text{Ob}}
 \def\mor{\text{Mor}}
 \def\cat{\mathbf{Cat}}
-
-% calculus
-\def\norm[body]{\lVert\body\rVert}
+\def\homset{\hom_\text{set}}

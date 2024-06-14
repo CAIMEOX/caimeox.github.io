@@ -1,0 +1,18 @@
+\title{Enough Universe}
+\taxon{Postulate}
+\import{macros}
+\p{
+    We assume that there're \strong{enough universe}, i.e.,
+    for every finite list of types in context 
+    ##{
+        \Gamma_1\vdash A_1\space\type,\cdots,\Gamma_n\vdash A_n\space\type
+    }
+    there is a universe #{\U} that contains each #{A_i} in the sense that #{\U} comes equipped with
+    ##{
+        \Gamma_i\vdash\check{A_i}:\U
+    }
+    for which the following judgement holds:
+    ##{
+        \Gamma_i \vdash\T(\check{A_i})\equiv A_i\space\type
+    }
+}

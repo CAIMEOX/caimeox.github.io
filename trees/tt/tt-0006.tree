@@ -1,0 +1,80 @@
+\title{Universe}
+\taxon{Type Theory}
+\date{2024-06-14}
+\import{macros}
+\p{
+    This post discuss the universe in type theory,
+    based on Egbert Rijke's [Introduction to Homotopy Type Theory](hott-2022) and [NLab](ncatlab).
+    In this post, we regard universe as the representation of types in an internal model 
+    of the type theory (\strong{Tarski universe} or \strong{universe à la Tarski}).
+}
+\p{
+    A universe consist of a type #{\mathcal{U}} with a type family #{\T} over #{\U}.
+    Forall #{X:\U} we think of #{X} as an \strong{encoding} (representation) of the actual type #{\T(X)}.
+    The type family #{\T} is therefore called a \strong{unversal type family}.
+}
+\p{
+    There several reasons to equip type theory with universes.
+    It enables us to define new type families over inductive types, using induction principle.
+    For instance, we can define \strong{relations} over #{\N}, such as ordering relations #{\leq}.
+    We will soon meet the idea of \strong{observational equality} for a particular type, different from identity types.
+    Another reason is that it allows us to define types equipped with structure such as group.
+}
+\subtree{
+    \title{Specification}
+    \transclude{def-004E}
+    \transclude{thm-0013}
+    \p{
+        Using the assumption we can obtain many specific universes.
+    }
+    \transclude{def-004F}
+    \transclude{def-004G}
+    \p{
+        Using successor universes we can create an infinite tower of universes.
+    }
+}
+\subtree{
+    \title{Observational Equality}
+    \p{
+        Now we give the example of \strong{observational equality} of #{\N}.
+        The key idea is to define a recursive function that reduce the arguments.
+        Observational equality an inductively defined relation, which gives us an algorithm for checking
+        equality on  #{\N}. It can be used to show that equality of natural numbers is \strong{decidable}.
+    }
+    \transclude{def-004H}
+    \p{
+        Observational equality of #{\N} is a reflexive relation, i.e. we have
+        ##{
+            \text{refl-Eq}_\N:\Pi_{(n:\N)}\text{Eq}_\N(n,n)
+        }
+        which is witnessed by induction on #{n}.
+        ##{
+            \begin{align*}
+                \text{refl-Eq}_\N(0) &\equiv\star \\ 
+                \text{refl-Eq}_\N(\succ(n)) &\equiv\text{refl-Eq}_\N(n)
+            \end{align*}
+        }
+    }
+    \p{
+        This leads to an interesting dual perspective on equality. 
+        For any two natural numbers #{m} and #{n} we have
+        ##{
+            (m=n)\leftrightarrow\text{Eq}_\N(m,n)
+        }
+    }
+    \p{
+        Using the observational equality of #{\N} we can prove Peano's seventh and eighth
+        axioms.
+        \ul{
+            \li{
+                For any two natural numbers #{m} and #{n} we have 
+                ##{
+                    (m = n)\leftrightarrow(\succ(m) = \succ(n))
+                }
+            }
+            \li{
+                For any natural number #{n} we have #{0 \not= \succ(n)}
+            }
+        }
+    }
+}

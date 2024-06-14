@@ -1,0 +1,7 @@
+\title{Base Universe}
+\taxon{Definition}
+\import{macros}
+\p{
+    The \strong{base universee} #{\U_0} is defined using [universe postulate](thm-0013)
+    with empty context.
+}

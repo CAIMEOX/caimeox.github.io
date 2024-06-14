@@ -1,0 +1,47 @@
+\import{macros}
+\title{Observational Equality of #{\N}}
+\taxon{Definition}
+\def\eqn{\text{Eq}}
+\p{
+    The observational equality of #{\N} is a binary relation #{\eqn_\N:\N\to(\N\to\U_0)} satisfies
+    ##{
+        \begin{align*}
+            \eqn_\N(0)(0) &\equiv \unit \\
+            \eqn_\N(0)(\succ(n)) &\equiv \void \\
+            \eqn_\N(\succ(m))(0) &\equiv \void \\
+            \eqn_\N(\succ(m))(\succ(n)) &\equiv \eqn_\N(m)(n)
+        \end{align*}
+    }
+    \proof{
+        We define #{\eqn} by double induction on #{\N}. By the first application of induction
+        it suffices to provide
+        ##{
+            \begin{align*}
+                &E_0:\N\to\U_0 \\ 
+                &E_S:\N\to((\N\to\U_0)\to(\N\to\U_0))
+            \end{align*}
+        }
+        we define #{E_0} by induction:
+        ##{
+            \begin{align*}
+                &E_0(0) \equiv\unit\\ 
+                &E_0(\succ(n)) \equiv\void
+            \end{align*}
+        }
+        and also define #{E_S} by induction:
+        ##{
+            \begin{align*}
+                &E_S(n,X,0)\equiv\void\\ 
+                &E_S(n,X,\succ(m))\equiv X(m)
+            \end{align*}
+        }
+        Therefore we have by the computation rule for the first induction that 
+        the following judgemental equality holds.
+        ##{
+            \begin{align*}
+                \eqn(0,m) &\equiv E_0(m) \\
+                \eqn(\succ(n),m) &\equiv E_S(n,\eqn(n),m)
+            \end{align*}
+        }
+    }
+}

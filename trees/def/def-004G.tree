@@ -1,0 +1,19 @@
+\title{Successor Universe}
+\taxon{Definition}
+\import{macros}
+\p{
+    The \strong{successor universee} #{\U^+} of a universe #{\U} is defined using [universe postulate](thm-0013)
+    with the following contexts:
+    ##{
+        \vdash\U\space\type\quad X:\U\vdash\T(X)\space\type
+    }
+    It therefore contains the type #{\U} as well as type in #{\U}, in the following sense
+    ##{
+        \begin{align*}
+            &\vdash\check{\U}:\U^+\\ 
+            &\vdash\T^+(\check{\U})\equiv\U\type\\
+            &X:\U\vdash\check{\T}(X):\U^+\\ 
+            &X:\U\vdash\T^+(\check{\T}(X))\equiv\T(X)\type 
+        \end{align*}
+    }
+}
