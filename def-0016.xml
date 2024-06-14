@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1126</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0016</fr:addr><fr:route>def-0016.xml</fr:route><fr:title>Negative Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1149</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0016</fr:addr><fr:route>def-0016.xml</fr:route><fr:title>Negative Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:strong>negative type</fr:strong> is a type whose eliminators are regarded as primary.
     Its constructors can be derived from eliminators.
 </fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>860</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0002</fr:addr><fr:route>eg-0002.xml</fr:route><fr:title>Differentiation is linear map</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>878</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0002</fr:addr><fr:route>eg-0002.xml</fr:route><fr:title>Differentiation is linear map</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Define <fr:tex>D \in \mathcal {L} ( \mathcal {P}( \mathbb {R} ), \mathcal {P}( \mathbb {R} ))</fr:tex> (recall that <fr:tex>\mathcal {P}</fr:tex> means <fr:link href="def-0027.xml" type="local" addr="def-0027">set of polynomials</fr:link>) by
     <fr:tex display="block">         D(f) = f&apos;     </fr:tex>
     We can see that <fr:tex>D</fr:tex> a linear map.
     <fr:ul><fr:li>Additivity: <fr:tex>D(f+g) = (f+g)&apos; = f&apos; + g&apos; = D(f) + D(g)</fr:tex></fr:li>
-        <fr:li>Homogeneity: <fr:tex>D( \alpha  f) = ( \alpha  f)&apos; =  \alpha  f&apos; =  \alpha  D(f)</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>859</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0005</fr:addr><fr:route>math-0005.xml</fr:route><fr:title>Linear Maps</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+        <fr:li>Homogeneity: <fr:tex>D( \alpha  f) = ( \alpha  f)&apos; =  \alpha  f&apos; =  \alpha  D(f)</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>877</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0005</fr:addr><fr:route>math-0005.xml</fr:route><fr:title>Linear Maps</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This note introduces the concept of linear maps.
     Refer to <fr:link href="linear-algebra-2015.xml" type="local" addr="linear-algebra-2015">Linear Algebra Done Right</fr:link>.
 </fr:p><fr:p>
@@ -12,7 +12,7 @@
     In classic mathematics, to understand the properties of the structure or space,
     we often study the maps between them.
     For vector spaces we study the <fr:strong>linear maps</fr:strong>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>326</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0025</fr:addr><fr:route>def-0025.xml</fr:route><fr:title>Linear Map</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>339</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0025</fr:addr><fr:route>def-0025.xml</fr:route><fr:title>Linear Map</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:strong>linear map</fr:strong> is a function between two vector spaces that preserves the operations of addition and scalar multiplication.
     In other words, a function <fr:tex>T: V  \to  W</fr:tex> where <fr:tex>V,W</fr:tex> are vector spaces if the following conditions are satisfied:
     <fr:ul><fr:li>Additivity: <fr:tex>T(u+v) = T(u) + T(v)</fr:tex> for all <fr:tex>u,v  \in  V</fr:tex></fr:li>
@@ -20,12 +20,12 @@
     Sometimes we ignore the brackets and write <fr:tex>T v</fr:tex> instead of <fr:tex>T(v)</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     Now we can talk about the set of all linear maps between two vector spaces.
-    <fr:tex display="block">          \mathcal {L} (V,W) =  \{    T: V  \to  W | T  \text { is a linear map}   \}      </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>327</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0002</fr:addr><fr:route>eg-0002.xml</fr:route><fr:title>Differentiation is linear map</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tex display="block">          \mathcal {L} (V,W) =  \{    T: V  \to  W | T  \text { is a linear map}   \}      </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>340</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0002</fr:addr><fr:route>eg-0002.xml</fr:route><fr:title>Differentiation is linear map</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Define <fr:tex>D \in \mathcal {L} ( \mathcal {P}( \mathbb {R} ), \mathcal {P}( \mathbb {R} ))</fr:tex> (recall that <fr:tex>\mathcal {P}</fr:tex> means <fr:link href="def-0027.xml" type="local" addr="def-0027">set of polynomials</fr:link>) by
     <fr:tex display="block">         D(f) = f&apos;     </fr:tex>
     We can see that <fr:tex>D</fr:tex> a linear map.
     <fr:ul><fr:li>Additivity: <fr:tex>D(f+g) = (f+g)&apos; = f&apos; + g&apos; = D(f) + D(g)</fr:tex></fr:li>
-        <fr:li>Homogeneity: <fr:tex>D( \alpha  f) = ( \alpha  f)&apos; =  \alpha  f&apos; =  \alpha  D(f)</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>328</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>eg-0003</fr:addr><fr:route>eg-0003.xml</fr:route><fr:title>Integration is linear map</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        <fr:li>Homogeneity: <fr:tex>D( \alpha  f) = ( \alpha  f)&apos; =  \alpha  f&apos; =  \alpha  D(f)</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>341</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>eg-0003</fr:addr><fr:route>eg-0003.xml</fr:route><fr:title>Integration is linear map</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>V</fr:tex> be the vector space of all continuous functions on the interval <fr:tex>[a,b]</fr:tex>.
     The map <fr:tex>I: V  \to  V</fr:tex> defined by
     <fr:tex display="block">         I(f) =  \int _a^x f(t) dt     </fr:tex>
@@ -35,7 +35,7 @@
     <fr:tex display="block">         I(f+g) = I(f) + I(g)  \quad   \text {and}  \quad  I( \alpha  f) =  \alpha  I(f)     </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:p>
     We can find a linear map that takes on <fr:em>whatever values we wish</fr:em> on the 
     vectors in a basis by the following theorem.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>329</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000F</fr:addr><fr:route>thm-000F.xml</fr:route><fr:title>Linear maps and basis of domain</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>342</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000F</fr:addr><fr:route>thm-000F.xml</fr:route><fr:title>Linear maps and basis of domain</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>v_1, v_2,  \ldots , v_n</fr:tex> be a basis of vector space <fr:tex>V</fr:tex>.
     Then for any vector space <fr:tex>W</fr:tex> and any vectors <fr:tex>w_1, w_2,  \ldots , w_n</fr:tex> in <fr:tex>W</fr:tex>,
     there exists a unique linear map <fr:tex>T: V  \to  W</fr:tex> such that
@@ -43,7 +43,7 @@
     Now let&apos;s turn to the algebraic operations over the set of linear maps <fr:tex>\mathcal {L} (V,W)</fr:tex>.
     We begin by defining the addition and scalar multiplication of linear maps.
     This leads to a surprising result: the set of linear maps is actually a vector space.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>330</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0029</fr:addr><fr:route>def-0029.xml</fr:route><fr:title>Addition and scalar multiplication over <fr:tex>\mathcal {L} (V,W)</fr:tex></fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>343</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0029</fr:addr><fr:route>def-0029.xml</fr:route><fr:title>Addition and scalar multiplication over <fr:tex>\mathcal {L} (V,W)</fr:tex></fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>T_1, T_2  \in   \mathcal {L} (V,W)</fr:tex>.
     We define the <fr:strong>addition</fr:strong> of <fr:tex>T_1</fr:tex> and <fr:tex>T_2</fr:tex> as the linear map <fr:tex>T_1 + T_2: V  \to  W</fr:tex> such that
     <fr:tex display="block">         (T_1 + T_2)(v) = T_1(v) + T_2(v)  \quad   \text {for all}  \quad  v  \in  V     </fr:tex>
@@ -55,7 +55,7 @@
     Usually it makes no sense to multiply two linear maps. But we can define
     an operation called the <fr:strong>product</fr:strong> of linear maps, which is just the composition of the two functions.
     This can form a <fr:strong>monoid</fr:strong> or even a <fr:strong>group</fr:strong> under certain conditions.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>331</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002A</fr:addr><fr:route>def-002A.xml</fr:route><fr:title>Product of Linear Maps</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>344</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002A</fr:addr><fr:route>def-002A.xml</fr:route><fr:title>Product of Linear Maps</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>T_1: V  \to  W</fr:tex> and <fr:tex>T_2: W  \to  U</fr:tex> be linear maps.
     We define the <fr:strong>product</fr:strong> of <fr:tex>T_1</fr:tex> and <fr:tex>T_2</fr:tex> as the linear map <fr:tex>T_2  \circ  T_1: V  \to  U</fr:tex> such that
     <fr:tex display="block">         (T_2  \circ  T_1)(v) = T_2(T_1(v))  \quad   \text {for all}  \quad  v  \in  V     </fr:tex>
@@ -76,44 +76,44 @@
     That is, for any linear maps <fr:tex>S,S_1,S_2: V  \to  W</fr:tex> and <fr:tex>T,T_1,T_2: U \to  V</fr:tex>:
     <fr:tex display="block">         (S_1 + S_2)T = S_1T + S_2T  \quad   \text {and}  \quad  T(S_1 + S_2) = TS_1 + TS_2     </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:p>
     In algebra, we have a structure named <fr:strong>kernel</fr:strong>, which is the set of all elements that are mapped to the zero element.
-    For linear maps, the kernel is the <fr:strong>null space</fr:strong></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>332</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002C</fr:addr><fr:route>def-002C.xml</fr:route><fr:title>Null Space</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    For linear maps, the kernel is the <fr:strong>null space</fr:strong></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>345</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002C</fr:addr><fr:route>def-002C.xml</fr:route><fr:title>Null Space</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     For <fr:tex>T: V  \to  W</fr:tex>, the <fr:strong>null space</fr:strong> of <fr:tex>T</fr:tex> is the set of all vectors in <fr:tex>V</fr:tex> that are mapped to <fr:tex>0</fr:tex> in <fr:tex>W</fr:tex>.
     <fr:tex display="block">          \text {null }  T =  \{   v  \in  V | T(v) = 0   \}      </fr:tex>
     The null space of <fr:tex>T</fr:tex> is a subspace of <fr:tex>V</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     The injective linear map is defined like normal <fr:link href="def-002D.xml" type="local" addr="def-002D">injective</fr:link> functions.
     To check whether a linear map is injective, we can just check whether the null space is trivial.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>333</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000G</fr:addr><fr:route>thm-000G.xml</fr:route><fr:title>Injectivity equivalent to Kernel Triviality</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>346</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000G</fr:addr><fr:route>thm-000G.xml</fr:route><fr:title>Injectivity equivalent to Kernel Triviality</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>T: V  \to  W</fr:tex> be a linear map. Then <fr:tex>T</fr:tex> is injective if and only if <fr:tex>\text {null }  T =  \{   0   \}</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     The image of a linear map is the set of all elements that are mapped to by some element in the domain.
     This is called the <fr:strong>range</fr:strong> of the linear map, just like <fr:link href="def-002E.xml" type="local" addr="def-002E">range</fr:link> of normal function.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>334</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000H</fr:addr><fr:route>thm-000H.xml</fr:route><fr:title>Range is a subspace</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>347</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000H</fr:addr><fr:route>thm-000H.xml</fr:route><fr:title>Range is a subspace</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     If <fr:tex>T: V  \to  W</fr:tex> is a linear map, then the range of <fr:tex>T</fr:tex> is a subspace of <fr:tex>W</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     The next theorem plays a crucial role in the study of linear maps.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>335</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000I</fr:addr><fr:route>thm-000I.xml</fr:route><fr:title>Fundamental Theorems of Linear Maps</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>348</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000I</fr:addr><fr:route>thm-000I.xml</fr:route><fr:title>Fundamental Theorems of Linear Maps</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>V</fr:tex> be finite-dimensional vector space and <fr:tex>T : V  \to  W</fr:tex> be a linear map. 
     Then <fr:tex>\text {range }  T</fr:tex> is finite-dimensional and 
     <fr:tex display="block">          \dim  V =  \dim   \text {range }  T +  \dim   \text {null }  T     </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:p>
     Now we can show that no linear map from a finite-dimensional vector space
     to a <fr:em>smaller</fr:em> (In dimension) vector space can be <fr:link href="def-002D.xml" type="local" addr="def-002D">injective</fr:link>.
     This can be easily proved by the fundamental theorem of linear maps.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>336</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000M</fr:addr><fr:route>thm-000M.xml</fr:route><fr:title>Map to smaller dimension is not injective</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>349</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000M</fr:addr><fr:route>thm-000M.xml</fr:route><fr:title>Map to smaller dimension is not injective</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>V</fr:tex> and <fr:tex>W</fr:tex> be finite-dimensional vector spaces, 
     and <fr:tex>\dim  V &gt;  \dim  W</fr:tex>.
     Then no linear map <fr:tex>T:V \to  W</fr:tex> is injective.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     Similarly, we can show that no linear map from a finite-dimensional vector space
     to a <fr:em>larger</fr:em> (In dimension) vector space can be <fr:link href="def-002F.xml" type="local" addr="def-002F">surjective</fr:link>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>337</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000N</fr:addr><fr:route>thm-000N.xml</fr:route><fr:title>Map to bigger dimension is not surjective</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>350</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000N</fr:addr><fr:route>thm-000N.xml</fr:route><fr:title>Map to bigger dimension is not surjective</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>V</fr:tex> and <fr:tex>W</fr:tex> be finite-dimensional vector spaces, 
     and <fr:tex>\dim  V &lt;  \dim  W</fr:tex>.
     Then no linear map <fr:tex>T:V \to  W</fr:tex> is surjective.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     These two lemmas are very important in the study of linear equations.
     The idea here is to express linear equations system in terms of linear maps.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>338</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0004</fr:addr><fr:route>eg-0004.xml</fr:route><fr:title>Homogeneous Linear Equations System</fr:title></fr:frontmatter><fr:mainmatter><fr:p>Reprase in terms of a linear map the question of whether a <fr:link href="def-002Q.xml" type="local" addr="def-002Q">homogeneous system linear equations</fr:link> has a nonzero solution.</fr:p><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>351</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0004</fr:addr><fr:route>eg-0004.xml</fr:route><fr:title>Homogeneous Linear Equations System</fr:title></fr:frontmatter><fr:mainmatter><fr:p>Reprase in terms of a linear map the question of whether a <fr:link href="def-002Q.xml" type="local" addr="def-002Q">homogeneous system linear equations</fr:link> has a nonzero solution.</fr:p><fr:p>
         Let <fr:tex>A</fr:tex> be the coefficient matrix of a homogeneous linear system.
         <fr:tex display="block">             A =  \begin {bmatrix}                 a_{11} &amp; a_{12} &amp;  \cdots  &amp; a_{1n}  \\                  a_{21} &amp; a_{22} &amp;  \cdots  &amp; a_{2n}  \\                   \vdots  &amp;  \vdots  &amp;  \ddots  &amp;  \vdots   \\                  a_{m1} &amp; a_{m2} &amp;  \cdots  &amp; a_{mn}              \end {bmatrix}         </fr:tex>
         The equation <fr:tex>A \vec {x} =  \vec {0}</fr:tex> has a trivial solution <fr:tex>\vec {x} =  \vec {0}</fr:tex>.
@@ -124,14 +124,14 @@
         Then the question of whether the homogeneous linear system has a nontrivial solution is equivalent to 
         asking <fr:tex>\text {null }  T</fr:tex> is nontrivial.
         That is, <fr:tex>T</fr:tex> is <fr:link href="thm-000G.xml" type="local" addr="thm-000G">not injective</fr:link>.
-    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>339</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000O</fr:addr><fr:route>thm-000O.xml</fr:route><fr:title>Homogeneous system of linear equations</fr:title></fr:frontmatter><fr:mainmatter><fr:p> 
+    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>352</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000O</fr:addr><fr:route>thm-000O.xml</fr:route><fr:title>Homogeneous system of linear equations</fr:title></fr:frontmatter><fr:mainmatter><fr:p> 
     A homogeneous system of linear equations
     with more variables than equations has 
     a nontrivial solution.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     We have seen that <fr:link href="thm-000M.xml" type="local" addr="thm-000M">map to smaller dimension is not injective</fr:link>.
     <fr:tex>T</fr:tex> is not injective if <fr:tex>n &gt; m</fr:tex>. This results the theorem above.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>340</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0005</fr:addr><fr:route>eg-0005.xml</fr:route><fr:title>Inhomogeneous Linear Equations System</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>353</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0005</fr:addr><fr:route>eg-0005.xml</fr:route><fr:title>Inhomogeneous Linear Equations System</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
         Rephrase in terms of a linear map the question of whether a inhomogeneous system linear equations has no solutions
         for some choice of constant terms.
     </fr:p><fr:p>
@@ -145,7 +145,7 @@
         <fr:tex>\vec {b}  \not \in   \text {range }  T</fr:tex>.
         Thus the question is rephrased as not having a solution for some choice of <fr:tex>\vec {b}</fr:tex>.
         What condition ensures <fr:tex>T</fr:tex> is not surjective.
-    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>341</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000P</fr:addr><fr:route>thm-000P.xml</fr:route><fr:title>Inhomogeneous system of linear equations</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>354</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000P</fr:addr><fr:route>thm-000P.xml</fr:route><fr:title>Inhomogeneous system of linear equations</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     An inhomogeneous system of linear equations
     with more equations than variables has 
     no solution for some choice of the constant term.
@@ -154,7 +154,7 @@
     We know that for any value of a linear map <fr:tex>T:V \to  W</fr:tex>,
     can be determined by values <fr:tex>\{   T(v_1), T(v_2),  \cdots , T(v_n)   \}</fr:tex>.
     This leads to the definition of the matrix representation of a linear map.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>342</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002R</fr:addr><fr:route>def-002R.xml</fr:route><fr:title>Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>355</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002R</fr:addr><fr:route>def-002R.xml</fr:route><fr:title>Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>m,n \in   \mathbb {Z} ^+</fr:tex>.
     A <fr:tex>m \times  n</fr:tex> matrix is a rectangular array of elements of a field <fr:tex>\mathbb {F}</fr:tex>
     with <fr:tex>m</fr:tex> <fr:strong>rows</fr:strong> and <fr:tex>n</fr:tex> <fr:strong>columns</fr:strong>.
@@ -162,7 +162,7 @@
     The notation <fr:tex>A_{jk}</fr:tex> refers to the element in the <fr:tex>j</fr:tex>-th row and <fr:tex>k</fr:tex>-th column.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     Now we can define the matrix representation of a linear map.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>346</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002S</fr:addr><fr:route>def-002S.xml</fr:route><fr:title>Matrix of Linear Maps</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>359</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002S</fr:addr><fr:route>def-002S.xml</fr:route><fr:title>Matrix of Linear Maps</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>T \in   \mathcal {L} (V,W)</fr:tex>,
     <fr:tex>\{   v_1, \ldots ,v_n   \} \subset  V</fr:tex> be a basis of <fr:tex>V</fr:tex>,
     and <fr:tex>\{   w_1, \ldots ,w_m   \} \subset  W</fr:tex> be a basis of <fr:tex>W</fr:tex>.
@@ -174,7 +174,7 @@
     If <fr:tex>T</fr:tex> maps <fr:tex>n</fr:tex>-dimensional vector space to <fr:tex>m</fr:tex>-dimensional vector space,
     then <fr:tex>\mathcal {M} (T)</fr:tex> is a <fr:tex>m \times  n</fr:tex> matrix.
 </fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>343</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>356</fr:anchor><fr:title>
     <fr:strong>Addition</fr:strong>
 </fr:title><fr:parent>def-002S</fr:parent></fr:frontmatter><fr:mainmatter>
     For two same-size matrix <fr:tex>A,B</fr:tex>,
@@ -184,7 +184,7 @@
     <fr:tex display="block">          \mathcal {M} (T+S) =  \mathcal {M} (T) +  \mathcal {M} (S)     </fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>344</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>357</fr:anchor><fr:title>
     <fr:strong>Scalar Multiplication</fr:strong>
 </fr:title><fr:parent>def-002S</fr:parent></fr:frontmatter><fr:mainmatter>
     For a scalar <fr:tex>c</fr:tex> and a matrix <fr:tex>A</fr:tex>,
@@ -194,7 +194,7 @@
     <fr:tex display="block">          \mathcal {M} (cT) = c \mathcal {M} (T)     </fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>345</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>358</fr:anchor><fr:title>
     <fr:strong>Set of Matrices</fr:strong>
 </fr:title><fr:parent>def-002S</fr:parent></fr:frontmatter><fr:mainmatter>
     The set of all <fr:tex>m \times  n</fr:tex> matrices with elements in <fr:tex>\mathbb {F}</fr:tex> is denoted as <fr:tex>\mathcal {M} _{m \times  n}( \mathbb {F} )</fr:tex>
@@ -202,18 +202,18 @@
 </fr:mainmatter></fr:tree>
 </fr:mainmatter></fr:tree><fr:p>
     We can see that <fr:tex>\mathbb {F} ^{m \times  n}</fr:tex> is itself a vector space.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>347</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000Q</fr:addr><fr:route>thm-000Q.xml</fr:route><fr:title><fr:tex>\dim \mathbb {F} ^{m \times  n} = mn</fr:tex></fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:tex>\mathbb {F} ^{m \times  n}</fr:tex> is a vector space with dimension <fr:tex>mn</fr:tex>.
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>360</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000Q</fr:addr><fr:route>thm-000Q.xml</fr:route><fr:title><fr:tex>\dim \mathbb {F} ^{m \times  n} = mn</fr:tex></fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:tex>\mathbb {F} ^{m \times  n}</fr:tex> is a vector space with dimension <fr:tex>mn</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     Consider linear maps <fr:tex>T:U \to  V</fr:tex> and <fr:tex>S:V \to  W</fr:tex>.
     The composition of linear maps is <fr:tex>ST</fr:tex>.
     Does the composition of linear maps have a matrix representation?
     <fr:tex display="block">          \mathcal {M} (ST) =  \mathcal {M} (S) \mathcal {M} (T)     </fr:tex>
     This makes no sense now but indicates the definition of <fr:strong>matrix multiplication</fr:strong>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>349</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002T</fr:addr><fr:route>def-002T.xml</fr:route><fr:title>Matrix Multiplication</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>362</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002T</fr:addr><fr:route>def-002T.xml</fr:route><fr:title>Matrix Multiplication</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be a <fr:tex>m \times  n</fr:tex> matrix and <fr:tex>B</fr:tex> be a <fr:tex>n \times  p</fr:tex> matrix.
     Then <fr:tex>AC</fr:tex> is defined as the <fr:tex>m \times  p</fr:tex> matrix <fr:tex>C</fr:tex> such that
     <fr:tex display="block">         C_{ij} =  \sum _{k=1}^n A_{ik}B_{kj}     </fr:tex></fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>348</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>361</fr:anchor><fr:title>
     <fr:strong>Derivation</fr:strong>
 </fr:title><fr:parent>def-002T</fr:parent></fr:frontmatter><fr:mainmatter>
     Let <fr:tex>T:U \to  V</fr:tex> and <fr:tex>S:V \to  W</fr:tex> be linear maps.
@@ -227,7 +227,7 @@
     Now we see that the desired matrix multiplication holds.
     Matrix multiplication is not commutative in general.
     However, it satisfies the associative law and the distributive law.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>350</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002Y</fr:addr><fr:route>def-002Y.xml</fr:route><fr:title><fr:tex>A_{j \cdot }</fr:tex> and <fr:tex>A_{ \cdot  j}</fr:tex></fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>363</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002Y</fr:addr><fr:route>def-002Y.xml</fr:route><fr:title><fr:tex>A_{j \cdot }</fr:tex> and <fr:tex>A_{ \cdot  j}</fr:tex></fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be a <fr:tex>m \times  n</fr:tex> matrix.
     <fr:ul><fr:li>
             If <fr:tex>1 \leq  j \leq  m</fr:tex> then <fr:tex>A_{j \cdot }</fr:tex> is the <fr:tex>j</fr:tex>-th row of <fr:tex>A</fr:tex>,
@@ -238,14 +238,14 @@
             defined as a <fr:tex>m \times  1</fr:tex> matrix. (A column vector)
         </fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:p>
     With the notation we can think of matrix multiplication in another perspective.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>351</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000R</fr:addr><fr:route>thm-000R.xml</fr:route><fr:title>Entry pf matrix product</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>364</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000R</fr:addr><fr:route>thm-000R.xml</fr:route><fr:title>Entry pf matrix product</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Suppose <fr:tex>A</fr:tex> is an <fr:tex>m \times  n</fr:tex> matrix and <fr:tex>B</fr:tex> is an <fr:tex>n \times  p</fr:tex> matrix.
     Then the entry of the product <fr:tex>AB</fr:tex> is:
     <fr:tex display="block">         (AB)_{ij} = A_{i \cdot }B_{ \cdot  j}     </fr:tex>
     for <fr:tex>1 \leq  i \leq  m</fr:tex> and <fr:tex>1 \leq  j \leq  p</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     We have an interesting observation.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>352</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000S</fr:addr><fr:route>thm-000S.xml</fr:route><fr:title>Linear Combination of columns</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>365</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000S</fr:addr><fr:route>thm-000S.xml</fr:route><fr:title>Linear Combination of columns</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be an <fr:tex>m \times  n</fr:tex> matrix,
     and <fr:tex>c</fr:tex> is a <fr:tex>1 \times  1</fr:tex> matrix.
     <fr:tex display="block">         c =  \begin {pmatrix} c_1  \\  c_2  \\   \vdots   \\  c_n  \end {pmatrix}     </fr:tex>
@@ -254,7 +254,7 @@
     with the scalars that multiply the columns coming from <fr:tex>c</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     Now we begin the study the invertibility of linear maps.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>353</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002Z</fr:addr><fr:route>def-002Z.xml</fr:route><fr:title>Inverse</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>366</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002Z</fr:addr><fr:route>def-002Z.xml</fr:route><fr:title>Inverse</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A linear map <fr:tex>T \in \mathcal {L} (V,W)</fr:tex> is said to be <fr:tex>invertible</fr:tex> if 
     there exists a linear map <fr:tex>S \in \mathcal {L} (W,V)</fr:tex> such that:
     <fr:tex display="block">          \begin {align*}             T \cdot  S &amp;=  \text {id} _V  \\              S \cdot  T &amp;=  \text {id} _W          \end {align*}     </fr:tex>
@@ -267,19 +267,19 @@
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     A linear map is invertible if and only if
     it is <fr:strong>bijective</fr:strong>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>354</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000T</fr:addr><fr:route>thm-000T.xml</fr:route><fr:title>Isomorphism of equal dimensions</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>367</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000T</fr:addr><fr:route>thm-000T.xml</fr:route><fr:title>Isomorphism of equal dimensions</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Two finite-dimensional vector spaces over <fr:tex>\mathbb {F}</fr:tex>
     are isomorphic iff they have the same <fr:link href="def-001V.xml" type="local" addr="def-001V">dimension</fr:link>.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>355</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000U</fr:addr><fr:route>thm-000U.xml</fr:route><fr:title><fr:tex>\mathcal {L} (V,W)</fr:tex> is isomorphic to <fr:tex>\mathbb {F} ^{m \times  n}</fr:tex></fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>368</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-000U</fr:addr><fr:route>thm-000U.xml</fr:route><fr:title><fr:tex>\mathcal {L} (V,W)</fr:tex> is isomorphic to <fr:tex>\mathbb {F} ^{m \times  n}</fr:tex></fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>v_1, v_2,  \ldots , v_n</fr:tex> be a basis for <fr:tex>V</fr:tex>,
     and <fr:tex>w_1, w_2,  \ldots , w_m</fr:tex> be a basis for <fr:tex>W</fr:tex>.
     Then <fr:tex>\mathcal {M}</fr:tex> is an isomorphism between <fr:tex>\mathcal {L} (V,W)</fr:tex> and <fr:tex>\mathbb {F} ^{m \times  n}</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     This has a trivial corollary.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>356</fr:anchor><fr:taxon>Corollary</fr:taxon><fr:addr>thm-000V</fr:addr><fr:route>thm-000V.xml</fr:route><fr:title>Dimension product</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>369</fr:anchor><fr:taxon>Corollary</fr:taxon><fr:addr>thm-000V</fr:addr><fr:route>thm-000V.xml</fr:route><fr:title>Dimension product</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>V</fr:tex> and <fr:tex>W</fr:tex> be finite-dimensional vector spaces.
     Then <fr:tex>\mathcal {L} (V,W)</fr:tex> is finite-dimensional and
-    <fr:tex display="block">          \dim ( \mathcal {L} (V,W)) =  \dim (V) \dim (W).     </fr:tex></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>858</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0027</fr:addr><fr:route>def-0027.xml</fr:route><fr:title>Polynomial</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tex display="block">          \dim ( \mathcal {L} (V,W)) =  \dim (V) \dim (W).     </fr:tex></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>876</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0027</fr:addr><fr:route>def-0027.xml</fr:route><fr:title>Polynomial</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A function <fr:tex>f: R  \to  R</fr:tex> is a <fr:strong>polynomial</fr:strong> with coefficients in ring <fr:tex>R</fr:tex> if
     there exists  <fr:tex>n  \in   \N</fr:tex> and <fr:tex>a_0, a_1,  \ldots , a_n  \in  R</fr:tex> such that
     <fr:tex display="block">         f(x) = a_0 + a_1 x + a_2 x^2 +  \cdots  + a_n x^n     </fr:tex>

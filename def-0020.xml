@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1366</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0020</fr:addr><fr:route>def-0020.xml</fr:route><fr:title>Unit Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1396</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0020</fr:addr><fr:route>def-0020.xml</fr:route><fr:title>Unit Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
         
         The <fr:strong>unit type</fr:strong> is the simplest inductive type.
         It has only one constructor, denoted by <fr:tex>\star : \textbf {1}</fr:tex>.
@@ -7,7 +7,7 @@
         The induction principle of the unit type is trivial.
         It says that to define a dependent function <fr:tex>f: \Pi  _{(x: \textbf {1} )} P(x)</fr:tex>, 
         it suffices to give a value <fr:tex>p:P( \star )</fr:tex>.
-        <fr:tex display="block">             f ( \star ) : \equiv  p         </fr:tex></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1365</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0004</fr:addr><fr:route>tt-0004.xml</fr:route><fr:title>Inductive Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+        <fr:tex display="block">             f ( \star ) : \equiv  p         </fr:tex></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1395</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0004</fr:addr><fr:route>tt-0004.xml</fr:route><fr:title>Inductive Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
@@ -17,7 +17,7 @@
     Without displaying the inference rules, we will just present the <fr:strong>constructor</fr:strong>
     and <fr:strong>induction principle</fr:strong> of each inductive type.
 </fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>541</fr:anchor><fr:title><fr:strong>General Inductive Type</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:parent>tt-0004</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>554</fr:anchor><fr:title><fr:strong>General Inductive Type</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:parent>tt-0004</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
     Just like <fr:tex>\mathbb {N}</fr:tex>, other inductive types can be defined by 
     their constructors and induction principles (and computation rules).
@@ -33,7 +33,7 @@
             The computation rules specify the behavior of the constructors.
         </fr:li></fr:ul>
 </fr:mainmatter></fr:tree>
-<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>542</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0020</fr:addr><fr:route>def-0020.xml</fr:route><fr:title>Unit Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>555</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0020</fr:addr><fr:route>def-0020.xml</fr:route><fr:title>Unit Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
         
         The <fr:strong>unit type</fr:strong> is the simplest inductive type.
         It has only one constructor, denoted by <fr:tex>\star : \textbf {1}</fr:tex>.
@@ -45,7 +45,7 @@
     A degenrate inductive type is the <fr:strong>empty type</fr:strong>.
     It has no constructor, and its induction principle is trivial.
     Empty type is connected to the <fr:strong>exfalso quodlibet principle</fr:strong> in logic.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>543</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0021</fr:addr><fr:route>def-0021.xml</fr:route><fr:title>Empty Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>556</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0021</fr:addr><fr:route>def-0021.xml</fr:route><fr:title>Empty Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>empty type</fr:strong> is a degenerate inductive type <fr:tex>\emptyset</fr:tex> satisfying 
     the following induction principle:
     <fr:tex display="block">          \text {ind}_ \emptyset  :  \Pi _{(x: \emptyset )}P(x)     </fr:tex>
@@ -55,18 +55,18 @@
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     With the empty type we can define the <fr:strong>negation</fr:strong> of a type
     and the <fr:strong>proof of negation</fr:strong>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>545</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0022</fr:addr><fr:route>def-0022.xml</fr:route><fr:title>Type Negation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>558</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0022</fr:addr><fr:route>def-0022.xml</fr:route><fr:title>Type Negation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>negation</fr:strong> of type <fr:tex>A</fr:tex> is defined as
     <fr:tex display="block">          \neg  A : \equiv  A  \to   \emptyset      </fr:tex>
     A type <fr:tex>A</fr:tex> is said to be <fr:strong>empty</fr:strong> if and only if <fr:tex>\neg  A</fr:tex> is inhabited.
     <fr:tex display="block">          \text {empty}(A) : \equiv   \neg  A     </fr:tex></fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>544</fr:anchor><fr:title><fr:strong>Proof of negation</fr:strong></fr:title><fr:parent>def-0022</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>557</fr:anchor><fr:title><fr:strong>Proof of negation</fr:strong></fr:title><fr:parent>def-0022</fr:parent></fr:frontmatter><fr:mainmatter>
         <fr:p>
             To prove <fr:tex>\neg  A</fr:tex>, we need to show that <fr:tex>A</fr:tex> implies a contradiction.
             In other words, constructing a function of type <fr:tex>A  \to   \emptyset</fr:tex>.
         </fr:p>
     </fr:mainmatter></fr:tree>
-</fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>546</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0023</fr:addr><fr:route>def-0023.xml</fr:route><fr:title>Coproduct Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>559</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0023</fr:addr><fr:route>def-0023.xml</fr:route><fr:title>Coproduct Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> and <fr:tex>B</fr:tex> be types. The <fr:strong>coproduct (disjoint sum)</fr:strong> <fr:tex>A+B</fr:tex> is a typed defined by the following constructors:
     <fr:ul><fr:li><fr:tex>\text {inl} :A \to  A+B</fr:tex></fr:li>
         <fr:li><fr:tex>\text {inr} :B \to  A+B</fr:tex></fr:li></fr:ul>
@@ -78,7 +78,7 @@
     <fr:tex display="block">          \begin {align*}             f&amp;: \Pi _{(x:A)}P( \text {inl} (x)) \\              g&amp;: \Pi _{(y:B)}P( \text {inr} (y))          \end {align*}     </fr:tex>
     This can be presented by pattern matching to define a function <fr:tex>h: \Pi  _{(z:A+B)}.P(z)</fr:tex>:
     <fr:tex display="block">          \begin {align*}             h( \text {inl} (x))&amp;: \equiv  f(x) \\              h( \text {inr} (y))&amp;: \equiv  g(y)          \end {align*}     </fr:tex></fr:p></fr:mainmatter></fr:tree>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>547</fr:anchor><fr:title><fr:strong>Special Case of Coproduct</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:parent>tt-0004</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>560</fr:anchor><fr:title><fr:strong>Special Case of Coproduct</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:parent>tt-0004</fr:parent></fr:frontmatter><fr:mainmatter>
     The special case of coproduct type is also called the <fr:strong>sum type</fr:strong>.
     <fr:tex display="block">          \text {ind}_ + : (A  \to  X)  \to  (B  \to  X)  \to  (A+B  \to  X)     </fr:tex>
     which is very similar to the <fr:strong>elimination rule</fr:strong> of disjunction in logic.
@@ -87,10 +87,10 @@
 <fr:p>
     The dependent version of sum type is called the <fr:strong>dependent sum type (dependent coproduct)</fr:strong> traditionally.
     Its terms are ordered pairs.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>553</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0024</fr:addr><fr:route>def-0024.xml</fr:route><fr:title>Dependent Pair Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>566</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0024</fr:addr><fr:route>def-0024.xml</fr:route><fr:title>Dependent Pair Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>dependent pair type</fr:strong> is a inductive type <fr:tex>\Sigma _{(x:A)}B(x)</fr:tex> (<fr:tex>(x:A)  \times  B(x)</fr:tex>)
 </fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>548</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>561</fr:anchor><fr:title>
     <fr:strong>Formation Rule</fr:strong>
 </fr:title><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
@@ -99,7 +99,7 @@
     <fr:tex display="block">          \frac {              \Gamma \vdash  A \space \text {type}               \quad               \Gamma ,x:A \vdash  B(x) \space \text {type}          }{              \Gamma \vdash  (x:A)  \times  B(x) \space \text {type}          }     </fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>549</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>562</fr:anchor><fr:title>
     <fr:strong>Introduction Rule</fr:strong>
 </fr:title><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
@@ -108,7 +108,7 @@
     <fr:tex display="block">          \frac {              \Gamma \vdash  a:A              \quad               \Gamma \vdash  b(a):B(a)         }{              \Gamma \vdash  (a,b):(x:A) \times  B(x)         }     </fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>550</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>563</fr:anchor><fr:title>
     <fr:strong>Elimination Rule</fr:strong>
 </fr:title><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
@@ -116,13 +116,13 @@
         <fr:tex display="block">              \frac {                  \Gamma \vdash  p:(x:A) \times  B(x)             }{                  \begin {align*}                      \Gamma &amp; \vdash   \text {pr}_ A (p):A \\                       \Gamma &amp; \vdash   \text {pr}_ B (p):B( \text {pr}_ A (p))                  \end {align*}             }         </fr:tex></fr:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>551</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>564</fr:anchor><fr:title>
     <fr:strong>Computation Rule</fr:strong>
 </fr:title><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p><fr:tex display="block">              \frac {                  \Gamma \vdash  x:A                   \quad                    \Gamma \vdash  y:B(x)             }{                  \begin {align*}                      \Gamma &amp; \vdash   \text {pr}_ A ((x,y))=x:A \\                       \Gamma &amp; \vdash   \text {pr}_ B ((x,y))=y:B(x)                  \end {align*}             }         </fr:tex></fr:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>552</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>565</fr:anchor><fr:title>
     <fr:strong>Special Case</fr:strong>
 </fr:title><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:ul><fr:li>

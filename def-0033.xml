@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>964</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0033</fr:addr><fr:route>def-0033.xml</fr:route><fr:title>Heisenberg Uncertainty Principle</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>986</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0033</fr:addr><fr:route>def-0033.xml</fr:route><fr:title>Heisenberg Uncertainty Principle</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>Heisenberg Uncertainty Principle</fr:strong> states that
     it is impossible to measure simultaneously the position and the momentum of a particle
     with arbitrary precision.
@@ -7,7 +7,7 @@
     <fr:tex display="block">          \Delta  x  \Delta  p  \geq   \frac { \hbar }{2}     </fr:tex>
     where <fr:tex>\Delta  x</fr:tex> and <fr:tex>\Delta  p</fr:tex> are the uncertainties in position and momentum, respectively.
     The constant <fr:tex>\hbar</fr:tex> is the reduced Planck constant.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>963</fr:anchor><fr:taxon>Quantum Mechanics</fr:taxon><fr:addr>phy-0002</fr:addr><fr:route>phy-0002.xml</fr:route><fr:title>The Wave Function</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>985</fr:anchor><fr:taxon>Quantum Mechanics</fr:taxon><fr:addr>phy-0002</fr:addr><fr:route>phy-0002.xml</fr:route><fr:title>The Wave Function</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This post introduces the concept of the wave function in quantum mechanics.
     Refer to <fr:link href="quantum-2018.xml" type="local" addr="quantum-2018">Introduction to Quantum Mechanics</fr:link>.
 </fr:p><fr:p>
@@ -26,7 +26,7 @@
     For <fr:strong>Quantum Mechanics</fr:strong>, we have a different perspective.
     We would like to look for the <fr:strong>wave function</fr:strong>, <fr:tex>\Psi (x, t)</fr:tex>.
     To determine it we need to solve the <fr:strong>Schrodinger equation</fr:strong>.
-    <fr:tex display="block">         i \hbar \frac { \partial }{ \partial  t} \Psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \Psi (x,t)}{ \partial  x^2} + V(x,t) \Psi (x,t)     </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>571</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0030</fr:addr><fr:route>def-0030.xml</fr:route><fr:title>Schrodinger&apos;s equation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tex display="block">         i \hbar \frac { \partial }{ \partial  t} \Psi (x,t) = - \frac { \hbar ^2}{2m} \frac { \partial ^2 \Psi (x,t)}{ \partial  x^2} + V(x,t) \Psi (x,t)     </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>586</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0030</fr:addr><fr:route>def-0030.xml</fr:route><fr:title>Schrodinger&apos;s equation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>Schrodinger equation</fr:strong> is a linear partial differential equation that describes the wave function of a quantum system.
     It is given by (the general form):
     <fr:tex display="block">         i \hbar \frac { \partial }{ \partial  t} \Psi ( \vec {r},t) =  \hat {H} \Psi ( \vec {r},t)     </fr:tex>
@@ -66,7 +66,7 @@
 </fr:p><fr:p>
     Probability is the key concept in quantum mechanics.
     Now I will introduce some terimnologies related to continuous probability.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>574</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0031</fr:addr><fr:route>def-0031.xml</fr:route><fr:title>Probability Density</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>589</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0031</fr:addr><fr:route>def-0031.xml</fr:route><fr:title>Probability Density</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:strong>probability density</fr:strong> is a function <fr:tex>p(x)</fr:tex> such that:
     <fr:ul><fr:li><fr:tex>p(x) \geq  0</fr:tex> for all <fr:tex>x</fr:tex>.
         </fr:li>
@@ -74,12 +74,12 @@
         </fr:li></fr:ul>
     With this we can define the <fr:strong>probability function</fr:strong> in an interval <fr:tex>[a,b]</fr:tex> as:
     <fr:tex display="block">         P(a, b) =  \int _a^b p(x)dx     </fr:tex></fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>572</fr:anchor><fr:title>Expectation Value</fr:title><fr:parent>def-0031</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>587</fr:anchor><fr:title>Expectation Value</fr:title><fr:parent>def-0031</fr:parent></fr:frontmatter><fr:mainmatter>
     The <fr:strong>expectation value</fr:strong> of a function <fr:tex>f(x)</fr:tex> with respect to the probability density <fr:tex>p(x)</fr:tex> is defined:
     <fr:tex display="block">          \langle  f(x)  \rangle  =  \int _{- \infty }^{ \infty } f(x)p(x)dx     </fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>573</fr:anchor><fr:title>Variance</fr:title><fr:parent>def-0031</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>588</fr:anchor><fr:title>Variance</fr:title><fr:parent>def-0031</fr:parent></fr:frontmatter><fr:mainmatter>
     The <fr:strong>variance</fr:strong> of a function <fr:tex>f(x)</fr:tex> with respect to the probability density <fr:tex>p(x)</fr:tex> is defined:
     <fr:tex display="block">          \sigma ^2 : \equiv   \langle  x^2  \rangle  -  \langle  x  \rangle ^2     </fr:tex>
 </fr:mainmatter></fr:tree>
@@ -98,7 +98,7 @@
 </fr:p>
  
    
-   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>575</fr:anchor><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:parent>phy-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>590</fr:anchor><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:parent>phy-0002</fr:parent></fr:frontmatter><fr:mainmatter>
         Differentiate the normalization condition with respect to time:
         <fr:tex display="block">              \frac {d}{dt} \int _{- \infty }^{ \infty } | \Psi (x,t)|^2 dx =               \int _{- \infty }^{ \infty }  \frac { \partial }{ \partial  t}| \Psi (x,t)|^2 dx         </fr:tex>
         With the product rule:
@@ -133,7 +133,7 @@
     repeated measurements on an ensemble of identical prepared systems,
     not the average of repeated measurements on a <fr:em>single</fr:em> system.
 </fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>576</fr:anchor><fr:title><fr:strong>Construction.</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:parent>phy-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>591</fr:anchor><fr:title><fr:strong>Construction.</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:parent>phy-0002</fr:parent></fr:frontmatter><fr:mainmatter>
     As times goes on, the expectation values varies.
     We naturally ask how fast it moves?
     Use simple calculus we can get the answer.
@@ -169,7 +169,7 @@
     This result from the <fr:strong>de Broglie formula</fr:strong>.
     <fr:tex display="block">         p =  \frac {h}{ \lambda } =  \frac {2 \pi \hbar }{ \lambda }     </fr:tex>
     Now we can give a qualitative argument for the uncertainty principle.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>577</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0033</fr:addr><fr:route>def-0033.xml</fr:route><fr:title>Heisenberg Uncertainty Principle</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>592</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0033</fr:addr><fr:route>def-0033.xml</fr:route><fr:title>Heisenberg Uncertainty Principle</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>Heisenberg Uncertainty Principle</fr:strong> states that
     it is impossible to measure simultaneously the position and the momentum of a particle
     with arbitrary precision.

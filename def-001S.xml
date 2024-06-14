@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1203</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001S</fr:addr><fr:route>def-001S.xml</fr:route><fr:title>Proper Time</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1228</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001S</fr:addr><fr:route>def-001S.xml</fr:route><fr:title>Proper Time</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>proper time</fr:strong> along a timelike world-line is defined as the
     time as measured by a clock following that line. 
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1201</fr:anchor><fr:taxon>String Theory</fr:taxon><fr:addr>phy-0001</fr:addr><fr:route>phy-0001.xml</fr:route><fr:title>Special Relativity and Extra Dimensions</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>29</fr:day></fr:date><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1226</fr:anchor><fr:taxon>String Theory</fr:taxon><fr:addr>phy-0001</fr:addr><fr:route>phy-0001.xml</fr:route><fr:title>Special Relativity and Extra Dimensions</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>29</fr:day></fr:date><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>
     This is a summary of the first chapter of <fr:link href="string-theory-2009.xml" type="local" addr="string-theory-2009">A First Course in String Theory</fr:link> by Barton Zwiebach.
     I will make it as understandable as possible.
 </fr:p><fr:p>
@@ -28,7 +28,7 @@
     The invariant interval implies the following equation:
     <fr:tex display="block">          \Delta  s ^2 =  \Delta  s&apos;^2     </fr:tex>
     The minus sign on the left of <fr:tex>\Delta  s^2</fr:tex> implies that <fr:tex>\Delta  s^2 &gt;0</fr:tex> for events that are <fr:strong>timelike separated</fr:strong>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>583</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001H</fr:addr><fr:route>def-001H.xml</fr:route><fr:title>Timelike Separated Events</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>598</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001H</fr:addr><fr:route>def-001H.xml</fr:route><fr:title>Timelike Separated Events</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     An event <fr:tex>S</fr:tex> is said to be timelike separated if
     <fr:tex display="block">         ( \Delta  x^0)^2 &gt; ( \Delta  x^1)^2 + ( \Delta  x^2)^2 + ( \Delta  x^3)^2     </fr:tex>
     or briefly <fr:tex>\Delta  s^2 &gt; 0</fr:tex>. The spatial separation is less than the distance light travels.
@@ -36,10 +36,10 @@
     The history of a particle is represented in spacetime as a curve called a <fr:strong>world-line</fr:strong>.
     Any two events on the world-line are timelike separated, because no particle can 
     move faster than light.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>584</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001I</fr:addr><fr:route>def-001I.xml</fr:route><fr:title>Lightlike Separated Events</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>599</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001I</fr:addr><fr:route>def-001I.xml</fr:route><fr:title>Lightlike Separated Events</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Events connected by the world-line of a <fr:strong>photon</fr:strong> are said to be <fr:strong>lightlike separated</fr:strong>.
     For which <fr:tex>\Delta  s^2 = 0</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>585</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001J</fr:addr><fr:route>def-001J.xml</fr:route><fr:title>Spacelike Separated Events</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>600</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001J</fr:addr><fr:route>def-001J.xml</fr:route><fr:title>Spacelike Separated Events</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Two events for which <fr:tex>\Delta  s^2 &lt; 0</fr:tex> are said to be <fr:strong>spacelike separated</fr:strong>.
     Events that are simultaneous in a Lorentz frame but in different position are spacelike separated.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
@@ -64,7 +64,7 @@
     We can also express the interval <fr:tex>ds^2</fr:tex> using the <fr:strong>Minkowski Metric</fr:strong>:
     <fr:tex display="block">         -ds^2=  \eta _{ \mu \nu } dx^ \mu  dx^ \nu      </fr:tex>
     and the metric is defined by
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>586</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001L</fr:addr><fr:route>def-001L.xml</fr:route><fr:title>Minkowski Metric</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>601</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001L</fr:addr><fr:route>def-001L.xml</fr:route><fr:title>Minkowski Metric</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>Minkowski Metric</fr:strong>, aka <fr:strong>Minkowski Tensor</fr:strong>, is a tensor <fr:tex>\eta _{ \mu \nu }</fr:tex> whose elements are defined by the matrix
     <fr:tex display="block">          \eta _{ \mu \nu } =  \begin {pmatrix}             -1 &amp; 0 &amp; 0 &amp; 0  \\              0 &amp; 1 &amp; 0 &amp; 0  \\              0 &amp; 0 &amp; 1 &amp; 0  \\              0 &amp; 0 &amp; 0 &amp; 1           \end {pmatrix}     </fr:tex>
     where <fr:tex>\mu</fr:tex> and <fr:tex>\nu</fr:tex> are Lorentz indices run over <fr:tex>0,1,2,3</fr:tex>.
@@ -92,12 +92,12 @@
     And the inverse property is
     <fr:tex display="block">          \eta ^{ \mu \rho }  \eta _{ \rho \nu } =  \delta ^ \mu _ \nu      </fr:tex>
     where <fr:tex>\delta ^ \mu _ \nu</fr:tex> is the <fr:link href="def-001P.xml" type="local" addr="def-001P">Kronecker Delta</fr:link>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>587</fr:anchor><fr:taxon>Trick</fr:taxon><fr:addr>thm-0004</fr:addr><fr:route>thm-0004.xml</fr:route><fr:title>Raise Indices</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">          \eta ^{ \rho \mu }b_ \mu          =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )         =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu          =  \delta ^ \rho _ \nu  b^ \nu          = b^ \rho      </fr:tex>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>602</fr:anchor><fr:taxon>Trick</fr:taxon><fr:addr>thm-0004</fr:addr><fr:route>thm-0004.xml</fr:route><fr:title>Raise Indices</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">          \eta ^{ \rho \mu }b_ \mu          =  \eta ^{ \rho \mu } ( \eta _{ \mu \nu } b^ \nu )         =  \eta ^{ \rho \mu }  \eta _{ \mu \nu } b^ \nu          =  \delta ^ \rho _ \nu  b^ \nu          = b^ \rho      </fr:tex>
     The lower index of <fr:tex>b_ \mu</fr:tex> is raised to <fr:tex>b^ \rho</fr:tex> by <fr:tex>\eta ^{ \rho \mu }</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p><fr:strong>Lorentz transformations</fr:strong> are the relations between coordinates in two different
     inertial frames.
     
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>588</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001Q</fr:addr><fr:route>def-001Q.xml</fr:route><fr:title>Lorentz Transformations</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>603</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001Q</fr:addr><fr:route>def-001Q.xml</fr:route><fr:title>Lorentz Transformations</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Consider a frame <fr:tex>S</fr:tex> and <fr:tex>S&apos;</fr:tex> which is moving along the <fr:tex>+x</fr:tex> direction of the <fr:tex>S</fr:tex> frame
     with a velocity <fr:tex>v</fr:tex>.
     Assume that the origins of the two frames coincide at <fr:tex>t=t&apos;=0</fr:tex> and coordinate axes are parallel.
@@ -117,7 +117,7 @@
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     We now introduce a coordinate system that will be extremely useful in string theory,
     the <fr:strong>light-cone coordinates</fr:strong>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>589</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001R</fr:addr><fr:route>def-001R.xml</fr:route><fr:title>Light-cone Coordinates</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>604</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001R</fr:addr><fr:route>def-001R.xml</fr:route><fr:title>Light-cone Coordinates</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>light-cone coordinates</fr:strong> can be defined as
     two independent <fr:link href="def-000L.xml" type="local" addr="def-000L">linear combinations</fr:link> of the time 
     and a chosen spatial coordinate (conventionally <fr:tex>x^1</fr:tex>):
@@ -197,7 +197,7 @@
     Different Lorentz observers will measure different time intervals between the two events.
     But imagine a clock that moves along the world-line.
     The time measured by the clock is called the <fr:strong>proper time</fr:strong> between the two events.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>590</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001S</fr:addr><fr:route>def-001S.xml</fr:route><fr:title>Proper Time</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>605</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001S</fr:addr><fr:route>def-001S.xml</fr:route><fr:title>Proper Time</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>proper time</fr:strong> along a timelike world-line is defined as the
     time as measured by a clock following that line. 
 </fr:p></fr:mainmatter></fr:tree><fr:p>

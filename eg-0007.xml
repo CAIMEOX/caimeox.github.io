@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>877</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0007</fr:addr><fr:route>eg-0007.xml</fr:route><fr:title>Divergent Combinator</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>895</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0007</fr:addr><fr:route>eg-0007.xml</fr:route><fr:title>Divergent Combinator</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     An interesting example named <fr:strong>omega combinator</fr:strong> of beta reduction is the following:
     <fr:tex display="block">          ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) )           \to _ \beta           ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) )      </fr:tex>
     The result of the beta reduction is the same term as the original term,
     and never terminates.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>876</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0001</fr:addr><fr:route>tt-0001.xml</fr:route><fr:title>Untyped Lambda Calculus</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>894</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0001</fr:addr><fr:route>tt-0001.xml</fr:route><fr:title>Untyped Lambda Calculus</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to <fr:link href="ttafp-2014.xml" type="local" addr="ttafp-2014">Type Theory and Formal Proof</fr:link>.
 </fr:p><fr:p>
     The idea to generalize the behavior of functions in mathematics and logic led to the development of the lambda calculus.
@@ -26,7 +26,7 @@
 </fr:p>
     <fr:strong>Lambda Terms</fr:strong>
     <fr:p>Expressions in the lambda calculus is called <fr:strong>terms</fr:strong>. The set of terms is denoted <fr:tex>\Lambda</fr:tex>.</fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>250</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000F</fr:addr><fr:route>def-000F.xml</fr:route><fr:title>Set of Lambda Terms</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>263</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000F</fr:addr><fr:route>def-000F.xml</fr:route><fr:title>Set of Lambda Terms</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
 Let <fr:tex>\Lambda</fr:tex> be the set of lambda terms. Then <fr:tex>\Lambda</fr:tex> is defined inductively as follows:
 (<fr:tex>V</fr:tex> is the set of variables)
 <fr:ul><fr:li>Variable: <fr:tex>\forall  x \in  V, x \in   \Lambda</fr:tex></fr:li>
@@ -38,7 +38,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
     With the following recursive definition we can determine 
     what the <fr:strong>subterms</fr:strong> of a give <fr:tex>\lambda \text {-term}</fr:tex> are. Here we use 
     a concept named <fr:link href="def-0035.xml" type="local" addr="def-0035">multiset</fr:link>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>251</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0036</fr:addr><fr:route>def-0036.xml</fr:route><fr:title>Multiset of Subterms</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>264</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0036</fr:addr><fr:route>def-0036.xml</fr:route><fr:title>Multiset of Subterms</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     We define a map <fr:tex>\text {Sub}</fr:tex>:
     <fr:ul><fr:li><fr:strong>Basis</fr:strong>: <fr:tex>\forall  x \in  V, \text {Sub} (x) = \{   x   \}</fr:tex></fr:li>
         <fr:li><fr:strong>Application</fr:strong>: <fr:tex>\forall  M,N \in \Lambda , \text {Sub} (MN) =  \text {Sub} (M) \cup \text {Sub} (N) \cup \{   MN   \}</fr:tex></fr:li>
@@ -47,35 +47,35 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
     If <fr:tex>L \not \equiv  M</fr:tex> then we say <fr:tex>L</fr:tex> is a <fr:strong>proper subterm</fr:strong> of <fr:tex>M</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     The definition above uses a notation <fr:tex>\equiv</fr:tex> which means <fr:em>syntactic equality</fr:em> here.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>252</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0006</fr:addr><fr:route>eg-0006.xml</fr:route><fr:title>Subterms</fr:title></fr:frontmatter><fr:mainmatter><fr:ul><fr:li><fr:tex>\text {Sub} ( ( x \space z ) )</fr:tex> = <fr:tex>\{   x,z, ( x \space z )   \}</fr:tex></fr:li>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>265</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0006</fr:addr><fr:route>eg-0006.xml</fr:route><fr:title>Subterms</fr:title></fr:frontmatter><fr:mainmatter><fr:ul><fr:li><fr:tex>\text {Sub} ( ( x \space z ) )</fr:tex> = <fr:tex>\{   x,z, ( x \space z )   \}</fr:tex></fr:li>
     <fr:li><fr:tex>              \text {Sub} ( \lambda  x. ( x \space x ) )              =  \{   \lambda  x. ( x \space x ) , ( x \space x ) ,x,x   \}          </fr:tex></fr:li></fr:ul></fr:mainmatter></fr:tree><fr:p>
     The substerm mapping satisfies the following lemma.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>253</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000W</fr:addr><fr:route>thm-000W.xml</fr:route><fr:title>Lemma of subterms</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:ul><fr:li><fr:strong>Reflexivity</fr:strong>: <fr:tex>\forall  M \in \Lambda ,M \in \text {Sub} (M)</fr:tex></fr:li>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>266</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000W</fr:addr><fr:route>thm-000W.xml</fr:route><fr:title>Lemma of subterms</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:ul><fr:li><fr:strong>Reflexivity</fr:strong>: <fr:tex>\forall  M \in \Lambda ,M \in \text {Sub} (M)</fr:tex></fr:li>
         <fr:li><fr:strong>Transitivity</fr:strong>: <fr:tex>\forall  L,M,N \in \Lambda ,L \in \text {Sub} (M) \land  M \in \text {Sub} (N) \implies  L \in \text {Sub} (N)</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:p>
     Variable occurrences in a <fr:tex>\lambda \text {-term}</fr:tex> can be divided into 3 categories:
     <fr:ul><fr:li>Bound Occurrences: <fr:tex>x</fr:tex> is bound in <fr:tex>M</fr:tex> if <fr:tex>x</fr:tex> is the argument of an <fr:strong>abstraction</fr:strong> in <fr:tex>M</fr:tex>.</fr:li>
         <fr:li>Free Occurrences: <fr:tex>x</fr:tex> is free in <fr:tex>M</fr:tex> if <fr:tex>x</fr:tex> is not bound by any <fr:strong>abstraction</fr:strong> in <fr:tex>M</fr:tex>.</fr:li>
         <fr:li>Binding Occurrences: something after a lambda notation <fr:tex>\lambda</fr:tex></fr:li></fr:ul>
     We mainly focus on the <fr:strong>free variables</fr:strong> of a term.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>254</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0037</fr:addr><fr:route>def-0037.xml</fr:route><fr:title>Set of Free Variables</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>267</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0037</fr:addr><fr:route>def-0037.xml</fr:route><fr:title>Set of Free Variables</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>FV(L)</fr:tex> be the set of free variables in a term <fr:tex>L</fr:tex>.
     <fr:ul><fr:li><fr:strong>Variable</fr:strong>: <fr:tex>\forall  x \in  V, \text {FV} (x) =  \{   x   \}</fr:tex></fr:li>
         <fr:li><fr:strong>Application</fr:strong>: <fr:tex>\forall  M,N \in \Lambda , \text {FV} (MN) =  \text {FV} (M) \cup \text {FV} (N)</fr:tex></fr:li>
-        <fr:li><fr:strong>Abstraction</fr:strong>: <fr:tex>\forall  x \in  V,M \in \Lambda , \text {FV} ( \lambda  x.M) =  \text {FV} (M) \setminus \{   x   \}</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>255</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0038</fr:addr><fr:route>def-0038.xml</fr:route><fr:title>Closed Lambda Terms</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        <fr:li><fr:strong>Abstraction</fr:strong>: <fr:tex>\forall  x \in  V,M \in \Lambda , \text {FV} ( \lambda  x.M) =  \text {FV} (M) \setminus \{   x   \}</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>268</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0038</fr:addr><fr:route>def-0038.xml</fr:route><fr:title>Closed Lambda Terms</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:tex>\lambda \text {-term}</fr:tex> <fr:tex>M</fr:tex> is <fr:strong>closed</fr:strong> if <fr:tex>\text {FV} (M) =  \emptyset</fr:tex>.
     A closed <fr:tex>\lambda \text {-term}</fr:tex> is also called a <fr:strong>combinator</fr:strong>.
     The set of all combinators is denoted by <fr:tex>\Lambda ^0</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>256</fr:anchor><fr:title>Alpha conversion</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date><fr:parent>tt-0001</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Functions in <fr:tex>\lambda \text {-calculus}</fr:tex> have the property that the name of 
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>269</fr:anchor><fr:title>Alpha conversion</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date><fr:parent>tt-0001</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Functions in <fr:tex>\lambda \text {-calculus}</fr:tex> have the property that the name of 
     the binding variables is irrelevant.
     In order to describe this equality we need to define a relation
     called <fr:tex>\alpha \text {-conversion}</fr:tex> or <fr:tex>\alpha \text {-equivalence}</fr:tex>,
-    which is based on the process of renaming binding variables.</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>257</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0039</fr:addr><fr:route>def-0039.xml</fr:route><fr:title>Renaming</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    which is based on the process of renaming binding variables.</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>270</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0039</fr:addr><fr:route>def-0039.xml</fr:route><fr:title>Renaming</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>M ^{ x \to y }</fr:tex> be the result of replacing all free occurrences of <fr:tex>x</fr:tex> in <fr:tex>M</fr:tex> with <fr:tex>y</fr:tex>.
     The relation <fr:strong>renaming</fr:strong> is expression with the symbol <fr:tex>=_ \alpha</fr:tex>:
     <fr:tex>\lambda  x.M =_ \alpha \lambda  y. M ^{ x \to y }</fr:tex> if <fr:tex>y \not \in \text {FV} (M)</fr:tex> and <fr:tex>y</fr:tex> is not a binding variable in <fr:tex>M</fr:tex>.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     The definition of <fr:strong>renaming</fr:strong> should be extended to more general terms.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>258</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003A</fr:addr><fr:route>def-003A.xml</fr:route><fr:title>Alpha Equivalence</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>271</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003A</fr:addr><fr:route>def-003A.xml</fr:route><fr:title>Alpha Equivalence</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:tex>\alpha</fr:tex> equivalence is a relation between <fr:tex>\lambda \text {-term}</fr:tex>, defined as follows:
     <fr:ul><fr:li><fr:strong>Renaming</fr:strong>: <fr:tex>\lambda  x. M  =_ \alpha   \lambda  y.  M ^{ x \to y }</fr:tex> if <fr:tex>y \not \in \text {FV} (M)</fr:tex> and <fr:tex>y</fr:tex> is not a binding variable in <fr:tex>M</fr:tex>.
         </fr:li>
@@ -97,7 +97,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     In previous sections we informally mentioned the concept of <fr:strong>substitution</fr:strong>.
     Now we give a precise formulation
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>259</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003B</fr:addr><fr:route>def-003B.xml</fr:route><fr:title>Substitution</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>272</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003B</fr:addr><fr:route>def-003B.xml</fr:route><fr:title>Substitution</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>substitution</fr:strong> is defined by the following rules:
     <fr:ul><fr:li><fr:tex>M [ x := N ] : \equiv  N</fr:tex></fr:li>
         <fr:li><fr:tex>y [ x := N ] : \equiv  y</fr:tex> if <fr:tex>y \not \equiv  x</fr:tex></fr:li>
@@ -114,26 +114,26 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
     We may do <fr:strong>sequential substitution</fr:strong> in a term,
     that is, doing a number of substitutions consecutively.
     And we have the following lemma, which states that the order of substitution is important.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>260</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000X</fr:addr><fr:route>thm-000X.xml</fr:route><fr:title>Substitution is not commutative</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>273</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000X</fr:addr><fr:route>thm-000X.xml</fr:route><fr:title>Substitution is not commutative</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>x \not \equiv  y</fr:tex> and assume <fr:tex>x \not \in \text {FV} (L)</fr:tex>.
     Then <fr:tex>L[y:=N][x:=M]  \equiv  L[x:=M][y:=N[x:=M]]</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>261</fr:anchor><fr:title><fr:tex>\lambda \text {-term}</fr:tex> modulo <fr:tex>\alpha \text {-equivalence}</fr:tex></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date><fr:parent>tt-0001</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>As we have seen, the relation <fr:tex>=_ \alpha</fr:tex> is an equivalence relation.
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>274</fr:anchor><fr:title><fr:tex>\lambda \text {-term}</fr:tex> modulo <fr:tex>\alpha \text {-equivalence}</fr:tex></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date><fr:parent>tt-0001</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>As we have seen, the relation <fr:tex>=_ \alpha</fr:tex> is an equivalence relation.
     Hence we can define the set of equivalence classes of terms with respect to <fr:tex>=_ \alpha</fr:tex>.
     Now we can identify a term with its equivalence class.
     We still use <fr:tex>\equiv</fr:tex> for syntactic equality modulo <fr:tex>\alpha \text {-equivalence}</fr:tex>.
     </fr:p></fr:mainmatter></fr:tree><fr:p><fr:tex>\alpha \text {-equivalence}</fr:tex> is a congruence relation, which means that it is conserved by elementary process of term construction.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>262</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000Y</fr:addr><fr:route>thm-000Y.xml</fr:route><fr:title>Congruence Property of Substitution</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>275</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000Y</fr:addr><fr:route>thm-000Y.xml</fr:route><fr:title>Congruence Property of Substitution</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>L =_ \alpha  M</fr:tex> and <fr:tex>N =_ \alpha  P</fr:tex>.
     <fr:ul><fr:li><fr:tex>                 LN  =_ \alpha  MP             </fr:tex></fr:li>
         <fr:li><fr:tex>                  \lambda  x.L  =_ \alpha   \lambda  x.M             </fr:tex></fr:li>
-        <fr:li><fr:tex>                  L [ x := N ]   =_ \alpha   M [ x := P ]              </fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>263</fr:anchor><fr:title>Barendregt Convention</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date><fr:parent>tt-0001</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The Barendregt Convention states that we should avoid using the same variable name in different abstractions.
+        <fr:li><fr:tex>                  L [ x := N ]   =_ \alpha   M [ x := P ]              </fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>276</fr:anchor><fr:title>Barendregt Convention</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date><fr:parent>tt-0001</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The Barendregt Convention states that we should avoid using the same variable name in different abstractions.
     This is to avoid the confusion of free variables. It states that 
     we choose the names for the binding variables in a <fr:tex>\lambda \text {-term}</fr:tex> in such a manner
     that they are all different, and each of them differs from 
-    all free variables occurring in the term.</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>264</fr:anchor><fr:title>Beta Reduction</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date><fr:parent>tt-0001</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+    all free variables occurring in the term.</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>277</fr:anchor><fr:title>Beta Reduction</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date><fr:parent>tt-0001</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
         Since we have formally defined the <fr:strong>substitution</fr:strong>,
         we can rephrase the reduction as a relation on <fr:tex>\lambda \text {-term}</fr:tex>, namely <fr:tex>\beta \text {-reduction}</fr:tex>.
-    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>265</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003C</fr:addr><fr:route>def-003C.xml</fr:route><fr:title>One Step Beta Reduction</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>One step beta reduction</fr:strong> (<fr:tex>\to _ \beta</fr:tex>) is defined as follows:
+    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>278</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003C</fr:addr><fr:route>def-003C.xml</fr:route><fr:title>One Step Beta Reduction</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>One step beta reduction</fr:strong> (<fr:tex>\to _ \beta</fr:tex>) is defined as follows:
     <fr:ul><fr:li><fr:strong>Basis</fr:strong>:
             <fr:tex>                 ( \lambda  x.M)N \to _ \beta M [ x := N ]              </fr:tex></fr:li>
         <fr:li><fr:strong>Compatibility</fr:strong>:
@@ -142,31 +142,31 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
         </fr:li></fr:ul></fr:p><fr:p>
     The term of the form <fr:tex>( \lambda  x.M)N</fr:tex> is called a <fr:strong>redex (reducible expression)</fr:strong>.
     The term of the form <fr:tex>M [ x := N ]</fr:tex> is called the <fr:strong>contractum</fr:strong> (of the redex).
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>266</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0007</fr:addr><fr:route>eg-0007.xml</fr:route><fr:title>Divergent Combinator</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>279</fr:anchor><fr:taxon>Example</fr:taxon><fr:addr>eg-0007</fr:addr><fr:route>eg-0007.xml</fr:route><fr:title>Divergent Combinator</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     An interesting example named <fr:strong>omega combinator</fr:strong> of beta reduction is the following:
     <fr:tex display="block">          ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) )           \to _ \beta           ( ( \lambda  x. ( x \space x ) ) \space ( \lambda  x. ( x \space x ) ) )      </fr:tex>
     The result of the beta reduction is the same term as the original term,
     and never terminates.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     We can often perform a sequence of beta reductions. This leads to the definition.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>267</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003D</fr:addr><fr:route>def-003D.xml</fr:route><fr:title>Beta Reduction</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>280</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003D</fr:addr><fr:route>def-003D.xml</fr:route><fr:title>Beta Reduction</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>(zero-or-more-step) beta reduction</fr:strong> (<fr:tex>\twoheadrightarrow _{ \beta }</fr:tex>) is a
     generalized version of the <fr:link href="def-003C.xml" type="local" addr="def-003C">one step beta reduction</fr:link>.
     <fr:tex>M \twoheadrightarrow _{ \beta }  N</fr:tex> if there exists <fr:tex>n \geq  0</fr:tex> and there are terms <fr:tex>M_0,M_1, \ldots ,M_n</fr:tex>
     such that <fr:tex>M_0=M</fr:tex>, <fr:tex>M_n=N</fr:tex> and <fr:tex>M_i \to _ \beta  M_{i+1}</fr:tex> for <fr:tex>0 \leq  i&lt;n</fr:tex>.
     In other words there exists a chain of one-step beta reductions from <fr:tex>M</fr:tex> to <fr:tex>N</fr:tex>.
-    <fr:tex display="block">         M \equiv  M_0 \to _ \beta  M_1 \to _ \beta \cdots \to _ \beta  M_n \equiv  N     </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>268</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000Z</fr:addr><fr:route>thm-000Z.xml</fr:route><fr:title>Properties of Beta Reduction</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:ul><fr:li><fr:strong>Compatibility</fr:strong>:
+    <fr:tex display="block">         M \equiv  M_0 \to _ \beta  M_1 \to _ \beta \cdots \to _ \beta  M_n \equiv  N     </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>281</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000Z</fr:addr><fr:route>thm-000Z.xml</fr:route><fr:title>Properties of Beta Reduction</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:ul><fr:li><fr:strong>Compatibility</fr:strong>:
             <fr:tex>\twoheadrightarrow _{ \beta }</fr:tex> extends <fr:tex>\to _ \beta</fr:tex>, i.e. if <fr:tex>M \to _ \beta  N</fr:tex> then <fr:tex>M \twoheadrightarrow _{ \beta }  N</fr:tex>.
         </fr:li>
         <fr:li><fr:strong>Reflixivity</fr:strong>:
             <fr:tex>                 M \twoheadrightarrow _{ \beta }  M             </fr:tex></fr:li>
         <fr:li><fr:strong>Transitivity</fr:strong>:
-            <fr:tex>                 M \twoheadrightarrow _{ \beta }  N  \land  N \twoheadrightarrow _{ \beta }  P  \implies  M \twoheadrightarrow _{ \beta }  P             </fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>875</fr:anchor><fr:taxon>Compute Science</fr:taxon><fr:addr>cs-0002</fr:addr><fr:route>cs-0002.xml</fr:route><fr:title>Primitive Recursion in Lambda Calculus</fr:title></fr:frontmatter><fr:mainmatter><fr:p> 
+            <fr:tex>                 M \twoheadrightarrow _{ \beta }  N  \land  N \twoheadrightarrow _{ \beta }  P  \implies  M \twoheadrightarrow _{ \beta }  P             </fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>893</fr:anchor><fr:taxon>Compute Science</fr:taxon><fr:addr>cs-0002</fr:addr><fr:route>cs-0002.xml</fr:route><fr:title>Primitive Recursion in Lambda Calculus</fr:title></fr:frontmatter><fr:mainmatter><fr:p> 
     We begin with the <fr:strong>schema of iteration</fr:strong> and then proceed 
     the more complex schema of primitive recursion and general recursion.
     Refer to <fr:link href="tapl.xml" type="local" addr="tapl">TAPL</fr:link>.
 </fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>369</fr:anchor><fr:title><fr:strong>Function Composition</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>382</fr:anchor><fr:title><fr:strong>Function Composition</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
     Giving two functions <fr:tex>f, g</fr:tex> we can compose then to get a new function <fr:tex>f \circ  g = f(g(x))</fr:tex>.
     Using <fr:tex>\lambda</fr:tex>-notation, we can define the composition of two functions as follows:
     <fr:tex display="block">         f \circ  g =  \lambda  x.f(g(x))     </fr:tex>
@@ -183,7 +183,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
     (And more discipline has to be imposed or expansion does not terminate).
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>370</fr:anchor><fr:title><fr:strong>Non-termination</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>383</fr:anchor><fr:title><fr:strong>Non-termination</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
         The well-known <fr:link href="eg-0007.xml" type="local" addr="eg-0007"><fr:strong>divergent combinator</fr:strong></fr:link> implies that 
         the lambda calculus is not strongly normalizing.
@@ -207,7 +207,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
     </fr:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>371</fr:anchor><fr:title><fr:strong>Church-Rosser Property</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>384</fr:anchor><fr:title><fr:strong>Church-Rosser Property</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
     The outcome of a computation <fr:tex>e</fr:tex> is its normal form.
     It is naturally to ask the question whether the normal form is unique.
     The key to this question is the <fr:strong>Church-Rosser property</fr:strong> or <fr:strong>confluence</fr:strong>:
@@ -216,7 +216,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
     This implies the uniqueness of the normal form.
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>373</fr:anchor><fr:title><fr:strong>Representing Natural Numbers</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>386</fr:anchor><fr:title><fr:strong>Representing Natural Numbers</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
         We can represent natural numbers in lambda calculus by using the 
         <fr:strong>Church numerals</fr:strong> or <fr:strong>Church encoding</fr:strong>.
@@ -243,7 +243,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
     
  
    
-   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>372</fr:anchor><fr:taxon>Proof</fr:taxon><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>385</fr:anchor><fr:taxon>Proof</fr:taxon><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
             <fr:tex display="block">                  \begin {align*}                     S \space  n &amp;= ( \lambda  n. \lambda  f. \lambda  x.f(n \space  f \space  x)) \space  n  \\                      &amp; \to _ \beta   \lambda  f. \lambda  x.f(n \space  f \space  x)  \\                      &amp; \to _ \beta   \lambda  f. \lambda  x.f^n(x)  \\                      &amp; \to _ \beta  n+1                  \end {align*}             </fr:tex>
         </fr:mainmatter></fr:tree>
  
@@ -262,7 +262,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
         <fr:tex display="block">             m^n =  \lambda  m. \lambda  n. n \space  (m *)  \space  1         </fr:tex></fr:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>374</fr:anchor><fr:title><fr:strong>The Schema of Iteration</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>387</fr:anchor><fr:title><fr:strong>The Schema of Iteration</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
         As we saw before, a natural number <fr:tex>n</fr:tex> is represented by a function 
         that iterates its first argument <fr:tex>n</fr:tex> times on its second argument.
@@ -283,7 +283,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
         <fr:tex display="block">              \text {times} =  \lambda  n.n( \lambda  rk. k + (r \space  k))( \lambda  k.0)         </fr:tex></fr:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>379</fr:anchor><fr:title><fr:strong>The Schema of Primitive Recursion</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>392</fr:anchor><fr:title><fr:strong>The Schema of Primitive Recursion</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
         Everything appears simply until we think of a very simple function,
         the <fr:strong>predecessor function</fr:strong> <fr:tex>\text {pred}</fr:tex> defined by
@@ -294,7 +294,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
         <fr:tex display="block">             g =  \lambda  x. \lambda  y.x         </fr:tex></fr:p>
     
     
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>375</fr:anchor><fr:title><fr:strong>Define predecessor function</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>388</fr:anchor><fr:title><fr:strong>Define predecessor function</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
         The key idea is to gain access to <fr:tex>n</fr:tex> in the schema of 
         primitive recursion by rebuilding it during the iteration.
         <fr:tex display="block">              \text {pred}_2 \space  n =  \langle  n,  \text {pred} \space  n  \rangle          </fr:tex>
@@ -308,7 +308,7 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
     </fr:mainmatter></fr:tree>
 
     
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>376</fr:anchor><fr:title><fr:strong>Define Pairs</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>389</fr:anchor><fr:title><fr:strong>Define Pairs</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
         Now we need to define pairs and <fr:tex>\text {letPair}</fr:tex>.
         The idea is to simply abstract over the continuation itself.
         <fr:tex display="block">              \begin {align*}                  \langle  x,y \rangle  &amp;=  \lambda  k.k \space  x \space  y  \\                   \text {pair} &amp;=  \lambda  x. \lambda  y. \lambda  k.k \space  x \space  y  \\                    \text {letPair} &amp;=  \lambda  p.p              \end {align*}         </fr:tex>
@@ -316,13 +316,13 @@ Another way to define <fr:tex>\Lambda</fr:tex> is to use the following grammar (
     </fr:mainmatter></fr:tree>
 
     
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>377</fr:anchor><fr:title><fr:strong>Summary</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>390</fr:anchor><fr:title><fr:strong>Summary</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
         Summarizing the above and we obtain the full definition of the predecessor function.
         <fr:tex display="block">              \begin {align*}                  \text {pred}_2 &amp;=  \lambda  n.n \space  ( \lambda  p.p ( \lambda  xy. \text {pair}  \space  (x+1)  \space  x)) \space   \text {pair} ( \space  0  \space  0) \\                    \text {pred} &amp;=  \lambda  n. ( \text {pred}_2 \space  n)  \space  ( \lambda  xy.y)              \end {align*}            </fr:tex>
     </fr:mainmatter></fr:tree>
 
     
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>378</fr:anchor><fr:title><fr:strong>General Primitive Recursion</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>391</fr:anchor><fr:title><fr:strong>General Primitive Recursion</fr:strong></fr:title><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
         The general case of primitive recursion follows by a similar pattern.
         We begin by defining a function <fr:tex>f_2</fr:tex>:
         <fr:tex display="block">             f_2 \space  n =  \langle  n, f \space  n  \rangle          </fr:tex>
