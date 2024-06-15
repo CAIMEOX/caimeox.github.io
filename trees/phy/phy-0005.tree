@@ -1,3 +1,163 @@
-\title{Period Motion}
+\title{Simple Harmonic Motion}
 \taxon{Physics}
-\p{}
+\import{macros}
+\p{
+    The SHM note is based on Wikipedia.
+}
+\p{
+    In mechanics and physics, \strong{simple harmonic motion} is a special type of periodic motion an object
+    experiences by means of a \strong{restoring force} whose magnitude is directly proportional to the 
+    distance of the object from an \strong{equilibrium position} and acts towards the equilibrium position.
+}
+\p{
+    In Newtonian mechanics, for one-dimensional simple harmonic motion, the equation of motion, 
+    which is a second-order linear ordinary differential equation with constant coefficients,
+    can be obtaind by Hooke's law and Newton's second law.
+    ##{
+        F_{\mathrm {net} }=m{\frac {\mathrm {d} ^{2}x}{\mathrm {d} t^{2}}}=-kx,
+    }
+    where #{m} is the inertial mass og the oscillating body, #{x} is its displacement from 
+    the equilibrium position and #{k} is a constant. Therefore we have
+    ##{
+        {\frac {\mathrm {d} ^{2}x}{\mathrm {d} t^{2}}}=-{\frac {k}{m}}x,
+    }
+    solving the differential equation we get the sinusoidal function
+    ##{
+        x(t)=C_{1}\cos \left(\omega t\right)+C_{2}\sin \left(\omega t\right),
+    }
+    where #{\omega=\sqrt{\frac{k}{m}}}.
+}
+\p{
+    Let #{t=0} we see that #{C_1 = x(0)} so that #{C_1} is the initial position.
+    Taking the derivative of the equation and evaluating at #{0} we get 
+    #{x'(0) = \omega C_2}. So #{C_2} is the initial speed of the object 
+    diverged by the angular frequency, #{C_2 = \frac{v_0}{\omega}}. Thus
+    ##{
+        x(t)=x_{0}\cos \left({\sqrt {\frac {k}{m}}}t\right)+{\frac {v_{0}}{\sqrt {\frac {k}{m}}}}\sin \left({\sqrt {\frac {k}{m}}}t\right).
+    } 
+}
+\p{
+    This equation can also be written in the form:
+    ##{
+        x(t) = Acos(\omega t-\phi)
+    }
+    where
+    ##{
+        \begin{align*}
+            A = \sqrt{C_{1}^{2}+C_{2}^{2}} \\
+            \phi = \arctan\left(\frac{C_{2}}{C_{1}}\right) \\
+            \sin\phi = \frac{C_{2}}{A} \\
+            \cos\phi = \frac{C_{1}}{A}
+        \end{align*}
+    }
+    Each of these constants carries a physical meaning of the motion:
+    #{A} is the \strong{amplitude} and #{\omega = 2\pi f} is the \strong{angular frequency}
+    and #{\phi} is the initial \strong{phase}.
+}
+\subtree{
+    \title{Energy}
+    \p{
+        The kinetic energy of the object at time #{t} is given by
+        ##{
+            K(t)={\tfrac {1}{2}}mv^{2}(t)={\tfrac {1}{2}}m\omega ^{2}A^{2}\sin ^{2}(\omega t-\varphi )={\tfrac {1}{2}}kA^{2}\sin ^{2}(\omega t-\varphi )
+        }
+        Besides the kinetic energy, the potential energy of the object at time #{t} is given by
+        ##{
+            U(t)={\tfrac {1}{2}}kx^{2}(t)={\tfrac {1}{2}}kA^{2}\cos ^{2}(\omega t-\varphi )
+        }
+        The total energy of the object is the sum of the kinetic and potential energies
+        ##{
+            E=K+U={\tfrac {1}{2}}kA^{2}
+        }
+        which is a constant value. 
+        Notice that if we solve #{v} from the energy equation we get
+        ##{
+            v = \pm\sqrt{\frac{k}{m}(A^{2}-x^{2})} = \pm\omega\sqrt{A^{2}-x^{2}}
+        }
+        which implies that the velocity is maximum when the displacement is zero and vice versa.
+    }
+}
+\subtree{
+    \title{Superposition}
+    \p{
+        According to the principle of superposition of SHM, the resultant displacement
+        of a number of waves in a medium at a particular point is the vector sum of the individual 
+        displacements produced by each of the waves at that point. 
+        Consider two waves having the same angular frequency (Suppose #{\phi_2 > \phi_1}) in the same line:
+        ##{
+            x_{1}(t)=A_{1}\cos(\omega t+\phi_{1}) \\
+            x_{2}(t)=A_{2}\cos(\omega t+\phi_{2})
+        }
+        Use vector addition we can easily compute the resultant displacement
+        ##{
+            A = \sqrt{A_{1}^{2}+A_{2}^{2}+2A_{1}A_{2}\cos(\phi_{2}-\phi_{1})} \\
+        }
+        and the resultant initial phase
+        ##{
+            \phi = \arctan\left(\frac{A_{1}\sin\phi_{1}+A_{2}\sin\phi_{2}}{A_{1}\cos\phi_{1}+A_{2}\cos\phi_{2}}\right)
+        }
+    }
+    \p{
+        For some special case, the resultant displacement can be simplified:
+        \ul{
+            \li{
+                If #{\phi_2 - \phi_1 = 2k\pi, k \in\Z} then the resultant displacement is
+                ##{
+                    A = A_{1}+A_{2}
+                }
+            }
+            \li{
+                If #{\phi_2 - \phi_1 = (2k+1)\pi, k \in\Z} then the resultant displacement is
+                ##{
+                    A = |A_{1}-A_{2}|
+                }
+            }
+        }
+    }
+    \p{
+        If the angular frequencies are different, the resultant displacement changes with time.
+        For instance, given ##{
+            x_1 = A_1\cos(\omega_1t+\phi_1) \\
+            x_2 = A_2\cos(\omega_2t+\phi_2)
+        }
+        the resultant displacement is
+        ##{
+            A = \sqrt{A_{1}^{2}+A_{2}^{2}+2A_{1}A_{2}\cos((\omega_{2}-\omega_{1})t+\phi_{2}-\phi_{1})}
+        }
+    }
+    \p{
+        If two waves are perpendicular to each other
+        ##{
+            x = A\cos(\omega t + \alpha) 
+            \\ 
+            y = B\cos(\omega t + \beta)
+        }
+        we can compute that
+        ##{
+            \frac{x^2}{A^2} + \frac{y^2}{B^2} -
+            \frac{xy}{AB}\cos(\beta-\alpha) = \sin^2(\beta-\alpha)
+        }
+        which is the equation of an ellipse.
+    }
+    \ul{
+        \li{
+            #{\beta - \alpha = 0 \text{ or } \pi} the ellipse becomes two line:
+            ##{
+                (\frac{x}{A}\pm\frac{y}{B})^2 = 0 \implies y = \pm \frac{B}{A}x
+            }
+            The trajectory is two straight line cross the origin.
+            The resultant amplitude is #{C = A^2 + B^2}
+        }
+        \li{
+            #{\beta - \alpha = \pm\frac{\pi}{2}} the ellipse becomes a regular ellipse,
+            i.e., the ellipse that takes the coordinates axis as its major axis.
+            ##{
+                \frac{x^2}{A^2} + \frac{y^2}{B^2} = 1
+            }
+            If #{\beta - \alpha > 0} the ellipse is clockwise, otherwise it is counter-clockwise.
+        }
+    }
+}
+\subtree{
+    \title{Wave}
+}
