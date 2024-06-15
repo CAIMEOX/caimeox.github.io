@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1295</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003F</fr:addr><fr:route>def-003F.xml</fr:route><fr:title>Small Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1249</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003F</fr:addr><fr:route>def-003F.xml</fr:route><fr:title>Small Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:link href="def-003E.xml" type="local" addr="def-003E">category</fr:link> is said to be <fr:strong>small</fr:strong> 
     if it has a <fr:strong>samll set</fr:strong> (i.e. a set but not a proper class) of objects and morphisms.
     In other words a small category is an <fr:strong>internal category</fr:strong> in category of sets.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1294</fr:anchor><fr:taxon>Category Theory</fr:taxon><fr:addr>math-0006</fr:addr><fr:route>math-0006.xml</fr:route><fr:title>Category Theory of Utilitarianism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1248</fr:anchor><fr:taxon>Category Theory</fr:taxon><fr:addr>math-0006</fr:addr><fr:route>math-0006.xml</fr:route><fr:title>Category Theory of Utilitarianism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     This note is about the category theory and its applications.
     Instead of reading a well-organized book, I prefer to write down the things I learned
     from <fr:link href="ncatlab.xml" type="local" addr="ncatlab">ncatlab</fr:link> and papers.
 </fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>371</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>443</fr:anchor><fr:title>
     <fr:strong>Ideas</fr:strong></fr:title><fr:parent>math-0006</fr:parent></fr:frontmatter><fr:mainmatter>
         Intuitively, a category is a collection of objects and arrows between them,
         such arrows can be composed and there is an identity arrow for each object.
@@ -22,8 +22,8 @@
         several collections of morphisms (<fr:strong>family of collections</fr:strong> indexed by pairs of objects)
     </fr:p>
 </fr:mainmatter></fr:tree>
-<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>374</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003E</fr:addr><fr:route>def-003E.xml</fr:route><fr:title>Category</fr:title></fr:frontmatter><fr:mainmatter>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>372</fr:anchor><fr:title><fr:strong>With one collection</fr:strong></fr:title><fr:parent>def-003E</fr:parent></fr:frontmatter><fr:mainmatter>
+<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>446</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003E</fr:addr><fr:route>def-003E.xml</fr:route><fr:title>Category</fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>444</fr:anchor><fr:title><fr:strong>With one collection</fr:strong></fr:title><fr:parent>def-003E</fr:parent></fr:frontmatter><fr:mainmatter>
     A <fr:strong>category</fr:strong> <fr:tex>C</fr:tex> consists
     <fr:ul><fr:li>
             A collection of <fr:strong>objects</fr:strong> <fr:tex>C_0</fr:tex> (<fr:tex>\text {Ob} (C)</fr:tex>).
@@ -54,7 +54,7 @@
     If the identity map and its axioms are omitted then one speaks of a <fr:strong>semicategory</fr:strong>.
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>373</fr:anchor><fr:title><fr:strong>With a family of collections of morphisms</fr:strong></fr:title><fr:parent>def-003E</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>445</fr:anchor><fr:title><fr:strong>With a family of collections of morphisms</fr:strong></fr:title><fr:parent>def-003E</fr:parent></fr:frontmatter><fr:mainmatter>
     A <fr:strong>category</fr:strong> <fr:tex>C</fr:tex> consists
     <fr:ul><fr:li>
             A collection of <fr:strong>objects</fr:strong> <fr:tex>C_0</fr:tex> (<fr:tex>\text {Ob} (C)</fr:tex>).
@@ -85,7 +85,7 @@
 </fr:p><fr:p>
     One formal way to define a diagram is to use a <fr:strong>functor</fr:strong> from a (very) small category to <fr:tex>C</fr:tex>.
     That is, a functor whose domain is a small category.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>375</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003F</fr:addr><fr:route>def-003F.xml</fr:route><fr:title>Small Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>447</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003F</fr:addr><fr:route>def-003F.xml</fr:route><fr:title>Small Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:link href="def-003E.xml" type="local" addr="def-003E">category</fr:link> is said to be <fr:strong>small</fr:strong> 
     if it has a <fr:strong>samll set</fr:strong> (i.e. a set but not a proper class) of objects and morphisms.
     In other words a small category is an <fr:strong>internal category</fr:strong> in category of sets.
@@ -93,7 +93,7 @@
     We did not explain what a <fr:strong>functor</fr:strong> is, but it is very natural thought.
     Briefly, a functor is a <fr:strong>homomorphism</fr:strong> between two categories.
     It maps objects to objects and morphisms to morphisms, preserving the structure of the categories.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>376</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003G</fr:addr><fr:route>def-003G.xml</fr:route><fr:title>Functor</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>448</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003G</fr:addr><fr:route>def-003G.xml</fr:route><fr:title>Functor</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:strong>functor</fr:strong> <fr:tex>F</fr:tex> from a category <fr:tex>C</fr:tex> to a category <fr:tex>D</fr:tex> is a map
     sending each <fr:tex>x \in  C</fr:tex> to an object <fr:tex>F(x) \in  D</fr:tex> and each morphism
     <fr:tex>f:x \to  y</fr:tex> in <fr:tex>C</fr:tex> to morphism <fr:tex>F(f):F(x) \to  F(y)</fr:tex> in <fr:tex>D</fr:tex>, such that 
@@ -105,7 +105,7 @@
         </fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:p>
     For the sake of completeness, we state the definition of the <fr:strong>functor category</fr:strong>
     and the <fr:strong>natural transformations</fr:strong> between functors.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>377</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003I</fr:addr><fr:route>def-003I.xml</fr:route><fr:title>Functor Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>449</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003I</fr:addr><fr:route>def-003I.xml</fr:route><fr:title>Functor Category</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>C</fr:tex> and <fr:tex>D</fr:tex> be categories, the functor category <fr:tex>D^C</fr:tex> 
     (or <fr:tex>[C,D]</fr:tex>) is the category whose
     <fr:ul><fr:li>
@@ -113,7 +113,7 @@
         </fr:li>
         <fr:li>
             morphisms are <fr:strong>natural transformations</fr:strong> between functors.
-        </fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>378</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003J</fr:addr><fr:route>def-003J.xml</fr:route><fr:title>Natural Transformation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        </fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>450</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003J</fr:addr><fr:route>def-003J.xml</fr:route><fr:title>Natural Transformation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>C</fr:tex> and <fr:tex>D</fr:tex> be categories and <fr:tex>F,G:C \to  D</fr:tex> be functors.
     A <fr:strong>natural transformation</fr:strong> <fr:tex>\alpha :F \Rightarrow   G</fr:tex> is 
     an assignment to every object <fr:tex>x \in  C</fr:tex> of a morphism <fr:tex>\alpha _x:F(x) \to  G(x)</fr:tex> in <fr:tex>D</fr:tex>,
@@ -137,7 +137,7 @@
      
     </fr:embedded-tex-body></fr:embedded-tex></fr:p></fr:mainmatter></fr:tree><fr:p>
     We state the concise functorial definition of diagrams of the shape of categories.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>379</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003H</fr:addr><fr:route>def-003H.xml</fr:route><fr:title>Diagram</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>451</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003H</fr:addr><fr:route>def-003H.xml</fr:route><fr:title>Diagram</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>C</fr:tex> be a category and <fr:tex>J</fr:tex> be a small category.
     A <fr:strong>diagram</fr:strong> of shape <fr:tex>J</fr:tex> in <fr:tex>C</fr:tex> is a functor <fr:tex>X:J \to  C</fr:tex>.
     The category of <fr:tex>J</fr:tex>-shaped diagrams in <fr:tex>C</fr:tex> is the <fr:link href="def-003I.xml" type="local" addr="def-003I">functor category</fr:link> <fr:tex>C^J</fr:tex>.
@@ -145,8 +145,8 @@
     A limit of a diagram <fr:tex>F:D \to  C</fr:tex> is an object <fr:tex>\lim  F</fr:tex> of <fr:tex>C</fr:tex>
     equipped with morphisms to the objects <fr:tex>F(d)</fr:tex> for all <fr:tex>d \in  D</fr:tex>,
     such that everything in sight commutes.
-</fr:p></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1293</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003E</fr:addr><fr:route>def-003E.xml</fr:route><fr:title>Category</fr:title></fr:frontmatter><fr:mainmatter>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>372</fr:anchor><fr:title><fr:strong>With one collection</fr:strong></fr:title><fr:parent>def-003E</fr:parent></fr:frontmatter><fr:mainmatter>
+</fr:p></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1247</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003E</fr:addr><fr:route>def-003E.xml</fr:route><fr:title>Category</fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>444</fr:anchor><fr:title><fr:strong>With one collection</fr:strong></fr:title><fr:parent>def-003E</fr:parent></fr:frontmatter><fr:mainmatter>
     A <fr:strong>category</fr:strong> <fr:tex>C</fr:tex> consists
     <fr:ul><fr:li>
             A collection of <fr:strong>objects</fr:strong> <fr:tex>C_0</fr:tex> (<fr:tex>\text {Ob} (C)</fr:tex>).
@@ -177,7 +177,7 @@
     If the identity map and its axioms are omitted then one speaks of a <fr:strong>semicategory</fr:strong>.
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>373</fr:anchor><fr:title><fr:strong>With a family of collections of morphisms</fr:strong></fr:title><fr:parent>def-003E</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>445</fr:anchor><fr:title><fr:strong>With a family of collections of morphisms</fr:strong></fr:title><fr:parent>def-003E</fr:parent></fr:frontmatter><fr:mainmatter>
     A <fr:strong>category</fr:strong> <fr:tex>C</fr:tex> consists
     <fr:ul><fr:li>
             A collection of <fr:strong>objects</fr:strong> <fr:tex>C_0</fr:tex> (<fr:tex>\text {Ob} (C)</fr:tex>).

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>856</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-0011</fr:addr><fr:route>thm-0011.xml</fr:route><fr:title>Cramer&apos;s rule</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>830</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-0011</fr:addr><fr:route>thm-0011.xml</fr:route><fr:title>Cramer&apos;s rule</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Consider a system of <fr:tex>n</fr:tex> linear equations for <fr:tex>n</fr:tex> unknowns, represented in matrix multiplication form as follows:
     <fr:tex display="block">         A  \cdot  X = B     </fr:tex>
     where <fr:tex>A</fr:tex> is a square matrix of order <fr:tex>n</fr:tex>, <fr:tex>X</fr:tex> is a column matrix of order <fr:tex>n</fr:tex> and <fr:tex>B</fr:tex> is a column matrix of order <fr:tex>n</fr:tex>.
@@ -7,9 +7,9 @@
     The Cramer&apos;s rule states that the solution to the system of equations is given by:
     <fr:tex display="block">         x_i =  \frac { \text {det}(A_i)}{ \text {det}(A)}     </fr:tex>
     where <fr:tex>A_i</fr:tex> is the matrix obtained by replacing the <fr:tex>i</fr:tex>th column of <fr:tex>A</fr:tex> by <fr:tex>B</fr:tex>.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>855</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    This post shows operations and applications over matrix.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>483</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0043</fr:addr><fr:route>def-0043.xml</fr:route><fr:title>Transpose</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>829</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix Computation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+    This post shows operations and applications over matrix, refers to Wikipedia.
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>555</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0043</fr:addr><fr:route>def-0043.xml</fr:route><fr:title>Transpose</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>transpose</fr:strong> of a matrix <fr:tex>A</fr:tex>, denoted by <fr:tex>A^T</fr:tex> is
     the matrix obtained by swapping the rows and columns of <fr:tex>A</fr:tex>.
     It satisfies the following properties:
@@ -20,41 +20,41 @@
     If the following condition satisfies:
     <fr:tex display="block">         a_{ij} = a_{ji}  \quad   \forall  i,j     </fr:tex>
     Then the matrix is called symmetric.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>484</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001N</fr:addr><fr:route>def-001N.xml</fr:route><fr:title>Symmetric Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>556</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001N</fr:addr><fr:route>def-001N.xml</fr:route><fr:title>Symmetric Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A square matrix <fr:tex>A</fr:tex> is symmetric if it is equal to its transpose:
     <fr:tex display="block">         A = A^T     </fr:tex>
-    This also implies <fr:tex>A^{-1} A^T = I</fr:tex></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>485</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0044</fr:addr><fr:route>def-0044.xml</fr:route><fr:title>Determinant</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    This also implies <fr:tex>A^{-1} A^T = I</fr:tex></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>557</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0044</fr:addr><fr:route>def-0044.xml</fr:route><fr:title>Determinant</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The determinant of a <fr:tex>n \times  n</fr:tex> square matrix <fr:tex>A</fr:tex> is commonly denoted <fr:tex>\det  A</fr:tex> or <fr:tex>|A|</fr:tex>.
     It satisfies the following properties:
     <fr:ul><fr:li><fr:tex>\det  A^T =  \det  A</fr:tex></fr:li>
         <fr:li><fr:tex>\det  AB =  \det  A  \det  B</fr:tex></fr:li>
         <fr:li><fr:tex>\det   \lambda  A =  \lambda ^n  \det  A</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:p>
     To compute the inverse of a matrix, we need <fr:strong>Adjugate matrix</fr:strong>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>486</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0045</fr:addr><fr:route>def-0045.xml</fr:route><fr:title>First Minor and Cofactor</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>558</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0045</fr:addr><fr:route>def-0045.xml</fr:route><fr:title>First Minor and Cofactor</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     If <fr:tex>A</fr:tex> is a square matrix, then the <fr:strong>minor</fr:strong> of the entry in the i-th row and j-th 
     column (also called the <fr:tex>(i, j)</fr:tex> minor, or a first minor) is the <fr:strong>determinant</fr:strong> of 
     the sub-matrix formed by deleting the i-th row and j-th column.
     The <fr:tex>(i, j)</fr:tex> minor is denoted as <fr:tex>M_{ij}</fr:tex>.
     The <fr:strong>Cofactor</fr:strong> is obtained by multiplying the minor by <fr:tex>(-1)^{i+j}</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>487</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0046</fr:addr><fr:route>def-0046.xml</fr:route><fr:title>Cofactor Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>559</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0046</fr:addr><fr:route>def-0046.xml</fr:route><fr:title>Cofactor Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The matrix formed by all of the <fr:link href="def-0045.xml" type="local" addr="def-0045">cofactors</fr:link> of a square matrix <fr:tex>A</fr:tex> is called the cofactor matrix,
     or <fr:strong>comatrix</fr:strong>:
     <fr:tex display="block">         C =  \left [               \begin {array}{cccc}                 C_{11} &amp; C_{12} &amp;  \cdots  &amp; C_{1n}  \\                  C_{21} &amp; C_{22} &amp;  \cdots  &amp; C_{2n}  \\                   \vdots  &amp;  \vdots  &amp;  \ddots  &amp;  \vdots   \\                  C_{n1} &amp; C_{n2} &amp;  \cdots  &amp; C_{nn}              \end {array}          \right ]     </fr:tex>
     The <fr:strong>Adjugate matrix</fr:strong> of <fr:tex>A</fr:tex> is the transpose of the cofactor matrix.
 </fr:p></fr:mainmatter></fr:tree><fr:p>
     Then the inverse of <fr:tex>A</fr:tex> is the transpose of the cofactor matrix times the reciprocal of the determinant of <fr:tex>A</fr:tex>:
-    <fr:tex display="block">         A^{-1} =  \frac {1}{ \det  A}  \cdot   \text {adj} A =  \frac {1}{ \det  A}  \cdot  C^T     </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>488</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0047</fr:addr><fr:route>def-0047.xml</fr:route><fr:title>Singular Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tex display="block">         A^{-1} =  \frac {1}{ \det  A}  \cdot   \text {adj} A =  \frac {1}{ \det  A}  \cdot  C^T     </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>560</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0047</fr:addr><fr:route>def-0047.xml</fr:route><fr:title>Singular Matrix</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A square matrix that is not <fr:strong>invertible</fr:strong> is called <fr:strong>singular</fr:strong> or degenerate
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>490</fr:anchor><fr:title>An important property of the inverse of a matrix</fr:title><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">             A  \cdot   \text {adj} A =  \text {adj} A  \cdot  A =  \det  A  \cdot  I         </fr:tex></fr:p>
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>562</fr:anchor><fr:title>An important property of the inverse of a matrix</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">             A  \cdot   \text {adj} A =  \text {adj} A  \cdot  A =  \det  A  \cdot  I         </fr:tex></fr:p>
  
    
-   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>489</fr:anchor><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>561</fr:anchor><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date></fr:frontmatter><fr:mainmatter>
         Let <fr:tex>A  \cdot   \text {adj} A = (b_{ij})</fr:tex> and we have
         <fr:tex display="block">             b_{ij} = a_{i1}A_{j1} + a_{i2}A_{j2} +  \cdots  + a_{in}A_{jn} =  \delta _{ij}  \cdot   \det  A         </fr:tex>
         Hence we have <fr:tex>A  \cdot   \text {adj} A =  \det  A  \cdot  I</fr:tex> 
     </fr:mainmatter></fr:tree>
  
-</fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>492</fr:anchor><fr:title>Matrix Polynomial and Computation</fr:title><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>491</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0048</fr:addr><fr:route>def-0048.xml</fr:route><fr:title>Matrix Polynomial</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>564</fr:anchor><fr:title>Matrix Polynomial and Computation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>563</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0048</fr:addr><fr:route>def-0048.xml</fr:route><fr:title>Matrix Polynomial</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:strong>matrix polynomial</fr:strong> is a polynomial with square matrices as variables.
     The general form of a matrix polynomial is:
     <fr:tex display="block">         P(A) =  \sum _{i=0}^{n} a_i A^i     </fr:tex>
@@ -63,7 +63,7 @@
         If <fr:tex>A</fr:tex> is a diagonal matrix, then the polynomial of <fr:tex>A</fr:tex> is the diagonal matrix of the polynomial of the diagonal elements of <fr:tex>A</fr:tex>.
         <fr:tex display="block">             p(A) =  \begin {bmatrix}                 p(a_{11}) &amp; 0 &amp;  \cdots  &amp; 0  \\                  0 &amp; p(a_{22}) &amp;  \cdots  &amp; 0  \\                   \vdots  &amp;  \vdots  &amp;  \ddots  &amp;  \vdots   \\                  0 &amp; 0 &amp;  \cdots  &amp; p(a_{nn})              \end {bmatrix}         </fr:tex></fr:p><fr:p>
         If <fr:tex>A = P \Lambda  P^{-1}</fr:tex>, then <fr:tex>A^k = P  \Lambda  ^k P^{-1}</fr:tex> and hence
-        <fr:tex display="block">             p(A) = a_0 I + a_1 A + a_2 A^2 +  \cdots  + a_n A^n = P  \Lambda  P^{-1}         </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>495</fr:anchor><fr:title>Solving a Linear System</fr:title><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>493</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-0011</fr:addr><fr:route>thm-0011.xml</fr:route><fr:title>Cramer&apos;s rule</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        <fr:tex display="block">             p(A) = a_0 I + a_1 A + a_2 A^2 +  \cdots  + a_n A^n = P  \Lambda  P^{-1}         </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>567</fr:anchor><fr:title>Solving a Linear System</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>565</fr:anchor><fr:taxon>Theorem</fr:taxon><fr:addr>thm-0011</fr:addr><fr:route>thm-0011.xml</fr:route><fr:title>Cramer&apos;s rule</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Consider a system of <fr:tex>n</fr:tex> linear equations for <fr:tex>n</fr:tex> unknowns, represented in matrix multiplication form as follows:
     <fr:tex display="block">         A  \cdot  X = B     </fr:tex>
     where <fr:tex>A</fr:tex> is a square matrix of order <fr:tex>n</fr:tex>, <fr:tex>X</fr:tex> is a column matrix of order <fr:tex>n</fr:tex> and <fr:tex>B</fr:tex> is a column matrix of order <fr:tex>n</fr:tex>.
@@ -74,7 +74,7 @@
 </fr:p></fr:mainmatter></fr:tree><fr:p>
         Matrix partitioning is the process of dividing a matrix into smaller submatrices. 
         This is often done to simplify the computation of matrix operations, such as matrix multiplication.
-    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>494</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0049</fr:addr><fr:route>def-0049.xml</fr:route><fr:title>Matrix Partitioning</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>566</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0049</fr:addr><fr:route>def-0049.xml</fr:route><fr:title>Matrix Partitioning</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A  \in   \mathbb {C} ^{m \times  n} </fr:tex>. A <fr:strong>partitioning</fr:strong> of <fr:tex>A</fr:tex> is a representation of <fr:tex>A</fr:tex> in the form
     <fr:tex display="block">         A =  \begin {bmatrix}             A_{11} &amp; A_{12} &amp;  \cdots  &amp; A_{1q}  \\              A_{21} &amp; A_{22} &amp;  \cdots  &amp; A_{2q}  \\               \vdots  &amp;  \vdots  &amp;  \ddots  &amp;  \vdots   \\              A_{p1} &amp; A_{p2} &amp;  \cdots  &amp; A_{pq}          \end {bmatrix}     </fr:tex>
     where <fr:tex>A_{ij}  \in   \mathbb {C} ^{m_i  \times  n_j} </fr:tex> for <fr:tex>1  \leq  i  \leq  p</fr:tex> and <fr:tex>1  \leq  j  \leq  q</fr:tex> such that
@@ -90,7 +90,7 @@
         their product can be written:
         <fr:tex display="block">             AB =  \begin {bmatrix} A_1  \\  A_2  \\   \vdots  A_m  \end {bmatrix}              \begin {bmatrix}                 B_1 &amp; B_2 &amp;  \cdots  &amp; B_n              \end {bmatrix} =               \begin {bmatrix}                 A_1B_1 &amp; A_1B_2 &amp;  \cdots  &amp; A_1B_n  \\                  A_2B_1 &amp; A_2B_2 &amp;  \cdots  &amp; A_2B_n  \\                   \vdots  &amp;  \vdots  &amp;  \ddots  &amp;  \vdots   \\                  A_mB_1 &amp; A_mB_2 &amp;  \cdots  &amp; A_mB_n              \end {bmatrix}         </fr:tex>
         We can show that <fr:tex>A=O \iff  A^TA=O</fr:tex>.
-    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>498</fr:anchor><fr:title>Matrix Transformation</fr:title><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>496</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004A</fr:addr><fr:route>def-004A.xml</fr:route><fr:title>Elementary Operations</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>570</fr:anchor><fr:taxon>Section</fr:taxon><fr:title>Matrix Transformation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>568</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004A</fr:addr><fr:route>def-004A.xml</fr:route><fr:title>Elementary Operations</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     There are three types of elementary matrices, which correspond to three types of row operations
     (respectively, column operations, row operations are equivalent to multiplying on the left by the
     corresponding elementary matrix, and column operations are equivalent to multiplying on the right
@@ -100,7 +100,7 @@
         <fr:li><fr:strong>Row multiplication</fr:strong>: Each element in a row can be multiplied by a non-zero constant.
             <fr:tex display="block">                 D_i(k) =  \text {diag} (1,  \cdots , k,  \cdots , 1)             </fr:tex></fr:li>
         <fr:li><fr:strong>Row additio</fr:strong>: A row can be replaced by the sum of that row and a multiple of another row.
-            <fr:tex display="block">                 T_{i,j} =  \begin {bmatrix}                     1  \\                      &amp;  \ddots   \\                      &amp; &amp; 1 &amp; &amp; k  \\                       &amp; &amp; &amp;  \ddots   \\                       &amp; &amp; &amp; &amp; 1  \\                       &amp; &amp; &amp; &amp; &amp;  \ddots   \\                      &amp; &amp; &amp; &amp; &amp; &amp; 1                  \end {bmatrix}             </fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>497</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004B</fr:addr><fr:route>def-004B.xml</fr:route><fr:title>Column / Row Equivalence</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+            <fr:tex display="block">                 T_{i,j} =  \begin {bmatrix}                     1  \\                      &amp;  \ddots   \\                      &amp; &amp; 1 &amp; &amp; k  \\                       &amp; &amp; &amp;  \ddots   \\                       &amp; &amp; &amp; &amp; 1  \\                       &amp; &amp; &amp; &amp; &amp;  \ddots   \\                      &amp; &amp; &amp; &amp; &amp; &amp; 1                  \end {bmatrix}             </fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>569</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004B</fr:addr><fr:route>def-004B.xml</fr:route><fr:title>Column / Row Equivalence</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Two matrices <fr:tex>A,B</fr:tex> are column / row equivalent if one can 
     be obtained from the other by a finite sequence of <fr:link href="def-004A.xml" type="local" addr="def-004A">elementary operations</fr:link>,
     denoted <fr:tex>A  \sim  B</fr:tex>.
@@ -111,4 +111,46 @@
         <fr:tex display="block">             A = E_1E_2 \cdots  E_n         </fr:tex></fr:p><fr:p>
         From above we can deduce that a square matrix <fr:tex>A</fr:tex> is invertible iff <fr:tex>A \sim  E</fr:tex>.
         This trick can be used for solving a linear system and computing the inverse of a matrix.
+        For instance, given <fr:tex>AX=B</fr:tex> we can solve <fr:tex>X</fr:tex> by the following steps:
+        Let <fr:tex>P</fr:tex> be a matrix such that <fr:tex>PA=I</fr:tex> where <fr:tex>I</fr:tex> is the identity matrix.
+        Hence <fr:tex>P = A^{-1}</fr:tex> and we have <fr:tex>X = PB</fr:tex>, we can do elementary operations over matrix <fr:tex>(A, B)</fr:tex>
+        to get the solution of <fr:tex>X</fr:tex>.
+    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>573</fr:anchor><fr:title>Rank</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+        Now let&apos;s talk about the concept of <fr:strong>rank</fr:strong>.
+        In linear algebra, the (column)<fr:strong>rank</fr:strong> of a matrix <fr:tex>A</fr:tex> is the dimension of the vector space 
+        generated (or spanned) by its columns.
+    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>571</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004J</fr:addr><fr:route>def-004J.xml</fr:route><fr:title>Rank</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    The rank of a linear map or operator <fr:tex>\Phi</fr:tex> is defined as the dimension of its range:
+    <fr:tex display="block">          \text {rank} (M) \equiv \dim ( \text {range } (M))     </fr:tex>
+    Note that the range (<fr:strong>column space</fr:strong>) of a matrix <fr:tex>M</fr:tex> is the <fr:link href="def-000M.xml" type="local" addr="def-000M">span</fr:link> of its column vectors.
+</fr:p></fr:mainmatter></fr:tree><fr:p>
+        Similarly we can define the row rank of a matrix. A fundamental result in linear algebra is 
+        that the column rank and the row rank are always equal. Hence we can simply call it the rank of a matrix.
+    </fr:p><fr:p>
+        A common approach to finding the rank of a matrix is to reduce it to a simpler form, 
+        generally <fr:strong>row echelon form</fr:strong>, by elementary row operations.
+        Row operations do not change the row space (hence do not change the row rank), and, being 
+        invertible, map the column space to an isomorphic space (hence do not change the column rank).
+        <fr:tex display="block">             A  \sim  B  \implies   \text {rank} (A) =  \text {rank} (B)              \\                \text {rank} (A) =  \text {rank} (A^T)         </fr:tex>
+        Once in row echelon form, the rank is clearly the same for both row rank and column rank, 
+        and equals to the number of <fr:strong>pivots</fr:strong> (or basic columns) and also the number of non-zero rows.
+    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>572</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004I</fr:addr><fr:route>def-004I.xml</fr:route><fr:title>Row Echelon Form</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    A matrix is in <fr:strong>row echelon form</fr:strong> if
+    <fr:ul><fr:li>All rows having only zero entries are at the bottom</fr:li>
+        <fr:li>
+            The leading entry (that is, the <fr:strong>left-most</fr:strong> nonzero entry) of every nonzero row, called
+            the <fr:strong>pivot</fr:strong>, is on the right of the leading entry of every row above.
+        </fr:li></fr:ul>
+    Some texts add the condition that the leading coefficient must be <fr:tex>1</fr:tex>
+    while others require this only in <fr:strong>reduced row echelon form</fr:strong>.
+</fr:p></fr:mainmatter></fr:tree><fr:p>
+        For instance, matrix <fr:tex>A =  \begin {bmatrix}1&amp;2&amp;1 \\ -2&amp;-3&amp;1 \\ 3&amp;5&amp;0 \end {bmatrix}</fr:tex> can be transformed into reduced row-echelon form:
+        <fr:tex display="block">\begin {aligned}{ \begin {bmatrix}1&amp;2&amp;1 \\ -2&amp;-3&amp;1 \\ 3&amp;5&amp;0 \end {bmatrix}}&amp; \xrightarrow  {2R_{1}+R_{2} \to  R_{2}} { \begin {bmatrix}1&amp;2&amp;1 \\ 0&amp;1&amp;3 \\ 3&amp;5&amp;0 \end {bmatrix}} \xrightarrow  {-3R_{1}+R_{3} \to  R_{3}} { \begin {bmatrix}1&amp;2&amp;1 \\ 0&amp;1&amp;3 \\ 0&amp;-1&amp;-3 \end {bmatrix}} \\ &amp; \xrightarrow  {R_{2}+R_{3} \to  R_{3}}  \, \, { \begin {bmatrix}1&amp;2&amp;1 \\ 0&amp;1&amp;3 \\ 0&amp;0&amp;0 \end {bmatrix}} \xrightarrow  {-2R_{2}+R_{1} \to  R_{1}} { \begin {bmatrix}1&amp;0&amp;-5 \\ 0&amp;1&amp;3 \\ 0&amp;0&amp;0 \end {bmatrix}}~. \end {aligned}</fr:tex>
+        The final matrix has two non-zero rows and thus the rank of matrix <fr:tex>A</fr:tex> is <fr:tex>2</fr:tex>.
+    </fr:p><fr:p>
+        The determinantal rank of a matrix is the order of the largest non-zero minor of the matrix.
+        It is also the number of non-zero eigenvalues of the matrix. 
+        This does not give an efficient way of computing the rank, but it is useful theoretically: 
+        a single non-zero minor witnesses a lower bound for the rank of the matrix,
+        which can be useful to prove that certain operations do not lower the rank of a matrix.
     </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>

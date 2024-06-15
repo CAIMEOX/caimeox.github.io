@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1078</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0048</fr:addr><fr:route>def-0048.xml</fr:route><fr:title>Matrix Polynomial</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    A <fr:strong>matrix polynomial</fr:strong> is a polynomial with square matrices as variables.
-    The general form of a matrix polynomial is:
-    <fr:tex display="block">         P(A) =  \sum _{i=0}^{n} a_i A^i     </fr:tex>
-    where <fr:tex>A^0 = I</fr:tex> is the identity matrix.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1077</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix Computation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1216</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004I</fr:addr><fr:route>def-004I.xml</fr:route><fr:title>Row Echelon Form</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    A matrix is in <fr:strong>row echelon form</fr:strong> if
+    <fr:ul><fr:li>All rows having only zero entries are at the bottom</fr:li>
+        <fr:li>
+            The leading entry (that is, the <fr:strong>left-most</fr:strong> nonzero entry) of every nonzero row, called
+            the <fr:strong>pivot</fr:strong>, is on the right of the leading entry of every row above.
+        </fr:li></fr:ul>
+    Some texts add the condition that the leading coefficient must be <fr:tex>1</fr:tex>
+    while others require this only in <fr:strong>reduced row echelon form</fr:strong>.
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1215</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix Computation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This post shows operations and applications over matrix, refers to Wikipedia.
 </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>555</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0043</fr:addr><fr:route>def-0043.xml</fr:route><fr:title>Transpose</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>transpose</fr:strong> of a matrix <fr:tex>A</fr:tex>, denoted by <fr:tex>A^T</fr:tex> is
