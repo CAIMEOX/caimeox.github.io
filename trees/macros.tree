@@ -57,18 +57,20 @@
 \def\F{\mathbb{F}}
 \def\U{\mathcal{U}}
 \def\T{\mathcal{T}}
+\def\set[a]{\{ \a \}}
+\def\sgn{\text{sgn}}
+\def\id{\text{id}}
+
 
 % Linear Algebra
-\def\sgn{\text{sgn}}
 \def\spn{\text{span}}
 \def\cl{\mathcal{L}}
-\def\set[a]{\{ \a \}}
 \def\nulls{\text{null }}
 \def\range{\text{range }}
 \def\dom{\text{dom }}
 \def\cod{\text{cod }}
-\def\id{\text{id}}
 \def\mat{\mathcal{M}}
+\def\rank{\text{rank}}
 
 % Type Theory
 \def\type{\space\text{type}}

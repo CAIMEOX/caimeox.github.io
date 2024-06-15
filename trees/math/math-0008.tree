@@ -1,8 +1,9 @@
-\title{Matrix}
+\title{Matrix Computation}
 \taxon{Linear Algebra}
+\date{2024-06-10}
 \import{macros}
 \p{
-    This post shows operations and applications over matrix.
+    This post shows operations and applications over matrix, refers to Wikipedia.
 }
 \transclude{def-0043}
 \p{
@@ -106,6 +107,7 @@
 }
 \subtree{
     \title{Matrix Transformation}
+    \taxon{Section}
     \transclude{def-004A}
     \transclude{def-004B}
     \p{
@@ -118,5 +120,48 @@
     \p{
         From above we can deduce that a square matrix #{A} is invertible iff #{A\sim E}.
         This trick can be used for solving a linear system and computing the inverse of a matrix.
+        For instance, given #{AX=B} we can solve #{X} by the following steps:
+        Let #{P} be a matrix such that #{PA=I} where #{I} is the identity matrix.
+        Hence #{P = A^{-1}} and we have #{X = PB}, we can do elementary operations over matrix #{(A, B)}
+        to get the solution of #{X}.
+    }
+}
+\subtree{
+    \title{Rank}
+    \p{
+        Now let's talk about the concept of \strong{rank}.
+        In linear algebra, the (column)\strong{rank} of a matrix #{A} is the dimension of the vector space 
+        generated (or spanned) by its columns.
+    }
+    \transclude{def-004J}
+    \p{
+        Similarly we can define the row rank of a matrix. A fundamental result in linear algebra is 
+        that the column rank and the row rank are always equal. Hence we can simply call it the rank of a matrix.
+    }
+    \p{
+        A common approach to finding the rank of a matrix is to reduce it to a simpler form, 
+        generally \strong{row echelon form}, by elementary row operations.
+        Row operations do not change the row space (hence do not change the row rank), and, being 
+        invertible, map the column space to an isomorphic space (hence do not change the column rank).
+        ##{
+            A \sim B \implies \rank(A) = \rank(B)
+            \\ 
+            \rank(A) = \rank(A^T)
+        }
+        Once in row echelon form, the rank is clearly the same for both row rank and column rank, 
+        and equals to the number of \strong{pivots} (or basic columns) and also the number of non-zero rows.
+    }
+    \transclude{def-004I}
+    \p{
+        For instance, matrix #{A = \begin{bmatrix}1&2&1\\-2&-3&1\\3&5&0\end{bmatrix}} can be transformed into reduced row-echelon form:
+        ##{\begin{aligned}{\begin{bmatrix}1&2&1\\-2&-3&1\\3&5&0\end{bmatrix}}&\xrightarrow {2R_{1}+R_{2}\to R_{2}} {\begin{bmatrix}1&2&1\\0&1&3\\3&5&0\end{bmatrix}}\xrightarrow {-3R_{1}+R_{3}\to R_{3}} {\begin{bmatrix}1&2&1\\0&1&3\\0&-1&-3\end{bmatrix}}\\&\xrightarrow {R_{2}+R_{3}\to R_{3}} \,\,{\begin{bmatrix}1&2&1\\0&1&3\\0&0&0\end{bmatrix}}\xrightarrow {-2R_{2}+R_{1}\to R_{1}} {\begin{bmatrix}1&0&-5\\0&1&3\\0&0&0\end{bmatrix}}~.\end{aligned}}
+        The final matrix has two non-zero rows and thus the rank of matrix #{A} is #{2}.
+    }
+    \p{
+        The determinantal rank of a matrix is the order of the largest non-zero minor of the matrix.
+        It is also the number of non-zero eigenvalues of the matrix. 
+        This does not give an efficient way of computing the rank, but it is useful theoretically: 
+        a single non-zero minor witnesses a lower bound for the rank of the matrix,
+        which can be useful to prove that certain operations do not lower the rank of a matrix.
     }
 }

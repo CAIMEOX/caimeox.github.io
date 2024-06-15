@@ -1,0 +1,14 @@
+\title{Row Echelon Form}
+\taxon{Definition}
+\p{
+    A matrix is in \strong{row echelon form} if
+    \ul{
+        \li{All rows having only zero entries are at the bottom}
+        \li{
+            The leading entry (that is, the \strong{left-most} nonzero entry) of every nonzero row, called
+            the \strong{pivot}, is on the right of the leading entry of every row above.
+        }
+    }
+    Some texts add the condition that the leading coefficient must be #{1}
+    while others require this only in \strong{reduced row echelon form}.
+}

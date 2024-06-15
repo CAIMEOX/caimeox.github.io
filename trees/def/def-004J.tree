@@ -1,0 +1,10 @@
+\title{Rank}
+\taxon{Definition}
+\import{macros}
+\p{
+    The rank of a linear map or operator #{\Phi} is defined as the dimension of its range:
+    ##{
+        \rank(M)\equiv\dim(\range(M))
+    }
+    Note that the range (\strong{column space}) of a matrix #{M} is the [span](def-000M) of its column vectors.
+}
