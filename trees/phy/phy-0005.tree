@@ -160,4 +160,63 @@
 }
 \subtree{
     \title{Wave}
+    \p{
+        A \strong{wave} is a propagating dynamic disturbance (change from equilibrium) of one or more quantities.
+        Waves are often described by a wave equation (standing wave field of two opposite waves) or a one-way 
+        \strong{wave equation} for single wave propagation in a defined direction.
+    }
+    \p{
+        There are two types of waves that are commonly stdudied: mechanical waves and electromagnetic waves.
+        \ul{
+            \li{
+                A \strong{mechanical wave} is a local deformation (strain) in some physical medium that propagates
+                form particle to particle by creating local stresses that cause strain in neighboring particles.
+            }
+            \li{
+                The electromagnetic wave us propagating by the coupling between the electric and magnetic 
+                fields. Electromagnetic waves can travel through a vacuum and through some dielectric media.
+            }
+        }
+    }
+    \p{
+        According to the direction of vibration and propagation, waves can be classified into two types.
+    }
+    \transclude{def-004K}
+    \subtree{
+        \title{Basic Quantities}
+        \p{
+            The wavelength, frequency, speed and period are four import quantities of a wave.
+            Now we give their relations.
+        }
+        \p{
+            The \strong{wavelength} #{\lambda} of a sinusoidal waveform traveling at constant speed #{v} is given by
+            ##{
+                \lambda = vT = \frac{v}{f}
+            }
+            where #{f} is the frequency of the wave and #{T} is the period of the wave.
+        }
+    }
+    \subtree{
+        \title{Basic Principle}
+        \p{
+            The \strong{principle of superposition} states that when two or more waves overlap, the resultant displacement
+            at any point is the vector sum of the displacements of the individual waves at that point.
+        }
+        \p{
+            The \strong{Huygens principle} states that each point on a \strong{wavefront} is a source of spherical wavelets and the
+            wavefront at a later time is the \strong{envelope} of these wavelets.
+        }
+    }
+    \p{
+        If the displacement of origin #{O} can be expressed as
+        ##{
+            y_O = A\cos(\omega t)
+        } 
+        Such a vibration propagates along x-axis, the displacement of a point #{P} (at #{x}) at time #{t} is
+        ##{
+            y = A\cos(\omega t - 2\pi f \frac{x}{v}) = A\cos \omega(t - \frac{x}{v})
+        }
+        The distance between #{P} and #{O} is #{x}, in this time period the origin vibrates #{\frac{x}{v}f} times.
+        Every vibration changes the phase with #{2\pi}. Hence #{P} is behind #{O} in #{2\pi f \frac{x}{v}} in phase.
+    }
 }
