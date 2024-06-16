@@ -137,6 +137,7 @@
     \p{
         Similarly we can define the row rank of a matrix. A fundamental result in linear algebra is 
         that the column rank and the row rank are always equal. Hence we can simply call it the rank of a matrix.
+        If the column rank equals to the column size, we say that the matrix is full column rank.
     }
     \p{
         A common approach to finding the rank of a matrix is to reduce it to a simpler form, 
@@ -164,4 +165,67 @@
         a single non-zero minor witnesses a lower bound for the rank of the matrix,
         which can be useful to prove that certain operations do not lower the rank of a matrix.
     }
+    \p{
+        We can conclude the properties of rank:
+        ##{
+            \begin{align*}
+                &0 \leq \rank(A_{m\times n}) \leq \min(m,n) \\
+                &\rank(A^T) = \rank(A) \\ 
+                & A \sim B \implies \rank(A)=\rank(B) \\ 
+                & P, Q \text{ is invertible} \implies \rank(PAQ) = \rank(A) \\ 
+                & \max(\rank(A), \rank(B)) \leq \rank(A, B) \leq \rank(A) + \rank(B) \\ 
+                & \rank(A+B) \leq \rank(A) + \rank(B) \\
+                & \rank(AB) \leq \min(\rank(A), \rank(B)) \\ 
+                & A_{m\times n}B_{n\times l} = O\implies \rank(A) + \rank(B) \leq n
+            \end{align*}
+        }
+    }
+    \p{
+        With such properties we can prove an important theorem:
+        ##{
+            AB = O \land A \text{ is full rank} \implies B = O
+        }
+        which is known as the cancellation law of matrix multiplication.
+    }
+    \p{
+        The rank of a matrix is also related to the solution of a linear system.
+        If the rank of the coefficient matrix is less than the rank of the augmented matrix, 
+        then the system is inconsistent. Hence there does not exist a solution.
+        Similarly we have the following discussion: For a #{n}-variable linear system #{Ax = b}
+        \ul{
+            \li{
+                If #{\rank(A) < \rank(A,b)}, the solution does not exist.
+            }
+            \li{
+                If #{\rank(A)=\rank(A,b)=n}, there is a unique solution.
+            }
+            \li{
+                Ig #{\rank(A)=\rank(A,b)<n}, there are infinite solutions.
+            }
+        }
+        This leads two fundamental theorems of linear systems:
+        \ul{
+            \li{
+                #{n}-variable regular linear system #{Ax = 0} has a non-trivial solution iff #{\rank(A) < n}.
+            }
+            \li{
+                Matrix equation #{AX = B} has solutions iff #{\rank(A) = \rank(A,B)}.
+            }
+        }
+    }
+}
+\subtree{
+    \title{Linear Combinations}
+    \p{
+        
+    }
+    \transclude{def-000L}
+    \p{
+        Given two sets of vectors, we say that they are eqaul iff their elements can write as linear combinations of each other.
+        This condition can be written using rank:
+        ##{
+            \rank(A) = \rank(B) = \rank(A, B)
+        }
+    }
+    \transclude{def-000P}
 }
