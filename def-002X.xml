@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1344</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002X</fr:addr><fr:route>def-002X.xml</fr:route><fr:title>Unit Law Operations</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1354</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002X</fr:addr><fr:route>def-002X.xml</fr:route><fr:title>Unit Law Operations</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be a type.
     We defined the <fr:strong>unit law</fr:strong> operations for <fr:tex>x=_Ay</fr:tex>:
     <fr:tex display="block">          \begin {align*}              \text {left-unit} &amp; : (x=_Ay) \to  ( \text {refl} _x \cdot  x = x)  \\               \text {right-unit} &amp; : (x=_Ay) \to  (x \cdot \text {refl} _y = x)          \end {align*}     </fr:tex></fr:p>
@@ -10,7 +10,7 @@
     <fr:tex display="block">          \begin {align*}              \text {left-unit}( \text {refl} _x) &amp;:  \text {refl} _x  \cdot   \text {refl} _x =  \text {refl} _x  \\               \text {right-unit}( \text {refl} _x) &amp;:  \text {refl} _x  \cdot   \text {refl} _x =  \text {refl} _x          \end {align*}     </fr:tex>
     In both cases we need only to construct <fr:tex>\text {refl} _{ \text {refl} _x}</fr:tex>.
 </fr:mainmatter></fr:tree>
-</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1343</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0005</fr:addr><fr:route>tt-0005.xml</fr:route><fr:title>Identity Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1353</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0005</fr:addr><fr:route>tt-0005.xml</fr:route><fr:title>Identity Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This post discuss the identity types in type theory.
     Refer to <fr:link href="hott-2022.xml" type="local" addr="hott-2022">Introduction to Homotopy Type Theory</fr:link>.
 </fr:p><fr:p>

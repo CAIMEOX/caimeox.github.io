@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1210</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000W</fr:addr><fr:route>def-000W.xml</fr:route><fr:title>Relation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1218</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000W</fr:addr><fr:route>def-000W.xml</fr:route><fr:title>Relation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:strong>relation</fr:strong> <fr:tex>R</fr:tex> is a subset of the Cartesian product of two sets <fr:tex>A</fr:tex> and
     <fr:tex>B</fr:tex>, i.e. <fr:tex>R \subseteq  A \times  B</fr:tex>.
     If <fr:tex>(a,b) \in  R</fr:tex>, we write <fr:tex>aRb</fr:tex>.
 
     A relation that between <fr:tex>X</fr:tex> and itself is called <fr:strong>homogeneous relation</fr:strong>.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1209</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1217</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to <fr:link href="cat-sci-2013.xml" type="local" addr="cat-sci-2013">Category Theory for Scientists</fr:link>.
 </fr:p><fr:p><fr:strong>Set</fr:strong> is a common concept in mathematics.
     This post is a brief introduction to set theory aimed at 
@@ -316,7 +316,7 @@
     </fr:embedded-tex-body></fr:embedded-tex>
 
     there exists a <fr:em>unique</fr:em> arrow <fr:tex>\langle  f,g  \rangle _Z: A \to  X \times _Z Y</fr:tex> such that
-    <fr:tex display="block">          \pi _1 \circ \langle  f,g  \rangle _Z = f  \text { and }  \pi _2 \circ \langle  f,g  \rangle _Z = g     </fr:tex></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1207</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000X</fr:addr><fr:route>def-000X.xml</fr:route><fr:title>Equivalence Relation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tex display="block">          \pi _1 \circ \langle  f,g  \rangle _Z = f  \text { and }  \pi _2 \circ \langle  f,g  \rangle _Z = g     </fr:tex></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1215</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000X</fr:addr><fr:route>def-000X.xml</fr:route><fr:title>Equivalence Relation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     An equivalence relation <fr:tex>R</fr:tex> on a set <fr:tex>A</fr:tex> is a <fr:link href="def-000W.xml" type="local" addr="def-000W">relation</fr:link> that is reflexive,
     symmetric, and transitive.
     <fr:ul><fr:li>Reflexive:
@@ -326,7 +326,7 @@
         <fr:li>Transitive:
             <fr:tex>\forall  x,y,z \in  A, xRy \land  yRz \implies  xRz</fr:tex></fr:li></fr:ul>
     We often denote the equivalence relation by <fr:tex>\sim</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1208</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002G</fr:addr><fr:route>def-002G.xml</fr:route><fr:title>Function</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1216</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002G</fr:addr><fr:route>def-002G.xml</fr:route><fr:title>Function</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> be sets then a <fr:strong>function</fr:strong> <fr:tex>f:X  \to  Y</fr:tex>
     is a mapping that sends each element of <fr:tex>X</fr:tex> to a unique element of <fr:tex>Y</fr:tex>,
     denoted by <fr:tex>f(x) = y</fr:tex>.

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1191</fr:anchor><fr:taxon>About</fr:taxon><fr:addr>about</fr:addr><fr:route>about.xml</fr:route><fr:title>Rabbit Hole</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         i \hbar   \frac { \partial }{ \partial  t}  \Psi (x, t) =  \hat {H}  \Psi (x, t)     </fr:tex></fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>765</fr:anchor><fr:title>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1199</fr:anchor><fr:taxon>About</fr:taxon><fr:addr>about</fr:addr><fr:route>about.xml</fr:route><fr:title>Rabbit Hole</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         i \hbar   \frac { \partial }{ \partial  t}  \Psi (x, t) =  \hat {H}  \Psi (x, t)     </fr:tex></fr:p>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>771</fr:anchor><fr:title>
     <fr:strong>What is this website about?</fr:strong>
 </fr:title><fr:parent>about</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
@@ -11,7 +11,7 @@
     </fr:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>766</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>772</fr:anchor><fr:title>
     <fr:strong>What is the meaning of &quot;Rabbit Hole&quot;?</fr:strong>
 </fr:title><fr:parent>about</fr:parent></fr:frontmatter><fr:mainmatter>
     The name of this website &quot;<fr:strong>Rabbit Hole</fr:strong>&quot; carries a metaphorical significance inspired by Lewis Carroll&apos;s 
@@ -21,7 +21,7 @@
     a series of trees in the forest that leads to a chain of related topics.
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>767</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>773</fr:anchor><fr:title>
     <fr:strong>How to navigate?</fr:strong>
 </fr:title><fr:parent>about</fr:parent></fr:frontmatter><fr:mainmatter>    <fr:p>
         This website is a “<fr:em>forest</fr:em>” created using the <fr:strong>Forester</fr:strong> tool.
@@ -35,18 +35,18 @@
         <fr:code>tt</fr:code> for Type Theory and <fr:code>math</fr:code> for Mathematics.
                                                                                             </fr:p>
 </fr:mainmatter></fr:tree>
-</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="true"><fr:frontmatter><fr:anchor>1189</fr:anchor><fr:addr>index</fr:addr><fr:route>index.xml</fr:route><fr:title>The Rabbit Hole</fr:title><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter>
+</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="true"><fr:frontmatter><fr:anchor>1197</fr:anchor><fr:addr>index</fr:addr><fr:route>index.xml</fr:route><fr:title>The Rabbit Hole</fr:title><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter>
     
     
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>764</fr:anchor><fr:taxon>Person</fr:taxon><fr:addr>caimeo</fr:addr><fr:route>caimeo.xml</fr:route><fr:title>CAIMEO</fr:title><fr:meta name="position">Student</fr:meta><fr:meta name="external">https://github.com/CAIMEOX</fr:meta></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>770</fr:anchor><fr:taxon>Person</fr:taxon><fr:addr>caimeo</fr:addr><fr:route>caimeo.xml</fr:route><fr:title>CAIMEO</fr:title><fr:meta name="position">Student</fr:meta><fr:meta name="external">https://github.com/CAIMEOX</fr:meta></fr:frontmatter><fr:mainmatter><fr:p>
     A student interested in math, physics and computer science.
 </fr:p><fr:p><fr:ul><fr:li>Learning Programming Language Theory and Type Theory</fr:li>
         <fr:li>Attend in writing articles about String Theory</fr:li>
         <fr:li>Reading Type Theory and Formal Proof and Homotopy Type Theory</fr:li>
         <fr:li>Working on CommandLisp</fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree>
     
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>768</fr:anchor><fr:taxon>About</fr:taxon><fr:addr>about</fr:addr><fr:route>about.xml</fr:route><fr:title>Rabbit Hole</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         i \hbar   \frac { \partial }{ \partial  t}  \Psi (x, t) =  \hat {H}  \Psi (x, t)     </fr:tex></fr:p>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>765</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>774</fr:anchor><fr:taxon>About</fr:taxon><fr:addr>about</fr:addr><fr:route>about.xml</fr:route><fr:title>Rabbit Hole</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         i \hbar   \frac { \partial }{ \partial  t}  \Psi (x, t) =  \hat {H}  \Psi (x, t)     </fr:tex></fr:p>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>771</fr:anchor><fr:title>
     <fr:strong>What is this website about?</fr:strong>
 </fr:title><fr:parent>about</fr:parent></fr:frontmatter><fr:mainmatter>
     <fr:p>
@@ -57,7 +57,7 @@
     </fr:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>766</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>772</fr:anchor><fr:title>
     <fr:strong>What is the meaning of &quot;Rabbit Hole&quot;?</fr:strong>
 </fr:title><fr:parent>about</fr:parent></fr:frontmatter><fr:mainmatter>
     The name of this website &quot;<fr:strong>Rabbit Hole</fr:strong>&quot; carries a metaphorical significance inspired by Lewis Carroll&apos;s 
@@ -67,7 +67,7 @@
     a series of trees in the forest that leads to a chain of related topics.
 </fr:mainmatter></fr:tree>
 
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>767</fr:anchor><fr:title>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>773</fr:anchor><fr:title>
     <fr:strong>How to navigate?</fr:strong>
 </fr:title><fr:parent>about</fr:parent></fr:frontmatter><fr:mainmatter>    <fr:p>
         This website is a “<fr:em>forest</fr:em>” created using the <fr:strong>Forester</fr:strong> tool.
@@ -84,7 +84,7 @@
 </fr:mainmatter></fr:tree>
 
     
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>769</fr:anchor><fr:addr>posts</fr:addr><fr:route>posts.xml</fr:route><fr:title>Blog posts</fr:title><fr:authors><fr:contributor>CAIMEO</fr:contributor></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>262</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0002</fr:addr><fr:route>tt-0002.xml</fr:route><fr:title>Introduction to Type Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>27</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>This is a note on dependent type theory. Refer to <fr:link href="hott-book-2013.xml" type="local" addr="hott-book-2013">HoTT Book</fr:link> and <fr:link href="hott-2022.xml" type="local" addr="hott-2022">Egbert Rijke&apos;s</fr:link>.</fr:p><fr:p><fr:strong>Homotopy type theory</fr:strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>775</fr:anchor><fr:addr>posts</fr:addr><fr:route>posts.xml</fr:route><fr:title>Blog posts</fr:title><fr:authors><fr:contributor>CAIMEO</fr:contributor></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>262</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0002</fr:addr><fr:route>tt-0002.xml</fr:route><fr:title>Introduction to Type Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>27</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>This is a note on dependent type theory. Refer to <fr:link href="hott-book-2013.xml" type="local" addr="hott-book-2013">HoTT Book</fr:link> and <fr:link href="hott-2022.xml" type="local" addr="hott-2022">Egbert Rijke&apos;s</fr:link>.</fr:p><fr:p><fr:strong>Homotopy type theory</fr:strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
     The set-theoretic foundation has two two layers:
     <fr:ul><fr:li>the deductive system of first-order logic</fr:li>
         <fr:li>the theory of a particular theory, such as ZFC</fr:li></fr:ul> 
@@ -1229,7 +1229,7 @@
     Hence <fr:tex>p^0 \pm  p^1 &gt; 0</fr:tex> and <fr:tex>p^ \pm &gt;0</fr:tex>, which both are possible candidates for energy.
     We finally choose <fr:tex>p^-</fr:tex> as the component, we explain this later. 
 </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>771</fr:anchor><fr:addr>notes</fr:addr><fr:route>notes.xml</fr:route><fr:title>Notes</fr:title></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>354</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0001</fr:addr><fr:route>tt-0001.xml</fr:route><fr:title>Untyped Lambda Calculus</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>777</fr:anchor><fr:addr>notes</fr:addr><fr:route>notes.xml</fr:route><fr:title>Notes</fr:title></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>354</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0001</fr:addr><fr:route>tt-0001.xml</fr:route><fr:title>Untyped Lambda Calculus</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to <fr:link href="ttafp-2014.xml" type="local" addr="ttafp-2014">Type Theory and Formal Proof</fr:link>.
 </fr:p><fr:p>
     The idea to generalize the behavior of functions in mathematics and logic led to the development of the lambda calculus.
@@ -3761,7 +3761,7 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
         a matrix called the <fr:strong>Jacobin matrix</fr:strong> of <fr:tex>f</fr:tex>.
         <fr:tex display="block">             Df(x) =  \begin {bmatrix}                  \frac { \partial  f_1}{ \partial  x_1} &amp;  \frac { \partial  f_1}{ \partial  x_2} &amp;  \cdots  &amp;  \frac { \partial  f_1}{ \partial  x_n}  \\                   \frac { \partial  f_2}{ \partial  x_1} &amp;  \frac { \partial  f_2}{ \partial  x_2} &amp;  \cdots  &amp;  \frac { \partial  f_2}{ \partial  x_n}  \\                   \vdots  &amp;  \vdots  &amp;  \ddots  &amp;  \vdots   \\                   \frac { \partial  f_m}{ \partial  x_1} &amp;  \frac { \partial  f_m}{ \partial  x_2} &amp;  \cdots  &amp;  \frac { \partial  f_m}{ \partial  x_n}              \end {bmatrix} =  \left [                  \frac { \partial  f_i}{ \partial  x_j}              \right ]         </fr:tex>
         where <fr:tex>i</fr:tex> ranges row and <fr:tex>j</fr:tex> ranges column.
-    </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>574</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix Computation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+    </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>577</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix Computation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This post shows operations and applications over matrix, refers to Wikipedia.
 </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>555</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0043</fr:addr><fr:route>def-0043.xml</fr:route><fr:title>Transpose</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>transpose</fr:strong> of a matrix <fr:tex>A</fr:tex>, denoted by <fr:tex>A^T</fr:tex> is
@@ -3880,6 +3880,7 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
 </fr:p></fr:mainmatter></fr:tree><fr:p>
         Similarly we can define the row rank of a matrix. A fundamental result in linear algebra is 
         that the column rank and the row rank are always equal. Hence we can simply call it the rank of a matrix.
+        If the column rank equals to the column size, we say that the matrix is full column rank.
     </fr:p><fr:p>
         A common approach to finding the rank of a matrix is to reduce it to a simpler form, 
         generally <fr:strong>row echelon form</fr:strong>, by elementary row operations.
@@ -3907,7 +3908,46 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
         This does not give an efficient way of computing the rank, but it is useful theoretically: 
         a single non-zero minor witnesses a lower bound for the rank of the matrix,
         which can be useful to prove that certain operations do not lower the rank of a matrix.
-    </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>588</fr:anchor><fr:taxon>Mechanics</fr:taxon><fr:addr>phy-0004</fr:addr><fr:route>phy-0004.xml</fr:route><fr:title>Classical Mechanics</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    </fr:p><fr:p>
+        We can conclude the properties of rank:
+        <fr:tex display="block">              \begin {align*}                 &amp;0  \leq   \text {rank} (A_{m \times  n})  \leq   \min (m,n)  \\                  &amp; \text {rank} (A^T) =  \text {rank} (A)  \\                   &amp; A  \sim  B  \implies   \text {rank} (A)= \text {rank} (B)  \\                   &amp; P, Q  \text { is invertible}  \implies   \text {rank} (PAQ) =  \text {rank} (A)  \\                   &amp;  \max ( \text {rank} (A),  \text {rank} (B))  \leq   \text {rank} (A, B)  \leq   \text {rank} (A) +  \text {rank} (B)  \\                   &amp;  \text {rank} (A+B)  \leq   \text {rank} (A) +  \text {rank} (B)  \\                  &amp;  \text {rank} (AB)  \leq   \min ( \text {rank} (A),  \text {rank} (B))  \\                   &amp; A_{m \times  n}B_{n \times  l} = O \implies   \text {rank} (A) +  \text {rank} (B)  \leq  n              \end {align*}         </fr:tex></fr:p><fr:p>
+        With such properties we can prove an important theorem:
+        <fr:tex display="block">             AB = O  \land  A  \text { is full rank}  \implies  B = O         </fr:tex>
+        which is known as the cancellation law of matrix multiplication.
+    </fr:p><fr:p>
+        The rank of a matrix is also related to the solution of a linear system.
+        If the rank of the coefficient matrix is less than the rank of the augmented matrix, 
+        then the system is inconsistent. Hence there does not exist a solution.
+        Similarly we have the following discussion: For a <fr:tex>n</fr:tex>-variable linear system <fr:tex>Ax = b</fr:tex>
+        <fr:ul><fr:li>
+                If <fr:tex>\text {rank} (A) &lt;  \text {rank} (A,b)</fr:tex>, the solution does not exist.
+            </fr:li>
+            <fr:li>
+                If <fr:tex>\text {rank} (A)= \text {rank} (A,b)=n</fr:tex>, there is a unique solution.
+            </fr:li>
+            <fr:li>
+                Ig <fr:tex>\text {rank} (A)= \text {rank} (A,b)&lt;n</fr:tex>, there are infinite solutions.
+            </fr:li></fr:ul>
+        This leads two fundamental theorems of linear systems:
+        <fr:ul><fr:li><fr:tex>n</fr:tex>-variable regular linear system <fr:tex>Ax = 0</fr:tex> has a non-trivial solution iff <fr:tex>\text {rank} (A) &lt; n</fr:tex>.
+            </fr:li>
+            <fr:li>
+                Matrix equation <fr:tex>AX = B</fr:tex> has solutions iff <fr:tex>\text {rank} (A) =  \text {rank} (A,B)</fr:tex>.
+            </fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>576</fr:anchor><fr:title>Linear Combinations</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:p></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>574</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000L</fr:addr><fr:route>def-000L.xml</fr:route><fr:title>Linear Combination</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    Let <fr:tex>V</fr:tex> be a <fr:link href="def-000H.xml" type="local" addr="def-000H">vector space</fr:link> over a field <fr:tex>F</fr:tex>.
+    Let <fr:tex>v_1,  \dots , v_n</fr:tex> be vectors in <fr:tex>V</fr:tex>.
+    A <fr:strong>linear combination</fr:strong> of <fr:tex>v_1,  \dots , v_n</fr:tex> is an expression of the form
+    <fr:tex display="block">         a_1 v_1 +  \dots  + a_n v_n     </fr:tex>
+    where <fr:tex>a_1,  \dots , a_n  \in  F</fr:tex>.
+</fr:p></fr:mainmatter></fr:tree><fr:p>
+        Given two sets of vectors, we say that they are eqaul iff their elements can write as linear combinations of each other.
+        This condition can be written using rank:
+        <fr:tex display="block">              \text {rank} (A) =  \text {rank} (B) =  \text {rank} (A, B)         </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>575</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000P</fr:addr><fr:route>def-000P.xml</fr:route><fr:title>Linearly independent</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    A set of vectors <fr:tex>\{ v_1,  \dots , v_n \}</fr:tex> is called <fr:strong>linearly independent</fr:strong> if
+    <fr:tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</fr:tex>
+    implies that <fr:tex>a_1 =  \dots  = a_n = 0</fr:tex>.
+    The trivial case of <fr:tex>\{ 0 \}</fr:tex> is also considered linearly independent.
+</fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>591</fr:anchor><fr:taxon>Mechanics</fr:taxon><fr:addr>phy-0004</fr:addr><fr:route>phy-0004.xml</fr:route><fr:title>Classical Mechanics</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Notes about the classic mechanics. 
     Most of the content is based on the Wikipedia page about the subject.
 </fr:p><fr:p>
@@ -3916,7 +3956,7 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
     All physical laws take their simplest form in an <fr:strong>inertial</fr:strong> frame.
     <fr:strong>Galilean invariance</fr:strong> or <fr:strong>Galilean relativity</fr:strong> states that the 
     laws of motion are the same in all <fr:strong>inertial frames of reference</fr:strong>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>575</fr:anchor><fr:title>Center of mass</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>578</fr:anchor><fr:title>Center of mass</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
         The center of mass of a distribution of mass in space is the unique point 
         at any given time where the weighted relative position of the distributed mass sums to zero.
         <fr:ul><fr:li><fr:strong>System of particles</fr:strong>
@@ -3925,7 +3965,7 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
                 <fr:p>
                     If the mass is distributed continuously, the center of mass is given by the
                     following formula:
-                    <fr:tex display="block">                          \vec {R} =  \frac { \int   \vec {r} dm}{ \int  dm}                     </fr:tex></fr:p></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>579</fr:anchor><fr:title>Work and Energy</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Work</fr:strong> is the energy transferred to or from an object via the application of force along a displacement.
+                    <fr:tex display="block">                          \vec {R} =  \frac { \int   \vec {r} dm}{ \int  dm}                     </fr:tex></fr:p></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>582</fr:anchor><fr:title>Work and Energy</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Work</fr:strong> is the energy transferred to or from an object via the application of force along a displacement.
         <fr:ul><fr:li>Positive Work: The force has a component in the direction of the displacement.</fr:li>
             <fr:li>Negative Work: The force has a component opposite to the direction of the displacement.</fr:li></fr:ul>
         Both force and displacement are vectors. The work done is given by the dot product of the two vectors,
@@ -3933,7 +3973,7 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
         <fr:tex display="block">             W =  \int _C  \vec {F}  \cdot  d \vec {r}         </fr:tex>
         where <fr:tex>d \vec {r}</fr:tex> is the tiny displacement vector along the path <fr:tex>C</fr:tex>.
         For motion along a straight line, we have a degenerated case of the line integral:
-        <fr:tex display="block">             W =  \vec {F}  \cdot   \vec {r}         </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>576</fr:anchor><fr:taxon>Principle</fr:taxon><fr:addr>thm-0012</fr:addr><fr:route>thm-0012.xml</fr:route><fr:title>Work-Energy Principle</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        <fr:tex display="block">             W =  \vec {F}  \cdot   \vec {r}         </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>579</fr:anchor><fr:taxon>Principle</fr:taxon><fr:addr>thm-0012</fr:addr><fr:route>thm-0012.xml</fr:route><fr:title>Work-Energy Principle</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     An increase in the kinetic energy of a <fr:strong>rigid body</fr:strong> is caused by an equal amount 
     of positive work done on the body by the resultant force acting on that body. 
     Conversely, a decrease in kinetic energy is caused by an equal amount of negative work done by the resultant force.
@@ -3952,13 +3992,13 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
         hence the power can be written as:
         <fr:tex display="block">             P =  \vec {F}  \cdot   \frac {d \vec {r}}{dt} =  \vec {F}  \cdot   \vec {v}         </fr:tex>
         The work then can be expressed as the integral of the power over time:
-        <fr:tex display="block">             W =  \int _{ \Delta  t} P dt =  \int _{ \Delta  t}  \vec {F}  \cdot   \vec {v} dt          </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>578</fr:anchor><fr:title>Kinetic Energy</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        <fr:tex display="block">             W =  \int _{ \Delta  t} P dt =  \int _{ \Delta  t}  \vec {F}  \cdot   \vec {v} dt          </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>581</fr:anchor><fr:title>Kinetic Energy</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
             The kinetic energy of a point object, or a non-rotating rigid body depends on the 
             mass of the body as well as its speed.
             <fr:tex display="block">                 E_k =  \frac {1}{2} m v^2 =  \frac {p^2}{2m}             </fr:tex></fr:p>
  
    
-   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>577</fr:anchor><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>580</fr:anchor><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             The work done in accelerating a particle with mass m during the infinitesimal time 
             interval <fr:tex>dt</fr:tex> is given by the dot product of force <fr:tex>\vec {F}</fr:tex> and the infinitesimal displacement <fr:tex>d \vec {x}</fr:tex>
             <fr:tex display="block">                 dW =  \vec {F}  \cdot  d \vec {x}                  =  \frac {d \vec {p}}{dt}  \cdot   \vec {v}dt                 =  \vec {v} \cdot  d \vec {p} =  \vec {v}  \cdot  d(m \vec {v})             </fr:tex>
@@ -3980,27 +4020,27 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
                 <fr:li><fr:tex>\omega</fr:tex> is the angular velocity of the body.
                 </fr:li>
                 <fr:li><fr:tex>r</fr:tex> is the distance from the axis of rotation.
-                </fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>585</fr:anchor><fr:title>Momentum</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Momentum</fr:strong> depends on the frame of reference, but in any inertial frame it is a conserved quantity,
+                </fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>588</fr:anchor><fr:title>Momentum</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Momentum</fr:strong> depends on the frame of reference, but in any inertial frame it is a conserved quantity,
         meaning that if a closed system is not affected by external forces, its total linear momentum does not change.
-    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>580</fr:anchor><fr:title>Definition in Classic Mechanics</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>583</fr:anchor><fr:title>Definition in Classic Mechanics</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
             For a system with one or more particles, the total momentum is the sum of the momenta of the individual particles.
             <fr:tex display="block">                  \vec {p} =  \sum  m_i  \vec {v}_i             </fr:tex>
             Or use the center of mass:
             <fr:tex display="block">                  \vec {p} = M  \vec {V}             </fr:tex>
             where <fr:tex>M</fr:tex> is the total mass of the system and <fr:tex>\vec {V}</fr:tex> is the velocity of the center of mass.
             This formula is known as the <fr:strong>Euler&apos;s first law of motion</fr:strong>.
-        </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>581</fr:anchor><fr:title>Relation to force</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>584</fr:anchor><fr:title>Relation to force</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
             From Newton&apos;s second law, the rate of change of the momentum of a particle is equal to the 
             instantaneous force <fr:tex>F</fr:tex> acting on it
             <fr:tex display="block">                  \vec {F} =  \frac {d \vec {p}}{dt}             </fr:tex>
             Hence the change in momentum in time interval <fr:tex>(t_1, t_2)</fr:tex> can be written as:
             <fr:tex display="block">                 I =  \Delta \vec {p} =  \int _{t_1}^{t_2}  \vec {F} dt =  \int _{ \vec {p_1}}^{ \vec {p_2}} d \vec {p}             </fr:tex>
             We read this as the <fr:strong>impulse</fr:strong> <fr:tex>I</fr:tex> is equal to the change in momentum.
-        </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>582</fr:anchor><fr:title>Law of Conservation of Momentum</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>585</fr:anchor><fr:title>Law of Conservation of Momentum</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
             In a closed system the total momentum remains constant.
             A closed system means that the system is not affected by external forces.
             Or approximately the external forces are extremely small.
-        </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>584</fr:anchor><fr:title>Angular Momentum</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>587</fr:anchor><fr:title>Angular Momentum</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
             A force applied perpendicularly to a lever multiplied by its distance from the 
             lever&apos;s fulcrum (the length of the lever arm) is its <fr:strong>torque</fr:strong>.
             <fr:tex display="block">                  \vec { \tau } =  \vec {r}  \times   \vec {F}             </fr:tex>
@@ -4018,7 +4058,7 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
             <fr:tex display="block">                  \vec {L} =  \vec {r}  \times   \vec {p}             </fr:tex></fr:p>
  
    
-   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>583</fr:anchor><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>586</fr:anchor><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             Now we prove the equivalence of definitions.
             <fr:tex display="block">                  \frac {d \vec {L}}{dt} =  \vec {r} \times \frac {d \vec {p}}{dt} +  \frac {d \vec {r}}{dt} \times \vec {p}             </fr:tex>
             The rate of change of linear momentum is the force and the rate of change of position is velocity.
@@ -4030,13 +4070,13 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
  
 <fr:p>
             The above statement leads to the Conservation of Angular Momentum.
-        </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>587</fr:anchor><fr:title>Rigid Body Dynamics</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>586</fr:anchor><fr:title>Moment of Inertia</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>590</fr:anchor><fr:title>Rigid Body Dynamics</fr:title><fr:parent>phy-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>589</fr:anchor><fr:title>Moment of Inertia</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
             When a body is free to rotate around an axis, torque must be applied to change its angular momentum.
             The amount of torque needed to cause any given angular acceleration
             is proportional to the moment of inertia of the body.
             The moment of inertia plays the role in rotational kinetics that mass (inertia) plays in linear kinetics,
             both characterize the resistance of a body to changes in its motion.
-        </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>592</fr:anchor><fr:taxon>Physics</fr:taxon><fr:addr>phy-0005</fr:addr><fr:route>phy-0005.xml</fr:route><fr:title>Simple Harmonic Motion</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+        </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>598</fr:anchor><fr:taxon>Physics</fr:taxon><fr:addr>phy-0005</fr:addr><fr:route>phy-0005.xml</fr:route><fr:title>Simple Harmonic Motion</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The SHM note is based on Wikipedia.
 </fr:p><fr:p>
     In mechanics and physics, <fr:strong>simple harmonic motion</fr:strong> is a special type of periodic motion an object
@@ -4066,7 +4106,7 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
     Each of these constants carries a physical meaning of the motion:
     <fr:tex>A</fr:tex> is the <fr:strong>amplitude</fr:strong> and <fr:tex>\omega  = 2 \pi  f</fr:tex> is the <fr:strong>angular frequency</fr:strong>
     and <fr:tex>\phi</fr:tex> is the initial <fr:strong>phase</fr:strong>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>589</fr:anchor><fr:title>Energy</fr:title><fr:parent>phy-0005</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>592</fr:anchor><fr:title>Energy</fr:title><fr:parent>phy-0005</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
         The kinetic energy of the object at time <fr:tex>t</fr:tex> is given by
         <fr:tex display="block">             K(t)={ \tfrac  {1}{2}}mv^{2}(t)={ \tfrac  {1}{2}}m \omega  ^{2}A^{2} \sin  ^{2}( \omega  t- \varphi  )={ \tfrac  {1}{2}}kA^{2} \sin  ^{2}( \omega  t- \varphi  )         </fr:tex>
         Besides the kinetic energy, the potential energy of the object at time <fr:tex>t</fr:tex> is given by
@@ -4077,7 +4117,7 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
         Notice that if we solve <fr:tex>v</fr:tex> from the energy equation we get
         <fr:tex display="block">             v =  \pm \sqrt { \frac {k}{m}(A^{2}-x^{2})} =  \pm \omega \sqrt {A^{2}-x^{2}}         </fr:tex>
         which implies that the velocity is maximum when the displacement is zero and vice versa.
-    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>590</fr:anchor><fr:title>Superposition</fr:title><fr:parent>phy-0005</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+    </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>593</fr:anchor><fr:title>Superposition</fr:title><fr:parent>phy-0005</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
         According to the principle of superposition of SHM, the resultant displacement
         of a number of waves in a medium at a particular point is the vector sum of the individual 
         displacements produced by each of the waves at that point. 
@@ -4111,12 +4151,52 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex>\te
             i.e., the ellipse that takes the coordinates axis as its major axis.
             <fr:tex display="block">                  \frac {x^2}{A^2} +  \frac {y^2}{B^2} = 1             </fr:tex>
             If <fr:tex>\beta  -  \alpha  &gt; 0</fr:tex> the ellipse is clockwise, otherwise it is counter-clockwise.
-        </fr:li></fr:ul></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>591</fr:anchor><fr:title>Wave</fr:title><fr:parent>phy-0005</fr:parent></fr:frontmatter><fr:mainmatter></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree>
-    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>777</fr:anchor><fr:addr>projects</fr:addr><fr:route>projects.xml</fr:route><fr:title>Projects</fr:title></fr:frontmatter><fr:mainmatter><fr:p>The programming projects I&apos;ve worked on.</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>772</fr:anchor><fr:taxon>Project</fr:taxon><fr:addr>proj-0001</fr:addr><fr:route>proj-0001.xml</fr:route><fr:title>Command Lisp</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:link href="https://github.com/CAIMEOX/CommandLisp" type="external">Command Lisp</fr:link> is a simplified language designed for Minecraft Bedrock Command System, characterized by a very high level of abstraction, which is also a dialect of Lisp.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>773</fr:anchor><fr:taxon>Project</fr:taxon><fr:addr>proj-0002</fr:addr><fr:route>proj-0002.xml</fr:route><fr:title>Pure Eval</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:link href="https://github.com/PureEval/PureEval" type="external">Pure Eval</fr:link> was created for the <fr:link href="proj-0003.xml" type="local" addr="proj-0003">VoxelGeometry</fr:link> project, aiming to build a compact yet powerful JavaScript functional utility toolkit.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>774</fr:anchor><fr:taxon>Project</fr:taxon><fr:addr>proj-0003</fr:addr><fr:route>proj-0003.xml</fr:route><fr:title>Voxel Geometry</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:link href="https://github.com/CAIMEOX/VoxelGeometry" type="external">Voxel Geometry</fr:link> is voxel geometry library which is used to construct Space (A collection of 3-dimension Vectors) and perform transformation between Spaces.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>775</fr:anchor><fr:taxon>Project</fr:taxon><fr:addr>proj-0004</fr:addr><fr:route>proj-0004.xml</fr:route><fr:title>Minecraft ScriptAPI wrapper</fr:title></fr:frontmatter><fr:mainmatter><fr:p>These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.</fr:p><fr:ul><fr:li><fr:link href="https://github.com/CAIMEOX/rescript-bedrock" type="external">ReScript</fr:link></fr:li>
+        </fr:li></fr:ul></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>597</fr:anchor><fr:title>Wave</fr:title><fr:parent>phy-0005</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
+        A <fr:strong>wave</fr:strong> is a propagating dynamic disturbance (change from equilibrium) of one or more quantities.
+        Waves are often described by a wave equation (standing wave field of two opposite waves) or a one-way 
+        <fr:strong>wave equation</fr:strong> for single wave propagation in a defined direction.
+    </fr:p><fr:p>
+        There are two types of waves that are commonly stdudied: mechanical waves and electromagnetic waves.
+        <fr:ul><fr:li>
+                A <fr:strong>mechanical wave</fr:strong> is a local deformation (strain) in some physical medium that propagates
+                form particle to particle by creating local stresses that cause strain in neighboring particles.
+            </fr:li>
+            <fr:li>
+                The electromagnetic wave us propagating by the coupling between the electric and magnetic 
+                fields. Electromagnetic waves can travel through a vacuum and through some dielectric media.
+            </fr:li></fr:ul></fr:p><fr:p>
+        According to the direction of vibration and propagation, waves can be classified into two types.
+    </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>594</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004K</fr:addr><fr:route>def-004K.xml</fr:route><fr:title>Transverse wave and Longitudinal wave</fr:title></fr:frontmatter><fr:mainmatter><fr:ul><fr:li>
+        A <fr:strong>transverse wave</fr:strong> is a wave that oscillates perpendicularly to the direction of the wave&apos;s advance.
+    </fr:li>
+    <fr:li>
+        A <fr:strong>longitudinal wave</fr:strong> is a wave that oscillates parallel to the direction of the wave&apos;s advance.
+    </fr:li></fr:ul></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>595</fr:anchor><fr:title>Basic Quantities</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+            The wavelength, frequency, speed and period are four import quantities of a wave.
+            Now we give their relations.
+        </fr:p><fr:p>
+            The <fr:strong>wavelength</fr:strong> <fr:tex>\lambda</fr:tex> of a sinusoidal waveform traveling at constant speed <fr:tex>v</fr:tex> is given by
+            <fr:tex display="block">                  \lambda  = vT =  \frac {v}{f}             </fr:tex>
+            where <fr:tex>f</fr:tex> is the frequency of the wave and <fr:tex>T</fr:tex> is the period of the wave.
+        </fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>596</fr:anchor><fr:title>Basic Principle</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+            The <fr:strong>principle of superposition</fr:strong> states that when two or more waves overlap, the resultant displacement
+            at any point is the vector sum of the displacements of the individual waves at that point.
+        </fr:p><fr:p>
+            The <fr:strong>Huygens principle</fr:strong> states that each point on a <fr:strong>wavefront</fr:strong> is a source of spherical wavelets and the
+            wavefront at a later time is the <fr:strong>envelope</fr:strong> of these wavelets.
+        </fr:p></fr:mainmatter></fr:tree><fr:p>
+        If the displacement of origin <fr:tex>O</fr:tex> can be expressed as
+        <fr:tex display="block">             y_O = A \cos ( \omega  t)         </fr:tex> 
+        Such a vibration propagates along x-axis, the displacement of a point <fr:tex>P</fr:tex> (at <fr:tex>x</fr:tex>) at time <fr:tex>t</fr:tex> is
+        <fr:tex display="block">             y = A \cos ( \omega  t - 2 \pi  f  \frac {x}{v}) = A \cos   \omega (t -  \frac {x}{v})         </fr:tex>
+        The distance between <fr:tex>P</fr:tex> and <fr:tex>O</fr:tex> is <fr:tex>x</fr:tex>, in this time period the origin vibrates <fr:tex>\frac {x}{v}f</fr:tex> times.
+        Every vibration changes the phase with <fr:tex>2 \pi</fr:tex>. Hence <fr:tex>P</fr:tex> is behind <fr:tex>O</fr:tex> in <fr:tex>2 \pi  f  \frac {x}{v}</fr:tex> in phase.
+    </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree>
+    <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>783</fr:anchor><fr:addr>projects</fr:addr><fr:route>projects.xml</fr:route><fr:title>Projects</fr:title></fr:frontmatter><fr:mainmatter><fr:p>The programming projects I&apos;ve worked on.</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>778</fr:anchor><fr:taxon>Project</fr:taxon><fr:addr>proj-0001</fr:addr><fr:route>proj-0001.xml</fr:route><fr:title>Command Lisp</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:link href="https://github.com/CAIMEOX/CommandLisp" type="external">Command Lisp</fr:link> is a simplified language designed for Minecraft Bedrock Command System, characterized by a very high level of abstraction, which is also a dialect of Lisp.
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>779</fr:anchor><fr:taxon>Project</fr:taxon><fr:addr>proj-0002</fr:addr><fr:route>proj-0002.xml</fr:route><fr:title>Pure Eval</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:link href="https://github.com/PureEval/PureEval" type="external">Pure Eval</fr:link> was created for the <fr:link href="proj-0003.xml" type="local" addr="proj-0003">VoxelGeometry</fr:link> project, aiming to build a compact yet powerful JavaScript functional utility toolkit.
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>780</fr:anchor><fr:taxon>Project</fr:taxon><fr:addr>proj-0003</fr:addr><fr:route>proj-0003.xml</fr:route><fr:title>Voxel Geometry</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:link href="https://github.com/CAIMEOX/VoxelGeometry" type="external">Voxel Geometry</fr:link> is voxel geometry library which is used to construct Space (A collection of 3-dimension Vectors) and perform transformation between Spaces.
+</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>781</fr:anchor><fr:taxon>Project</fr:taxon><fr:addr>proj-0004</fr:addr><fr:route>proj-0004.xml</fr:route><fr:title>Minecraft ScriptAPI wrapper</fr:title></fr:frontmatter><fr:mainmatter><fr:p>These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.</fr:p><fr:ul><fr:li><fr:link href="https://github.com/CAIMEOX/rescript-bedrock" type="external">ReScript</fr:link></fr:li>
     <fr:li><fr:link href="https://github.com/CAIMEOX/pure_bedrock" type="external">PureScript</fr:link></fr:li>
-    <fr:li><fr:link href="https://github.com/CAIMEOX/BedrockFP" type="external">Idris2</fr:link></fr:li></fr:ul></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>776</fr:anchor><fr:taxon>Project</fr:taxon><fr:addr>proj-0005</fr:addr><fr:route>proj-0005.xml</fr:route><fr:title>MoonBit Core</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:link href="https://github.com/moonbitlang/core" type="external">MoonBit Core</fr:link> is the standard library of the MoonBit language.
+    <fr:li><fr:link href="https://github.com/CAIMEOX/BedrockFP" type="external">Idris2</fr:link></fr:li></fr:ul></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false"><fr:frontmatter><fr:anchor>782</fr:anchor><fr:taxon>Project</fr:taxon><fr:addr>proj-0005</fr:addr><fr:route>proj-0005.xml</fr:route><fr:title>MoonBit Core</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:link href="https://github.com/moonbitlang/core" type="external">MoonBit Core</fr:link> is the standard library of the MoonBit language.
 </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree>
 </fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>

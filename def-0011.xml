@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1355</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0011</fr:addr><fr:route>def-0011.xml</fr:route><fr:title>Upper Bound and Lower Bound</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1365</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0011</fr:addr><fr:route>def-0011.xml</fr:route><fr:title>Upper Bound and Lower Bound</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let a subset <fr:tex>S</fr:tex> of a <fr:link href="def-000Y.xml" type="local" addr="def-000Y">partially ordered</fr:link> set <fr:tex>(P,  \leq )</fr:tex>,
     <fr:tex>S</fr:tex> is bounded above if there exists <fr:tex>x  \in  P</fr:tex> such that <fr:tex>\forall  y  \in  S, y  \leq  x</fr:tex>. And <fr:tex>x</fr:tex> is called an <fr:strong>upper bound</fr:strong> of <fr:tex>S</fr:tex>.
     Dually, <fr:tex>S</fr:tex> is bounded below if there exists <fr:tex>x  \in  P</fr:tex> such that <fr:tex>\forall  y  \in  S, x  \leq  y</fr:tex>. And <fr:tex>x</fr:tex> is called a <fr:strong>lower bound</fr:strong> of <fr:tex>S</fr:tex>.
@@ -16,7 +16,7 @@
     if for all lower bounds <fr:tex>z  \in  P</fr:tex> of <fr:tex>S</fr:tex>, <fr:tex>z  \leq  x</fr:tex>.
     Denoted as <fr:tex>x =  \inf  S</fr:tex>.
     </fr:p>
-</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1354</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1364</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to <fr:link href="cat-sci-2013.xml" type="local" addr="cat-sci-2013">Category Theory for Scientists</fr:link>.
 </fr:p><fr:p><fr:strong>Set</fr:strong> is a common concept in mathematics.
     This post is a brief introduction to set theory aimed at 
@@ -327,7 +327,7 @@
     </fr:embedded-tex-body></fr:embedded-tex>
 
     there exists a <fr:em>unique</fr:em> arrow <fr:tex>\langle  f,g  \rangle _Z: A \to  X \times _Z Y</fr:tex> such that
-    <fr:tex display="block">          \pi _1 \circ \langle  f,g  \rangle _Z = f  \text { and }  \pi _2 \circ \langle  f,g  \rangle _Z = g     </fr:tex></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1353</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000Y</fr:addr><fr:route>def-000Y.xml</fr:route><fr:title>Partial Order</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    <fr:tex display="block">          \pi _1 \circ \langle  f,g  \rangle _Z = f  \text { and }  \pi _2 \circ \langle  f,g  \rangle _Z = g     </fr:tex></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1363</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000Y</fr:addr><fr:route>def-000Y.xml</fr:route><fr:title>Partial Order</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A <fr:strong>(non-strict) partial order</fr:strong> is a relation <fr:tex>\leq</fr:tex> that is reflexive, antisymmetric and transitive.
     <fr:ul><fr:li>Reflexive: <fr:tex>a \leq  a</fr:tex></fr:li>
         <fr:li>Antisymmetric: <fr:tex>a \leq  b</fr:tex> and <fr:tex>b \leq  a</fr:tex> implies <fr:tex>a=b</fr:tex></fr:li>

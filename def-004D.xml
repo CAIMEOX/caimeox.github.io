@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1323</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004D</fr:addr><fr:route>def-004D.xml</fr:route><fr:title>Transport</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1331</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004D</fr:addr><fr:route>def-004D.xml</fr:route><fr:title>Transport</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> be a type and let <fr:tex>B</fr:tex> be a type family over <fr:tex>A</fr:tex>.
     The <fr:strong>transport</fr:strong> operation is defined:
     <fr:tex display="block">          \text {tr} _B: \Pi _{(x,y:A)}(x=y) \to  B(x) \to  B(y)     </fr:tex>
@@ -11,7 +11,7 @@
     this can be constructed by the induction principle for identity types,
     it suffices to construct an identification:
     <fr:tex display="block">          \text {apd} _f( \text {refl} _x) :  \text {tr} _B( \text {refl} _x,f(x)) = f(x)     </fr:tex>
-    which is simply done by taking <fr:tex>\text {apd} _f( \text {refl} _x) \equiv \text {refl} _{f(x)}</fr:tex></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1322</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0005</fr:addr><fr:route>tt-0005.xml</fr:route><fr:title>Identity Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+    which is simply done by taking <fr:tex>\text {apd} _f( \text {refl} _x) \equiv \text {refl} _{f(x)}</fr:tex></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1330</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0005</fr:addr><fr:route>tt-0005.xml</fr:route><fr:title>Identity Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This post discuss the identity types in type theory.
     Refer to <fr:link href="hott-2022.xml" type="local" addr="hott-2022">Introduction to Homotopy Type Theory</fr:link>.
 </fr:p><fr:p>

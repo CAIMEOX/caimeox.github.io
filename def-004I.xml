@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1216</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004I</fr:addr><fr:route>def-004I.xml</fr:route><fr:title>Row Echelon Form</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1224</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-004I</fr:addr><fr:route>def-004I.xml</fr:route><fr:title>Row Echelon Form</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A matrix is in <fr:strong>row echelon form</fr:strong> if
     <fr:ul><fr:li>All rows having only zero entries are at the bottom</fr:li>
         <fr:li>
@@ -8,7 +8,7 @@
         </fr:li></fr:ul>
     Some texts add the condition that the leading coefficient must be <fr:tex>1</fr:tex>
     while others require this only in <fr:strong>reduced row echelon form</fr:strong>.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1215</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix Computation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1223</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0008</fr:addr><fr:route>math-0008.xml</fr:route><fr:title>Matrix Computation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This post shows operations and applications over matrix, refers to Wikipedia.
 </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>555</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0043</fr:addr><fr:route>def-0043.xml</fr:route><fr:title>Transpose</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>transpose</fr:strong> of a matrix <fr:tex>A</fr:tex>, denoted by <fr:tex>A^T</fr:tex> is
@@ -127,6 +127,7 @@
 </fr:p></fr:mainmatter></fr:tree><fr:p>
         Similarly we can define the row rank of a matrix. A fundamental result in linear algebra is 
         that the column rank and the row rank are always equal. Hence we can simply call it the rank of a matrix.
+        If the column rank equals to the column size, we say that the matrix is full column rank.
     </fr:p><fr:p>
         A common approach to finding the rank of a matrix is to reduce it to a simpler form, 
         generally <fr:strong>row echelon form</fr:strong>, by elementary row operations.
@@ -154,4 +155,43 @@
         This does not give an efficient way of computing the rank, but it is useful theoretically: 
         a single non-zero minor witnesses a lower bound for the rank of the matrix,
         which can be useful to prove that certain operations do not lower the rank of a matrix.
-    </fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>
+    </fr:p><fr:p>
+        We can conclude the properties of rank:
+        <fr:tex display="block">              \begin {align*}                 &amp;0  \leq   \text {rank} (A_{m \times  n})  \leq   \min (m,n)  \\                  &amp; \text {rank} (A^T) =  \text {rank} (A)  \\                   &amp; A  \sim  B  \implies   \text {rank} (A)= \text {rank} (B)  \\                   &amp; P, Q  \text { is invertible}  \implies   \text {rank} (PAQ) =  \text {rank} (A)  \\                   &amp;  \max ( \text {rank} (A),  \text {rank} (B))  \leq   \text {rank} (A, B)  \leq   \text {rank} (A) +  \text {rank} (B)  \\                   &amp;  \text {rank} (A+B)  \leq   \text {rank} (A) +  \text {rank} (B)  \\                  &amp;  \text {rank} (AB)  \leq   \min ( \text {rank} (A),  \text {rank} (B))  \\                   &amp; A_{m \times  n}B_{n \times  l} = O \implies   \text {rank} (A) +  \text {rank} (B)  \leq  n              \end {align*}         </fr:tex></fr:p><fr:p>
+        With such properties we can prove an important theorem:
+        <fr:tex display="block">             AB = O  \land  A  \text { is full rank}  \implies  B = O         </fr:tex>
+        which is known as the cancellation law of matrix multiplication.
+    </fr:p><fr:p>
+        The rank of a matrix is also related to the solution of a linear system.
+        If the rank of the coefficient matrix is less than the rank of the augmented matrix, 
+        then the system is inconsistent. Hence there does not exist a solution.
+        Similarly we have the following discussion: For a <fr:tex>n</fr:tex>-variable linear system <fr:tex>Ax = b</fr:tex>
+        <fr:ul><fr:li>
+                If <fr:tex>\text {rank} (A) &lt;  \text {rank} (A,b)</fr:tex>, the solution does not exist.
+            </fr:li>
+            <fr:li>
+                If <fr:tex>\text {rank} (A)= \text {rank} (A,b)=n</fr:tex>, there is a unique solution.
+            </fr:li>
+            <fr:li>
+                Ig <fr:tex>\text {rank} (A)= \text {rank} (A,b)&lt;n</fr:tex>, there are infinite solutions.
+            </fr:li></fr:ul>
+        This leads two fundamental theorems of linear systems:
+        <fr:ul><fr:li><fr:tex>n</fr:tex>-variable regular linear system <fr:tex>Ax = 0</fr:tex> has a non-trivial solution iff <fr:tex>\text {rank} (A) &lt; n</fr:tex>.
+            </fr:li>
+            <fr:li>
+                Matrix equation <fr:tex>AX = B</fr:tex> has solutions iff <fr:tex>\text {rank} (A) =  \text {rank} (A,B)</fr:tex>.
+            </fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>576</fr:anchor><fr:title>Linear Combinations</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:parent>math-0008</fr:parent></fr:frontmatter><fr:mainmatter><fr:p></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>574</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000L</fr:addr><fr:route>def-000L.xml</fr:route><fr:title>Linear Combination</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    Let <fr:tex>V</fr:tex> be a <fr:link href="def-000H.xml" type="local" addr="def-000H">vector space</fr:link> over a field <fr:tex>F</fr:tex>.
+    Let <fr:tex>v_1,  \dots , v_n</fr:tex> be vectors in <fr:tex>V</fr:tex>.
+    A <fr:strong>linear combination</fr:strong> of <fr:tex>v_1,  \dots , v_n</fr:tex> is an expression of the form
+    <fr:tex display="block">         a_1 v_1 +  \dots  + a_n v_n     </fr:tex>
+    where <fr:tex>a_1,  \dots , a_n  \in  F</fr:tex>.
+</fr:p></fr:mainmatter></fr:tree><fr:p>
+        Given two sets of vectors, we say that they are eqaul iff their elements can write as linear combinations of each other.
+        This condition can be written using rank:
+        <fr:tex display="block">              \text {rank} (A) =  \text {rank} (B) =  \text {rank} (A, B)         </fr:tex></fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>575</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000P</fr:addr><fr:route>def-000P.xml</fr:route><fr:title>Linearly independent</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+    A set of vectors <fr:tex>\{ v_1,  \dots , v_n \}</fr:tex> is called <fr:strong>linearly independent</fr:strong> if
+    <fr:tex display="block">a_1 v_1 +  \dots  + a_n v_n = 0</fr:tex>
+    implies that <fr:tex>a_1 =  \dots  = a_n = 0</fr:tex>.
+    The trivial case of <fr:tex>\{ 0 \}</fr:tex> is also considered linearly independent.
+</fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>

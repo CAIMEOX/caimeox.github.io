@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1350</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000J</fr:addr><fr:route>thm-000J.xml</fr:route><fr:title>Universal Property for Product of Sets</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1360</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000J</fr:addr><fr:route>thm-000J.xml</fr:route><fr:title>Universal Property for Product of Sets</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> be sets.
     For any set <fr:tex>A</fr:tex> and function
     <fr:tex>f: A  \to  X</fr:tex> and <fr:tex>g: A  \to  Y</fr:tex>,
@@ -26,7 +26,7 @@
 
     We might denote the unique function by <fr:tex>\langle  f,g  \rangle : A  \to  X  \times  Y</fr:tex>.
     It is sufficient to define <fr:tex>\langle  f,g  \rangle (a) = (f(a),g(a))</fr:tex> for all <fr:tex>a \in  A</fr:tex> as the unique function.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1349</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1359</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to <fr:link href="cat-sci-2013.xml" type="local" addr="cat-sci-2013">Category Theory for Scientists</fr:link>.
 </fr:p><fr:p><fr:strong>Set</fr:strong> is a common concept in mathematics.
     This post is a brief introduction to set theory aimed at 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1263</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000A</fr:addr><fr:route>def-000A.xml</fr:route><fr:title>Subgroups</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1271</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000A</fr:addr><fr:route>def-000A.xml</fr:route><fr:title>Subgroups</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
 Let <fr:tex>G</fr:tex> be a group and <fr:tex>H</fr:tex> be a nonempty subset of <fr:tex>G</fr:tex> which is closed under operation <fr:tex>\times</fr:tex> and :
 <fr:ul><fr:li><fr:tex>\forall  a,b \in  H,a \times  b \in  H</fr:tex></fr:li>
 <fr:li><fr:tex>\forall  h \in  H,h^{-1} \in  H</fr:tex></fr:li></fr:ul>

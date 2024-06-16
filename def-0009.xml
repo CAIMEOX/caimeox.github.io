@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>947</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0009</fr:addr><fr:route>def-0009.xml</fr:route><fr:title>Group Homomorphism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>953</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0009</fr:addr><fr:route>def-0009.xml</fr:route><fr:title>Group Homomorphism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
 Let <fr:tex>(G, \times )</fr:tex> and <fr:tex>(H, \circ )</fr:tex> be groups. A map <fr:tex>\phi  : G \to  H</fr:tex> such that
 <fr:tex>\forall  x,y \in  G, \phi (x \times  y)= \phi (x) \circ \phi (y)</fr:tex> is called a <fr:strong>group homomorphism</fr:strong>.
 </fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>

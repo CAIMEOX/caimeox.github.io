@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1377</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000S</fr:addr><fr:route>def-000S.xml</fr:route><fr:title>ZFC Set</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>ZFC</fr:strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1387</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000S</fr:addr><fr:route>def-000S.xml</fr:route><fr:title>ZFC Set</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>ZFC</fr:strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
     The axioms of ZFC are listed below.
     <fr:ul><fr:li><fr:strong>Axiom of Extensionality</fr:strong>:
             Two sets are equal if and only if they have the same elements.
@@ -32,7 +32,7 @@
             </fr:p></fr:li>
         <fr:li><fr:strong>Axiom of Choice</fr:strong>:
             For any family of non-empty sets <fr:tex>X</fr:tex>, there exists a function <fr:tex>f:X \to \bigcup  X</fr:tex> such that for any <fr:tex>x \in  X</fr:tex>, <fr:tex>f(x) \in  x</fr:tex>.
-        </fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1376</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+        </fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1386</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to <fr:link href="cat-sci-2013.xml" type="local" addr="cat-sci-2013">Category Theory for Scientists</fr:link>.
 </fr:p><fr:p><fr:strong>Set</fr:strong> is a common concept in mathematics.
     This post is a brief introduction to set theory aimed at 

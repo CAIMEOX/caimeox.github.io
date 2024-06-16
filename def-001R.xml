@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1020</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001R</fr:addr><fr:route>def-001R.xml</fr:route><fr:title>Light-cone Coordinates</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1026</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-001R</fr:addr><fr:route>def-001R.xml</fr:route><fr:title>Light-cone Coordinates</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>light-cone coordinates</fr:strong> can be defined as
     two independent <fr:link href="def-000L.xml" type="local" addr="def-000L">linear combinations</fr:link> of the time 
     and a chosen spatial coordinate (conventionally <fr:tex>x^1</fr:tex>):
     <fr:tex display="block">          \begin {align*}             x^+  \equiv   \frac {1}{ \sqrt {2}} (X^0 + X^1)  \\              x^-  \equiv   \frac {1}{ \sqrt {2}} (X^0 - X^1)          \end {align*}     </fr:tex>
     while other spatial coordinates remain unchanged. Thus the complete set of 
     light-cone coordinates is <fr:tex>(x^+,x^-,x^2,x^3)</fr:tex>.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1018</fr:anchor><fr:taxon>String Theory</fr:taxon><fr:addr>phy-0001</fr:addr><fr:route>phy-0001.xml</fr:route><fr:title>Special Relativity and Extra Dimensions</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>29</fr:day></fr:date><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1024</fr:anchor><fr:taxon>String Theory</fr:taxon><fr:addr>phy-0001</fr:addr><fr:route>phy-0001.xml</fr:route><fr:title>Special Relativity and Extra Dimensions</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>29</fr:day></fr:date><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>
     This is a summary of the first chapter of <fr:link href="string-theory-2009.xml" type="local" addr="string-theory-2009">A First Course in String Theory</fr:link> by Barton Zwiebach.
     I will make it as understandable as possible.
 </fr:p><fr:p>
@@ -234,7 +234,7 @@
     <fr:tex display="block">         p^0 =  \frac {E}{c}  \sqrt { \vec {p}^2 + m^2c^2} &gt; | \vec {p}| \geq  |p^1|     </fr:tex>
     Hence <fr:tex>p^0 \pm  p^1 &gt; 0</fr:tex> and <fr:tex>p^ \pm &gt;0</fr:tex>, which both are possible candidates for energy.
     We finally choose <fr:tex>p^-</fr:tex> as the component, we explain this later. 
-</fr:p></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1017</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000L</fr:addr><fr:route>def-000L.xml</fr:route><fr:title>Linear Combination</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1023</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000L</fr:addr><fr:route>def-000L.xml</fr:route><fr:title>Linear Combination</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>V</fr:tex> be a <fr:link href="def-000H.xml" type="local" addr="def-000H">vector space</fr:link> over a field <fr:tex>F</fr:tex>.
     Let <fr:tex>v_1,  \dots , v_n</fr:tex> be vectors in <fr:tex>V</fr:tex>.
     A <fr:strong>linear combination</fr:strong> of <fr:tex>v_1,  \dots , v_n</fr:tex> is an expression of the form

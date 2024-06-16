@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1224</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0030</fr:addr><fr:route>def-0030.xml</fr:route><fr:title>Schrodinger&apos;s equation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1232</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0030</fr:addr><fr:route>def-0030.xml</fr:route><fr:title>Schrodinger&apos;s equation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>Schrodinger equation</fr:strong> is a linear partial differential equation that describes the wave function of a quantum system.
     It is given by (the general form):
     <fr:tex display="block">         i \hbar \frac { \partial }{ \partial  t} \Psi ( \vec {r},t) =  \hat {H} \Psi ( \vec {r},t)     </fr:tex>
@@ -9,7 +9,7 @@
         <fr:li><fr:tex>\hat {H}</fr:tex> is the <fr:strong>Hamiltonian operator</fr:strong>.
         </fr:li>
         <fr:li><fr:tex>\hbar  = 1.054573 \times10 ^{-34} \text {Js} </fr:tex> is the reduced <fr:strong>Planck constant</fr:strong>.
-        </fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1223</fr:anchor><fr:taxon>Quantum Mechanics</fr:taxon><fr:addr>phy-0002</fr:addr><fr:route>phy-0002.xml</fr:route><fr:title>The Wave Function</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+        </fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1231</fr:anchor><fr:taxon>Quantum Mechanics</fr:taxon><fr:addr>phy-0002</fr:addr><fr:route>phy-0002.xml</fr:route><fr:title>The Wave Function</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This post introduces the concept of the wave function in quantum mechanics.
     Refer to <fr:link href="quantum-2018.xml" type="local" addr="quantum-2018">Introduction to Quantum Mechanics</fr:link>.
 </fr:p><fr:p>
@@ -179,7 +179,7 @@
     <fr:tex display="block">          \Delta  x  \Delta  p  \geq   \frac { \hbar }{2}     </fr:tex>
     where <fr:tex>\Delta  x</fr:tex> and <fr:tex>\Delta  p</fr:tex> are the uncertainties in position and momentum, respectively.
     The constant <fr:tex>\hbar</fr:tex> is the reduced Planck constant.
-</fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1222</fr:anchor><fr:taxon>Quantum Mechanics</fr:taxon><fr:addr>phy-0003</fr:addr><fr:route>phy-0003.xml</fr:route><fr:title>Time-independent Schrodinger Equation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1230</fr:anchor><fr:taxon>Quantum Mechanics</fr:taxon><fr:addr>phy-0003</fr:addr><fr:route>phy-0003.xml</fr:route><fr:title>Time-independent Schrodinger Equation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     Refer to chapter 2 in <fr:link href="quantum-2018.xml" type="local" addr="quantum-2018">Introduction to Quantum Mechanics</fr:link></fr:p><fr:p>
     In previous section we use the <fr:link href="def-0030.xml" type="local" addr="def-0030">Schrodinger equation</fr:link> to compute things.
     The variable <fr:tex>t</fr:tex> is annoying which makes things complicated, and we would like to get rid of it.

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>746</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000R</fr:addr><fr:route>def-000R.xml</fr:route><fr:title>Basis</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>752</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000R</fr:addr><fr:route>def-000R.xml</fr:route><fr:title>Basis</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     A basis of <fr:tex>V</fr:tex> is a list of vectors in <fr:tex>V</fr:tex>
     that is linearly independent and spans <fr:tex>V</fr:tex>. 
 </fr:p><fr:p><fr:strong>Criterion for basis</fr:strong>
     A list of vectors <fr:tex>\{ v_1,  \dots , v_n \}</fr:tex> is a basis of <fr:tex>V</fr:tex> if and only if
     every <fr:tex>v  \in  V</fr:tex> can be written <fr:strong>uniquely</fr:strong> as a linear combination of <fr:tex>v_1,  \dots , v_n</fr:tex>.
-</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>745</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0002</fr:addr><fr:route>math-0002.xml</fr:route><fr:title>Finite Dimensional Vector Space</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>751</fr:anchor><fr:taxon>Linear Algebra</fr:taxon><fr:addr>math-0002</fr:addr><fr:route>math-0002.xml</fr:route><fr:title>Finite Dimensional Vector Space</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This note introduces the concept of finite-dimensional vector space.
     Refer to <fr:link href="linear-algebra-2015.xml" type="local" addr="linear-algebra-2015">Linear Algebra Done Right</fr:link>.
 </fr:p><fr:p>

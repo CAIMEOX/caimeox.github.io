@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>841</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0024</fr:addr><fr:route>def-0024.xml</fr:route><fr:title>Dependent Pair Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>847</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0024</fr:addr><fr:route>def-0024.xml</fr:route><fr:title>Dependent Pair Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     The <fr:strong>dependent pair type</fr:strong> is a inductive type <fr:tex>\Sigma _{(x:A)}B(x)</fr:tex> (<fr:tex>(x:A)  \times  B(x)</fr:tex>)
 </fr:p>
     <fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>275</fr:anchor><fr:title>
@@ -46,7 +46,7 @@
             this reduces to a <fr:link href="def-0023.xml" type="local" addr="def-0023">coproduct type</fr:link>.
         </fr:li></fr:ul>
 </fr:mainmatter></fr:tree>
-</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>840</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0004</fr:addr><fr:route>tt-0004.xml</fr:route><fr:title>Inductive Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>846</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>tt-0004</fr:addr><fr:route>tt-0004.xml</fr:route><fr:title>Inductive Types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
@@ -173,7 +173,7 @@
             this reduces to a <fr:link href="def-0023.xml" type="local" addr="def-0023">coproduct type</fr:link>.
         </fr:li></fr:ul>
 </fr:mainmatter></fr:tree>
-</fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>839</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0023</fr:addr><fr:route>def-0023.xml</fr:route><fr:title>Coproduct Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+</fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>845</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0023</fr:addr><fr:route>def-0023.xml</fr:route><fr:title>Coproduct Type</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     Let <fr:tex>A</fr:tex> and <fr:tex>B</fr:tex> be types. The <fr:strong>coproduct (disjoint sum)</fr:strong> <fr:tex>A+B</fr:tex> is a typed defined by the following constructors:
     <fr:ul><fr:li><fr:tex>\text {inl} :A \to  A+B</fr:tex></fr:li>
         <fr:li><fr:tex>\text {inr} :B \to  A+B</fr:tex></fr:li></fr:ul>

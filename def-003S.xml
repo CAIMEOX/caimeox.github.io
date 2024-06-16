@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>823</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003S</fr:addr><fr:route>def-003S.xml</fr:route><fr:title>Coproduct</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>829</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-003S</fr:addr><fr:route>def-003S.xml</fr:route><fr:title>Coproduct</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
     For <fr:tex>\mathcal {C}</fr:tex> a category and <fr:tex>X, Y  \in \text {Ob} { \mathcal {C}}</fr:tex>,
     the <fr:strong>coproduct</fr:strong> is an object <fr:tex>X \sqcup   Y</fr:tex> equipped with 
     two morphisms <fr:tex>i_X:X \to  X \sqcup   Y</fr:tex> and <fr:tex>i_Y:Y \to  X \sqcup   Y</fr:tex> such that
@@ -23,7 +23,7 @@
              \arrow [&quot;g&quot;, from=1-5, to=3-3]
          \end {tikzcd}
      
-    </fr:embedded-tex-body></fr:embedded-tex></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>822</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>cs-0007</fr:addr><fr:route>cs-0007.xml</fr:route><fr:title>Categorical Semantics for Type Theories</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>21</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
+    </fr:embedded-tex-body></fr:embedded-tex></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>828</fr:anchor><fr:taxon>Type Theory</fr:taxon><fr:addr>cs-0007</fr:addr><fr:route>cs-0007.xml</fr:route><fr:title>Categorical Semantics for Type Theories</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>21</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
     This is a collection of notes on categorical semantics for type theories.
     The notes are based on the <fr:link href="cs-tt-2020.xml" type="local" addr="cs-tt-2020">paper</fr:link> by Jason Z.S. Hu and <fr:link href="ncatlab.xml" type="local" addr="ncatlab">NLab</fr:link>.
 </fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>522</fr:anchor><fr:title>Introduction</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>21</fr:day></fr:date><fr:parent>cs-0007</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>
