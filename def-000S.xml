@@ -1,346 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1387</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000S</fr:addr><fr:route>def-000S.xml</fr:route><fr:title>ZFC Set</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>ZFC</fr:strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1697</fr:anchor><fr:addr type="user">def-000S</fr:addr><fr:route>def-000S.xml</fr:route><fr:title text="ZFC Set">ZFC Set</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>ZFC</fr:strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
     The axioms of ZFC are listed below.
     <fr:ul><fr:li><fr:strong>Axiom of Extensionality</fr:strong>:
-            Two sets are equal if and only if they have the same elements.
-        </fr:li>
+            Two sets are equal if and only if they have the same elements.</fr:li>
         <fr:li><fr:strong>Axiom of Pairing</fr:strong>:
-            For any two sets <fr:tex>a</fr:tex> and <fr:tex>b</fr:tex>,
-            there exists a set <fr:tex>\{   a,b   \}</fr:tex> whose elements are exactly <fr:tex>a</fr:tex> and <fr:tex>b</fr:tex>.
-        </fr:li>
+            For any two sets <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex>,
+            there exists a set <fr:tex display="inline">\{ a,b \}</fr:tex> whose elements are exactly <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex>.</fr:li>
         <fr:li><fr:strong>Axiom schema of Separation</fr:strong>:
-            Let <fr:tex>P</fr:tex> is a property of sets.
-            <fr:tex>P(u)</fr:tex> means <fr:tex>u</fr:tex> satisfies the property <fr:tex>P</fr:tex>.
-            then for any set <fr:tex>X</fr:tex> exists <fr:tex>Y =  \{   u  \in  X | P(u)   \}</fr:tex>.
-        </fr:li>
+            Let <fr:tex display="inline">P</fr:tex> is a property of sets.
+            <fr:tex display="inline">P(u)</fr:tex> means <fr:tex display="inline">u</fr:tex> satisfies the property <fr:tex display="inline">P</fr:tex>.
+            then for any set <fr:tex display="inline">X</fr:tex> exists <fr:tex display="inline">Y = \{ u \in  X | P(u) \}</fr:tex>.</fr:li>
         <fr:li><fr:strong>Axiom of Union</fr:strong>:
-            For any set <fr:tex>X</fr:tex> (a family of sets), exists union set <fr:tex>\bigcup  X : \equiv   \{                    u: \exists  v \in  X  \text { such that } u \in  v                \}</fr:tex>.
-        </fr:li>
+            For any set <fr:tex display="inline">X</fr:tex> (a family of sets), exists union set <fr:tex display="inline">\bigcup  X :\equiv  \{                  u:\exists  v\in  X \text { such that } u\in  v              \}</fr:tex>.</fr:li>
         <fr:li><fr:strong>Axiom of Power Set</fr:strong>:
-            For any set <fr:tex>X</fr:tex>, exists the power <fr:tex>P(X) : \equiv   \{   Y:Y \subseteq  X   \}</fr:tex>.
-        </fr:li>
+            For any set <fr:tex display="inline">X</fr:tex>, exists the power <fr:tex display="inline">P(X) :\equiv  \{ Y:Y\subseteq  X \}</fr:tex>.</fr:li>
         <fr:li><fr:strong>Axiom of Infinity</fr:strong>:
-            There exists a set <fr:tex>\omega</fr:tex> such that <fr:tex>\emptyset \in \omega</fr:tex> and for any <fr:tex>x \in \omega</fr:tex>, <fr:tex>x \cup \{   x   \} \in \omega</fr:tex>.
-        </fr:li>
+            There exists a set <fr:tex display="inline">\omega </fr:tex> such that <fr:tex display="inline">\emptyset \in \omega </fr:tex> and for any <fr:tex display="inline">x\in \omega </fr:tex>, <fr:tex display="inline">x\cup \{ x \}\in \omega </fr:tex>.</fr:li>
         <fr:li><fr:strong>Axiom of Regularity</fr:strong>:
-            For any non-empty set there is a minimal element with respect to the membership relation.
-        </fr:li>
+            For any non-empty set there is a minimal element with respect to the membership relation.</fr:li>
         <fr:li><fr:strong>Axiom schema of Replacement</fr:strong>:
-            Let <fr:tex>F</fr:tex> be a function where <fr:tex>\text {dom }  f = X</fr:tex>, then for any set <fr:tex>X</fr:tex> exists a set <fr:tex>Y =  \{   F(x):x \in  X   \}</fr:tex>.
-            <fr:p>
-                This function is not the normal function but some logical stuff.
-            </fr:p></fr:li>
+            Let <fr:tex display="inline">F</fr:tex> be a function where <fr:tex display="inline">\text {dom } f = X</fr:tex>, then for any set <fr:tex display="inline">X</fr:tex> exists a set <fr:tex display="inline">Y = \{ F(x):x\in  X \}</fr:tex>.
+            <fr:p>This function is not the normal function but some logical stuff.</fr:p></fr:li>
         <fr:li><fr:strong>Axiom of Choice</fr:strong>:
-            For any family of non-empty sets <fr:tex>X</fr:tex>, there exists a function <fr:tex>f:X \to \bigcup  X</fr:tex> such that for any <fr:tex>x \in  X</fr:tex>, <fr:tex>f(x) \in  x</fr:tex>.
-        </fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1386</fr:anchor><fr:taxon>Set Theory</fr:taxon><fr:addr>math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title>Set Theory</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date></fr:frontmatter><fr:mainmatter><fr:p>
-    Refer to <fr:link href="cat-sci-2013.xml" type="local" addr="cat-sci-2013">Category Theory for Scientists</fr:link>.
-</fr:p><fr:p><fr:strong>Set</fr:strong> is a common concept in mathematics.
+            For any family of non-empty sets <fr:tex display="inline">X</fr:tex>, there exists a function <fr:tex display="inline">f:X\to \bigcup  X</fr:tex> such that for any <fr:tex display="inline">x\in  X</fr:tex>, <fr:tex display="inline">f(x)\in  x</fr:tex>.</fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1698</fr:anchor><fr:addr type="user">math-0003</fr:addr><fr:route>math-0003.xml</fr:route><fr:title text="Set Theory">Set Theory</fr:title><fr:taxon>Set Theory</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>26</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Refer to <fr:link type="local" href="cat-sci-2013.xml" addr="cat-sci-2013" title="Category theory for scientists">Category Theory for Scientists</fr:link>.</fr:p><fr:p><fr:strong>Set</fr:strong> is a common concept in mathematics.
     This post is a brief introduction to set theory aimed at 
     complete all basic knowledge of set theory.
     The following topics will be covered
     <fr:ul><fr:li><fr:strong>Zermelo-Fraenkel Axioms</fr:strong> and <fr:strong>Axiom of Choice</fr:strong></fr:li>
         <fr:li>Cardinality</fr:li>
-        <fr:li>Set theory constructions</fr:li></fr:ul></fr:p><fr:p>
-    In this post, we use the Zermelo-Fraenkel set theory with the Axiom of Choice (<fr:strong>ZFC</fr:strong>).
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>355</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000S</fr:addr><fr:route>def-000S.xml</fr:route><fr:title>ZFC Set</fr:title></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>ZFC</fr:strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
+        <fr:li>Set theory constructions</fr:li></fr:ul></fr:p><fr:p>In this post, we use the Zermelo-Fraenkel set theory with the Axiom of Choice (<fr:strong>ZFC</fr:strong>).</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>500</fr:anchor><fr:addr type="user">def-000S</fr:addr><fr:route>def-000S.xml</fr:route><fr:title text="ZFC Set">ZFC Set</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>ZFC</fr:strong> is the abbreviation of Zermelo-Fraenkel set theory with the Axiom of Choice.
     The axioms of ZFC are listed below.
     <fr:ul><fr:li><fr:strong>Axiom of Extensionality</fr:strong>:
-            Two sets are equal if and only if they have the same elements.
-        </fr:li>
+            Two sets are equal if and only if they have the same elements.</fr:li>
         <fr:li><fr:strong>Axiom of Pairing</fr:strong>:
-            For any two sets <fr:tex>a</fr:tex> and <fr:tex>b</fr:tex>,
-            there exists a set <fr:tex>\{   a,b   \}</fr:tex> whose elements are exactly <fr:tex>a</fr:tex> and <fr:tex>b</fr:tex>.
-        </fr:li>
+            For any two sets <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex>,
+            there exists a set <fr:tex display="inline">\{ a,b \}</fr:tex> whose elements are exactly <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex>.</fr:li>
         <fr:li><fr:strong>Axiom schema of Separation</fr:strong>:
-            Let <fr:tex>P</fr:tex> is a property of sets.
-            <fr:tex>P(u)</fr:tex> means <fr:tex>u</fr:tex> satisfies the property <fr:tex>P</fr:tex>.
-            then for any set <fr:tex>X</fr:tex> exists <fr:tex>Y =  \{   u  \in  X | P(u)   \}</fr:tex>.
-        </fr:li>
+            Let <fr:tex display="inline">P</fr:tex> is a property of sets.
+            <fr:tex display="inline">P(u)</fr:tex> means <fr:tex display="inline">u</fr:tex> satisfies the property <fr:tex display="inline">P</fr:tex>.
+            then for any set <fr:tex display="inline">X</fr:tex> exists <fr:tex display="inline">Y = \{ u \in  X | P(u) \}</fr:tex>.</fr:li>
         <fr:li><fr:strong>Axiom of Union</fr:strong>:
-            For any set <fr:tex>X</fr:tex> (a family of sets), exists union set <fr:tex>\bigcup  X : \equiv   \{                    u: \exists  v \in  X  \text { such that } u \in  v                \}</fr:tex>.
-        </fr:li>
+            For any set <fr:tex display="inline">X</fr:tex> (a family of sets), exists union set <fr:tex display="inline">\bigcup  X :\equiv  \{                  u:\exists  v\in  X \text { such that } u\in  v              \}</fr:tex>.</fr:li>
         <fr:li><fr:strong>Axiom of Power Set</fr:strong>:
-            For any set <fr:tex>X</fr:tex>, exists the power <fr:tex>P(X) : \equiv   \{   Y:Y \subseteq  X   \}</fr:tex>.
-        </fr:li>
+            For any set <fr:tex display="inline">X</fr:tex>, exists the power <fr:tex display="inline">P(X) :\equiv  \{ Y:Y\subseteq  X \}</fr:tex>.</fr:li>
         <fr:li><fr:strong>Axiom of Infinity</fr:strong>:
-            There exists a set <fr:tex>\omega</fr:tex> such that <fr:tex>\emptyset \in \omega</fr:tex> and for any <fr:tex>x \in \omega</fr:tex>, <fr:tex>x \cup \{   x   \} \in \omega</fr:tex>.
-        </fr:li>
+            There exists a set <fr:tex display="inline">\omega </fr:tex> such that <fr:tex display="inline">\emptyset \in \omega </fr:tex> and for any <fr:tex display="inline">x\in \omega </fr:tex>, <fr:tex display="inline">x\cup \{ x \}\in \omega </fr:tex>.</fr:li>
         <fr:li><fr:strong>Axiom of Regularity</fr:strong>:
-            For any non-empty set there is a minimal element with respect to the membership relation.
-        </fr:li>
+            For any non-empty set there is a minimal element with respect to the membership relation.</fr:li>
         <fr:li><fr:strong>Axiom schema of Replacement</fr:strong>:
-            Let <fr:tex>F</fr:tex> be a function where <fr:tex>\text {dom }  f = X</fr:tex>, then for any set <fr:tex>X</fr:tex> exists a set <fr:tex>Y =  \{   F(x):x \in  X   \}</fr:tex>.
-            <fr:p>
-                This function is not the normal function but some logical stuff.
-            </fr:p></fr:li>
+            Let <fr:tex display="inline">F</fr:tex> be a function where <fr:tex display="inline">\text {dom } f = X</fr:tex>, then for any set <fr:tex display="inline">X</fr:tex> exists a set <fr:tex display="inline">Y = \{ F(x):x\in  X \}</fr:tex>.
+            <fr:p>This function is not the normal function but some logical stuff.</fr:p></fr:li>
         <fr:li><fr:strong>Axiom of Choice</fr:strong>:
-            For any family of non-empty sets <fr:tex>X</fr:tex>, there exists a function <fr:tex>f:X \to \bigcup  X</fr:tex> such that for any <fr:tex>x \in  X</fr:tex>, <fr:tex>f(x) \in  x</fr:tex>.
-        </fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>360</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002V</fr:addr><fr:route>def-002V.xml</fr:route><fr:title>Set Operations</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let <fr:tex>(X_i)_{i \in  I}</fr:tex> be a family of sets.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>356</fr:anchor><fr:title>Union</fr:title><fr:parent>def-002V</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">          \bigcup _{i \in  I}X_i =  \set {x: \exists  i \in  I  \text { such that } x \in  X_i}     </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>357</fr:anchor><fr:title>Intersection</fr:title><fr:parent>def-002V</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">          \bigcap _{i \in  I}X_i =  \set {x: \forall  i \in  I, x \in  X_i}     </fr:tex>
-    Note that <fr:tex>I  \neq   \emptyset</fr:tex> here.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>358</fr:anchor><fr:title>Disjoint Union</fr:title><fr:parent>def-002V</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">          \bigsqcup _{i \in  I}X_i =  \set {(x,i):x \in  X_i, i \in  I}     </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>359</fr:anchor><fr:title>Product</fr:title><fr:parent>def-002V</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">          \prod _{i \in  I}X_i =  \set {(x_i)_{i \in  I}: \forall  i \in  I, x_i \in  X_i}     </fr:tex></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:p>
-    And principles of set theory
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>361</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000T</fr:addr><fr:route>def-000T.xml</fr:route><fr:title>Principle of Extensionality</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Two sets are equal if and only if they have the same elements.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>362</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000U</fr:addr><fr:route>def-000U.xml</fr:route><fr:title>Principle of Comprehension</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Given a set <fr:tex>A</fr:tex> and a property <fr:tex>P(x)</fr:tex>, there exists a set <fr:tex>B</fr:tex> such that
-    <fr:tex>x \in  B  \iff  x \in  A  \land  P(x)</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:p>
-    We then define the Cartesian product of two sets
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>363</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000V</fr:addr><fr:route>def-000V.xml</fr:route><fr:title>Cartesian product</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Given two sets <fr:tex>A</fr:tex> and <fr:tex>B</fr:tex>, the Cartesian product <fr:tex>A \times  B</fr:tex> is the set
-    of all ordered pairs <fr:tex>(a,b)</fr:tex> where <fr:tex>a \in  A</fr:tex> and <fr:tex>b \in  B</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:p>
-    With the Cartesian product, we can define the relation
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>364</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000W</fr:addr><fr:route>def-000W.xml</fr:route><fr:title>Relation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    A <fr:strong>relation</fr:strong> <fr:tex>R</fr:tex> is a subset of the Cartesian product of two sets <fr:tex>A</fr:tex> and
-    <fr:tex>B</fr:tex>, i.e. <fr:tex>R \subseteq  A \times  B</fr:tex>.
-    If <fr:tex>(a,b) \in  R</fr:tex>, we write <fr:tex>aRb</fr:tex>.
+            For any family of non-empty sets <fr:tex display="inline">X</fr:tex>, there exists a function <fr:tex display="inline">f:X\to \bigcup  X</fr:tex> such that for any <fr:tex display="inline">x\in  X</fr:tex>, <fr:tex display="inline">f(x)\in  x</fr:tex>.</fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>501</fr:anchor><fr:addr type="user">def-002V</fr:addr><fr:route>def-002V.xml</fr:route><fr:title text="Set Operations">Set Operations</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">(X_i)_{i\in  I}</fr:tex> be a family of sets.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>502</fr:anchor><fr:addr type="machine">#238</fr:addr><fr:route>unstable-238.xml</fr:route><fr:title text="Union">Union</fr:title><fr:authors></fr:authors><fr:parent>def-002V</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         \bigcup _{i\in  I}X_i = \set {x:\exists  i\in  I \text { such that } x\in  X_i}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>503</fr:anchor><fr:addr type="machine">#239</fr:addr><fr:route>unstable-239.xml</fr:route><fr:title text="Intersection">Intersection</fr:title><fr:authors></fr:authors><fr:parent>def-002V</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         \bigcap _{i\in  I}X_i = \set {x:\forall  i\in  I, x\in  X_i}     </fr:tex>
+    Note that <fr:tex display="inline">I \neq  \emptyset </fr:tex> here.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>504</fr:anchor><fr:addr type="machine">#240</fr:addr><fr:route>unstable-240.xml</fr:route><fr:title text="Disjoint Union">Disjoint Union</fr:title><fr:authors></fr:authors><fr:parent>def-002V</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         \bigsqcup _{i\in  I}X_i = \set {(x,i):x\in  X_i, i\in  I}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>505</fr:anchor><fr:addr type="machine">#241</fr:addr><fr:route>unstable-241.xml</fr:route><fr:title text="Product">Product</fr:title><fr:authors></fr:authors><fr:parent>def-002V</fr:parent></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         \prod _{i\in  I}X_i = \set {(x_i)_{i\in  I}:\forall  i\in  I, x_i\in  X_i}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>And principles of set theory</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>506</fr:anchor><fr:addr type="user">def-000T</fr:addr><fr:route>def-000T.xml</fr:route><fr:title text="Principle of Extensionality">Principle of Extensionality</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Two sets are equal if and only if they have the same elements.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>507</fr:anchor><fr:addr type="user">def-000U</fr:addr><fr:route>def-000U.xml</fr:route><fr:title text="Principle of Comprehension">Principle of Comprehension</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Given a set <fr:tex display="inline">A</fr:tex> and a property <fr:tex display="inline">P(x)</fr:tex>, there exists a set <fr:tex display="inline">B</fr:tex> such that
+    <fr:tex display="inline">x\in  B \iff  x\in  A \land  P(x)</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>We then define the Cartesian product of two sets</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>508</fr:anchor><fr:addr type="user">def-000V</fr:addr><fr:route>def-000V.xml</fr:route><fr:title text="Cartesian product">Cartesian product</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Given two sets <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex>, the Cartesian product <fr:tex display="inline">A\times  B</fr:tex> is the set
+    of all ordered pairs <fr:tex display="inline">(a,b)</fr:tex> where <fr:tex display="inline">a\in  A</fr:tex> and <fr:tex display="inline">b\in  B</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>With the Cartesian product, we can define the relation</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>509</fr:anchor><fr:addr type="user">def-000W</fr:addr><fr:route>def-000W.xml</fr:route><fr:title text="Relation">Relation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>relation</fr:strong> <fr:tex display="inline">R</fr:tex> is a subset of the Cartesian product of two sets <fr:tex display="inline">A</fr:tex> and
+    <fr:tex display="inline">B</fr:tex>, i.e. <fr:tex display="inline">R\subseteq  A\times  B</fr:tex>.
+    If <fr:tex display="inline">(a,b)\in  R</fr:tex>, we write <fr:tex display="inline">aRb</fr:tex>.
 
-    A relation that between <fr:tex>X</fr:tex> and itself is called <fr:strong>homogeneous relation</fr:strong>.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>365</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000X</fr:addr><fr:route>def-000X.xml</fr:route><fr:title>Equivalence Relation</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    An equivalence relation <fr:tex>R</fr:tex> on a set <fr:tex>A</fr:tex> is a <fr:link href="def-000W.xml" type="local" addr="def-000W">relation</fr:link> that is reflexive,
+    A relation that between <fr:tex display="inline">X</fr:tex> and itself is called <fr:strong>homogeneous relation</fr:strong>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>510</fr:anchor><fr:addr type="user">def-000X</fr:addr><fr:route>def-000X.xml</fr:route><fr:title text="Equivalence Relation">Equivalence Relation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>An equivalence relation <fr:tex display="inline">R</fr:tex> on a set <fr:tex display="inline">A</fr:tex> is a <fr:link type="local" href="def-000W.xml" addr="def-000W" title="Relation">relation</fr:link> that is reflexive,
     symmetric, and transitive.
     <fr:ul><fr:li>Reflexive:
-            <fr:tex>\forall  x \in  A, xRx</fr:tex></fr:li>
+            <fr:tex display="inline">\forall  x\in  A, xRx</fr:tex></fr:li>
         <fr:li>Symmetric:
-            <fr:tex>\forall  x,y \in  A, xRy \implies  yRx</fr:tex></fr:li>
+            <fr:tex display="inline">\forall  x,y\in  A, xRy\implies  yRx</fr:tex></fr:li>
         <fr:li>Transitive:
-            <fr:tex>\forall  x,y,z \in  A, xRy \land  yRz \implies  xRz</fr:tex></fr:li></fr:ul>
-    We often denote the equivalence relation by <fr:tex>\sim</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>366</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002U</fr:addr><fr:route>def-002U.xml</fr:route><fr:title>Equivalence Class</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let <fr:tex>\sim</fr:tex> be an <fr:link href="def-000X.xml" type="local" addr="def-000X">equivalence relation</fr:link> on a set <fr:tex>A</fr:tex>.
-    For any element <fr:tex>a \in  A</fr:tex>, the <fr:strong>equivalence class</fr:strong> of <fr:tex>a</fr:tex> is the set
-    <fr:tex>[a] =  \set {b \in  A:b \sim  a}</fr:tex>.
-    The set of all equivalence classes is denoted by <fr:tex>A/ \sim</fr:tex>,
-    which is called the <fr:strong>quotient set</fr:strong> of <fr:tex>A</fr:tex> by <fr:tex>\sim</fr:tex>.
-    <fr:p>
-        The equivalence class of <fr:tex>a</fr:tex> is also denoted by <fr:tex>\overline {a}</fr:tex>.
-    </fr:p></fr:p></fr:mainmatter></fr:tree><fr:p>
-    One of the most important relations is the order relation.
-    The basic order relation is the preorder.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>367</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000Z</fr:addr><fr:route>def-000Z.xml</fr:route><fr:title>Preorder</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    A <fr:strong>preorder</fr:strong> is a relation <fr:tex>\leq</fr:tex> that is reflexive and transitive.
-    <fr:ul><fr:li>Reflexive: <fr:tex>a \leq  a</fr:tex></fr:li>
-        <fr:li>Transitive: <fr:tex>a \leq  b</fr:tex> and <fr:tex>b \leq  c</fr:tex> implies <fr:tex>a \leq  c</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>368</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000Y</fr:addr><fr:route>def-000Y.xml</fr:route><fr:title>Partial Order</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    A <fr:strong>(non-strict) partial order</fr:strong> is a relation <fr:tex>\leq</fr:tex> that is reflexive, antisymmetric and transitive.
-    <fr:ul><fr:li>Reflexive: <fr:tex>a \leq  a</fr:tex></fr:li>
-        <fr:li>Antisymmetric: <fr:tex>a \leq  b</fr:tex> and <fr:tex>b \leq  a</fr:tex> implies <fr:tex>a=b</fr:tex></fr:li>
-        <fr:li>Transitive: <fr:tex>a \leq  b</fr:tex> and <fr:tex>b \leq  c</fr:tex> implies <fr:tex>a \leq  c</fr:tex></fr:li></fr:ul>
-    A non-strict partial order is also known as an antisymmetric <fr:link href="def-000Z.xml" type="local" addr="def-000Z">preorder</fr:link>.
-</fr:p></fr:mainmatter></fr:tree><fr:p>
-    And the strict partial order (notice the difference between asymmetric and antisymmetric)
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>369</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0010</fr:addr><fr:route>def-0010.xml</fr:route><fr:title>Strict partial orders</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    A strict partial order is a relation <fr:tex>&lt;</fr:tex> that is irreflexive, asymmetric and transitive.
-    <fr:ul><fr:li>Irreflexive: <fr:tex>\neg (a&lt;a)</fr:tex></fr:li>
-        <fr:li>Asymmetric: <fr:tex>a&lt;b</fr:tex> implies <fr:tex>\neg (b&lt;a)</fr:tex></fr:li>
-        <fr:li>Transitive: <fr:tex>a&lt;b</fr:tex> and <fr:tex>b&lt;c</fr:tex> implies <fr:tex>a&lt;c</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter></fr:tree><fr:p>
-    With the definition of order, we can define the upper bound and lower bound
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>370</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0011</fr:addr><fr:route>def-0011.xml</fr:route><fr:title>Upper Bound and Lower Bound</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let a subset <fr:tex>S</fr:tex> of a <fr:link href="def-000Y.xml" type="local" addr="def-000Y">partially ordered</fr:link> set <fr:tex>(P,  \leq )</fr:tex>,
-    <fr:tex>S</fr:tex> is bounded above if there exists <fr:tex>x  \in  P</fr:tex> such that <fr:tex>\forall  y  \in  S, y  \leq  x</fr:tex>. And <fr:tex>x</fr:tex> is called an <fr:strong>upper bound</fr:strong> of <fr:tex>S</fr:tex>.
-    Dually, <fr:tex>S</fr:tex> is bounded below if there exists <fr:tex>x  \in  P</fr:tex> such that <fr:tex>\forall  y  \in  S, x  \leq  y</fr:tex>. And <fr:tex>x</fr:tex> is called a <fr:strong>lower bound</fr:strong> of <fr:tex>S</fr:tex>.
-</fr:p>
+            <fr:tex display="inline">\forall  x,y,z\in  A, xRy\land  yRz\implies  xRz</fr:tex></fr:li></fr:ul>
+    We often denote the equivalence relation by <fr:tex display="inline">\sim </fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>511</fr:anchor><fr:addr type="user">def-002U</fr:addr><fr:route>def-002U.xml</fr:route><fr:title text="Equivalence Class">Equivalence Class</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">\sim </fr:tex> be an <fr:link type="local" href="def-000X.xml" addr="def-000X" title="Equivalence Relation">equivalence relation</fr:link> on a set <fr:tex display="inline">A</fr:tex>.
+    For any element <fr:tex display="inline">a\in  A</fr:tex>, the <fr:strong>equivalence class</fr:strong> of <fr:tex display="inline">a</fr:tex> is the set
+    <fr:tex display="inline">[a] = \set {b\in  A:b\sim  a}</fr:tex>.
+    The set of all equivalence classes is denoted by <fr:tex display="inline">A/\sim </fr:tex>,
+    which is called the <fr:strong>quotient set</fr:strong> of <fr:tex display="inline">A</fr:tex> by <fr:tex display="inline">\sim </fr:tex>.
+    <fr:p>The equivalence class of <fr:tex display="inline">a</fr:tex> is also denoted by <fr:tex display="inline">\overline {a}</fr:tex>.</fr:p></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>One of the most important relations is the order relation.
+    The basic order relation is the preorder.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>512</fr:anchor><fr:addr type="user">def-000Z</fr:addr><fr:route>def-000Z.xml</fr:route><fr:title text="Preorder">Preorder</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>preorder</fr:strong> is a relation <fr:tex display="inline">\leq </fr:tex> that is reflexive and transitive.
+    <fr:ul><fr:li>Reflexive: <fr:tex display="inline">a\leq  a</fr:tex></fr:li>
+        <fr:li>Transitive: <fr:tex display="inline">a\leq  b</fr:tex> and <fr:tex display="inline">b\leq  c</fr:tex> implies <fr:tex display="inline">a\leq  c</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>513</fr:anchor><fr:addr type="user">def-000Y</fr:addr><fr:route>def-000Y.xml</fr:route><fr:title text="Partial Order">Partial Order</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>(non-strict) partial order</fr:strong> is a relation <fr:tex display="inline">\leq </fr:tex> that is reflexive, antisymmetric and transitive.
+    <fr:ul><fr:li>Reflexive: <fr:tex display="inline">a\leq  a</fr:tex></fr:li>
+        <fr:li>Antisymmetric: <fr:tex display="inline">a\leq  b</fr:tex> and <fr:tex display="inline">b\leq  a</fr:tex> implies <fr:tex display="inline">a=b</fr:tex></fr:li>
+        <fr:li>Transitive: <fr:tex display="inline">a\leq  b</fr:tex> and <fr:tex display="inline">b\leq  c</fr:tex> implies <fr:tex display="inline">a\leq  c</fr:tex></fr:li></fr:ul>
+    A non-strict partial order is also known as an antisymmetric <fr:link type="local" href="def-000Z.xml" addr="def-000Z" title="Preorder">preorder</fr:link>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>And the strict partial order (notice the difference between asymmetric and antisymmetric)</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>514</fr:anchor><fr:addr type="user">def-0010</fr:addr><fr:route>def-0010.xml</fr:route><fr:title text="Strict partial orders">Strict partial orders</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A strict partial order is a relation <fr:tex display="inline">&lt;</fr:tex> that is irreflexive, asymmetric and transitive.
+    <fr:ul><fr:li>Irreflexive: <fr:tex display="inline">\neg (a&lt;a)</fr:tex></fr:li>
+        <fr:li>Asymmetric: <fr:tex display="inline">a&lt;b</fr:tex> implies <fr:tex display="inline">\neg (b&lt;a)</fr:tex></fr:li>
+        <fr:li>Transitive: <fr:tex display="inline">a&lt;b</fr:tex> and <fr:tex display="inline">b&lt;c</fr:tex> implies <fr:tex display="inline">a&lt;c</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>With the definition of order, we can define the upper bound and lower bound</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>515</fr:anchor><fr:addr type="user">def-0011</fr:addr><fr:route>def-0011.xml</fr:route><fr:title text="Upper Bound and Lower Bound">Upper Bound and Lower Bound</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let a subset <fr:tex display="inline">S</fr:tex> of a <fr:link type="local" href="def-000Y.xml" addr="def-000Y" title="Partial Order">partially ordered</fr:link> set <fr:tex display="inline">(P, \leq )</fr:tex>,
+    <fr:tex display="inline">S</fr:tex> is bounded above if there exists <fr:tex display="inline">x \in  P</fr:tex> such that <fr:tex display="inline">\forall  y \in  S, y \leq  x</fr:tex>. And <fr:tex display="inline">x</fr:tex> is called an <fr:strong>upper bound</fr:strong> of <fr:tex display="inline">S</fr:tex>.
+    Dually, <fr:tex display="inline">S</fr:tex> is bounded below if there exists <fr:tex display="inline">x \in  P</fr:tex> such that <fr:tex display="inline">\forall  y \in  S, x \leq  y</fr:tex>. And <fr:tex display="inline">x</fr:tex> is called a <fr:strong>lower bound</fr:strong> of <fr:tex display="inline">S</fr:tex>.</fr:p>
     <fr:p><fr:strong>Supremum (least upper bound)</fr:strong></fr:p>
-    <fr:p>
-    An element <fr:tex>x \in  P</fr:tex> is a supremum of <fr:tex>S</fr:tex>,
-    if for all upper bounds <fr:tex>z  \in  P</fr:tex> of <fr:tex>S</fr:tex>, <fr:tex>x  \leq  z</fr:tex>.
-    Denoted as <fr:tex>x =  \sup  S</fr:tex>.
-    </fr:p>
+    <fr:p>An element <fr:tex display="inline">x\in  P</fr:tex> is a supremum of <fr:tex display="inline">S</fr:tex>,
+    if for all upper bounds <fr:tex display="inline">z \in  P</fr:tex> of <fr:tex display="inline">S</fr:tex>, <fr:tex display="inline">x \leq  z</fr:tex>.
+    Denoted as <fr:tex display="inline">x = \sup  S</fr:tex>.</fr:p>
     <fr:p><fr:strong>Infimum (greatest lower bound)</fr:strong></fr:p>
-    <fr:p>
-    An element <fr:tex>x \in  P</fr:tex> is a infimum of <fr:tex>S</fr:tex>,
-    if for all lower bounds <fr:tex>z  \in  P</fr:tex> of <fr:tex>S</fr:tex>, <fr:tex>z  \leq  x</fr:tex>.
-    Denoted as <fr:tex>x =  \inf  S</fr:tex>.
-    </fr:p>
-</fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>371</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002G</fr:addr><fr:route>def-002G.xml</fr:route><fr:title>Function</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> be sets then a <fr:strong>function</fr:strong> <fr:tex>f:X  \to  Y</fr:tex>
-    is a mapping that sends each element of <fr:tex>X</fr:tex> to a unique element of <fr:tex>Y</fr:tex>,
-    denoted by <fr:tex>f(x) = y</fr:tex>.
-    Function is a special case of <fr:link href="def-000W.xml" type="local" addr="def-000W">relation</fr:link>, and it is a relation that is left-total and right-unique.
-    <fr:tex display="block">         f  \in  X  \times  Y  \text { and }  \forall  x  \in  X,  \exists ! y  \in  Y, (x,y)  \in  f     </fr:tex>
-    <fr:tex>X</fr:tex> is said to be the <fr:strong>domain</fr:strong> of <fr:tex>f</fr:tex> and <fr:tex>Y</fr:tex> is said to be the <fr:strong>codomain</fr:strong> of <fr:tex>f</fr:tex>,
-    where we denote <fr:tex>X =  \text {dom }  f</fr:tex> and <fr:tex>Y =  \text {cod }  f</fr:tex>.
-</fr:p><fr:p>
-    Two functions <fr:tex>f:X \to  Y</fr:tex> and <fr:tex>g:Y \to  Z</fr:tex> can be <fr:strong>composed</fr:strong> to form a new function <fr:tex>g  \circ  f : X  \to  Z</fr:tex>,
+    <fr:p>An element <fr:tex display="inline">x\in  P</fr:tex> is a infimum of <fr:tex display="inline">S</fr:tex>,
+    if for all lower bounds <fr:tex display="inline">z \in  P</fr:tex> of <fr:tex display="inline">S</fr:tex>, <fr:tex display="inline">z \leq  x</fr:tex>.
+    Denoted as <fr:tex display="inline">x = \inf  S</fr:tex>.</fr:p>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>516</fr:anchor><fr:addr type="user">def-002G</fr:addr><fr:route>def-002G.xml</fr:route><fr:title text="Function">Function</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets then a <fr:strong>function</fr:strong> <fr:tex display="inline">f:X \to  Y</fr:tex>
+    is a mapping that sends each element of <fr:tex display="inline">X</fr:tex> to a unique element of <fr:tex display="inline">Y</fr:tex>,
+    denoted by <fr:tex display="inline">f(x) = y</fr:tex>.
+    Function is a special case of <fr:link type="local" href="def-000W.xml" addr="def-000W" title="Relation">relation</fr:link>, and it is a relation that is left-total and right-unique.
+    <fr:tex display="block">         f \in  X \times  Y \text { and } \forall  x \in  X, \exists ! y \in  Y, (x,y) \in  f     </fr:tex>
+    <fr:tex display="inline">X</fr:tex> is said to be the <fr:strong>domain</fr:strong> of <fr:tex display="inline">f</fr:tex> and <fr:tex display="inline">Y</fr:tex> is said to be the <fr:strong>codomain</fr:strong> of <fr:tex display="inline">f</fr:tex>,
+    where we denote <fr:tex display="inline">X = \text {dom } f</fr:tex> and <fr:tex display="inline">Y = \text {cod } f</fr:tex>.</fr:p><fr:p>Two functions <fr:tex display="inline">f:X\to  Y</fr:tex> and <fr:tex display="inline">g:Y\to  Z</fr:tex> can be <fr:strong>composed</fr:strong> to form a new function <fr:tex display="inline">g \circ  f : X \to  Z</fr:tex>,
     where the composition is defined by
-    <fr:tex display="block">         (g  \circ  f)(x) = g(f(x))      </fr:tex></fr:p><fr:p>
-    The set of all functions from <fr:tex>X</fr:tex> to <fr:tex>Y</fr:tex> is denoted by <fr:tex>\hom _ \text {set} (X, Y)</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:p>
-    The isomorphism function is defined as follows
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>372</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002H</fr:addr><fr:route>def-002H.xml</fr:route><fr:title>Set Isomorphism</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> be sets and <fr:tex>f: X  \to  Y</fr:tex> be a function.
-    The function <fr:tex>f</fr:tex> is called an <fr:strong>isomorphism</fr:strong> if it is both <fr:link href="def-002D.xml" type="local" addr="def-002D">injective</fr:link> and <fr:link href="def-002F.xml" type="local" addr="def-002F">surjective</fr:link>.
-    In other words, there exists a function <fr:tex>g: Y  \to  X</fr:tex> such that
-    <fr:tex display="block">         g  \circ  f =  \text {id} _X  \text { and } f  \circ  g =  \text {id} _Y     </fr:tex>
-    where <fr:tex>\text {id} _X</fr:tex> and <fr:tex>\text {id} _Y</fr:tex> are the <fr:strong>identity functions</fr:strong> on <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> respectively.
-    And we say <fr:tex>f</fr:tex> is <fr:strong>invertible</fr:strong> and <fr:tex>g</fr:tex> is the <fr:strong>inverse</fr:strong> of <fr:tex>f</fr:tex>.
-    If there is a isomorphism between <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex>, we say <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> are <fr:strong>isomorphic</fr:strong>,
-    denoted by <fr:tex>X  \cong  Y</fr:tex>.
-    Isomorphism is an <fr:link href="def-000X.xml" type="local" addr="def-000X">equivalence relation</fr:link>.
-</fr:p></fr:mainmatter></fr:tree><fr:p>
-    With isomorphism, we can define the cardinality of a set.
-    Two isomorphic sets have the same cardinality.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>373</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002I</fr:addr><fr:route>def-002I.xml</fr:route><fr:title>Cardinality</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let <fr:tex>X</fr:tex> be a set and <fr:tex>n  \in   \mathbb {N}</fr:tex>. 
-    <fr:tex>A</fr:tex> si said to have <fr:strong>cardinality</fr:strong> <fr:tex>n</fr:tex>, denoted by <fr:tex> |A|= n</fr:tex>,
-    if there exists an isomorphism between <fr:tex>A</fr:tex> and <fr:tex>S_n =  \{   1,2, \cdots ,n   \}</fr:tex>.
-    If <fr:tex>A</fr:tex> has finite cardinality, we say <fr:tex>A</fr:tex> is <fr:strong>finite</fr:strong>, otherwise
-    we say <fr:tex>A</fr:tex> is <fr:strong>infinite</fr:strong>, denoted by <fr:tex>|A|  \geq   \infty</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:p>
-    The next topic is the product of sets
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>374</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002J</fr:addr><fr:route>def-002J.xml</fr:route><fr:title>Product of Sets</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> be sets, then the <fr:strong>Cartesian product</fr:strong> of <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> is the set
-    <fr:tex display="block">         X  \times  Y =  \set {(x,y)  \mid  x  \in  X  \text { and } y  \in  Y}     </fr:tex>
+    <fr:tex display="block">         (g \circ  f)(x) = g(f(x))      </fr:tex></fr:p><fr:p>The set of all functions from <fr:tex display="inline">X</fr:tex> to <fr:tex display="inline">Y</fr:tex> is denoted by <fr:tex display="inline">\hom _\text {set}(X, Y)</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>The isomorphism function is defined as follows</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>517</fr:anchor><fr:addr type="user">def-002H</fr:addr><fr:route>def-002H.xml</fr:route><fr:title text="Set Isomorphism">Set Isomorphism</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets and <fr:tex display="inline">f: X \to  Y</fr:tex> be a function.
+    The function <fr:tex display="inline">f</fr:tex> is called an <fr:strong>isomorphism</fr:strong> if it is both <fr:link type="local" href="def-002D.xml" addr="def-002D" title="Injective">injective</fr:link> and <fr:link type="local" href="def-002F.xml" addr="def-002F" title="Surjective">surjective</fr:link>.
+    In other words, there exists a function <fr:tex display="inline">g: Y \to  X</fr:tex> such that
+    <fr:tex display="block">         g \circ  f = \text {id}_X \text { and } f \circ  g = \text {id}_Y     </fr:tex>
+    where <fr:tex display="inline">\text {id}_X</fr:tex> and <fr:tex display="inline">\text {id}_Y</fr:tex> are the <fr:strong>identity functions</fr:strong> on <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> respectively.
+    And we say <fr:tex display="inline">f</fr:tex> is <fr:strong>invertible</fr:strong> and <fr:tex display="inline">g</fr:tex> is the <fr:strong>inverse</fr:strong> of <fr:tex display="inline">f</fr:tex>.
+    If there is a isomorphism between <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex>, we say <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> are <fr:strong>isomorphic</fr:strong>,
+    denoted by <fr:tex display="inline">X \cong  Y</fr:tex>.
+    Isomorphism is an <fr:link type="local" href="def-000X.xml" addr="def-000X" title="Equivalence Relation">equivalence relation</fr:link>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>With isomorphism, we can define the cardinality of a set.
+    Two isomorphic sets have the same cardinality.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>518</fr:anchor><fr:addr type="user">def-002I</fr:addr><fr:route>def-002I.xml</fr:route><fr:title text="Cardinality">Cardinality</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">X</fr:tex> be a set and <fr:tex display="inline">n \in  \mathbb {N}</fr:tex>. 
+    <fr:tex display="inline">A</fr:tex> si said to have <fr:strong>cardinality</fr:strong> <fr:tex display="inline">n</fr:tex>, denoted by <fr:tex display="inline"> |A|= n</fr:tex>,
+    if there exists an isomorphism between <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">S_n = \{ 1,2,\cdots ,n \}</fr:tex>.
+    If <fr:tex display="inline">A</fr:tex> has finite cardinality, we say <fr:tex display="inline">A</fr:tex> is <fr:strong>finite</fr:strong>, otherwise
+    we say <fr:tex display="inline">A</fr:tex> is <fr:strong>infinite</fr:strong>, denoted by <fr:tex display="inline">|A| \geq  \infty </fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>The next topic is the product of sets</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>519</fr:anchor><fr:addr type="user">def-002J</fr:addr><fr:route>def-002J.xml</fr:route><fr:title text="Product of Sets">Product of Sets</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets, then the <fr:strong>Cartesian product</fr:strong> of <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> is the set
+    <fr:tex display="block">         X \times  Y = \set {(x,y) \mid  x \in  X \text { and } y \in  Y}     </fr:tex>
     There are two natural projections from the Cartesian product to the original sets, namely
-    <fr:tex display="block">          \pi _1 : X  \times  Y  \to  X  \text { and }  \pi _2 : X  \times  Y  \to  Y     </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:p>
-    This leads to an improtant concept named <fr:strong>universal property</fr:strong>.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>375</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000J</fr:addr><fr:route>thm-000J.xml</fr:route><fr:title>Universal Property for Product of Sets</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> be sets.
-    For any set <fr:tex>A</fr:tex> and function
-    <fr:tex>f: A  \to  X</fr:tex> and <fr:tex>g: A  \to  Y</fr:tex>,
-    there exists a <fr:em>unique</fr:em> function <fr:tex>h: A  \to  X  \times  Y</fr:tex> such that
+    <fr:tex display="block">         \pi _1 : X \times  Y \to  X \text { and } \pi _2 : X \times  Y \to  Y     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>This leads to an improtant concept named <fr:strong>universal property</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>520</fr:anchor><fr:addr type="user">thm-000J</fr:addr><fr:route>thm-000J.xml</fr:route><fr:title text="Universal Property for Product of Sets">Universal Property for Product of Sets</fr:title><fr:taxon>Lemma</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets.
+    For any set <fr:tex display="inline">A</fr:tex> and function
+    <fr:tex display="inline">f: A \to  X</fr:tex> and <fr:tex display="inline">g: A \to  Y</fr:tex>,
+    there exists a <fr:em>unique</fr:em> function <fr:tex display="inline">h: A \to  X \times  Y</fr:tex> such that
     the following diagram commutes:
     
-    <fr:embedded-tex hash="4157eb89f51117c585cb94d00d036a56"><fr:embedded-tex-preamble>
-       \usepackage {tikz-cd}
-       \usepackage {amssymb}
+    <fr:embedded-tex hash="ca22432ab48562e3683dbca83f028b9b"><fr:embedded-tex-preamble>
+      \usepackage {tikz-cd}
+      \usepackage {amssymb}
     </fr:embedded-tex-preamble><fr:embedded-tex-body>
-         
-         \begin {tikzcd}
-            &amp; {X \times  Y}  \\ 
-            X &amp;&amp; Y  \\ 
+        
+        \begin {tikzcd}
+            &amp; {X\times  Y} \\
+            X &amp;&amp; Y \\
             &amp; A
-             \arrow [&quot;{ \pi _1}&quot;&apos;, from=1-2, to=2-1]
-             \arrow [&quot;{ \pi _2}&quot;, from=1-2, to=2-3]
-             \arrow [&quot;f&quot;, from=3-2, to=2-1]
-             \arrow [&quot;g&quot;&apos;, from=3-2, to=2-3]
-             \arrow [&quot;{ \exists !}&quot;, dashed, from=3-2, to=1-2]
-         \end {tikzcd}
-     
+            \arrow [&quot;{\pi _1}&quot;&apos;, from=1-2, to=2-1]
+            \arrow [&quot;{\pi _2}&quot;, from=1-2, to=2-3]
+            \arrow [&quot;f&quot;, from=3-2, to=2-1]
+            \arrow [&quot;g&quot;&apos;, from=3-2, to=2-3]
+            \arrow [&quot;{\exists !}&quot;, dashed, from=3-2, to=1-2]
+        \end {tikzcd}
+    
     </fr:embedded-tex-body></fr:embedded-tex>
 
-    We might denote the unique function by <fr:tex>\langle  f,g  \rangle : A  \to  X  \times  Y</fr:tex>.
-    It is sufficient to define <fr:tex>\langle  f,g  \rangle (a) = (f(a),g(a))</fr:tex> for all <fr:tex>a \in  A</fr:tex> as the unique function.
-</fr:p></fr:mainmatter></fr:tree><fr:p>
-    Dual to the product of sets, we have the coproduct of sets
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>376</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002K</fr:addr><fr:route>def-002K.xml</fr:route><fr:title>Coproduct of Sets</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> be sets, then the <fr:strong>coproduct</fr:strong> of <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> is 
-    defined as the <fr:strong>disjoint union</fr:strong> of <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex>, denoted by <fr:tex>X  \sqcup  Y</fr:tex>.
+    We might denote the unique function by <fr:tex display="inline">\langle  f,g \rangle : A \to  X \times  Y</fr:tex>.
+    It is sufficient to define <fr:tex display="inline">\langle  f,g \rangle (a) = (f(a),g(a))</fr:tex> for all <fr:tex display="inline">a\in  A</fr:tex> as the unique function.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Dual to the product of sets, we have the coproduct of sets</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>521</fr:anchor><fr:addr type="user">def-002K</fr:addr><fr:route>def-002K.xml</fr:route><fr:title text="Coproduct of Sets">Coproduct of Sets</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets, then the <fr:strong>coproduct</fr:strong> of <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> is 
+    defined as the <fr:strong>disjoint union</fr:strong> of <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex>, denoted by <fr:tex display="inline">X \sqcup  Y</fr:tex>.
     There are two natural injections from the original sets to the coproduct, namely
-    <fr:tex display="block">         i_1 : X  \to  X  \sqcup  Y  \text { and } i_2 : Y  \to  X  \sqcup  Y     </fr:tex></fr:p></fr:mainmatter></fr:tree><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>377</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000K</fr:addr><fr:route>thm-000K.xml</fr:route><fr:title>Universal Property for Coproduct of Sets</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let <fr:tex>X</fr:tex> and <fr:tex>Y</fr:tex> be sets. For any set <fr:tex>A</fr:tex> and function
-    <fr:tex>f : X  \to  A</fr:tex> and <fr:tex>g : Y  \to  A</fr:tex>, there exists a <fr:em>unique</fr:em> function
-    <fr:tex>h : X  \sqcup  Y  \to  A</fr:tex> such that the following diagram commutes:
+    <fr:tex display="block">         i_1 : X \to  X \sqcup  Y \text { and } i_2 : Y \to  X \sqcup  Y     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>522</fr:anchor><fr:addr type="user">thm-000K</fr:addr><fr:route>thm-000K.xml</fr:route><fr:title text="Universal Property for Coproduct of Sets">Universal Property for Coproduct of Sets</fr:title><fr:taxon>Lemma</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets. For any set <fr:tex display="inline">A</fr:tex> and function
+    <fr:tex display="inline">f : X \to  A</fr:tex> and <fr:tex display="inline">g : Y \to  A</fr:tex>, there exists a <fr:em>unique</fr:em> function
+    <fr:tex display="inline">h : X \sqcup  Y \to  A</fr:tex> such that the following diagram commutes:
     
-    <fr:embedded-tex hash="31473672edfba5d6215d76dd08a01a24"><fr:embedded-tex-preamble>
-       \usepackage {tikz-cd}
-       \usepackage {amssymb}
+    <fr:embedded-tex hash="d3e6535ccb6ae8bc37951bc260782fc4"><fr:embedded-tex-preamble>
+      \usepackage {tikz-cd}
+      \usepackage {amssymb}
     </fr:embedded-tex-preamble><fr:embedded-tex-body>
-         
-         \begin {tikzcd}
-            &amp; A  \\ 
-            X &amp;&amp; Y  \\ 
-            &amp; {X \sqcup  Y}
-             \arrow [&quot;{i_1}&quot;&apos;, from=2-1, to=3-2]
-             \arrow [&quot;{i_2}&quot;, from=2-3, to=3-2]
-             \arrow [&quot;f&quot;, from=2-1, to=1-2]
-             \arrow [&quot;g&quot;&apos;, from=2-3, to=1-2]
-             \arrow [&quot;{ \exists !}&quot;, dashed, from=3-2, to=1-2]
-         \end {tikzcd}   
-     
+        
+        \begin {tikzcd}
+            &amp; A \\
+            X &amp;&amp; Y \\
+            &amp; {X\sqcup  Y}
+            \arrow [&quot;{i_1}&quot;&apos;, from=2-1, to=3-2]
+            \arrow [&quot;{i_2}&quot;, from=2-3, to=3-2]
+            \arrow [&quot;f&quot;, from=2-1, to=1-2]
+            \arrow [&quot;g&quot;&apos;, from=2-3, to=1-2]
+            \arrow [&quot;{\exists !}&quot;, dashed, from=3-2, to=1-2]
+        \end {tikzcd}   
+    
     </fr:embedded-tex-body></fr:embedded-tex>
 
-    We might denote the unique as <fr:tex>f \sqcup  g: X  \sqcup  Y  \to  A</fr:tex>.
-</fr:p></fr:mainmatter></fr:tree><fr:p>
-    In this section we discuss the <fr:em>limits</fr:em> of variously-shaped diagrams of sets.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>378</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002L</fr:addr><fr:route>def-002L.xml</fr:route><fr:title>Pullback of Sets</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Suppose we have sets <fr:tex>X</fr:tex>, <fr:tex>Y</fr:tex>, and <fr:tex>Z</fr:tex> and functions
-    <fr:tex>f : X  \to  Z</fr:tex> and <fr:tex>g : Y  \to  Z</fr:tex>.
+    We might denote the unique as <fr:tex display="inline">f\sqcup  g: X \sqcup  Y \to  A</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>In this section we discuss the <fr:em>limits</fr:em> of variously-shaped diagrams of sets.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>523</fr:anchor><fr:addr type="user">def-002L</fr:addr><fr:route>def-002L.xml</fr:route><fr:title text="Pullback of Sets">Pullback of Sets</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Suppose we have sets <fr:tex display="inline">X</fr:tex>, <fr:tex display="inline">Y</fr:tex>, and <fr:tex display="inline">Z</fr:tex> and functions
+    <fr:tex display="inline">f : X \to  Z</fr:tex> and <fr:tex display="inline">g : Y \to  Z</fr:tex>.
     
-    <fr:embedded-tex hash="aea0109fc5888410344cbfd1c2bfad2d"><fr:embedded-tex-preamble>
-       \usepackage {tikz-cd}
-       \usepackage {amssymb}
+    <fr:embedded-tex hash="1be7e77d25bf550ee218bc4d0cc863ed"><fr:embedded-tex-preamble>
+      \usepackage {tikz-cd}
+      \usepackage {amssymb}
     </fr:embedded-tex-preamble><fr:embedded-tex-body>
-         
-         \begin {tikzcd}
-            &amp; Y  \\ 
+        
+        \begin {tikzcd}
+            &amp; Y \\
             X &amp; Z
-             \arrow [&quot;f&quot;&apos;, from=2-1, to=2-2]
-             \arrow [&quot;g&quot;, from=1-2, to=2-2]
-         \end {tikzcd}
-     
+            \arrow [&quot;f&quot;&apos;, from=2-1, to=2-2]
+            \arrow [&quot;g&quot;, from=1-2, to=2-2]
+        \end {tikzcd}
+    
     </fr:embedded-tex-body></fr:embedded-tex>
 
     Its <fr:strong>fiber product</fr:strong> is the set
-    <fr:tex display="block">         X  \times _Z Y =  \{   (x,w,y)  \mid  f(x) = w = g(y)   \}      </fr:tex>
+    <fr:tex display="block">         X \times _Z Y = \{ (x,w,y) \mid  f(x) = w = g(y) \}     </fr:tex>
     There are obvious projections 
-    <fr:tex>          \pi _1 : X  \times _Z Y  \to  X  \text { and }  \pi _2 : X  \times _Z Y  \to  Y     </fr:tex>
-    such that the following diagram commutes (<fr:tex>W = X  \times _Z Y</fr:tex>):
+    <fr:tex display="inline">         \pi _1 : X \times _Z Y \to  X \text { and } \pi _2 : X \times _Z Y \to  Y     </fr:tex>
+    such that the following diagram commutes (<fr:tex display="inline">W = X \times _Z Y</fr:tex>):
     
-    <fr:embedded-tex hash="9194755931a1b27a68b010256252d579"><fr:embedded-tex-preamble>
-       \usepackage {tikz-cd}
-       \usepackage {amssymb}
+    <fr:embedded-tex hash="cec2c02008ffeb510d502730d67fd941"><fr:embedded-tex-preamble>
+      \usepackage {tikz-cd}
+      \usepackage {amssymb}
     </fr:embedded-tex-preamble><fr:embedded-tex-body>
-         
-         \begin {tikzcd}
-            W &amp; Y  \\ 
+        
+        \begin {tikzcd}
+            W &amp; Y \\
             X &amp; Z
-             \arrow [&quot;f&quot;&apos;, from=2-1, to=2-2]
-             \arrow [&quot;g&quot;, from=1-2, to=2-2]
-             \arrow [&quot;{ \pi _2}&quot;, from=1-1, to=1-2]
-             \arrow [&quot;{ \pi _1}&quot;&apos;, from=1-1, to=2-1]
-             \arrow [&quot; \lrcorner &quot;{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
-         \end {tikzcd}
-     
+            \arrow [&quot;f&quot;&apos;, from=2-1, to=2-2]
+            \arrow [&quot;g&quot;, from=1-2, to=2-2]
+            \arrow [&quot;{\pi _2}&quot;, from=1-1, to=1-2]
+            \arrow [&quot;{\pi _1}&quot;&apos;, from=1-1, to=2-1]
+            \arrow [&quot;\lrcorner &quot;{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+        \end {tikzcd}
+    
     </fr:embedded-tex-body></fr:embedded-tex>
 
-    The <fr:strong>pullback</fr:strong> is defined to be any set <fr:tex>W  \cong  X \times _Z Y</fr:tex>
-    The corner symbol indicates <fr:tex>W</fr:tex> is a <fr:em>pullback</fr:em></fr:p></fr:mainmatter></fr:tree><fr:p>
-    The pullback also satisfies the universal property.
-</fr:p><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false"><fr:frontmatter><fr:anchor>379</fr:anchor><fr:taxon>Lemma</fr:taxon><fr:addr>thm-000L</fr:addr><fr:route>thm-000L.xml</fr:route><fr:title>Universal Property for Pullback</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Suppose the given diagram:
+    The <fr:strong>pullback</fr:strong> is defined to be any set <fr:tex display="inline">W \cong  X\times _Z Y</fr:tex>
+    The corner symbol indicates <fr:tex display="inline">W</fr:tex> is a <fr:em>pullback</fr:em></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>The pullback also satisfies the universal property.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>524</fr:anchor><fr:addr type="user">thm-000L</fr:addr><fr:route>thm-000L.xml</fr:route><fr:title text="Universal Property for Pullback">Universal Property for Pullback</fr:title><fr:taxon>Lemma</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Suppose the given diagram:
     
-    <fr:embedded-tex hash="5e6f2da5af96f3d2b5aa340ada59f646"><fr:embedded-tex-preamble>
-       \usepackage {tikz-cd}
-       \usepackage {amssymb}
+    <fr:embedded-tex hash="fa8c405224a924702821602d8d9b2b33"><fr:embedded-tex-preamble>
+      \usepackage {tikz-cd}
+      \usepackage {amssymb}
     </fr:embedded-tex-preamble><fr:embedded-tex-body>
-         
-         \begin {tikzcd}
-            &amp; Y  \\ 
+        
+        \begin {tikzcd}
+            &amp; Y \\
             X &amp; Z
-             \arrow [&quot;t&quot;&apos;, from=2-1, to=2-2]
-             \arrow [&quot;u&quot;, from=1-2, to=2-2]
-         \end {tikzcd}
-     
+            \arrow [&quot;t&quot;&apos;, from=2-1, to=2-2]
+            \arrow [&quot;u&quot;, from=1-2, to=2-2]
+        \end {tikzcd}
+    
     </fr:embedded-tex-body></fr:embedded-tex>
 
-    For any set <fr:tex>A</fr:tex> and commutative solid arrow diagram as below
-    (functions <fr:tex>f:A \to  X</fr:tex> and <fr:tex>g:A \to  Y</fr:tex> such that <fr:tex>t \circ  f = u \circ  g</fr:tex>):
+    For any set <fr:tex display="inline">A</fr:tex> and commutative solid arrow diagram as below
+    (functions <fr:tex display="inline">f:A\to  X</fr:tex> and <fr:tex display="inline">g:A\to  Y</fr:tex> such that <fr:tex display="inline">t\circ  f = u\circ  g</fr:tex>):
     
-    <fr:embedded-tex hash="2d3ff6bcdbabe8193a5f90642c805f62"><fr:embedded-tex-preamble>
-       \usepackage {tikz-cd}
-       \usepackage {amssymb}
+    <fr:embedded-tex hash="120ca276e03c2c627c0c01aefff25d90"><fr:embedded-tex-preamble>
+      \usepackage {tikz-cd}
+      \usepackage {amssymb}
     </fr:embedded-tex-preamble><fr:embedded-tex-body>
-         
-         \usetikzlibrary {arrows}
-         \begin {tikzcd}
-            &amp; {X \times _ZY}  \\ 
-             \\ 
-            &amp; A  \\ 
-            X &amp;&amp; Y  \\ 
+        
+        \usetikzlibrary {arrows}
+        \begin {tikzcd}
+            &amp; {X\times _ZY} \\
+            \\
+            &amp; A \\
+            X &amp;&amp; Y \\
             &amp; Z
-             \arrow [&quot;f&quot;&apos;, from=3-2, to=4-1]
-             \arrow [&quot;g&quot;, from=3-2, to=4-3]
-             \arrow [&quot;t&quot;&apos;, from=4-1, to=5-2]
-             \arrow [&quot;u&quot;, from=4-3, to=5-2]
-             \arrow [&quot;{ \exists !}&quot;, dashed, from=3-2, to=1-2]
-             \arrow [&quot;{ \pi _1}&quot;&apos;, bend right, from=1-2, to=4-1]
-	         \arrow [&quot;{ \pi _2}&quot;, bend left, from=1-2, to=4-3]
-         \end {tikzcd}
-     
+            \arrow [&quot;f&quot;&apos;, from=3-2, to=4-1]
+            \arrow [&quot;g&quot;, from=3-2, to=4-3]
+            \arrow [&quot;t&quot;&apos;, from=4-1, to=5-2]
+            \arrow [&quot;u&quot;, from=4-3, to=5-2]
+            \arrow [&quot;{\exists !}&quot;, dashed, from=3-2, to=1-2]
+            \arrow [&quot;{\pi _1}&quot;&apos;, bend right, from=1-2, to=4-1]
+	        \arrow [&quot;{\pi _2}&quot;, bend left, from=1-2, to=4-3]
+        \end {tikzcd}
+    
     </fr:embedded-tex-body></fr:embedded-tex>
 
-    there exists a <fr:em>unique</fr:em> arrow <fr:tex>\langle  f,g  \rangle _Z: A \to  X \times _Z Y</fr:tex> such that
-    <fr:tex display="block">          \pi _1 \circ \langle  f,g  \rangle _Z = f  \text { and }  \pi _2 \circ \langle  f,g  \rangle _Z = g     </fr:tex></fr:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>
+    there exists a <fr:em>unique</fr:em> arrow <fr:tex display="inline">\langle  f,g \rangle _Z: A\to  X\times _Z Y</fr:tex> such that
+    <fr:tex display="block">         \pi _1\circ \langle  f,g \rangle _Z = f \text { and } \pi _2\circ \langle  f,g \rangle _Z = g     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>

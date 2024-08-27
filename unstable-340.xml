@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>806</fr:anchor><fr:addr type="machine">#340</fr:addr><fr:route>unstable-340.xml</fr:route><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0003</fr:parent></fr:frontmatter><fr:mainmatter><fr:strong>General Recursion</fr:strong>
+    <fr:p>Let&apos;s first consider the <fr:strong>greatest common divisor</fr:strong> function <fr:tex display="inline">\gcd (a,b)</fr:tex></fr:p>
+    <fr:tex display="block">         \begin {align*}             \gcd \space  a\space  a &amp;= a \\             \gcd \space  a\space  b &amp;= \gcd \space  (a-b)\space  b  \text { if } b &gt; a \\             \gcd \space  a\space  b &amp;= \gcd \space  a\space  (b-a)  \text { if } a &gt; b         \end {align*}     </fr:tex>
+    This recursion is terminating because the arguments are decreasing.
+    We can deal with this case currently and let&apos;s be hold.
+    We consider the most general schema of recursion.
+    <fr:tex display="block">         f = h\space  f     </fr:tex>
+    which means that in the right-hand side we can make arbitrary recursive
+    calls to the function <fr:tex display="inline">f</fr:tex>. For <fr:tex display="inline">\gcd </fr:tex> we have
+    <fr:tex display="block">         h = \lambda  gab. \text {if } (a=b)\space  a\space ((             \text {if }\space (a&gt;b)\space (g\space  (a-b)\space  b)\space (g\space  a\space  (b-a))         ))     </fr:tex>
+    How can we define <fr:tex display="inline">f</fr:tex> explicitly when given <fr:tex display="inline">h</fr:tex> so that <fr:tex display="inline">f = h\space  f</fr:tex>,
+    which called a <fr:strong>fixed point</fr:strong> pf <fr:tex display="inline">h</fr:tex>. If we believe <fr:strong>Church-Turing thesis</fr:strong>,
+    then any partial recursive function should be representable on Church numerals in lambda calculus.
+    Hence we can find such <fr:tex display="inline">f</fr:tex> and the answer is called <fr:strong>Y-combinator</fr:strong>.
+    We want that if <fr:tex display="inline">f = Y\space  h</fr:tex> and <fr:tex display="inline">f=h\space  f</fr:tex>, so we get <fr:tex display="inline">Y\space  h = h \space  (Y\space  h)</fr:tex>.
+    <fr:tex display="block">         Y\space  h = h\space  (Y\space  h) = h\space  (h\space  (Y\space  h)) = h\space  (h\space  (h\space  (Y\space  h))) = \cdots      </fr:tex>
+    This iterates infinitely. The definition of <fr:tex display="inline">Y</fr:tex> is:
+    <fr:tex display="block">         Y = \lambda  h.(\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x))     </fr:tex>
+    The application <fr:tex display="inline">x\space  x</fr:tex> will replicate <fr:tex display="inline">Y\space  h</fr:tex>:
+    <fr:tex display="block">         \begin {align*}             Y\space  h &amp;= (\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x)) \\             &amp;= h\space  ((\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x))) \\             &amp;= h\space  (Y\space  h)         \end {align*}     </fr:tex>
+    The partial recursive functions include functions that are <fr:strong>undefined</fr:strong> (have no normal form) 
+    on some arguments, hence we can&apos;t always find an answer.
+    Consider <fr:tex display="inline">f=f</fr:tex> as a recursion schema and <fr:tex display="inline">h=\text {id}</fr:tex>.
+    <fr:tex display="block">         Y\space  h = Y\space  \text {id} = (\lambda  x. \text {id}\space  (x\space  x))\space  (\lambda  x. \text {id}\space  (x\space  x))         = (\lambda  x. x\space  x)\space  (\lambda  x. x\space  x) = \Omega      </fr:tex>
+    The function <fr:tex display="inline">f=\Omega </fr:tex> solves the equation <fr:tex display="inline">f=f</fr:tex> by giving a divergent result.
+</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>807</fr:anchor><fr:addr type="user">cs-0003</fr:addr><fr:route>cs-0003.xml</fr:route><fr:title text="Recursion">Recursion</fr:title><fr:taxon>Computer Science</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>In this note we complete the development of <fr:strong>recursion</fr:strong>.
+    Refer to <fr:link type="local" href="tapl.xml" addr="tapl" title="Types and Programming Languages">TAPL</fr:link></fr:p>
+  
+    
+    <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>611</fr:anchor><fr:addr type="machine">#340</fr:addr><fr:route>unstable-340.xml</fr:route><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0003</fr:parent></fr:frontmatter><fr:mainmatter><fr:strong>General Recursion</fr:strong>
+    <fr:p>Let&apos;s first consider the <fr:strong>greatest common divisor</fr:strong> function <fr:tex display="inline">\gcd (a,b)</fr:tex></fr:p>
+    <fr:tex display="block">         \begin {align*}             \gcd \space  a\space  a &amp;= a \\             \gcd \space  a\space  b &amp;= \gcd \space  (a-b)\space  b  \text { if } b &gt; a \\             \gcd \space  a\space  b &amp;= \gcd \space  a\space  (b-a)  \text { if } a &gt; b         \end {align*}     </fr:tex>
+    This recursion is terminating because the arguments are decreasing.
+    We can deal with this case currently and let&apos;s be hold.
+    We consider the most general schema of recursion.
+    <fr:tex display="block">         f = h\space  f     </fr:tex>
+    which means that in the right-hand side we can make arbitrary recursive
+    calls to the function <fr:tex display="inline">f</fr:tex>. For <fr:tex display="inline">\gcd </fr:tex> we have
+    <fr:tex display="block">         h = \lambda  gab. \text {if } (a=b)\space  a\space ((             \text {if }\space (a&gt;b)\space (g\space  (a-b)\space  b)\space (g\space  a\space  (b-a))         ))     </fr:tex>
+    How can we define <fr:tex display="inline">f</fr:tex> explicitly when given <fr:tex display="inline">h</fr:tex> so that <fr:tex display="inline">f = h\space  f</fr:tex>,
+    which called a <fr:strong>fixed point</fr:strong> pf <fr:tex display="inline">h</fr:tex>. If we believe <fr:strong>Church-Turing thesis</fr:strong>,
+    then any partial recursive function should be representable on Church numerals in lambda calculus.
+    Hence we can find such <fr:tex display="inline">f</fr:tex> and the answer is called <fr:strong>Y-combinator</fr:strong>.
+    We want that if <fr:tex display="inline">f = Y\space  h</fr:tex> and <fr:tex display="inline">f=h\space  f</fr:tex>, so we get <fr:tex display="inline">Y\space  h = h \space  (Y\space  h)</fr:tex>.
+    <fr:tex display="block">         Y\space  h = h\space  (Y\space  h) = h\space  (h\space  (Y\space  h)) = h\space  (h\space  (h\space  (Y\space  h))) = \cdots      </fr:tex>
+    This iterates infinitely. The definition of <fr:tex display="inline">Y</fr:tex> is:
+    <fr:tex display="block">         Y = \lambda  h.(\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x))     </fr:tex>
+    The application <fr:tex display="inline">x\space  x</fr:tex> will replicate <fr:tex display="inline">Y\space  h</fr:tex>:
+    <fr:tex display="block">         \begin {align*}             Y\space  h &amp;= (\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x)) \\             &amp;= h\space  ((\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x))) \\             &amp;= h\space  (Y\space  h)         \end {align*}     </fr:tex>
+    The partial recursive functions include functions that are <fr:strong>undefined</fr:strong> (have no normal form) 
+    on some arguments, hence we can&apos;t always find an answer.
+    Consider <fr:tex display="inline">f=f</fr:tex> as a recursion schema and <fr:tex display="inline">h=\text {id}</fr:tex>.
+    <fr:tex display="block">         Y\space  h = Y\space  \text {id} = (\lambda  x. \text {id}\space  (x\space  x))\space  (\lambda  x. \text {id}\space  (x\space  x))         = (\lambda  x. x\space  x)\space  (\lambda  x. x\space  x) = \Omega      </fr:tex>
+    The function <fr:tex display="inline">f=\Omega </fr:tex> solves the equation <fr:tex display="inline">f=f</fr:tex> by giving a divergent result.
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+  
+
+  
+    
+    <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>612</fr:anchor><fr:addr type="machine">#341</fr:addr><fr:route>unstable-341.xml</fr:route><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0003</fr:parent></fr:frontmatter><fr:mainmatter><fr:strong>Define Functions By Recursion</fr:strong>
+    <fr:p>Consider the factorial function:</fr:p>
+    <fr:tex display="block">         \text {fact}\space  n = \text {if } (n=0)\space  1\space  (n\space  \text {fact}\space  (n-1))     </fr:tex>
+    This requires a test <fr:tex display="inline">\text {if0}</fr:tex> satisfies:
+    <fr:tex display="block">         \begin {align*}             \text {if0}(0,c,d) &amp;=c\\             \text {if0}(n+1,c,d) &amp;=d         \end {align*}     </fr:tex>
+    We can define <fr:tex display="inline">\text {if0}</fr:tex> by (Recall that <fr:tex display="inline">K=\lambda  xy.x</fr:tex>):
+    <fr:tex display="block">         \text {if0} = \lambda  ncd. n\space (K\space  d)\space  c     </fr:tex>
+    The argument of Y combinator is defined:
+    <fr:tex display="block">         h_\text {fact} = \lambda  g. \lambda  n. \text {if0}\space  n\space  1\space  (n\space  g\space  (n-1))     </fr:tex>
+    and
+    <fr:tex display="block">         \text {fact} = Y\space  h_\text {fact}     </fr:tex>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+  
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>

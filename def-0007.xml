@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1099</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-0007</fr:addr><fr:route>def-0007.xml</fr:route><fr:title>Monoid</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-A set <fr:tex>S</fr:tex> equipped with a binary operation <fr:tex>S \times  S \to  S</fr:tex>, which we will denote <fr:tex>\circ</fr:tex>, is a <fr:strong>monoid</fr:strong> if it satisfies the following two axioms:
-<fr:ul><fr:li>Associativity: <fr:tex>\forall  a,b,c \in  S, (a \circ  b)  \circ  c= a  \circ  (b  \circ  c)</fr:tex></fr:li>
-<fr:li>Identity: <fr:tex>\exists  e \in  S</fr:tex> such that <fr:tex>\forall  g \in  S, g \circ  e=e \circ  g = g</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context></fr:context><fr:related></fr:related><fr:backlinks><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1098</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-002A</fr:addr><fr:route>def-002A.xml</fr:route><fr:title>Product of Linear Maps</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-    Let <fr:tex>T_1: V  \to  W</fr:tex> and <fr:tex>T_2: W  \to  U</fr:tex> be linear maps.
-    We define the <fr:strong>product</fr:strong> of <fr:tex>T_1</fr:tex> and <fr:tex>T_2</fr:tex> as the linear map <fr:tex>T_2  \circ  T_1: V  \to  U</fr:tex> such that
-    <fr:tex display="block">         (T_2  \circ  T_1)(v) = T_2(T_1(v))  \quad   \text {for all}  \quad  v  \in  V     </fr:tex>
-    Note that this is just the composition of the two functions <fr:tex>T_1</fr:tex> and <fr:tex>T_2</fr:tex>. 
-    And we usually denote <fr:tex>T_2  \circ  T_1</fr:tex> by <fr:tex>T_2T_1</fr:tex>.
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1415</fr:anchor><fr:addr type="user">def-0007</fr:addr><fr:route>def-0007.xml</fr:route><fr:title text="Monoid">Monoid</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A set <fr:tex display="inline">S</fr:tex> equipped with a binary operation <fr:tex display="inline">S\times  S\to  S</fr:tex>, which we will denote <fr:tex display="inline">\circ </fr:tex>, is a <fr:strong>monoid</fr:strong> if it satisfies the following two axioms:
+<fr:ul><fr:li>Associativity: <fr:tex display="inline">\forall  a,b,c\in  S, (a\circ  b) \circ  c= a \circ  (b \circ  c)</fr:tex></fr:li>
+<fr:li>Identity: <fr:tex display="inline">\exists  e\in  S</fr:tex> such that <fr:tex display="inline">\forall  g\in  S, g\circ  e=e\circ  g = g</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Backlinks">Backlinks</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1416</fr:anchor><fr:addr type="user">def-002A</fr:addr><fr:route>def-002A.xml</fr:route><fr:title text="Product of Linear Maps">Product of Linear Maps</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">T_1: V \to  W</fr:tex> and <fr:tex display="inline">T_2: W \to  U</fr:tex> be linear maps.
+    We define the <fr:strong>product</fr:strong> of <fr:tex display="inline">T_1</fr:tex> and <fr:tex display="inline">T_2</fr:tex> as the linear map <fr:tex display="inline">T_2 \circ  T_1: V \to  U</fr:tex> such that
+    <fr:tex display="block">         (T_2 \circ  T_1)(v) = T_2(T_1(v)) \quad  \text {for all} \quad  v \in  V     </fr:tex>
+    Note that this is just the composition of the two functions <fr:tex display="inline">T_1</fr:tex> and <fr:tex display="inline">T_2</fr:tex>. 
+    And we usually denote <fr:tex display="inline">T_2 \circ  T_1</fr:tex> by <fr:tex display="inline">T_2T_1</fr:tex>.
     The product of linear maps is associative, that is,
-    <fr:tex display="block">         (T_3  \circ  T_2)  \circ  T_1 = T_3  \circ  (T_2  \circ  T_1)     </fr:tex>
-    for any linear maps <fr:tex>T_1: V  \to  W</fr:tex>, <fr:tex>T_2: W  \to  U</fr:tex>, and <fr:tex>T_3: U  \to  X</fr:tex>.
-    The identity map <fr:tex>I_V: V  \to  V</fr:tex> is the identity element of the set of linear maps <fr:tex>\mathcal {L} (V,V)</fr:tex> under the product operation.
-    That is, for any linear map <fr:tex>T: V  \to  V</fr:tex>,
-    <fr:tex display="block">         I_V  \circ  T = T  \circ  I_V = T     </fr:tex>
-    where <fr:tex>I_V</fr:tex> is the identity map on <fr:tex>V</fr:tex>.
-    The set of all linear maps from a vector space to itself, <fr:tex>\mathcal {L} (V,V)</fr:tex>, forms a <fr:link href="def-0007.xml" type="local" addr="def-0007"><fr:strong>monoid</fr:strong></fr:link> under the product operation.
-    The set of all invertible linear maps from a vector space to itself, <fr:tex>\mathcal {L} (V,V)^*</fr:tex>, forms a group under the product operation.
-    The identity map is the identity element of the <fr:link href="def-0001.xml" type="local" addr="def-0001"><fr:strong>group</fr:strong></fr:link> <fr:tex>\mathcal {L} (V,V)^*</fr:tex>.
-</fr:p><fr:p>
-    With addition we also have the distributive law for the product of linear maps.
-    That is, for any linear maps <fr:tex>S,S_1,S_2: V  \to  W</fr:tex> and <fr:tex>T,T_1,T_2: U \to  V</fr:tex>:
-    <fr:tex display="block">         (S_1 + S_2)T = S_1T + S_2T  \quad   \text {and}  \quad  T(S_1 + S_2) = TS_1 + TS_2     </fr:tex></fr:p></fr:mainmatter></fr:tree></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>
+    <fr:tex display="block">         (T_3 \circ  T_2) \circ  T_1 = T_3 \circ  (T_2 \circ  T_1)     </fr:tex>
+    for any linear maps <fr:tex display="inline">T_1: V \to  W</fr:tex>, <fr:tex display="inline">T_2: W \to  U</fr:tex>, and <fr:tex display="inline">T_3: U \to  X</fr:tex>.
+    The identity map <fr:tex display="inline">I_V: V \to  V</fr:tex> is the identity element of the set of linear maps <fr:tex display="inline">\mathcal {L}(V,V)</fr:tex> under the product operation.
+    That is, for any linear map <fr:tex display="inline">T: V \to  V</fr:tex>,
+    <fr:tex display="block">         I_V \circ  T = T \circ  I_V = T     </fr:tex>
+    where <fr:tex display="inline">I_V</fr:tex> is the identity map on <fr:tex display="inline">V</fr:tex>.
+    The set of all linear maps from a vector space to itself, <fr:tex display="inline">\mathcal {L}(V,V)</fr:tex>, forms a <fr:link type="local" href="def-0007.xml" addr="def-0007" title="Monoid"><fr:strong>monoid</fr:strong></fr:link> under the product operation.
+    The set of all invertible linear maps from a vector space to itself, <fr:tex display="inline">\mathcal {L}(V,V)^*</fr:tex>, forms a group under the product operation.
+    The identity map is the identity element of the <fr:link type="local" href="def-0001.xml" addr="def-0001" title="Group"><fr:strong>group</fr:strong></fr:link> <fr:tex display="inline">\mathcal {L}(V,V)^*</fr:tex>.</fr:p><fr:p>With addition we also have the distributive law for the product of linear maps.
+    That is, for any linear maps <fr:tex display="inline">S,S_1,S_2: V \to  W</fr:tex> and <fr:tex display="inline">T,T_1,T_2: U\to  V</fr:tex>:
+    <fr:tex display="block">         (S_1 + S_2)T = S_1T + S_2T \quad  \text {and} \quad  T(S_1 + S_2) = TS_1 + TS_2     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>

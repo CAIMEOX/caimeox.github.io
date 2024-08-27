@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1012</fr:anchor><fr:addr type="machine">#336</fr:addr><fr:route>unstable-336.xml</fr:route><fr:title text="Scanners › A first look at recognizers"><fr:link type="local" href="cs-0004.xml" addr="cs-0004" title="Scanners">Scanners</fr:link> › A first look at recognizers</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>A char-by-char algorithm to recognize words is trivial.
+        Consider we want to recognize the word <fr:code>new</fr:code>.
+        We can write down the following code.</fr:p><fr:pre>    c &lt;- nextChar();
+    if (c == &apos;n&apos;) {
+        c &lt;- nextChar();
+        if (c == &apos;e&apos;) {
+            c &lt;- nextChar();
+            if (c == &apos;w&apos;) {
+                return newToken();
+            }
+        }
+    }
+    reportError();</fr:pre><fr:p>We can also represent the code fragment using the simple <fr:strong>transition diagram</fr:strong>.</fr:p>
+    <fr:embedded-tex hash="d05f347414c07afcf952ed181dbb69cd"><fr:embedded-tex-preamble>
+      \usepackage {tikz-cd}
+      \usepackage {amssymb}
+    </fr:embedded-tex-preamble><fr:embedded-tex-body>
+        
+        \begin {tikzcd}
+            {S_0} &amp; {S_1} &amp; {S_2} &amp; {S_3}
+            \arrow [&quot;n&quot;, from=1-1, to=1-2]
+            \arrow [&quot;e&quot;, from=1-2, to=1-3]
+            \arrow [&quot;w&quot;, from=1-3, to=1-4]
+        \end {tikzcd}
+    
+    </fr:embedded-tex-body></fr:embedded-tex>
+</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1013</fr:anchor><fr:addr type="user">cs-0004</fr:addr><fr:route>cs-0004.xml</fr:route><fr:title text="Scanners">Scanners</fr:title><fr:taxon>Computer Science</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The scanner&apos;s task is to transform a stream of characters into a stream 
+    of words in the input language. Each word must be classified into a 
+    <fr:strong>syntactic category</fr:strong>.
+    This note refers to <fr:link type="local" href="eng-compiler-2022.xml" addr="eng-compiler-2022" title="Engineering a Compiler">Engineering a compiler</fr:link></fr:p><fr:p>The first stage of a compiler is to perform <fr:strong>lexical analysis</fr:strong> by a scanner.
+    The parser or <fr:strong>syntax analyzer</fr:strong> will fit the stream of words to a grammatical 
+    model of the input language.</fr:p><fr:p>Scanner construction has a strong foundation in formal language theory.
+    Scanners are based on <fr:strong>recognizers</fr:strong> that simulate <fr:strong>deterministic finite automata</fr:strong>.
+    We can specify the lexical structure using a set of <fr:strong>regular expression</fr:strong>.</fr:p><fr:p>Each time a scanner recognizes a word, it will return a <fr:strong>token</fr:strong> that
+    contains the word (<fr:strong>lexeme</fr:strong>) and its syntactic category.
+    The scanner uses <fr:strong>microsyntax</fr:strong> (the lexical structure of a language) to 
+    find and classify words. <fr:strong>Keywords</fr:strong> are <fr:strong>identifiers</fr:strong> but have special meanings.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>614</fr:anchor><fr:addr type="machine">#336</fr:addr><fr:route>unstable-336.xml</fr:route><fr:title text="A first look at recognizers">A first look at recognizers</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>A char-by-char algorithm to recognize words is trivial.
+        Consider we want to recognize the word <fr:code>new</fr:code>.
+        We can write down the following code.</fr:p><fr:pre>    c &lt;- nextChar();
+    if (c == &apos;n&apos;) {
+        c &lt;- nextChar();
+        if (c == &apos;e&apos;) {
+            c &lt;- nextChar();
+            if (c == &apos;w&apos;) {
+                return newToken();
+            }
+        }
+    }
+    reportError();</fr:pre><fr:p>We can also represent the code fragment using the simple <fr:strong>transition diagram</fr:strong>.</fr:p>
+    <fr:embedded-tex hash="d05f347414c07afcf952ed181dbb69cd"><fr:embedded-tex-preamble>
+      \usepackage {tikz-cd}
+      \usepackage {amssymb}
+    </fr:embedded-tex-preamble><fr:embedded-tex-body>
+        
+        \begin {tikzcd}
+            {S_0} &amp; {S_1} &amp; {S_2} &amp; {S_3}
+            \arrow [&quot;n&quot;, from=1-1, to=1-2]
+            \arrow [&quot;e&quot;, from=1-2, to=1-3]
+            \arrow [&quot;w&quot;, from=1-3, to=1-4]
+        \end {tikzcd}
+    
+    </fr:embedded-tex-body></fr:embedded-tex>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>615</fr:anchor><fr:addr type="machine">#337</fr:addr><fr:route>unstable-337.xml</fr:route><fr:title text="A formalism for recognizers">A formalism for recognizers</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Transition diagrams can be viewed as formal mathematics objects called <fr:strong>finite automata</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>616</fr:anchor><fr:addr type="user">def-003M</fr:addr><fr:route>def-003M.xml</fr:route><fr:title text="Finite Automata">Finite Automata</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>finite automata (FA)</fr:strong> is a five-tuple <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> where
+    <fr:ul><fr:li><fr:tex display="inline">S</fr:tex> is the finite set of states in the recognizer including <fr:tex display="inline">s_e</fr:tex>,
+            the error state.</fr:li>
+        <fr:li><fr:tex display="inline">\Sigma </fr:tex> is the finite alphabet used by the recognizer. 
+            <fr:tex display="inline">\Sigma </fr:tex> is the union of the edge labels in the transition diagram.</fr:li>
+        <fr:li><fr:tex display="inline">\delta (s, c)</fr:tex> is the recognizer&apos;s transition function, which 
+            maps each state <fr:tex display="inline">s\in  S</fr:tex> and character <fr:tex display="inline">c\in \Sigma </fr:tex> into some next state.
+            In state <fr:tex display="inline">s_i</fr:tex> with input character <fr:tex display="inline">c</fr:tex> the FA takes the transition
+            <fr:tex display="inline">s_i \xrightarrow {c} \delta (s_i, c)</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">s_0\in  S</fr:tex> is the initial state of the recognizer.</fr:li>
+        <fr:li><fr:tex display="inline">S_A</fr:tex> is the set of accepting states, <fr:tex display="inline">S_A\subseteq  S</fr:tex>.</fr:li></fr:ul>
+    <fr:tex display="inline">\delta </fr:tex> is only partially defined. For all other combinations of the 
+    state <fr:tex display="inline">s_i</fr:tex> and input char <fr:tex display="inline">c</fr:tex> we can define <fr:tex display="inline">\delta (s_i,c)=s_e</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>An FA <fr:strong>accpets</fr:strong> a string <fr:tex display="inline">x</fr:tex> and iff starting in <fr:tex display="inline">s_0</fr:tex>,
+        the sequence of chars in  <fr:tex display="inline">x</fr:tex> takes the FA to an accepting state
+        when the entire string has been consumed.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>617</fr:anchor><fr:addr type="user">def-003N</fr:addr><fr:route>def-003N.xml</fr:route><fr:title text="Accepts">Accepts</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>If the string <fr:tex display="inline">x</fr:tex> consists characters <fr:tex display="inline">x_1, x_2, \ldots , x_n</fr:tex> then the
+    FA <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> <fr:strong>accpets</fr:strong> <fr:tex display="inline">x</fr:tex> iff there is a sequence
+    <fr:tex display="block">         \delta (             \delta (                 \dots \delta (\delta (                     \delta (s_0,x_1),x_2),x_3)\dots ,                 x_{n-1}             )             ,x_n         )\in  S_A     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>618</fr:anchor><fr:addr type="machine">#338</fr:addr><fr:route>unstable-338.xml</fr:route><fr:title text="Recognize more complex words">Recognize more complex words</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The char-by-char model is very simple and now we consider about numbers.
+        For simplicity, we consider only unsigned integers: An unsigned integer is either
+        zero or series of one or more digits where the first one is non-zero.</fr:p>
+    <fr:embedded-tex hash="b460f960b96d5c831acb91408c74102e"><fr:embedded-tex-preamble>
+      \usepackage {tikz-cd}
+      \usepackage {amssymb}
+    </fr:embedded-tex-preamble><fr:embedded-tex-body>
+        
+        \begin {tikzcd}
+            &amp; {S_2}
+            \arrow [out=65, in=25 ,loop,&quot;0..9&quot;]
+            \\
+            {S_0} \\
+            &amp; {S_1}
+            \arrow [&quot;0&quot;, from=2-1, to=3-2]
+            \arrow [&quot;{1..9}&quot;, from=2-1, to=1-2]
+        \end {tikzcd}
+    
+    </fr:embedded-tex-body></fr:embedded-tex>
+<fr:p>And the code implementation can be:</fr:p><fr:pre>    state &lt;- s0;
+    char &lt;-nextChar();
+    while (state != se and char != eof) {
+        state &lt;- delta(state, char);
+        char &lt;- nextChar();
+    }
+    if (state in SA) {
+        return Acceptance();
+    } else {
+        reportError();
+    }</fr:pre><fr:p>Another example is to recognize <fr:strong>identifiers</fr:strong> which are sequences of letters and digits,
+        starting with a letter. Many languages include other special characters for identifiers.
+        The FA for unsigned integers and identifiers are different in syntactic categories.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>619</fr:anchor><fr:addr type="machine">#339</fr:addr><fr:route>unstable-339.xml</fr:route><fr:title text="Regular Expressions">Regular Expressions</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The set of words accpeted by a finite automata <fr:tex display="inline">F</fr:tex> forms a language <fr:tex display="inline">L(F)</fr:tex>.
+        The transition diagram of <fr:tex display="inline">F</fr:tex> specifies the syntactic structure of <fr:tex display="inline">L(F)</fr:tex>.
+        But such representation is complex and non-intuitive.
+        Most systems use a notation called <fr:strong>regular expressions</fr:strong> to specify the language.
+        Any language described by an RE is considered a <fr:strong>regular language</fr:strong>.
+        RE is equivalent to FA.</fr:p><fr:p>To work with REs in a rigorous way, we need a foraml definition.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>

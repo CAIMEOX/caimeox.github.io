@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false"><fr:frontmatter><fr:anchor>1329</fr:anchor><fr:taxon>Definition</fr:taxon><fr:addr>def-000C</fr:addr><fr:route>def-000C.xml</fr:route><fr:title>Topological Space</fr:title></fr:frontmatter><fr:mainmatter><fr:p>
-A <fr:strong>topological space</fr:strong> is a set <fr:tex>S</fr:tex> together with a collection <fr:tex>\tau</fr:tex> of subsets called open sets such that
-<fr:ul><fr:li>T1: <fr:tex>S, \varnothing \in \tau</fr:tex></fr:li>
-<fr:li>T2: <fr:tex>\forall  U,V \in \tau , U \cap  V \in \tau</fr:tex></fr:li>
-<fr:li>T3: The union of any collection of open sets is open.</fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter><fr:contributions></fr:contributions><fr:context></fr:context><fr:related></fr:related><fr:backlinks></fr:backlinks><fr:references></fr:references></fr:backmatter></fr:tree>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1632</fr:anchor><fr:addr type="user">def-000C</fr:addr><fr:route>def-000C.xml</fr:route><fr:title text="Topological Space">Topological Space</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>topological space</fr:strong> is a set <fr:tex display="inline">S</fr:tex> together with a collection <fr:tex display="inline">\tau </fr:tex> of subsets called open sets such that
+<fr:ul><fr:li>T1: <fr:tex display="inline">S,\varnothing \in \tau </fr:tex></fr:li>
+<fr:li>T2: <fr:tex display="inline">\forall  U,V\in \tau , U\cap  V\in \tau </fr:tex></fr:li>
+<fr:li>T3: The union of any collection of open sets is open.</fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>

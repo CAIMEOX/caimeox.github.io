@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>816</fr:anchor><fr:addr type="machine">#278</fr:addr><fr:route>unstable-278.xml</fr:route><fr:title text="Time-independent Schrodinger Equation › 
+    Conservation of energy
+"><fr:link type="local" href="phy-0003.xml" addr="phy-0003" title="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</fr:link> › 
+    <fr:strong>Conservation of energy</fr:strong>
+</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:authors></fr:authors><fr:parent>phy-0003</fr:parent></fr:frontmatter><fr:mainmatter>
+    This also means that the energy of the system is conserved.
+    In classical mechanics, the <fr:strong>total energy</fr:strong> (kinetic + potential) of a system is called the <fr:strong>Hamiltonian</fr:strong>.
+    <fr:tex display="block">         H(x,p) = \frac {p^2}{2m} + V(x)     </fr:tex>
+    In quantum mechanics, the Hamiltonian is an operator,
+    obtained by substituting <fr:tex display="inline">p\to  -i\hbar \frac {\partial }{\partial  x}</fr:tex>:
+    <fr:tex display="block">         \hat {H} = -\frac {\hbar ^2}{2m}\frac {\partial ^2}{\partial  x^2} + V(x)     </fr:tex>
+    Thus the time-independent Schrodinger equation can be written as:
+    <fr:tex display="block">         \hat {H}\psi (x) = E\psi (x)     </fr:tex>
+    The expectation value of the total energy gives the energy of the system:
+    <fr:tex display="block">         \begin {align*}             \langle  H \rangle  &amp;= \int  \psi ^*(x)\hat {H}\psi (x)dx              \\             &amp;= \int  \psi ^*(x)E\psi (x)dx             \\             &amp;= E\int  |\psi (x)|^2dx             \\             &amp;= E\int  |\Psi (x)|^2dx             \\             &amp;= E                    \end {align*}     </fr:tex>
+    and
+    <fr:tex display="block">         \begin {align*}             \langle  H^2 \rangle  &amp;=              \int  \psi ^*(x)\hat {H}^2\psi (x)dx             \\             &amp;= E^2\int  |\psi (x)|^2 dx                   \\             &amp;= E^2               \end {align*}     </fr:tex>
+    where 
+    <fr:tex display="block">         \hat {H}^2\psi  = \hat {H}(\hat {H}\psi ) = \hat {H}(E\psi ) = E(\hat {H}\psi ) = E^2\psi      </fr:tex>
+    Hence the variance of the energy is zero given by
+    <fr:tex display="block">         \Delta  H = \sqrt {\langle  H^2 \rangle  - \langle  H \rangle ^2} = 0     </fr:tex>
+    This implies that the energy of the system is conserved.
+</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>817</fr:anchor><fr:addr type="user">phy-0003</fr:addr><fr:route>phy-0003.xml</fr:route><fr:title text="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</fr:title><fr:taxon>Quantum Mechanics</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Refer to chapter 2 in <fr:link type="local" href="quantum-2018.xml" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</fr:link></fr:p><fr:p>In previous section we use the <fr:link type="local" href="def-0030.xml" addr="def-0030" title="Schrodinger&apos;s equation">Schrodinger equation</fr:link> to compute things.
+    The variable <fr:tex display="inline">t</fr:tex> is annoying which makes things complicated, and we would like to get rid of it.
+    In this section we shall assume that the potential energy <fr:tex display="inline">V</fr:tex> is independent of time.
+    In that case the Schrodinger equation becomes:
+    <fr:tex display="block">         i\hbar \frac {\partial }{\partial  t}\psi (x,t) = -\frac {\hbar ^2}{2m}\frac {\partial ^2\psi (x,t)}{\partial  x^2} + V(x)\psi (x,t)     </fr:tex>
+    This equation can be solved by <fr:strong>separation of variables</fr:strong>.
+    We assume the spatial and time dependencies of the solution can be separated.
+    In other words we look for solutions of the <fr:em>product form</fr:em>:
+    <fr:tex display="block">         \Psi (x,t) = \psi (x)\phi (t)     </fr:tex>
+    This is an absurd restriction, but it works and we can get interesting results.</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>436</fr:anchor><fr:addr type="machine">#277</fr:addr><fr:route>unstable-277.xml</fr:route><fr:title text="Solve the equation"><fr:strong>Solve the equation</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:authors></fr:authors><fr:parent>phy-0003</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:p>Now substitute the product form into the Schrodinger equation:
+        <fr:tex display="block">             i\hbar  \psi (x) \frac {\partial }{\partial  t}(\phi (t)) = -\frac {\hbar ^2}{2m}\phi (t)\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)\psi (x)\phi (t)         </fr:tex>
+        Divide both sides by <fr:tex display="inline">\psi (x)\phi (t)</fr:tex>:
+        <fr:tex display="block">             i\hbar  \frac {1}{\phi (t)} \frac {\partial }{\partial  t}(\phi (t)) = -\frac {\hbar ^2}{2m\psi (x)}\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)         </fr:tex>
+        Notice that the left side depends only on <fr:tex display="inline">t</fr:tex> and the right side depends only on <fr:tex display="inline">x</fr:tex>.
+        They are equal if and only if they are both equal to a <fr:em>constant</fr:em>.
+        Otherwise if I change the left side and level the right side unchanged, I get a contradiction.
+        The constant is the energy of the system, and we denote it by <fr:tex display="inline">E</fr:tex>.
+        <fr:tex display="block">             E:\equiv  i\hbar  \frac {1}{\phi (t)} \frac {\partial }{\partial  t}(\phi (t))          </fr:tex>
+        and 
+        <fr:tex display="block">             E:\equiv  -\frac {\hbar ^2}{2m\psi (x)}\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)         </fr:tex>
+        We have two equations:
+        <fr:tex display="block">             \begin {align*}                 \frac {d\phi }{dt} &amp;= -\frac {iE}{\hbar }\phi \\                 -\frac {\hbar ^2}{2m}\frac {d^2\psi }{dx^2} + V\psi  &amp;= E\psi              \end {align*}         </fr:tex>
+        Now the partial differential equation has been reduced to two <fr:strong>ordinary differential equations</fr:strong>.
+        The first one is easy to solve:
+        <fr:tex display="block">             \phi (t) = \phi (0)e^{-iEt/\hbar }         </fr:tex>
+        Thus the complete solution is (note that the constant <fr:tex display="inline">\phi (0)</fr:tex> was absorbed into <fr:tex display="inline">\psi (x)</fr:tex>):
+        <fr:tex display="block">             \Psi (x,t) = \psi (x)e^{-iEt/\hbar }         </fr:tex>
+        The second one is the <fr:strong>time-independent Schrodinger equation</fr:strong>,
+        we can&apos;t go further unless we know the potential energy <fr:tex display="inline">V(x)</fr:tex>.</fr:p>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+<fr:p>Now we give a name to the time-independent Schrodinger equation.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>437</fr:anchor><fr:addr type="user">def-0034</fr:addr><fr:route>def-0034.xml</fr:route><fr:title text="Stationary State">Stationary State</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>stationary state</fr:strong> is a quantum state with all observables independent of time.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Thought the wave function is time-dependent,
+    <fr:tex display="block">         \Psi (x,t) = \psi (x)e^{-iEt/\hbar }     </fr:tex>
+    But if we compute the probability density, it is time-independent:
+    <fr:tex display="block">         |\Psi (x,t)|^2 = \psi ^*(x)e^{+iEt/\hbar }\psi (x)e^{-iEt/\hbar } = |\psi (x)|^2      </fr:tex>
+    Hence the expectation value is constant in time. 
+    Then <fr:tex display="inline">\langle  p \rangle  = 0</fr:tex> all the time.
+    Nothing happens in the stationary state.</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>438</fr:anchor><fr:addr type="machine">#278</fr:addr><fr:route>unstable-278.xml</fr:route><fr:title text="
+    Conservation of energy
+">
+    <fr:strong>Conservation of energy</fr:strong>
+</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:authors></fr:authors><fr:parent>phy-0003</fr:parent></fr:frontmatter><fr:mainmatter>
+    This also means that the energy of the system is conserved.
+    In classical mechanics, the <fr:strong>total energy</fr:strong> (kinetic + potential) of a system is called the <fr:strong>Hamiltonian</fr:strong>.
+    <fr:tex display="block">         H(x,p) = \frac {p^2}{2m} + V(x)     </fr:tex>
+    In quantum mechanics, the Hamiltonian is an operator,
+    obtained by substituting <fr:tex display="inline">p\to  -i\hbar \frac {\partial }{\partial  x}</fr:tex>:
+    <fr:tex display="block">         \hat {H} = -\frac {\hbar ^2}{2m}\frac {\partial ^2}{\partial  x^2} + V(x)     </fr:tex>
+    Thus the time-independent Schrodinger equation can be written as:
+    <fr:tex display="block">         \hat {H}\psi (x) = E\psi (x)     </fr:tex>
+    The expectation value of the total energy gives the energy of the system:
+    <fr:tex display="block">         \begin {align*}             \langle  H \rangle  &amp;= \int  \psi ^*(x)\hat {H}\psi (x)dx              \\             &amp;= \int  \psi ^*(x)E\psi (x)dx             \\             &amp;= E\int  |\psi (x)|^2dx             \\             &amp;= E\int  |\Psi (x)|^2dx             \\             &amp;= E                    \end {align*}     </fr:tex>
+    and
+    <fr:tex display="block">         \begin {align*}             \langle  H^2 \rangle  &amp;=              \int  \psi ^*(x)\hat {H}^2\psi (x)dx             \\             &amp;= E^2\int  |\psi (x)|^2 dx                   \\             &amp;= E^2               \end {align*}     </fr:tex>
+    where 
+    <fr:tex display="block">         \hat {H}^2\psi  = \hat {H}(\hat {H}\psi ) = \hat {H}(E\psi ) = E(\hat {H}\psi ) = E^2\psi      </fr:tex>
+    Hence the variance of the energy is zero given by
+    <fr:tex display="block">         \Delta  H = \sqrt {\langle  H^2 \rangle  - \langle  H \rangle ^2} = 0     </fr:tex>
+    This implies that the energy of the system is conserved.
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
