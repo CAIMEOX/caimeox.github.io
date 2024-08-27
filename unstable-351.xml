@@ -1,158 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>961</fr:anchor><fr:addr type="machine">#351</fr:addr><fr:route>unstable-351.xml</fr:route><fr:title text="Primitive Recursion in Lambda Calculus › General Primitive Recursion"><fr:link type="local" href="cs-0002.xml" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</fr:link> › <fr:strong>General Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        The general case of primitive recursion follows by a similar pattern.
-        We begin by defining a function <fr:tex display="inline">f_2</fr:tex>:
-        <fr:tex display="block">             f_2\space  n = \langle  n, f\space  n \rangle          </fr:tex>
-        We can define <fr:tex display="inline">f_2</fr:tex> using the schema of iteration
-        <fr:tex display="block">             \begin {align*}                 f_2\space  0 &amp;= \langle  0, c \rangle  \\                 f_2\space  (n+1) &amp;= \text {letPair}\space  (f_2\space  n)\space  (\lambda  xy.\langle  x+1, g\space  x\space  y \rangle ) \\                 f\space  n &amp;= \text {letPair}\space  (f_2\space  n)\space  (\lambda  xy.y)             \end {align*}         </fr:tex>
-    </fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>962</fr:anchor><fr:addr type="user">cs-0002</fr:addr><fr:route>cs-0002.xml</fr:route><fr:title text="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</fr:title><fr:taxon>Compute Science</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>We begin with the <fr:strong>schema of iteration</fr:strong> and then proceed 
-    the more complex schema of primitive recursion and general recursion.
-    Refer to <fr:link type="local" href="tapl.xml" addr="tapl" title="Types and Programming Languages">TAPL</fr:link>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>599</fr:anchor><fr:addr type="machine">#342</fr:addr><fr:route>unstable-342.xml</fr:route><fr:title text="Function Composition"><fr:strong>Function Composition</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    Giving two functions <fr:tex display="inline">f, g</fr:tex> we can compose then to get a new function <fr:tex display="inline">f\circ  g = f(g(x))</fr:tex>.
-    Using <fr:tex display="inline">\lambda </fr:tex>-notation, we can define the composition of two functions as follows:
-    <fr:tex display="block">         f\circ  g = \lambda  x.f(g(x))     </fr:tex>
-    And the composition operation is also a lambda abstraction.
-    <fr:tex display="block">         \circ  = B = \lambda  f.\lambda  g.\lambda  x.f(g(x))     </fr:tex>
-    Composing identity function with any function does not change the function.
-    We expect the following equation to hold:
-    <fr:tex display="block">         f\circ  I = f = I\circ  f     </fr:tex>
-    where <fr:tex display="inline">I</fr:tex> is the identity function. This can be verified by the following calculation:
-    <fr:tex display="block">         \begin {align*}             B\space  f\space  I &amp;= (\lambda  f.\lambda  g.\lambda  x.f(g(x)))\space  f\space  I \\             &amp;\to _\beta  \lambda  g.\lambda  x.f(g(x))\space  I \\             &amp;\to _\beta  \lambda  x.f(I(x)) \\             &amp;\to _\beta  \lambda  x.f(x) \\             &amp;=_\eta  f         \end {align*}     </fr:tex>
-    The last step requires an extensional equality, which is the called <fr:strong>eta-conversion</fr:strong>.
-    <fr:tex display="block">         \text {for}\space  x\not \in \text {FV}(f) ,\lambda  x.f(x) =_\eta  f     </fr:tex>
-    It makes more sense to use the equation from right to left called <fr:strong>eta-expansion</fr:strong> 
-    (And more discipline has to be imposed or expansion does not terminate).
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>600</fr:anchor><fr:addr type="machine">#343</fr:addr><fr:route>unstable-343.xml</fr:route><fr:title text="Non-termination"><fr:strong>Non-termination</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>The well-known <fr:link type="local" href="eg-0007.xml" addr="eg-0007" title="Divergent Combinator"><fr:strong>divergent combinator</fr:strong></fr:link> implies that 
-        the lambda calculus is not strongly normalizing.</fr:p>
-    <fr:p>However, we can always compute a normal form if one exists.
-        Though there are many reduction strategies,
-        there is a complete one for expressions that have normal form.
-        This kind of reduction strategy is called <fr:strong>normal order reduction</fr:strong> or
-        <fr:strong>leftmost-outermost reduction</fr:strong>. It scans through the expression from left to right
-        and when it find a redex, it reduces it by applying beta reduction and returns to the beginning.</fr:p>
-    <fr:p>The notation of leftmost-outermost reduction is closely related to the 
-        notion of <fr:strong>call-by-name evaluation</fr:strong> in programming languages.
-        (A little more distance to <fr:strong>call-by-need</fr:strong> evaluation in Haskell)</fr:p>
-    <fr:p>In contrast, <fr:strong>call-by-value</fr:strong> evaluation is not complete, which would 
-        reduce the argument of a function before applying beta reduction.</fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>601</fr:anchor><fr:addr type="machine">#344</fr:addr><fr:route>unstable-344.xml</fr:route><fr:title text="Church-Rosser Property"><fr:strong>Church-Rosser Property</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    The outcome of a computation <fr:tex display="inline">e</fr:tex> is its normal form.
-    It is naturally to ask the question whether the normal form is unique.
-    The key to this question is the <fr:strong>Church-Rosser property</fr:strong> or <fr:strong>confluence</fr:strong>:
-    If <fr:tex display="inline">e\to ^* e_1</fr:tex> and <fr:tex display="inline">e\to ^* e_2</fr:tex>, then there exists a term <fr:tex display="inline">e_3</fr:tex> such that
-    <fr:tex display="block">         e_1\to ^* e_3\space \text {and}\space  e_2\to ^* e_3     </fr:tex>
-    This implies the uniqueness of the normal form.
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>602</fr:anchor><fr:addr type="machine">#346</fr:addr><fr:route>unstable-346.xml</fr:route><fr:title text="Representing Natural Numbers"><fr:strong>Representing Natural Numbers</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>We can represent natural numbers in lambda calculus by using the 
-        <fr:strong>Church numerals</fr:strong> or <fr:strong>Church encoding</fr:strong>.
-        The two abstractions should be related in some ways: 
-        one <fr:tex display="inline">x</fr:tex> stands for zero and the other <fr:tex display="inline">f</fr:tex> stands for the successor function.</fr:p>
-    <fr:p>The Church numeral <fr:tex display="inline">n</fr:tex> is a function that takes two arguments <fr:tex display="inline">f</fr:tex> and <fr:tex display="inline">x</fr:tex> and applies <fr:tex display="inline">f</fr:tex> to <fr:tex display="inline">x</fr:tex> <fr:tex display="inline">n</fr:tex> times.
-        The Church numeral <fr:tex display="inline">0</fr:tex> is defined as the identity function <fr:tex display="inline">\lambda  f.\lambda  x.x</fr:tex>.
-        The Church numeral <fr:tex display="inline">1</fr:tex> is defined as the successor of <fr:tex display="inline">0</fr:tex>:
-        <fr:tex display="block">             1 = \lambda  f.\lambda  x.f(x)         </fr:tex>
-        The Church numeral <fr:tex display="inline">2</fr:tex> is defined as the successor of <fr:tex display="inline">1</fr:tex>:
-        <fr:tex display="block">             2 = \lambda  f.\lambda  x.f(f(x))         </fr:tex>
-        And so on.</fr:p>
-    <fr:p>The Church numeral <fr:tex display="inline">n</fr:tex> is defined as the successor of <fr:tex display="inline">n-1</fr:tex>:
-        <fr:tex display="block">             n = \lambda  f.\lambda  x.f^n(x)         </fr:tex>
-        where <fr:tex display="inline">f^n(x)</fr:tex> means applying <fr:tex display="inline">f</fr:tex> to <fr:tex display="inline">x</fr:tex> <fr:tex display="inline">n</fr:tex> times.</fr:p>
-    <fr:p>The successor function is defined as follows:
-        <fr:tex display="block">             S = \lambda  n.\lambda  f.\lambda  x.f(n\space  f\space  x)         </fr:tex></fr:p>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>857</fr:anchor><fr:addr type="machine">#351</fr:addr><fr:route>unstable-351.xml</fr:route><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0003</fr:parent></fr:frontmatter><fr:mainmatter><fr:strong>General Recursion</fr:strong>
+    <fr:p>Let&apos;s first consider the <fr:strong>greatest common divisor</fr:strong> function <fr:tex display="inline">\gcd (a,b)</fr:tex></fr:p>
+    <fr:tex display="block">         \begin {align*}             \gcd \space  a\space  a &amp;= a \\             \gcd \space  a\space  b &amp;= \gcd \space  (a-b)\space  b  \text { if } b &gt; a \\             \gcd \space  a\space  b &amp;= \gcd \space  a\space  (b-a)  \text { if } a &gt; b         \end {align*}     </fr:tex>
+    This recursion is terminating because the arguments are decreasing.
+    We can deal with this case currently and let&apos;s be hold.
+    We consider the most general schema of recursion.
+    <fr:tex display="block">         f = h\space  f     </fr:tex>
+    which means that in the right-hand side we can make arbitrary recursive
+    calls to the function <fr:tex display="inline">f</fr:tex>. For <fr:tex display="inline">\gcd </fr:tex> we have
+    <fr:tex display="block">         h = \lambda  gab. \text {if } (a=b)\space  a\space ((             \text {if }\space (a&gt;b)\space (g\space  (a-b)\space  b)\space (g\space  a\space  (b-a))         ))     </fr:tex>
+    How can we define <fr:tex display="inline">f</fr:tex> explicitly when given <fr:tex display="inline">h</fr:tex> so that <fr:tex display="inline">f = h\space  f</fr:tex>,
+    which called a <fr:strong>fixed point</fr:strong> pf <fr:tex display="inline">h</fr:tex>. If we believe <fr:strong>Church-Turing thesis</fr:strong>,
+    then any partial recursive function should be representable on Church numerals in lambda calculus.
+    Hence we can find such <fr:tex display="inline">f</fr:tex> and the answer is called <fr:strong>Y-combinator</fr:strong>.
+    We want that if <fr:tex display="inline">f = Y\space  h</fr:tex> and <fr:tex display="inline">f=h\space  f</fr:tex>, so we get <fr:tex display="inline">Y\space  h = h \space  (Y\space  h)</fr:tex>.
+    <fr:tex display="block">         Y\space  h = h\space  (Y\space  h) = h\space  (h\space  (Y\space  h)) = h\space  (h\space  (h\space  (Y\space  h))) = \cdots      </fr:tex>
+    This iterates infinitely. The definition of <fr:tex display="inline">Y</fr:tex> is:
+    <fr:tex display="block">         Y = \lambda  h.(\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x))     </fr:tex>
+    The application <fr:tex display="inline">x\space  x</fr:tex> will replicate <fr:tex display="inline">Y\space  h</fr:tex>:
+    <fr:tex display="block">         \begin {align*}             Y\space  h &amp;= (\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x)) \\             &amp;= h\space  ((\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x))) \\             &amp;= h\space  (Y\space  h)         \end {align*}     </fr:tex>
+    The partial recursive functions include functions that are <fr:strong>undefined</fr:strong> (have no normal form) 
+    on some arguments, hence we can&apos;t always find an answer.
+    Consider <fr:tex display="inline">f=f</fr:tex> as a recursion schema and <fr:tex display="inline">h=\text {id}</fr:tex>.
+    <fr:tex display="block">         Y\space  h = Y\space  \text {id} = (\lambda  x. \text {id}\space  (x\space  x))\space  (\lambda  x. \text {id}\space  (x\space  x))         = (\lambda  x. x\space  x)\space  (\lambda  x. x\space  x) = \Omega      </fr:tex>
+    The function <fr:tex display="inline">f=\Omega </fr:tex> solves the equation <fr:tex display="inline">f=f</fr:tex> by giving a divergent result.
+</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>858</fr:anchor><fr:addr type="user">cs-0003</fr:addr><fr:route>cs-0003.xml</fr:route><fr:title text="Recursion">Recursion</fr:title><fr:taxon>Computer Science</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>In this note we complete the development of <fr:strong>recursion</fr:strong>.
+    Refer to <fr:link type="local" href="tapl.xml" addr="tapl" title="Types and Programming Languages">TAPL</fr:link></fr:p>
+  
     
- 
-   
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>603</fr:anchor><fr:addr type="machine">#345</fr:addr><fr:route>unstable-345.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-            <fr:tex display="block">                 \begin {align*}                     S\space  n &amp;= (\lambda  n.\lambda  f.\lambda  x.f(n\space  f\space  x))\space  n \\                     &amp;\to _\beta  \lambda  f.\lambda  x.f(n\space  f\space  x) \\                     &amp;\to _\beta  \lambda  f.\lambda  x.f^n(x) \\                     &amp;\to _\beta  n+1                 \end {align*}             </fr:tex>
-        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
- 
-
-    <fr:p>Using the iteration property we can define mathematical functions 
-        over the natural numbers in lambda calculus.
-        The addition of two Church numerals <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> is defined as follows:
-        <fr:tex display="block">             m+n = \lambda  n.\lambda  k. n\space  S\space  k         </fr:tex></fr:p>
-    <fr:p>The multiplication of two Church numerals <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> is defined by
-        iterating the addition function <fr:tex display="inline">m</fr:tex> times:
-        <fr:tex display="block">             m*n = \lambda  n.\lambda  k. n\space  (k + ) \space  0         </fr:tex></fr:p>
-    <fr:p>The exponentiation of two Church numerals <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> is defined as follows:
-        <fr:tex display="block">             m^n = \lambda  m.\lambda  n. n\space  (m *) \space  1         </fr:tex></fr:p>
+    <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>520</fr:anchor><fr:addr type="machine">#351</fr:addr><fr:route>unstable-351.xml</fr:route><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0003</fr:parent></fr:frontmatter><fr:mainmatter><fr:strong>General Recursion</fr:strong>
+    <fr:p>Let&apos;s first consider the <fr:strong>greatest common divisor</fr:strong> function <fr:tex display="inline">\gcd (a,b)</fr:tex></fr:p>
+    <fr:tex display="block">         \begin {align*}             \gcd \space  a\space  a &amp;= a \\             \gcd \space  a\space  b &amp;= \gcd \space  (a-b)\space  b  \text { if } b &gt; a \\             \gcd \space  a\space  b &amp;= \gcd \space  a\space  (b-a)  \text { if } a &gt; b         \end {align*}     </fr:tex>
+    This recursion is terminating because the arguments are decreasing.
+    We can deal with this case currently and let&apos;s be hold.
+    We consider the most general schema of recursion.
+    <fr:tex display="block">         f = h\space  f     </fr:tex>
+    which means that in the right-hand side we can make arbitrary recursive
+    calls to the function <fr:tex display="inline">f</fr:tex>. For <fr:tex display="inline">\gcd </fr:tex> we have
+    <fr:tex display="block">         h = \lambda  gab. \text {if } (a=b)\space  a\space ((             \text {if }\space (a&gt;b)\space (g\space  (a-b)\space  b)\space (g\space  a\space  (b-a))         ))     </fr:tex>
+    How can we define <fr:tex display="inline">f</fr:tex> explicitly when given <fr:tex display="inline">h</fr:tex> so that <fr:tex display="inline">f = h\space  f</fr:tex>,
+    which called a <fr:strong>fixed point</fr:strong> pf <fr:tex display="inline">h</fr:tex>. If we believe <fr:strong>Church-Turing thesis</fr:strong>,
+    then any partial recursive function should be representable on Church numerals in lambda calculus.
+    Hence we can find such <fr:tex display="inline">f</fr:tex> and the answer is called <fr:strong>Y-combinator</fr:strong>.
+    We want that if <fr:tex display="inline">f = Y\space  h</fr:tex> and <fr:tex display="inline">f=h\space  f</fr:tex>, so we get <fr:tex display="inline">Y\space  h = h \space  (Y\space  h)</fr:tex>.
+    <fr:tex display="block">         Y\space  h = h\space  (Y\space  h) = h\space  (h\space  (Y\space  h)) = h\space  (h\space  (h\space  (Y\space  h))) = \cdots      </fr:tex>
+    This iterates infinitely. The definition of <fr:tex display="inline">Y</fr:tex> is:
+    <fr:tex display="block">         Y = \lambda  h.(\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x))     </fr:tex>
+    The application <fr:tex display="inline">x\space  x</fr:tex> will replicate <fr:tex display="inline">Y\space  h</fr:tex>:
+    <fr:tex display="block">         \begin {align*}             Y\space  h &amp;= (\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x)) \\             &amp;= h\space  ((\lambda  x. h\space  (x\space  x))\space  (\lambda  x. h\space  (x\space  x))) \\             &amp;= h\space  (Y\space  h)         \end {align*}     </fr:tex>
+    The partial recursive functions include functions that are <fr:strong>undefined</fr:strong> (have no normal form) 
+    on some arguments, hence we can&apos;t always find an answer.
+    Consider <fr:tex display="inline">f=f</fr:tex> as a recursion schema and <fr:tex display="inline">h=\text {id}</fr:tex>.
+    <fr:tex display="block">         Y\space  h = Y\space  \text {id} = (\lambda  x. \text {id}\space  (x\space  x))\space  (\lambda  x. \text {id}\space  (x\space  x))         = (\lambda  x. x\space  x)\space  (\lambda  x. x\space  x) = \Omega      </fr:tex>
+    The function <fr:tex display="inline">f=\Omega </fr:tex> solves the equation <fr:tex display="inline">f=f</fr:tex> by giving a divergent result.
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+  
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>604</fr:anchor><fr:addr type="machine">#347</fr:addr><fr:route>unstable-347.xml</fr:route><fr:title text="The Schema of Iteration"><fr:strong>The Schema of Iteration</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>As we saw before, a natural number <fr:tex display="inline">n</fr:tex> is represented by a function 
-        that iterates its first argument <fr:tex display="inline">n</fr:tex> times on its second argument.
-        <fr:tex display="block">             n = \lambda  g.\lambda  c.g^n(c)         </fr:tex>
-        Another way to specify such a function schematically is 
-        <fr:tex display="block">             \begin {align*}                 f \space 0 &amp;= c \\                 f (n+1) &amp;= g\space  (f\space  n)             \end {align*}         </fr:tex>
-        If such a function satisfies such a <fr:strong>schema of iteration</fr:strong>, then it can 
-        be defined in the lambda calculus on Church numerals as
-        <fr:tex display="block">             f = \lambda  n.n \space  g \space  c         </fr:tex>
-        This definition is <fr:strong>total</fr:strong> which means it is defined for all natural numbers.
-        Let&apos;s define the multiplication again
-        <fr:tex display="block">             \begin {align*}                 m*0 &amp;= 0 \\                 m*(n+1) &amp;= m + (m*n)             \end {align*}         </fr:tex>
-        To fit our schema of iteration, we can define the multiplication by abstracting over <fr:tex display="inline">k</fr:tex>:
-        <fr:tex display="block">             \begin {align*}                 \text {times}\space  0 &amp;= \lambda  k.0 \\                 \text {times}\space  (n+1) &amp;= \lambda  k.k + (\text {times}\space  n\space  k)             \end {align*}         </fr:tex>
-        where the <fr:tex display="inline">c</fr:tex> and <fr:tex display="inline">g</fr:tex> are
-        <fr:tex display="block">             \begin {align*}                 c &amp;= \lambda  k.0 \\                 g &amp;= \lambda  r.\lambda  k.k+(r\space  k)             \end {align*}         </fr:tex>
-        and we obtain
-        <fr:tex display="block">             \text {times} = \lambda  n.n(\lambda  rk. k + (r\space  k))(\lambda  k.0)         </fr:tex></fr:p>
+  
+    
+    <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>521</fr:anchor><fr:addr type="machine">#352</fr:addr><fr:route>unstable-352.xml</fr:route><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0003</fr:parent></fr:frontmatter><fr:mainmatter><fr:strong>Define Functions By Recursion</fr:strong>
+    <fr:p>Consider the factorial function:</fr:p>
+    <fr:tex display="block">         \text {fact}\space  n = \text {if } (n=0)\space  1\space  (n\space  \text {fact}\space  (n-1))     </fr:tex>
+    This requires a test <fr:tex display="inline">\text {if0}</fr:tex> satisfies:
+    <fr:tex display="block">         \begin {align*}             \text {if0}(0,c,d) &amp;=c\\             \text {if0}(n+1,c,d) &amp;=d         \end {align*}     </fr:tex>
+    We can define <fr:tex display="inline">\text {if0}</fr:tex> by (Recall that <fr:tex display="inline">K=\lambda  xy.x</fr:tex>):
+    <fr:tex display="block">         \text {if0} = \lambda  ncd. n\space (K\space  d)\space  c     </fr:tex>
+    The argument of Y combinator is defined:
+    <fr:tex display="block">         h_\text {fact} = \lambda  g. \lambda  n. \text {if0}\space  n\space  1\space  (n\space  g\space  (n-1))     </fr:tex>
+    and
+    <fr:tex display="block">         \text {fact} = Y\space  h_\text {fact}     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>605</fr:anchor><fr:addr type="machine">#352</fr:addr><fr:route>unstable-352.xml</fr:route><fr:title text="The Schema of Primitive Recursion"><fr:strong>The Schema of Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>Everything appears simply until we think of a very simple function,
-        the <fr:strong>predecessor function</fr:strong> <fr:tex display="inline">\text {pred}</fr:tex> defined by
-        <fr:tex display="block">             \begin {align*}                 \text {pred}\space  0 = 0 \\                 \text {pred}\space  (n+1) = n             \end {align*}         </fr:tex>
-        What we would need is the <fr:strong>schema of primitive recursion</fr:strong>
-        <fr:tex display="block">             \begin {align*}                 f\space  0 &amp;= c \\                 f\space  (n+1) &amp;= g\space  n\space  (f\space  n)             \end {align*}         </fr:tex>
-        With which we can define the predecessor function by 
-        <fr:tex display="block">             g = \lambda  x.\lambda  y.x         </fr:tex></fr:p>
-    
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>606</fr:anchor><fr:addr type="machine">#348</fr:addr><fr:route>unstable-348.xml</fr:route><fr:title text="Define predecessor function"><fr:strong>Define predecessor function</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        The key idea is to gain access to <fr:tex display="inline">n</fr:tex> in the schema of 
-        primitive recursion by rebuilding it during the iteration.
-        <fr:tex display="block">             \text {pred}_2\space  n = \langle  n, \text {pred}\space  n \rangle          </fr:tex>
-        The key step is to express the definition by a schema of iteration
-        rather than primitive recursion.
-        <fr:tex display="block">             \text {pred}_2\space  0 = \langle  0, 0 \rangle          </fr:tex>
-        We need a helper function for the successor case
-        <fr:tex display="block">             \text {letPair}\space \langle  e_1,e_2\rangle \space  k = k\space  e_1\space  e_2         </fr:tex>
-        This function passes the elements of the pair to a <fr:strong>continuation</fr:strong> <fr:tex display="inline">k</fr:tex>.
-        <fr:tex display="block">             \text {pred}_2 (n+1) = \text {letPair}\space  (\text {pred}_2\space  n)\space  (\lambda  xy. \langle  x+1, x \rangle )          </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>607</fr:anchor><fr:addr type="machine">#349</fr:addr><fr:route>unstable-349.xml</fr:route><fr:title text="Define Pairs"><fr:strong>Define Pairs</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        Now we need to define pairs and <fr:tex display="inline">\text {letPair}</fr:tex>.
-        The idea is to simply abstract over the continuation itself.
-        <fr:tex display="block">             \begin {align*}                 \langle  x,y\rangle  &amp;= \lambda  k.k\space  x\space  y \\                 \text {pair} &amp;= \lambda  x.\lambda  y.\lambda  k.k\space  x\space  y \\                  \text {letPair} &amp;= \lambda  p.p             \end {align*}         </fr:tex>
-        The letPair is not really needed here.
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>608</fr:anchor><fr:addr type="machine">#350</fr:addr><fr:route>unstable-350.xml</fr:route><fr:title text="Summary"><fr:strong>Summary</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        Summarizing the above and we obtain the full definition of the predecessor function.
-        <fr:tex display="block">             \begin {align*}                 \text {pred}_2 &amp;= \lambda  n.n\space  (\lambda  p.p (\lambda  xy.\text {pair} \space  (x+1) \space  x))\space  \text {pair} (\space  0 \space  0)\\                  \text {pred} &amp;= \lambda  n. (\text {pred}_2\space  n) \space  (\lambda  xy.y)             \end {align*}            </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>609</fr:anchor><fr:addr type="machine">#351</fr:addr><fr:route>unstable-351.xml</fr:route><fr:title text="General Primitive Recursion"><fr:strong>General Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        The general case of primitive recursion follows by a similar pattern.
-        We begin by defining a function <fr:tex display="inline">f_2</fr:tex>:
-        <fr:tex display="block">             f_2\space  n = \langle  n, f\space  n \rangle          </fr:tex>
-        We can define <fr:tex display="inline">f_2</fr:tex> using the schema of iteration
-        <fr:tex display="block">             \begin {align*}                 f_2\space  0 &amp;= \langle  0, c \rangle  \\                 f_2\space  (n+1) &amp;= \text {letPair}\space  (f_2\space  n)\space  (\lambda  xy.\langle  x+1, g\space  x\space  y \rangle ) \\                 f\space  n &amp;= \text {letPair}\space  (f_2\space  n)\space  (\lambda  xy.y)             \end {align*}         </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-<fr:p>When computing over natural numbers we can restrict the functions that can be 
-    formed in schematic ways to obtain a language in which all functions <fr:strong>terminate</fr:strong>.
-    Because if <fr:tex display="inline">c</fr:tex> and <fr:tex display="inline">g</fr:tex> are terminating then so is <fr:tex display="inline">f</fr:tex> formed from them by primitive recursion.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+  
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>

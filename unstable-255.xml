@@ -1,105 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>855</fr:anchor><fr:addr type="machine">#255</fr:addr><fr:route>unstable-255.xml</fr:route><fr:title text="Inductive Types › Special Case of Coproduct"><fr:link type="local" href="tt-0004.xml" addr="tt-0004" title="Inductive Types">Inductive Types</fr:link> › <fr:strong>Special Case of Coproduct</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0004</fr:parent></fr:frontmatter><fr:mainmatter>
-    The special case of coproduct type is also called the <fr:strong>sum type</fr:strong>.
-    <fr:tex display="block">         \text {ind}_+: (A \to  X) \to  (B \to  X) \to  (A+B \to  X)     </fr:tex>
-    which is very similar to the <fr:strong>elimination rule</fr:strong> of disjunction in logic.
-    <fr:tex display="block">         (P\to  Q) \to  (R\to  Q) \to  (P\vee  R\to  Q)     </fr:tex>
-</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>856</fr:anchor><fr:addr type="user">tt-0004</fr:addr><fr:route>tt-0004.xml</fr:route><fr:title text="Inductive Types">Inductive Types</fr:title><fr:taxon>Type Theory</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>In previous post, we have seen the definition of natural numbers as an inductive type.
-    In this post, we will see more examples of inductive types, such as 
-    unit type, empty type, product type, sum type and etc.
-    Refer to <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke&apos;s Book</fr:link>.</fr:p><fr:p>This section is much more informal than the previous one.
-    Without displaying the inference rules, we will just present the <fr:strong>constructor</fr:strong>
-    and <fr:strong>induction principle</fr:strong> of each inductive type.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>395</fr:anchor><fr:addr type="machine">#254</fr:addr><fr:route>unstable-254.xml</fr:route><fr:title text="General Inductive Type"><fr:strong>General Inductive Type</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0004</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>Just like <fr:tex display="inline">\mathbb {N}</fr:tex>, other inductive types can be defined by 
-    their constructors and induction principles (and computation rules).</fr:p>
-    <fr:ul><fr:li>The constructors specify the structure of the type equipped.</fr:li>
-        <fr:li>The induction principle specifies the data required to construct 
-            a section of an arbitrary type family over the inductive type.</fr:li>
-        <fr:li>The computation rules specify the behavior of the constructors.</fr:li></fr:ul>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>658</fr:anchor><fr:addr type="machine">#255</fr:addr><fr:route>unstable-255.xml</fr:route><fr:title text="Contextual Modal Type Theory › Hypothesis judgments"><fr:link type="local" href="tt-0007.xml" addr="tt-0007" title="Contextual Modal Type Theory">Contextual Modal Type Theory</fr:link> › Hypothesis judgments</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+        <fr:p>We write 
+            <fr:tex display="block">                 x_1:A_1\space \text {true}, \ldots , x_n:A_n\space \text {true}\vdash  A\space \text {true}             </fr:tex>
+            to express that <fr:tex display="inline">A</fr:tex> is true if all hypotheses <fr:tex display="inline">x_1:A_1,\ldots ,x_n:A_n</fr:tex> are true.
+            At this moment we can view contexts as unordered, later contexts are reified in 
+            modal operators and may even be <fr:strong>internally dependent</fr:strong>, at which point the
+            order is important.</fr:p>
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>374</fr:anchor><fr:addr type="machine">#249</fr:addr><fr:route>unstable-249.xml</fr:route><fr:title text="Hypothesis Rule">Hypothesis Rule</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:p><fr:tex display="block">                     \frac {}{                         \Gamma , x:A\space \text {true}, \Gamma &apos; \vdash  A\space \text {true}                     }(\text {hyp}_x)                 </fr:tex>
+                The distinct labels for assumptions are necessary (?)</fr:p>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>375</fr:anchor><fr:addr type="machine">#250</fr:addr><fr:route>unstable-250.xml</fr:route><fr:title text="Substitution Rule">Substitution Rule</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            If <fr:tex display="inline">\Gamma \vdash  A\space \text {true}</fr:tex> and <fr:tex display="inline">\Gamma ,x:A\space \text {true},\Gamma &apos;\vdash  C\space \space \text {true}</fr:tex>
+            then <fr:tex display="inline">\Gamma ,\Gamma &apos;\vdash  C\space \text {true}</fr:tex>. (Note that this rule is <fr:em>admissible</fr:em>)
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>376</fr:anchor><fr:addr type="machine">#251</fr:addr><fr:route>unstable-251.xml</fr:route><fr:title text="Implication Introduction">Implication Introduction</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     \Gamma , x:A\space \text {true}\vdash  B\space \text {true}                 }{                     \Gamma \vdash  A\to  B\space \text {true}                 }(\to \text {I}^x)             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>377</fr:anchor><fr:addr type="machine">#252</fr:addr><fr:route>unstable-252.xml</fr:route><fr:title text="Implication Elimination">Implication Elimination</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     \Gamma \vdash  A\to  B\space \text {true}\quad \Gamma \vdash  A\space \text {true}                 }{                     \Gamma \vdash  B\space \text {true}                 }(\to \text {E})             </fr:tex>
+            It implies that elimination rule cannot extract more knowledge from 
+            a proposition than contributed by its proof (Soundness). 
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>378</fr:anchor><fr:addr type="machine">#253</fr:addr><fr:route>unstable-253.xml</fr:route><fr:title text="Local Reduction for Implication (Computational Rule)">Local Reduction for Implication (Computational Rule)</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     \dfrac {                         \Gamma , x:A\space \text {true}\vdash  B\space \text {true}                     }{                         \Gamma \vdash  A\to  B\space \text {true}                     }(\to \text {I}^x)                     \quad                      \Gamma \vdash  A\space \text {true}                 }{                     \Gamma \vdash  B\space \text {true}                 }(\to \text {E})                 \mapsto  _R \Gamma \vdash  B\space \text {true}             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>379</fr:anchor><fr:addr type="machine">#254</fr:addr><fr:route>unstable-254.xml</fr:route><fr:title text="Local Expansion for Implication">Local Expansion for Implication</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \Gamma \vdash  A\to  B\space \text {true} \mapsto _E                 \frac {                     \Gamma ,x:A\space \text {true}\vdash  A\to  B\space \text {true}\quad  \dfrac {}{\Gamma ,x:A\space \text {true}\vdash  A\space \text {true}}(\text {hyp}_x)                 }{                     \dfrac {\Gamma ,x:A\space \text {true}\vdash  B\space \text {true}}{\Gamma \vdash  A\to  B\space \text {true}}(\to \text {I}^x)                 }             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    </fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>659</fr:anchor><fr:addr type="user">tt-0007</fr:addr><fr:route>tt-0007.xml</fr:route><fr:title text="Contextual Modal Type Theory">Contextual Modal Type Theory</fr:title><fr:taxon>Type Theory</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Recently I have been studying some work on <fr:strong>Hole</fr:strong>, and found some interesting things.
+    As stated in <fr:link type="local" href="smpe.xml" addr="smpe" title="Toward Semantic Foundations for Program Editors">Semantic Foundations for Program Editors</fr:link>, expression hole can be seen as
+    <fr:strong>metavariables</fr:strong> of <fr:strong>contextual modal type theory (CMTT)</fr:strong>. That is, expression 
+    holes can have types and are surrounded by contexts, just as metavariables in CMTT are 
+    associated with types and contexts. This note is a brief summary of the paper <fr:link type="local" href="cmtt.xml" addr="cmtt" title="Contextual Modal Type Theory">Contextual Modal Type Theory</fr:link>.</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>371</fr:anchor><fr:addr type="machine">#248</fr:addr><fr:route>unstable-248.xml</fr:route><fr:title text="Introduction and Motivation">Introduction and Motivation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:p>Contextual modal type theory provides an elegant and uniform foundation for understanding metavariables and explicit
+        substitutions. Context is common in logic because the truth of a proposition can depend on the context we consider it in
+        rather than being absolute. Narrowing our scope we may think of a context as consisting of the hypothesis that we made
+        to establish a final conclusion.</fr:p>
+    <fr:p>There arre two main approaches to intuitionistic modal logic.
+        <fr:ul><fr:li><fr:strong>Nominal</fr:strong>: Assign names to contexts and includes explicit judgments to relate them.</fr:li>
+            <fr:li><fr:strong>Structural</fr:strong>: Identifies the context with propositions it contains. In this article we
+            carry this idea further which allows arbitrary contexts to be captured within  a proposition.</fr:li></fr:ul></fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>396</fr:anchor><fr:addr type="user">def-0020</fr:addr><fr:route>def-0020.xml</fr:route><fr:title text="Unit Type">Unit Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>unit type</fr:strong> is the simplest inductive type.
-        It has only one constructor, denoted by <fr:tex display="inline">\star :\textbf {1}</fr:tex>.</fr:p><fr:p>The induction principle of the unit type is trivial.
-        It says that to define a dependent function <fr:tex display="inline">f:\Pi  _{(x:\textbf {1})} P(x)</fr:tex>, 
-        it suffices to give a value <fr:tex display="inline">p:P(\star )</fr:tex>.
-        <fr:tex display="block">             f (\star ) :\equiv  p         </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>A degenrate inductive type is the <fr:strong>empty type</fr:strong>.
-    It has no constructor, and its induction principle is trivial.
-    Empty type is connected to the <fr:strong>exfalso quodlibet principle</fr:strong> in logic.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>397</fr:anchor><fr:addr type="user">def-0021</fr:addr><fr:route>def-0021.xml</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>empty type</fr:strong> is a degenerate inductive type <fr:tex display="inline">\emptyset </fr:tex> satisfying 
-    the following induction principle:
-    <fr:tex display="block">         \text {ind}_\emptyset  : \Pi _{(x:\emptyset )}P(x)     </fr:tex>
-    And a special case is <fr:strong>exfalso</fr:strong>:
-    <fr:tex display="block">         \text {exfalso} :\equiv  \text {ind}_\emptyset  : \empty  \to  A      </fr:tex>
-    which can draw any conclusion.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>With the empty type we can define the <fr:strong>negation</fr:strong> of a type
-    and the <fr:strong>proof of negation</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>398</fr:anchor><fr:addr type="user">def-0022</fr:addr><fr:route>def-0022.xml</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>negation</fr:strong> of type <fr:tex display="inline">A</fr:tex> is defined as
-    <fr:tex display="block">         \neg  A :\equiv  A \to  \emptyset      </fr:tex>
-    A type <fr:tex display="inline">A</fr:tex> is said to be <fr:strong>empty</fr:strong> if and only if <fr:tex display="inline">\neg  A</fr:tex> is inhabited.
-    <fr:tex display="block">         \text {empty}(A) :\equiv  \neg  A     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>399</fr:anchor><fr:addr type="machine">#316</fr:addr><fr:route>unstable-316.xml</fr:route><fr:title text="Proof of negation"><fr:strong>Proof of negation</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>def-0022</fr:parent></fr:frontmatter><fr:mainmatter>
-        <fr:p>To prove <fr:tex display="inline">\neg  A</fr:tex>, we need to show that <fr:tex display="inline">A</fr:tex> implies a contradiction.
-            In other words, constructing a function of type <fr:tex display="inline">A \to  \emptyset </fr:tex>.</fr:p>
+
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>372</fr:anchor><fr:addr type="machine">#258</fr:addr><fr:route>unstable-258.xml</fr:route><fr:title text="Contextual Modal Logic">Contextual Modal Logic</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:p>The philosophical foundation of our development is MLTT approaches of separating 
+        judgments and propositions. The most basic judgment is the truth of a proposition,
+        <fr:tex display="inline">A\space \text {true}</fr:tex>. We explain the <fr:em>meaning</fr:em> of a proposition by 
+        presenting the means of inferring its truth via introduction rules, and exploiting
+        the knowledge of its truth via elimination rules. In this section we assume there are
+        some atomic proposition <fr:tex display="inline">P</fr:tex> and we define implication <fr:tex display="inline">A\to  B</fr:tex> and a contextual
+        modal operator <fr:tex display="inline">[\Psi ]A</fr:tex> where <fr:tex display="inline">\Psi </fr:tex> is a context.</fr:p>
+    
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>373</fr:anchor><fr:addr type="machine">#255</fr:addr><fr:route>unstable-255.xml</fr:route><fr:title text="Hypothesis judgments">Hypothesis judgments</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+        <fr:p>We write 
+            <fr:tex display="block">                 x_1:A_1\space \text {true}, \ldots , x_n:A_n\space \text {true}\vdash  A\space \text {true}             </fr:tex>
+            to express that <fr:tex display="inline">A</fr:tex> is true if all hypotheses <fr:tex display="inline">x_1:A_1,\ldots ,x_n:A_n</fr:tex> are true.
+            At this moment we can view contexts as unordered, later contexts are reified in 
+            modal operators and may even be <fr:strong>internally dependent</fr:strong>, at which point the
+            order is important.</fr:p>
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>374</fr:anchor><fr:addr type="machine">#249</fr:addr><fr:route>unstable-249.xml</fr:route><fr:title text="Hypothesis Rule">Hypothesis Rule</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:p><fr:tex display="block">                     \frac {}{                         \Gamma , x:A\space \text {true}, \Gamma &apos; \vdash  A\space \text {true}                     }(\text {hyp}_x)                 </fr:tex>
+                The distinct labels for assumptions are necessary (?)</fr:p>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>375</fr:anchor><fr:addr type="machine">#250</fr:addr><fr:route>unstable-250.xml</fr:route><fr:title text="Substitution Rule">Substitution Rule</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            If <fr:tex display="inline">\Gamma \vdash  A\space \text {true}</fr:tex> and <fr:tex display="inline">\Gamma ,x:A\space \text {true},\Gamma &apos;\vdash  C\space \space \text {true}</fr:tex>
+            then <fr:tex display="inline">\Gamma ,\Gamma &apos;\vdash  C\space \text {true}</fr:tex>. (Note that this rule is <fr:em>admissible</fr:em>)
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>376</fr:anchor><fr:addr type="machine">#251</fr:addr><fr:route>unstable-251.xml</fr:route><fr:title text="Implication Introduction">Implication Introduction</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     \Gamma , x:A\space \text {true}\vdash  B\space \text {true}                 }{                     \Gamma \vdash  A\to  B\space \text {true}                 }(\to \text {I}^x)             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>377</fr:anchor><fr:addr type="machine">#252</fr:addr><fr:route>unstable-252.xml</fr:route><fr:title text="Implication Elimination">Implication Elimination</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     \Gamma \vdash  A\to  B\space \text {true}\quad \Gamma \vdash  A\space \text {true}                 }{                     \Gamma \vdash  B\space \text {true}                 }(\to \text {E})             </fr:tex>
+            It implies that elimination rule cannot extract more knowledge from 
+            a proposition than contributed by its proof (Soundness). 
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>378</fr:anchor><fr:addr type="machine">#253</fr:addr><fr:route>unstable-253.xml</fr:route><fr:title text="Local Reduction for Implication (Computational Rule)">Local Reduction for Implication (Computational Rule)</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     \dfrac {                         \Gamma , x:A\space \text {true}\vdash  B\space \text {true}                     }{                         \Gamma \vdash  A\to  B\space \text {true}                     }(\to \text {I}^x)                     \quad                      \Gamma \vdash  A\space \text {true}                 }{                     \Gamma \vdash  B\space \text {true}                 }(\to \text {E})                 \mapsto  _R \Gamma \vdash  B\space \text {true}             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>379</fr:anchor><fr:addr type="machine">#254</fr:addr><fr:route>unstable-254.xml</fr:route><fr:title text="Local Expansion for Implication">Local Expansion for Implication</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \Gamma \vdash  A\to  B\space \text {true} \mapsto _E                 \frac {                     \Gamma ,x:A\space \text {true}\vdash  A\to  B\space \text {true}\quad  \dfrac {}{\Gamma ,x:A\space \text {true}\vdash  A\space \text {true}}(\text {hyp}_x)                 }{                     \dfrac {\Gamma ,x:A\space \text {true}\vdash  B\space \text {true}}{\Gamma \vdash  A\to  B\space \text {true}}(\to \text {I}^x)                 }             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
     </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>400</fr:anchor><fr:addr type="user">def-0023</fr:addr><fr:route>def-0023.xml</fr:route><fr:title text="Coproduct Type">Coproduct Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex> be types. The <fr:strong>coproduct (disjoint sum)</fr:strong> <fr:tex display="inline">A+B</fr:tex> is a typed defined by the following constructors:
-    <fr:ul><fr:li><fr:tex display="inline">\text {inl}:A\to  A+B</fr:tex></fr:li>
-        <fr:li><fr:tex display="inline">\text {inr}:B\to  A+B</fr:tex></fr:li></fr:ul>
-    For any type family indexed by <fr:tex display="inline">x:A+B</fr:tex>, satisfies the following induction principle:
-    <fr:tex display="block">         \text {ind}_+: (\Pi _{(x:A)}P(\text {inl}(x)))\to (\Pi _{(y:B)}P(\text {inr}(y)))\to \Pi _{(z:A+B)}P(z)     </fr:tex>
-    (Note that sometimes we denoted <fr:tex display="inline">\text {ind}_+(f,g)</fr:tex> as <fr:tex display="inline">[f,g]</fr:tex>) And the computation rule:
-    <fr:tex display="block">         \begin {align*}             \text {ind}_+(f,g,\text {inl}(x))&amp;\equiv  f(x)\\             \text {ind}_+(f,g,\text {inr}(y))&amp;\equiv  g(y)         \end {align*}     </fr:tex>
-    where <fr:tex display="inline">f</fr:tex> and <fr:tex display="inline">g</fr:tex> are defined:
-    <fr:tex display="block">         \begin {align*}             f&amp;:\Pi _{(x:A)}P(\text {inl}(x))\\             g&amp;:\Pi _{(y:B)}P(\text {inr}(y))         \end {align*}     </fr:tex>
-    This can be presented by pattern matching to define a function <fr:tex display="inline">h:\Pi  _{(z:A+B)}.P(z)</fr:tex>:
-    <fr:tex display="block">         \begin {align*}             h(\text {inl}(x))&amp;:\equiv  f(x)\\             h(\text {inr}(y))&amp;:\equiv  g(y)         \end {align*}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>401</fr:anchor><fr:addr type="machine">#255</fr:addr><fr:route>unstable-255.xml</fr:route><fr:title text="Special Case of Coproduct"><fr:strong>Special Case of Coproduct</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0004</fr:parent></fr:frontmatter><fr:mainmatter>
-    The special case of coproduct type is also called the <fr:strong>sum type</fr:strong>.
-    <fr:tex display="block">         \text {ind}_+: (A \to  X) \to  (B \to  X) \to  (A+B \to  X)     </fr:tex>
-    which is very similar to the <fr:strong>elimination rule</fr:strong> of disjunction in logic.
-    <fr:tex display="block">         (P\to  Q) \to  (R\to  Q) \to  (P\vee  R\to  Q)     </fr:tex>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-<fr:p>The dependent version of sum type is called the <fr:strong>dependent sum type (dependent coproduct)</fr:strong> traditionally.
-    Its terms are ordered pairs.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>402</fr:anchor><fr:addr type="user">def-0024</fr:addr><fr:route>def-0024.xml</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>dependent pair type</fr:strong> is a inductive type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex> (<fr:tex display="inline">(x:A) \times  B(x)</fr:tex>)</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>403</fr:anchor><fr:addr type="machine">#311</fr:addr><fr:route>unstable-311.xml</fr:route><fr:title text="
-    Formation Rule
-">
-    <fr:strong>Formation Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>Given a type family <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex>, we can form the dependent pair type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex>.</fr:p>
-    <fr:tex display="block">         \frac {             \Gamma \vdash  A\space \text {type}             \quad              \Gamma ,x:A\vdash  B(x)\space \text {type}         }{             \Gamma \vdash  (x:A) \times  B(x)\space \text {type}         }     </fr:tex>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>404</fr:anchor><fr:addr type="machine">#312</fr:addr><fr:route>unstable-312.xml</fr:route><fr:title text="
-    Introduction Rule
-">
-    <fr:strong>Introduction Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>Given a term <fr:tex display="inline">a:A</fr:tex> and a term <fr:tex display="inline">b(a):B(a)</fr:tex>, we can form a term <fr:tex display="inline">\text {pair}(a,b):(x:A)\times  B(x)</fr:tex>.</fr:p>
-    <fr:tex display="block">         \frac {             \Gamma \vdash  a:A             \quad              \Gamma \vdash  b(a):B(a)         }{             \Gamma \vdash  (a,b):(x:A)\times  B(x)         }     </fr:tex>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+    
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>380</fr:anchor><fr:addr type="machine">#257</fr:addr><fr:route>unstable-257.xml</fr:route><fr:title text="Categorical judgments">Categorical judgments</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+        <fr:p><fr:tex display="inline">A</fr:tex> is <fr:strong>categorically true</fr:strong> or valid if its truth does not depend on any hypotheses
+            about the truth of other propositions. Instead it may depend on the validity of other proposition,
+            because their validity may not depend on truth assumptions.</fr:p>
+        <fr:p>We weite <fr:tex display="inline">\Delta </fr:tex> for a labeled list <fr:tex display="inline">u_1 :: A_1\space \text {valid},\ldots ,u_n :: A_n\space \text {valid}</fr:tex> of assumptions
+            about the validity of propositions. We separate validity and truth:
+            <fr:tex display="block">                 \Delta ;\Gamma \vdash  \mathcal {J}             </fr:tex>
+            where <fr:tex display="inline">\mathcal {J}</fr:tex> is a judgment <fr:tex display="inline">A\space \text {true}</fr:tex> or <fr:tex display="inline">A\space \text {valid}</fr:tex>.</fr:p>
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>369</fr:anchor><fr:addr type="machine">#256</fr:addr><fr:route>unstable-256.xml</fr:route><fr:title text="Contextual Modal Type Theory › Definition of Validity"><fr:link type="local" href="tt-0007.xml" addr="tt-0007" title="Contextual Modal Type Theory">Contextual Modal Type Theory</fr:link> › Definition of Validity</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0007</fr:parent></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {\Delta ;\cdot \vdash  A\space \text {true}}{\Delta ;\Gamma \vdash  A\space \text {valid}}             </fr:tex>
+            Conversely if <fr:tex display="inline">A</fr:tex> is valid we can conclude that it is true
+            <fr:tex display="block">                 \frac {}{                     (\Delta ,u::A\space \text {valid},\Delta &apos;);\Gamma \vdash  A\space \text {true}                 }             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>405</fr:anchor><fr:addr type="machine">#313</fr:addr><fr:route>unstable-313.xml</fr:route><fr:title text="
-    Elimination Rule
-">
-    <fr:strong>Elimination Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>The elimination rule is formed with two projections.
-        <fr:tex display="block">             \frac {                 \Gamma \vdash  p:(x:A)\times  B(x)             }{                 \begin {align*}                     \Gamma &amp;\vdash  \text {pr}_A(p):A\\                     \Gamma &amp;\vdash  \text {pr}_B(p):B(\text {pr}_A(p))                 \end {align*}             }         </fr:tex></fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>406</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="
-    Computation Rule
-">
-    <fr:strong>Computation Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p><fr:tex display="block">             \frac {                 \Gamma \vdash  x:A                  \quad                   \Gamma \vdash  y:B(x)             }{                 \begin {align*}                     \Gamma &amp;\vdash  \text {pr}_A((x,y))=x:A\\                     \Gamma &amp;\vdash  \text {pr}_B((x,y))=y:B(x)                 \end {align*}             }         </fr:tex></fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>407</fr:anchor><fr:addr type="machine">#315</fr:addr><fr:route>unstable-315.xml</fr:route><fr:title text="
-    Special Case
-">
-    <fr:strong>Special Case</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:ul><fr:li>In the special case that <fr:tex display="inline">B(x) = B</fr:tex> is independent of <fr:tex display="inline">A</fr:tex>,
-            this reduces to the <fr:strong>product type</fr:strong> <fr:tex display="inline">A\times  B</fr:tex>.</fr:li>
-        <fr:li>In the special case that <fr:tex display="inline">D \equiv  \text {Boolean}</fr:tex>,
-            this reduces to a <fr:link type="local" href="def-0023.xml" addr="def-0023" title="Coproduct Type">coproduct type</fr:link>.</fr:li></fr:ul>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>

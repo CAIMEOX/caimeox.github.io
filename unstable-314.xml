@@ -1,54 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>992</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="Dependent Pair Type › 
-    Computation Rule
-"><fr:link type="local" href="def-0024.xml" addr="def-0024" title="Dependent Pair Type">Dependent Pair Type</fr:link> › 
-    <fr:strong>Computation Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p><fr:tex display="block">             \frac {                 \Gamma \vdash  x:A                  \quad                   \Gamma \vdash  y:B(x)             }{                 \begin {align*}                     \Gamma &amp;\vdash  \text {pr}_A((x,y))=x:A\\                     \Gamma &amp;\vdash  \text {pr}_B((x,y))=y:B(x)                 \end {align*}             }         </fr:tex></fr:p>
-</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>993</fr:anchor><fr:addr type="user">def-0024</fr:addr><fr:route>def-0024.xml</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>dependent pair type</fr:strong> is a inductive type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex> (<fr:tex display="inline">(x:A) \times  B(x)</fr:tex>)</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>403</fr:anchor><fr:addr type="machine">#311</fr:addr><fr:route>unstable-311.xml</fr:route><fr:title text="
-    Formation Rule
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1029</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="Matrix Multiplication › 
+    Derivation
+"><fr:link type="local" href="def-002T.xml" addr="def-002T" title="Matrix Multiplication">Matrix Multiplication</fr:link> › 
+    <fr:strong>Derivation</fr:strong>
+</fr:title><fr:authors></fr:authors><fr:parent>def-002T</fr:parent></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
+    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
+    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
+    <fr:tex display="block">         \begin {align*}             (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\             &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\             &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\             &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\         \end {align*}     </fr:tex>
+    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
+    <fr:tex display="block">         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
+</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1030</fr:anchor><fr:addr type="user">def-002T</fr:addr><fr:route>def-002T.xml</fr:route><fr:title text="Matrix Multiplication">Matrix Multiplication</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> be a <fr:tex display="inline">n\times  p</fr:tex> matrix.
+    Then <fr:tex display="inline">AC</fr:tex> is defined as the <fr:tex display="inline">m\times  p</fr:tex> matrix <fr:tex display="inline">C</fr:tex> such that
+    <fr:tex display="block">         C_{ij} = \sum _{k=1}^n A_{ik}B_{kj}     </fr:tex></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>488</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="
+    Derivation
 ">
-    <fr:strong>Formation Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>Given a type family <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex>, we can form the dependent pair type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex>.</fr:p>
-    <fr:tex display="block">         \frac {             \Gamma \vdash  A\space \text {type}             \quad              \Gamma ,x:A\vdash  B(x)\space \text {type}         }{             \Gamma \vdash  (x:A) \times  B(x)\space \text {type}         }     </fr:tex>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>404</fr:anchor><fr:addr type="machine">#312</fr:addr><fr:route>unstable-312.xml</fr:route><fr:title text="
-    Introduction Rule
-">
-    <fr:strong>Introduction Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>Given a term <fr:tex display="inline">a:A</fr:tex> and a term <fr:tex display="inline">b(a):B(a)</fr:tex>, we can form a term <fr:tex display="inline">\text {pair}(a,b):(x:A)\times  B(x)</fr:tex>.</fr:p>
-    <fr:tex display="block">         \frac {             \Gamma \vdash  a:A             \quad              \Gamma \vdash  b(a):B(a)         }{             \Gamma \vdash  (a,b):(x:A)\times  B(x)         }     </fr:tex>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>405</fr:anchor><fr:addr type="machine">#313</fr:addr><fr:route>unstable-313.xml</fr:route><fr:title text="
-    Elimination Rule
-">
-    <fr:strong>Elimination Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>The elimination rule is formed with two projections.
-        <fr:tex display="block">             \frac {                 \Gamma \vdash  p:(x:A)\times  B(x)             }{                 \begin {align*}                     \Gamma &amp;\vdash  \text {pr}_A(p):A\\                     \Gamma &amp;\vdash  \text {pr}_B(p):B(\text {pr}_A(p))                 \end {align*}             }         </fr:tex></fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>406</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="
-    Computation Rule
-">
-    <fr:strong>Computation Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p><fr:tex display="block">             \frac {                 \Gamma \vdash  x:A                  \quad                   \Gamma \vdash  y:B(x)             }{                 \begin {align*}                     \Gamma &amp;\vdash  \text {pr}_A((x,y))=x:A\\                     \Gamma &amp;\vdash  \text {pr}_B((x,y))=y:B(x)                 \end {align*}             }         </fr:tex></fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>407</fr:anchor><fr:addr type="machine">#315</fr:addr><fr:route>unstable-315.xml</fr:route><fr:title text="
-    Special Case
-">
-    <fr:strong>Special Case</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:ul><fr:li>In the special case that <fr:tex display="inline">B(x) = B</fr:tex> is independent of <fr:tex display="inline">A</fr:tex>,
-            this reduces to the <fr:strong>product type</fr:strong> <fr:tex display="inline">A\times  B</fr:tex>.</fr:li>
-        <fr:li>In the special case that <fr:tex display="inline">D \equiv  \text {Boolean}</fr:tex>,
-            this reduces to a <fr:link type="local" href="def-0023.xml" addr="def-0023" title="Coproduct Type">coproduct type</fr:link>.</fr:li></fr:ul>
+    <fr:strong>Derivation</fr:strong>
+</fr:title><fr:authors></fr:authors><fr:parent>def-002T</fr:parent></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
+    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
+    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
+    <fr:tex display="block">         \begin {align*}             (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\             &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\             &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\             &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\         \end {align*}     </fr:tex>
+    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
+    <fr:tex display="block">         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
