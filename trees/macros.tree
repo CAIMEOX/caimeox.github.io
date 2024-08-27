@@ -83,6 +83,8 @@
 \def\unit{\textbf{1}}
 \def\void{\textbf{0}}
 \def\pr[a]{\text{pr}_\a}
+\def\true{\space\text{true}}
+\def\valid{\space\text{valid}}
 
 % Lambda calculus
 \def\subt{\text{Sub}}

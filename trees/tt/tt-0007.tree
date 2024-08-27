@@ -1,0 +1,136 @@
+\title{Contextual Modal Type Theory}
+\taxon{Type Theory}
+\date{2024-08-27}
+\import{macros}
+\p{
+    Recently I have been studying some work on \strong{Hole}, and found some interesting things.
+    As stated in [Semantic Foundations for Program Editors](smpe), expression hole can be seen as
+    \strong{metavariables} of \strong{contextual modal type theory (CMTT)}. That is, expression 
+    holes can have types and are surrounded by contexts, just as metavariables in CMTT are 
+    associated with types and contexts. This note is a brief summary of the paper [Contextual Modal Type Theory](cmtt).
+}
+\block{Introduction and Motivation}{
+    \p{
+        Contextual modal type theory provides an elegant and uniform foundation for understanding metavariables and explicit
+        substitutions. Context is common in logic because the truth of a proposition can depend on the context we consider it in
+        rather than being absolute. Narrowing our scope we may think of a context as consisting of the hypothesis that we made
+        to establish a final conclusion.
+    }
+    \p{
+        There arre two main approaches to intuitionistic modal logic.
+        \ul{
+            \li{\strong{Nominal}: Assign names to contexts and includes explicit judgments to relate them.}
+            \li{\strong{Structural}: Identifies the context with propositions it contains. In this article we
+            carry this idea further which allows arbitrary contexts to be captured within  a proposition.}
+        }
+    }
+}
+\block{Contextual Modal Logic}{
+    \p{
+        The philosophical foundation of our development is MLTT approaches of separating 
+        judgments and propositions. The most basic judgment is the truth of a proposition,
+        #{A\true}. We explain the \em{meaning} of a proposition by 
+        presenting the means of inferring its truth via introduction rules, and exploiting
+        the knowledge of its truth via elimination rules. In this section we assume there are
+        some atomic proposition #{P} and we define implication #{A\to B} and a contextual
+        modal operator #{[\Psi]A} where #{\Psi} is a context.
+    }
+    \block{Hypothesis judgments}{
+        \p{
+            We write 
+            ##{
+                x_1:A_1\true, \ldots, x_n:A_n\true\vdash A\true
+            }
+            to express that #{A} is true if all hypotheses #{x_1:A_1,\ldots,x_n:A_n} are true.
+            At this moment we can view contexts as unordered, later contexts are reified in 
+            modal operators and may even be \strong{internally dependent}, at which point the
+            order is important.
+        }
+        \block{Hypothesis Rule}{
+            \p{
+                ##{
+                    \frac{}{
+                        \Gamma, x:A\true, \Gamma' \vdash A\true
+                    }(\text{hyp}_x)
+                }
+                The distinct labels for assumptions are necessary (?)
+            }
+        }
+        \block{Substitution Rule}{
+            If #{\Gamma\vdash A\true} and #{\Gamma,x:A\true,\Gamma'\vdash C\space\true}
+            then #{\Gamma,\Gamma'\vdash C\true}. (Note that this rule is \em{admissible})
+        }
+        \block{Implication Introduction}{
+            ##{
+                \frac{
+                    \Gamma, x:A\true\vdash B\true
+                }{
+                    \Gamma\vdash A\to B\true
+                }(\to\text{I}^x)
+            }
+        }
+        \block{Implication Elimination}{
+            ##{
+                \frac{
+                    \Gamma\vdash A\to B\true\quad\Gamma\vdash A\true
+                }{
+                    \Gamma\vdash B\true
+                }(\to\text{E})
+            }
+            It implies that elimination rule cannot extract more knowledge from 
+            a proposition than contributed by its proof (Soundness). 
+        }
+        \block{Local Reduction for Implication (Computational Rule)}{
+            ##{
+                \frac{
+                    \dfrac{
+                        \Gamma, x:A\true\vdash B\true
+                    }{
+                        \Gamma\vdash A\to B\true
+                    }(\to\text{I}^x)
+                    \quad
+                    \Gamma\vdash A\true
+                }{
+                    \Gamma\vdash B\true
+                }(\to\text{E})
+                \mapsto _R \Gamma\vdash B\true
+            }
+        }
+        \block{Local Expansion for Implication}{
+            ##{
+                \Gamma\vdash A\to B\true \mapsto_E
+                \frac{
+                    \Gamma,x:A\true\vdash A\to B\true\quad \dfrac{}{\Gamma,x:A\true\vdash A\true}(\text{hyp}_x)
+                }{
+                    \dfrac{\Gamma,x:A\true\vdash B\true}{\Gamma\vdash A\to B\true}(\to\text{I}^x)
+                }
+            }
+        }
+    }
+    \block{Categorical judgments}{
+        \p{
+            #{A} is \strong{categorically true} or valid if its truth does not depend on any hypotheses
+            about the truth of other propositions. Instead it may depend on the validity of other proposition,
+            because their validity may not depend on truth assumptions.
+        }
+        \p{
+            We weite #{\Delta} for a labeled list #{u_1 :: A_1\valid,\ldots,u_n :: A_n\valid} of assumptions
+            about the validity of propositions. We separate validity and truth:
+            ##{
+                \Delta;\Gamma\vdash \mathcal{J}
+            }
+            where #{\mathcal{J}} is a judgment #{A\true} or #{A\valid}.
+        }
+        \block{Definition of Validity}{
+            ##{
+                \frac{\Delta;\cdot\vdash A\true}{\Delta;\Gamma\vdash A\valid}
+            }
+            Conversely if #{A} is valid we can conclude that it is true
+            ##{
+                \frac{}{
+                    (\Delta,u::A\valid,\Delta');\Gamma\vdash A\true
+                }
+            }
+        }
+    }
+}
