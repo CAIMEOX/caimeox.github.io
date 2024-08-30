@@ -1,121 +1,419 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1590</fr:anchor><fr:addr type="machine">#349</fr:addr><fr:route>unstable-349.xml</fr:route><fr:title text="Scanners › Recognize more complex words"><fr:link type="local" href="cs-0004.xml" addr="cs-0004" title="Scanners">Scanners</fr:link> › Recognize more complex words</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The char-by-char model is very simple and now we consider about numbers.
-        For simplicity, we consider only unsigned integers: An unsigned integer is either
-        zero or series of one or more digits where the first one is non-zero.</fr:p>
-    <fr:embedded-tex hash="b460f960b96d5c831acb91408c74102e"><fr:embedded-tex-preamble>
-      \usepackage {tikz-cd}
-      \usepackage {amssymb}
-    </fr:embedded-tex-preamble><fr:embedded-tex-body>
-        
-        \begin {tikzcd}
-            &amp; {S_2}
-            \arrow [out=65, in=25 ,loop,&quot;0..9&quot;]
-            \\
-            {S_0} \\
-            &amp; {S_1}
-            \arrow [&quot;0&quot;, from=2-1, to=3-2]
-            \arrow [&quot;{1..9}&quot;, from=2-1, to=1-2]
-        \end {tikzcd}
-    
-    </fr:embedded-tex-body></fr:embedded-tex>
-<fr:p>And the code implementation can be:</fr:p><fr:pre>    state &lt;- s0;
-    char &lt;-nextChar();
-    while (state != se and char != eof) {
-        state &lt;- delta(state, char);
-        char &lt;- nextChar();
-    }
-    if (state in SA) {
-        return Acceptance();
-    } else {
-        reportError();
-    }</fr:pre><fr:p>Another example is to recognize <fr:strong>identifiers</fr:strong> which are sequences of letters and digits,
-        starting with a letter. Many languages include other special characters for identifiers.
-        The FA for unsigned integers and identifiers are different in syntactic categories.</fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1591</fr:anchor><fr:addr type="user">cs-0004</fr:addr><fr:route>cs-0004.xml</fr:route><fr:title text="Scanners">Scanners</fr:title><fr:taxon>Computer Science</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The scanner&apos;s task is to transform a stream of characters into a stream 
-    of words in the input language. Each word must be classified into a 
-    <fr:strong>syntactic category</fr:strong>.
-    This note refers to <fr:link type="local" href="eng-compiler-2022.xml" addr="eng-compiler-2022" title="Engineering a Compiler">Engineering a compiler</fr:link></fr:p><fr:p>The first stage of a compiler is to perform <fr:strong>lexical analysis</fr:strong> by a scanner.
-    The parser or <fr:strong>syntax analyzer</fr:strong> will fit the stream of words to a grammatical 
-    model of the input language.</fr:p><fr:p>Scanner construction has a strong foundation in formal language theory.
-    Scanners are based on <fr:strong>recognizers</fr:strong> that simulate <fr:strong>deterministic finite automata</fr:strong>.
-    We can specify the lexical structure using a set of <fr:strong>regular expression</fr:strong>.</fr:p><fr:p>Each time a scanner recognizes a word, it will return a <fr:strong>token</fr:strong> that
-    contains the word (<fr:strong>lexeme</fr:strong>) and its syntactic category.
-    The scanner uses <fr:strong>microsyntax</fr:strong> (the lexical structure of a language) to 
-    find and classify words. <fr:strong>Keywords</fr:strong> are <fr:strong>identifiers</fr:strong> but have special meanings.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>523</fr:anchor><fr:addr type="machine">#347</fr:addr><fr:route>unstable-347.xml</fr:route><fr:title text="A first look at recognizers">A first look at recognizers</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>A char-by-char algorithm to recognize words is trivial.
-        Consider we want to recognize the word <fr:code>new</fr:code>.
-        We can write down the following code.</fr:p><fr:pre>    c &lt;- nextChar();
-    if (c == &apos;n&apos;) {
-        c &lt;- nextChar();
-        if (c == &apos;e&apos;) {
-            c &lt;- nextChar();
-            if (c == &apos;w&apos;) {
-                return newToken();
-            }
-        }
-    }
-    reportError();</fr:pre><fr:p>We can also represent the code fragment using the simple <fr:strong>transition diagram</fr:strong>.</fr:p>
-    <fr:embedded-tex hash="d05f347414c07afcf952ed181dbb69cd"><fr:embedded-tex-preamble>
-      \usepackage {tikz-cd}
-      \usepackage {amssymb}
-    </fr:embedded-tex-preamble><fr:embedded-tex-body>
-        
-        \begin {tikzcd}
-            {S_0} &amp; {S_1} &amp; {S_2} &amp; {S_3}
-            \arrow [&quot;n&quot;, from=1-1, to=1-2]
-            \arrow [&quot;e&quot;, from=1-2, to=1-3]
-            \arrow [&quot;w&quot;, from=1-3, to=1-4]
-        \end {tikzcd}
-    
-    </fr:embedded-tex-body></fr:embedded-tex>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>524</fr:anchor><fr:addr type="machine">#348</fr:addr><fr:route>unstable-348.xml</fr:route><fr:title text="A formalism for recognizers">A formalism for recognizers</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Transition diagrams can be viewed as formal mathematics objects called <fr:strong>finite automata</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>525</fr:anchor><fr:addr type="user">def-003M</fr:addr><fr:route>def-003M.xml</fr:route><fr:title text="Finite Automata">Finite Automata</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>finite automata (FA)</fr:strong> is a five-tuple <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> where
-    <fr:ul><fr:li><fr:tex display="inline">S</fr:tex> is the finite set of states in the recognizer including <fr:tex display="inline">s_e</fr:tex>,
-            the error state.</fr:li>
-        <fr:li><fr:tex display="inline">\Sigma </fr:tex> is the finite alphabet used by the recognizer. 
-            <fr:tex display="inline">\Sigma </fr:tex> is the union of the edge labels in the transition diagram.</fr:li>
-        <fr:li><fr:tex display="inline">\delta (s, c)</fr:tex> is the recognizer&apos;s transition function, which 
-            maps each state <fr:tex display="inline">s\in  S</fr:tex> and character <fr:tex display="inline">c\in \Sigma </fr:tex> into some next state.
-            In state <fr:tex display="inline">s_i</fr:tex> with input character <fr:tex display="inline">c</fr:tex> the FA takes the transition
-            <fr:tex display="inline">s_i \xrightarrow {c} \delta (s_i, c)</fr:tex>.</fr:li>
-        <fr:li><fr:tex display="inline">s_0\in  S</fr:tex> is the initial state of the recognizer.</fr:li>
-        <fr:li><fr:tex display="inline">S_A</fr:tex> is the set of accepting states, <fr:tex display="inline">S_A\subseteq  S</fr:tex>.</fr:li></fr:ul>
-    <fr:tex display="inline">\delta </fr:tex> is only partially defined. For all other combinations of the 
-    state <fr:tex display="inline">s_i</fr:tex> and input char <fr:tex display="inline">c</fr:tex> we can define <fr:tex display="inline">\delta (s_i,c)=s_e</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>An FA <fr:strong>accpets</fr:strong> a string <fr:tex display="inline">x</fr:tex> and iff starting in <fr:tex display="inline">s_0</fr:tex>,
-        the sequence of chars in  <fr:tex display="inline">x</fr:tex> takes the FA to an accepting state
-        when the entire string has been consumed.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>526</fr:anchor><fr:addr type="user">def-003N</fr:addr><fr:route>def-003N.xml</fr:route><fr:title text="Accepts">Accepts</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>If the string <fr:tex display="inline">x</fr:tex> consists characters <fr:tex display="inline">x_1, x_2, \ldots , x_n</fr:tex> then the
-    FA <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> <fr:strong>accpets</fr:strong> <fr:tex display="inline">x</fr:tex> iff there is a sequence
-    <fr:tex display="block">         \delta (             \delta (                 \dots \delta (\delta (                     \delta (s_0,x_1),x_2),x_3)\dots ,                 x_{n-1}             )             ,x_n         )\in  S_A     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>527</fr:anchor><fr:addr type="machine">#349</fr:addr><fr:route>unstable-349.xml</fr:route><fr:title text="Recognize more complex words">Recognize more complex words</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The char-by-char model is very simple and now we consider about numbers.
-        For simplicity, we consider only unsigned integers: An unsigned integer is either
-        zero or series of one or more digits where the first one is non-zero.</fr:p>
-    <fr:embedded-tex hash="b460f960b96d5c831acb91408c74102e"><fr:embedded-tex-preamble>
-      \usepackage {tikz-cd}
-      \usepackage {amssymb}
-    </fr:embedded-tex-preamble><fr:embedded-tex-body>
-        
-        \begin {tikzcd}
-            &amp; {S_2}
-            \arrow [out=65, in=25 ,loop,&quot;0..9&quot;]
-            \\
-            {S_0} \\
-            &amp; {S_1}
-            \arrow [&quot;0&quot;, from=2-1, to=3-2]
-            \arrow [&quot;{1..9}&quot;, from=2-1, to=1-2]
-        \end {tikzcd}
-    
-    </fr:embedded-tex-body></fr:embedded-tex>
-<fr:p>And the code implementation can be:</fr:p><fr:pre>    state &lt;- s0;
-    char &lt;-nextChar();
-    while (state != se and char != eof) {
-        state &lt;- delta(state, char);
-        char &lt;- nextChar();
-    }
-    if (state in SA) {
-        return Acceptance();
-    } else {
-        reportError();
-    }</fr:pre><fr:p>Another example is to recognize <fr:strong>identifiers</fr:strong> which are sequences of letters and digits,
-        starting with a letter. Many languages include other special characters for identifiers.
-        The FA for unsigned integers and identifiers are different in syntactic categories.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>528</fr:anchor><fr:addr type="machine">#350</fr:addr><fr:route>unstable-350.xml</fr:route><fr:title text="Regular Expressions">Regular Expressions</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The set of words accpeted by a finite automata <fr:tex display="inline">F</fr:tex> forms a language <fr:tex display="inline">L(F)</fr:tex>.
-        The transition diagram of <fr:tex display="inline">F</fr:tex> specifies the syntactic structure of <fr:tex display="inline">L(F)</fr:tex>.
-        But such representation is complex and non-intuitive.
-        Most systems use a notation called <fr:strong>regular expressions</fr:strong> to specify the language.
-        Any language described by an RE is considered a <fr:strong>regular language</fr:strong>.
-        RE is equivalent to FA.</fr:p><fr:p>To work with REs in a rigorous way, we need a foraml definition.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>857</fr:anchor><fr:addr type="machine">#349</fr:addr><fr:route>unstable-349.xml</fr:route><fr:title text="Introduction to Programming Language Semantic › Contextual Semantics"><fr:link type="local" href="cs-0006.xml" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</fr:link> › Contextual Semantics</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The small-step semantics for expressions above has one basic reduction rule 
+        for adding values and two structural rules that allow addition to be performed
+        in larger expressions. Separating these two kinds of rules results 
+        the notion of <fr:strong>contextual semantics</fr:strong> (or <fr:strong>reduction semantics</fr:strong>).</fr:p><fr:p>Informally, a context in this setting is a term with a &quot;<fr:strong>hole</fr:strong>&quot;, 
+        usually written as <fr:tex display="inline">[-]</fr:tex>, which can be filled with another term later.
+        In a contextual semantics, the hole represents the location where a <fr:strong>single</fr:strong>
+        basic step of execution may take place within a term.</fr:p><fr:p>Consider the following transition in our small-step semantics.
+        <fr:tex display="block">             (1+2)+(3+4)\to  3+(3+4)         </fr:tex>
+        The addition is performed on the left side.
+        We say that we can perform the basic step <fr:tex display="inline">1+2\to 3</fr:tex> in the 
+        <fr:strong>context</fr:strong> <fr:tex display="inline">[-]+(3+4)</fr:tex> where <fr:tex display="inline">[-]</fr:tex> implies the location of the
+        addition takes place.</fr:p><fr:p>The language <fr:tex display="inline">C</fr:tex> of contexts of arithmetic expressions can be formally defined by 
+        <fr:tex display="block">             C:\equiv [-]|C+E|E+C         </fr:tex>
+        As previously, we can define a Haskell datatype for contexts.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data Cont = Hole | Add Cont Expr | Add Expr Cont</html:code></fr:pre>
+<fr:p>The kind of context is known as &quot;outside-in&quot; as locating the hole involves
+        navigating from the outside of the context inwards. To fill the hole in 
+        a context <fr:tex display="inline">c</fr:tex> with an expression <fr:tex display="inline">e</fr:tex> we write <fr:tex display="inline">c\space [e]</fr:tex>:
+        <fr:tex display="block">             \begin {align*}                 \text {Hole}\space [e] &amp;= e \\                 (\text {AddL}\space c\space r)\space [e] &amp;= \text {Add}\space  (c\space [e])\space  r \\                 (\text {AddR}\space l\space c)\space [e] &amp;= \text {Add}\space  l\space (c\space [e])             \end {align*}         </fr:tex></fr:p><fr:p>Use the idea of hole filling we can redefine the small-step semantics
+        for expressions in contextual style.
+        <fr:tex display="block">             \frac {}{                 \text {Add}\space (\text {Val}\space  n_1)\space (\text {Val}\space  n_2)\rightarrowtail  \text {Val}\space (n_1+n_2)             } \quad              \frac {                 e \rightarrowtail  e&apos;             }{                 c\space  [e] \to  c\space  [e&apos;]             }         </fr:tex>
+        This first rule defines a reduction relation <fr:tex display="inline">\rightarrowtail </fr:tex> that captures the basic behavior of addition,
+        while the second defines a transition relation <fr:tex display="inline">\to </fr:tex> that allows the first rule to be applied in 
+        any context.</fr:p><fr:p>We have now refactored the small-step semantics into a single reduction rule and a single structural rule.
+        If we subsequently want to extend the language with other features,
+        it only requires adding new reduction rules and extending the notion of contexts
+        but not need to adding new structural rules.</fr:p><fr:p>Now we define the hole filling function in Haskell.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">fill :: Cont -&gt; Expr -&gt; Expr
+fill Hole e = e
+fill (AddL c r) e = Add (fill c e) r
+fill (AddR l c) e = Add l (fill c e)</html:code></fr:pre>
+<fr:p>The dual operation which splits an expression into all possible pairs of 
+    contexts and expressions can be defined:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">split :: Expr -&gt; [(Cont,Expr)]
+split e = (Hole, e) : case e of
+Val n -&gt; []
+Add l r -&gt; [(AddL c r, x) | (c, x) &lt;- split l] ++ 
+            [(AddR l c, x) | (c, x) &lt;- split r]</html:code></fr:pre>
+<fr:p>A pair <fr:tex display="inline">(c,x)</fr:tex> comprising a context #[c] and an expression <fr:tex display="inline">x</fr:tex> is
+        an element of the list returned by <fr:code>split e</fr:code> precisely when <fr:code>fill c x = e</fr:code>.
+        The contextual semantics can be translated into Haskell function that returns
+        the lists of all expressions that can be reached by performing a single reduction step.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">reduce :: Expr -&gt; [Expr]
+reduce (Add (Val n) (Val m)) = [Val (n + m)]
+reduce _ = []</html:code></fr:pre>
+<fr:p>or a single transition step.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">trans :: Expr -&gt; [Expr]
+trans e = [fill c x&apos; | (c, x) &lt;- split e, x&apos; &lt;- reduce x]</html:code></fr:pre>
+<fr:p>This function splits the given expression into all possible context 
+        and expression pairs, then considering any reduction that can made by each component
+        expression, and finally filling the hole in the context with the reduced expression.</fr:p><fr:p>Notice that the contextual semantics does not specify an evaluation
+        order for addition and is non-deterministic. We can modify the language
+        of contexts to achieve so.
+        <fr:tex display="block">             C:\equiv [-]|C+E|\mathbb {Z}+C         </fr:tex>
+        This version of the semantics also satisfies a <fr:strong>unique decomposition property</fr:strong>,
+        that is, any expression <fr:tex display="inline">e</fr:tex> that is not a value can be uniquely decomposed into the 
+        form <fr:tex display="inline">e=c\space [x]</fr:tex> for some context <fr:tex display="inline">c</fr:tex> and reducible expression <fr:tex display="inline">x</fr:tex>. This can be 
+        proved by induction on the expression <fr:tex display="inline">e</fr:tex>.</fr:p><fr:p>Contexts are related to a number of other important concepts in
+        programming and semantics, including the use of continuations to make control flow
+        explicit (John C. Reynolds 1972).</fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>858</fr:anchor><fr:addr type="user">cs-0006</fr:addr><fr:route>cs-0006.xml</fr:route><fr:title text="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</fr:title><fr:taxon>Computer Science</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>I decided to read one paper or article every week.
+    This week&apos;s topic is programming language semantics, refer to <fr:strong>Graham Huttons</fr:strong>&apos;s 
+    paper <fr:link type="local" href="pl-123.xml" addr="pl-123" title="Programming language semantics: It&apos;s easy as 1,2,3">Programming language semantics: It&apos;s easy as 1,2,3</fr:link>.</fr:p><fr:p><fr:strong>Semantics</fr:strong> is the general term for the study of meaning.
+    <fr:strong>Programming language semantics</fr:strong> gives precise mathematical meaning to programs.
+    We use a simple <fr:strong>arithmetic expression language</fr:strong> 
+    (including integers and addition only) to illustrate the basic concepts.
+    This is an example of <fr:strong>Occam&apos;s razor</fr:strong>, a philosophical principle that favours the 
+    simplest explanation for a phenomenon.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>553</fr:anchor><fr:addr type="machine">#343</fr:addr><fr:route>unstable-343.xml</fr:route><fr:title text="Arithmetic Expressions">Arithmetic Expressions</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Now let&apos;s define our language of arithmetic expressions
+        built up from the set of integers and the operation of addition.
+        Use a <fr:strong>context-free</fr:strong> grammar.
+        <fr:tex display="block">             E:\equiv \mathbb {Z} | E+E         </fr:tex></fr:p><fr:p>An expression is either an integer value or the addition of two sub-expressions.
+        We assume that parentheses can be <fr:strong>freely</fr:strong> used as required to disambiguate expressions 
+        written in normal textual form. This grammar can be easily translated into 
+        a <fr:strong>Haskell</fr:strong> data type.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data Expr = Val Integer | Add Expr Expr</html:code></fr:pre>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>555</fr:anchor><fr:addr type="machine">#344</fr:addr><fr:route>unstable-344.xml</fr:route><fr:title text="Denotational Semantics">Denotational Semantics</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Now we consider <fr:strong>denotational semantics</fr:strong>, 
+        where the terms in a language is defined using a 
+        <fr:strong>valuation function</fr:strong> that maps terms into values in an appropriate <fr:strong>semantic domain</fr:strong>.</fr:p><fr:p>Formally, for a language <fr:tex display="inline">T</fr:tex> of syntactic terms comprises
+        two components: a set <fr:tex display="inline">V</fr:tex> of <fr:strong>semantic values</fr:strong> and a 
+        <fr:strong>valuation function</fr:strong> of type <fr:tex display="inline">T\to  V</fr:tex> that maps terms to 
+        their meanings as values.
+        This function is written by enclosing a term in a <fr:strong>semantic brackets</fr:strong> 
+        (Also known as Oxford or Strachey brackets),
+        writing <fr:tex display="inline">\llbracket  t\rrbracket </fr:tex> for the value of term <fr:tex display="inline">t</fr:tex>.
+        In addition, the valuation function is required to be <fr:strong>compositional</fr:strong>,
+        the meaning  of a <fr:strong>compound term</fr:strong> is defined purely in terms of the meaning
+        of its sub-terms.</fr:p><fr:p>Compositionality aids understanding by ensuring that the semantics is modular
+        and supports the use of simple <fr:strong>equational reasoning</fr:strong> techniques for proving properties of
+        the semantics. When the set of semantic values is clear, a denotational semantics is often
+        identified with the underlying valuation function.</fr:p><fr:p>Taking <fr:tex display="inline">V</fr:tex> the Haskell type <fr:code>Integer</fr:code> of integers and define a valuation function
+        of type <fr:code>Expr -&gt; Integer</fr:code> (by following equations) we can define the denotational semantics of our expression language.
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Val} \space  n\rrbracket  &amp;= n \\                 \llbracket \text {Add} \space  e_1\space  e_2\rrbracket  &amp;= \llbracket  e_1\rrbracket  + \llbracket  e_2\rrbracket              \end {align*}         </fr:tex>
+        This definition satisfies the compositionality requirement obviously.
+        Note that the symbol <fr:tex display="inline">+</fr:tex> has two different purposes.
+        On the left side, it is a <fr:strong>syntactic</fr:strong> constructor for building terms,
+        while on the right side, it is a <fr:strong>semantic</fr:strong> operator for adding integers.</fr:p><fr:p>Compositionality simplifies reasoning because it allows us to 
+        replace <fr:strong>equals by equals</fr:strong>. For example,
+        <fr:tex display="block">             \frac {                 \llbracket  e_1\rrbracket  = n_1 \quad  \llbracket  e_2\rrbracket  = n_2             }{                 \llbracket \text {Add} \space  e_1\space  e_2\rrbracket  =                 \llbracket \text {Add} \space  n_1\space  n_2\rrbracket              }         </fr:tex>
+        we can freely replace the two argument expressions of an addition by other expressions with the same meanings, 
+        and the meaning of the whole addition will remain unchanged.
+        Using the definition of the valuation function, we can prove this property.
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add} \space  e_1\space  e_2\rrbracket  &amp;=                  \llbracket  e_1\rrbracket  + \llbracket  e_2\rrbracket  (\text {By definition of } \llbracket -\rrbracket ) \\                 &amp;= \llbracket  n_1\rrbracket  + \llbracket  n_2\rrbracket  (\text {Assumptions}) \\                  &amp;= \llbracket \text {Add} \space  n_1\space  n_2\rrbracket  (\text {By definition of } \llbracket -\rrbracket )             \end {align*}         </fr:tex></fr:p><fr:p>Given that terms and their semantics are built up <fr:strong>inductively</fr:strong>,
+        proofs about denotational semantics typically  proceed using <fr:strong>structural induction</fr:strong>.
+        Let us show that our expression semantics is <fr:strong>total</fr:strong>,
+        that is, for every expression <fr:tex display="inline">e</fr:tex> there is an integer <fr:tex display="inline">n</fr:tex> such that <fr:tex display="inline">\llbracket  e\rrbracket  = n</fr:tex>.</fr:p>
+ 
+   
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>556</fr:anchor><fr:addr type="machine">#345</fr:addr><fr:route>unstable-345.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#344</fr:parent></fr:frontmatter><fr:mainmatter>
+        For the base case <fr:tex display="inline">e = \text {Val} \space  n</fr:tex>, we have <fr:tex display="inline">\llbracket  e\rrbracket  = n</fr:tex> trivially.
+        For the inductive case <fr:tex display="inline">e = \text {Add} \space  e_1\space  e_2</fr:tex>,
+        we can assume by induction that <fr:tex display="inline">\llbracket  e_1\rrbracket  = n_1</fr:tex> and <fr:tex display="inline">\llbracket  e_2\rrbracket  = n_2</fr:tex>
+        for some integers <fr:tex display="inline">n_1</fr:tex> and <fr:tex display="inline">n_2</fr:tex>. Then <fr:tex display="inline">\llbracket  e\rrbracket  = n_1 + n_2</fr:tex> by definition of the valuation function,
+        indicates this case is also true. Therefore, the semantics is total.
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ 
+<fr:p>The valuation function can be translated into a Haskell function</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval :: Expr -&gt; Integer
+eval (Val n) = n
+eval (Add x y) = eval x + eval y</html:code></fr:pre>
+<fr:p>More generally, a denotational semantics can be viewed as an evaluator (or <fr:strong>interpreter</fr:strong>).
+        Even <fr:strong>eval</fr:strong> is defined recursively, the semantics is compositional its behavior
+        can be understood  as simply replacing the <fr:strong>constructors</fr:strong> for expressions by other functions.
+        In this manner, a denotational semantics can also be viewed as an evaluation function that
+        is defined by <fr:strong>folding</fr:strong> over the syntax of the source language.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval :: Expr -&gt; Integer
+eval = fold id (+)</html:code></fr:pre>
+<fr:p>The fold operator captures the ideas of replacing constructors
+        of the language by other functions</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">fold :: (Integer -&gt; a) -&gt; (a -&gt; a -&gt; a) -&gt; Expr -&gt; a 
+fold f g (Val n) = f n
+fold f g (Add x y) = g (fold f g x) (fold f g y)</html:code></fr:pre>
+<fr:p>Note that the above semantics for expressions does not specify the order
+        of evaluation. If we do wish to make evaluation order explicit 
+        this requires the introduction of additional structure into the semantics,
+        named <fr:strong>abstract machines</fr:strong> (Discuss later).</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>560</fr:anchor><fr:addr type="machine">#346</fr:addr><fr:route>unstable-346.xml</fr:route><fr:title text="Small-Step Operational Semantics">Small-Step Operational Semantics</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Another popular approach to semantics is the <fr:strong>operational approach</fr:strong>,
+        where the meaning of terms is defined using an <fr:strong>execution relation</fr:strong>
+        that specifies how terms can be executed in an appropriate machine model.
+        There are two basic forms of operational semantics:
+        <fr:ul><fr:li><fr:strong>small-step</fr:strong>: describes the individual steps of execution</fr:li>
+            <fr:li><fr:strong>big-step</fr:strong>: describes the overall results of execution</fr:li></fr:ul>
+        In this section we consider the small-step approach, 
+        which is also known as <fr:strong>structural operational semantics</fr:strong>.</fr:p><fr:p>Formally, a small-step operational semantics for a language <fr:tex display="inline">T</fr:tex> of syntactic terms
+        comprises two components:
+        a set <fr:tex display="inline">S</fr:tex> of <fr:strong>execution states</fr:strong> and 
+        a <fr:strong>transition relation</fr:strong> of type <fr:tex display="inline">S\to  S</fr:tex> that specifies how terms can be executed.
+        If there is a transition from state <fr:tex display="inline">s</fr:tex> to state <fr:tex display="inline">s&apos;</fr:tex> in a single execution step, we write <fr:tex display="inline">s\to  s&apos;</fr:tex>.</fr:p><fr:p>Arithmetic expressions have a simple small-step operational semantics,
+        given by taking <fr:tex display="inline">S</fr:tex> as the Haskell type. And we define transition relation 
+        on <fr:code>Expr</fr:code> by the following inference rules.
+        <fr:tex display="block">             \begin {align*}                 \frac {}{                     \text {Add}\space (\text {Val}\space  n_1)\space (\text {Val}\space  n_2)\to \text {Val}\space (n_1+n_2)                 } \\                 \frac {x\to  x&apos;}{\text {Add} \space  x\space  y\to \text {Add} \space  x&apos;\space  y}                  \quad                   \frac {y\to  y&apos;}{\text {Add} \space  x\space  y\to \text {Add} \space  x\space  y&apos;}             \end {align*}         </fr:tex></fr:p><fr:p>The first rule states that two values can be added to give a single value and is called a
+        <fr:strong>reduction</fr:strong> (or <fr:strong>contraction</fr:strong>) rule.
+        An expression that matches such a rule is termed a reducible expression or <fr:strong>redex</fr:strong>.
+        The last two rules are called <fr:strong>structural</fr:strong> (or <fr:strong>congruence</fr:strong>) rules as 
+        they specify how larger terms can be reduced.</fr:p><fr:p>The semantics is <fr:strong>non-deterministic</fr:strong> because an expression
+        may have more than one possible transition.
+        This is obviously from the structural rules, which allow either sub-expression to be reduced first.</fr:p><fr:p>We can now capture a the relation between the denotational and operational semantics,
+        namely that making a transition does not change the denotation of an expression.
+        <fr:tex display="block">             \frac {                 e\to  e&apos;             }{                 \llbracket e\rrbracket  = \llbracket e&apos;\rrbracket              }         </fr:tex>
+        This property can be proved by induction on the structure of the expression <fr:tex display="inline">e</fr:tex>.
+        Note that by using the &quot;equals by equals&quot; and the assumption <fr:tex display="inline">x\to  x&apos;</fr:tex> we can easily 
+        prove the inductive case. The details are omitted here as it involves quite a bit of 
+        case analysis. We will later see the <fr:strong>principle of rule induction</fr:strong>, which gives 
+        a simpler and more direct way to prove such properties.</fr:p><fr:p>Evaluation of an expression using the small-step semantics proceeds by a series of zero
+        or more transition steps. Formally we can write <fr:tex display="inline">e\to ^* e&apos;</fr:tex> to indicate that <fr:tex display="inline">e</fr:tex> can be
+        reduced to <fr:tex display="inline">e&apos;</fr:tex> in zero or more steps.
+        We can generate a transition tree that captures all possible execution
+        paths for an expression. Using the list comprehension we can define a 
+        function that returns the list of all expressions that can be reduced 
+        from a given expression <fr:tex display="inline">e</fr:tex> in a single transition.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">trans :: Expr -&gt; [Expr]
+trans (Val n) = []
+trans (Add (Val n) (Val m)) = [Val (n + m)]
+trans (Add x y) = [Add x&apos; y | x&apos; &lt;- trans x] ++ [Add x y&apos; | y&apos; &lt;- trans y]</html:code></fr:pre>
+<fr:p>We can define a Haskell datatype for transition trees 
+        and an execution function that converts expressions into 
+        transition trees.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data Tree a = Node a [Tree a]
+exec :: Expr -&gt; Tree Expr
+exec e = Node e [exec e&apos; | e&apos; &lt;- trans e]</html:code></fr:pre>
+<fr:p>Though <fr:code>exec</fr:code> is defined recursively, its behavior can be understood as simply applying
+        the identity function to give the root of the tree and the transition function to generate a 
+        list of residual expressions to be processed to give the subtrees.
+        A small-step semantics can be viewed as giving rise to an execution
+        function that is defined by <fr:strong>unfolding</fr:strong> to transition trees.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">exec :: Expr -&gt; Tree Expr
+exec = unfold id trans</html:code></fr:pre>
+<fr:p>The <fr:code>unfold</fr:code> function captures the idea of generating a tree 
+        from a seed value <fr:tex display="inline">x</fr:tex> by applying a function <fr:tex display="inline">f</fr:tex> to give the root 
+        and a function <fr:tex display="inline">g</fr:tex> to give a list of residual values to be processed
+        for the subtrees.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">unfold :: (t -&gt; a) -&gt; (t -&gt; [t]) -&gt; t -&gt; Tree a
+unfold f g x = Node (f x) [unfold f g x&apos; | x&apos; &lt;- g x]</html:code></fr:pre>
+<fr:p>The operational semantics corresponds to <fr:strong>unfolding to transition trees</fr:strong>,
+        while denotational semantics corresponds to <fr:strong>folding over syntax trees</fr:strong>.
+        Thinking about semantics in terms of recursion operators reveals a duality</fr:p><fr:p>The above semantics for expressions does not specify the order of evaluation.
+        But we can modify the inference rules to achieve this. Replace the second <fr:tex display="inline">\text {Add}</fr:tex> 
+        rule by the following rule ensures the first argument of addition is 
+        always reduced first.
+        <fr:tex display="block">             \frac {                 y\to  y&apos;             }{                 \text {Add} (\text {Val}\space  n)\space  y \to  \text {Add} (\text {Val}\space  n)\space  y&apos;             }         </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>565</fr:anchor><fr:addr type="machine">#347</fr:addr><fr:route>unstable-347.xml</fr:route><fr:title text="Rule induction">Rule induction</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>For denotational semantics we have structural induction,
+        dual to this, for operational semantics we have <fr:strong>rule induction</fr:strong>.
+        This allows us to perform proofs by considering the structure of the rules 
+        that are used to define the semantics.</fr:p><fr:p>We introduce the idea of rule induction using a simple numeric example.
+        We begin by inductively defining a set of natural numbers.
+        <fr:tex display="block">                 \frac {}{0\in \mathbb {N}} \quad                   \frac {n\in \mathbb {N}}{n+1\in \mathbb {N}}         </fr:tex>
+        This is the standard definition of the natural numbers using peano axioms,
+        where the first rule states that zero is a natural number and the second rule states that
+        if <fr:tex display="inline">n</fr:tex> is a natural number then so is <fr:tex display="inline">n+1</fr:tex>.</fr:p><fr:p>For the inductively defined set <fr:tex display="inline">\mathbb {N}</fr:tex>. The principle of rule induction
+        states that in order to prove a property <fr:tex display="inline">P(n)</fr:tex> for all natural numbers <fr:tex display="inline">n</fr:tex>,
+        it suffices to prove that <fr:tex display="inline">P(0)</fr:tex> holds and that if <fr:tex display="inline">P(n)</fr:tex> holds then <fr:tex display="inline">P(n+1)</fr:tex> holds.
+        <fr:tex display="block">             \frac {                 P(0)\quad \forall  n\in \mathbb {N}. P(n)\to  P(n+1)             }{                 \forall  n\in \mathbb {N}. P(n)             }         </fr:tex>
+        Notice that this is the well-known <fr:strong>principle of mathematical induction</fr:strong>.</fr:p><fr:p>The concept of rule induction can easily be generalised to multiple base and 
+        inductive cases, to rule with multiple preconditions and so on.
+        For the small-step semantics of expressions, we have one base case and two inductive cases.
+        Hence if we want to show that some property <fr:tex display="inline">P(e,e&apos;)</fr:tex> on pairs of expression holds for 
+        all transition <fr:tex display="inline">e\to  e&apos;</fr:tex>, we can use rule induction:
+        <fr:tex display="block">             \frac {                 \begin {align*}                     P(\text {Add}\space (\text {Val}\space  n_1)\space (\text {Val}\space  n_2),\text {Val}\space (n_1+n_2)) \\                     \forall  x\to  x&apos;. P(x,x&apos;)\to  P(\text {Add}\space  x\space  y,\text {Add}\space  x&apos;\space  y) \\                     \forall  y\to  y&apos;. P(y,y&apos;)\to  P(\text {Add}\space  x\space  y,\text {Add}\space  x\space  y&apos;)                 \end {align*}             }{                 \forall  e\to  e&apos;. P(e,e&apos;)             }         </fr:tex>
+        We write <fr:tex display="inline">\forall  x\to  y.P(x,y)</fr:tex> as shorthand for 
+        <fr:tex display="block">\forall  x,y.x\to  y\Rightarrow  P(x,y)</fr:tex>. Now we give the proof 
+        of the property <fr:tex display="inline">\llbracket e\rrbracket  = \llbracket e&apos;\rrbracket </fr:tex> for all transitions <fr:tex display="inline">e\to  e&apos;</fr:tex>.
+        <fr:tex display="block">             \forall  e\to  e&apos;. \llbracket e\rrbracket  = \llbracket e&apos;\rrbracket          </fr:tex></fr:p>
+ 
+   
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>566</fr:anchor><fr:addr type="machine">#348</fr:addr><fr:route>unstable-348.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#347</fr:parent></fr:frontmatter><fr:mainmatter>
+        The proof consists of three parts: the base case, the reduction rule and the structural rule.
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space (\text {Val}\space  n)\space (\text {Val}\space  m)\rrbracket                  &amp;= \llbracket \text {Val}\space  n\rrbracket  + \llbracket \text {Val}\space  m\rrbracket  \\                 &amp;= n + m \\                 &amp;= \llbracket \text {Val}\space (n+m)\rrbracket              \end {align*}         </fr:tex>
+        and
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space  x\space  y\rrbracket                  &amp;= \llbracket x\rrbracket  + \llbracket y\rrbracket   \\                 &amp;= \llbracket x&apos;\rrbracket  + \llbracket y\rrbracket  (\text {By assumption }\llbracket x\rrbracket =\llbracket x&apos;\rrbracket ) \\                 &amp;= \llbracket \text {Add}\space  x&apos;\space  y\rrbracket              \end {align*}         </fr:tex>
+        and 
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space  x\space  y\rrbracket                  &amp;= \llbracket x\rrbracket  + \llbracket y\rrbracket   \\                 &amp;= \llbracket x\rrbracket  + \llbracket y&apos;\rrbracket  (\text {By assumption }\llbracket y\rrbracket =\llbracket y&apos;\rrbracket ) \\                  &amp;= \llbracket \text {Add}\space  x\space  y&apos;\rrbracket              \end {align*}         </fr:tex>
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ 
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>567</fr:anchor><fr:addr type="machine">#349</fr:addr><fr:route>unstable-349.xml</fr:route><fr:title text="Contextual Semantics">Contextual Semantics</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The small-step semantics for expressions above has one basic reduction rule 
+        for adding values and two structural rules that allow addition to be performed
+        in larger expressions. Separating these two kinds of rules results 
+        the notion of <fr:strong>contextual semantics</fr:strong> (or <fr:strong>reduction semantics</fr:strong>).</fr:p><fr:p>Informally, a context in this setting is a term with a &quot;<fr:strong>hole</fr:strong>&quot;, 
+        usually written as <fr:tex display="inline">[-]</fr:tex>, which can be filled with another term later.
+        In a contextual semantics, the hole represents the location where a <fr:strong>single</fr:strong>
+        basic step of execution may take place within a term.</fr:p><fr:p>Consider the following transition in our small-step semantics.
+        <fr:tex display="block">             (1+2)+(3+4)\to  3+(3+4)         </fr:tex>
+        The addition is performed on the left side.
+        We say that we can perform the basic step <fr:tex display="inline">1+2\to 3</fr:tex> in the 
+        <fr:strong>context</fr:strong> <fr:tex display="inline">[-]+(3+4)</fr:tex> where <fr:tex display="inline">[-]</fr:tex> implies the location of the
+        addition takes place.</fr:p><fr:p>The language <fr:tex display="inline">C</fr:tex> of contexts of arithmetic expressions can be formally defined by 
+        <fr:tex display="block">             C:\equiv [-]|C+E|E+C         </fr:tex>
+        As previously, we can define a Haskell datatype for contexts.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data Cont = Hole | Add Cont Expr | Add Expr Cont</html:code></fr:pre>
+<fr:p>The kind of context is known as &quot;outside-in&quot; as locating the hole involves
+        navigating from the outside of the context inwards. To fill the hole in 
+        a context <fr:tex display="inline">c</fr:tex> with an expression <fr:tex display="inline">e</fr:tex> we write <fr:tex display="inline">c\space [e]</fr:tex>:
+        <fr:tex display="block">             \begin {align*}                 \text {Hole}\space [e] &amp;= e \\                 (\text {AddL}\space c\space r)\space [e] &amp;= \text {Add}\space  (c\space [e])\space  r \\                 (\text {AddR}\space l\space c)\space [e] &amp;= \text {Add}\space  l\space (c\space [e])             \end {align*}         </fr:tex></fr:p><fr:p>Use the idea of hole filling we can redefine the small-step semantics
+        for expressions in contextual style.
+        <fr:tex display="block">             \frac {}{                 \text {Add}\space (\text {Val}\space  n_1)\space (\text {Val}\space  n_2)\rightarrowtail  \text {Val}\space (n_1+n_2)             } \quad              \frac {                 e \rightarrowtail  e&apos;             }{                 c\space  [e] \to  c\space  [e&apos;]             }         </fr:tex>
+        This first rule defines a reduction relation <fr:tex display="inline">\rightarrowtail </fr:tex> that captures the basic behavior of addition,
+        while the second defines a transition relation <fr:tex display="inline">\to </fr:tex> that allows the first rule to be applied in 
+        any context.</fr:p><fr:p>We have now refactored the small-step semantics into a single reduction rule and a single structural rule.
+        If we subsequently want to extend the language with other features,
+        it only requires adding new reduction rules and extending the notion of contexts
+        but not need to adding new structural rules.</fr:p><fr:p>Now we define the hole filling function in Haskell.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">fill :: Cont -&gt; Expr -&gt; Expr
+fill Hole e = e
+fill (AddL c r) e = Add (fill c e) r
+fill (AddR l c) e = Add l (fill c e)</html:code></fr:pre>
+<fr:p>The dual operation which splits an expression into all possible pairs of 
+    contexts and expressions can be defined:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">split :: Expr -&gt; [(Cont,Expr)]
+split e = (Hole, e) : case e of
+Val n -&gt; []
+Add l r -&gt; [(AddL c r, x) | (c, x) &lt;- split l] ++ 
+            [(AddR l c, x) | (c, x) &lt;- split r]</html:code></fr:pre>
+<fr:p>A pair <fr:tex display="inline">(c,x)</fr:tex> comprising a context #[c] and an expression <fr:tex display="inline">x</fr:tex> is
+        an element of the list returned by <fr:code>split e</fr:code> precisely when <fr:code>fill c x = e</fr:code>.
+        The contextual semantics can be translated into Haskell function that returns
+        the lists of all expressions that can be reached by performing a single reduction step.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">reduce :: Expr -&gt; [Expr]
+reduce (Add (Val n) (Val m)) = [Val (n + m)]
+reduce _ = []</html:code></fr:pre>
+<fr:p>or a single transition step.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">trans :: Expr -&gt; [Expr]
+trans e = [fill c x&apos; | (c, x) &lt;- split e, x&apos; &lt;- reduce x]</html:code></fr:pre>
+<fr:p>This function splits the given expression into all possible context 
+        and expression pairs, then considering any reduction that can made by each component
+        expression, and finally filling the hole in the context with the reduced expression.</fr:p><fr:p>Notice that the contextual semantics does not specify an evaluation
+        order for addition and is non-deterministic. We can modify the language
+        of contexts to achieve so.
+        <fr:tex display="block">             C:\equiv [-]|C+E|\mathbb {Z}+C         </fr:tex>
+        This version of the semantics also satisfies a <fr:strong>unique decomposition property</fr:strong>,
+        that is, any expression <fr:tex display="inline">e</fr:tex> that is not a value can be uniquely decomposed into the 
+        form <fr:tex display="inline">e=c\space [x]</fr:tex> for some context <fr:tex display="inline">c</fr:tex> and reducible expression <fr:tex display="inline">x</fr:tex>. This can be 
+        proved by induction on the expression <fr:tex display="inline">e</fr:tex>.</fr:p><fr:p>Contexts are related to a number of other important concepts in
+        programming and semantics, including the use of continuations to make control flow
+        explicit (John C. Reynolds 1972).</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>573</fr:anchor><fr:addr type="machine">#350</fr:addr><fr:route>unstable-350.xml</fr:route><fr:title text="Big-step Semantics">Big-step Semantics</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Big-step semantics is also known as <fr:strong>natural semantics</fr:strong>,
+        which focus on large execution step. For a language T of syntactic terms
+        comprises two components: a set <fr:tex display="inline">V</fr:tex> of values and 
+        an evaluation relation between <fr:tex display="inline">T</fr:tex> and <fr:tex display="inline">V</fr:tex> that relates each term 
+        to all values that can be reached by fully executing the term.
+        If a term <fr:tex display="inline">t</fr:tex> and a value <fr:tex display="inline">v</fr:tex> are related, we say that <fr:tex display="inline">t</fr:tex> can evaluate to <fr:tex display="inline">v</fr:tex> 
+        and write this as <fr:tex display="inline">t\Downarrow  v</fr:tex></fr:p><fr:tex display="block">         \frac {}{             \text {Val}\space  n\Downarrow  n         }         \quad          \frac {             x\Downarrow  n\quad  y\Downarrow  m          }{             \text {Add}\space  x\space  y\Downarrow  n+m         }     </fr:tex><fr:p>The Haskell function definition is similar to the small-step semantics,
+        by using the list comprehension.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval :: Expr -&gt; [Integer]
+eval (Val n) = [n]
+eval (Add x y) = [n + m | n &lt;- eval x, m &lt;- eval y]</html:code></fr:pre>
+<fr:p>This is similar to denotational semantics but using inference rules
+        rather than a functional manner.
+        However, there is no need for a big-step semantics to be compositional.
+        Formally, the denotational and big-step semantics for the expression language
+        are equivalent, which can be captured by the following property:
+        <fr:tex display="block">             \llbracket e\rrbracket  = n \iff  e\Downarrow  n         </fr:tex>
+        This is easily verified by induction.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>575</fr:anchor><fr:addr type="machine">#351</fr:addr><fr:route>unstable-351.xml</fr:route><fr:title text="Abstract Machine">Abstract Machine</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>All the exmaples we have meet focused on explaining semantic ideas,
+        now we show how language of integers and addition can also be used to help 
+        discover semantic ideas.
+        We show how it can be used as the basis for discovering how to implement 
+        an <fr:strong>abstract machine</fr:strong>.</fr:p><fr:p>Remember the evaluation order problem we meet before,
+        if we want to make evaluation order explicit, we can introduce additional
+        structure into the semantics by constructing an abstract machine.</fr:p><fr:p>Formally, an abstract machine is usually deifned by a set of syntactic rewrite ruless 
+        that make explicit how each step of evaluation proceeds.
+        This section we show how an abstract machine for our example language can 
+        be systematically derived from the evaluation function using steps
+        based on two important semantic concepts, <fr:strong>continuations</fr:strong> and <fr:strong>defunctionalisation</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>576</fr:anchor><fr:addr type="machine">#352</fr:addr><fr:route>unstable-352.xml</fr:route><fr:title text="Add Continuations">Add Continuations</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#351</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>We want to make the order of evaluation explicit in the semantics itself.
+            A standard technique for achieving this aim is to rewrite the semantics
+            in <fr:strong>continuation-passing style</fr:strong>.</fr:p><fr:p>In our setting, a continuation is a function that will be applied to the result of an
+            evaluation. Formally, for our semantics <fr:code>eval :: Expr -&gt; Integer</fr:code>, a continuation
+            is a function of type <fr:code>Integer -&gt; Integer</fr:code> that will be applied to the resulting integer
+            to give a new integer. (This type can be generalized to <fr:code>Integer -&gt; a</fr:code>, but we do not need now)
+            We capture the notion of such a continuation using the following type declaration:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">type Continuation = Integer -&gt; Integer</html:code></fr:pre>
+<fr:p>We now define a new semantics <fr:tex display="inline">\text {eval}&apos;</fr:tex>, which takes an expression and returns
+            an integer as previously but also takes a continuation as an additional argument,
+            which is applied to the result of evaluating the expression.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos; :: Expr -&gt; Continuation -&gt; Integer</html:code></fr:pre>
+<fr:p>The behavior of <fr:tex display="inline">\text {eval}&apos;</fr:tex> should be:</fr:p><fr:tex display="block">             \text {eval}&apos;\space  e\space  c = \text {c (eval e)}         </fr:tex><fr:p>We want to calculate a definition that satisfies the specification.
+            Using structural induction on the expression <fr:tex display="inline">e</fr:tex>, we construct 
+            the term <fr:tex display="inline">\text {eval}&apos;\space  e\space  c</fr:tex> by gradually removing the reference to <fr:code>eval</fr:code>.
+            For the base case, <fr:tex display="inline">e = \text {Val}\space  n</fr:tex> we have</fr:p><fr:tex display="block">             \begin {align*}                 \text {eval}&apos;\space (\text {Val}\space  n)\space  c                  &amp;= c\space  (\text {eval}\space  (\text {Val}\space  n)) \\                 &amp;= c\space  n             \end {align*}         </fr:tex><fr:p>For the inductive case, <fr:tex display="inline">e = \text {Add}\space  x\space  y</fr:tex> we begin in the same way:</fr:p><fr:tex display="block">             \begin {align*}                 \text {eval}&apos;\space (\text {Add}\space  x\space  y)\space  c                  &amp;= c\space  (\text {eval}\space  (\text {Add}\space  x\space  y)) \\                 &amp;= c\space  (\text {eval}\space  x + \text {eval}\space  y)             \end {align*}         </fr:tex><fr:p>However, no further definition can be applied now, so we consider the inductive hypothesis:
+            Forall <fr:tex display="inline">c&apos;</fr:tex> and <fr:tex display="inline">c&apos;&apos;</fr:tex> we have <fr:tex display="inline">\text {eval}&apos;\space  x\space  c&apos; = c&apos;(\text {eval}\space  x)</fr:tex> and
+            <fr:tex display="inline">\text {eval}&apos;\space  y\space  c&apos;&apos; = c&apos;&apos;(\text {eval}\space  y)</fr:tex>. This can readily be achieved by 
+            abstracting over <fr:tex display="inline">\text {eval}\space  x</fr:tex> and <fr:tex display="inline">\text {eval}\space  y</fr:tex> using lambda abstraction.</fr:p><fr:tex display="block">             \begin {align*}                 &amp; c\space  (\text {eval}\space  x + \text {eval}\space  y) \\                 =&amp; (\lambda  n\to  c\space (n+\text {eval}\space  y)) \\                 =&amp; \text {eval}&apos;\space  x\space  (\lambda  n\to  c\space (n+\text {eval}\space  y)) \\                  =&amp; \text {eval}&apos;\space  x\space  (\lambda  n\to  (\lambda  m\to  c\space (n+m))(\text {eval}\space  y)) \\                  =&amp; \text {eval}&apos;\space  x\space  (\lambda  n\to  \text {eval}&apos;\space  y\space  (\lambda  m\to  c\space (n+m)))             \end {align*}         </fr:tex><fr:p>The final term does not refer to <fr:tex display="inline">\text {eval}</fr:tex> now.
+            In summary we have calculated the following definition</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos; :: Expr -&gt; Continuation -&gt; Integer
+eval&apos; (Val n) c = c n 
+eval&apos; (Add x y) c = eval&apos; x (\n -&gt; eval&apos; y (\m -&gt; c (n + m)))</html:code></fr:pre>
+<fr:p>Our original semantics can be recovered from the new semantics by
+            using the identity continuation <fr:tex display="inline">\lambda  n \to  n</fr:tex></fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval e = eval&apos; e (\n -&gt; n)</html:code></fr:pre>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>581</fr:anchor><fr:addr type="machine">#353</fr:addr><fr:route>unstable-353.xml</fr:route><fr:title text="Defunctionalise">Defunctionalise</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#351</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>We use continuation to make the order of evaluation explicit in the semantics,
+            but this also makes the semantics into a higher-order function.
+            Hence our second step is to regain the first-order nature of the original semantics by 
+            eliminating the use of continuations but <fr:strong>retaining</fr:strong> the explicit order of evaluation they introduced.</fr:p><fr:p>A standard technique for eliminating the use of functions as arguments is <fr:strong>defunctionalisation</fr:strong>.
+            We do not usually need the entire function-space of possible argument functions, 
+            there only a few forms of such functions are actually used.
+            Hence we represent the argument functions that we actually need using 
+            a datatype rather than functions.</fr:p><fr:p>We begin by defining three combinators <fr:strong>halt</fr:strong>, <fr:strong>next</fr:strong> and <fr:strong>add</fr:strong> 
+            for constructing the continuations we used.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">halt :: Continuation
+halt n = n
+
+next :: Expr -&gt; Continuation -&gt; Continuation
+next y c = \n -&gt; eval&apos; y (add n c)
+
+add :: Integer -&gt; Continuation -&gt; Continuation
+add n c = \m -&gt; c (n + m)</html:code></fr:pre>
+<fr:p>Use the combinators, our continuation semantics can now be written as:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval :: Expr -&gt; Integer
+eavl e = eval&apos; e halt
+
+eval&apos; :: Expr -&gt; Continuation -&gt; Integer
+eval&apos; (Val n) c = c n 
+eval&apos; (Add x y) c = eval&apos; x (next y c)</html:code></fr:pre>
+<fr:p>Now we declare a new datatype for continuations, consists of three constructors.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data CONT = HALT | NEXT Expr CONT | ADD Integer CONT</html:code></fr:pre>
+<fr:p>The following translation function forms a denotational semantics for <fr:code>CONT</fr:code></fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">exec :: CONT -&gt; Continuation
+exec HALT = halt
+exec (NEXT y c) = next y (exec c)
+exec (ADD n c) = add n (exec c)</html:code></fr:pre>
+<fr:p>This function is usually called <fr:strong>apply</fr:strong>, which can be viewed as 
+            applying a representation of a continuation to an integer to give another integer.
+            We want to define a new semantics <fr:tex display="inline">\text {eval}&apos;</fr:tex> which behaves in the same way 
+            as our previous <fr:tex display="inline">\text {eval}&apos;</fr:tex> except that it uses values of type <fr:code>CONT</fr:code> 
+            rather than <fr:code>Continuation</fr:code>.
+            
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos;&apos; :: Expr -&gt; CONT -&gt; Integer</html:code></fr:pre>
+
+            The desired behavior of <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> is:
+            <fr:tex display="block">                 \text {eval}&apos;&apos;\space  e\space  c = \text {eval}&apos;\space  e\space  (\text {exec}\space  c)             </fr:tex></fr:p><fr:p>As before, we proceed by structural induction on expression <fr:tex display="inline">e</fr:tex>.
+            The base case <fr:tex display="inline">e=\text {Val}\space  n</fr:tex> is trivial
+            <fr:tex display="block">                 \begin {align*}                     \text {eval}&apos;&apos;\space (\text {Val}\space  n)\space  c                     &amp;= \text {eval}&apos;\space (\text {Val}\space  n)\space  (\text {exec}\space  c) \\                     &amp;= \text {exec}\space  c\space  n \\                 \end {align*}             </fr:tex></fr:p><fr:p>For the inductive case <fr:tex display="inline">e = \text {Add}\space  x\space  y</fr:tex>:
+            <fr:tex display="block">                 \begin {align*}                     \text {eval}&apos;&apos;\space (\text {Add}\space  x\space  y)\space  c                      &amp;= \text {eval}&apos;\space (\text {Add}\space  x\space  y)\space  (\text {exec}\space  c) \\                     &amp;= \text {eval}&apos;\space  x\space (\text {next}\space  y\space (\text {exec}\space  c)) \\                      &amp;= \text {eval}&apos;\space  x\space (\text {exec}\space (\text {NEXT}\space  y\space  c)) \\                     &amp;= \text {eval}&apos;&apos;\space  x\space  (\text {NEXT}\space  y\space  c)                 \end {align*}             </fr:tex>
+            The last step uses the inductive hypothesis for <fr:tex display="inline">x</fr:tex></fr:p><fr:p>In the basic case, <fr:tex display="inline">\text {exec}</fr:tex> still refers to the semantic <fr:tex display="inline">\text {eval}&apos;</fr:tex>,
+            via the combinator <fr:tex display="inline">\text {next}</fr:tex>. Hence we need to compute a new definition 
+            for <fr:tex display="inline">\text {exec}</fr:tex> that refers to our new <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex>.</fr:p><fr:tex display="block">             \begin {align*}                 \text {exec}\space \text {HALT}\space  n                  &amp;= \text {halt}\space  n                 \\                  &amp;= n                             \end {align*}         </fr:tex><fr:p>The other case is also easy to compute, no need to induction.</fr:p><fr:tex display="block">             \begin {align*}                 \text {exec}\space (\text {NEXT}\space  y\space  c)\space  n                  &amp;= \text {eval}&apos;&apos;\space  y\space (\text {ADD}\space  n\space  c)                 \\                  \text {exec}\space (\text {ADD}\space  n\space  c)\space  m                  &amp;= \text {exec}\space  c\space (n+m)             \end {align*}         </fr:tex><fr:p>Our original semantics <fr:tex display="inline">\text {eval}</fr:tex> can be recovered from the new 
+            semantics <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> too.</fr:p><fr:tex display="block">             \begin {align*}                 \text {eval}\space  e                  &amp;= \text {eval}&apos;\space  e\space (\lambda  n\to  n) \\                  &amp;= \text {eval}&apos;\space  e\space \text {halt} \\                  &amp;= \text {eval}&apos;\space  e\space (\text {exec}\space \text {HALT}) \\                  &amp;= \text {eval}&apos;&apos;\space  e\text {HALT}             \end {align*}         </fr:tex><fr:p>In summary, we have calculated the following definitions:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos;&apos; :: Expr -&gt; CONT -&gt; Integer
+eval&apos;&apos; (Val n) c = exec c n 
+eval&apos;&apos; (Add x y) c = eval&apos;&apos; x (NEXT y c)
+
+exec :: CONT -&gt; Integer -&gt; Integer
+exec HALT n = n 
+exec (NEXT y c) n = eval&apos;&apos; y (ADD n c)
+exec (ADD n c) m = exec c (n + m)
+
+eval :: Expr -&gt; Integer
+eval e = eval&apos;&apos; e HALT</html:code></fr:pre>
+<fr:p>The four components (<fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex>, <fr:tex display="inline">\text {eval}</fr:tex>, <fr:tex display="inline">\text {exec}</fr:tex> and <fr:code>CONT</fr:code>)
+            forms an abstract machine.</fr:p><fr:p><fr:code>CONT</fr:code> is the type of <fr:strong>control stack</fr:strong> which comprises 
+            instructions that determine how the machine should continue after evaluating
+            the current expression. Sometimes it is called an &quot;eval/continue&quot; machine.
+            The control stack can also be defined as a list of instructions.
+            
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">type CONT = [INST]
+data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex display="inline">\text {eval}</fr:tex> evaluates an expression and give an integer by simply 
+            call the <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> with empty control stack <fr:tex display="inline">\text {HALT}</fr:tex>.</fr:p><fr:p><fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> evaluates an expression in the context of a control stack.
+            If the expression is an integer, we execute the control stack using this 
+            integer as an argument. If the expression is an addition, 
+            we evaluate the first argument <fr:tex display="inline">x</fr:tex> and place the instruction <fr:tex display="inline">\text {NEXT}\space  y</fr:tex>
+            on the top of the control stack.</fr:p><fr:p><fr:tex display="inline">\text {exec}</fr:tex> executes the control stack. If the control stack is empty,
+            then just return the integer argument as the result. If the top instruction
+            is <fr:tex display="inline">\text {NEXT}\space  y</fr:tex>, we evaluate <fr:tex display="inline">y</fr:tex> and place the instruction <fr:tex display="inline">\text {ADD}\space  n</fr:tex>
+            to the stack top. If the top instruction is <fr:tex display="inline">\text {ADD}\space  n</fr:tex>,evaluation of the 
+            two arguments of an addition is complete, and we execute the remaining control stack 
+            in the context of the sum of the resulting integers.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>

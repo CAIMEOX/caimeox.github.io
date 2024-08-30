@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1174</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:title text="Concatenation Operation › Construction of Concatenation"><fr:link type="local" href="def-002O.xml" addr="def-002O" title="Concatenation Operation">Concatenation Operation</fr:link> › Construction of Concatenation</fr:title><fr:authors></fr:authors><fr:parent>def-002O</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>We can first construct:
-        <fr:tex display="block">             f(x):(y:A)\to  (x=_Ay)\to (z:A)\to  (y=_Az)\to (x=_Az)         </fr:tex>
-        For any <fr:tex display="inline">x:A</fr:tex>, it suffices to construct
-        <fr:tex display="block">             f(x,x,\text {refl}_x) : (z:A) \to  (x=_Az)\to (x=_Az)         </fr:tex>
-        That is the identity function <fr:tex display="inline">\lambda  z. \text {id}_{x=_Az}</fr:tex>.
-        Then we can define by induction:
-        <fr:tex display="block">             f(x) :\equiv  \text {ind-eq}_{x}(\lambda  z.\text {id})         </fr:tex>
-        Finally:
-        <fr:tex display="block">             \text {concat}_{x,y,z}(p,q) :\equiv  f(x,y,p,z,q)         </fr:tex>
-        Or simply we denote <fr:tex display="inline">\text {concat}(p,q)</fr:tex> as <fr:tex display="inline">p \cdot  q</fr:tex></fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1175</fr:anchor><fr:addr type="user">def-002O</fr:addr><fr:route>def-002O.xml</fr:route><fr:title text="Concatenation Operation">Concatenation Operation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
-    The <fr:strong>Concatenation</fr:strong> operation is defined:
-    <fr:tex display="block">         \text {concat}: (x:A)\to  (y:A)\to  (z:A)\to  (x=_Ay)\to  (y=_Az)\to  (x=_Az)     </fr:tex></fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>729</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:title text="Construction of Concatenation">Construction of Concatenation</fr:title><fr:authors></fr:authors><fr:parent>def-002O</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>We can first construct:
-        <fr:tex display="block">             f(x):(y:A)\to  (x=_Ay)\to (z:A)\to  (y=_Az)\to (x=_Az)         </fr:tex>
-        For any <fr:tex display="inline">x:A</fr:tex>, it suffices to construct
-        <fr:tex display="block">             f(x,x,\text {refl}_x) : (z:A) \to  (x=_Az)\to (x=_Az)         </fr:tex>
-        That is the identity function <fr:tex display="inline">\lambda  z. \text {id}_{x=_Az}</fr:tex>.
-        Then we can define by induction:
-        <fr:tex display="block">             f(x) :\equiv  \text {ind-eq}_{x}(\lambda  z.\text {id})         </fr:tex>
-        Finally:
-        <fr:tex display="block">             \text {concat}_{x,y,z}(p,q) :\equiv  f(x,y,p,z,q)         </fr:tex>
-        Or simply we denote <fr:tex display="inline">\text {concat}(p,q)</fr:tex> as <fr:tex display="inline">p \cdot  q</fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1053</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:title text="Unit Law Operations › 
+    Construction of Unit Law
+"><fr:link type="local" href="def-002X.xml" addr="def-002X" title="Unit Law Operations">Unit Law Operations</fr:link> › 
+    <fr:strong>Construction of Unit Law</fr:strong>
+</fr:title><fr:authors></fr:authors><fr:parent>def-002X</fr:parent></fr:frontmatter><fr:mainmatter>
+    By elimination it suffices to construct:
+    <fr:tex display="block">         \begin {align*}             \text {left-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\             \text {right-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x         \end {align*}     </fr:tex>
+    In both cases we need only to construct <fr:tex display="inline">\text {refl}_{\text {refl}_x}</fr:tex>.
+</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1054</fr:anchor><fr:addr type="user">def-002X</fr:addr><fr:route>def-002X.xml</fr:route><fr:title text="Unit Law Operations">Unit Law Operations</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
+    We defined the <fr:strong>unit law</fr:strong> operations for <fr:tex display="inline">x=_Ay</fr:tex>:
+    <fr:tex display="block">         \begin {align*}             \text {left-unit} &amp; : (x=_Ay)\to  (\text {refl}_x\cdot  x = x) \\             \text {right-unit} &amp; : (x=_Ay)\to  (x\cdot \text {refl}_y = x)         \end {align*}     </fr:tex></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>763</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:title text="
+    Construction of Unit Law
+">
+    <fr:strong>Construction of Unit Law</fr:strong>
+</fr:title><fr:authors></fr:authors><fr:parent>def-002X</fr:parent></fr:frontmatter><fr:mainmatter>
+    By elimination it suffices to construct:
+    <fr:tex display="block">         \begin {align*}             \text {left-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\             \text {right-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x         \end {align*}     </fr:tex>
+    In both cases we need only to construct <fr:tex display="inline">\text {refl}_{\text {refl}_x}</fr:tex>.
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>

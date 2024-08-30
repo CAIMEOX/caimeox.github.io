@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1029</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="Matrix Multiplication › 
-    Derivation
-"><fr:link type="local" href="def-002T.xml" addr="def-002T" title="Matrix Multiplication">Matrix Multiplication</fr:link> › 
-    <fr:strong>Derivation</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-002T</fr:parent></fr:frontmatter><fr:mainmatter>
-    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
-    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
-    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
-    <fr:tex display="block">         \begin {align*}             (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\             &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\             &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\             &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\         \end {align*}     </fr:tex>
-    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
-    <fr:tex display="block">         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
-</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1030</fr:anchor><fr:addr type="user">def-002T</fr:addr><fr:route>def-002T.xml</fr:route><fr:title text="Matrix Multiplication">Matrix Multiplication</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> be a <fr:tex display="inline">n\times  p</fr:tex> matrix.
-    Then <fr:tex display="inline">AC</fr:tex> is defined as the <fr:tex display="inline">m\times  p</fr:tex> matrix <fr:tex display="inline">C</fr:tex> such that
-    <fr:tex display="block">         C_{ij} = \sum _{k=1}^n A_{ik}B_{kj}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>488</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="
-    Derivation
-">
-    <fr:strong>Derivation</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-002T</fr:parent></fr:frontmatter><fr:mainmatter>
-    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
-    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
-    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
-    <fr:tex display="block">         \begin {align*}             (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\             &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\             &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\             &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\         \end {align*}     </fr:tex>
-    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
-    <fr:tex display="block">         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1281</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="Tarski Universe › Enough Universe"><fr:link type="local" href="def-004E.xml" addr="def-004E" title="Tarski Universe">Tarski Universe</fr:link> › Enough Universe</fr:title><fr:authors></fr:authors><fr:parent>def-004E</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
+        If we have only one <fr:tex display="inline">\mathcal {U}</fr:tex>, the <fr:strong>Russell Paradox</fr:strong> may arise.
+        Therefore we assume that there are <fr:strong>enough universes</fr:strong></fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1282</fr:anchor><fr:addr type="user">def-004E</fr:addr><fr:route>def-004E.xml</fr:route><fr:title text="Tarski Universe">Tarski Universe</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>universe</fr:strong> consists of a type <fr:tex display="inline">\mathcal {U}</fr:tex> of which the elements are representations of types.
+    It is equipped with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> indexed by <fr:tex display="inline">\mathcal {U}</fr:tex> called <fr:strong>universal type family</fr:strong>.
+    The universe is closed under all the type constructors in the sense that it comes equipped with the following structure:
+    <fr:ul><fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Pi </fr:tex>, equipped with a function
+            <fr:tex display="block">                 \check {\Pi }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
+            for which the judgemental equality
+            <fr:tex display="block">                 \mathcal {T}(\check {\Pi }(X,P))\equiv \Pi _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))             </fr:tex>
+            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Sigma </fr:tex>, equipped with a function
+            <fr:tex display="block">                 \check {\Sigma }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
+            for which the judgemental equality
+            <fr:tex display="block">                 \mathcal {T}(\check {\Sigma }(X,P))\equiv \Sigma _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))             </fr:tex>
+            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under identity types, equipped with a function
+            <fr:tex display="block">                 \check {I}:\Pi _{(X:\mathcal {U})}\mathcal {T}(X)\to \mathcal {T}(X)\to \mathcal {U}             </fr:tex>
+            for which the judgemental equality
+            <fr:tex display="block">                 \mathcal {T}(\check {I}(X,x,y))\equiv  (x=y)             </fr:tex>
+            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">x,y:\mathcal {T}(X)</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under coproducts, equipped with a function
+            <fr:tex display="block">                 \check {+}:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
+            that satisfies the judgemental equality <fr:tex display="inline">\mathcal {T}(X\check {+}P)\equiv \mathcal {T}(X)+\mathcal {T}(P)</fr:tex></fr:li>
+        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> contains elements <fr:tex display="inline">\check {\textbf {1}}, \check {\textbf {0}}, \check {\mathbb {N}} : \mathcal {U}</fr:tex> that satisfies the judgemental equality
+            <fr:tex display="block">                 \mathcal {T}(\check {\textbf {0}})\equiv  \textbf {0},                 \\ \mathcal {T}(\check {\textbf {1}})\equiv  \textbf {1},                 \\ \mathcal {T}(\check {\mathbb {N}})\equiv \mathbb {N}             </fr:tex></fr:li></fr:ul>
+    Consider a universe <fr:tex display="inline">\mathcal {U}</fr:tex> and a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
+    We say that <fr:tex display="inline">A</fr:tex> is a type in <fr:tex display="inline">\mathcal {U}</fr:tex> or that <fr:tex display="inline">\mathcal {U}</fr:tex> contains <fr:tex display="inline">A</fr:tex>,
+    if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>706</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="Enough Universe">Enough Universe</fr:title><fr:authors></fr:authors><fr:parent>def-004E</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
+        If we have only one <fr:tex display="inline">\mathcal {U}</fr:tex>, the <fr:strong>Russell Paradox</fr:strong> may arise.
+        Therefore we assume that there are <fr:strong>enough universes</fr:strong></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>

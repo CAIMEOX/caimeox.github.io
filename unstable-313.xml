@@ -1,42 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1027</fr:anchor><fr:addr type="machine">#313</fr:addr><fr:route>unstable-313.xml</fr:route><fr:title text="Associator › 
-    Construction of Associator
-"><fr:link type="local" href="def-002W.xml" addr="def-002W" title="Associator">Associator</fr:link> › 
-    <fr:strong>Construction of Associator</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-002W</fr:parent></fr:frontmatter><fr:mainmatter>
-    By definition it suffices to show that
-    <fr:tex display="block">         \Pi _{(z:A)}\Pi _{(q:x=_Az)}         \Pi _{(w:A)}\Pi _{(r:z=_Aw)}         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    Let <fr:tex display="inline">q:x=_Az</fr:tex> and <fr:tex display="inline">r:z=_Aw</fr:tex>. By computation rule of identity types
-    <fr:tex display="block">         \text {refl}_x\cdot  q \equiv  q     </fr:tex>
-    Then we can conclude that
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r \equiv  q\cdot  r     </fr:tex>
-    similarly <fr:tex display="inline">\text {refl}_x\cdot  (q\cdot  r) \equiv  q\cdot  r</fr:tex>.
-    Hence we have the left and right side
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    are judgementally equal, 
-    so we can simply define the associator as
-    <fr:tex display="block">         \text {assoc}(\text {refl}_x,q,r) :\equiv  \text {refl}_{q\cdot  r}     </fr:tex>
-</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1028</fr:anchor><fr:addr type="user">def-002W</fr:addr><fr:route>def-002W.xml</fr:route><fr:title text="Associator">Associator</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
-    These are 3 consecutive identifications
-    <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
-    we define the <fr:strong>associator</fr:strong>:
-    <fr:tex display="block">         \text {assoc}: (p,q,r): (p\cdot  q)\cdot  r = p\cdot  (q\cdot  r)     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>733</fr:anchor><fr:addr type="machine">#313</fr:addr><fr:route>unstable-313.xml</fr:route><fr:title text="
-    Construction of Associator
-">
-    <fr:strong>Construction of Associator</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-002W</fr:parent></fr:frontmatter><fr:mainmatter>
-    By definition it suffices to show that
-    <fr:tex display="block">         \Pi _{(z:A)}\Pi _{(q:x=_Az)}         \Pi _{(w:A)}\Pi _{(r:z=_Aw)}         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    Let <fr:tex display="inline">q:x=_Az</fr:tex> and <fr:tex display="inline">r:z=_Aw</fr:tex>. By computation rule of identity types
-    <fr:tex display="block">         \text {refl}_x\cdot  q \equiv  q     </fr:tex>
-    Then we can conclude that
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r \equiv  q\cdot  r     </fr:tex>
-    similarly <fr:tex display="inline">\text {refl}_x\cdot  (q\cdot  r) \equiv  q\cdot  r</fr:tex>.
-    Hence we have the left and right side
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    are judgementally equal, 
-    so we can simply define the associator as
-    <fr:tex display="block">         \text {assoc}(\text {refl}_x,q,r) :\equiv  \text {refl}_{q\cdot  r}     </fr:tex>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1008</fr:anchor><fr:addr type="machine">#313</fr:addr><fr:route>unstable-313.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors><fr:parent>def-004H</fr:parent></fr:frontmatter><fr:mainmatter>
+        We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
+        it suffices to provide
+        <fr:tex display="block">             \begin {align*}                 &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\                  &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))             \end {align*}         </fr:tex>
+        we define <fr:tex display="inline">E_0</fr:tex> by induction:
+        <fr:tex display="block">             \begin {align*}                 &amp;E_0(0) \equiv \textbf {1}\\                  &amp;E_0(\text {succ}(n)) \equiv \textbf {0}             \end {align*}         </fr:tex>
+        and also define <fr:tex display="inline">E_S</fr:tex> by induction:
+        <fr:tex display="block">             \begin {align*}                 &amp;E_S(n,X,0)\equiv \textbf {0}\\                  &amp;E_S(n,X,\text {succ}(m))\equiv  X(m)             \end {align*}         </fr:tex>
+        Therefore we have by the computation rule for the first induction that 
+        the following judgemental equality holds.
+        <fr:tex display="block">             \begin {align*}                 \text {Eq}(0,m) &amp;\equiv  E_0(m) \\                 \text {Eq}(\text {succ}(n),m) &amp;\equiv  E_S(n,\text {Eq}(n),m)             \end {align*}         </fr:tex>
+    </fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1009</fr:anchor><fr:addr type="user">def-004H</fr:addr><fr:route>def-004H.xml</fr:route><fr:title text="Observational Equality of {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a binary relation <fr:tex display="inline">\text {Eq}_\mathbb {N}:\mathbb {N}\to (\mathbb {N}\to \mathcal {U}_0)</fr:tex> satisfies
+    <fr:tex display="block">         \begin {align*}             \text {Eq}_\mathbb {N}(0)(0) &amp;\equiv  \textbf {1} \\             \text {Eq}_\mathbb {N}(0)(\text {succ}(n)) &amp;\equiv  \textbf {0} \\             \text {Eq}_\mathbb {N}(\text {succ}(m))(0) &amp;\equiv  \textbf {0} \\             \text {Eq}_\mathbb {N}(\text {succ}(m))(\text {succ}(n)) &amp;\equiv  \text {Eq}_\mathbb {N}(m)(n)         \end {align*}     </fr:tex>
+    
+ 
+   
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>702</fr:anchor><fr:addr type="machine">#313</fr:addr><fr:route>unstable-313.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors><fr:parent>def-004H</fr:parent></fr:frontmatter><fr:mainmatter>
+        We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
+        it suffices to provide
+        <fr:tex display="block">             \begin {align*}                 &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\                  &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))             \end {align*}         </fr:tex>
+        we define <fr:tex display="inline">E_0</fr:tex> by induction:
+        <fr:tex display="block">             \begin {align*}                 &amp;E_0(0) \equiv \textbf {1}\\                  &amp;E_0(\text {succ}(n)) \equiv \textbf {0}             \end {align*}         </fr:tex>
+        and also define <fr:tex display="inline">E_S</fr:tex> by induction:
+        <fr:tex display="block">             \begin {align*}                 &amp;E_S(n,X,0)\equiv \textbf {0}\\                  &amp;E_S(n,X,\text {succ}(m))\equiv  X(m)             \end {align*}         </fr:tex>
+        Therefore we have by the computation rule for the first induction that 
+        the following judgemental equality holds.
+        <fr:tex display="block">             \begin {align*}                 \text {Eq}(0,m) &amp;\equiv  E_0(m) \\                 \text {Eq}(\text {succ}(n),m) &amp;\equiv  E_S(n,\text {Eq}(n),m)             \end {align*}         </fr:tex>
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
