@@ -25,7 +25,8 @@
         }
     }
 }
-\block{Contextual Modal Logic}{
+\subtree{
+    \title{Contextual Modal Logic}
     \p{
         The philosophical foundation of our development is MLTT approaches of separating 
         judgments and propositions. The most basic judgment is the truth of a proposition,
@@ -121,15 +122,105 @@
             }
             where #{\mathcal{J}} is a judgment #{A\true} or #{A\valid}.
         }
-        \block{Definition of Validity}{
-            ##{
-                \frac{\Delta;\cdot\vdash A\true}{\Delta;\Gamma\vdash A\valid}
+        \block{Validity}{
+            \p{ 
+                ##{
+                    \frac{\Delta;\cdot\vdash A\true}{\Delta;\Gamma\vdash A\valid}
+                }
             }
-            Conversely if #{A} is valid we can conclude that it is true
+            
+            \p{Conversely if #{A} is valid we can conclude that it is true}
             ##{
                 \frac{}{
                     (\Delta,u::A\valid,\Delta');\Gamma\vdash A\true
+                }(\text{vldhyp}_u)
+            }
+            \p{
+                In terms of a multiple world semantics, we say taht #{A} is valid if #{A} is
+                true in \strong{every} possible world. We require that #{A} must be true in a 
+                world about which we assume nothing (#{\Gamma = \cdot}), except the constant-true
+                propositions #{\Delta}.
+            }
+        }
+        \block{Substitution Principle for Validity}{
+            \p{
+                Note that by the definition of validity we can immediately reduce the goal
+                of proving #{A\valid} into proving #{A\true}, which is captured by the principle
+                of substitution.
+            }
+            \p{
+                If #{\Delta;\cdot\vdash A\true} and #{(\Delta,u::A\valid,\Delta');\Gamma\vdash C\true},
+                then #{(\Delta,\Delta');\Gamma\vdash C\true}.
+            }
+        }
+        \p{
+            With the categorical judgment we can introduce the \strong{modal operator} for necessary
+            truth #{\square A}.
+        }
+    }
+    \block{Contextual Validity}{
+        \p{
+            #{A\valid} expresses that #{A} is true in \strong{any} world.
+            In this section we \strong{relativize} this judgment:
+            let #{\Psi = y_1:B_1\true, \cdots, y_n:B_n\true} be a list of assumptions.
+            We say that #{A} is \strong{valid relative} #{\Psi} (denoted #{A\valid[\Psi]}) if #{A} is true in every
+            world in which #{B_1,\cdots,B_n} are true.
+            Similarly we generalized assumptions about validity so that #{\Delta} 
+            now has the form #{u_1::A_1\valid[\Psi_1], \cdots, u_n::A_n\valid[\Psi_n]}.
+        }
+        \p{
+            As common in PL, we refer to #{\Psi} as a context and to the judgment 
+            #{A\valid[\Psi]} as \strong{contextual validity}.
+        }
+        \block{Contextual Validity}{
+            \p{
+                To prove #{A\valid[\Psi]} we only required to prove #{A} using only #{\Psi}
+                without any hypotheses about the truth:
+            }
+            ##{
+                \frac{
+                    \Delta;\Psi\vdash A\true
+                }{
+                    \Delta;\Gamma\vdash A\valid[\Psi]
                 }
+            }
+        }
+        \block{Contextual Entailment}{
+            We write
+            ##{
+                \Delta;\Gamma\vdash\Psi
+            }
+            to express that all the propositions in #{\Psi} are true using the assumptions from #{\Gamma}.
+            ##{
+                \frac{
+                    \Delta;\Gamma\vdash B_1\true \quad\cdot\quad \Delta;\Gamma\vdash B_n\true
+                }{
+                    \Delta;\Gamma\vdash y_1:B_1\true,\ldots,y_n:B_n\true
+                }(\text{ctx})
+            }
+        }
+        \block{Contextual Hypothesis Rule}{
+            ##{
+                \frac{
+                    (\Delta,u::A\valid[\Psi],\Delta');\Gamma\vdash\Psi
+                }{
+                    (\Delta,u::A\valid[\Psi],\Delta');\Gamma\vdash A\true
+                }(\text{ctxhyp}_u)
+            }
+        }
+        \block{Contextual Substitution Principle}{
+            \p{
+                If #{\Delta;\Psi\vdash A\true} and #{(\Delta,u::A\valid[\Psi],\Delta');\Gamma\vdash C\true}
+                then #{(\Delta,\Delta');\Gamma\vdash C\true}.
+            }
+            \p{
+                The precondition implies #{\Delta;\Gamma\vdash A\valid[\Psi]} and by the substitution principle
+                of hypotheses judgments we can justify this rule.
+            }
+        }
+        \block{Contextual Identity Principle}{
+            ##{
+                \Delta;\Psi\vdash\Psi
             }
         }
     }
