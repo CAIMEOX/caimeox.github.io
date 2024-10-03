@@ -10,5 +10,6 @@
     "functors",
     "morphism",
     "morphisms"
-  ]
+  ],
+  "liveServer.settings.port": 5501
 }

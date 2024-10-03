@@ -1,0 +1,93 @@
+\title{Untyped Systems}
+\date{2024-06-22}
+\taxon{Programming Language Theory}
+\import{macros}
+\p{
+    Notes about programming language theory.
+    Refer to [TAPL](tapl) (Introduction and Untyped system).
+    To talk rigorously about type systems and their properties, we need to start
+    by dealing formally with some more basic aspects of programming languages.
+    We need precise and mathematical tools for expressing our syntax and semantics.
+    The following concepts are included:
+    \ul{
+        \li{Lambda Calculus}
+        \li{Abstract Syntax}
+        \li{Inducitve Definition and Proof}
+        \li{Evaluation}
+        \li{Modeling of Runtime Errors}
+    }
+}
+\subtree{
+    \title{Concepts about Languages and Type System}
+    \p{
+        A \strong{type system} is a tractable syntactic method for proving the absence of
+        certain program behaviors by classifying phrases according to the kinds
+        of values they compute.
+    }
+    \ul{
+        \li{
+            The bad behaviors that can be eliminated by the type system in a given language are often called run-time type errors.
+        }
+        \li{
+            The most obvious benefit of static typechecking is that it allows early detection of some programming errors.
+        }
+        \li{
+            Type systems support the programming process by enforcing disciplined programming. 
+        }
+        \li{
+            Types are also useful when reading programs. 
+        }
+    }
+    \p{
+        \strong{Safe languages} can be defined as ones that make it impossible to shoot yourself in the foot while programming.
+        We could say that a safe language is one that protects its own abstractions.
+    }
+    \p{
+        In an unsafe language, they cannot: in order to completely understand how a
+        program may (mis)behave, it is necessary to keep in mind all sorts of lowlevel details such 
+        as the layout of data structures in memory and the order in
+        which they will be allocated by the compiler. In the limit, programs in unsafe
+        languages may \em{disrupt} not only their own data structures but even those of
+        the run-time system; the results in this case can be completely arbitrary.
+    }
+}
+\subtree{
+    \title{Untyped Arithmetic Expressions}
+    \ul{
+        \li{
+            \strong{Object language}: The simple programming language whose syntax we are currently describing.
+        }
+        \li{
+            \strong{Meta Language}: The language that we are using to describe something.
+        }
+    }
+    \subtree{
+        \title{Syntax}
+        \p{
+            The are several equivalent ways to define syntax
+        }
+        \ul{
+            \li{Inductive Definition}
+            \li{Inference Rules}
+            \li{Concrete Definition}
+        }
+    }
+    \subtree{
+        \title{Semantic Styles}
+        \p{
+            We next need a similarly precise definition of how terms are evaluated, that is, the semantics of
+            the language. There are three basic approaches to formalizing semantics:
+        }
+        \ul{
+            \li{
+                Operational semantics: Specifies the behavior of a programming language
+                by defining a simple abstract machine for it.
+            }
+            \li{Denotational semantics}
+            \li{Axiomatic semantics}
+        }
+        \p{
+            For details check [Introduction to Programming Language Semantic](cs-0006)
+        }
+    }
+}

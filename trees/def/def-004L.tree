@@ -1,0 +1,28 @@
+\title{Typal Binary Relation}
+\taxon{Definition}
+\p{
+    Consider a type #{A}. A \strong{typal binary relation} on #{A} is defined
+    to be a family of types #{R(x,y)} indexed by #{x,y:A}.
+    \ul{
+        \li{
+            \strong{Reflexive}: #{R} is reflexive if it comes equipped with
+            ##{
+                \rho:\Pi_{(x:A)}R(x,x)
+            }
+        }
+        \li{
+            \strong{Symmetric}: #{R} is symmetric if it comes equipped with
+            ##{
+                \sigma:\Pi_{(x,y:A)}R(x,y)\to R(y,x)
+            }
+        }
+        \li{
+            \strong{Transitive}: #{R} is transitive if it comes equipped with
+            ##{
+                \tau:\Pi_{(x,y,z:A)}R(x,y)\to R(y,z)\to R(x,z)
+            }
+        }
+    }
+    A \strong{typal equivalence relation} on #{A} is a reflexive, symmetric and transitive
+    binary relation on #{A}.
+}

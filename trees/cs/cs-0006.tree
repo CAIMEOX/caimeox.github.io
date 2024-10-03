@@ -1,6 +1,6 @@
 \title{Introduction to Programming Language Semantic}
 \date{2024-03-11}
-\taxon{Computer Science}
+\taxon{Programming Language Theory}
 \import{macros}
 \def\val{\text{Val}}
 \def\add{\text{Add}}

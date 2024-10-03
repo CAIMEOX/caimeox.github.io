@@ -1,0 +1,17 @@
+\title{Modular Arithmetic and the Curry-Howard Interpretation}
+\taxon{Type Theory}
+\date{2024-06-22}
+\p{
+    The MLTT is great for elementary mathematics.
+    The fundamental idea of developing basic mathematics in type theory is the 
+    \strong{Curry-Howard Interpretation}.
+}
+\subtree{
+    \title{The Curry-Howard Interpretation}
+    \p{
+        The Curry-Howard interpretation is an interpretation of logic into type theory.
+        Recall that in type theory there is no separation between the logical framework and the 
+        general theory of collections of mathematical objects.
+        The idea is to express propositions as types and to think of the elements of those types as their proofs.
+    }
+}
