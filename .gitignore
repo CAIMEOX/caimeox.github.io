@@ -24,3 +24,5 @@ server
 *.lock
 utils/**.md
 _tmp
+
+*.draft

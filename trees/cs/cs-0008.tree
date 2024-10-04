@@ -1,0 +1,122 @@
+\title{Algebraic Graphs}
+\date{2024-10-03}
+\taxon{Graph Theory}
+\import{macros}
+\p{
+    This post focus on the the algebra of graphs introduced in paper \strong{Algebraic graphs with class (functional pearl)},
+    which built on rigorous mathematical foundation that allows us to apply equational reasoning for proving the correctness of graph transformation algorithms.
+}
+\subtree{
+    \title{Introduction to Graphs}
+    \p{
+        Graphs are ubiquitous in computing. Roughly speaking, a graph is a collection of vertices and edges, where each edge connects two vertices.
+        For the most trivial case, a graph is an ordered pair #{ G=(V,E)} comprising:
+        \ul{
+            \li{#{ V } is a set of vertices.}
+            \li{#{ E \subseteq \{ (x,y) \mid x, y \in V\} } is a set of edges.}
+        }
+        We can define a graph type in some programming languages (e.g. Haskell) as:
+        \codeblock{language-haskell}{data Graph a = Graph [a] [(a, a)]}
+        Work with such low-level fiddling with sets of vertices and edges is very painful. And we can easily construct a graph that breaks the invariant of the graph structure like \code{Graph [1] [(1,2)]} which has an edge connecting a non-existent vertex.
+    }
+    \p{
+        How the state-of-art libraries deal with this problem? 
+        The \strong{container} library in Haskell provides a type \code{Data.Graph} which represents graph using adjacency array:
+        \codeblock{language-haskell}{type Graph a = Array a [a]}
+        which ensures performance and generality. But the consistency invariant is not \strong{statically} checked, which may lead
+        to runtime errors like \code{index out of ranges}. Another approach is the \strong{fgl} (Martin Erwig's Functional Graph Library)
+        where the graph is introduced as an \strong{inductive type}. The approach is very complex and its API contains partial functions.
+        So is there a \strong{safe} graph construction interface we can build on top?
+    }
+    \p{
+        \strong{Andrey Mokhov}'s paper presents a new interface for constructing and transforming graphs in a safe and convenient manner.
+        And abstract away from the actual representation details and characterize graphs by a set of axioms, just like numbers are algebraically characterized
+        by rings. The core calculus is based on the algebra of parameterized graphs. Algebraic graphs have a safe and minimalistic core of four graph construction primitives, as captured by the following data type:
+        \codeblock{language-haskell}{\startverb
+        data Graph a
+            = Empty
+            | Vertex a
+            | Overlay (Graph a) (Graph a)
+            | Connect (Graph a) (Graph a)
+        \stopverb}
+    }
+    \p{
+        The \code{Empty} and \code{Vertex} construct the empty and single-vertex graphs respectively. \code{Overlay} composes two graphs by taking the union of their vertices and edges, and \code{Connect} is similar to \code{Overlay} but also creates edges between vertices of the two graphs. 
+        
+        The overlay and connect operations have three properties:
+        \ul{
+            \li{(Closure)  They are closed on the set of graphs (all total functions)}
+            \li{(Complete) They can be used to construct any graph starting from the empty and single-vertex graphs}
+            \li{(Sound) Malformed graphs are impossible to construct}
+        }
+    }
+}
+\subtree{
+    \title{Core of Algebraic Graphs}
+    \subtree{
+        \title{Graph Construction}
+        \p{
+            The simplest possible graph is the empty graph. We denote it by #{ \epsilon = (\varnothing, \varnothing) }.
+            A graph with a single vertex is #{ \text{Vertex} x = (\{x\}, \varnothing) }.
+            To construct larger graphs from the above primitives we define binary operations overlay and connect, denoted by #{ + } and #{ \to } respectively.
+            The overlay operation #{ + } is defined as:
+            ##{
+                (V_1, E_1) + (V_2, E_2) = (V_1 \cup V_2, E_1 \cup E_2)
+            }
+            The connect operation #{ \to } is defined similarly (We give it a higher precedence than #{ + }):
+            ##{
+                (V_1, E_1) \to (V_2, E_2) = (V_1 \cup V_2, E_1 \cup E_2 \cup V_1 \times V_2)
+            }
+        }
+        \p{
+            As shown above, the core can be represented by a simple data type \code{Graph}, parameterized by the type of vertices \code{a}.
+            We can push this further by defining a type class \code{GraphLike} that captures the core operations of the algebraic graph.
+        }
+    }
+    \subtree{
+        \title{Type Class}
+        \p{
+            We abstract the graph construction primitives defined above as the type class Graph (Note that assocaited types requires \code{TypeFamilies} GHC extension):
+            \codeblock{language-haskell}{\startverb
+            class Graph g where
+                type Vertex g
+                empty :: g
+                vertex :: Vertex g -> g
+                overlay :: g -> g -> g
+                connect :: g -> g -> g
+            \stopverb}
+        }
+        \p{
+            This interface is very simple and easy to use, which allows fewer opportunities for usage errors and greater opportunities for reuse.
+            Now let's create some functions to construct graphs. For instance, a single edge is obtained by connecting two vertices:
+            \codeblock{language-haskell}{\startverb
+            edge :: (Graph g) => Vertex g -> Vertex g -> g
+            edge x y = connect (vertex x) (vertex y)
+            \stopverb}
+        }
+        \p{
+            A graph that contains a given list of isolated vertices can be constructed as follows:
+            \codeblock{language-haskell}{\startverb
+            vertices :: Graph g => [Vertex g] -> g
+            vertices = foldr (overlay . vertex) empty
+            \stopverb}
+            which turns each vertex into a singleton graph and overlay the results. By replacing the 
+            \code{ overlay } with \code{ connect } we can construct a full connected graph.
+            \codeblock{language-haskell}{\startverb
+            clique :: (Graph g) => [Vertex g] -> g
+            clique = foldr (connect . vertex) empty
+            \stopverb}
+        }
+        \p{
+            The graph construction functions defined above are total, fully polymorphic, and elegant. 
+            Thanks to the minimalistic core type class, it is easy to wrap our favourite graph library into the described interface, 
+            and reuse the functions defined with graph class.
+        }
+    }
+}
+\subtree{
+    \title{Algebraic Structure}
+    \p{
+        In this section we characterise the \code{Graph} type class with a set of axioms that reveal an algebraic structure very similar to a semiring. This provides a convenient framework for proving graph properties, using equational reasoning. The presented characterization is generally useful for formal verification, as well as automated testing of graph library APIs.
+    }
+}
