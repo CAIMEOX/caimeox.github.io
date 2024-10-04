@@ -40,10 +40,10 @@
   </xsl:template>
 
   <xsl:template match="f:figcaption">
-    <figcaption>
-      <xsl:apply-templates />
-    </figcaption>
-  </xsl:template>
+   <figcaption>
+     <xsl:apply-templates />
+   </figcaption>
+ </xsl:template>
 
   <xsl:template match="f:p">
     <p>
@@ -100,7 +100,7 @@
   </xsl:template>
 
   <xsl:template match="f:img[@src]">
-    <img src="{@src}" />
+    <img src="{@src}"/>
   </xsl:template>
 
   <xsl:template match="f:error | f:info">

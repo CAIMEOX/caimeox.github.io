@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1760</fr:anchor><fr:addr type="user">def-004L</fr:addr><fr:route>def-004L.xml</fr:route><fr:title text="Typal Binary Relation">Typal Binary Relation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Consider a type <fr:tex display="inline">A</fr:tex>. A <fr:strong>typal binary relation</fr:strong> on <fr:tex display="inline">A</fr:tex> is defined
+    to be a family of types <fr:tex display="inline">R(x,y)</fr:tex> indexed by <fr:tex display="inline">x,y:A</fr:tex>.
+    <fr:ul><fr:li><fr:strong>Reflexive</fr:strong>: <fr:tex display="inline">R</fr:tex> is reflexive if it comes equipped with
+            <fr:tex display="block">                 \rho :\Pi _{(x:A)}R(x,x)             </fr:tex></fr:li>
+        <fr:li><fr:strong>Symmetric</fr:strong>: <fr:tex display="inline">R</fr:tex> is symmetric if it comes equipped with
+            <fr:tex display="block">                 \sigma :\Pi _{(x,y:A)}R(x,y)\to  R(y,x)             </fr:tex></fr:li>
+        <fr:li><fr:strong>Transitive</fr:strong>: <fr:tex display="inline">R</fr:tex> is transitive if it comes equipped with
+            <fr:tex display="block">                 \tau :\Pi _{(x,y,z:A)}R(x,y)\to  R(y,z)\to  R(x,z)             </fr:tex></fr:li></fr:ul>
+    A <fr:strong>typal equivalence relation</fr:strong> on <fr:tex display="inline">A</fr:tex> is a reflexive, symmetric and transitive
+    binary relation on <fr:tex display="inline">A</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>

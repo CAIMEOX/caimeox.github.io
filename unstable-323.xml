@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1061</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="Matrix of Linear Maps › 
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1090</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="Matrix of Linear Maps › 
     Scalar Multiplication
 "><fr:link type="local" href="def-002S.xml" addr="def-002S" title="Matrix of Linear Maps">Matrix of Linear Maps</fr:link> › 
     <fr:strong>Scalar Multiplication</fr:strong>
@@ -9,7 +9,7 @@
     <fr:tex display="block">         B_{ij} = cA_{ij}     </fr:tex>
     In the language of linear maps <fr:tex display="inline">T\in  \mathcal {L}(V,W)</fr:tex>,
     <fr:tex display="block">         \mathcal {M}(cT) = c\mathcal {M}(T)     </fr:tex>
-</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1062</fr:anchor><fr:addr type="user">def-002S</fr:addr><fr:route>def-002S.xml</fr:route><fr:title text="Matrix of Linear Maps">Matrix of Linear Maps</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">T\in  \mathcal {L}(V,W)</fr:tex>,
+</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1091</fr:anchor><fr:addr type="user">def-002S</fr:addr><fr:route>def-002S.xml</fr:route><fr:title text="Matrix of Linear Maps">Matrix of Linear Maps</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">T\in  \mathcal {L}(V,W)</fr:tex>,
     <fr:tex display="inline">\{ v_1,\ldots ,v_n \}\subset  V</fr:tex> be a basis of <fr:tex display="inline">V</fr:tex>,
     and <fr:tex display="inline">\{ w_1,\ldots ,w_m \}\subset  W</fr:tex> be a basis of <fr:tex display="inline">W</fr:tex>.
     The <fr:strong>matrix of <fr:tex display="inline">T</fr:tex></fr:strong> with respect to these bases is
@@ -17,7 +17,7 @@
     <fr:tex display="block">         T(v_j) = \sum _{i=1}^m \mathcal {M}(T)_{ij}w_i     </fr:tex>
     Or we denote <fr:tex display="inline">\mathcal {M}(T)</fr:tex> as <fr:tex display="inline">\mathcal {M}(T, (v_1,\ldots ,v_n), (w_1,\ldots ,w_m))</fr:tex>.</fr:p><fr:p>If <fr:tex display="inline">T</fr:tex> maps <fr:tex display="inline">n</fr:tex>-dimensional vector space to <fr:tex display="inline">m</fr:tex>-dimensional vector space,
     then <fr:tex display="inline">\mathcal {M}(T)</fr:tex> is a <fr:tex display="inline">m\times  n</fr:tex> matrix.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>497</fr:anchor><fr:addr type="machine">#322</fr:addr><fr:route>unstable-322.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>525</fr:anchor><fr:addr type="machine">#322</fr:addr><fr:route>unstable-322.xml</fr:route><fr:title text="
     Addition
 ">
     <fr:strong>Addition</fr:strong>
@@ -29,7 +29,7 @@
     <fr:tex display="block">         \mathcal {M}(T+S) = \mathcal {M}(T) + \mathcal {M}(S)     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>498</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>526</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="
     Scalar Multiplication
 ">
     <fr:strong>Scalar Multiplication</fr:strong>
@@ -41,7 +41,7 @@
     <fr:tex display="block">         \mathcal {M}(cT) = c\mathcal {M}(T)     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>499</fr:anchor><fr:addr type="machine">#324</fr:addr><fr:route>unstable-324.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>527</fr:anchor><fr:addr type="machine">#324</fr:addr><fr:route>unstable-324.xml</fr:route><fr:title text="
     Set of Matrices
 ">
     <fr:strong>Set of Matrices</fr:strong>
