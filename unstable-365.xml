@@ -1,167 +1,943 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1051</fr:anchor><fr:addr type="machine">#365</fr:addr><fr:route>unstable-365.xml</fr:route><fr:title text="Primitive Recursion in Lambda Calculus › Function Composition"><fr:link type="local" href="cs-0002.xml" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</fr:link> › <fr:strong>Function Composition</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    Giving two functions <fr:tex display="inline">f, g</fr:tex> we can compose then to get a new function <fr:tex display="inline">f\circ  g = f(g(x))</fr:tex>.
-    Using <fr:tex display="inline">\lambda </fr:tex>-notation, we can define the composition of two functions as follows:
-    <fr:tex display="block">         f\circ  g = \lambda  x.f(g(x))     </fr:tex>
-    And the composition operation is also a lambda abstraction.
-    <fr:tex display="block">         \circ  = B = \lambda  f.\lambda  g.\lambda  x.f(g(x))     </fr:tex>
-    Composing identity function with any function does not change the function.
-    We expect the following equation to hold:
-    <fr:tex display="block">         f\circ  I = f = I\circ  f     </fr:tex>
-    where <fr:tex display="inline">I</fr:tex> is the identity function. This can be verified by the following calculation:
-    <fr:tex display="block">         \begin {align*}             B\space  f\space  I &amp;= (\lambda  f.\lambda  g.\lambda  x.f(g(x)))\space  f\space  I \\             &amp;\to _\beta  \lambda  g.\lambda  x.f(g(x))\space  I \\             &amp;\to _\beta  \lambda  x.f(I(x)) \\             &amp;\to _\beta  \lambda  x.f(x) \\             &amp;=_\eta  f         \end {align*}     </fr:tex>
-    The last step requires an extensional equality, which is the called <fr:strong>eta-conversion</fr:strong>.
-    <fr:tex display="block">         \text {for}\space  x\not \in \text {FV}(f) ,\lambda  x.f(x) =_\eta  f     </fr:tex>
-    It makes more sense to use the equation from right to left called <fr:strong>eta-expansion</fr:strong> 
-    (And more discipline has to be imposed or expansion does not terminate).
-</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1052</fr:anchor><fr:addr type="user">cs-0002</fr:addr><fr:route>cs-0002.xml</fr:route><fr:title text="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</fr:title><fr:taxon>Compute Science</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>We begin with the <fr:strong>schema of iteration</fr:strong> and then proceed 
-    the more complex schema of primitive recursion and general recursion.
-    Refer to <fr:link type="local" href="tapl.xml" addr="tapl" title="Types and Programming Languages">TAPL</fr:link>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>550</fr:anchor><fr:addr type="machine">#365</fr:addr><fr:route>unstable-365.xml</fr:route><fr:title text="Function Composition"><fr:strong>Function Composition</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    Giving two functions <fr:tex display="inline">f, g</fr:tex> we can compose then to get a new function <fr:tex display="inline">f\circ  g = f(g(x))</fr:tex>.
-    Using <fr:tex display="inline">\lambda </fr:tex>-notation, we can define the composition of two functions as follows:
-    <fr:tex display="block">         f\circ  g = \lambda  x.f(g(x))     </fr:tex>
-    And the composition operation is also a lambda abstraction.
-    <fr:tex display="block">         \circ  = B = \lambda  f.\lambda  g.\lambda  x.f(g(x))     </fr:tex>
-    Composing identity function with any function does not change the function.
-    We expect the following equation to hold:
-    <fr:tex display="block">         f\circ  I = f = I\circ  f     </fr:tex>
-    where <fr:tex display="inline">I</fr:tex> is the identity function. This can be verified by the following calculation:
-    <fr:tex display="block">         \begin {align*}             B\space  f\space  I &amp;= (\lambda  f.\lambda  g.\lambda  x.f(g(x)))\space  f\space  I \\             &amp;\to _\beta  \lambda  g.\lambda  x.f(g(x))\space  I \\             &amp;\to _\beta  \lambda  x.f(I(x)) \\             &amp;\to _\beta  \lambda  x.f(x) \\             &amp;=_\eta  f         \end {align*}     </fr:tex>
-    The last step requires an extensional equality, which is the called <fr:strong>eta-conversion</fr:strong>.
-    <fr:tex display="block">         \text {for}\space  x\not \in \text {FV}(f) ,\lambda  x.f(x) =_\eta  f     </fr:tex>
-    It makes more sense to use the equation from right to left called <fr:strong>eta-expansion</fr:strong> 
-    (And more discipline has to be imposed or expansion does not terminate).
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>551</fr:anchor><fr:addr type="machine">#366</fr:addr><fr:route>unstable-366.xml</fr:route><fr:title text="Non-termination"><fr:strong>Non-termination</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>The well-known <fr:link type="local" href="eg-0007.xml" addr="eg-0007" title="Divergent Combinator"><fr:strong>divergent combinator</fr:strong></fr:link> implies that 
-        the lambda calculus is not strongly normalizing.</fr:p>
-    <fr:p>However, we can always compute a normal form if one exists.
-        Though there are many reduction strategies,
-        there is a complete one for expressions that have normal form.
-        This kind of reduction strategy is called <fr:strong>normal order reduction</fr:strong> or
-        <fr:strong>leftmost-outermost reduction</fr:strong>. It scans through the expression from left to right
-        and when it find a redex, it reduces it by applying beta reduction and returns to the beginning.</fr:p>
-    <fr:p>The notation of leftmost-outermost reduction is closely related to the 
-        notion of <fr:strong>call-by-name evaluation</fr:strong> in programming languages.
-        (A little more distance to <fr:strong>call-by-need</fr:strong> evaluation in Haskell)</fr:p>
-    <fr:p>In contrast, <fr:strong>call-by-value</fr:strong> evaluation is not complete, which would 
-        reduce the argument of a function before applying beta reduction.</fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>552</fr:anchor><fr:addr type="machine">#367</fr:addr><fr:route>unstable-367.xml</fr:route><fr:title text="Church-Rosser Property"><fr:strong>Church-Rosser Property</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    The outcome of a computation <fr:tex display="inline">e</fr:tex> is its normal form.
-    It is naturally to ask the question whether the normal form is unique.
-    The key to this question is the <fr:strong>Church-Rosser property</fr:strong> or <fr:strong>confluence</fr:strong>:
-    If <fr:tex display="inline">e\to ^* e_1</fr:tex> and <fr:tex display="inline">e\to ^* e_2</fr:tex>, then there exists a term <fr:tex display="inline">e_3</fr:tex> such that
-    <fr:tex display="block">         e_1\to ^* e_3\space \text {and}\space  e_2\to ^* e_3     </fr:tex>
-    This implies the uniqueness of the normal form.
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>553</fr:anchor><fr:addr type="machine">#369</fr:addr><fr:route>unstable-369.xml</fr:route><fr:title text="Representing Natural Numbers"><fr:strong>Representing Natural Numbers</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>We can represent natural numbers in lambda calculus by using the 
-        <fr:strong>Church numerals</fr:strong> or <fr:strong>Church encoding</fr:strong>.
-        The two abstractions should be related in some ways: 
-        one <fr:tex display="inline">x</fr:tex> stands for zero and the other <fr:tex display="inline">f</fr:tex> stands for the successor function.</fr:p>
-    <fr:p>The Church numeral <fr:tex display="inline">n</fr:tex> is a function that takes two arguments <fr:tex display="inline">f</fr:tex> and <fr:tex display="inline">x</fr:tex> and applies <fr:tex display="inline">f</fr:tex> to <fr:tex display="inline">x</fr:tex> <fr:tex display="inline">n</fr:tex> times.
-        The Church numeral <fr:tex display="inline">0</fr:tex> is defined as the identity function <fr:tex display="inline">\lambda  f.\lambda  x.x</fr:tex>.
-        The Church numeral <fr:tex display="inline">1</fr:tex> is defined as the successor of <fr:tex display="inline">0</fr:tex>:
-        <fr:tex display="block">             1 = \lambda  f.\lambda  x.f(x)         </fr:tex>
-        The Church numeral <fr:tex display="inline">2</fr:tex> is defined as the successor of <fr:tex display="inline">1</fr:tex>:
-        <fr:tex display="block">             2 = \lambda  f.\lambda  x.f(f(x))         </fr:tex>
-        And so on.</fr:p>
-    <fr:p>The Church numeral <fr:tex display="inline">n</fr:tex> is defined as the successor of <fr:tex display="inline">n-1</fr:tex>:
-        <fr:tex display="block">             n = \lambda  f.\lambda  x.f^n(x)         </fr:tex>
-        where <fr:tex display="inline">f^n(x)</fr:tex> means applying <fr:tex display="inline">f</fr:tex> to <fr:tex display="inline">x</fr:tex> <fr:tex display="inline">n</fr:tex> times.</fr:p>
-    <fr:p>The successor function is defined as follows:
-        <fr:tex display="block">             S = \lambda  n.\lambda  f.\lambda  x.f(n\space  f\space  x)         </fr:tex></fr:p>
-    
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1673</fr:anchor><fr:addr type="machine">#365</fr:addr><fr:route>unstable-365.xml</fr:route><fr:title text="Scanners › Recognize more complex words"><fr:link type="local" href="cs-0004.xml" addr="cs-0004" title="Scanners">Scanners</fr:link> › Recognize more complex words</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The char-by-char model is very simple and now we consider about numbers.
+        For simplicity, we consider only unsigned integers: An unsigned integer is either
+        zero or series of one or more digits where the first one is non-zero.</fr:p>
  
+  
+  <fr:figure><fr:embedded-tex hash="f2316e5633b20d532c3214cb2fcc661d"><fr:embedded-tex-preamble>
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>554</fr:anchor><fr:addr type="machine">#368</fr:addr><fr:route>unstable-368.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-            <fr:tex display="block">                 \begin {align*}                     S\space  n &amp;= (\lambda  n.\lambda  f.\lambda  x.f(n\space  f\space  x))\space  n \\                     &amp;\to _\beta  \lambda  f.\lambda  x.f(n\space  f\space  x) \\                     &amp;\to _\beta  \lambda  f.\lambda  x.f^n(x) \\                     &amp;\to _\beta  n+1                 \end {align*}             </fr:tex>
-        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
+
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
+
+
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
+
+ \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
+
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
+
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     &gt;={Triangle[open]},-&gt;.&gt;
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}-&gt;
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}-&gt;
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {-&gt;},
+   square/south/.style = {-&gt;},
+   square/west/.style = {-&gt;},
+   square/east/.style = {-&gt;},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  </fr:embedded-tex-preamble><fr:embedded-tex-body>
+        \begin {tikzcd}
+            &amp; {S_2}
+            \arrow [out=65, in=25 ,loop,&quot;0..9&quot;]
+            \\
+            {S_0} \\
+            &amp; {S_1}
+            \arrow [&quot;0&quot;, from=2-1, to=3-2]
+            \arrow [&quot;{1..9}&quot;, from=2-1, to=1-2]
+        \end {tikzcd}
+    </fr:embedded-tex-body></fr:embedded-tex></fr:figure>
  
+<fr:p>And the code implementation can be:</fr:p><fr:pre>    state &lt;- s0;
+    char &lt;-nextChar();
+    while (state != se and char != eof) {
+        state &lt;- delta(state, char);
+        char &lt;- nextChar();
+    }
+    if (state in SA) {
+        return Acceptance();
+    } else {
+        reportError();
+    }</fr:pre><fr:p>Another example is to recognize <fr:strong>identifiers</fr:strong> which are sequences of letters and digits,
+        starting with a letter. Many languages include other special characters for identifiers.
+        The FA for unsigned integers and identifiers are different in syntactic categories.</fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1674</fr:anchor><fr:addr type="user">cs-0004</fr:addr><fr:route>cs-0004.xml</fr:route><fr:title text="Scanners">Scanners</fr:title><fr:taxon>Computer Science</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The scanner&apos;s task is to transform a stream of characters into a stream 
+    of words in the input language. Each word must be classified into a 
+    <fr:strong>syntactic category</fr:strong>.
+    This note refers to <fr:link type="local" href="eng-compiler-2022.xml" addr="eng-compiler-2022" title="Engineering a Compiler">Engineering a compiler</fr:link></fr:p><fr:p>The first stage of a compiler is to perform <fr:strong>lexical analysis</fr:strong> by a scanner.
+    The parser or <fr:strong>syntax analyzer</fr:strong> will fit the stream of words to a grammatical 
+    model of the input language.</fr:p><fr:p>Scanner construction has a strong foundation in formal language theory.
+    Scanners are based on <fr:strong>recognizers</fr:strong> that simulate <fr:strong>deterministic finite automata</fr:strong>.
+    We can specify the lexical structure using a set of <fr:strong>regular expression</fr:strong>.</fr:p><fr:p>Each time a scanner recognizes a word, it will return a <fr:strong>token</fr:strong> that
+    contains the word (<fr:strong>lexeme</fr:strong>) and its syntactic category.
+    The scanner uses <fr:strong>microsyntax</fr:strong> (the lexical structure of a language) to 
+    find and classify words. <fr:strong>Keywords</fr:strong> are <fr:strong>identifiers</fr:strong> but have special meanings.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>673</fr:anchor><fr:addr type="machine">#363</fr:addr><fr:route>unstable-363.xml</fr:route><fr:title text="A first look at recognizers">A first look at recognizers</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>A char-by-char algorithm to recognize words is trivial.
+        Consider we want to recognize the word <fr:code>new</fr:code>.
+        We can write down the following code.</fr:p><fr:pre>    c &lt;- nextChar();
+    if (c == &apos;n&apos;) {
+        c &lt;- nextChar();
+        if (c == &apos;e&apos;) {
+            c &lt;- nextChar();
+            if (c == &apos;w&apos;) {
+                return newToken();
+            }
+        }
+    }
+    reportError();</fr:pre><fr:p>We can also represent the code fragment using the simple <fr:strong>transition diagram</fr:strong>.</fr:p>
+ 
+  
+  <fr:figure><fr:embedded-tex hash="63e9c6d8d3a9882ce312b378a03d47f9"><fr:embedded-tex-preamble>
+   
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
 
-    <fr:p>Using the iteration property we can define mathematical functions 
-        over the natural numbers in lambda calculus.
-        The addition of two Church numerals <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> is defined as follows:
-        <fr:tex display="block">             m+n = \lambda  n.\lambda  k. n\space  S\space  k         </fr:tex></fr:p>
-    <fr:p>The multiplication of two Church numerals <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> is defined by
-        iterating the addition function <fr:tex display="inline">m</fr:tex> times:
-        <fr:tex display="block">             m*n = \lambda  n.\lambda  k. n\space  (k + ) \space  0         </fr:tex></fr:p>
-    <fr:p>The exponentiation of two Church numerals <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> is defined as follows:
-        <fr:tex display="block">             m^n = \lambda  m.\lambda  n. n\space  (m *) \space  1         </fr:tex></fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>555</fr:anchor><fr:addr type="machine">#370</fr:addr><fr:route>unstable-370.xml</fr:route><fr:title text="The Schema of Iteration"><fr:strong>The Schema of Iteration</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>As we saw before, a natural number <fr:tex display="inline">n</fr:tex> is represented by a function 
-        that iterates its first argument <fr:tex display="inline">n</fr:tex> times on its second argument.
-        <fr:tex display="block">             n = \lambda  g.\lambda  c.g^n(c)         </fr:tex>
-        Another way to specify such a function schematically is 
-        <fr:tex display="block">             \begin {align*}                 f \space 0 &amp;= c \\                 f (n+1) &amp;= g\space  (f\space  n)             \end {align*}         </fr:tex>
-        If such a function satisfies such a <fr:strong>schema of iteration</fr:strong>, then it can 
-        be defined in the lambda calculus on Church numerals as
-        <fr:tex display="block">             f = \lambda  n.n \space  g \space  c         </fr:tex>
-        This definition is <fr:strong>total</fr:strong> which means it is defined for all natural numbers.
-        Let&apos;s define the multiplication again
-        <fr:tex display="block">             \begin {align*}                 m*0 &amp;= 0 \\                 m*(n+1) &amp;= m + (m*n)             \end {align*}         </fr:tex>
-        To fit our schema of iteration, we can define the multiplication by abstracting over <fr:tex display="inline">k</fr:tex>:
-        <fr:tex display="block">             \begin {align*}                 \text {times}\space  0 &amp;= \lambda  k.0 \\                 \text {times}\space  (n+1) &amp;= \lambda  k.k + (\text {times}\space  n\space  k)             \end {align*}         </fr:tex>
-        where the <fr:tex display="inline">c</fr:tex> and <fr:tex display="inline">g</fr:tex> are
-        <fr:tex display="block">             \begin {align*}                 c &amp;= \lambda  k.0 \\                 g &amp;= \lambda  r.\lambda  k.k+(r\space  k)             \end {align*}         </fr:tex>
-        and we obtain
-        <fr:tex display="block">             \text {times} = \lambda  n.n(\lambda  rk. k + (r\space  k))(\lambda  k.0)         </fr:tex></fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>556</fr:anchor><fr:addr type="machine">#375</fr:addr><fr:route>unstable-375.xml</fr:route><fr:title text="The Schema of Primitive Recursion"><fr:strong>The Schema of Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>Everything appears simply until we think of a very simple function,
-        the <fr:strong>predecessor function</fr:strong> <fr:tex display="inline">\text {pred}</fr:tex> defined by
-        <fr:tex display="block">             \begin {align*}                 \text {pred}\space  0 = 0 \\                 \text {pred}\space  (n+1) = n             \end {align*}         </fr:tex>
-        What we would need is the <fr:strong>schema of primitive recursion</fr:strong>
-        <fr:tex display="block">             \begin {align*}                 f\space  0 &amp;= c \\                 f\space  (n+1) &amp;= g\space  n\space  (f\space  n)             \end {align*}         </fr:tex>
-        With which we can define the predecessor function by 
-        <fr:tex display="block">             g = \lambda  x.\lambda  y.x         </fr:tex></fr:p>
-    
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>557</fr:anchor><fr:addr type="machine">#371</fr:addr><fr:route>unstable-371.xml</fr:route><fr:title text="Define predecessor function"><fr:strong>Define predecessor function</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        The key idea is to gain access to <fr:tex display="inline">n</fr:tex> in the schema of 
-        primitive recursion by rebuilding it during the iteration.
-        <fr:tex display="block">             \text {pred}_2\space  n = \langle  n, \text {pred}\space  n \rangle          </fr:tex>
-        The key step is to express the definition by a schema of iteration
-        rather than primitive recursion.
-        <fr:tex display="block">             \text {pred}_2\space  0 = \langle  0, 0 \rangle          </fr:tex>
-        We need a helper function for the successor case
-        <fr:tex display="block">             \text {letPair}\space \langle  e_1,e_2\rangle \space  k = k\space  e_1\space  e_2         </fr:tex>
-        This function passes the elements of the pair to a <fr:strong>continuation</fr:strong> <fr:tex display="inline">k</fr:tex>.
-        <fr:tex display="block">             \text {pred}_2 (n+1) = \text {letPair}\space  (\text {pred}_2\space  n)\space  (\lambda  xy. \langle  x+1, x \rangle )          </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>558</fr:anchor><fr:addr type="machine">#372</fr:addr><fr:route>unstable-372.xml</fr:route><fr:title text="Define Pairs"><fr:strong>Define Pairs</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        Now we need to define pairs and <fr:tex display="inline">\text {letPair}</fr:tex>.
-        The idea is to simply abstract over the continuation itself.
-        <fr:tex display="block">             \begin {align*}                 \langle  x,y\rangle  &amp;= \lambda  k.k\space  x\space  y \\                 \text {pair} &amp;= \lambda  x.\lambda  y.\lambda  k.k\space  x\space  y \\                  \text {letPair} &amp;= \lambda  p.p             \end {align*}         </fr:tex>
-        The letPair is not really needed here.
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
 
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>559</fr:anchor><fr:addr type="machine">#373</fr:addr><fr:route>unstable-373.xml</fr:route><fr:title text="Summary"><fr:strong>Summary</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        Summarizing the above and we obtain the full definition of the predecessor function.
-        <fr:tex display="block">             \begin {align*}                 \text {pred}_2 &amp;= \lambda  n.n\space  (\lambda  p.p (\lambda  xy.\text {pair} \space  (x+1) \space  x))\space  \text {pair} (\space  0 \space  0)\\                  \text {pred} &amp;= \lambda  n. (\text {pred}_2\space  n) \space  (\lambda  xy.y)             \end {align*}            </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
 
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>560</fr:anchor><fr:addr type="machine">#374</fr:addr><fr:route>unstable-374.xml</fr:route><fr:title text="General Primitive Recursion"><fr:strong>General Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        The general case of primitive recursion follows by a similar pattern.
-        We begin by defining a function <fr:tex display="inline">f_2</fr:tex>:
-        <fr:tex display="block">             f_2\space  n = \langle  n, f\space  n \rangle          </fr:tex>
-        We can define <fr:tex display="inline">f_2</fr:tex> using the schema of iteration
-        <fr:tex display="block">             \begin {align*}                 f_2\space  0 &amp;= \langle  0, c \rangle  \\                 f_2\space  (n+1) &amp;= \text {letPair}\space  (f_2\space  n)\space  (\lambda  xy.\langle  x+1, g\space  x\space  y \rangle ) \\                 f\space  n &amp;= \text {letPair}\space  (f_2\space  n)\space  (\lambda  xy.y)             \end {align*}         </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
 
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-<fr:p>When computing over natural numbers we can restrict the functions that can be 
-    formed in schematic ways to obtain a language in which all functions <fr:strong>terminate</fr:strong>.
-    Because if <fr:tex display="inline">c</fr:tex> and <fr:tex display="inline">g</fr:tex> are terminating then so is <fr:tex display="inline">f</fr:tex> formed from them by primitive recursion.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     &gt;={Triangle[open]},-&gt;.&gt;
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}-&gt;
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}-&gt;
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {-&gt;},
+   square/south/.style = {-&gt;},
+   square/west/.style = {-&gt;},
+   square/east/.style = {-&gt;},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  </fr:embedded-tex-preamble><fr:embedded-tex-body>
+        \begin {tikzcd}
+            {S_0} &amp; {S_1} &amp; {S_2} &amp; {S_3}
+            \arrow [&quot;n&quot;, from=1-1, to=1-2]
+            \arrow [&quot;e&quot;, from=1-2, to=1-3]
+            \arrow [&quot;w&quot;, from=1-3, to=1-4]
+        \end {tikzcd}
+    </fr:embedded-tex-body></fr:embedded-tex></fr:figure>
+ 
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>674</fr:anchor><fr:addr type="machine">#364</fr:addr><fr:route>unstable-364.xml</fr:route><fr:title text="A formalism for recognizers">A formalism for recognizers</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Transition diagrams can be viewed as formal mathematics objects called <fr:strong>finite automata</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>675</fr:anchor><fr:addr type="user">def-003M</fr:addr><fr:route>def-003M.xml</fr:route><fr:title text="Finite Automata">Finite Automata</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>finite automata (FA)</fr:strong> is a five-tuple <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> where
+    <fr:ul><fr:li><fr:tex display="inline">S</fr:tex> is the finite set of states in the recognizer including <fr:tex display="inline">s_e</fr:tex>,
+            the error state.</fr:li>
+        <fr:li><fr:tex display="inline">\Sigma </fr:tex> is the finite alphabet used by the recognizer. 
+            <fr:tex display="inline">\Sigma </fr:tex> is the union of the edge labels in the transition diagram.</fr:li>
+        <fr:li><fr:tex display="inline">\delta (s, c)</fr:tex> is the recognizer&apos;s transition function, which 
+            maps each state <fr:tex display="inline">s\in  S</fr:tex> and character <fr:tex display="inline">c\in \Sigma </fr:tex> into some next state.
+            In state <fr:tex display="inline">s_i</fr:tex> with input character <fr:tex display="inline">c</fr:tex> the FA takes the transition
+            <fr:tex display="inline">s_i \xrightarrow {c} \delta (s_i, c)</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">s_0\in  S</fr:tex> is the initial state of the recognizer.</fr:li>
+        <fr:li><fr:tex display="inline">S_A</fr:tex> is the set of accepting states, <fr:tex display="inline">S_A\subseteq  S</fr:tex>.</fr:li></fr:ul>
+    <fr:tex display="inline">\delta </fr:tex> is only partially defined. For all other combinations of the 
+    state <fr:tex display="inline">s_i</fr:tex> and input char <fr:tex display="inline">c</fr:tex> we can define <fr:tex display="inline">\delta (s_i,c)=s_e</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>An FA <fr:strong>accpets</fr:strong> a string <fr:tex display="inline">x</fr:tex> and iff starting in <fr:tex display="inline">s_0</fr:tex>,
+        the sequence of chars in  <fr:tex display="inline">x</fr:tex> takes the FA to an accepting state
+        when the entire string has been consumed.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>676</fr:anchor><fr:addr type="user">def-003N</fr:addr><fr:route>def-003N.xml</fr:route><fr:title text="Accepts">Accepts</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>If the string <fr:tex display="inline">x</fr:tex> consists characters <fr:tex display="inline">x_1, x_2, \ldots , x_n</fr:tex> then the
+    FA <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> <fr:strong>accpets</fr:strong> <fr:tex display="inline">x</fr:tex> iff there is a sequence
+    <fr:tex display="block">         \delta (             \delta (                 \dots \delta (\delta (                     \delta (s_0,x_1),x_2),x_3)\dots ,                 x_{n-1}             )             ,x_n         )\in  S_A     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>677</fr:anchor><fr:addr type="machine">#365</fr:addr><fr:route>unstable-365.xml</fr:route><fr:title text="Recognize more complex words">Recognize more complex words</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The char-by-char model is very simple and now we consider about numbers.
+        For simplicity, we consider only unsigned integers: An unsigned integer is either
+        zero or series of one or more digits where the first one is non-zero.</fr:p>
+ 
+  
+  <fr:figure><fr:embedded-tex hash="f2316e5633b20d532c3214cb2fcc661d"><fr:embedded-tex-preamble>
+   
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
+
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
+
+
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
+
+ \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
+
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
+
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     &gt;={Triangle[open]},-&gt;.&gt;
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}-&gt;
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}-&gt;
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {-&gt;},
+   square/south/.style = {-&gt;},
+   square/west/.style = {-&gt;},
+   square/east/.style = {-&gt;},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  </fr:embedded-tex-preamble><fr:embedded-tex-body>
+        \begin {tikzcd}
+            &amp; {S_2}
+            \arrow [out=65, in=25 ,loop,&quot;0..9&quot;]
+            \\
+            {S_0} \\
+            &amp; {S_1}
+            \arrow [&quot;0&quot;, from=2-1, to=3-2]
+            \arrow [&quot;{1..9}&quot;, from=2-1, to=1-2]
+        \end {tikzcd}
+    </fr:embedded-tex-body></fr:embedded-tex></fr:figure>
+ 
+<fr:p>And the code implementation can be:</fr:p><fr:pre>    state &lt;- s0;
+    char &lt;-nextChar();
+    while (state != se and char != eof) {
+        state &lt;- delta(state, char);
+        char &lt;- nextChar();
+    }
+    if (state in SA) {
+        return Acceptance();
+    } else {
+        reportError();
+    }</fr:pre><fr:p>Another example is to recognize <fr:strong>identifiers</fr:strong> which are sequences of letters and digits,
+        starting with a letter. Many languages include other special characters for identifiers.
+        The FA for unsigned integers and identifiers are different in syntactic categories.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>678</fr:anchor><fr:addr type="machine">#366</fr:addr><fr:route>unstable-366.xml</fr:route><fr:title text="Regular Expressions">Regular Expressions</fr:title><fr:authors></fr:authors><fr:parent>cs-0004</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The set of words accpeted by a finite automata <fr:tex display="inline">F</fr:tex> forms a language <fr:tex display="inline">L(F)</fr:tex>.
+        The transition diagram of <fr:tex display="inline">F</fr:tex> specifies the syntactic structure of <fr:tex display="inline">L(F)</fr:tex>.
+        But such representation is complex and non-intuitive.
+        Most systems use a notation called <fr:strong>regular expressions</fr:strong> to specify the language.
+        Any language described by an RE is considered a <fr:strong>regular language</fr:strong>.
+        RE is equivalent to FA.</fr:p><fr:p>To work with REs in a rigorous way, we need a foraml definition.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
