@@ -8,6 +8,7 @@
   "cmake.configureOnOpen": false,
   "cSpell.words": [
     "functors",
+    "monoid",
     "morphism",
     "morphisms",
     "semiring"

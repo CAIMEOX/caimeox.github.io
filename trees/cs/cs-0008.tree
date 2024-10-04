@@ -119,4 +119,137 @@
     \p{
         In this section we characterise the \code{Graph} type class with a set of axioms that reveal an algebraic structure very similar to a semiring. This provides a convenient framework for proving graph properties, using equational reasoning. The presented characterization is generally useful for formal verification, as well as automated testing of graph library APIs.
     }
+    \subtree{
+        \title{Axioms}
+        \p{
+            Notice that the \code{clique} and \code{vertices} functions use #{\epsilon} as the identity element for the overlay and connect operation respectively.
+            Further more we can verify:
+            \ul{
+                \li{#{(G,+,\epsilon)} is an idempotent commutative monoid.}
+                \li{#{(G,\to,\epsilon)} is a monoid.}
+                \li{#{\to} distributes over #{+}.}
+            }
+            This looks like a semiring, but the identity element are shared between the two operations. 
+            What makes the algebra of graphs different is the \strong{decomposition law}:
+            ##{
+                x \to y \to z = x \to y + x \to z + y \to z
+            }
+            Interestingly, the fact that overlay and connect share the same identity follows from the decomposition law.
+            Furthermore, the identity (#{x + \epsilon = x}) and idempotence (#{x + x = x}) can also be proved from the decomposition law.
+            Hence we get a minimal set (8) of axioms that characterize the algebraic graphs.
+            \ul{
+                \li{#{+} is commutative and associative: #{x + y = y + x} and #{(x + y) + z = x + (y + z)}}
+                \li{#{(G,\to,\epsilon)} is a monoid, i.e. #{x \to y \to z = x \to (y \to z)} and #{\epsilon \to x = x, x \to \epsilon = x}}
+                \li{#{\to} distributes over #{+}: #{(x + y) \to z = x \to z + y \to z}}
+                \li{Decomposition law: #{x \to y \to z = x \to y + x \to z + y \to z}}
+            }
+            By adding more axioms we can obtain more complex graphs such as directed graphs, hypergraphs, etc.
+        }
+        \p{
+            Algebraic graphs are \strong{complete} in the sense that it is possible to describe any graph using the core interface. Indeed, given a graph #{G=(V , E)} we can construct it as \code{graph V E}, where the function \code{graph} is defined as follows.
+            \codeblock{language-haskell}{\startverb
+            graph :: (Graph g) => [Vertex g] -> [(Vertex g, Vertex g)] -> g
+            graph vs es = overlay (vertices vs) (edges es)
+            \stopverb}
+            where \code{edges} is defined as:
+            \codeblock{language-haskell}{\startverb
+            edges :: (Graph g) => [(Vertex g, Vertex g)] -> g
+            edges = foldr (overlay . uncurry edge) empty
+            \stopverb}
+            The absorption theorem #{x \to y + x + y = x \to y}, derived from decomposition of #{x \to y \to \epsilon}, states that an edge #{(u, v)} 
+            contains its two vertices #{u, v} and is inseparable from them. Therefore, if the pair #{(V , E)} is inconsistent, the set of vertices #{V} 
+            will be expanded to #{\hat{V}} so that #{E\subseteq \hat{V} \times \hat{V}} holds. More generally, the absorption theorem states that in 
+            addition to being complete, the algebraic graph API is also sound in the sense that it is impossible to construct an inconsistent pair
+            #{(V , E)} using the four Graph methods.
+        }
+        \p{
+            There are many other interesting properties of algebraic graphs can be proved using the axioms:
+            \ul{
+                \li{(Overlay Identity) #{x + \epsilon = x}}
+                \li{(Overlay Idempotence) #{x + x = x}}
+                \li{(Absorption) #{x \to y + x + y = x \to y}}
+                \li{(Saturation) #{x \to x \to x = x \to x}}
+            }
+        }
+    }
+    \subtree{
+        \title{Partial Order}
+        \p{
+            It is fairly standard to define #{x \leq y} as #{x + y = y} for an idempotent operation #{+}, since it gives a [partial order](def-000Y) on the elements of the algebra. Formally we call this definition the \strong{subgraph} relation. Therefore, we can check if a graph is a subgraph of another one if we know how to compare graphs for equality.
+            \codeblock{language-haskell}{\startverb
+            isSubgraphOf :: (Graph g, Eq g) => g -> g -> Bool
+            isSubgraphOf x y = overlay x y == y
+            \stopverb}
+        }
+    }
 }
+\subtree{
+    \title{Graphs à la Carte}
+    \p{
+        Now we define some instances of the Grpah, and extend the axioms to construct more complex graphs.
+    }
+    \subtree{
+        \title{Binary Relation}
+        \p{
+            We start by a direct encoding of the graph construction primitives defined into the abstract data type \code{Relation} isomorphic to a pair of sets #{(V , E)}: 
+            \codeblock{language-haskell}{\startverb
+            data Relation a = R {domain :: Set a, relation :: Set (a, a)} deriving (Eq)
+
+            instance (Ord a) => Graph (Relation a) where
+                type Vertex (Relation a) = a
+                empty = R Set.empty Set.empty
+                vertex x = R (singleton x) Set.empty
+                overlay x y = R (domain x `union` domain y) (relation x `union` relation y)
+                connect x y =
+                    R (domain x `union` domain y)
+                    ( relation x
+                        `union` relation y
+                        `union` fromAscList [(a, b) | a <- elems (domain x), b <- elems (domain y)]
+                    )
+            \stopverb}
+            As we have seen, this implementation satisfies the axioms of the graph algebra. Furthermore, it is a free graph in the sense that it does not satisfy any other laws. This follows from the fact that any algebraic graph expression #{g} can be rewritten in the following canonical form:
+            ##{
+                g = \left( \sum_{v\in V_g} v \right) + \left( \sum_{(u,v)\in E_g} u \to v \right)
+            }
+            The existence of the canonical form was proved by \strong{Mokhov} in \em{Algebra of Parameterised Graphs} for an extended version of the algebra.
+            The core idea is to repeatedly apply the decomposition law to rewrite the graph expression in the form of the above equation,
+            until no further decomposition is possible.
+        }
+        \p{
+            It will be convenient to make \code{Relation} an instance of \code{Num} type class.
+            \codeblock{language-haskell}{\startverb
+            instance (Ord a, Num a) => Num (Relation a) where
+                fromInteger = vertex . fromInteger
+                (+) = overlay
+                (*) = connect
+                signum = const empty
+                abs = id
+                negate = id
+            \stopverb}
+            With these setups we can use the standard #{+} and #{\times} operators as shortcuts for overlay and connect respectively.
+            Note that the Num law \code{abs x * signum x == x} is satisfied by the above definition since #{x \to \epsilon = x}.
+            Any Graph instance can be made an instance of \code{Num} if needed.
+        }
+        \p{
+            Now let's try to construct some graphs using the \code{Relation} type and the \code{Num} instance:
+            \codeblock{language-haskell}{\startverb
+            ghci> 1 * (2 + 3) :: Relation Int
+            R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3)]}
+            ghci> 1 * 2 * 3 :: Relation Int
+            R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}
+            \stopverb}
+        }
+    }
+}
+% \subtree{
+%     \title{Graph Transformation}
+%     \p{
+%         Any instances of \code{Graph} can benefit from a library of polymorphic graph construction and transformation.
+%         It will be useful to have \code{functor} and \code{monad} instances for the \code{Graph} type class.
+%     }
+%     \subtree{Graph Functor}
+%     \p{
+%         We now implement a function \code{gmap} that given a function \code{a -> b} and a polymorphic graph whose vertices are of type \code{a} will produce a polymorphic graph with vertices of type \code{b} by applying the function to each vertex. This is almost a \code{Functor} but it does not have the usual type signature, because Graph is not a higher-kinded type but a type class (Though it is possible to define a higher-kinded version of \code{Graph}, but 
+%         the instances are much more restricted).
+%     }
+% }
