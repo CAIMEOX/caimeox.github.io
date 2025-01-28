@@ -1,171 +1,545 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>869</fr:anchor><fr:addr type="machine">#306</fr:addr><fr:route>unstable-306.xml</fr:route><fr:title text="Vector Calculus and Geometry of Space › Review of Vector Spaces"><fr:link type="local" href="math-0007.xml" addr="math-0007" title="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:link> › Review of Vector Spaces</fr:title><fr:date><fr:year>2024</fr:year><fr:month>4</fr:month><fr:day>5</fr:day></fr:date><fr:authors></fr:authors><fr:parent>math-0007</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>We now start with introducing the vector space over the field of real numbers <fr:tex display="inline">\mathbb {R}</fr:tex>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>746</fr:anchor><fr:addr type="user">def-000H</fr:addr><fr:route>def-000H.xml</fr:route><fr:title text="Vector Space">Vector Space</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A vector space over a <fr:link type="local" href="def-0006.xml" addr="def-0006" title="Field">field</fr:link> <fr:tex display="inline">F</fr:tex> is a non-empty set <fr:tex display="inline">V</fr:tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
-    In this context, the elements of <fr:tex display="inline">V</fr:tex> are commonly called <fr:strong>vectors</fr:strong>, and the elements of <fr:tex display="inline">F</fr:tex> are called <fr:strong>scalars</fr:strong>.
-    <fr:ul><fr:li>Commutativity: <fr:tex display="inline">             \forall  x, y \in  V, x + y = y + x         </fr:tex></fr:li>
-        <fr:li>Associativity: <fr:tex display="inline">             \forall  x, y, z \in  V, (x + y) + z = x + (y + z)         </fr:tex></fr:li>
-        <fr:li>Additive Identity: <fr:tex display="inline">             \exists  0 \in  V \text { such that } \forall  x \in  V, x + 0 = x         </fr:tex></fr:li>
-        <fr:li>Multiplicative Identity: <fr:tex display="inline">             \forall  x \in  V, 1x = x         </fr:tex></fr:li>
-        <fr:li>Additive Inverse: <fr:tex display="inline">             \forall  x \in  V, \exists  y \in  V \text { such that } x + y = 0         </fr:tex></fr:li>
-        <fr:li>Distributivity: <fr:tex display="inline">             \forall  x, y \in  V, \forall  c, d \in  F, c(x + y) = cx + cy, (c + d)x = cx + dx         </fr:tex></fr:li></fr:ul></fr:p><fr:p>Elements of a vector space are called <fr:strong>vectors</fr:strong> or <fr:strong>points</fr:strong>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Use <fr:tex display="inline">\mathbb {R}^2</fr:tex> as an example we can see (Note that we always treat elements of vector spaces as 
-        column vectors and never as row vectors):
-        <fr:tex display="block">             c \cdot  \begin {bmatrix}                 a \\ b             \end {bmatrix} = \begin {bmatrix}                 c \cdot  a \\ c \cdot  b             \end {bmatrix}         </fr:tex></fr:p><fr:p>Now we will consider a certain type of transformation between vector spaces called a <fr:link type="local" href="def-0025.xml" addr="def-0025" title="Linear Map"><fr:strong>linear transformation</fr:strong></fr:link>.
-        Suppose <fr:tex display="inline">T</fr:tex> is a mapping between <fr:tex display="inline">\mathbb {R}^n</fr:tex> and <fr:tex display="inline">\mathbb {R}^m</fr:tex>, that is <fr:tex display="inline">T:\mathbb {R}^n\to \mathbb {R}^m</fr:tex>, then <fr:tex display="inline">T</fr:tex> is a linear transformation if:
-        <fr:tex display="block">             T(c \cdot  \vec {v}) = c \cdot  T(\vec {v})             \\              T(\vec {v} + \vec {w}) = T(\vec {v}) + T(\vec {w})         </fr:tex>
-        If <fr:tex display="inline">T</fr:tex> is a linear transformation from <fr:tex display="inline">\mathbb {R}^m</fr:tex> to <fr:tex display="inline">\mathbb {R}</fr:tex> we simply call it a <fr:strong>linear function</fr:strong> or a <fr:strong>linear functional</fr:strong>.</fr:p><fr:p>We now turn our attention to the relationship between linear transformation and matrices. 
-        We just stick to vector spaces <fr:tex display="inline">\mathbb {R}^n</fr:tex> and the standard basis made up of the <fr:strong>Euclidian unit vectors</fr:strong>.
-        In order to write linear transformation <fr:tex display="inline">T:\mathbb {R}^n\to \mathbb {R}^m</fr:tex> as a matrix we need ordered bases for both <fr:tex display="inline">\mathbb {R}^n</fr:tex> and <fr:tex display="inline">\mathbb {R}^m</fr:tex>.
-        We can use the intuitively obvious order <fr:tex display="inline">e_1 &lt; e_2 &lt; \cdots  &lt; e_n</fr:tex>.
-        Now we can give formal definition of the matrix representation of a linear transformation.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>747</fr:anchor><fr:addr type="user">def-003W</fr:addr><fr:route>def-003W.xml</fr:route><fr:title text="Matrix Representation of Linear Transformation over {R}^n">Matrix Representation of Linear Transformation over <fr:tex display="inline">\mathbb {R}^n</fr:tex></fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Suppose that <fr:tex display="inline">T:\mathbb {R}^n\to \mathbb {R}^m</fr:tex> is a linear transformation between vector spaces <fr:tex display="inline">\mathbb {R}^n</fr:tex> and <fr:tex display="inline">\mathbb {R}^m</fr:tex>.
-    Let <fr:tex display="inline">e_1, e_2, \ldots , e_n</fr:tex> be the standard basis of <fr:tex display="inline">\mathbb {R}^n</fr:tex> and <fr:tex display="inline">f_1, f_2, \ldots , f_m</fr:tex> be the standard basis of <fr:tex display="inline">\mathbb {R}^m</fr:tex>.
-    Then the matrix representation of <fr:tex display="inline">T</fr:tex> is the <fr:tex display="inline">m \times  n</fr:tex> matrix <fr:tex display="inline">A</fr:tex> such that for <fr:tex display="inline">1\leq  j\leq  n</fr:tex>:
-    <fr:tex display="block">         T(e_j) = \sum _{i=1}^m A_{ij} f_i     </fr:tex>
-    where the matrix representation of <fr:tex display="inline">T</fr:tex> is given by the <fr:tex display="inline">m\times  n</fr:tex> matrix with entries <fr:tex display="inline">A_{ij}</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>The last major topic in this section is the definition of the <fr:link type="local" href="def-003X.xml" addr="def-003X" title="Dual Space">dual space</fr:link>.
-        In our discussion, we only concern the dual space of <fr:tex display="inline">\mathbb {R}^n</fr:tex> which is denoted as <fr:tex display="inline">(\mathbb {R}^n)^*</fr:tex>.
-        Now let&apos;s consider the <fr:strong>dual basis</fr:strong> of <fr:tex display="inline">(\mathbb {R}^n)^*</fr:tex> which is denoted as <fr:tex display="inline">\{T_1, \cdots , T_n\}</fr:tex>, 
-        which is defined by:
-        <fr:tex display="block">             T_i(e_j) = e^i(e_j) = \langle  e^i, e_j \rangle  = \delta _{j}^i         </fr:tex>
-        where <fr:tex display="inline">\delta _{ij}</fr:tex> is the <fr:link type="local" href="def-001P.xml" addr="def-001P" title="Kronecker Delta">Kronecker delta</fr:link>. We say that <fr:tex display="inline">T_i</fr:tex> is dual to the vector <fr:tex display="inline">e_i</fr:tex>.
-        Note that we also denote <fr:tex display="inline">T_i</fr:tex> as <fr:tex display="inline">e^i</fr:tex> using superscript notation. And the notation <fr:tex display="inline">\langle  e^i, e_j \rangle </fr:tex> d
-        indicates the products of row vector <fr:tex display="inline">e^i</fr:tex> and column vector <fr:tex display="inline">e_j</fr:tex> (Usually used in quantum computing).
-        <fr:tex display="block">             \alpha (v) = \langle  \alpha , v \rangle  = [a,b] \times  \begin {bmatrix}                 x \\ y             \end {bmatrix} = ax + by         </fr:tex>
-        This explains wht we always denote elements of the vector space as column vectors, because elements of the dual space 
-        are written as row vectors and its very important to distinguish between them.</fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>870</fr:anchor><fr:addr type="user">math-0007</fr:addr><fr:route>math-0007.xml</fr:route><fr:title text="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:title><fr:taxon>Differential Geometry</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>4</fr:month><fr:day>5</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Notes about multi-variable calculus, geometry of space and linear algebra.
-    Refer to <fr:link type="external" href="A%20Visual%20Introduction%20to%20Differential%20Forms%20and%20Calculus%20on%20Manifolds">df-cm-2018</fr:link>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>745</fr:anchor><fr:addr type="machine">#306</fr:addr><fr:route>unstable-306.xml</fr:route><fr:title text="Review of Vector Spaces">Review of Vector Spaces</fr:title><fr:date><fr:year>2024</fr:year><fr:month>4</fr:month><fr:day>5</fr:day></fr:date><fr:authors></fr:authors><fr:parent>math-0007</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>We now start with introducing the vector space over the field of real numbers <fr:tex display="inline">\mathbb {R}</fr:tex>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>746</fr:anchor><fr:addr type="user">def-000H</fr:addr><fr:route>def-000H.xml</fr:route><fr:title text="Vector Space">Vector Space</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A vector space over a <fr:link type="local" href="def-0006.xml" addr="def-0006" title="Field">field</fr:link> <fr:tex display="inline">F</fr:tex> is a non-empty set <fr:tex display="inline">V</fr:tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
-    In this context, the elements of <fr:tex display="inline">V</fr:tex> are commonly called <fr:strong>vectors</fr:strong>, and the elements of <fr:tex display="inline">F</fr:tex> are called <fr:strong>scalars</fr:strong>.
-    <fr:ul><fr:li>Commutativity: <fr:tex display="inline">             \forall  x, y \in  V, x + y = y + x         </fr:tex></fr:li>
-        <fr:li>Associativity: <fr:tex display="inline">             \forall  x, y, z \in  V, (x + y) + z = x + (y + z)         </fr:tex></fr:li>
-        <fr:li>Additive Identity: <fr:tex display="inline">             \exists  0 \in  V \text { such that } \forall  x \in  V, x + 0 = x         </fr:tex></fr:li>
-        <fr:li>Multiplicative Identity: <fr:tex display="inline">             \forall  x \in  V, 1x = x         </fr:tex></fr:li>
-        <fr:li>Additive Inverse: <fr:tex display="inline">             \forall  x \in  V, \exists  y \in  V \text { such that } x + y = 0         </fr:tex></fr:li>
-        <fr:li>Distributivity: <fr:tex display="inline">             \forall  x, y \in  V, \forall  c, d \in  F, c(x + y) = cx + cy, (c + d)x = cx + dx         </fr:tex></fr:li></fr:ul></fr:p><fr:p>Elements of a vector space are called <fr:strong>vectors</fr:strong> or <fr:strong>points</fr:strong>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Use <fr:tex display="inline">\mathbb {R}^2</fr:tex> as an example we can see (Note that we always treat elements of vector spaces as 
-        column vectors and never as row vectors):
-        <fr:tex display="block">             c \cdot  \begin {bmatrix}                 a \\ b             \end {bmatrix} = \begin {bmatrix}                 c \cdot  a \\ c \cdot  b             \end {bmatrix}         </fr:tex></fr:p><fr:p>Now we will consider a certain type of transformation between vector spaces called a <fr:link type="local" href="def-0025.xml" addr="def-0025" title="Linear Map"><fr:strong>linear transformation</fr:strong></fr:link>.
-        Suppose <fr:tex display="inline">T</fr:tex> is a mapping between <fr:tex display="inline">\mathbb {R}^n</fr:tex> and <fr:tex display="inline">\mathbb {R}^m</fr:tex>, that is <fr:tex display="inline">T:\mathbb {R}^n\to \mathbb {R}^m</fr:tex>, then <fr:tex display="inline">T</fr:tex> is a linear transformation if:
-        <fr:tex display="block">             T(c \cdot  \vec {v}) = c \cdot  T(\vec {v})             \\              T(\vec {v} + \vec {w}) = T(\vec {v}) + T(\vec {w})         </fr:tex>
-        If <fr:tex display="inline">T</fr:tex> is a linear transformation from <fr:tex display="inline">\mathbb {R}^m</fr:tex> to <fr:tex display="inline">\mathbb {R}</fr:tex> we simply call it a <fr:strong>linear function</fr:strong> or a <fr:strong>linear functional</fr:strong>.</fr:p><fr:p>We now turn our attention to the relationship between linear transformation and matrices. 
-        We just stick to vector spaces <fr:tex display="inline">\mathbb {R}^n</fr:tex> and the standard basis made up of the <fr:strong>Euclidian unit vectors</fr:strong>.
-        In order to write linear transformation <fr:tex display="inline">T:\mathbb {R}^n\to \mathbb {R}^m</fr:tex> as a matrix we need ordered bases for both <fr:tex display="inline">\mathbb {R}^n</fr:tex> and <fr:tex display="inline">\mathbb {R}^m</fr:tex>.
-        We can use the intuitively obvious order <fr:tex display="inline">e_1 &lt; e_2 &lt; \cdots  &lt; e_n</fr:tex>.
-        Now we can give formal definition of the matrix representation of a linear transformation.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>747</fr:anchor><fr:addr type="user">def-003W</fr:addr><fr:route>def-003W.xml</fr:route><fr:title text="Matrix Representation of Linear Transformation over {R}^n">Matrix Representation of Linear Transformation over <fr:tex display="inline">\mathbb {R}^n</fr:tex></fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Suppose that <fr:tex display="inline">T:\mathbb {R}^n\to \mathbb {R}^m</fr:tex> is a linear transformation between vector spaces <fr:tex display="inline">\mathbb {R}^n</fr:tex> and <fr:tex display="inline">\mathbb {R}^m</fr:tex>.
-    Let <fr:tex display="inline">e_1, e_2, \ldots , e_n</fr:tex> be the standard basis of <fr:tex display="inline">\mathbb {R}^n</fr:tex> and <fr:tex display="inline">f_1, f_2, \ldots , f_m</fr:tex> be the standard basis of <fr:tex display="inline">\mathbb {R}^m</fr:tex>.
-    Then the matrix representation of <fr:tex display="inline">T</fr:tex> is the <fr:tex display="inline">m \times  n</fr:tex> matrix <fr:tex display="inline">A</fr:tex> such that for <fr:tex display="inline">1\leq  j\leq  n</fr:tex>:
-    <fr:tex display="block">         T(e_j) = \sum _{i=1}^m A_{ij} f_i     </fr:tex>
-    where the matrix representation of <fr:tex display="inline">T</fr:tex> is given by the <fr:tex display="inline">m\times  n</fr:tex> matrix with entries <fr:tex display="inline">A_{ij}</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>The last major topic in this section is the definition of the <fr:link type="local" href="def-003X.xml" addr="def-003X" title="Dual Space">dual space</fr:link>.
-        In our discussion, we only concern the dual space of <fr:tex display="inline">\mathbb {R}^n</fr:tex> which is denoted as <fr:tex display="inline">(\mathbb {R}^n)^*</fr:tex>.
-        Now let&apos;s consider the <fr:strong>dual basis</fr:strong> of <fr:tex display="inline">(\mathbb {R}^n)^*</fr:tex> which is denoted as <fr:tex display="inline">\{T_1, \cdots , T_n\}</fr:tex>, 
-        which is defined by:
-        <fr:tex display="block">             T_i(e_j) = e^i(e_j) = \langle  e^i, e_j \rangle  = \delta _{j}^i         </fr:tex>
-        where <fr:tex display="inline">\delta _{ij}</fr:tex> is the <fr:link type="local" href="def-001P.xml" addr="def-001P" title="Kronecker Delta">Kronecker delta</fr:link>. We say that <fr:tex display="inline">T_i</fr:tex> is dual to the vector <fr:tex display="inline">e_i</fr:tex>.
-        Note that we also denote <fr:tex display="inline">T_i</fr:tex> as <fr:tex display="inline">e^i</fr:tex> using superscript notation. And the notation <fr:tex display="inline">\langle  e^i, e_j \rangle </fr:tex> d
-        indicates the products of row vector <fr:tex display="inline">e^i</fr:tex> and column vector <fr:tex display="inline">e_j</fr:tex> (Usually used in quantum computing).
-        <fr:tex display="block">             \alpha (v) = \langle  \alpha , v \rangle  = [a,b] \times  \begin {bmatrix}                 x \\ y             \end {bmatrix} = ax + by         </fr:tex>
-        This explains wht we always denote elements of the vector space as column vectors, because elements of the dual space 
-        are written as row vectors and its very important to distinguish between them.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>748</fr:anchor><fr:addr type="machine">#307</fr:addr><fr:route>unstable-307.xml</fr:route><fr:title text="Dot Products">Dot Products</fr:title><fr:date><fr:year>2024</fr:year><fr:month>4</fr:month><fr:day>5</fr:day></fr:date><fr:authors></fr:authors><fr:parent>math-0007</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>In linear algebra, <fr:strong>dot product</fr:strong> or <fr:strong>scalar product</fr:strong> is an operation that takes two vectors and returns a scalar.
-        Geometrically, it is the product of the Euclidean magnitudes of the two vectors and the cosine of the angle between them.
-        Dot product is also used to define lengths and angles.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>749</fr:anchor><fr:addr type="user">def-0041</fr:addr><fr:route>def-0041.xml</fr:route><fr:title text="Dot Product (Coordinate Form)">Dot Product (Coordinate Form)</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>dot product</fr:strong> of two vectors <fr:tex display="inline">\vec {a} = (a_1, a_2, \cdots , a_n)</fr:tex> and <fr:tex display="inline">\vec {b} = (b_1, b_2, \cdots , b_n)</fr:tex> is defined as
-    <fr:tex display="block">         \vec {a}\cdot \vec {b} = a_1b_1 + a_2b_2 + \cdots  + a_nb_n = \sum _{i=1}^n a_ib_i.     </fr:tex>
-    The dot product is also called the <fr:strong>inner product</fr:strong> or <fr:strong>scalar product</fr:strong>.
-    The dot product satisfies the following properties:
-    <fr:ul><fr:li><fr:strong>Commutative</fr:strong>: <fr:tex display="inline">\vec {a}\cdot \vec {b} = \vec {b}\cdot \vec {a}</fr:tex></fr:li>
-        <fr:li><fr:strong>Distributive</fr:strong>: <fr:tex display="inline">\vec {a}\cdot (\vec {b} + \vec {c}) = \vec {a}\cdot \vec {b} + \vec {a}\cdot \vec {c}</fr:tex></fr:li>
-        <fr:li><fr:strong>Bilinear</fr:strong>: <fr:tex display="inline">\vec {a}\cdot (k\vec {b}) = k(\vec {a}\cdot \vec {b}) = (\vec {a}\cdot  k\vec {b})</fr:tex></fr:li>
-        <fr:li><fr:strong>Scalar Multiplication</fr:strong>: <fr:tex display="inline">(c_1\vec {a}) \cdot  (c_2\vec {b}) = c_1c_2(\vec {a}\cdot \vec {b})</fr:tex></fr:li>
-        <fr:li><fr:strong>Orthogonality</fr:strong>: If <fr:tex display="inline">\vec {a}\cdot \vec {b} = 0</fr:tex>, then <fr:tex display="inline">\vec {a}</fr:tex> and <fr:tex display="inline">\vec {b}</fr:tex> are <fr:strong>orthogonal</fr:strong></fr:li>
-        <fr:li><fr:strong>Product Rule</fr:strong>: If <fr:tex display="inline">\vec {a}</fr:tex> and <fr:tex display="inline">\vec {b}</fr:tex> are vector valued differentiable functions then the derivative 
-            of <fr:tex display="inline">\vec {a}\cdot \vec {b}</fr:tex> is given by the rule <fr:tex display="inline">(\vec {a}\cdot \vec {b})&apos; = \vec {a}&apos;\cdot \vec {b} + \vec {a}\cdot \vec {b}&apos;</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>750</fr:anchor><fr:addr type="user">def-0042</fr:addr><fr:route>def-0042.xml</fr:route><fr:title text="Dot Product (Geometric Form)">Dot Product (Geometric Form)</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>In <fr:strong>Euclidean space</fr:strong>, a <fr:strong>Euclidean vector</fr:strong> is a geometric object that possesses both 
-    a norm and a direction. The <fr:strong>dot product</fr:strong> of two vectors <fr:tex display="inline">\vec {a}</fr:tex> and <fr:tex display="inline">\vec {b}</fr:tex> is defined as
-    <fr:tex display="block">         \vec {a}\cdot \vec {b} = \lVert \vec {a}\rVert \lVert \vec {b}\rVert \cos \theta      </fr:tex>
-    where <fr:tex display="inline">\theta </fr:tex> is the angle between the two vectors.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>The geometric definition of dot product helps us express the projection of one vector onto another as well as the component of 
-        one vector in the direction of another. By simple geometry we can derive the formula for the <fr:strong>projection</fr:strong>
-        <fr:tex display="block">             \text {proj}_{\vec {a}}\vec {b} = \frac {\vec {a}\cdot \vec {b}}{\lVert \vec {a}\rVert }\frac {\vec {a}}{\lVert \vec {a}\rVert }         </fr:tex>
-        and the <fr:strong>component</fr:strong> of <fr:tex display="inline">\vec {b}</fr:tex> in the direction <fr:tex display="inline">\vec {a}</fr:tex> is given by
-        <fr:tex display="block">             \text {comp}_{\vec {a}}\vec {b} = \lVert \text {proj}_{\vec {a}}\vec {b}\rVert  = \frac {\vec {a}\cdot \vec {b}}{\lVert \vec {a}\rVert }         </fr:tex></fr:p><fr:p>Two points determine a line, and so does a point and a vector. Define the base point vector <fr:tex display="inline">\vec {b}=(x,y,z)</fr:tex> and
-        the direction vector <fr:tex display="inline">\vec {v}=(a,b,c)</fr:tex> then the line is given by <fr:tex display="inline">\vec {r}(t)</fr:tex>
-        <fr:tex display="block">             \vec {r}(t) = t\vec {v} + \vec {b} = (at+x, bt+y, ct+z)         </fr:tex>
-        Solving for <fr:tex display="inline">t</fr:tex> in the equation we get
-        <fr:tex display="block">             t = \frac {x-at}{a} = \frac {y-bt}{b} = \frac {z-ct}{c}         </fr:tex>
-        which is the <fr:strong>equation of line</fr:strong>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>751</fr:anchor><fr:addr type="machine">#308</fr:addr><fr:route>unstable-308.xml</fr:route><fr:title text="Volume and Determinants">Volume and Determinants</fr:title><fr:date><fr:year>2024</fr:year><fr:month>4</fr:month><fr:day>5</fr:day></fr:date><fr:authors></fr:authors><fr:parent>math-0007</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>determinant</fr:strong> has various properties and applications in linear algebra and geometry.
-        For us the most useful thing about it will be how it relates to volume:
-        the determinant of a matrix gives the <fr:strong>signed volume</fr:strong> of the parallelepiped that 
-        is generated by the vectors given by the matrix columns.</fr:p><fr:p>Determinants can be introduced in a variety of different ways but many of them are not at all clear.
-        It usually relates to volume hence we will actually use our intuitive understanding of volumes and 
-        three properties that we expected volume to have to derive the determinant (It is <fr:strong>uniquely</fr:strong> determined!).</fr:p><fr:p>So how do we expect volume to behave?
-        First we expect a unit cube to have a volume of one.
-        Second we expect the <fr:strong>degenerate</fr:strong> parallelepiped to have a volume of zero. Basically in <fr:tex display="inline">n</fr:tex> dimensions any 
-        <fr:tex display="inline">n-1</fr:tex> dimensions object has zero <fr:tex display="inline">n</fr:tex>-D volume.
-        Third we expect that volumes to be <fr:strong>linear</fr:strong>.
-        Now with these three properties we move to the actual mathematics.</fr:p><fr:p>Suppose we have a parallelepiped <fr:tex display="inline">\mathscr {P}\in \mathbb {R}^n</fr:tex> whose edges are given by <fr:tex display="inline">v_1, v_2, \cdots , v_n\in \mathbb {R}^n</fr:tex>.
-        We sat that the parallelepiped <fr:tex display="inline">\mathscr {P}</fr:tex> is the <fr:strong>span</fr:strong> of the vectors <fr:tex display="inline">v_1, v_2, \cdots , v_n</fr:tex> and 
-        write <fr:tex display="inline">\mathscr {P}=\text {span}\{v_1, v_2, \cdots , v_n\}</fr:tex> (Note that this span is different from linear span).
-        We want to find function <fr:tex display="inline">D:\mathbb {R}^{n\times  n}\to \mathbb {R}</fr:tex> which takes <fr:tex display="inline">v_1, v_2, \cdots , v_n</fr:tex> or a matrix with <fr:tex display="inline">v_1, v_2, \cdots , v_n</fr:tex> as columns
-        to a real number which is the volume of <fr:tex display="inline">\mathscr {P}</fr:tex>. Now we present the three properties in mathematical form.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>752</fr:anchor><fr:addr type="machine">#309</fr:addr><fr:route>unstable-309.xml</fr:route><fr:title text="Properties of Volume">Properties of Volume</fr:title><fr:date><fr:year>2024</fr:year><fr:month>4</fr:month><fr:day>5</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#308</fr:parent></fr:frontmatter><fr:mainmatter><fr:ul><fr:li><fr:tex display="inline"> D(I) = I </fr:tex> where <fr:tex display="inline">I = [e_1, e_2, \cdots , e_n]</fr:tex> is the identity matrix.</fr:li>
-            <fr:li><fr:tex display="inline"> D(v_1, v_2, \cdots , v_n) = 0 </fr:tex> if <fr:tex display="inline">v_i = v_j</fr:tex> for any <fr:tex display="inline">i\neq  j</fr:tex>.</fr:li>
-            <fr:li><fr:tex display="inline"> D(v_1, \cdots , v_{j-1}, v+cw, v_{j+1}, \cdots , v_n) \\                  = D(v_1, \cdots , v_{j-1}, v, v_{j+1}, \cdots , v_n) + cD(v_1, \cdots , v_{j-1}, w, v_{j+1}, \cdots , v_n) </fr:tex>
-                for any <fr:tex display="inline">1 \leq  j \leq  n</fr:tex>, that is, <fr:tex display="inline">D</fr:tex> is linear.</fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Now we use these properties of volume to derive several other useful properties.
-        The first property is that the volumes are signed.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>753</fr:anchor><fr:addr type="machine">#310</fr:addr><fr:route>unstable-310.xml</fr:route><fr:title text="Derived Properties of Volume Function">Derived Properties of Volume Function</fr:title><fr:date><fr:year>2024</fr:year><fr:month>4</fr:month><fr:day>5</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#308</fr:parent></fr:frontmatter><fr:mainmatter><fr:ul><fr:li><fr:tex display="inline">D</fr:tex> is alternating, if we switch any two vectors the sign changes.
-                <fr:tex display="block">                     D(v_1, \cdots , v_i, \cdots , v_j, \cdots , v_n) = -D(v_1, \cdots , v_j, \cdots , v_i, \cdots , v_n)                 </fr:tex></fr:li> 
-            <fr:li>If <fr:tex display="inline">v_1, v_2, \cdots , v_n</fr:tex> are <fr:link type="local" href="def-000Q.xml" addr="def-000Q" title="Linearly dependent">linear dependent</fr:link> then
-                <fr:tex display="block">                     D(v_1, v_2, \cdots , v_n) = 0                 </fr:tex></fr:li>
-            <fr:li>Adding a multiple of one vector to another does not change the determinant.</fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>We almost ready to derive the formula for determinant. The final ingredient we need to do is <fr:strong>permutations</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>754</fr:anchor><fr:addr type="user">def-003Y</fr:addr><fr:route>def-003Y.xml</fr:route><fr:title text="Permutation">Permutation</fr:title><fr:taxon>Defintion</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>permutation</fr:strong> of a set <fr:tex display="inline">S</fr:tex> is a bijection from <fr:tex display="inline">S</fr:tex> to itself.
-    The set of permutation of <fr:tex display="inline">\{1,\cdots , n\}</fr:tex> is usually denoted by <fr:tex display="inline">S_n</fr:tex>.
-    We often denote a particular permutation <fr:tex display="inline">\sigma </fr:tex> by <fr:strong>Cauchy&apos;s two-line notation</fr:strong>:
-    <fr:tex display="block">         \begin {bmatrix}             1 &amp; 2 &amp; \cdots  &amp; n \\             \sigma (1) &amp; \sigma (2) &amp; \cdots  &amp; \sigma (n)         \end {bmatrix}     </fr:tex>
-    or <fr:strong>Cauchy&apos;s one-line notation</fr:strong>: <fr:tex display="inline">(\sigma (1),\sigma (2),\cdots ,\sigma (n))</fr:tex>.
-    Another common notation is the <fr:strong>cycle notation</fr:strong>:
-    <fr:tex display="block">         (i_1\ i_2\ \cdots \ i_k)     </fr:tex> which means <fr:tex display="inline">i_1 \to  i_2 \to  \cdots  \to  i_k \to  i_1</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>755</fr:anchor><fr:addr type="user">def-003Z</fr:addr><fr:route>def-003Z.xml</fr:route><fr:title text="Transposition">Transposition</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:link type="local" href="def-003Y.xml" addr="def-003Y" title="Permutation">permutation</fr:link> in which only two elements are exchanged is called a <fr:strong>transposition</fr:strong>.
-    The notation is <fr:tex display="inline">\tau _{i,j}</fr:tex> where <fr:tex display="inline">i</fr:tex> and <fr:tex display="inline">j</fr:tex> are the two elements exchanged while the others remain fixed.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Notice that the composition of two permutations is also a permutation. 
-        And for any permutation <fr:tex display="inline">\sigma </fr:tex> we can perform a series of transpositions to get the identity permutation.
-        It turns out that the count of the number of transpositions needed to get the identity permutation is always the same,
-        which is called the <fr:strong>parity</fr:strong> of the permutation.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>756</fr:anchor><fr:addr type="user">def-0040</fr:addr><fr:route>def-0040.xml</fr:route><fr:title text="Sign of Permutation">Sign of Permutation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>sign</fr:strong> of a <fr:link type="local" href="def-003Y.xml" addr="def-003Y" title="Permutation">permutation</fr:link> <fr:tex display="inline">\sigma \in  S_n</fr:tex> is a function <fr:tex display="inline">\text {sgn}:S_n\to \{-1,1\}</fr:tex> defined as
-    <fr:tex display="inline">\text {sgn}(\sigma ) = 1</fr:tex> if <fr:tex display="inline">\sigma </fr:tex> requires an even number of permutations and 
-    <fr:tex display="inline">\text {sgn}(\sigma ) = -1</fr:tex> if <fr:tex display="inline">\sigma </fr:tex> requires an odd number of permutations to get the identity permutation.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Now we define the permutation of unit vectors <fr:tex display="inline">E_\sigma  = [e_{\sigma (1)}, e_{\sigma (2)}, \cdots , e_{\sigma (n)}]</fr:tex>.
-        We got the property that
-        <fr:tex display="block">             D(E_\sigma ) = \text {sgn}(\sigma )D(I) = \text {sgn}(\sigma )         </fr:tex>
-        Now we have all the pieces necessary to find a formula that will give the volume of the parallelepiped spanned
-        by <fr:tex display="inline">n</fr:tex> vectors.
-        <fr:tex display="block">             \begin {align*}                 D\left (\begin {bmatrix}                     a_{11} &amp; a_{12} &amp; \cdots  &amp; a_{1n} \\                     a_{21} &amp; a_{22} &amp; \cdots  &amp; a_{2n} \\                     \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                     a_{n1} &amp; a_{n2} &amp; \cdots  &amp; a_{nn}                 \end {bmatrix}\right ) &amp;= \sum _{i_1=1}^n a_{i_11}D\left (\begin {bmatrix}                     | &amp; a_{12} &amp; \cdots  &amp; a_{1n} \\                     e_{i_1} &amp; a_{22} &amp; \cdots  &amp; a_{2n} \\                     | &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                     | &amp; a_{n2} &amp; \cdots  &amp; a_{nn}                 \end {bmatrix}\right ) \\                  &amp;= \sum _{i_1=1}^n a_{i_11} \sum _{i_2=1}^n a_{i_22}D\left (\begin {bmatrix}                     | &amp; | &amp; \cdots  &amp; a_{1n} \\                     e_{i_1} &amp; e_{i_2} &amp; \cdots  &amp; a_{2n} \\                     | &amp; | &amp; \vdots  &amp; \vdots  \\                     | &amp; | &amp; \cdots  &amp; a_{nn}                 \end {bmatrix}\right ) \\                 &amp;= \vdots  \\                  &amp;= \sum _{i_1, i_2, \cdots , i_n = 1}^{n} a_{i_11}a_{i_22}\cdots  a_{i_nn}D\left (                     \begin {bmatrix}                         | &amp; | &amp;  &amp; | \\                         e_{i_1} &amp; e_{i_2} &amp; \cdots  &amp; e_{i_n} \\                         | &amp; | &amp;  &amp; | \\                     \end {bmatrix}                 \right ) \\                  &amp;= \sum _{\sigma \in  S_n} a_{\sigma (1)1}\cdots  a_{\sigma (n)n}                 D\left (                     \begin {bmatrix}                         | &amp; | &amp;  &amp; | \\                         e_{\sigma (1)} &amp; e_{\sigma (2)} &amp; \cdots  &amp; e_{\sigma (n)} \\                         | &amp; | &amp;  &amp; | \\                     \end {bmatrix}                 \right ) \\                  &amp;= \sum _{\sigma \in  S_n} a_{\sigma (1)1}a_{\sigma (2)2}\cdots  a_{\sigma (n)n} \text {sgn}(\sigma ) \\                  &amp;= \sum _{\sigma \in  S_n} \text {sgn}(\sigma ) \prod _{i=1}^n a_{\sigma (i)i}             \end {align*}         </fr:tex>
-        In the forth step we transform the terms because the value of <fr:tex display="inline">D</fr:tex> is zero for any <fr:tex display="inline">{i_j} = {i_k}</fr:tex>,
-        non-zero terms should be permutation of <fr:tex display="inline">S_n</fr:tex>.</fr:p><fr:p>It&apos;s easy to validate that the following properties of the determinant holds:
-        <fr:ul><fr:li><fr:tex display="inline">D(AB) = D(A)D(B)</fr:tex></fr:li>
-            <fr:li><fr:tex display="inline">D(A) = D(A^T)</fr:tex></fr:li></fr:ul>
-        The second statement for transpose of <fr:tex display="inline">A</fr:tex> indicates that all the properties above also holds for row as well.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>757</fr:anchor><fr:addr type="machine">#311</fr:addr><fr:route>unstable-311.xml</fr:route><fr:title text="Derivatives of Multivariable Functions">Derivatives of Multivariable Functions</fr:title><fr:date><fr:year>2024</fr:year><fr:month>4</fr:month><fr:day>5</fr:day></fr:date><fr:authors></fr:authors><fr:parent>math-0007</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>In this section we will introduce the idea of the derivative of a multivariable function. 
-        Recall that a function <fr:tex display="inline">f:\mathbb {R}\to \mathbb {R}</fr:tex> the derivative of <fr:tex display="inline">f</fr:tex> at <fr:tex display="inline">x_0\in \mathbb {R}</fr:tex> is given by
-        <fr:tex display="block">             f&apos;(x_0) = \lim _{h\to  0} \frac {f(x_0+h) - f(x_0)}{h}         </fr:tex>
-        if the limit exists. Now let&apos;s do some transformations:
-        <fr:tex display="block">             \begin {align*}                 &amp; f&apos;(x_0) = \lim _{h\to  0} \frac {f(x_0+h) - f(x_0)}{h} \\                 \implies  &amp; \lim _{h\to  0} \frac {f(x_0+h) - f(x_0) -f&apos;(x_0)h }{h} = 0 \\                 \implies  &amp; \lim _{x\to  x_0} \frac {f(x) - f(x_0) - f&apos;(x_0)(x-x_0)}{x-x_0} = 0 \\                  \implies  &amp; \lim _{x\to  x_0} \frac {|f(x) - f(x_0) - f&apos;(x_0)(x-x_0)|}{|x-x_0|} = 0             \end {align*}         </fr:tex></fr:p><fr:p>Since <fr:tex display="inline">f&apos;(x_0)</fr:tex> represents the slope of the line tangent to the graph of <fr:tex display="inline">f</fr:tex> at <fr:tex display="inline">(x_0, f(x_0))</fr:tex>,
-        differentiability of <fr:tex display="inline">f</fr:tex> at <fr:tex display="inline">x_0</fr:tex> means that there exists a number <fr:tex display="inline">m</fr:tex> st
-        <fr:tex display="block">             \lim _{x\to  x_0} \frac {|f(x) - f(x_0) - m(x-x_0)|}{|x-x_0|} = 0         </fr:tex>
-        Now consider the function <fr:tex display="inline">T:\mathbb {R}\to \mathbb {R}</fr:tex> where <fr:tex display="inline">T(s) = ms</fr:tex>
-        <fr:tex display="block">             T(s+t) = m(s+t) = ms + mt = T(s) + T(t)             \\              T(cs) = mcs = c(ms) = cT(s)         </fr:tex>
-        then <fr:tex display="inline">T</fr:tex> is a linear transformation. In fact <fr:tex display="inline">T</fr:tex> is the linear function that most closely approximates the 
-        function <fr:tex display="inline">f</fr:tex> at the point <fr:tex display="inline">(x_0, f(x_0))</fr:tex>. So for <fr:tex display="inline">x</fr:tex> values that are very close to <fr:tex display="inline">x_0</fr:tex> we have
-        <fr:tex display="block">             f(x) \approx  m(x-x_0) + f(x_0)         </fr:tex></fr:p><fr:p>Now let&apos;s generalize the concept of derivatives to functions of the form <fr:tex display="inline">f:\mathbb {R}^n\to \mathbb {R}^m</fr:tex>.
-        We assume the function <fr:tex display="inline">f</fr:tex> has the form
-        <fr:tex display="block">             \begin {align*}                 &amp;f(x_1, x_2, \cdots , x_n) =                  \\                  &amp;(f_1(x_1, x_2, \cdots , x_n), f_2(x_1, x_2, \cdots , x_n), \cdots , f_m(x_1, x_2, \cdots , x_n))             \end {align*}         </fr:tex>
-        We want to search for this linear transformation which we will denoted by <fr:tex display="inline">Df</fr:tex>,
-        that most closely approximates this function <fr:tex display="inline">f:\mathbb {R}^n\to \mathbb {R}^m</fr:tex> at some specific point <fr:tex display="inline">x_0=(x_{1_0}, x_{2_0}, \cdots , x_{n_0}) \in  \mathbb {R}^n</fr:tex>.
-        If <fr:tex display="inline">f</fr:tex> is differentiable at <fr:tex display="inline">x_0</fr:tex> then there exists a linear transformation <fr:tex display="inline">Df(x_0):\mathbb {R}^n\to \mathbb {R}^m</fr:tex> such that
-        <fr:tex display="block">             \lim _{x\to  x_0} \frac {                 \lVert                      f(x) - f(x_0) - Df(x_0)(x-x_0)                 \rVert              }{\lVert x-x_0\rVert } = 0         </fr:tex>
-        The <fr:tex display="inline">\lVert \cdot \rVert </fr:tex> represents the <fr:strong>Euclidean norm</fr:strong> of the vector (Multi-dimensional version of the absolute value)
-        <fr:tex display="block">             \lVert \vec {x}\rVert  = \sqrt {x_1^2 + x_2^2 + \cdots  + x_n^2} = \sqrt {\sum _{i=1}^n x_i^2}         </fr:tex>
-        which is just the length of the vector. This allows us to perform dividing.</fr:p><fr:p>As before we have
-        <fr:tex display="block">             f(x) \approx  Df(x_0)(x-x_0) + f(x_0)         </fr:tex>
-        Now we want to write <fr:tex display="inline">Df(x)</fr:tex> as a matrix. Denote the basis of <fr:tex display="inline">\mathbb {R}^n</fr:tex> as <fr:tex display="inline">e_j</fr:tex> and the basis of <fr:tex display="inline">\mathbb {R}^m</fr:tex> as <fr:tex display="inline">f_i</fr:tex>.
-        Then we want to find <fr:tex display="inline">a_{ij}</fr:tex> st
-        <fr:tex display="block">             Df(x)(e_j) = \sum _{i=1}^{m} a_{ij} f_j = \begin {bmatrix}                 a_{1j} \\ a_{2j} \\ \vdots  \\ a_{mj}             \end {bmatrix}         </fr:tex>
-        In other words, the <fr:tex display="inline">i</fr:tex>-th component of the <fr:tex display="inline">j</fr:tex>-th column of <fr:tex display="inline">Df(x)</fr:tex> is just the <fr:tex display="inline">i</fr:tex>-th component of the <fr:tex display="inline">Df(x)(e_j)</fr:tex></fr:p><fr:p>Recall from vector calculus that given a function <fr:tex display="inline">f:\mathbb {R}^n\to \mathbb {R}</fr:tex> we defined the <fr:strong>partial derivative</fr:strong> of <fr:tex display="inline">f</fr:tex> with respect to the <fr:tex display="inline">x_j</fr:tex> as 
-        <fr:tex display="block">             \frac {\partial  f}{\partial  x_j} = \lim _{h\to 0}             \frac {f(x_1,\cdots ,x_j+h,\cdots ,x_n) - f(x_1,\cdots ,x_n)}{h}         </fr:tex>
-        Hence we can define the partial derivatives for each <fr:tex display="inline">f_i (1\leq  i\leq  m)</fr:tex> with respect to each <fr:tex display="inline">x_j (1\leq  j\leq  n)</fr:tex>.
-        <fr:tex display="block">             \frac {\partial  f_i}{\partial  x_j} = \lim _{h\to 0}             \frac {f_i(x_1,\cdots ,x_j+h,\cdots ,x_n) - f_i(x_1,\cdots ,x_n)}{h}         </fr:tex>
-        Thus we have
-        <fr:tex display="block">             \frac {\partial  f_i}{\partial  x_j} = a_{ij}         </fr:tex>
-        To find <fr:tex display="inline">a_{ij}</fr:tex> of <fr:tex display="inline">Df(x_0)</fr:tex> we need to find the <fr:tex display="inline">i</fr:tex>-th element of <fr:tex display="inline">Df(x_0)(e_j)</fr:tex>. Let
-        <fr:tex display="block">             x = \begin {bmatrix}                 x_{1_0} \\ x_{2_0} \\ \vdots  \\ x_{n_0}             \end {bmatrix} + \begin {bmatrix}                 0 \\ \vdots  \\ 1 \\ \vdots  \\ 0             \end {bmatrix} = x_0 + he_j         </fr:tex>
-        We have 
-        <fr:tex display="block">             \lim _{x\to  x_0}\frac {\lVert f(x)-f(x_0)-Df(x_0)(he_j)\rVert }{\lVert he_j\rVert }             \\ \implies               \lim _{h\to 0}\frac {\lVert                  f(x_0+he_j) - f(x_0) -hDf(x_0)(e_j)             \rVert }{\lVert h\rVert } = 0         </fr:tex>
-        The component is given by 
-        <fr:tex display="block">             \lim _{h\to 0}\frac {\lVert f_i(x_0+he_j)-f_i(x_0)-ha_{ij}\rVert }{\lVert h\rVert } = 0             \\ \implies               a_{ij} = \lim _{h\to 0}\frac {f_i(x_0+he_j) - f_i(x_0)}{h}         </fr:tex>
-        which is exactly <fr:tex display="inline">\frac {\partial  f_i}{\partial  x_j}</fr:tex>. Thus the matrix representation of <fr:tex display="inline">Df(x)</fr:tex> is given by 
-        a matrix called the <fr:strong>Jacobin matrix</fr:strong> of <fr:tex display="inline">f</fr:tex>.
-        <fr:tex display="block">             Df(x) = \begin {bmatrix}                 \frac {\partial  f_1}{\partial  x_1} &amp; \frac {\partial  f_1}{\partial  x_2} &amp; \cdots  &amp; \frac {\partial  f_1}{\partial  x_n} \\                 \frac {\partial  f_2}{\partial  x_1} &amp; \frac {\partial  f_2}{\partial  x_2} &amp; \cdots  &amp; \frac {\partial  f_2}{\partial  x_n} \\                 \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                 \frac {\partial  f_m}{\partial  x_1} &amp; \frac {\partial  f_m}{\partial  x_2} &amp; \cdots  &amp; \frac {\partial  f_m}{\partial  x_n}             \end {bmatrix} = \left [                 \frac {\partial  f_i}{\partial  x_j}             \right ]         </fr:tex>
-        where <fr:tex display="inline">i</fr:tex> ranges row and <fr:tex display="inline">j</fr:tex> ranges column.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>852</fr:anchor>
+    <fr:addr type="machine">#306</fr:addr>
+    <fr:route>unstable-306.xml</fr:route>
+    <fr:title text="Matrix Computation › Solving a Linear System"><fr:link type="local" href="math-0008.xml" addr="math-0008" title="Matrix Computation">Matrix Computation</fr:link> › Solving a Linear System</fr:title>
+    <fr:date>
+      <fr:year>2024</fr:year>
+      <fr:month>6</fr:month>
+      <fr:day>10</fr:day>
+    </fr:date>
+    <fr:authors></fr:authors>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:anchor>736</fr:anchor>
+        <fr:addr type="user">thm-0011</fr:addr>
+        <fr:route>thm-0011.xml</fr:route>
+        <fr:title text="Cramer&apos;s rule">Cramer&apos;s rule</fr:title>
+        <fr:taxon>Theorem</fr:taxon>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>Consider a system of <fr:tex display="inline">n</fr:tex> linear equations for <fr:tex display="inline">n</fr:tex> unknowns, represented in matrix multiplication form as follows:
+    <fr:tex display="block">         A \cdot  X = B     </fr:tex>
+    where <fr:tex display="inline">A</fr:tex> is a square matrix of order <fr:tex display="inline">n</fr:tex>, <fr:tex display="inline">X</fr:tex> is a column matrix of order <fr:tex display="inline">n</fr:tex> and <fr:tex display="inline">B</fr:tex> is a column matrix of order <fr:tex display="inline">n</fr:tex>.
+    <fr:tex display="block">         X = \begin {bmatrix} x_1 \\ x_2 \\ \vdots  \\ x_n \end {bmatrix}     </fr:tex>
+    The Cramer&apos;s rule states that the solution to the system of equations is given by:
+    <fr:tex display="block">         x_i = \frac {\text {det}(A_i)}{\text {det}(A)}     </fr:tex>
+    where <fr:tex display="inline">A_i</fr:tex> is the matrix obtained by replacing the <fr:tex display="inline">i</fr:tex>th column of <fr:tex display="inline">A</fr:tex> by <fr:tex display="inline">B</fr:tex>.</fr:p>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+    <fr:p>Matrix partitioning is the process of dividing a matrix into smaller submatrices. 
+        This is often done to simplify the computation of matrix operations, such as matrix multiplication.</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:anchor>737</fr:anchor>
+        <fr:addr type="user">def-0049</fr:addr>
+        <fr:route>def-0049.xml</fr:route>
+        <fr:title text="Matrix Partitioning">Matrix Partitioning</fr:title>
+        <fr:taxon>Definition</fr:taxon>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>Let <fr:tex display="inline">A \in  \mathbb {C}^{m\times  n} </fr:tex>. A <fr:strong>partitioning</fr:strong> of <fr:tex display="inline">A</fr:tex> is a representation of <fr:tex display="inline">A</fr:tex> in the form
+    <fr:tex display="block">         A = \begin {bmatrix}             A_{11} &amp; A_{12} &amp; \cdots  &amp; A_{1q} \\             A_{21} &amp; A_{22} &amp; \cdots  &amp; A_{2q} \\             \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\             A_{p1} &amp; A_{p2} &amp; \cdots  &amp; A_{pq}         \end {bmatrix}     </fr:tex>
+    where <fr:tex display="inline">A_{ij} \in  \mathbb {C}^{m_i \times  n_j} </fr:tex> for <fr:tex display="inline">1 \leq  i \leq  p</fr:tex> and <fr:tex display="inline">1 \leq  j \leq  q</fr:tex> such that
+    <fr:tex display="block">         \sum _{i=1}^p m_i = m \quad  \text {and} \quad  \sum _{j=1}^q n_j = n.     </fr:tex>
+    The partitioned matrix operations are similar to the operations on the normal matrix.</fr:p>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+    <fr:p>If the partitioned matrix is formed as diagonal blocks, then we can compute the determinant of the matrix by the following formula:
+        <fr:tex display="block">             \det  A = \det  A_1 \cdot  \det  A_2 \cdots  \det  A_n         </fr:tex>
+        And the inverse of the matrix is
+        <fr:tex display="block">             A^{-1} = \begin {bmatrix}                 A_1^{-1} &amp; O &amp; \cdots  &amp; O \\                 O &amp; A_2^{-1} &amp; \cdots  &amp; O \\                 \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                 O &amp; O &amp; \cdots  &amp; A_n^{-1}             \end {bmatrix}         </fr:tex></fr:p>
+    <fr:p>The column partitioning of matrix is useful. 
+        If we have <fr:tex display="inline">m\times  s</fr:tex> matrix <fr:tex display="inline">A = (a_{ij})</fr:tex> and <fr:tex display="inline">s\times  n</fr:tex> matrix <fr:tex display="inline">B=(b_{ij})</fr:tex>,
+        their product can be written:
+        <fr:tex display="block">             AB = \begin {bmatrix} A_1 \\ A_2 \\ \vdots  A_m \end {bmatrix}             \begin {bmatrix}                 B_1 &amp; B_2 &amp; \cdots  &amp; B_n             \end {bmatrix} =              \begin {bmatrix}                 A_1B_1 &amp; A_1B_2 &amp; \cdots  &amp; A_1B_n \\                 A_2B_1 &amp; A_2B_2 &amp; \cdots  &amp; A_2B_n \\                 \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                 A_mB_1 &amp; A_mB_2 &amp; \cdots  &amp; A_mB_n             \end {bmatrix}         </fr:tex>
+        We can show that <fr:tex display="inline">A=O\iff  A^TA=O</fr:tex>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>853</fr:anchor>
+            <fr:addr type="user">math-0008</fr:addr>
+            <fr:route>math-0008.xml</fr:route>
+            <fr:title text="Matrix Computation">Matrix Computation</fr:title>
+            <fr:taxon>Linear Algebra</fr:taxon>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>6</fr:month>
+              <fr:day>10</fr:day>
+            </fr:date>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>This post shows operations and applications over matrix, refers to Wikipedia.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>725</fr:anchor>
+                <fr:addr type="user">def-0043</fr:addr>
+                <fr:route>def-0043.xml</fr:route>
+                <fr:title text="Transpose">Transpose</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The <fr:strong>transpose</fr:strong> of a matrix <fr:tex display="inline">A</fr:tex>, denoted by <fr:tex display="inline">A^T</fr:tex> is
+    the matrix obtained by swapping the rows and columns of <fr:tex display="inline">A</fr:tex>.
+    It satisfies the following properties:
+    <fr:ul><fr:li><fr:tex display="inline">(A^T)^T = A</fr:tex></fr:li>
+        <fr:li><fr:tex display="inline">(A + B)^T = A^T + B^T</fr:tex></fr:li>
+        <fr:li><fr:tex display="inline">(cA)^T = cA^T</fr:tex></fr:li>
+        <fr:li><fr:tex display="inline">(AB)^T = B^TA^T</fr:tex></fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:p>If the following condition satisfies:
+    <fr:tex display="block">         a_{ij} = a_{ji} \quad  \forall  i,j     </fr:tex>
+    Then the matrix is called symmetric.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>726</fr:anchor>
+                <fr:addr type="user">def-001N</fr:addr>
+                <fr:route>def-001N.xml</fr:route>
+                <fr:title text="Symmetric Matrix">Symmetric Matrix</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A square matrix <fr:tex display="inline">A</fr:tex> is symmetric if it is equal to its transpose:
+    <fr:tex display="block">         A = A^T     </fr:tex>
+    This also implies <fr:tex display="inline">A^{-1} A^T = I</fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>727</fr:anchor>
+                <fr:addr type="user">def-0044</fr:addr>
+                <fr:route>def-0044.xml</fr:route>
+                <fr:title text="Determinant">Determinant</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The determinant of a <fr:tex display="inline">n\times  n</fr:tex> square matrix <fr:tex display="inline">A</fr:tex> is commonly denoted <fr:tex display="inline">\det  A</fr:tex> or <fr:tex display="inline">|A|</fr:tex>.
+    It satisfies the following properties:
+    <fr:ul><fr:li><fr:tex display="inline">\det  A^T = \det  A</fr:tex></fr:li>
+        <fr:li><fr:tex display="inline">\det  AB = \det  A \det  B</fr:tex></fr:li>
+        <fr:li><fr:tex display="inline">\det  \lambda  A = \lambda ^n \det  A</fr:tex></fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:p>To compute the inverse of a matrix, we need <fr:strong>Adjugate matrix</fr:strong>.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>728</fr:anchor>
+                <fr:addr type="user">def-0045</fr:addr>
+                <fr:route>def-0045.xml</fr:route>
+                <fr:title text="First Minor and Cofactor">First Minor and Cofactor</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>If <fr:tex display="inline">A</fr:tex> is a square matrix, then the <fr:strong>minor</fr:strong> of the entry in the i-th row and j-th 
+    column (also called the <fr:tex display="inline">(i, j)</fr:tex> minor, or a first minor) is the <fr:strong>determinant</fr:strong> of 
+    the sub-matrix formed by deleting the i-th row and j-th column.
+    The <fr:tex display="inline">(i, j)</fr:tex> minor is denoted as <fr:tex display="inline">M_{ij}</fr:tex>.
+    The <fr:strong>Cofactor</fr:strong> is obtained by multiplying the minor by <fr:tex display="inline">(-1)^{i+j}</fr:tex>.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>729</fr:anchor>
+                <fr:addr type="user">def-0046</fr:addr>
+                <fr:route>def-0046.xml</fr:route>
+                <fr:title text="Cofactor Matrix">Cofactor Matrix</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The matrix formed by all of the <fr:link type="local" href="def-0045.xml" addr="def-0045" title="First Minor and Cofactor">cofactors</fr:link> of a square matrix <fr:tex display="inline">A</fr:tex> is called the cofactor matrix,
+    or <fr:strong>comatrix</fr:strong>:
+    <fr:tex display="block">         C = \left [              \begin {array}{cccc}                 C_{11} &amp; C_{12} &amp; \cdots  &amp; C_{1n} \\                 C_{21} &amp; C_{22} &amp; \cdots  &amp; C_{2n} \\                 \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                 C_{n1} &amp; C_{n2} &amp; \cdots  &amp; C_{nn}             \end {array}         \right ]     </fr:tex>
+    The <fr:strong>Adjugate matrix</fr:strong> of <fr:tex display="inline">A</fr:tex> is the transpose of the cofactor matrix.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:p>Then the inverse of <fr:tex display="inline">A</fr:tex> is the transpose of the cofactor matrix times the reciprocal of the determinant of <fr:tex display="inline">A</fr:tex>:
+    <fr:tex display="block">         A^{-1} = \frac {1}{\det  A} \cdot  \text {adj} A = \frac {1}{\det  A} \cdot  C^T     </fr:tex></fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>730</fr:anchor>
+                <fr:addr type="user">def-0047</fr:addr>
+                <fr:route>def-0047.xml</fr:route>
+                <fr:title text="Singular Matrix">Singular Matrix</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A square matrix that is not <fr:strong>invertible</fr:strong> is called <fr:strong>singular</fr:strong> or degenerate</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>731</fr:anchor>
+                <fr:addr type="machine">#303</fr:addr>
+                <fr:route>unstable-303.xml</fr:route>
+                <fr:title text="An important property of the inverse of a matrix">An important property of the inverse of a matrix</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>10</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p><fr:tex display="block">             A \cdot  \text {adj} A = \text {adj} A \cdot  A = \det  A \cdot  I         </fr:tex></fr:p>
+ 
+   
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>732</fr:anchor><fr:addr type="machine">#304</fr:addr><fr:route>unstable-304.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+        Let <fr:tex display="inline">A \cdot  \text {adj} A = (b_{ij})</fr:tex> and we have
+        <fr:tex display="block">             b_{ij} = a_{i1}A_{j1} + a_{i2}A_{j2} + \cdots  + a_{in}A_{jn} = \delta _{ij} \cdot  \det  A         </fr:tex>
+        Hence we have <fr:tex display="inline">A \cdot  \text {adj} A = \det  A \cdot  I</fr:tex> 
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ 
+</fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>733</fr:anchor>
+                <fr:addr type="machine">#305</fr:addr>
+                <fr:route>unstable-305.xml</fr:route>
+                <fr:title text="Matrix Polynomial and Computation">Matrix Polynomial and Computation</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>10</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>734</fr:anchor>
+                    <fr:addr type="user">def-0048</fr:addr>
+                    <fr:route>def-0048.xml</fr:route>
+                    <fr:title text="Matrix Polynomial">Matrix Polynomial</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>A <fr:strong>matrix polynomial</fr:strong> is a polynomial with square matrices as variables.
+    The general form of a matrix polynomial is:
+    <fr:tex display="block">         P(A) = \sum _{i=0}^{n} a_i A^i     </fr:tex>
+    where <fr:tex display="inline">A^0 = I</fr:tex> is the identity matrix.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>If <fr:tex display="inline">A</fr:tex> is a diagonal matrix, then the polynomial of <fr:tex display="inline">A</fr:tex> is the diagonal matrix of the polynomial of the diagonal elements of <fr:tex display="inline">A</fr:tex>.
+        <fr:tex display="block">             p(A) = \begin {bmatrix}                 p(a_{11}) &amp; 0 &amp; \cdots  &amp; 0 \\                 0 &amp; p(a_{22}) &amp; \cdots  &amp; 0 \\                 \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                 0 &amp; 0 &amp; \cdots  &amp; p(a_{nn})             \end {bmatrix}         </fr:tex></fr:p>
+                <fr:p>If <fr:tex display="inline">A = P\Lambda  P^{-1}</fr:tex>, then <fr:tex display="inline">A^k = P \Lambda  ^k P^{-1}</fr:tex> and hence
+        <fr:tex display="block">             p(A) = a_0 I + a_1 A + a_2 A^2 + \cdots  + a_n A^n = P \Lambda  P^{-1}         </fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>735</fr:anchor>
+                <fr:addr type="machine">#306</fr:addr>
+                <fr:route>unstable-306.xml</fr:route>
+                <fr:title text="Solving a Linear System">Solving a Linear System</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>10</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>736</fr:anchor>
+                    <fr:addr type="user">thm-0011</fr:addr>
+                    <fr:route>thm-0011.xml</fr:route>
+                    <fr:title text="Cramer&apos;s rule">Cramer&apos;s rule</fr:title>
+                    <fr:taxon>Theorem</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>Consider a system of <fr:tex display="inline">n</fr:tex> linear equations for <fr:tex display="inline">n</fr:tex> unknowns, represented in matrix multiplication form as follows:
+    <fr:tex display="block">         A \cdot  X = B     </fr:tex>
+    where <fr:tex display="inline">A</fr:tex> is a square matrix of order <fr:tex display="inline">n</fr:tex>, <fr:tex display="inline">X</fr:tex> is a column matrix of order <fr:tex display="inline">n</fr:tex> and <fr:tex display="inline">B</fr:tex> is a column matrix of order <fr:tex display="inline">n</fr:tex>.
+    <fr:tex display="block">         X = \begin {bmatrix} x_1 \\ x_2 \\ \vdots  \\ x_n \end {bmatrix}     </fr:tex>
+    The Cramer&apos;s rule states that the solution to the system of equations is given by:
+    <fr:tex display="block">         x_i = \frac {\text {det}(A_i)}{\text {det}(A)}     </fr:tex>
+    where <fr:tex display="inline">A_i</fr:tex> is the matrix obtained by replacing the <fr:tex display="inline">i</fr:tex>th column of <fr:tex display="inline">A</fr:tex> by <fr:tex display="inline">B</fr:tex>.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>Matrix partitioning is the process of dividing a matrix into smaller submatrices. 
+        This is often done to simplify the computation of matrix operations, such as matrix multiplication.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>737</fr:anchor>
+                    <fr:addr type="user">def-0049</fr:addr>
+                    <fr:route>def-0049.xml</fr:route>
+                    <fr:title text="Matrix Partitioning">Matrix Partitioning</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>Let <fr:tex display="inline">A \in  \mathbb {C}^{m\times  n} </fr:tex>. A <fr:strong>partitioning</fr:strong> of <fr:tex display="inline">A</fr:tex> is a representation of <fr:tex display="inline">A</fr:tex> in the form
+    <fr:tex display="block">         A = \begin {bmatrix}             A_{11} &amp; A_{12} &amp; \cdots  &amp; A_{1q} \\             A_{21} &amp; A_{22} &amp; \cdots  &amp; A_{2q} \\             \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\             A_{p1} &amp; A_{p2} &amp; \cdots  &amp; A_{pq}         \end {bmatrix}     </fr:tex>
+    where <fr:tex display="inline">A_{ij} \in  \mathbb {C}^{m_i \times  n_j} </fr:tex> for <fr:tex display="inline">1 \leq  i \leq  p</fr:tex> and <fr:tex display="inline">1 \leq  j \leq  q</fr:tex> such that
+    <fr:tex display="block">         \sum _{i=1}^p m_i = m \quad  \text {and} \quad  \sum _{j=1}^q n_j = n.     </fr:tex>
+    The partitioned matrix operations are similar to the operations on the normal matrix.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>If the partitioned matrix is formed as diagonal blocks, then we can compute the determinant of the matrix by the following formula:
+        <fr:tex display="block">             \det  A = \det  A_1 \cdot  \det  A_2 \cdots  \det  A_n         </fr:tex>
+        And the inverse of the matrix is
+        <fr:tex display="block">             A^{-1} = \begin {bmatrix}                 A_1^{-1} &amp; O &amp; \cdots  &amp; O \\                 O &amp; A_2^{-1} &amp; \cdots  &amp; O \\                 \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                 O &amp; O &amp; \cdots  &amp; A_n^{-1}             \end {bmatrix}         </fr:tex></fr:p>
+                <fr:p>The column partitioning of matrix is useful. 
+        If we have <fr:tex display="inline">m\times  s</fr:tex> matrix <fr:tex display="inline">A = (a_{ij})</fr:tex> and <fr:tex display="inline">s\times  n</fr:tex> matrix <fr:tex display="inline">B=(b_{ij})</fr:tex>,
+        their product can be written:
+        <fr:tex display="block">             AB = \begin {bmatrix} A_1 \\ A_2 \\ \vdots  A_m \end {bmatrix}             \begin {bmatrix}                 B_1 &amp; B_2 &amp; \cdots  &amp; B_n             \end {bmatrix} =              \begin {bmatrix}                 A_1B_1 &amp; A_1B_2 &amp; \cdots  &amp; A_1B_n \\                 A_2B_1 &amp; A_2B_2 &amp; \cdots  &amp; A_2B_n \\                 \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                 A_mB_1 &amp; A_mB_2 &amp; \cdots  &amp; A_mB_n             \end {bmatrix}         </fr:tex>
+        We can show that <fr:tex display="inline">A=O\iff  A^TA=O</fr:tex>.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>738</fr:anchor>
+                <fr:addr type="machine">#307</fr:addr>
+                <fr:route>unstable-307.xml</fr:route>
+                <fr:title text="Matrix Transformation">Matrix Transformation</fr:title>
+                <fr:taxon>Section</fr:taxon>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>10</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>739</fr:anchor>
+                    <fr:addr type="user">def-004A</fr:addr>
+                    <fr:route>def-004A.xml</fr:route>
+                    <fr:title text="Elementary Operations">Elementary Operations</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>There are three types of elementary matrices, which correspond to three types of row operations
+    (respectively, column operations, row operations are equivalent to multiplying on the left by the
+    corresponding elementary matrix, and column operations are equivalent to multiplying on the right
+    by the corresponding elementary matrix):
+    <fr:ul><fr:li><fr:strong>Row switching</fr:strong>: A row within the matrix can be switched with another row.
+            <fr:tex display="block">                 P_{i,j} = \begin {bmatrix}                     1 \\                     &amp; \ddots  \\                     &amp; &amp; 0 &amp; &amp;  1 \\                      &amp; &amp; &amp; \ddots  \\                      &amp; &amp; 1 &amp; &amp; 0 \\                      &amp; &amp; &amp; &amp; &amp; \ddots  \\                     &amp; &amp; &amp; &amp; &amp; &amp; 1                 \end {bmatrix}             </fr:tex></fr:li>
+        <fr:li><fr:strong>Row multiplication</fr:strong>: Each element in a row can be multiplied by a non-zero constant.
+            <fr:tex display="block">                 D_i(k) = \text {diag} (1, \cdots , k, \cdots , 1)             </fr:tex></fr:li>
+        <fr:li><fr:strong>Row additio</fr:strong>: A row can be replaced by the sum of that row and a multiple of another row.
+            <fr:tex display="block">                 T_{i,j} = \begin {bmatrix}                     1 \\                     &amp; \ddots  \\                     &amp; &amp; 1 &amp; &amp; k \\                      &amp; &amp; &amp; \ddots  \\                      &amp; &amp; &amp; &amp; 1 \\                      &amp; &amp; &amp; &amp; &amp; \ddots  \\                     &amp; &amp; &amp; &amp; &amp; &amp; 1                 \end {bmatrix}             </fr:tex></fr:li></fr:ul></fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>740</fr:anchor>
+                    <fr:addr type="user">def-004B</fr:addr>
+                    <fr:route>def-004B.xml</fr:route>
+                    <fr:title text="Column / Row Equivalence">Column / Row Equivalence</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>Two matrices <fr:tex display="inline">A,B</fr:tex> are column / row equivalent if one can 
+    be obtained from the other by a finite sequence of <fr:link type="local" href="def-004A.xml" addr="def-004A" title="Elementary Operations">elementary operations</fr:link>,
+    denoted <fr:tex display="inline">A \sim  B</fr:tex>.
+    The column / row equivalence is an <fr:link type="local" href="def-000X.xml" addr="def-000X" title="Equivalence Relation">equivalence relation</fr:link>.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>We can show that a matrix <fr:tex display="inline">A</fr:tex> is invertible iff there are finite elementary matrices
+        <fr:tex display="inline">E_1, E_2, \cdots , E_n</fr:tex> such that
+        <fr:tex display="block">             A = E_1E_2\cdots  E_n         </fr:tex></fr:p>
+                <fr:p>From above we can deduce that a square matrix <fr:tex display="inline">A</fr:tex> is invertible iff <fr:tex display="inline">A\sim  E</fr:tex>.
+        This trick can be used for solving a linear system and computing the inverse of a matrix.
+        For instance, given <fr:tex display="inline">AX=B</fr:tex> we can solve <fr:tex display="inline">X</fr:tex> by the following steps:
+        Let <fr:tex display="inline">P</fr:tex> be a matrix such that <fr:tex display="inline">PA=I</fr:tex> where <fr:tex display="inline">I</fr:tex> is the identity matrix.
+        Hence <fr:tex display="inline">P = A^{-1}</fr:tex> and we have <fr:tex display="inline">X = PB</fr:tex>, we can do elementary operations over matrix <fr:tex display="inline">(A, B)</fr:tex>
+        to get the solution of <fr:tex display="inline">X</fr:tex>.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>741</fr:anchor>
+                <fr:addr type="machine">#308</fr:addr>
+                <fr:route>unstable-308.xml</fr:route>
+                <fr:title text="Rank">Rank</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>10</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Now let&apos;s talk about the concept of <fr:strong>rank</fr:strong>.
+        In linear algebra, the (column)<fr:strong>rank</fr:strong> of a matrix <fr:tex display="inline">A</fr:tex> is the dimension of the vector space 
+        generated (or spanned) by its columns.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>742</fr:anchor>
+                    <fr:addr type="user">def-004J</fr:addr>
+                    <fr:route>def-004J.xml</fr:route>
+                    <fr:title text="Rank">Rank</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>The rank of a linear map or operator <fr:tex display="inline">\Phi </fr:tex> is defined as the dimension of its range:
+    <fr:tex display="block">         \text {rank}(M)\equiv \dim (\text {range }(M))     </fr:tex>
+    Note that the range (<fr:strong>column space</fr:strong>) of a matrix <fr:tex display="inline">M</fr:tex> is the <fr:link type="local" href="def-000M.xml" addr="def-000M" title="Linear Span">span</fr:link> of its column vectors.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>Similarly we can define the row rank of a matrix. A fundamental result in linear algebra is 
+        that the column rank and the row rank are always equal. Hence we can simply call it the rank of a matrix.
+        If the column rank equals to the column size, we say that the matrix is full column rank.</fr:p>
+                <fr:p>A common approach to finding the rank of a matrix is to reduce it to a simpler form, 
+        generally <fr:strong>row echelon form</fr:strong>, by elementary row operations.
+        Row operations do not change the row space (hence do not change the row rank), and, being 
+        invertible, map the column space to an isomorphic space (hence do not change the column rank).
+        <fr:tex display="block">             A \sim  B \implies  \text {rank}(A) = \text {rank}(B)             \\              \text {rank}(A) = \text {rank}(A^T)         </fr:tex>
+        Once in row echelon form, the rank is clearly the same for both row rank and column rank, 
+        and equals to the number of <fr:strong>pivots</fr:strong> (or basic columns) and also the number of non-zero rows.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>743</fr:anchor>
+                    <fr:addr type="user">def-004I</fr:addr>
+                    <fr:route>def-004I.xml</fr:route>
+                    <fr:title text="Row Echelon Form">Row Echelon Form</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>A matrix is in <fr:strong>row echelon form</fr:strong> if
+    <fr:ul><fr:li>All rows having only zero entries are at the bottom</fr:li>
+        <fr:li>The leading entry (that is, the <fr:strong>left-most</fr:strong> nonzero entry) of every nonzero row, called
+            the <fr:strong>pivot</fr:strong>, is on the right of the leading entry of every row above.</fr:li></fr:ul>
+    Some texts add the condition that the leading coefficient must be <fr:tex display="inline">1</fr:tex>
+    while others require this only in <fr:strong>reduced row echelon form</fr:strong>.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>For instance, matrix <fr:tex display="inline">A = \begin {bmatrix}1&amp;2&amp;1\\-2&amp;-3&amp;1\\3&amp;5&amp;0\end {bmatrix}</fr:tex> can be transformed into reduced row-echelon form:
+        <fr:tex display="block">\begin {aligned}{\begin {bmatrix}1&amp;2&amp;1\\-2&amp;-3&amp;1\\3&amp;5&amp;0\end {bmatrix}}&amp;\xrightarrow  {2R_{1}+R_{2}\to  R_{2}} {\begin {bmatrix}1&amp;2&amp;1\\0&amp;1&amp;3\\3&amp;5&amp;0\end {bmatrix}}\xrightarrow  {-3R_{1}+R_{3}\to  R_{3}} {\begin {bmatrix}1&amp;2&amp;1\\0&amp;1&amp;3\\0&amp;-1&amp;-3\end {bmatrix}}\\&amp;\xrightarrow  {R_{2}+R_{3}\to  R_{3}} \,\,{\begin {bmatrix}1&amp;2&amp;1\\0&amp;1&amp;3\\0&amp;0&amp;0\end {bmatrix}}\xrightarrow  {-2R_{2}+R_{1}\to  R_{1}} {\begin {bmatrix}1&amp;0&amp;-5\\0&amp;1&amp;3\\0&amp;0&amp;0\end {bmatrix}}~.\end {aligned}</fr:tex>
+        The final matrix has two non-zero rows and thus the rank of matrix <fr:tex display="inline">A</fr:tex> is <fr:tex display="inline">2</fr:tex>.</fr:p>
+                <fr:p>The determinantal rank of a matrix is the order of the largest non-zero minor of the matrix.
+        It is also the number of non-zero eigenvalues of the matrix. 
+        This does not give an efficient way of computing the rank, but it is useful theoretically: 
+        a single non-zero minor witnesses a lower bound for the rank of the matrix,
+        which can be useful to prove that certain operations do not lower the rank of a matrix.</fr:p>
+                <fr:p>We can conclude the properties of rank:
+        <fr:tex display="block">             \begin {align*}                 &amp;0 \leq  \text {rank}(A_{m\times  n}) \leq  \min (m,n) \\                 &amp;\text {rank}(A^T) = \text {rank}(A) \\                  &amp; A \sim  B \implies  \text {rank}(A)=\text {rank}(B) \\                  &amp; P, Q \text { is invertible} \implies  \text {rank}(PAQ) = \text {rank}(A) \\                  &amp; \max (\text {rank}(A), \text {rank}(B)) \leq  \text {rank}(A, B) \leq  \text {rank}(A) + \text {rank}(B) \\                  &amp; \text {rank}(A+B) \leq  \text {rank}(A) + \text {rank}(B) \\                 &amp; \text {rank}(AB) \leq  \min (\text {rank}(A), \text {rank}(B)) \\                  &amp; A_{m\times  n}B_{n\times  l} = O\implies  \text {rank}(A) + \text {rank}(B) \leq  n             \end {align*}         </fr:tex></fr:p>
+                <fr:p>With such properties we can prove an important theorem:
+        <fr:tex display="block">             AB = O \land  A \text { is full rank} \implies  B = O         </fr:tex>
+        which is known as the cancellation law of matrix multiplication.</fr:p>
+                <fr:p>The rank of a matrix is also related to the solution of a linear system.
+        If the rank of the coefficient matrix is less than the rank of the augmented matrix, 
+        then the system is inconsistent. Hence there does not exist a solution.
+        Similarly we have the following discussion: For a <fr:tex display="inline">n</fr:tex>-variable linear system <fr:tex display="inline">Ax = b</fr:tex>
+        <fr:ul><fr:li>If <fr:tex display="inline">\text {rank}(A) &lt; \text {rank}(A,b)</fr:tex>, the solution does not exist.</fr:li>
+            <fr:li>If <fr:tex display="inline">\text {rank}(A)=\text {rank}(A,b)=n</fr:tex>, there is a unique solution.</fr:li>
+            <fr:li>Ig <fr:tex display="inline">\text {rank}(A)=\text {rank}(A,b)&lt;n</fr:tex>, there are infinite solutions.</fr:li></fr:ul>
+        This leads two fundamental theorems of linear systems:
+        <fr:ul><fr:li><fr:tex display="inline">n</fr:tex>-variable regular linear system <fr:tex display="inline">Ax = 0</fr:tex> has a non-trivial solution iff <fr:tex display="inline">\text {rank}(A) &lt; n</fr:tex>.</fr:li>
+            <fr:li>Matrix equation <fr:tex display="inline">AX = B</fr:tex> has solutions iff <fr:tex display="inline">\text {rank}(A) = \text {rank}(A,B)</fr:tex>.</fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>744</fr:anchor>
+                <fr:addr type="machine">#309</fr:addr>
+                <fr:route>unstable-309.xml</fr:route>
+                <fr:title text="Linear Combinations">Linear Combinations</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>10</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p></fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>745</fr:anchor>
+                    <fr:addr type="user">def-000L</fr:addr>
+                    <fr:route>def-000L.xml</fr:route>
+                    <fr:title text="Linear Combination">Linear Combination</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>Let <fr:tex display="inline">V</fr:tex> be a <fr:link type="local" href="def-000H.xml" addr="def-000H" title="Vector Space">vector space</fr:link> over a field <fr:tex display="inline">F</fr:tex>.
+    Let <fr:tex display="inline">v_1, \dots , v_n</fr:tex> be vectors in <fr:tex display="inline">V</fr:tex>.
+    A <fr:strong>linear combination</fr:strong> of <fr:tex display="inline">v_1, \dots , v_n</fr:tex> is an expression of the form
+    <fr:tex display="block">         a_1 v_1 + \dots  + a_n v_n     </fr:tex>
+    where <fr:tex display="inline">a_1, \dots , a_n \in  F</fr:tex>.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>Given two sets of vectors, we say that they are eqaul iff their elements can write as linear combinations of each other.
+        This condition can be written using rank:
+        <fr:tex display="block">             \text {rank}(A) = \text {rank}(B) = \text {rank}(A, B)         </fr:tex></fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>746</fr:anchor>
+                    <fr:addr type="user">def-000P</fr:addr>
+                    <fr:route>def-000P.xml</fr:route>
+                    <fr:title text="Linearly independent">Linearly independent</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>A set of vectors <fr:tex display="inline">\{v_1, \dots , v_n\}</fr:tex> is called <fr:strong>linearly independent</fr:strong> if
+    <fr:tex display="block">a_1 v_1 + \dots  + a_n v_n = 0</fr:tex>
+    implies that <fr:tex display="inline">a_1 = \dots  = a_n = 0</fr:tex>.
+    The trivial case of <fr:tex display="inline">\{0\}</fr:tex> is also considered linearly independent.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

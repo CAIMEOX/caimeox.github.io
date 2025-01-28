@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1455</fr:anchor><fr:addr type="user">def-002B</fr:addr><fr:route>def-002B.xml</fr:route><fr:title text="Kernel">Kernel</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>kernel</fr:strong> of a homomorphism is generally the inverse image of <fr:tex display="inline">0</fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>1460</fr:anchor>
+    <fr:addr type="user">def-002B</fr:addr>
+    <fr:route>def-002B.xml</fr:route>
+    <fr:title text="Kernel">Kernel</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+    <fr:authors></fr:authors>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>The <fr:strong>kernel</fr:strong> of a homomorphism is generally the inverse image of <fr:tex display="inline">0</fr:tex></fr:p>
+  </fr:mainmatter>
+  <fr:backmatter></fr:backmatter>
+</fr:tree>

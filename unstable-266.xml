@@ -1,115 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>838</fr:anchor><fr:addr type="machine">#266</fr:addr><fr:route>unstable-266.xml</fr:route><fr:title text="Universe › Specification"><fr:link type="local" href="tt-0006.xml" addr="tt-0006" title="Universe">Universe</fr:link> › Specification</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>14</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>461</fr:anchor><fr:addr type="user">def-004E</fr:addr><fr:route>def-004E.xml</fr:route><fr:title text="Tarski Universe">Tarski Universe</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>universe</fr:strong> consists of a type <fr:tex display="inline">\mathcal {U}</fr:tex> of which the elements are representations of types.
-    It is equipped with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> indexed by <fr:tex display="inline">\mathcal {U}</fr:tex> called <fr:strong>universal type family</fr:strong>.
-    The universe is closed under all the type constructors in the sense that it comes equipped with the following structure:
-    <fr:ul><fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Pi </fr:tex>, equipped with a function
-            <fr:tex display="block">                 \check {\Pi }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
-            for which the judgemental equality
-            <fr:tex display="block">                 \mathcal {T}(\check {\Pi }(X,P))\equiv \Pi _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))             </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.</fr:li>
-        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Sigma </fr:tex>, equipped with a function
-            <fr:tex display="block">                 \check {\Sigma }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
-            for which the judgemental equality
-            <fr:tex display="block">                 \mathcal {T}(\check {\Sigma }(X,P))\equiv \Sigma _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))             </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.</fr:li>
-        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under identity types, equipped with a function
-            <fr:tex display="block">                 \check {I}:\Pi _{(X:\mathcal {U})}\mathcal {T}(X)\to \mathcal {T}(X)\to \mathcal {U}             </fr:tex>
-            for which the judgemental equality
-            <fr:tex display="block">                 \mathcal {T}(\check {I}(X,x,y))\equiv  (x=y)             </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">x,y:\mathcal {T}(X)</fr:tex>.</fr:li>
-        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under coproducts, equipped with a function
-            <fr:tex display="block">                 \check {+}:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
-            that satisfies the judgemental equality <fr:tex display="inline">\mathcal {T}(X\check {+}P)\equiv \mathcal {T}(X)+\mathcal {T}(P)</fr:tex></fr:li>
-        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> contains elements <fr:tex display="inline">\check {\textbf {1}}, \check {\textbf {0}}, \check {\mathbb {N}} : \mathcal {U}</fr:tex> that satisfies the judgemental equality
-            <fr:tex display="block">                 \mathcal {T}(\check {\textbf {0}})\equiv  \textbf {0},                 \\ \mathcal {T}(\check {\textbf {1}})\equiv  \textbf {1},                 \\ \mathcal {T}(\check {\mathbb {N}})\equiv \mathbb {N}             </fr:tex></fr:li></fr:ul>
-    Consider a universe <fr:tex display="inline">\mathcal {U}</fr:tex> and a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
-    We say that <fr:tex display="inline">A</fr:tex> is a type in <fr:tex display="inline">\mathcal {U}</fr:tex> or that <fr:tex display="inline">\mathcal {U}</fr:tex> contains <fr:tex display="inline">A</fr:tex>,
-    if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>462</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="Enough Universe">Enough Universe</fr:title><fr:authors></fr:authors><fr:parent>def-004E</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
-        If we have only one <fr:tex display="inline">\mathcal {U}</fr:tex>, the <fr:strong>Russell Paradox</fr:strong> may arise.
-        Therefore we assume that there are <fr:strong>enough universes</fr:strong></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>463</fr:anchor><fr:addr type="user">thm-0013</fr:addr><fr:route>thm-0013.xml</fr:route><fr:title text="Enough Universe">Enough Universe</fr:title><fr:taxon>Postulate</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>We assume that there&apos;re <fr:strong>enough universe</fr:strong>, i.e.,
-    for every finite list of types in context 
-    <fr:tex display="block">         \Gamma _1\vdash  A_1\space \space \text {type},\cdots ,\Gamma _n\vdash  A_n\space \space \text {type}     </fr:tex>
-    there is a universe <fr:tex display="inline">\mathcal {U}</fr:tex> that contains each <fr:tex display="inline">A_i</fr:tex> in the sense that <fr:tex display="inline">\mathcal {U}</fr:tex> comes equipped with
-    <fr:tex display="block">         \Gamma _i\vdash \check {A_i}:\mathcal {U}     </fr:tex>
-    for which the following judgement holds:
-    <fr:tex display="block">         \Gamma _i \vdash \mathcal {T}(\check {A_i})\equiv  A_i\space \space \text {type}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Using the assumption we can obtain many specific universes.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>464</fr:anchor><fr:addr type="user">def-004F</fr:addr><fr:route>def-004F.xml</fr:route><fr:title text="Base Universe">Base Universe</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>base universee</fr:strong> <fr:tex display="inline">\mathcal {U}_0</fr:tex> is defined using <fr:link type="local" href="thm-0013.xml" addr="thm-0013" title="Enough Universe">universe postulate</fr:link>
-    with empty context.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>465</fr:anchor><fr:addr type="user">def-004G</fr:addr><fr:route>def-004G.xml</fr:route><fr:title text="Successor Universe">Successor Universe</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>successor universee</fr:strong> <fr:tex display="inline">\mathcal {U}^+</fr:tex> of a universe <fr:tex display="inline">\mathcal {U}</fr:tex> is defined using <fr:link type="local" href="thm-0013.xml" addr="thm-0013" title="Enough Universe">universe postulate</fr:link>
-    with the following contexts:
-    <fr:tex display="block">         \vdash \mathcal {U}\space \space \text {type}\quad  X:\mathcal {U}\vdash \mathcal {T}(X)\space \space \text {type}     </fr:tex>
-    It therefore contains the type <fr:tex display="inline">\mathcal {U}</fr:tex> as well as type in <fr:tex display="inline">\mathcal {U}</fr:tex>, in the following sense
-    <fr:tex display="block">         \begin {align*}             &amp;\vdash \check {\mathcal {U}}:\mathcal {U}^+\\              &amp;\vdash \mathcal {T}^+(\check {\mathcal {U}})\equiv \mathcal {U}\space \text {type}\\             &amp;X:\mathcal {U}\vdash \check {\mathcal {T}}(X):\mathcal {U}^+\\              &amp;X:\mathcal {U}\vdash \mathcal {T}^+(\check {\mathcal {T}}(X))\equiv \mathcal {T}(X)\space \text {type}          \end {align*}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Using successor universes we can create an infinite tower of universes.</fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>839</fr:anchor><fr:addr type="user">tt-0006</fr:addr><fr:route>tt-0006.xml</fr:route><fr:title text="Universe">Universe</fr:title><fr:taxon>Type Theory</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>14</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This post discuss the universe in type theory,
-    based on Egbert Rijke&apos;s <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:link> and <fr:link type="local" href="ncatlab.xml" addr="ncatlab" title="NLab">NLab</fr:link>.
-    In this post, we regard universe as the representation of types in an internal model 
-    of the type theory (<fr:strong>Tarski universe</fr:strong> or <fr:strong>universe à la Tarski</fr:strong>).</fr:p><fr:p>A universe consist of a type <fr:tex display="inline">\mathcal {U}</fr:tex> with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> over <fr:tex display="inline">\mathcal {U}</fr:tex>.
-    Forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> we think of <fr:tex display="inline">X</fr:tex> as an <fr:strong>encoding</fr:strong> (representation) of the actual type <fr:tex display="inline">\mathcal {T}(X)</fr:tex>.
-    The type family <fr:tex display="inline">\mathcal {T}</fr:tex> is therefore called a <fr:strong>unversal type family</fr:strong>.</fr:p><fr:p>There several reasons to equip type theory with universes.
-    It enables us to define new type families over inductive types, using induction principle.
-    For instance, we can define <fr:strong>relations</fr:strong> over <fr:tex display="inline">\mathbb {N}</fr:tex>, such as ordering relations <fr:tex display="inline">\leq </fr:tex>.
-    We will soon meet the idea of <fr:strong>observational equality</fr:strong> for a particular type, different from identity types.
-    Another reason is that it allows us to define types equipped with structure such as group.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>460</fr:anchor><fr:addr type="machine">#266</fr:addr><fr:route>unstable-266.xml</fr:route><fr:title text="Specification">Specification</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>14</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>461</fr:anchor><fr:addr type="user">def-004E</fr:addr><fr:route>def-004E.xml</fr:route><fr:title text="Tarski Universe">Tarski Universe</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>universe</fr:strong> consists of a type <fr:tex display="inline">\mathcal {U}</fr:tex> of which the elements are representations of types.
-    It is equipped with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> indexed by <fr:tex display="inline">\mathcal {U}</fr:tex> called <fr:strong>universal type family</fr:strong>.
-    The universe is closed under all the type constructors in the sense that it comes equipped with the following structure:
-    <fr:ul><fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Pi </fr:tex>, equipped with a function
-            <fr:tex display="block">                 \check {\Pi }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
-            for which the judgemental equality
-            <fr:tex display="block">                 \mathcal {T}(\check {\Pi }(X,P))\equiv \Pi _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))             </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.</fr:li>
-        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Sigma </fr:tex>, equipped with a function
-            <fr:tex display="block">                 \check {\Sigma }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
-            for which the judgemental equality
-            <fr:tex display="block">                 \mathcal {T}(\check {\Sigma }(X,P))\equiv \Sigma _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))             </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.</fr:li>
-        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under identity types, equipped with a function
-            <fr:tex display="block">                 \check {I}:\Pi _{(X:\mathcal {U})}\mathcal {T}(X)\to \mathcal {T}(X)\to \mathcal {U}             </fr:tex>
-            for which the judgemental equality
-            <fr:tex display="block">                 \mathcal {T}(\check {I}(X,x,y))\equiv  (x=y)             </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">x,y:\mathcal {T}(X)</fr:tex>.</fr:li>
-        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under coproducts, equipped with a function
-            <fr:tex display="block">                 \check {+}:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
-            that satisfies the judgemental equality <fr:tex display="inline">\mathcal {T}(X\check {+}P)\equiv \mathcal {T}(X)+\mathcal {T}(P)</fr:tex></fr:li>
-        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> contains elements <fr:tex display="inline">\check {\textbf {1}}, \check {\textbf {0}}, \check {\mathbb {N}} : \mathcal {U}</fr:tex> that satisfies the judgemental equality
-            <fr:tex display="block">                 \mathcal {T}(\check {\textbf {0}})\equiv  \textbf {0},                 \\ \mathcal {T}(\check {\textbf {1}})\equiv  \textbf {1},                 \\ \mathcal {T}(\check {\mathbb {N}})\equiv \mathbb {N}             </fr:tex></fr:li></fr:ul>
-    Consider a universe <fr:tex display="inline">\mathcal {U}</fr:tex> and a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
-    We say that <fr:tex display="inline">A</fr:tex> is a type in <fr:tex display="inline">\mathcal {U}</fr:tex> or that <fr:tex display="inline">\mathcal {U}</fr:tex> contains <fr:tex display="inline">A</fr:tex>,
-    if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>462</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="Enough Universe">Enough Universe</fr:title><fr:authors></fr:authors><fr:parent>def-004E</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
-        If we have only one <fr:tex display="inline">\mathcal {U}</fr:tex>, the <fr:strong>Russell Paradox</fr:strong> may arise.
-        Therefore we assume that there are <fr:strong>enough universes</fr:strong></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>463</fr:anchor><fr:addr type="user">thm-0013</fr:addr><fr:route>thm-0013.xml</fr:route><fr:title text="Enough Universe">Enough Universe</fr:title><fr:taxon>Postulate</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>We assume that there&apos;re <fr:strong>enough universe</fr:strong>, i.e.,
-    for every finite list of types in context 
-    <fr:tex display="block">         \Gamma _1\vdash  A_1\space \space \text {type},\cdots ,\Gamma _n\vdash  A_n\space \space \text {type}     </fr:tex>
-    there is a universe <fr:tex display="inline">\mathcal {U}</fr:tex> that contains each <fr:tex display="inline">A_i</fr:tex> in the sense that <fr:tex display="inline">\mathcal {U}</fr:tex> comes equipped with
-    <fr:tex display="block">         \Gamma _i\vdash \check {A_i}:\mathcal {U}     </fr:tex>
-    for which the following judgement holds:
-    <fr:tex display="block">         \Gamma _i \vdash \mathcal {T}(\check {A_i})\equiv  A_i\space \space \text {type}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Using the assumption we can obtain many specific universes.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>464</fr:anchor><fr:addr type="user">def-004F</fr:addr><fr:route>def-004F.xml</fr:route><fr:title text="Base Universe">Base Universe</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>base universee</fr:strong> <fr:tex display="inline">\mathcal {U}_0</fr:tex> is defined using <fr:link type="local" href="thm-0013.xml" addr="thm-0013" title="Enough Universe">universe postulate</fr:link>
-    with empty context.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>465</fr:anchor><fr:addr type="user">def-004G</fr:addr><fr:route>def-004G.xml</fr:route><fr:title text="Successor Universe">Successor Universe</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>successor universee</fr:strong> <fr:tex display="inline">\mathcal {U}^+</fr:tex> of a universe <fr:tex display="inline">\mathcal {U}</fr:tex> is defined using <fr:link type="local" href="thm-0013.xml" addr="thm-0013" title="Enough Universe">universe postulate</fr:link>
-    with the following contexts:
-    <fr:tex display="block">         \vdash \mathcal {U}\space \space \text {type}\quad  X:\mathcal {U}\vdash \mathcal {T}(X)\space \space \text {type}     </fr:tex>
-    It therefore contains the type <fr:tex display="inline">\mathcal {U}</fr:tex> as well as type in <fr:tex display="inline">\mathcal {U}</fr:tex>, in the following sense
-    <fr:tex display="block">         \begin {align*}             &amp;\vdash \check {\mathcal {U}}:\mathcal {U}^+\\              &amp;\vdash \mathcal {T}^+(\check {\mathcal {U}})\equiv \mathcal {U}\space \text {type}\\             &amp;X:\mathcal {U}\vdash \check {\mathcal {T}}(X):\mathcal {U}^+\\              &amp;X:\mathcal {U}\vdash \mathcal {T}^+(\check {\mathcal {T}}(X))\equiv \mathcal {T}(X)\space \text {type}          \end {align*}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Using successor universes we can create an infinite tower of universes.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>466</fr:anchor><fr:addr type="machine">#267</fr:addr><fr:route>unstable-267.xml</fr:route><fr:title text="Observational Equality">Observational Equality</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>14</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Now we give the example of <fr:strong>observational equality</fr:strong> of <fr:tex display="inline">\mathbb {N}</fr:tex>.
-        The key idea is to define a recursive function that reduce the arguments.
-        Observational equality an inductively defined relation, which gives us an algorithm for checking
-        equality on  <fr:tex display="inline">\mathbb {N}</fr:tex>. It can be used to show that equality of natural numbers is <fr:strong>decidable</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>467</fr:anchor><fr:addr type="user">def-004H</fr:addr><fr:route>def-004H.xml</fr:route><fr:title text="Observational Equality of {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a binary relation <fr:tex display="inline">\text {Eq}_\mathbb {N}:\mathbb {N}\to (\mathbb {N}\to \mathcal {U}_0)</fr:tex> satisfies
-    <fr:tex display="block">         \begin {align*}             \text {Eq}_\mathbb {N}(0)(0) &amp;\equiv  \textbf {1} \\             \text {Eq}_\mathbb {N}(0)(\text {succ}(n)) &amp;\equiv  \textbf {0} \\             \text {Eq}_\mathbb {N}(\text {succ}(m))(0) &amp;\equiv  \textbf {0} \\             \text {Eq}_\mathbb {N}(\text {succ}(m))(\text {succ}(n)) &amp;\equiv  \text {Eq}_\mathbb {N}(m)(n)         \end {align*}     </fr:tex>
-    
- 
-   
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>468</fr:anchor><fr:addr type="machine">#313</fr:addr><fr:route>unstable-313.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors><fr:parent>def-004H</fr:parent></fr:frontmatter><fr:mainmatter>
-        We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
-        it suffices to provide
-        <fr:tex display="block">             \begin {align*}                 &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\                  &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))             \end {align*}         </fr:tex>
-        we define <fr:tex display="inline">E_0</fr:tex> by induction:
-        <fr:tex display="block">             \begin {align*}                 &amp;E_0(0) \equiv \textbf {1}\\                  &amp;E_0(\text {succ}(n)) \equiv \textbf {0}             \end {align*}         </fr:tex>
-        and also define <fr:tex display="inline">E_S</fr:tex> by induction:
-        <fr:tex display="block">             \begin {align*}                 &amp;E_S(n,X,0)\equiv \textbf {0}\\                  &amp;E_S(n,X,\text {succ}(m))\equiv  X(m)             \end {align*}         </fr:tex>
-        Therefore we have by the computation rule for the first induction that 
-        the following judgemental equality holds.
-        <fr:tex display="block">             \begin {align*}                 \text {Eq}(0,m) &amp;\equiv  E_0(m) \\                 \text {Eq}(\text {succ}(n),m) &amp;\equiv  E_S(n,\text {Eq}(n),m)             \end {align*}         </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a reflexive relation, i.e. we have
-        <fr:tex display="block">             \text {refl-Eq}_\mathbb {N}:\Pi _{(n:\mathbb {N})}\text {Eq}_\mathbb {N}(n,n)         </fr:tex>
-        which is witnessed by induction on <fr:tex display="inline">n</fr:tex>.
-        <fr:tex display="block">             \begin {align*}                 \text {refl-Eq}_\mathbb {N}(0) &amp;\equiv \star  \\                  \text {refl-Eq}_\mathbb {N}(\text {succ}(n)) &amp;\equiv \text {refl-Eq}_\mathbb {N}(n)             \end {align*}         </fr:tex></fr:p><fr:p>This leads to an interesting dual perspective on equality. 
-        For any two natural numbers <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> we have
-        <fr:tex display="block">             (m=n)\leftrightarrow \text {Eq}_\mathbb {N}(m,n)         </fr:tex></fr:p><fr:p>Using the observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> we can prove Peano&apos;s seventh and eighth
-        axioms.
-        <fr:ul><fr:li>For any two natural numbers <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> we have 
-                <fr:tex display="block">                     (m = n)\leftrightarrow (\text {succ}(m) = \text {succ}(n))                 </fr:tex></fr:li>
-            <fr:li>For any natural number <fr:tex display="inline">n</fr:tex> we have <fr:tex display="inline">0 \not = \text {succ}(n)</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>801</fr:anchor>
+    <fr:addr type="machine">#266</fr:addr>
+    <fr:route>unstable-266.xml</fr:route>
+    <fr:title text="Contextual Modal Type Theory › Contextual Modal Logic › Contextual Hypothesis Rule"><fr:link type="local" href="unstable-253.xml" addr="#253" title="Contextual Modal Type Theory › Contextual Modal Logic"><fr:link type="local" href="tt-0007.xml" addr="tt-0007" title="Contextual Modal Type Theory">Contextual Modal Type Theory</fr:link> › Contextual Modal Logic</fr:link> › Contextual Hypothesis Rule</fr:title>
+    <fr:date>
+      <fr:year>2024</fr:year>
+      <fr:month>8</fr:month>
+      <fr:day>27</fr:day>
+    </fr:date>
+    <fr:authors></fr:authors>
+  </fr:frontmatter>
+  <fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     (\Delta ,u::A\space \text {valid}[\Psi ],\Delta &apos;);\Gamma \vdash \Psi                  }{                     (\Delta ,u::A\space \text {valid}[\Psi ],\Delta &apos;);\Gamma \vdash  A\space \text {true}                 }(\text {ctxhyp}_u)             </fr:tex>
+        </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>802</fr:anchor>
+            <fr:addr type="user">tt-0007</fr:addr>
+            <fr:route>tt-0007.xml</fr:route>
+            <fr:title text="Contextual Modal Type Theory">Contextual Modal Type Theory</fr:title>
+            <fr:taxon>Type Theory</fr:taxon>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>8</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter><fr:p>Recently I have been studying some work on <fr:strong>Hole</fr:strong>, and found some interesting things.
+    As stated in <fr:link type="local" href="smpe.xml" addr="smpe" title="Toward Semantic Foundations for Program Editors">Semantic Foundations for Program Editors</fr:link>, expression hole can be seen as
+    <fr:strong>metavariables</fr:strong> of <fr:strong>contextual modal type theory (CMTT)</fr:strong>. That is, expression 
+    holes can have types and are surrounded by contexts, just as metavariables in CMTT are 
+    associated with types and contexts. This note is a brief summary of the paper <fr:link type="local" href="cmtt.xml" addr="cmtt" title="Contextual Modal Type Theory">Contextual Modal Type Theory</fr:link>.</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>521</fr:anchor><fr:addr type="machine">#252</fr:addr><fr:route>unstable-252.xml</fr:route><fr:title text="Introduction and Motivation">Introduction and Motivation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:p>Contextual modal type theory provides an elegant and uniform foundation for understanding metavariables and explicit
+        substitutions. Context is common in logic because the truth of a proposition can depend on the context we consider it in
+        rather than being absolute. Narrowing our scope we may think of a context as consisting of the hypothesis that we made
+        to establish a final conclusion.</fr:p>
+    <fr:p>There arre two main approaches to intuitionistic modal logic.
+        <fr:ul><fr:li><fr:strong>Nominal</fr:strong>: Assign names to contexts and includes explicit judgments to relate them.</fr:li>
+            <fr:li><fr:strong>Structural</fr:strong>: Identifies the context with propositions it contains. In this article we
+            carry this idea further which allows arbitrary contexts to be captured within  a proposition.</fr:li></fr:ul></fr:p>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>522</fr:anchor><fr:addr type="machine">#253</fr:addr><fr:route>unstable-253.xml</fr:route><fr:title text="Contextual Modal Logic">Contextual Modal Logic</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The philosophical foundation of our development is MLTT approaches of separating 
+        judgments and propositions. The most basic judgment is the truth of a proposition,
+        <fr:tex display="inline">A\space \text {true}</fr:tex>. We explain the <fr:em>meaning</fr:em> of a proposition by 
+        presenting the means of inferring its truth via introduction rules, and exploiting
+        the knowledge of its truth via elimination rules. In this section we assume there are
+        some atomic proposition <fr:tex display="inline">P</fr:tex> and we define implication <fr:tex display="inline">A\to  B</fr:tex> and a contextual
+        modal operator <fr:tex display="inline">[\Psi ]A</fr:tex> where <fr:tex display="inline">\Psi </fr:tex> is a context.</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>523</fr:anchor><fr:addr type="machine">#260</fr:addr><fr:route>unstable-260.xml</fr:route><fr:title text="Hypothesis judgments">Hypothesis judgments</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+        <fr:p>We write 
+            <fr:tex display="block">                 x_1:A_1\space \text {true}, \ldots , x_n:A_n\space \text {true}\vdash  A\space \text {true}             </fr:tex>
+            to express that <fr:tex display="inline">A</fr:tex> is true if all hypotheses <fr:tex display="inline">x_1:A_1,\ldots ,x_n:A_n</fr:tex> are true.
+            At this moment we can view contexts as unordered, later contexts are reified in 
+            modal operators and may even be <fr:strong>internally dependent</fr:strong>, at which point the
+            order is important.</fr:p>
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>524</fr:anchor><fr:addr type="machine">#254</fr:addr><fr:route>unstable-254.xml</fr:route><fr:title text="Hypothesis Rule">Hypothesis Rule</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:p><fr:tex display="block">                     \frac {}{                         \Gamma , x:A\space \text {true}, \Gamma &apos; \vdash  A\space \text {true}                     }(\text {hyp}_x)                 </fr:tex>
+                The distinct labels for assumptions are necessary (?)</fr:p>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>525</fr:anchor><fr:addr type="machine">#255</fr:addr><fr:route>unstable-255.xml</fr:route><fr:title text="Substitution Rule">Substitution Rule</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            If <fr:tex display="inline">\Gamma \vdash  A\space \text {true}</fr:tex> and <fr:tex display="inline">\Gamma ,x:A\space \text {true},\Gamma &apos;\vdash  C\space \space \text {true}</fr:tex>
+            then <fr:tex display="inline">\Gamma ,\Gamma &apos;\vdash  C\space \text {true}</fr:tex>. (Note that this rule is <fr:em>admissible</fr:em>)
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>526</fr:anchor><fr:addr type="machine">#256</fr:addr><fr:route>unstable-256.xml</fr:route><fr:title text="Implication Introduction">Implication Introduction</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     \Gamma , x:A\space \text {true}\vdash  B\space \text {true}                 }{                     \Gamma \vdash  A\to  B\space \text {true}                 }(\to \text {I}^x)             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>527</fr:anchor><fr:addr type="machine">#257</fr:addr><fr:route>unstable-257.xml</fr:route><fr:title text="Implication Elimination">Implication Elimination</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     \Gamma \vdash  A\to  B\space \text {true}\quad \Gamma \vdash  A\space \text {true}                 }{                     \Gamma \vdash  B\space \text {true}                 }(\to \text {E})             </fr:tex>
+            It implies that elimination rule cannot extract more knowledge from 
+            a proposition than contributed by its proof (Soundness). 
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>528</fr:anchor><fr:addr type="machine">#258</fr:addr><fr:route>unstable-258.xml</fr:route><fr:title text="Local Reduction for Implication (Computational Rule)">Local Reduction for Implication (Computational Rule)</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     \dfrac {                         \Gamma , x:A\space \text {true}\vdash  B\space \text {true}                     }{                         \Gamma \vdash  A\to  B\space \text {true}                     }(\to \text {I}^x)                     \quad                      \Gamma \vdash  A\space \text {true}                 }{                     \Gamma \vdash  B\space \text {true}                 }(\to \text {E})                 \mapsto  _R \Gamma \vdash  B\space \text {true}             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>529</fr:anchor><fr:addr type="machine">#259</fr:addr><fr:route>unstable-259.xml</fr:route><fr:title text="Local Expansion for Implication">Local Expansion for Implication</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \Gamma \vdash  A\to  B\space \text {true} \mapsto _E                 \frac {                     \Gamma ,x:A\space \text {true}\vdash  A\to  B\space \text {true}\quad  \dfrac {}{\Gamma ,x:A\space \text {true}\vdash  A\space \text {true}}(\text {hyp}_x)                 }{                     \dfrac {\Gamma ,x:A\space \text {true}\vdash  B\space \text {true}}{\Gamma \vdash  A\to  B\space \text {true}}(\to \text {I}^x)                 }             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>530</fr:anchor><fr:addr type="machine">#263</fr:addr><fr:route>unstable-263.xml</fr:route><fr:title text="Categorical judgments">Categorical judgments</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+        <fr:p><fr:tex display="inline">A</fr:tex> is <fr:strong>categorically true</fr:strong> or valid if its truth does not depend on any hypotheses
+            about the truth of other propositions. Instead it may depend on the validity of other proposition,
+            because their validity may not depend on truth assumptions.</fr:p>
+        <fr:p>We weite <fr:tex display="inline">\Delta </fr:tex> for a labeled list <fr:tex display="inline">u_1 :: A_1\space \text {valid},\ldots ,u_n :: A_n\space \text {valid}</fr:tex> of assumptions
+            about the validity of propositions. We separate validity and truth:
+            <fr:tex display="block">                 \Delta ;\Gamma \vdash  \mathcal {J}             </fr:tex>
+            where <fr:tex display="inline">\mathcal {J}</fr:tex> is a judgment <fr:tex display="inline">A\space \text {true}</fr:tex> or <fr:tex display="inline">A\space \text {valid}</fr:tex>.</fr:p>
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>531</fr:anchor><fr:addr type="machine">#261</fr:addr><fr:route>unstable-261.xml</fr:route><fr:title text="Validity">Validity</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:p><fr:tex display="block">                     \frac {\Delta ;\cdot \vdash  A\space \text {true}}{\Delta ;\Gamma \vdash  A\space \text {valid}}                 </fr:tex></fr:p>
+            
+            <fr:p>Conversely if <fr:tex display="inline">A</fr:tex> is valid we can conclude that it is true</fr:p>
+            <fr:tex display="block">                 \frac {}{                     (\Delta ,u::A\space \text {valid},\Delta &apos;);\Gamma \vdash  A\space \text {true}                 }(\text {vldhyp}_u)             </fr:tex>
+            <fr:p>In terms of a multiple world semantics, we say taht <fr:tex display="inline">A</fr:tex> is valid if <fr:tex display="inline">A</fr:tex> is
+                true in <fr:strong>every</fr:strong> possible world. We require that <fr:tex display="inline">A</fr:tex> must be true in a 
+                world about which we assume nothing (<fr:tex display="inline">\Gamma  = \cdot </fr:tex>), except the constant-true
+                propositions <fr:tex display="inline">\Delta </fr:tex>.</fr:p>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>532</fr:anchor><fr:addr type="machine">#262</fr:addr><fr:route>unstable-262.xml</fr:route><fr:title text="Substitution Principle for Validity">Substitution Principle for Validity</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:p>Note that by the definition of validity we can immediately reduce the goal
+                of proving <fr:tex display="inline">A\space \text {valid}</fr:tex> into proving <fr:tex display="inline">A\space \text {true}</fr:tex>, which is captured by the principle
+                of substitution.</fr:p>
+            <fr:p>If <fr:tex display="inline">\Delta ;\cdot \vdash  A\space \text {true}</fr:tex> and <fr:tex display="inline">(\Delta ,u::A\space \text {valid},\Delta &apos;);\Gamma \vdash  C\space \text {true}</fr:tex>,
+                then <fr:tex display="inline">(\Delta ,\Delta &apos;);\Gamma \vdash  C\space \text {true}</fr:tex>.</fr:p>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        <fr:p>With the categorical judgment we can introduce the <fr:strong>modal operator</fr:strong> for necessary
+            truth <fr:tex display="inline">\square  A</fr:tex>.</fr:p>
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>533</fr:anchor><fr:addr type="machine">#269</fr:addr><fr:route>unstable-269.xml</fr:route><fr:title text="Contextual Validity">Contextual Validity</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+        <fr:p><fr:tex display="inline">A\space \text {valid}</fr:tex> expresses that <fr:tex display="inline">A</fr:tex> is true in <fr:strong>any</fr:strong> world.
+            In this section we <fr:strong>relativize</fr:strong> this judgment:
+            let <fr:tex display="inline">\Psi  = y_1:B_1\space \text {true}, \cdots , y_n:B_n\space \text {true}</fr:tex> be a list of assumptions.
+            We say that <fr:tex display="inline">A</fr:tex> is <fr:strong>valid relative</fr:strong> <fr:tex display="inline">\Psi </fr:tex> (denoted <fr:tex display="inline">A\space \text {valid}[\Psi ]</fr:tex>) if <fr:tex display="inline">A</fr:tex> is true in every
+            world in which <fr:tex display="inline">B_1,\cdots ,B_n</fr:tex> are true.
+            Similarly we generalized assumptions about validity so that <fr:tex display="inline">\Delta </fr:tex> 
+            now has the form <fr:tex display="inline">u_1::A_1\space \text {valid}[\Psi _1], \cdots , u_n::A_n\space \text {valid}[\Psi _n]</fr:tex>.</fr:p>
+        <fr:p>As common in PL, we refer to <fr:tex display="inline">\Psi </fr:tex> as a context and to the judgment 
+            <fr:tex display="inline">A\space \text {valid}[\Psi ]</fr:tex> as <fr:strong>contextual validity</fr:strong>.</fr:p>
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>534</fr:anchor><fr:addr type="machine">#264</fr:addr><fr:route>unstable-264.xml</fr:route><fr:title text="Contextual Validity">Contextual Validity</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:p>To prove <fr:tex display="inline">A\space \text {valid}[\Psi ]</fr:tex> we only required to prove <fr:tex display="inline">A</fr:tex> using only <fr:tex display="inline">\Psi </fr:tex>
+                without any hypotheses about the truth:</fr:p>
+            <fr:tex display="block">                 \frac {                     \Delta ;\Psi \vdash  A\space \text {true}                 }{                     \Delta ;\Gamma \vdash  A\space \text {valid}[\Psi ]                 }             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>535</fr:anchor><fr:addr type="machine">#265</fr:addr><fr:route>unstable-265.xml</fr:route><fr:title text="Contextual Entailment">Contextual Entailment</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            We write
+            <fr:tex display="block">                 \Delta ;\Gamma \vdash \Psi              </fr:tex>
+            to express that all the propositions in <fr:tex display="inline">\Psi </fr:tex> are true using the assumptions from <fr:tex display="inline">\Gamma </fr:tex>.
+            <fr:tex display="block">                 \frac {                     \Delta ;\Gamma \vdash  B_1\space \text {true} \quad \cdot \quad  \Delta ;\Gamma \vdash  B_n\space \text {true}                 }{                     \Delta ;\Gamma \vdash  y_1:B_1\space \text {true},\ldots ,y_n:B_n\space \text {true}                 }(\text {ctx})             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>536</fr:anchor><fr:addr type="machine">#266</fr:addr><fr:route>unstable-266.xml</fr:route><fr:title text="Contextual Hypothesis Rule">Contextual Hypothesis Rule</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \frac {                     (\Delta ,u::A\space \text {valid}[\Psi ],\Delta &apos;);\Gamma \vdash \Psi                  }{                     (\Delta ,u::A\space \text {valid}[\Psi ],\Delta &apos;);\Gamma \vdash  A\space \text {true}                 }(\text {ctxhyp}_u)             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>537</fr:anchor><fr:addr type="machine">#267</fr:addr><fr:route>unstable-267.xml</fr:route><fr:title text="Contextual Substitution Principle">Contextual Substitution Principle</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:p>If <fr:tex display="inline">\Delta ;\Psi \vdash  A\space \text {true}</fr:tex> and <fr:tex display="inline">(\Delta ,u::A\space \text {valid}[\Psi ],\Delta &apos;);\Gamma \vdash  C\space \text {true}</fr:tex>
+                then <fr:tex display="inline">(\Delta ,\Delta &apos;);\Gamma \vdash  C\space \text {true}</fr:tex>.</fr:p>
+            <fr:p>The precondition implies <fr:tex display="inline">\Delta ;\Gamma \vdash  A\space \text {valid}[\Psi ]</fr:tex> and by the substitution principle
+                of hypotheses judgments we can justify this rule.</fr:p>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+        
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>538</fr:anchor><fr:addr type="machine">#268</fr:addr><fr:route>unstable-268.xml</fr:route><fr:title text="Contextual Identity Principle">Contextual Identity Principle</fr:title><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block">                 \Delta ;\Psi \vdash \Psi              </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

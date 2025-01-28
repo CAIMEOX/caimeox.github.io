@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1434</fr:anchor><fr:addr type="user">hott-2022</fr:addr><fr:route>hott-2022.xml</fr:route><fr:title text="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:title><fr:taxon>Reference</fr:taxon><fr:authors><fr:author>Egbert Rijke</fr:author></fr:authors><fr:meta name="doi">10.48550/arXiv.2212.11082</fr:meta><fr:meta name="venue">Logic, Category Theory</fr:meta></fr:frontmatter><fr:mainmatter><fr:p>This is an introductory textbook to univalent mathematics and homotopy type theory, a mathematical foundation that takes advantage of the structural nature of mathematical definitions and constructions.</fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Backlinks">Backlinks</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1436</fr:anchor><fr:addr type="user">tt-0006</fr:addr><fr:route>tt-0006.xml</fr:route><fr:title text="Universe">Universe</fr:title><fr:taxon>Type Theory</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>14</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This post discuss the universe in type theory,
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>1439</fr:anchor>
+    <fr:addr type="user">hott-2022</fr:addr>
+    <fr:route>hott-2022.xml</fr:route>
+    <fr:title text="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:title>
+    <fr:taxon>Reference</fr:taxon>
+    <fr:authors>
+      <fr:author>Egbert Rijke</fr:author>
+    </fr:authors>
+    <fr:meta name="doi">10.48550/arXiv.2212.11082</fr:meta>
+    <fr:meta name="venue">Logic, Category Theory</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>This is an introductory textbook to univalent mathematics and homotopy type theory, a mathematical foundation that takes advantage of the structural nature of mathematical definitions and constructions.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>1441</fr:anchor>
+            <fr:addr type="user">tt-0006</fr:addr>
+            <fr:route>tt-0006.xml</fr:route>
+            <fr:title text="Universe">Universe</fr:title>
+            <fr:taxon>Type Theory</fr:taxon>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>6</fr:month>
+              <fr:day>14</fr:day>
+            </fr:date>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>This post discuss the universe in type theory,
     based on Egbert Rijke&apos;s <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:link> and <fr:link type="local" href="ncatlab.xml" addr="ncatlab" title="NLab">NLab</fr:link>.
     In this post, we regard universe as the representation of types in an internal model 
-    of the type theory (<fr:strong>Tarski universe</fr:strong> or <fr:strong>universe à la Tarski</fr:strong>).</fr:p><fr:p>A universe consist of a type <fr:tex display="inline">\mathcal {U}</fr:tex> with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> over <fr:tex display="inline">\mathcal {U}</fr:tex>.
+    of the type theory (<fr:strong>Tarski universe</fr:strong> or <fr:strong>universe à la Tarski</fr:strong>).</fr:p>
+            <fr:p>A universe consist of a type <fr:tex display="inline">\mathcal {U}</fr:tex> with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> over <fr:tex display="inline">\mathcal {U}</fr:tex>.
     Forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> we think of <fr:tex display="inline">X</fr:tex> as an <fr:strong>encoding</fr:strong> (representation) of the actual type <fr:tex display="inline">\mathcal {T}(X)</fr:tex>.
-    The type family <fr:tex display="inline">\mathcal {T}</fr:tex> is therefore called a <fr:strong>unversal type family</fr:strong>.</fr:p><fr:p>There several reasons to equip type theory with universes.
+    The type family <fr:tex display="inline">\mathcal {T}</fr:tex> is therefore called a <fr:strong>unversal type family</fr:strong>.</fr:p>
+            <fr:p>There several reasons to equip type theory with universes.
     It enables us to define new type families over inductive types, using induction principle.
     For instance, we can define <fr:strong>relations</fr:strong> over <fr:tex display="inline">\mathbb {N}</fr:tex>, such as ordering relations <fr:tex display="inline">\leq </fr:tex>.
     We will soon meet the idea of <fr:strong>observational equality</fr:strong> for a particular type, different from identity types.
-    Another reason is that it allows us to define types equipped with structure such as group.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>460</fr:anchor><fr:addr type="machine">#266</fr:addr><fr:route>unstable-266.xml</fr:route><fr:title text="Specification">Specification</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>14</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>461</fr:anchor><fr:addr type="user">def-004E</fr:addr><fr:route>def-004E.xml</fr:route><fr:title text="Tarski Universe">Tarski Universe</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>universe</fr:strong> consists of a type <fr:tex display="inline">\mathcal {U}</fr:tex> of which the elements are representations of types.
+    Another reason is that it allows us to define types equipped with structure such as group.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>467</fr:anchor>
+                <fr:addr type="machine">#270</fr:addr>
+                <fr:route>unstable-270.xml</fr:route>
+                <fr:title text="Specification">Specification</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>14</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>468</fr:anchor>
+                    <fr:addr type="user">def-004E</fr:addr>
+                    <fr:route>def-004E.xml</fr:route>
+                    <fr:title text="Tarski Universe">Tarski Universe</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>A <fr:strong>universe</fr:strong> consists of a type <fr:tex display="inline">\mathcal {U}</fr:tex> of which the elements are representations of types.
     It is equipped with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> indexed by <fr:tex display="inline">\mathcal {U}</fr:tex> called <fr:strong>universal type family</fr:strong>.
     The universe is closed under all the type constructors in the sense that it comes equipped with the following structure:
     <fr:ul><fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Pi </fr:tex>, equipped with a function
@@ -33,28 +98,117 @@
             <fr:tex display="block">                 \mathcal {T}(\check {\textbf {0}})\equiv  \textbf {0},                 \\ \mathcal {T}(\check {\textbf {1}})\equiv  \textbf {1},                 \\ \mathcal {T}(\check {\mathbb {N}})\equiv \mathbb {N}             </fr:tex></fr:li></fr:ul>
     Consider a universe <fr:tex display="inline">\mathcal {U}</fr:tex> and a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
     We say that <fr:tex display="inline">A</fr:tex> is a type in <fr:tex display="inline">\mathcal {U}</fr:tex> or that <fr:tex display="inline">\mathcal {U}</fr:tex> contains <fr:tex display="inline">A</fr:tex>,
-    if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>462</fr:anchor><fr:addr type="machine">#314</fr:addr><fr:route>unstable-314.xml</fr:route><fr:title text="Enough Universe">Enough Universe</fr:title><fr:authors></fr:authors><fr:parent>def-004E</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
+    if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.</fr:p>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>469</fr:anchor>
+                        <fr:addr type="machine">#318</fr:addr>
+                        <fr:route>unstable-318.xml</fr:route>
+                        <fr:title text="Enough Universe">Enough Universe</fr:title>
+                        <fr:authors></fr:authors>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
         If we have only one <fr:tex display="inline">\mathcal {U}</fr:tex>, the <fr:strong>Russell Paradox</fr:strong> may arise.
-        Therefore we assume that there are <fr:strong>enough universes</fr:strong></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>463</fr:anchor><fr:addr type="user">thm-0013</fr:addr><fr:route>thm-0013.xml</fr:route><fr:title text="Enough Universe">Enough Universe</fr:title><fr:taxon>Postulate</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>We assume that there&apos;re <fr:strong>enough universe</fr:strong>, i.e.,
+        Therefore we assume that there are <fr:strong>enough universes</fr:strong></fr:p>
+                      </fr:mainmatter>
+                      <fr:backmatter></fr:backmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>470</fr:anchor>
+                    <fr:addr type="user">thm-0013</fr:addr>
+                    <fr:route>thm-0013.xml</fr:route>
+                    <fr:title text="Enough Universe">Enough Universe</fr:title>
+                    <fr:taxon>Postulate</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>We assume that there&apos;re <fr:strong>enough universe</fr:strong>, i.e.,
     for every finite list of types in context 
     <fr:tex display="block">         \Gamma _1\vdash  A_1\space \space \text {type},\cdots ,\Gamma _n\vdash  A_n\space \space \text {type}     </fr:tex>
     there is a universe <fr:tex display="inline">\mathcal {U}</fr:tex> that contains each <fr:tex display="inline">A_i</fr:tex> in the sense that <fr:tex display="inline">\mathcal {U}</fr:tex> comes equipped with
     <fr:tex display="block">         \Gamma _i\vdash \check {A_i}:\mathcal {U}     </fr:tex>
     for which the following judgement holds:
-    <fr:tex display="block">         \Gamma _i \vdash \mathcal {T}(\check {A_i})\equiv  A_i\space \space \text {type}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Using the assumption we can obtain many specific universes.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>464</fr:anchor><fr:addr type="user">def-004F</fr:addr><fr:route>def-004F.xml</fr:route><fr:title text="Base Universe">Base Universe</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>base universee</fr:strong> <fr:tex display="inline">\mathcal {U}_0</fr:tex> is defined using <fr:link type="local" href="thm-0013.xml" addr="thm-0013" title="Enough Universe">universe postulate</fr:link>
-    with empty context.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>465</fr:anchor><fr:addr type="user">def-004G</fr:addr><fr:route>def-004G.xml</fr:route><fr:title text="Successor Universe">Successor Universe</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>successor universee</fr:strong> <fr:tex display="inline">\mathcal {U}^+</fr:tex> of a universe <fr:tex display="inline">\mathcal {U}</fr:tex> is defined using <fr:link type="local" href="thm-0013.xml" addr="thm-0013" title="Enough Universe">universe postulate</fr:link>
+    <fr:tex display="block">         \Gamma _i \vdash \mathcal {T}(\check {A_i})\equiv  A_i\space \space \text {type}     </fr:tex></fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>Using the assumption we can obtain many specific universes.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>471</fr:anchor>
+                    <fr:addr type="user">def-004F</fr:addr>
+                    <fr:route>def-004F.xml</fr:route>
+                    <fr:title text="Base Universe">Base Universe</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>The <fr:strong>base universee</fr:strong> <fr:tex display="inline">\mathcal {U}_0</fr:tex> is defined using <fr:link type="local" href="thm-0013.xml" addr="thm-0013" title="Enough Universe">universe postulate</fr:link>
+    with empty context.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>472</fr:anchor>
+                    <fr:addr type="user">def-004G</fr:addr>
+                    <fr:route>def-004G.xml</fr:route>
+                    <fr:title text="Successor Universe">Successor Universe</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>The <fr:strong>successor universee</fr:strong> <fr:tex display="inline">\mathcal {U}^+</fr:tex> of a universe <fr:tex display="inline">\mathcal {U}</fr:tex> is defined using <fr:link type="local" href="thm-0013.xml" addr="thm-0013" title="Enough Universe">universe postulate</fr:link>
     with the following contexts:
     <fr:tex display="block">         \vdash \mathcal {U}\space \space \text {type}\quad  X:\mathcal {U}\vdash \mathcal {T}(X)\space \space \text {type}     </fr:tex>
     It therefore contains the type <fr:tex display="inline">\mathcal {U}</fr:tex> as well as type in <fr:tex display="inline">\mathcal {U}</fr:tex>, in the following sense
-    <fr:tex display="block">         \begin {align*}             &amp;\vdash \check {\mathcal {U}}:\mathcal {U}^+\\              &amp;\vdash \mathcal {T}^+(\check {\mathcal {U}})\equiv \mathcal {U}\space \text {type}\\             &amp;X:\mathcal {U}\vdash \check {\mathcal {T}}(X):\mathcal {U}^+\\              &amp;X:\mathcal {U}\vdash \mathcal {T}^+(\check {\mathcal {T}}(X))\equiv \mathcal {T}(X)\space \text {type}          \end {align*}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Using successor universes we can create an infinite tower of universes.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>466</fr:anchor><fr:addr type="machine">#267</fr:addr><fr:route>unstable-267.xml</fr:route><fr:title text="Observational Equality">Observational Equality</fr:title><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>14</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Now we give the example of <fr:strong>observational equality</fr:strong> of <fr:tex display="inline">\mathbb {N}</fr:tex>.
+    <fr:tex display="block">         \begin {align*}             &amp;\vdash \check {\mathcal {U}}:\mathcal {U}^+\\              &amp;\vdash \mathcal {T}^+(\check {\mathcal {U}})\equiv \mathcal {U}\space \text {type}\\             &amp;X:\mathcal {U}\vdash \check {\mathcal {T}}(X):\mathcal {U}^+\\              &amp;X:\mathcal {U}\vdash \mathcal {T}^+(\check {\mathcal {T}}(X))\equiv \mathcal {T}(X)\space \text {type}          \end {align*}     </fr:tex></fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>Using successor universes we can create an infinite tower of universes.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>473</fr:anchor>
+                <fr:addr type="machine">#271</fr:addr>
+                <fr:route>unstable-271.xml</fr:route>
+                <fr:title text="Observational Equality">Observational Equality</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>14</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Now we give the example of <fr:strong>observational equality</fr:strong> of <fr:tex display="inline">\mathbb {N}</fr:tex>.
         The key idea is to define a recursive function that reduce the arguments.
         Observational equality an inductively defined relation, which gives us an algorithm for checking
-        equality on  <fr:tex display="inline">\mathbb {N}</fr:tex>. It can be used to show that equality of natural numbers is <fr:strong>decidable</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>467</fr:anchor><fr:addr type="user">def-004H</fr:addr><fr:route>def-004H.xml</fr:route><fr:title text="Observational Equality of {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a binary relation <fr:tex display="inline">\text {Eq}_\mathbb {N}:\mathbb {N}\to (\mathbb {N}\to \mathcal {U}_0)</fr:tex> satisfies
+        equality on  <fr:tex display="inline">\mathbb {N}</fr:tex>. It can be used to show that equality of natural numbers is <fr:strong>decidable</fr:strong>.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>474</fr:anchor>
+                    <fr:addr type="user">def-004H</fr:addr>
+                    <fr:route>def-004H.xml</fr:route>
+                    <fr:title text="Observational Equality of {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>The observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a binary relation <fr:tex display="inline">\text {Eq}_\mathbb {N}:\mathbb {N}\to (\mathbb {N}\to \mathcal {U}_0)</fr:tex> satisfies
     <fr:tex display="block">         \begin {align*}             \text {Eq}_\mathbb {N}(0)(0) &amp;\equiv  \textbf {1} \\             \text {Eq}_\mathbb {N}(0)(\text {succ}(n)) &amp;\equiv  \textbf {0} \\             \text {Eq}_\mathbb {N}(\text {succ}(m))(0) &amp;\equiv  \textbf {0} \\             \text {Eq}_\mathbb {N}(\text {succ}(m))(\text {succ}(n)) &amp;\equiv  \text {Eq}_\mathbb {N}(m)(n)         \end {align*}     </fr:tex>
     
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>468</fr:anchor><fr:addr type="machine">#313</fr:addr><fr:route>unstable-313.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors><fr:parent>def-004H</fr:parent></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>475</fr:anchor><fr:addr type="machine">#317</fr:addr><fr:route>unstable-317.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
         it suffices to provide
         <fr:tex display="block">             \begin {align*}                 &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\                  &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))             \end {align*}         </fr:tex>
@@ -65,23 +219,62 @@
         Therefore we have by the computation rule for the first induction that 
         the following judgemental equality holds.
         <fr:tex display="block">             \begin {align*}                 \text {Eq}(0,m) &amp;\equiv  E_0(m) \\                 \text {Eq}(\text {succ}(n),m) &amp;\equiv  E_S(n,\text {Eq}(n),m)             \end {align*}         </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a reflexive relation, i.e. we have
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>Observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a reflexive relation, i.e. we have
         <fr:tex display="block">             \text {refl-Eq}_\mathbb {N}:\Pi _{(n:\mathbb {N})}\text {Eq}_\mathbb {N}(n,n)         </fr:tex>
         which is witnessed by induction on <fr:tex display="inline">n</fr:tex>.
-        <fr:tex display="block">             \begin {align*}                 \text {refl-Eq}_\mathbb {N}(0) &amp;\equiv \star  \\                  \text {refl-Eq}_\mathbb {N}(\text {succ}(n)) &amp;\equiv \text {refl-Eq}_\mathbb {N}(n)             \end {align*}         </fr:tex></fr:p><fr:p>This leads to an interesting dual perspective on equality. 
+        <fr:tex display="block">             \begin {align*}                 \text {refl-Eq}_\mathbb {N}(0) &amp;\equiv \star  \\                  \text {refl-Eq}_\mathbb {N}(\text {succ}(n)) &amp;\equiv \text {refl-Eq}_\mathbb {N}(n)             \end {align*}         </fr:tex></fr:p>
+                <fr:p>This leads to an interesting dual perspective on equality. 
         For any two natural numbers <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> we have
-        <fr:tex display="block">             (m=n)\leftrightarrow \text {Eq}_\mathbb {N}(m,n)         </fr:tex></fr:p><fr:p>Using the observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> we can prove Peano&apos;s seventh and eighth
+        <fr:tex display="block">             (m=n)\leftrightarrow \text {Eq}_\mathbb {N}(m,n)         </fr:tex></fr:p>
+                <fr:p>Using the observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> we can prove Peano&apos;s seventh and eighth
         axioms.
         <fr:ul><fr:li>For any two natural numbers <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> we have 
                 <fr:tex display="block">                     (m = n)\leftrightarrow (\text {succ}(m) = \text {succ}(n))                 </fr:tex></fr:li>
-            <fr:li>For any natural number <fr:tex display="inline">n</fr:tex> we have <fr:tex display="inline">0 \not = \text {succ}(n)</fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1437</fr:anchor><fr:addr type="user">tt-0005</fr:addr><fr:route>tt-0005.xml</fr:route><fr:title text="Identity Types">Identity Types</fr:title><fr:taxon>Type Theory</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This post discuss the identity types in type theory.
-    Refer to <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:link>.</fr:p><fr:p>How can we think of <fr:strong>equality</fr:strong> in type theory?
+            <fr:li>For any natural number <fr:tex display="inline">n</fr:tex> we have <fr:tex display="inline">0 \not = \text {succ}(n)</fr:tex></fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>1442</fr:anchor>
+            <fr:addr type="user">tt-0005</fr:addr>
+            <fr:route>tt-0005.xml</fr:route>
+            <fr:title text="Identity Types">Identity Types</fr:title>
+            <fr:taxon>Type Theory</fr:taxon>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>31</fr:day>
+            </fr:date>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>This post discuss the identity types in type theory.
+    Refer to <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:link>.</fr:p>
+            <fr:p>How can we think of <fr:strong>equality</fr:strong> in type theory?
     Mentioned before, given a type <fr:tex display="inline">A</fr:tex> and two its elements <fr:tex display="inline">a,b:A</fr:tex>
     we can define a new type <fr:tex display="inline">a=_Ab</fr:tex> which is called the <fr:strong>identity type</fr:strong>.
     In this case, a term of <fr:tex display="inline">a=_Ab</fr:tex> is said to be a <fr:em>witness</fr:em> of the equality of <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex>.
     And this witness is itself a type.
     We can then define their equality.
-    This gives every type a <fr:strong>groupoid structure</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>442</fr:anchor><fr:addr type="user">def-002N</fr:addr><fr:route>def-002N.xml</fr:route><fr:title text="Identity Type">Identity Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>identity type</fr:strong> is an inductive type,
+    This gives every type a <fr:strong>groupoid structure</fr:strong>.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>449</fr:anchor>
+                <fr:addr type="user">def-002N</fr:addr>
+                <fr:route>def-002N.xml</fr:route>
+                <fr:title text="Identity Type">Identity Type</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>The <fr:strong>identity type</fr:strong> is an inductive type,
     generated by just a <fr:strong>reflexivity</fr:strong> <fr:em>identification</fr:em>
     that providing an equality of a term with itself.</fr:p><fr:p>Consider a type <fr:tex display="inline">A</fr:tex> and let <fr:tex display="inline">a:A</fr:tex> be an element.
     The identity type of <fr:tex display="inline">A</fr:tex> at <fr:tex display="inline">a</fr:tex> is an inductive family of types <fr:tex display="inline">a=_Ax</fr:tex> 
@@ -89,7 +282,7 @@
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A         }{             \Gamma ,x:A\vdash  a=_Ax\space \text {type}         }     </fr:tex>
     The only constructor is the refl:
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A         }{             \Gamma \vdash  \text {refl}_a:a=_Ax         }     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>443</fr:anchor><fr:addr type="machine">#327</fr:addr><fr:route>unstable-327.xml</fr:route><fr:title text="Path Induction / Identification Elimination"><fr:strong>Path Induction / Identification Elimination</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>def-002N</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>450</fr:anchor><fr:addr type="machine">#331</fr:addr><fr:route>unstable-331.xml</fr:route><fr:title text="Path Induction / Identification Elimination"><fr:strong>Path Induction / Identification Elimination</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The induction principle of the identity type states that
     for any type family <fr:tex display="inline">P(x,p)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> and <fr:tex display="inline">p:a=_Ax</fr:tex>,
     <fr:tex display="block">         \text {ind-eq}_{a}:P(a, \text {refl}_a)\to  (x:A)\to  (p:a=_Ax)\to  P(x,p)     </fr:tex>
@@ -101,17 +294,55 @@
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 <fr:p>A term of <fr:tex display="inline">a=_Ax</fr:tex> is called a <fr:strong>identification</fr:strong> of <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">x</fr:tex>,
     or the <fr:strong>path</fr:strong> from <fr:tex display="inline">a</fr:tex> to <fr:tex display="inline">x</fr:tex>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>444</fr:anchor><fr:addr type="machine">#328</fr:addr><fr:route>unstable-328.xml</fr:route><fr:title text="Variable Version"><fr:strong>Variable Version</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>def-002N</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>451</fr:anchor><fr:addr type="machine">#332</fr:addr><fr:route>unstable-332.xml</fr:route><fr:title text="Variable Version"><fr:strong>Variable Version</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     We can form an identity type with variables of <fr:tex display="inline">A</fr:tex>.
     <fr:tex display="block">         \Gamma ,x:A,y:A\vdash  x=_Ay\space \text {type}     </fr:tex>
     with the following introduction rule:
     <fr:tex display="block">         \frac {             \Gamma ,x:A\vdash  x:A         }{             \Gamma ,x:A\vdash  \text {refl}_x:x=_Ax         }     </fr:tex>
     and similarly the elimination rule and computation rule.
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>445</fr:anchor><fr:addr type="machine">#268</fr:addr><fr:route>unstable-268.xml</fr:route><fr:title text="The groupoid structure of types">The groupoid structure of types</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0005</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The identifications can be <fr:strong>concatenated</fr:strong> and <fr:strong>inverted</fr:strong>,
-        which implies the <fr:em>transitivity</fr:em> and <fr:em>symmetry</fr:em> of the identity type.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>446</fr:anchor><fr:addr type="user">def-002O</fr:addr><fr:route>def-002O.xml</fr:route><fr:title text="Concatenation Operation">Concatenation Operation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
+</fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>452</fr:anchor>
+                <fr:addr type="machine">#272</fr:addr>
+                <fr:route>unstable-272.xml</fr:route>
+                <fr:title text="The groupoid structure of types">The groupoid structure of types</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>1</fr:month>
+                  <fr:day>31</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The identifications can be <fr:strong>concatenated</fr:strong> and <fr:strong>inverted</fr:strong>,
+        which implies the <fr:em>transitivity</fr:em> and <fr:em>symmetry</fr:em> of the identity type.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>453</fr:anchor>
+                    <fr:addr type="user">def-002O</fr:addr>
+                    <fr:route>def-002O.xml</fr:route>
+                    <fr:title text="Concatenation Operation">Concatenation Operation</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
     The <fr:strong>Concatenation</fr:strong> operation is defined:
-    <fr:tex display="block">         \text {concat}: (x:A)\to  (y:A)\to  (z:A)\to  (x=_Ay)\to  (y=_Az)\to  (x=_Az)     </fr:tex></fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>447</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="Construction of Concatenation">Construction of Concatenation</fr:title><fr:authors></fr:authors><fr:parent>def-002O</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>We can first construct:
+    <fr:tex display="block">         \text {concat}: (x:A)\to  (y:A)\to  (z:A)\to  (x=_Ay)\to  (y=_Az)\to  (x=_Az)     </fr:tex></fr:p>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>454</fr:anchor>
+                        <fr:addr type="machine">#330</fr:addr>
+                        <fr:route>unstable-330.xml</fr:route>
+                        <fr:title text="Construction of Concatenation">Construction of Concatenation</fr:title>
+                        <fr:authors></fr:authors>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>We can first construct:
         <fr:tex display="block">             f(x):(y:A)\to  (x=_Ay)\to (z:A)\to  (y=_Az)\to (x=_Az)         </fr:tex>
         For any <fr:tex display="inline">x:A</fr:tex>, it suffices to construct
         <fr:tex display="block">             f(x,x,\text {refl}_x) : (z:A) \to  (x=_Az)\to (x=_Az)         </fr:tex>
@@ -120,26 +351,70 @@
         <fr:tex display="block">             f(x) :\equiv  \text {ind-eq}_{x}(\lambda  z.\text {id})         </fr:tex>
         Finally:
         <fr:tex display="block">             \text {concat}_{x,y,z}(p,q) :\equiv  f(x,y,p,z,q)         </fr:tex>
-        Or simply we denote <fr:tex display="inline">\text {concat}(p,q)</fr:tex> as <fr:tex display="inline">p \cdot  q</fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>448</fr:anchor><fr:addr type="user">def-002P</fr:addr><fr:route>def-002P.xml</fr:route><fr:title text="Inverse Operation">Inverse Operation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type. The <fr:strong>inverse oepration</fr:strong> is defined:
+        Or simply we denote <fr:tex display="inline">\text {concat}(p,q)</fr:tex> as <fr:tex display="inline">p \cdot  q</fr:tex></fr:p>
+                      </fr:mainmatter>
+                      <fr:backmatter></fr:backmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>455</fr:anchor>
+                    <fr:addr type="user">def-002P</fr:addr>
+                    <fr:route>def-002P.xml</fr:route>
+                    <fr:title text="Inverse Operation">Inverse Operation</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>Let <fr:tex display="inline">A</fr:tex> be a type. The <fr:strong>inverse oepration</fr:strong> is defined:
     <fr:tex display="block">         \text {inv}: (x:A)\to  (y:A)\to  (x=_Ay)\to  (y=_Ax)     </fr:tex>
-    Most of the time we write <fr:tex display="inline">p^{-1}</fr:tex> for <fr:tex display="inline">\text {inv}(p)</fr:tex>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>449</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="Construction of Inverse">Construction of Inverse</fr:title><fr:authors></fr:authors><fr:parent>def-002P</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>By induction, it suffices to construct:
+    Most of the time we write <fr:tex display="inline">p^{-1}</fr:tex> for <fr:tex display="inline">\text {inv}(p)</fr:tex>.</fr:p>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>456</fr:anchor>
+                        <fr:addr type="machine">#329</fr:addr>
+                        <fr:route>unstable-329.xml</fr:route>
+                        <fr:title text="Construction of Inverse">Construction of Inverse</fr:title>
+                        <fr:authors></fr:authors>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>By induction, it suffices to construct:
         <fr:tex display="block">             \text {inv}(x,x,\text {refl}_x) : (x=_Ax)         </fr:tex>
-        for any <fr:tex display="inline">x:A</fr:tex>. And trivially we have <fr:tex display="inline">\text {inv}(x,x,\text {refl}_x)\equiv \text {refl}_x</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>It is natural to ask whether the identity type is <fr:em>reflexive</fr:em>.
+        for any <fr:tex display="inline">x:A</fr:tex>. And trivially we have <fr:tex display="inline">\text {inv}(x,x,\text {refl}_x)\equiv \text {refl}_x</fr:tex>.</fr:p>
+                      </fr:mainmatter>
+                      <fr:backmatter></fr:backmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>It is natural to ask whether the identity type is <fr:em>reflexive</fr:em>.
         In the case of associativity we should ask to compare the identifications:
         <fr:tex display="block">             (p\cdot  q)\cdot  r \quad \text {and}\quad  p\cdot (q\cdot  r)         </fr:tex>
         for any <fr:tex display="inline">p:x=y</fr:tex>, <fr:tex display="inline">q:y=z</fr:tex> and <fr:tex display="inline">r:z=w</fr:tex> in a type <fr:tex display="inline">A</fr:tex>. Both <fr:tex display="inline"> (p\cdot  q)\cdot  r</fr:tex> and 
         <fr:tex display="inline">p\cdot (q\cdot  r)</fr:tex> are elements of type <fr:tex display="inline">x=w</fr:tex>. We can ask whether there is an
         identification
-        <fr:tex display="block">             (p\cdot  q)\cdot  r = p\cdot (q\cdot  r)         </fr:tex></fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>450</fr:anchor><fr:addr type="user">def-002W</fr:addr><fr:route>def-002W.xml</fr:route><fr:title text="Associator">Associator</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
+        <fr:tex display="block">             (p\cdot  q)\cdot  r = p\cdot (q\cdot  r)         </fr:tex></fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>457</fr:anchor>
+                    <fr:addr type="user">def-002W</fr:addr>
+                    <fr:route>def-002W.xml</fr:route>
+                    <fr:title text="Associator">Associator</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
     These are 3 consecutive identifications
     <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
     we define the <fr:strong>associator</fr:strong>:
     <fr:tex display="block">         \text {assoc}: (p,q,r): (p\cdot  q)\cdot  r = p\cdot  (q\cdot  r)     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>451</fr:anchor><fr:addr type="machine">#320</fr:addr><fr:route>unstable-320.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>458</fr:anchor><fr:addr type="machine">#324</fr:addr><fr:route>unstable-324.xml</fr:route><fr:title text="
     Construction of Associator
 ">
     <fr:strong>Construction of Associator</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-002W</fr:parent></fr:frontmatter><fr:mainmatter>
+</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     By definition it suffices to show that
     <fr:tex display="block">         \Pi _{(z:A)}\Pi _{(q:x=_Az)}         \Pi _{(w:A)}\Pi _{(r:z=_Aw)}         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
     Let <fr:tex display="inline">q:x=_Az</fr:tex> and <fr:tex display="inline">r:z=_Aw</fr:tex>. By computation rule of identity types
@@ -153,19 +428,62 @@
     so we can simply define the associator as
     <fr:tex display="block">         \text {assoc}(\text {refl}_x,q,r) :\equiv  \text {refl}_{q\cdot  r}     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>452</fr:anchor><fr:addr type="user">def-002X</fr:addr><fr:route>def-002X.xml</fr:route><fr:title text="Unit Law Operations">Unit Law Operations</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
+</fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>459</fr:anchor>
+                    <fr:addr type="user">def-002X</fr:addr>
+                    <fr:route>def-002X.xml</fr:route>
+                    <fr:title text="Unit Law Operations">Unit Law Operations</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
     We defined the <fr:strong>unit law</fr:strong> operations for <fr:tex display="inline">x=_Ay</fr:tex>:
     <fr:tex display="block">         \begin {align*}             \text {left-unit} &amp; : (x=_Ay)\to  (\text {refl}_x\cdot  x = x) \\             \text {right-unit} &amp; : (x=_Ay)\to  (x\cdot \text {refl}_y = x)         \end {align*}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>453</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>460</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="
     Construction of Unit Law
 ">
     <fr:strong>Construction of Unit Law</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-002X</fr:parent></fr:frontmatter><fr:mainmatter>
+</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     By elimination it suffices to construct:
     <fr:tex display="block">         \begin {align*}             \text {left-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\             \text {right-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x         \end {align*}     </fr:tex>
     In both cases we need only to construct <fr:tex display="inline">\text {refl}_{\text {refl}_x}</fr:tex>.
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>454</fr:anchor><fr:addr type="machine">#269</fr:addr><fr:route>unstable-269.xml</fr:route><fr:title text="The action on identifications of functions">The action on identifications of functions</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0005</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Every function preserves identifications.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>455</fr:anchor><fr:addr type="user">def-004C</fr:addr><fr:route>def-004C.xml</fr:route><fr:title text="Action on Paths">Action on Paths</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">f:A\to  B</fr:tex> be a map. We define the <fr:strong>action on paths</fr:strong> of <fr:tex display="inline">f</fr:tex> as an operation:
+</fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>461</fr:anchor>
+                <fr:addr type="machine">#273</fr:addr>
+                <fr:route>unstable-273.xml</fr:route>
+                <fr:title text="The action on identifications of functions">The action on identifications of functions</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>1</fr:month>
+                  <fr:day>31</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Every function preserves identifications.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>462</fr:anchor>
+                    <fr:addr type="user">def-004C</fr:addr>
+                    <fr:route>def-004C.xml</fr:route>
+                    <fr:title text="Action on Paths">Action on Paths</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>Let <fr:tex display="inline">f:A\to  B</fr:tex> be a map. We define the <fr:strong>action on paths</fr:strong> of <fr:tex display="inline">f</fr:tex> as an operation:
     <fr:tex display="block">         \text {ap}_f : \prod _{x,y:A} (x=y) \to  (f(x)=f(y))     </fr:tex>
     This can be defined by induction principle of identity types:
     <fr:tex display="block">         \text {ap}_f(\text {refl}_x) \equiv  \text {refl}_{f(x)}     </fr:tex>
@@ -183,19 +501,55 @@
         <fr:li>The <fr:tex display="inline">\text {ap-inv}</fr:tex> can be constructed by identification elimination on <fr:tex display="inline">p</fr:tex>.
             <fr:tex display="block">                 \begin {align*}                     &amp;\text {ap-inv}(f,p):\text {ap}_f(p^{-1}) = \text {ap}_f(p)^{-1}\\                     &amp;\text {ap-inv}(f,\text {refl}_x)\equiv  \text {refl}_{\text {ap}_f(\text {refl}_x)}                 \end {align*}             </fr:tex></fr:li>
         <fr:li>Similarly, the <fr:tex display="inline">\text {ap-concat}</fr:tex> can be constructed by identification elimination on <fr:tex display="inline">p</fr:tex>.
-            <fr:tex display="block">                 \begin {align*}                     &amp;\text {ap-concat}(f,p,q):\text {ap}_f(p\cdot  q) = \text {ap}_f(p)\cdot  \text {ap}_f(q) \\                     &amp;\text {ap-concat}(f,\text {refl}_x,q)\equiv  \text {refl}_{\text {ap}_f(q)}                 \end {align*}             </fr:tex></fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>To construct dependent action on paths if a dependent function <fr:tex display="inline">f:\Pi _{(x:A)}B(x)</fr:tex>.
+            <fr:tex display="block">                 \begin {align*}                     &amp;\text {ap-concat}(f,p,q):\text {ap}_f(p\cdot  q) = \text {ap}_f(p)\cdot  \text {ap}_f(q) \\                     &amp;\text {ap-concat}(f,\text {refl}_x,q)\equiv  \text {refl}_{\text {ap}_f(q)}                 \end {align*}             </fr:tex></fr:li></fr:ul></fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>To construct dependent action on paths if a dependent function <fr:tex display="inline">f:\Pi _{(x:A)}B(x)</fr:tex>.
         We need a <fr:strong>transport</fr:strong> because type theory can not distinguish between identified 
-        elements from different types.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>456</fr:anchor><fr:addr type="user">def-004D</fr:addr><fr:route>def-004D.xml</fr:route><fr:title text="Transport">Transport</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type and let <fr:tex display="inline">B</fr:tex> be a type family over <fr:tex display="inline">A</fr:tex>.
+        elements from different types.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>463</fr:anchor>
+                    <fr:addr type="user">def-004D</fr:addr>
+                    <fr:route>def-004D.xml</fr:route>
+                    <fr:title text="Transport">Transport</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>Let <fr:tex display="inline">A</fr:tex> be a type and let <fr:tex display="inline">B</fr:tex> be a type family over <fr:tex display="inline">A</fr:tex>.
     The <fr:strong>transport</fr:strong> operation is defined:
     <fr:tex display="block">         \text {tr}_B:\Pi _{(x,y:A)}(x=y)\to  B(x)\to  B(y)     </fr:tex>
     Simply induction on <fr:tex display="inline">p:x=y</fr:tex> we can construct:
-    <fr:tex display="block">         \text {tr}_B(\text {refl}_x) \equiv  \text {id}_{B(x)}     </fr:tex></fr:p><fr:p>Now for a given dependent function <fr:tex display="inline">f:\Pi _{(a:A)}B(a)</fr:tex> and an identification
+    <fr:tex display="block">         \text {tr}_B(\text {refl}_x) \equiv  \text {id}_{B(x)}     </fr:tex></fr:p>
+                    <fr:p>Now for a given dependent function <fr:tex display="inline">f:\Pi _{(a:A)}B(a)</fr:tex> and an identification
     <fr:tex display="inline">p:x=y</fr:tex> in <fr:tex display="inline">A</fr:tex> we can construct
     <fr:tex display="block">         \text {apd}_f(p) : \text {tr}_B(p,f(x)) = f(y)     </fr:tex>
     this can be constructed by the induction principle for identity types,
     it suffices to construct an identification:
     <fr:tex display="block">         \text {apd}_f(\text {refl}_x) : \text {tr}_B(\text {refl}_x,f(x)) = f(x)     </fr:tex>
-    which is simply done by taking <fr:tex display="inline">\text {apd}_f(\text {refl}_x)\equiv \text {refl}_{f(x)}</fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>457</fr:anchor><fr:addr type="machine">#270</fr:addr><fr:route>unstable-270.xml</fr:route><fr:title text="Uniqueness of refl">Uniqueness of refl</fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0005</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The identity type is an inductive family of types.
+    which is simply done by taking <fr:tex display="inline">\text {apd}_f(\text {refl}_x)\equiv \text {refl}_{f(x)}</fr:tex></fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>464</fr:anchor>
+                <fr:addr type="machine">#274</fr:addr>
+                <fr:route>unstable-274.xml</fr:route>
+                <fr:title text="Uniqueness of refl">Uniqueness of refl</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>1</fr:month>
+                  <fr:day>31</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>The identity type is an inductive family of types.
         For instance, while the type <fr:tex display="inline">a=x</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> is inductively generated by <fr:tex display="inline">\text {refl}_a</fr:tex>,
         the type <fr:tex display="inline">a=a</fr:tex> is <fr:strong>not</fr:strong>, because the endpoint of <fr:tex display="inline">p:a=a</fr:tex> is not free. 
         We want to show that <fr:tex display="inline">p=\text {refl}_a</fr:tex> for all <fr:tex display="inline">p:a=a</fr:tex>.</fr:p><fr:p>Nevertheless the identity type <fr:tex display="inline">a=x</fr:tex> is generated by a single element <fr:tex display="inline">\text {refl}_a:a=a</fr:tex>,
@@ -206,7 +560,7 @@
         <fr:tex display="inline">(a, \text {refl}_a = y)</fr:tex> in the type <fr:tex display="inline">\Sigma _(x:A) a = x</fr:tex> for any <fr:tex display="inline">y:\Sigma _(x:A) a = x </fr:tex></fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>458</fr:anchor><fr:addr type="machine">#271</fr:addr><fr:route>unstable-271.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#270</fr:parent></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>465</fr:anchor><fr:addr type="machine">#275</fr:addr><fr:route>unstable-275.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         By <fr:tex display="inline">\Sigma </fr:tex> induction it suffices to show that there is an identification
         <fr:tex display="block">             (a, \text {refl}_a) = (x, p)         </fr:tex>
         forall <fr:tex display="inline">x:A</fr:tex> and <fr:tex display="inline">p:a=x</fr:tex>. Then perform the induction principle of identity types.
@@ -215,13 +569,33 @@
         which can be obtained by reflexivity.
     </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
  
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1438</fr:anchor><fr:addr type="user">tt-0004</fr:addr><fr:route>tt-0004.xml</fr:route><fr:title text="Inductive Types">Inductive Types</fr:title><fr:taxon>Type Theory</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>In previous post, we have seen the definition of natural numbers as an inductive type.
+</fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>1443</fr:anchor>
+            <fr:addr type="user">tt-0004</fr:addr>
+            <fr:route>tt-0004.xml</fr:route>
+            <fr:title text="Inductive Types">Inductive Types</fr:title>
+            <fr:taxon>Type Theory</fr:taxon>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>30</fr:day>
+            </fr:date>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter><fr:p>In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
     Refer to <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke&apos;s Book</fr:link>.</fr:p><fr:p>This section is much more informal than the previous one.
     Without displaying the inference rules, we will just present the <fr:strong>constructor</fr:strong>
     and <fr:strong>induction principle</fr:strong> of each inductive type.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>428</fr:anchor><fr:addr type="machine">#272</fr:addr><fr:route>unstable-272.xml</fr:route><fr:title text="General Inductive Type"><fr:strong>General Inductive Type</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0004</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>435</fr:anchor><fr:addr type="machine">#276</fr:addr><fr:route>unstable-276.xml</fr:route><fr:title text="General Inductive Type"><fr:strong>General Inductive Type</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>Just like <fr:tex display="inline">\mathbb {N}</fr:tex>, other inductive types can be defined by 
     their constructors and induction principles (and computation rules).</fr:p>
     <fr:ul><fr:li>The constructors specify the structure of the type equipped.</fr:li>
@@ -229,27 +603,27 @@
             a section of an arbitrary type family over the inductive type.</fr:li>
         <fr:li>The computation rules specify the behavior of the constructors.</fr:li></fr:ul>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>429</fr:anchor><fr:addr type="user">def-0020</fr:addr><fr:route>def-0020.xml</fr:route><fr:title text="Unit Type">Unit Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>unit type</fr:strong> is the simplest inductive type.
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>436</fr:anchor><fr:addr type="user">def-0020</fr:addr><fr:route>def-0020.xml</fr:route><fr:title text="Unit Type">Unit Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>unit type</fr:strong> is the simplest inductive type.
         It has only one constructor, denoted by <fr:tex display="inline">\star :\textbf {1}</fr:tex>.</fr:p><fr:p>The induction principle of the unit type is trivial.
         It says that to define a dependent function <fr:tex display="inline">f:\Pi  _{(x:\textbf {1})} P(x)</fr:tex>, 
         it suffices to give a value <fr:tex display="inline">p:P(\star )</fr:tex>.
         <fr:tex display="block">             f (\star ) :\equiv  p         </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>A degenrate inductive type is the <fr:strong>empty type</fr:strong>.
     It has no constructor, and its induction principle is trivial.
-    Empty type is connected to the <fr:strong>exfalso quodlibet principle</fr:strong> in logic.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>430</fr:anchor><fr:addr type="user">def-0021</fr:addr><fr:route>def-0021.xml</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>empty type</fr:strong> is a degenerate inductive type <fr:tex display="inline">\emptyset </fr:tex> satisfying 
+    Empty type is connected to the <fr:strong>exfalso quodlibet principle</fr:strong> in logic.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>437</fr:anchor><fr:addr type="user">def-0021</fr:addr><fr:route>def-0021.xml</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>empty type</fr:strong> is a degenerate inductive type <fr:tex display="inline">\emptyset </fr:tex> satisfying 
     the following induction principle:
     <fr:tex display="block">         \text {ind}_\emptyset  : \Pi _{(x:\emptyset )}P(x)     </fr:tex>
     And a special case is <fr:strong>exfalso</fr:strong>:
     <fr:tex display="block">         \text {exfalso} :\equiv  \text {ind}_\emptyset  : \empty  \to  A      </fr:tex>
     which can draw any conclusion.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>With the empty type we can define the <fr:strong>negation</fr:strong> of a type
-    and the <fr:strong>proof of negation</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>431</fr:anchor><fr:addr type="user">def-0022</fr:addr><fr:route>def-0022.xml</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>negation</fr:strong> of type <fr:tex display="inline">A</fr:tex> is defined as
+    and the <fr:strong>proof of negation</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>438</fr:anchor><fr:addr type="user">def-0022</fr:addr><fr:route>def-0022.xml</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>negation</fr:strong> of type <fr:tex display="inline">A</fr:tex> is defined as
     <fr:tex display="block">         \neg  A :\equiv  A \to  \emptyset      </fr:tex>
     A type <fr:tex display="inline">A</fr:tex> is said to be <fr:strong>empty</fr:strong> if and only if <fr:tex display="inline">\neg  A</fr:tex> is inhabited.
     <fr:tex display="block">         \text {empty}(A) :\equiv  \neg  A     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>432</fr:anchor><fr:addr type="machine">#334</fr:addr><fr:route>unstable-334.xml</fr:route><fr:title text="Proof of negation"><fr:strong>Proof of negation</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>def-0022</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>439</fr:anchor><fr:addr type="machine">#338</fr:addr><fr:route>unstable-338.xml</fr:route><fr:title text="Proof of negation"><fr:strong>Proof of negation</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         <fr:p>To prove <fr:tex display="inline">\neg  A</fr:tex>, we need to show that <fr:tex display="inline">A</fr:tex> implies a contradiction.
             In other words, constructing a function of type <fr:tex display="inline">A \to  \emptyset </fr:tex>.</fr:p>
     </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>433</fr:anchor><fr:addr type="user">def-0023</fr:addr><fr:route>def-0023.xml</fr:route><fr:title text="Coproduct Type">Coproduct Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex> be types. The <fr:strong>coproduct (disjoint sum)</fr:strong> <fr:tex display="inline">A+B</fr:tex> is a typed defined by the following constructors:
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>440</fr:anchor><fr:addr type="user">def-0023</fr:addr><fr:route>def-0023.xml</fr:route><fr:title text="Coproduct Type">Coproduct Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex> be types. The <fr:strong>coproduct (disjoint sum)</fr:strong> <fr:tex display="inline">A+B</fr:tex> is a typed defined by the following constructors:
     <fr:ul><fr:li><fr:tex display="inline">\text {inl}:A\to  A+B</fr:tex></fr:li>
         <fr:li><fr:tex display="inline">\text {inr}:B\to  A+B</fr:tex></fr:li></fr:ul>
     For any type family indexed by <fr:tex display="inline">x:A+B</fr:tex>, satisfies the following induction principle:
@@ -260,81 +634,129 @@
     <fr:tex display="block">         \begin {align*}             f&amp;:\Pi _{(x:A)}P(\text {inl}(x))\\             g&amp;:\Pi _{(y:B)}P(\text {inr}(y))         \end {align*}     </fr:tex>
     This can be presented by pattern matching to define a function <fr:tex display="inline">h:\Pi  _{(z:A+B)}.P(z)</fr:tex>:
     <fr:tex display="block">         \begin {align*}             h(\text {inl}(x))&amp;:\equiv  f(x)\\             h(\text {inr}(y))&amp;:\equiv  g(y)         \end {align*}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>434</fr:anchor><fr:addr type="machine">#273</fr:addr><fr:route>unstable-273.xml</fr:route><fr:title text="Special Case of Coproduct"><fr:strong>Special Case of Coproduct</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors><fr:parent>tt-0004</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>441</fr:anchor><fr:addr type="machine">#277</fr:addr><fr:route>unstable-277.xml</fr:route><fr:title text="Special Case of Coproduct"><fr:strong>Special Case of Coproduct</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The special case of coproduct type is also called the <fr:strong>sum type</fr:strong>.
     <fr:tex display="block">         \text {ind}_+: (A \to  X) \to  (B \to  X) \to  (A+B \to  X)     </fr:tex>
     which is very similar to the <fr:strong>elimination rule</fr:strong> of disjunction in logic.
     <fr:tex display="block">         (P\to  Q) \to  (R\to  Q) \to  (P\vee  R\to  Q)     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 <fr:p>The dependent version of sum type is called the <fr:strong>dependent sum type (dependent coproduct)</fr:strong> traditionally.
-    Its terms are ordered pairs.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>435</fr:anchor><fr:addr type="user">def-0024</fr:addr><fr:route>def-0024.xml</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>dependent pair type</fr:strong> is a inductive type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex> (<fr:tex display="inline">(x:A) \times  B(x)</fr:tex>)</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>436</fr:anchor><fr:addr type="machine">#329</fr:addr><fr:route>unstable-329.xml</fr:route><fr:title text="
+    Its terms are ordered pairs.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>442</fr:anchor><fr:addr type="user">def-0024</fr:addr><fr:route>def-0024.xml</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>dependent pair type</fr:strong> is a inductive type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex> (<fr:tex display="inline">(x:A) \times  B(x)</fr:tex>)</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>443</fr:anchor><fr:addr type="machine">#333</fr:addr><fr:route>unstable-333.xml</fr:route><fr:title text="
     Formation Rule
 ">
     <fr:strong>Formation Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
+</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>Given a type family <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex>, we can form the dependent pair type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex>.</fr:p>
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\space \text {type}             \quad              \Gamma ,x:A\vdash  B(x)\space \text {type}         }{             \Gamma \vdash  (x:A) \times  B(x)\space \text {type}         }     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>437</fr:anchor><fr:addr type="machine">#330</fr:addr><fr:route>unstable-330.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>444</fr:anchor><fr:addr type="machine">#334</fr:addr><fr:route>unstable-334.xml</fr:route><fr:title text="
     Introduction Rule
 ">
     <fr:strong>Introduction Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
+</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>Given a term <fr:tex display="inline">a:A</fr:tex> and a term <fr:tex display="inline">b(a):B(a)</fr:tex>, we can form a term <fr:tex display="inline">\text {pair}(a,b):(x:A)\times  B(x)</fr:tex>.</fr:p>
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A             \quad              \Gamma \vdash  b(a):B(a)         }{             \Gamma \vdash  (a,b):(x:A)\times  B(x)         }     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>438</fr:anchor><fr:addr type="machine">#331</fr:addr><fr:route>unstable-331.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>445</fr:anchor><fr:addr type="machine">#335</fr:addr><fr:route>unstable-335.xml</fr:route><fr:title text="
     Elimination Rule
 ">
     <fr:strong>Elimination Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
+</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>The elimination rule is formed with two projections.
         <fr:tex display="block">             \frac {                 \Gamma \vdash  p:(x:A)\times  B(x)             }{                 \begin {align*}                     \Gamma &amp;\vdash  \text {pr}_A(p):A\\                     \Gamma &amp;\vdash  \text {pr}_B(p):B(\text {pr}_A(p))                 \end {align*}             }         </fr:tex></fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>439</fr:anchor><fr:addr type="machine">#332</fr:addr><fr:route>unstable-332.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>446</fr:anchor><fr:addr type="machine">#336</fr:addr><fr:route>unstable-336.xml</fr:route><fr:title text="
     Computation Rule
 ">
     <fr:strong>Computation Rule</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
+</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p><fr:tex display="block">             \frac {                 \Gamma \vdash  x:A                  \quad                   \Gamma \vdash  y:B(x)             }{                 \begin {align*}                     \Gamma &amp;\vdash  \text {pr}_A((x,y))=x:A\\                     \Gamma &amp;\vdash  \text {pr}_B((x,y))=y:B(x)                 \end {align*}             }         </fr:tex></fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>440</fr:anchor><fr:addr type="machine">#333</fr:addr><fr:route>unstable-333.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>447</fr:anchor><fr:addr type="machine">#337</fr:addr><fr:route>unstable-337.xml</fr:route><fr:title text="
     Special Case
 ">
     <fr:strong>Special Case</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-0024</fr:parent></fr:frontmatter><fr:mainmatter>
+</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:ul><fr:li>In the special case that <fr:tex display="inline">B(x) = B</fr:tex> is independent of <fr:tex display="inline">A</fr:tex>,
             this reduces to the <fr:strong>product type</fr:strong> <fr:tex display="inline">A\times  B</fr:tex>.</fr:li>
         <fr:li>In the special case that <fr:tex display="inline">D \equiv  \text {Boolean}</fr:tex>,
             this reduces to a <fr:link type="local" href="def-0023.xml" addr="def-0023" title="Coproduct Type">coproduct type</fr:link>.</fr:li></fr:ul>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1439</fr:anchor><fr:addr type="user">tt-0003</fr:addr><fr:route>tt-0003.xml</fr:route><fr:title text="Natural Numbers {N}">Natural Numbers <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title><fr:taxon>Type Theory</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>In previous post, we have seen the basic inference rules of type theory.
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>1444</fr:anchor>
+            <fr:addr type="user">tt-0003</fr:addr>
+            <fr:route>tt-0003.xml</fr:route>
+            <fr:title text="Natural Numbers {N}">Natural Numbers <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
+            <fr:taxon>Type Theory</fr:taxon>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>30</fr:day>
+            </fr:date>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>In previous post, we have seen the basic inference rules of type theory.
     Now we will see the definition of natural numbers as an inductive type.
-    Refer to <fr:link type="local" href="hott-book-2013.xml" addr="hott-book-2013" title="Homotopy Type Theory: Univalent Foundations of Mathematics">HoTT Book</fr:link> and <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke&apos;s</fr:link>.</fr:p><fr:p>In classical mathematics, the <fr:strong>Peano axioms</fr:strong> are a set of axioms for the natural numbers,
-    an important object in mathematics.</fr:p><fr:p>In type theory, the type <fr:tex display="inline">\mathbb {N}</fr:tex> of natural number is an <fr:link type="local" href="def-001X.xml" addr="def-001X" title="Inductive Type"><fr:strong>inductive type</fr:strong></fr:link>.
-    Just like in dependent function type, we need four inference rules to define the natural numbers.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>423</fr:anchor><fr:addr type="user">def-001Y</fr:addr><fr:route>def-001Y.xml</fr:route><fr:title text="Natural Number">Natural Number</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>In type theory, <fr:strong>natural number</fr:strong> is defined using <fr:strong>peano encoding</fr:strong>.
+    Refer to <fr:link type="local" href="hott-book-2013.xml" addr="hott-book-2013" title="Homotopy Type Theory: Univalent Foundations of Mathematics">HoTT Book</fr:link> and <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke&apos;s</fr:link>.</fr:p>
+            <fr:p>In classical mathematics, the <fr:strong>Peano axioms</fr:strong> are a set of axioms for the natural numbers,
+    an important object in mathematics.</fr:p>
+            <fr:p>In type theory, the type <fr:tex display="inline">\mathbb {N}</fr:tex> of natural number is an <fr:link type="local" href="def-001X.xml" addr="def-001X" title="Inductive Type"><fr:strong>inductive type</fr:strong></fr:link>.
+    Just like in dependent function type, we need four inference rules to define the natural numbers.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>430</fr:anchor>
+                <fr:addr type="user">def-001Y</fr:addr>
+                <fr:route>def-001Y.xml</fr:route>
+                <fr:title text="Natural Number">Natural Number</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>In type theory, <fr:strong>natural number</fr:strong> is defined using <fr:strong>peano encoding</fr:strong>.
     The type <fr:tex display="inline">\mathbb {N}</fr:tex> is formed by the formation rule:
-    <fr:tex display="block">         \frac {}{\vdash \mathbb {N}\space \text {type}}\mathbb {N}\text {-form}     </fr:tex></fr:p><fr:p>Peano&apos;s first axiom postulates the existence of a natural number <fr:tex display="inline">0</fr:tex>.
+    <fr:tex display="block">         \frac {}{\vdash \mathbb {N}\space \text {type}}\mathbb {N}\text {-form}     </fr:tex></fr:p>
+                <fr:p>Peano&apos;s first axiom postulates the existence of a natural number <fr:tex display="inline">0</fr:tex>.
     The introduction rule for <fr:tex display="inline">\mathbb {N}</fr:tex> has a <fr:tex display="inline">0</fr:tex> constructor and a <fr:strong>successor</fr:strong> function.
-    <fr:tex display="block">         \frac {}{\vdash 0:\mathbb {N}}\mathbb {N}\text {-intro-0}         \quad          \frac {}{\vdash \text {succ}:\mathbb {N}\to \mathbb {N}} \mathbb {N}\text {-intro-succ}     </fr:tex></fr:p><fr:p>The <fr:strong>elimination rule</fr:strong> is actually the type theoretical <fr:strong>induction principle</fr:strong> of <fr:tex display="inline">\mathbb {N}</fr:tex>:
+    <fr:tex display="block">         \frac {}{\vdash 0:\mathbb {N}}\mathbb {N}\text {-intro-0}         \quad          \frac {}{\vdash \text {succ}:\mathbb {N}\to \mathbb {N}} \mathbb {N}\text {-intro-succ}     </fr:tex></fr:p>
+                <fr:p>The <fr:strong>elimination rule</fr:strong> is actually the type theoretical <fr:strong>induction principle</fr:strong> of <fr:tex display="inline">\mathbb {N}</fr:tex>:
     In order to show that <fr:tex display="inline">\forall  n:\mathbb {N}.P(n)</fr:tex> holds, it suffices to show that <fr:tex display="inline">P(0)</fr:tex> holds and that <fr:tex display="inline">\forall  n:\mathbb {N}.P(n)\to  P(\text {succ}(n))</fr:tex> holds.
     The type theoretical induction principle is therefore formulated using a type family <fr:tex display="inline">P</fr:tex> over <fr:tex display="inline">\mathbb {N}</fr:tex>:
     <fr:tex display="block">         \frac {             \begin {align*}                 \Gamma &amp;,\,n:\mathbb {N}\vdash  P(n)\space \text {type}                 \\                 \Gamma &amp;\vdash  p_0:P(0)                 \\                 \Gamma &amp;\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))             \end {align*}         }{             \Gamma \vdash \text {ind}_\mathbb {N}(p_0,p_S):\Pi _{(n:\mathbb {N})}P(n)         }(\mathbb {N} \text {-ind})     </fr:tex>
     The induction principle tells us what we need to do in order to construct a dependent function <fr:tex display="inline">\text {ind}_\mathbb {N}</fr:tex> of type <fr:tex display="inline">\Pi _{(n:\mathbb {N})}P(n)</fr:tex>.
     We might alternatively write the induction principle as:
-    <fr:tex display="block">         \frac {             \Gamma ,n:\mathbb {N}\vdash  P(n)\space \text {type}         }{             \Gamma \vdash \text {ind}_\mathbb {N}:\left (P(0)\to \left (\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))\right )\to \Pi _{(n:\mathbb {N})}P(n)\right )         }(\mathbb {N} \text {-ind})     </fr:tex></fr:p><fr:p>The <fr:strong>computation rule</fr:strong> asserts that the dependent function <fr:tex display="inline">\text {ind}_\mathbb {N}</fr:tex> behaves as expected:
-    <fr:tex display="block">         \frac {             \begin {align*}                 \Gamma &amp;,n:\mathbb {N}\vdash  P(n)\space \text {type}                 \\                 \Gamma &amp;\vdash  p_0:P(0)                 \\                 \Gamma &amp;\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))             \end {align*}         }{             \text {ind}_\mathbb {N}(p_0,p_S,m)\equiv              \begin {cases}                 p_0&amp;\text {if }m=0                 \\                 p_S(n,\text {ind}_\mathbb {N}(p_0,p_S,n))&amp;\text {if }m=\text {succ}(n)             \end {cases}         }(\mathbb {N} \text {-comp})     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Now let&apos;s use the type theoretical induction principle of <fr:tex display="inline">\mathbb {N}</fr:tex> to
-    perform some basic construction over <fr:tex display="inline">\mathbb {N}</fr:tex>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>424</fr:anchor><fr:addr type="user">def-001Z</fr:addr><fr:route>def-001Z.xml</fr:route><fr:title text="Addition over {N}">Addition over <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>We define addition over <fr:tex display="inline">\mathbb {N}</fr:tex> using the type theoretical induction principle of <fr:tex display="inline">\mathbb {N}</fr:tex>.
+    <fr:tex display="block">         \frac {             \Gamma ,n:\mathbb {N}\vdash  P(n)\space \text {type}         }{             \Gamma \vdash \text {ind}_\mathbb {N}:\left (P(0)\to \left (\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))\right )\to \Pi _{(n:\mathbb {N})}P(n)\right )         }(\mathbb {N} \text {-ind})     </fr:tex></fr:p>
+                <fr:p>The <fr:strong>computation rule</fr:strong> asserts that the dependent function <fr:tex display="inline">\text {ind}_\mathbb {N}</fr:tex> behaves as expected:
+    <fr:tex display="block">         \frac {             \begin {align*}                 \Gamma &amp;,n:\mathbb {N}\vdash  P(n)\space \text {type}                 \\                 \Gamma &amp;\vdash  p_0:P(0)                 \\                 \Gamma &amp;\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))             \end {align*}         }{             \text {ind}_\mathbb {N}(p_0,p_S,m)\equiv              \begin {cases}                 p_0&amp;\text {if }m=0                 \\                 p_S(n,\text {ind}_\mathbb {N}(p_0,p_S,n))&amp;\text {if }m=\text {succ}(n)             \end {cases}         }(\mathbb {N} \text {-comp})     </fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:p>Now let&apos;s use the type theoretical induction principle of <fr:tex display="inline">\mathbb {N}</fr:tex> to
+    perform some basic construction over <fr:tex display="inline">\mathbb {N}</fr:tex>.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>431</fr:anchor>
+                <fr:addr type="user">def-001Z</fr:addr>
+                <fr:route>def-001Z.xml</fr:route>
+                <fr:title text="Addition over {N}">Addition over <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
+                <fr:taxon>Definition</fr:taxon>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>We define addition over <fr:tex display="inline">\mathbb {N}</fr:tex> using the type theoretical induction principle of <fr:tex display="inline">\mathbb {N}</fr:tex>.
     <fr:tex display="block">         \text {add}_\mathbb {N} : \mathbb {N} \to  (\mathbb {N} \to  \mathbb {N})     </fr:tex>
     which satisfies the following specification:
     <fr:tex display="block">         \begin {align*}             \text {add}_\mathbb {N}(n, 0)&amp;:\equiv  n             \\             \text {add}_\mathbb {N}(m,\text {succ}(n))&amp;:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))         \end {align*}     </fr:tex>
     abbreviated as <fr:tex display="inline">m + n</fr:tex> for <fr:tex display="inline">\text {add}_\mathbb {N}(m,n)</fr:tex>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>425</fr:anchor><fr:addr type="machine">#335</fr:addr><fr:route>unstable-335.xml</fr:route><fr:title text="Construction"><fr:strong>Construction</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>def-001Z</fr:parent></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>432</fr:anchor><fr:addr type="machine">#339</fr:addr><fr:route>unstable-339.xml</fr:route><fr:title text="Construction"><fr:strong>Construction</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     
         <fr:p>We construct the additon by perform induction over the second variable <fr:tex display="inline">n</fr:tex>.
             That is, to construct an element
@@ -352,16 +774,52 @@
         <fr:tex display="block">             \dfrac {                 \dfrac {                     \dfrac {                         \dfrac {                             \vdash  \mathbb {N}\space \text {type}                         }{                             m:\mathbb {N}\vdash  m:\mathbb {N}                         }                     }{                         m:\mathbb {N}\vdash \text {add-zero}_\mathbb {N}(m):\equiv  m:\mathbb {N}                     }                     \quad                       \dfrac {\text {Block-1}}{                         m:\mathbb {N}\vdash \text {add-succ}_\mathbb {N}(m):\mathbb {N}\to (\mathbb {N}\to \mathbb {N})                     }                 }{                     m:\mathbb {N}\vdash \text {ind}_\mathbb {N} (\text {add-zero}_\mathbb {N}(m), \text {add-succ}_\mathbb {N}(m)):\mathbb {N}\to \mathbb {N}                 }             }{                 m:\mathbb {N}\vdash \text {add}_\mathbb {N}(m):\equiv \text {ind}_\mathbb {N} (\text {add-zero}_\mathbb {N}(m), \text {add-succ}_\mathbb {N}(m)):\mathbb {N}\to \mathbb {N}             }         </fr:tex>
     
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Recall the definition of addition function <fr:tex display="inline">\text {add}: \mathbb {N}\to (\mathbb {N}\to \mathbb {N})</fr:tex> satisfying the specification:
+</fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:p>Recall the definition of addition function <fr:tex display="inline">\text {add}: \mathbb {N}\to (\mathbb {N}\to \mathbb {N})</fr:tex> satisfying the specification:
     <fr:tex display="block">         \begin {align*}             m + 0 &amp; :\equiv  m             \\              m + \text {succ}(n) &amp; :\equiv  \text {succ}(m + n)         \end {align*}     </fr:tex>
     Such definition is enough to characterize the addition function.
-    Because it postulates te <fr:em>behavior</fr:em> of <fr:tex display="inline">\text {add}_\mathbb {N}</fr:tex> at the constructor of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:p><fr:p>More generally, we can define a dependent function <fr:tex display="inline">f:\Pi  n:\mathbb {N}.P(n)</fr:tex> by induction on <fr:tex display="inline">n</fr:tex> using
+    Because it postulates te <fr:em>behavior</fr:em> of <fr:tex display="inline">\text {add}_\mathbb {N}</fr:tex> at the constructor of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:p>
+            <fr:p>More generally, we can define a dependent function <fr:tex display="inline">f:\Pi  n:\mathbb {N}.P(n)</fr:tex> by induction on <fr:tex display="inline">n</fr:tex> using
     <fr:tex display="block">         \begin {align*}             p_0 &amp; : P(0)             \\             p_S &amp; : \Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))         \end {align*}     </fr:tex>
     Just present the definition by writing
     <fr:tex display="block">         \begin {align*}             f(0) &amp; :\equiv  p_0             \\             f(\text {succ}(n)) &amp; :\equiv  p_S(n,f(n))         \end {align*}     </fr:tex>
-    <fr:tex display="inline">f</fr:tex> is said to be defined by <fr:strong>pattern matching</fr:strong> on the variable <fr:tex display="inline">n</fr:tex>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>426</fr:anchor><fr:addr type="user">eg-0001</fr:addr><fr:route>eg-0001.xml</fr:route><fr:title text="Fibonacci Function">Fibonacci Function</fr:title><fr:taxon>Example</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>Fibonacci function</fr:strong> is a well-known function in mathematics.
+    <fr:tex display="inline">f</fr:tex> is said to be defined by <fr:strong>pattern matching</fr:strong> on the variable <fr:tex display="inline">n</fr:tex>.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>433</fr:anchor>
+                <fr:addr type="user">eg-0001</fr:addr>
+                <fr:route>eg-0001.xml</fr:route>
+                <fr:title text="Fibonacci Function">Fibonacci Function</fr:title>
+                <fr:taxon>Example</fr:taxon>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The <fr:strong>Fibonacci function</fr:strong> is a well-known function in mathematics.
     It is defined by pattern matching on the variable <fr:tex display="inline">n</fr:tex> as follows:
-    <fr:tex display="block">         \begin {align*}             \text {fib}(0) &amp; :\equiv  0             \\             \text {fib}(1) &amp; :\equiv  1             \\             \text {fib}(n+2) &amp; :\equiv  \text {fib}(n) + \text {fib}(n+1)         \end {align*}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1440</fr:anchor><fr:addr type="user">tt-0002</fr:addr><fr:route>tt-0002.xml</fr:route><fr:title text="Introduction to Type Theory">Introduction to Type Theory</fr:title><fr:taxon>Type Theory</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>27</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This is a note on dependent type theory. Refer to <fr:link type="local" href="hott-book-2013.xml" addr="hott-book-2013" title="Homotopy Type Theory: Univalent Foundations of Mathematics">HoTT Book</fr:link> and <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke&apos;s</fr:link>.</fr:p><fr:p><fr:strong>Homotopy type theory</fr:strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
+    <fr:tex display="block">         \begin {align*}             \text {fib}(0) &amp; :\equiv  0             \\             \text {fib}(1) &amp; :\equiv  1             \\             \text {fib}(n+2) &amp; :\equiv  \text {fib}(n) + \text {fib}(n+1)         \end {align*}     </fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>1445</fr:anchor>
+            <fr:addr type="user">tt-0002</fr:addr>
+            <fr:route>tt-0002.xml</fr:route>
+            <fr:title text="Introduction to Type Theory">Introduction to Type Theory</fr:title>
+            <fr:taxon>Type Theory</fr:taxon>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter><fr:p>This is a note on dependent type theory. Refer to <fr:link type="local" href="hott-book-2013.xml" addr="hott-book-2013" title="Homotopy Type Theory: Univalent Foundations of Mathematics">HoTT Book</fr:link> and <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke&apos;s</fr:link>.</fr:p><fr:p><fr:strong>Homotopy type theory</fr:strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
     The set-theoretic foundation has two two layers:
     <fr:ul><fr:li>the deductive system of first-order logic</fr:li>
         <fr:li>the theory of a particular theory, such as ZFC</fr:li></fr:ul> 
@@ -390,7 +848,7 @@
     or equivalently if you can construct a term <fr:tex display="inline">h : a =_A b</fr:tex>.</fr:p>
     <fr:p>In type theory there is also a requirement for a judgment-level equality.
         This is called <fr:strong>judgmental equality</fr:strong>, meaning &quot;equal by definition&quot;.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>409</fr:anchor><fr:addr type="user">def-0015</fr:addr><fr:route>def-0015.xml</fr:route><fr:title text="Judgemental Equality">Judgemental Equality</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Judgemental equality</fr:strong> of terms is given by the following judgement:
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>416</fr:anchor><fr:addr type="user">def-0015</fr:addr><fr:route>def-0015.xml</fr:route><fr:title text="Judgemental Equality">Judgemental Equality</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Judgemental equality</fr:strong> of terms is given by the following judgement:
     <fr:tex display="block">         \Gamma \vdash  a\equiv  a&apos;:A     </fr:tex>
     <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">a&apos;</fr:tex> are judgementally equal terms of type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.</fr:p><fr:p>Note that the notation <fr:tex display="inline">\equiv </fr:tex> binds more loosely than anything else.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
     <fr:p>judgments may depend on <fr:em>assumptions</fr:em> of the form <fr:tex display="inline">x:A</fr:tex> where <fr:tex display="inline">x</fr:tex> is a
@@ -402,7 +860,7 @@
         The notation <fr:tex display="inline">\vdash </fr:tex> means making conclusion from assumptions.</fr:p>
 <fr:p>Remember the difference between axiom and (inference) rules.
     <fr:ul><fr:li>Rules allow us to conclude one judgment from a collection of other judgments.</fr:li>
-        <fr:li>Axioms are judgments that are assumed to be true without proof.</fr:li></fr:ul></fr:p><fr:p>We start by introduction to Matrin Lof&apos;s dependent type theory.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>410</fr:anchor><fr:addr type="user">def-0017</fr:addr><fr:route>def-0017.xml</fr:route><fr:title text="Dependent type theory: Judgments">Dependent type theory: Judgments</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+        <fr:li>Axioms are judgments that are assumed to be true without proof.</fr:li></fr:ul></fr:p><fr:p>We start by introduction to Matrin Lof&apos;s dependent type theory.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>417</fr:anchor><fr:addr type="user">def-0017</fr:addr><fr:route>def-0017.xml</fr:route><fr:title text="Dependent type theory: Judgments">Dependent type theory: Judgments</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>There are four kinds of judgments in Martin Lof&apos;s dependent type theory:</fr:p>
     <fr:ul><fr:li><fr:tex display="inline">A</fr:tex> is a well-formed type in context <fr:tex display="inline">\Gamma </fr:tex>
             <fr:tex display="block">                 \Gamma  \vdash  A \space \text {type}             </fr:tex></fr:li>
@@ -417,12 +875,12 @@
     may depend on any previous declared variables.
 
     To introduce types dependent on terms, 
-    we need the notation of type families.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>411</fr:anchor><fr:addr type="user">def-0018</fr:addr><fr:route>def-0018.xml</fr:route><fr:title text="Type Family">Type Family</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Consider a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
+    we need the notation of type families.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>418</fr:anchor><fr:addr type="user">def-0018</fr:addr><fr:route>def-0018.xml</fr:route><fr:title text="Type Family">Type Family</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Consider a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
     A <fr:strong>family</fr:strong> of types over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>
     is a type <fr:tex display="inline">B(x)</fr:tex> in context <fr:tex display="inline">\Gamma , x:A</fr:tex>.
     <fr:tex display="block">         \Gamma , x:A \vdash  B(x) \space \text {type}     </fr:tex>
     <fr:tex display="inline">B</fr:tex> is a family of types over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
-    Alternatively, we say that <fr:tex display="inline">B(x)</fr:tex> is a type <fr:strong>indexed</fr:strong> by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Now we can define a term of a type family, that is, a section of a type family.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>412</fr:anchor><fr:addr type="user">def-0019</fr:addr><fr:route>def-0019.xml</fr:route><fr:title text="Section of Type Family">Section of Type Family</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">B</fr:tex> be a <fr:link type="local" href="def-0018.xml" addr="def-0018" title="Type Family">type family</fr:link> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
+    Alternatively, we say that <fr:tex display="inline">B(x)</fr:tex> is a type <fr:strong>indexed</fr:strong> by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Now we can define a term of a type family, that is, a section of a type family.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>419</fr:anchor><fr:addr type="user">def-0019</fr:addr><fr:route>def-0019.xml</fr:route><fr:title text="Section of Type Family">Section of Type Family</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">B</fr:tex> be a <fr:link type="local" href="def-0018.xml" addr="def-0018" title="Type Family">type family</fr:link> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
     A <fr:strong>section</fr:strong> of <fr:tex display="inline">B</fr:tex> is a term <fr:tex display="inline">b</fr:tex> of type <fr:tex display="inline">B(x)</fr:tex> in context <fr:tex display="inline">\Gamma ,x:A</fr:tex>.
     <fr:tex display="block">         \Gamma , x:A \vdash  b : B(x)     </fr:tex>
     Alternatively, we say that <fr:tex display="inline">b</fr:tex> is a term of <fr:tex display="inline">B(x)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>We now ready to present the inference rules for dependent type theory.
@@ -433,7 +891,7 @@
         <fr:li>Vairable conversion</fr:li>
         <fr:li>Substitution</fr:li>
         <fr:li>Weakening</fr:li>
-        <fr:li>Generic element</fr:li></fr:ul></fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>413</fr:anchor><fr:addr type="user">def-001A</fr:addr><fr:route>def-001A.xml</fr:route><fr:title text="
+        <fr:li>Generic element</fr:li></fr:ul></fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>420</fr:anchor><fr:addr type="user">def-001A</fr:addr><fr:route>def-001A.xml</fr:route><fr:title text="
     Formation of contexts, types and terms
 ">
     Formation of contexts, types and terms
@@ -441,13 +899,13 @@
     about contexts, types and terms, can be used freely.</fr:p><fr:ul><fr:li><fr:tex display="block">             \frac {                 \Gamma ,x:A\vdash  B(x)\space \text {type}             }{                 \Gamma \vdash  A\space \text {type}             }         </fr:tex></fr:li>
     <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}             }{                 \Gamma \vdash  A\space \text {type}             }             \quad              \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}             }{                 \Gamma \vdash  B\space \text {type}             }         </fr:tex></fr:li>
     <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  a:A             }{                 \Gamma \vdash  A\space \text {type}             }         </fr:tex></fr:li>
-    <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  a\equiv  b:A             }{                 \Gamma \vdash  a:A             }             \quad               \frac {                 \Gamma \vdash  a\equiv  b:A             }{                 \Gamma \vdash  b:A             }         </fr:tex></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>414</fr:anchor><fr:addr type="user">def-001B</fr:addr><fr:route>def-001B.xml</fr:route><fr:title text="
+    <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  a\equiv  b:A             }{                 \Gamma \vdash  a:A             }             \quad               \frac {                 \Gamma \vdash  a\equiv  b:A             }{                 \Gamma \vdash  b:A             }         </fr:tex></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>421</fr:anchor><fr:addr type="user">def-001B</fr:addr><fr:route>def-001B.xml</fr:route><fr:title text="
     Judgmental equality is equivalence relation
 ">
     Judgmental equality is equivalence relation
 </fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Judgmental equality on types and on elements is an <fr:link type="local" href="def-000X.xml" addr="def-000X" title="Equivalence Relation">equivalence relation</fr:link> 
     simply postulate that these relations are reflexive, symmetric, and transitive:</fr:p><fr:ul><fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  a:A             }{                 \Gamma \vdash  a\equiv  a:A             }             \quad              \frac {                 \Gamma \vdash  a\equiv  b:A             }{                 \Gamma \vdash  b\equiv  a:A             }             \quad              \frac {                 \Gamma \vdash  a\equiv  b:A                 \quad                  \Gamma \vdash  b\equiv  c:A             }{                 \Gamma \vdash  a\equiv  c:A             }         </fr:tex></fr:li>
-    <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  A\space \text {type}             }{                 \Gamma \vdash  A\equiv  A\space \text {type}             }             \quad              \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}             }{                 \Gamma \vdash  B\equiv  A\space \text {type}             }             \quad              \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}                 \quad                  \Gamma \vdash  B\equiv  C\space \text {type}             }{                 \Gamma \vdash  A\equiv  C\space \text {type}             }         </fr:tex></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>415</fr:anchor><fr:addr type="user">def-001C</fr:addr><fr:route>def-001C.xml</fr:route><fr:title text="Variable Conversion">Variable Conversion</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This rule postulates that we can
+    <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  A\space \text {type}             }{                 \Gamma \vdash  A\equiv  A\space \text {type}             }             \quad              \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}             }{                 \Gamma \vdash  B\equiv  A\space \text {type}             }             \quad              \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}                 \quad                  \Gamma \vdash  B\equiv  C\space \text {type}             }{                 \Gamma \vdash  A\equiv  C\space \text {type}             }         </fr:tex></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>422</fr:anchor><fr:addr type="user">def-001C</fr:addr><fr:route>def-001C.xml</fr:route><fr:title text="Variable Conversion">Variable Conversion</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This rule postulates that we can
     convert the type of a variable to a judgmentally equal type.
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\equiv  A&apos;\space \text {type}             \quad              \Gamma ,x:A,\Delta \vdash  B(x)\space \text {type}         }{             \Gamma ,x:A&apos;,\Delta \vdash  B(x)\space \text {type}         }     </fr:tex>
     Similarly, we can convert judgmental equality of types and terms.
@@ -455,20 +913,20 @@
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\equiv  A&apos;\space \text {type}             \quad              \Gamma ,x:A,\Delta \vdash  \mathcal {J}         }{             \Gamma ,x:A&apos;,\Delta \vdash  \mathcal {J}         }VC     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Consider a term <fr:tex display="inline">f:B(x)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
     and we also have a term <fr:tex display="inline">a:A</fr:tex>.
     We can simultaneously substitute <fr:tex display="inline">a</fr:tex> for all occurrences of <fr:tex display="inline">x</fr:tex> in <fr:tex display="inline">f</fr:tex>
-    to obtain a new term <fr:tex display="inline">f[x:=a]:B(a)</fr:tex>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>416</fr:anchor><fr:addr type="user">def-001D</fr:addr><fr:route>def-001D.xml</fr:route><fr:title text="Substitution">Substitution</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The substitution rule postulates that we can substitute a term for a variable.
+    to obtain a new term <fr:tex display="inline">f[x:=a]:B(a)</fr:tex>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>423</fr:anchor><fr:addr type="user">def-001D</fr:addr><fr:route>def-001D.xml</fr:route><fr:title text="Substitution">Substitution</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The substitution rule postulates that we can substitute a term for a variable.
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A             \quad              \Gamma ,x:A,\Delta \vdash  \mathcal {J}         }{             \Gamma ,\Delta [x:=a]\vdash  \mathcal {J}[x:=a]         }S     </fr:tex>
     The notation <fr:tex display="inline">\Gamma ,\Delta [x:=a]</fr:tex> means that we substitute <fr:tex display="inline">a</fr:tex> for <fr:tex display="inline">x</fr:tex> in <fr:tex display="inline">\Delta </fr:tex>.</fr:p><fr:p>With the substitution rule, we need two more <fr:em>congruence rules</fr:em> to
     convert judgmental equality of terms and types.
     <fr:tex display="block">         \frac {             \Gamma \vdash  a\equiv  a&apos;:A             \quad              \Gamma ,x:A,\Delta \vdash  B \space \text {type}         }{             \Gamma ,\Delta [x:=a]\vdash  B[x:=a]\equiv  B[x:=a&apos;] \space \text {type}         }     </fr:tex>
 
-    <fr:tex display="block">         \frac {             \Gamma \vdash  A\equiv  A&apos;\space \text {type}             \quad              \Gamma ,x:A,\Delta \vdash  b:A         }{             \Gamma ,\Delta [x:=a]\vdash  b[x:=a]\equiv  b[x:=a&apos;]:A&apos;[x:=a] \space \text {type}         }     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>417</fr:anchor><fr:addr type="user">def-001G</fr:addr><fr:route>def-001G.xml</fr:route><fr:title text="Fiber and Value">Fiber and Value</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">B</fr:tex> be a <fr:link type="local" href="def-0018.xml" addr="def-0018" title="Type Family">type family</fr:link> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
+    <fr:tex display="block">         \frac {             \Gamma \vdash  A\equiv  A&apos;\space \text {type}             \quad              \Gamma ,x:A,\Delta \vdash  b:A         }{             \Gamma ,\Delta [x:=a]\vdash  b[x:=a]\equiv  b[x:=a&apos;]:A&apos;[x:=a] \space \text {type}         }     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>424</fr:anchor><fr:addr type="user">def-001G</fr:addr><fr:route>def-001G.xml</fr:route><fr:title text="Fiber and Value">Fiber and Value</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">B</fr:tex> be a <fr:link type="local" href="def-0018.xml" addr="def-0018" title="Type Family">type family</fr:link> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
     an a well-formed term <fr:tex display="inline">a:A</fr:tex>,
     then we say that <fr:tex display="inline">B[x:=a]</fr:tex> is the <fr:strong>fiber</fr:strong> of <fr:tex display="inline">B</fr:tex> at <fr:tex display="inline">a</fr:tex>, denoted <fr:tex display="inline">B(a)</fr:tex>.</fr:p><fr:p>Let <fr:tex display="inline">b</fr:tex> a <fr:link type="local" href="def-0019.xml" addr="def-0019" title="Section of Type Family">section</fr:link> of <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
     then we say that <fr:tex display="inline">b(a):\equiv  b[x:=a]</fr:tex> is the <fr:strong>value</fr:strong> of <fr:tex display="inline">b</fr:tex> at <fr:tex display="inline">a</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>The process of expanding the context by a fresh variable of type <fr:tex display="inline">A</fr:tex> is called weakening (by <fr:tex display="inline">A</fr:tex>).
     Intuitively, weakening is the process of adding a new hypothesis to the context.
-    And the hypothesis will weaken the conclusion.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>418</fr:anchor><fr:addr type="user">def-001E</fr:addr><fr:route>def-001E.xml</fr:route><fr:title text="Weakening">Weakening</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Weakening rule asserts that we can add a variable to the context.
+    And the hypothesis will weaken the conclusion.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>425</fr:anchor><fr:addr type="user">def-001E</fr:addr><fr:route>def-001E.xml</fr:route><fr:title text="Weakening">Weakening</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Weakening rule asserts that we can add a variable to the context.
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\space \text {type}             \quad               \Gamma ,\Delta \vdash  \mathcal {J}         }{             \Gamma ,x:A,\Delta \vdash  \mathcal {J}         }W      </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Finally, the generic elemets rule ensures that
-    the variables declared in a context.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>419</fr:anchor><fr:addr type="user">def-001F</fr:addr><fr:route>def-001F.xml</fr:route><fr:title text="Generic Elements">Generic Elements</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The rule for the generic element asserts that 
+    the variables declared in a context.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>426</fr:anchor><fr:addr type="user">def-001F</fr:addr><fr:route>def-001F.xml</fr:route><fr:title text="Generic Elements">Generic Elements</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The rule for the generic element asserts that 
     any hypothetical element <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma ,x:A</fr:tex>
     is also an element of <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma ,x:A</fr:tex>.
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\space \text {type}         }{             \Gamma ,x:A\vdash  x:A         }\delta      </fr:tex>
@@ -485,7 +943,7 @@
         <fr:li>Introduction rule</fr:li>
         <fr:li>Elimination rule</fr:li>
         <fr:li>Computation rule</fr:li></fr:ul>
-    Besides these we also need the <fr:strong>congruence rule</fr:strong> for judgmental equality.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>420</fr:anchor><fr:addr type="user">def-001T</fr:addr><fr:route>def-001T.xml</fr:route><fr:title text="Dependent Function Type">Dependent Function Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Formation Rule</fr:strong>
+    Besides these we also need the <fr:strong>congruence rule</fr:strong> for judgmental equality.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>427</fr:anchor><fr:addr type="user">def-001T</fr:addr><fr:route>def-001T.xml</fr:route><fr:title text="Dependent Function Type">Dependent Function Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Formation Rule</fr:strong>
     For any type family <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>:
     <fr:tex display="block">         \frac {             \Gamma ,x:A\vdash  B(x)\space \text {type}         }{             \Gamma \vdash  \Pi _{(x:A)}B(x)\space \text {type}         }\Pi      </fr:tex>
     We also require that the operation of forming dependent function types
@@ -502,11 +960,18 @@
     <fr:tex display="block">         \frac {             \Gamma \vdash  f\equiv  f&apos;:\Pi _{(x:A)}B(x)         }{             \Gamma ,x:A\vdash  f(x)\equiv  f&apos;(x):B(x)         }ev\text {-eq}     </fr:tex></fr:p><fr:p><fr:strong>Computation Rule (<fr:tex display="inline">\beta </fr:tex>-reduction)</fr:strong>
     <fr:tex display="block">         \frac {             \Gamma ,x:A\vdash  b(x):B(x)         }{             \Gamma ,x:A\vdash  (\lambda  y.b(y))(x)\equiv  b(x):B(x)         }\beta      </fr:tex>
     We postulate that all elements of a dependent function type are dependent functions.
-    <fr:tex display="block">         \frac {             \Gamma \vdash  f:\Pi _{(x:A)}B(x)         }{             \Gamma \vdash  f\equiv  \lambda  x.f(x):\Pi _{(x:A)}B(x)         }\eta      </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>A degenrated case of dependent function type is the ordinary function type.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>421</fr:anchor><fr:addr type="user">def-001U</fr:addr><fr:route>def-001U.xml</fr:route><fr:title text="Ordinary Function Type">Ordinary Function Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A special case of <fr:link type="local" href="def-001T.xml" addr="def-001T" title="Dependent Function Type"><fr:tex display="inline">\Pi </fr:tex>-type</fr:link> is the <fr:strong>ordinary function type</fr:strong>.
+    <fr:tex display="block">         \frac {             \Gamma \vdash  f:\Pi _{(x:A)}B(x)         }{             \Gamma \vdash  f\equiv  \lambda  x.f(x):\Pi _{(x:A)}B(x)         }\eta      </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>A degenrated case of dependent function type is the ordinary function type.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>428</fr:anchor><fr:addr type="user">def-001U</fr:addr><fr:route>def-001U.xml</fr:route><fr:title text="Ordinary Function Type">Ordinary Function Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A special case of <fr:link type="local" href="def-001T.xml" addr="def-001T" title="Dependent Function Type"><fr:tex display="inline">\Pi </fr:tex>-type</fr:link> is the <fr:strong>ordinary function type</fr:strong>.
     Using weakening rule we can obtain thee type <fr:tex display="inline">A\to  B</fr:tex> of ordinary function from <fr:tex display="inline">A</fr:tex> to <fr:tex display="inline">B</fr:tex>
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\space \text {type}             \quad              \Gamma \vdash  B\space \text {type}         }{\dfrac {             \Gamma ,x:A\vdash  B\space \text {type}         }{             \Gamma \vdash  \Pi _{(x:A)}B\space \text {type}         }\Pi }W     </fr:tex>
     A term <fr:tex display="inline">f: \Pi _{(x:A)}B</fr:tex> is an ordinary function. The type <fr:tex display="inline">A \to  B</fr:tex> is defined:
     <fr:tex display="block">         A\to  B := \Pi _{(x:A)}B     </fr:tex>
     The type <fr:tex display="inline">A</fr:tex> is called <fr:strong>domain</fr:strong> of <fr:tex display="inline">f</fr:tex>,
     and type <fr:tex display="inline">B</fr:tex> is called <fr:strong>codomain</fr:strong> of <fr:tex display="inline">f</fr:tex>.
-    The notation <fr:tex display="inline">:=</fr:tex> here means to make a definition.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+    The notation <fr:tex display="inline">:=</fr:tex> here means to make a definition.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

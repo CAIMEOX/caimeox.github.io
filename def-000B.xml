@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1350</fr:anchor><fr:addr type="user">def-000B</fr:addr><fr:route>def-000B.xml</fr:route><fr:title text="Euclidean Topology">Euclidean Topology</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A subset <fr:tex display="inline">S</fr:tex> of <fr:tex display="inline">\mathbb {R}</fr:tex> is said to be open in the <fr:strong>euclidean topology</fr:strong> on <fr:tex display="inline">\mathbb {R}</fr:tex> if <fr:tex display="inline">\forall  x\in  S</fr:tex> there exists <fr:tex display="inline">a,b\in \mathbb {R}</fr:tex> with <fr:tex display="inline">a&lt;b</fr:tex> st <fr:tex display="inline">x\in (a,b)\in  S</fr:tex>.</fr:p><fr:p>The dual definition (using closed sets) is also valid.</fr:p><fr:p>For each <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex> in <fr:tex display="inline">\mathbb {R}</fr:tex> with <fr:tex display="inline">a&lt;b</fr:tex> the closed intervcal <fr:tex display="inline">[a,b]</fr:tex> is a closed set in the euclidean topology in <fr:tex display="inline">\mathbb {R}</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>1349</fr:anchor>
+    <fr:addr type="user">def-000B</fr:addr>
+    <fr:route>def-000B.xml</fr:route>
+    <fr:title text="Euclidean Topology">Euclidean Topology</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+    <fr:authors></fr:authors>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>A subset <fr:tex display="inline">S</fr:tex> of <fr:tex display="inline">\mathbb {R}</fr:tex> is said to be open in the <fr:strong>euclidean topology</fr:strong> on <fr:tex display="inline">\mathbb {R}</fr:tex> if <fr:tex display="inline">\forall  x\in  S</fr:tex> there exists <fr:tex display="inline">a,b\in \mathbb {R}</fr:tex> with <fr:tex display="inline">a&lt;b</fr:tex> st <fr:tex display="inline">x\in (a,b)\in  S</fr:tex>.</fr:p>
+    <fr:p>The dual definition (using closed sets) is also valid.</fr:p>
+    <fr:p>For each <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex> in <fr:tex display="inline">\mathbb {R}</fr:tex> with <fr:tex display="inline">a&lt;b</fr:tex> the closed intervcal <fr:tex display="inline">[a,b]</fr:tex> is a closed set in the euclidean topology in <fr:tex display="inline">\mathbb {R}</fr:tex>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter></fr:backmatter>
+</fr:tree>

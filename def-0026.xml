@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1048</fr:anchor><fr:addr type="user">def-0026</fr:addr><fr:route>def-0026.xml</fr:route><fr:title text="{P}_m (R)"><fr:tex display="inline">\mathcal {P}_m (R)</fr:tex></fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The set of all polynomials of degree at most <fr:tex display="inline">m</fr:tex> with coefficients in ring <fr:tex display="inline">R</fr:tex> is denoted by <fr:tex display="inline">\mathcal {P}_m (R)</fr:tex>.
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>1045</fr:anchor>
+    <fr:addr type="user">def-0026</fr:addr>
+    <fr:route>def-0026.xml</fr:route>
+    <fr:title text="{P}_m (R)">
+      <fr:tex display="inline">\mathcal {P}_m (R)</fr:tex>
+    </fr:title>
+    <fr:taxon>Definition</fr:taxon>
+    <fr:authors></fr:authors>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>The set of all polynomials of degree at most <fr:tex display="inline">m</fr:tex> with coefficients in ring <fr:tex display="inline">R</fr:tex> is denoted by <fr:tex display="inline">\mathcal {P}_m (R)</fr:tex>.
     In other words,
     <fr:tex display="block">         \mathcal {P}_m (R) = \set { p \in  \mathcal {P}(R) | \deg (p) \leq  m}     </fr:tex>
-    where <fr:tex display="inline">\mathcal {P}(R)</fr:tex> is the <fr:link type="local" href="def-0027.xml" addr="def-0027" title="Polynomial">set of all polynomials</fr:link> with coefficients in <fr:tex display="inline">R</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Related">Related</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1049</fr:anchor><fr:addr type="user">def-0027</fr:addr><fr:route>def-0027.xml</fr:route><fr:title text="Polynomial">Polynomial</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A function <fr:tex display="inline">f: R \to  R</fr:tex> is a <fr:strong>polynomial</fr:strong> with coefficients in ring <fr:tex display="inline">R</fr:tex> if
+    where <fr:tex display="inline">\mathcal {P}(R)</fr:tex> is the <fr:link type="local" href="def-0027.xml" addr="def-0027" title="Polynomial">set of all polynomials</fr:link> with coefficients in <fr:tex display="inline">R</fr:tex>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>1046</fr:anchor>
+            <fr:addr type="user">def-0027</fr:addr>
+            <fr:route>def-0027.xml</fr:route>
+            <fr:title text="Polynomial">Polynomial</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A function <fr:tex display="inline">f: R \to  R</fr:tex> is a <fr:strong>polynomial</fr:strong> with coefficients in ring <fr:tex display="inline">R</fr:tex> if
     there exists  <fr:tex display="inline">n \in  \N </fr:tex> and <fr:tex display="inline">a_0, a_1, \ldots , a_n \in  R</fr:tex> such that
     <fr:tex display="block">         f(x) = a_0 + a_1 x + a_2 x^2 + \cdots  + a_n x^n     </fr:tex>
-    for all <fr:tex display="inline">x \in  R</fr:tex>. We denote the set all polynomials with coefficients in <fr:tex display="inline">R</fr:tex> by <fr:tex display="inline">\mathcal {P}(R)</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+    for all <fr:tex display="inline">x \in  R</fr:tex>. We denote the set all polynomials with coefficients in <fr:tex display="inline">R</fr:tex> by <fr:tex display="inline">\mathcal {P}(R)</fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

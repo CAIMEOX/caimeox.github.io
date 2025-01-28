@@ -1,159 +1,761 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1080</fr:anchor><fr:addr type="machine">#371</fr:addr><fr:route>unstable-371.xml</fr:route><fr:title text="Primitive Recursion in Lambda Calculus › Church-Rosser Property"><fr:link type="local" href="cs-0002.xml" addr="cs-0002" title="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</fr:link> › <fr:strong>Church-Rosser Property</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    The outcome of a computation <fr:tex display="inline">e</fr:tex> is its normal form.
-    It is naturally to ask the question whether the normal form is unique.
-    The key to this question is the <fr:strong>Church-Rosser property</fr:strong> or <fr:strong>confluence</fr:strong>:
-    If <fr:tex display="inline">e\to ^* e_1</fr:tex> and <fr:tex display="inline">e\to ^* e_2</fr:tex>, then there exists a term <fr:tex display="inline">e_3</fr:tex> such that
-    <fr:tex display="block">         e_1\to ^* e_3\space \text {and}\space  e_2\to ^* e_3     </fr:tex>
-    This implies the uniqueness of the normal form.
-</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1081</fr:anchor><fr:addr type="user">cs-0002</fr:addr><fr:route>cs-0002.xml</fr:route><fr:title text="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</fr:title><fr:taxon>Compute Science</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>We begin with the <fr:strong>schema of iteration</fr:strong> and then proceed 
-    the more complex schema of primitive recursion and general recursion.
-    Refer to <fr:link type="local" href="tapl.xml" addr="tapl" title="Types and Programming Languages">TAPL</fr:link>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>658</fr:anchor><fr:addr type="machine">#369</fr:addr><fr:route>unstable-369.xml</fr:route><fr:title text="Function Composition"><fr:strong>Function Composition</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    Giving two functions <fr:tex display="inline">f, g</fr:tex> we can compose then to get a new function <fr:tex display="inline">f\circ  g = f(g(x))</fr:tex>.
-    Using <fr:tex display="inline">\lambda </fr:tex>-notation, we can define the composition of two functions as follows:
-    <fr:tex display="block">         f\circ  g = \lambda  x.f(g(x))     </fr:tex>
-    And the composition operation is also a lambda abstraction.
-    <fr:tex display="block">         \circ  = B = \lambda  f.\lambda  g.\lambda  x.f(g(x))     </fr:tex>
-    Composing identity function with any function does not change the function.
-    We expect the following equation to hold:
-    <fr:tex display="block">         f\circ  I = f = I\circ  f     </fr:tex>
-    where <fr:tex display="inline">I</fr:tex> is the identity function. This can be verified by the following calculation:
-    <fr:tex display="block">         \begin {align*}             B\space  f\space  I &amp;= (\lambda  f.\lambda  g.\lambda  x.f(g(x)))\space  f\space  I \\             &amp;\to _\beta  \lambda  g.\lambda  x.f(g(x))\space  I \\             &amp;\to _\beta  \lambda  x.f(I(x)) \\             &amp;\to _\beta  \lambda  x.f(x) \\             &amp;=_\eta  f         \end {align*}     </fr:tex>
-    The last step requires an extensional equality, which is the called <fr:strong>eta-conversion</fr:strong>.
-    <fr:tex display="block">         \text {for}\space  x\not \in \text {FV}(f) ,\lambda  x.f(x) =_\eta  f     </fr:tex>
-    It makes more sense to use the equation from right to left called <fr:strong>eta-expansion</fr:strong> 
-    (And more discipline has to be imposed or expansion does not terminate).
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>659</fr:anchor><fr:addr type="machine">#370</fr:addr><fr:route>unstable-370.xml</fr:route><fr:title text="Non-termination"><fr:strong>Non-termination</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>The well-known <fr:link type="local" href="eg-0007.xml" addr="eg-0007" title="Divergent Combinator"><fr:strong>divergent combinator</fr:strong></fr:link> implies that 
-        the lambda calculus is not strongly normalizing.</fr:p>
-    <fr:p>However, we can always compute a normal form if one exists.
-        Though there are many reduction strategies,
-        there is a complete one for expressions that have normal form.
-        This kind of reduction strategy is called <fr:strong>normal order reduction</fr:strong> or
-        <fr:strong>leftmost-outermost reduction</fr:strong>. It scans through the expression from left to right
-        and when it find a redex, it reduces it by applying beta reduction and returns to the beginning.</fr:p>
-    <fr:p>The notation of leftmost-outermost reduction is closely related to the 
-        notion of <fr:strong>call-by-name evaluation</fr:strong> in programming languages.
-        (A little more distance to <fr:strong>call-by-need</fr:strong> evaluation in Haskell)</fr:p>
-    <fr:p>In contrast, <fr:strong>call-by-value</fr:strong> evaluation is not complete, which would 
-        reduce the argument of a function before applying beta reduction.</fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>660</fr:anchor><fr:addr type="machine">#371</fr:addr><fr:route>unstable-371.xml</fr:route><fr:title text="Church-Rosser Property"><fr:strong>Church-Rosser Property</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    The outcome of a computation <fr:tex display="inline">e</fr:tex> is its normal form.
-    It is naturally to ask the question whether the normal form is unique.
-    The key to this question is the <fr:strong>Church-Rosser property</fr:strong> or <fr:strong>confluence</fr:strong>:
-    If <fr:tex display="inline">e\to ^* e_1</fr:tex> and <fr:tex display="inline">e\to ^* e_2</fr:tex>, then there exists a term <fr:tex display="inline">e_3</fr:tex> such that
-    <fr:tex display="block">         e_1\to ^* e_3\space \text {and}\space  e_2\to ^* e_3     </fr:tex>
-    This implies the uniqueness of the normal form.
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>661</fr:anchor><fr:addr type="machine">#373</fr:addr><fr:route>unstable-373.xml</fr:route><fr:title text="Representing Natural Numbers"><fr:strong>Representing Natural Numbers</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>We can represent natural numbers in lambda calculus by using the 
-        <fr:strong>Church numerals</fr:strong> or <fr:strong>Church encoding</fr:strong>.
-        The two abstractions should be related in some ways: 
-        one <fr:tex display="inline">x</fr:tex> stands for zero and the other <fr:tex display="inline">f</fr:tex> stands for the successor function.</fr:p>
-    <fr:p>The Church numeral <fr:tex display="inline">n</fr:tex> is a function that takes two arguments <fr:tex display="inline">f</fr:tex> and <fr:tex display="inline">x</fr:tex> and applies <fr:tex display="inline">f</fr:tex> to <fr:tex display="inline">x</fr:tex> <fr:tex display="inline">n</fr:tex> times.
-        The Church numeral <fr:tex display="inline">0</fr:tex> is defined as the identity function <fr:tex display="inline">\lambda  f.\lambda  x.x</fr:tex>.
-        The Church numeral <fr:tex display="inline">1</fr:tex> is defined as the successor of <fr:tex display="inline">0</fr:tex>:
-        <fr:tex display="block">             1 = \lambda  f.\lambda  x.f(x)         </fr:tex>
-        The Church numeral <fr:tex display="inline">2</fr:tex> is defined as the successor of <fr:tex display="inline">1</fr:tex>:
-        <fr:tex display="block">             2 = \lambda  f.\lambda  x.f(f(x))         </fr:tex>
-        And so on.</fr:p>
-    <fr:p>The Church numeral <fr:tex display="inline">n</fr:tex> is defined as the successor of <fr:tex display="inline">n-1</fr:tex>:
-        <fr:tex display="block">             n = \lambda  f.\lambda  x.f^n(x)         </fr:tex>
-        where <fr:tex display="inline">f^n(x)</fr:tex> means applying <fr:tex display="inline">f</fr:tex> to <fr:tex display="inline">x</fr:tex> <fr:tex display="inline">n</fr:tex> times.</fr:p>
-    <fr:p>The successor function is defined as follows:
-        <fr:tex display="block">             S = \lambda  n.\lambda  f.\lambda  x.f(n\space  f\space  x)         </fr:tex></fr:p>
-    
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>1686</fr:anchor>
+    <fr:addr type="machine">#371</fr:addr>
+    <fr:route>unstable-371.xml</fr:route>
+    <fr:title text="Scanners › Regular Expressions"><fr:link type="local" href="cs-0004.xml" addr="cs-0004" title="Scanners">Scanners</fr:link> › Regular Expressions</fr:title>
+    <fr:authors></fr:authors>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>The set of words accpeted by a finite automata <fr:tex display="inline">F</fr:tex> forms a language <fr:tex display="inline">L(F)</fr:tex>.
+        The transition diagram of <fr:tex display="inline">F</fr:tex> specifies the syntactic structure of <fr:tex display="inline">L(F)</fr:tex>.
+        But such representation is complex and non-intuitive.
+        Most systems use a notation called <fr:strong>regular expressions</fr:strong> to specify the language.
+        Any language described by an RE is considered a <fr:strong>regular language</fr:strong>.
+        RE is equivalent to FA.</fr:p>
+    <fr:p>To work with REs in a rigorous way, we need a foraml definition.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>1687</fr:anchor>
+            <fr:addr type="user">cs-0004</fr:addr>
+            <fr:route>cs-0004.xml</fr:route>
+            <fr:title text="Scanners">Scanners</fr:title>
+            <fr:taxon>Computer Science</fr:taxon>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The scanner&apos;s task is to transform a stream of characters into a stream 
+    of words in the input language. Each word must be classified into a 
+    <fr:strong>syntactic category</fr:strong>.
+    This note refers to <fr:link type="local" href="eng-compiler-2022.xml" addr="eng-compiler-2022" title="Engineering a Compiler">Engineering a compiler</fr:link></fr:p>
+            <fr:p>The first stage of a compiler is to perform <fr:strong>lexical analysis</fr:strong> by a scanner.
+    The parser or <fr:strong>syntax analyzer</fr:strong> will fit the stream of words to a grammatical 
+    model of the input language.</fr:p>
+            <fr:p>Scanner construction has a strong foundation in formal language theory.
+    Scanners are based on <fr:strong>recognizers</fr:strong> that simulate <fr:strong>deterministic finite automata</fr:strong>.
+    We can specify the lexical structure using a set of <fr:strong>regular expression</fr:strong>.</fr:p>
+            <fr:p>Each time a scanner recognizes a word, it will return a <fr:strong>token</fr:strong> that
+    contains the word (<fr:strong>lexeme</fr:strong>) and its syntactic category.
+    The scanner uses <fr:strong>microsyntax</fr:strong> (the lexical structure of a language) to 
+    find and classify words. <fr:strong>Keywords</fr:strong> are <fr:strong>identifiers</fr:strong> but have special meanings.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>654</fr:anchor>
+                <fr:addr type="machine">#368</fr:addr>
+                <fr:route>unstable-368.xml</fr:route>
+                <fr:title text="A first look at recognizers">A first look at recognizers</fr:title>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>A char-by-char algorithm to recognize words is trivial.
+        Consider we want to recognize the word <fr:code>new</fr:code>.
+        We can write down the following code.</fr:p><fr:pre>    c &lt;- nextChar();
+    if (c == &apos;n&apos;) {
+        c &lt;- nextChar();
+        if (c == &apos;e&apos;) {
+            c &lt;- nextChar();
+            if (c == &apos;w&apos;) {
+                return newToken();
+            }
+        }
+    }
+    reportError();</fr:pre><fr:p>We can also represent the code fragment using the simple <fr:strong>transition diagram</fr:strong>.</fr:p>
  
+  
+  <fr:figure><fr:resource hash="f4faee11facb506838a5d69a56ea34ed"><fr:resource-content><fr:img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPCEtLSBUaGlzIGZpbGUgd2FzIGdlbmVyYXRlZCBieSBkdmlzdmdtIDMuMi4yIC0tPgo8c3ZnIHZlcnNpb249JzEuMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycgd2lkdGg9JzIyMi41NDAyNjlwdCcgaGVpZ2h0PScyMy4zOTEzOTJwdCcgdmlld0JveD0nLTcyIC03MiAxNDguMzYwMTc5IDE1LjU5NDI2Mic+CjxzdHlsZSB0eXBlPSd0ZXh0L2Nzcyc+CjwhW0NEQVRBW0Bmb250LWZhY2V7Zm9udC1mYW1pbHk6Y21taTc7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQVVRQUFvQUFBQUFCZXdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRVFBQUFCZ2hZQjFJR050WVhBQUFBRTRBQUFBTXdBQUFFUUFnZ0ZHWjJ4NVpnQUFBV3dBQUFKQkFBQUNySTFQcVl0b1pXRmtBQUFEc0FBQUFDOEFBQUEyS2JPSGZtaG9aV0VBQUFQZ0FBQUFIZ0FBQUNRR1VRS0NhRzEwZUFBQUJBQUFBQUFRQUFBQUVBc1NBS1ZzYjJOaEFBQUVFQUFBQUFvQUFBQUtBYXdBem0xaGVIQUFBQVFjQUFBQUdBQUFBQ0FBQndCWmJtRnRaUUFBQkRRQUFBRFBBQUFCT1BOaEtxTndiM04wQUFBRkJBQUFBQXdBQUFBZ0FBTUFBSGphWTJCbU9zSTRnWUdWZ1lGcEZ0UFpmeUlNL1NDYThRM2pHd1pqUms0R0lHQmpnQU5HQmlTUVVseVdEcFJNWlNoblp2Z1A1RE5EcEpIVS9BY0tBd0QydGcyUWVOcGpZR0JnWW1CZ1lBWmlFU0RKQ0taWkdBeUFOQWNRZ3VSU0dmSVl5di8vUjdEK3ovay81WDhQV0MwWUFBRHpoZ3ZDQUhqYUpaRTliOU5nRklYZmUvM1YyTTVyTzNsdHAyM2lPblpxeDAzbGZOcW1jdUs0TkZXQmdxZ0FVWW1CZ1kyRmdhK05nYi9CeUIvZ1R5RDRKUXpzcUF0RHNjTjRwSE9Qem5NdVFYSitld04vNFRzSlNFcEk1b3NhT0RDMzFwQm1xUU1tMDBDVVlrZ3FsYVh6bVdWYm9pUks0ZHlxZFJhREgxUlMvRlUyQUNFZDY2dFdtY3ROWmJaWHZIL3hrcjluZHA0K3l5NEEvRHZIazgrejN2TFFTM2dZKzlhY05wUGZROU1wQ2xRRnZWUkFGV21rRDNsOGMvVjJ3N1JrTXVxc1RNcnZnaWhRbGprdXh5VFpKVUFtdHpmNEZYNlF4NFNzdVRSWkJDRUZpY0lZNHFwdWdaWmRRSlphdGxpWHBtQ0s5cXh1YlR0UWw1UzhJRnhzdWJLME91UTBwRndRZmhxcGlxaTFIVThSSkZrUmdSbU44R3dqMmRmbDhYTU9HYmJWcHN4MTNieUZoaXlDclJoK01id0RuS3BaRmlJYm5WeU9xTlJqUXNQc01qajlOb2x0M2V3Q2xERlRBRkU3ZGRvRFBFcjZPV0o4UDE2SytYNi9iM2k0WHJVUTdZbHR4Znc0VWhWM2NQZHMycHB6dUN6NnZROVhUS09nRzJUTCs0YzdnSi9rdWhJYVVMQXR1K0tzR0pORkdJVC9ZVm1OV3JOUkNNVXhCR0dRMVI3SnE1RDl5clhZZnNvQm05VUprZ1BiZ0dvSnJnQWI5M3VVNTVyYVNYbkllanQ2b0hIZ21Uc1JCaDY5M0V3ZXRnYWxIczNOc1lDeUhDbmNycnRzZzFHTjFLbG1XQitsd0xkMEZ6QS8yT3ZMQTRsWEhkWmM4WER4cmpBSHZpOEl1WFB1cnBTWkszWE1QbUEzQzc5cy9DZTg1MDFOeExiU3ZXb0h3OWZXQXlqV09tS0RUaTB6Rm1CNnFOSTRlaFhsQVFKcmpyck1PUG40YUI4T0NDSC9BSjNGV05FQUFBQjQybU5nWkdCZ0FHSzVHVGVTNC9sdHZqSXdzekNBd09OOWk1SVI5UDh2elBLTXg0RmNEZ1lta0NnQVJHMEx6UUI0Mm1OZ1pHQmdadmpQQUNUOUdBd1k5Sm5sR1lBaUtJQUZBREUrQWRzQUFBTEdBQUFDS3dCRkF0TUFNQU5PQURBQUFBQUFBRllBemdGV0FBQjQybU5nWkdCZ1lHR0lZR0JpQUFGR0JqUUFBQW1DQUdGNDJrMk1QVy9DTUJDR240Z0VpVEN3b0E0ZGlvZk9FUVFrdGk0TVRLeE1MSUJkbE1FMmNrSWtwS3BqZjNjdnJvZWU1TlB6ZnB5QmttOHloc21ZeFQxTVRpSHFqd3VtekJPUFJTMFNsN3p5em9nc240anp4a2ZpWEpKVDRvSVhQaE9QeGY5S1hMTGhaK2Z0L2RHWm9BNWVtK0N1MWpiYm93bHQ0NTFhVmN1bzk4YVpjTzZNVnBlbjBuM1Q5amVyMWxWZDFlendXTzQ4NkRBRUZBZHhkR1RIVlRKTHc1WmpkRnBoTDc1aVJjWHlYNzZYM01YT09mNmtwWFBoS1Z2VFM2T1ZmWk91WWkyWDlmQitBY3dyTC9rQWVOcGpZR2JBQ3dBQWZRQUUpIGZvcm1hdCgnd29mZicpO30KQGZvbnQtZmFjZXtmb250LWZhbWlseTpjbW1pMTA7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQU9vQUFvQUFBQUFCQlFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRU1BQUFCZ2hXNTByV050WVhBQUFBRTRBQUFBS1FBQUFEUUFEQUNtWjJ4NVpnQUFBV1FBQUFEb0FBQUE2S0tzVjhkb1pXRmtBQUFDVEFBQUFDOEFBQUEyS1NxSWZXaG9aV0VBQUFKOEFBQUFJQUFBQUNRRnpnRlhhRzEwZUFBQUFwd0FBQUFJQUFBQUNBVHFBRFZzYjJOaEFBQUNwQUFBQUFZQUFBQUdBSFFBQUcxaGVIQUFBQUtzQUFBQUZ3QUFBQ0FBQkFCS2JtRnRaUUFBQXNRQUFBRFVBQUFCUHBrUmRjZHdiM04wQUFBRG1BQUFBQkFBQUFBZ0FBTUFBWGphWTJCbUttV2N3TURLd01BMGkrbnNQeEdHZmhETitJYnhEWU14SXljREVMQXh3QUVqQXhKSUtTNUxCMG9HTXdRek0vd0g4cGtoMGtocS9nT0ZBZFBCRFFzQWVOcGpZR0JnWW1CZ1lBWmlFU0RKQ0taWkdCU0FOQXNRZ3ZqQi8vOUR5UC9yd0h3R0FGUVJCcThBQUFBQUFRQTEvK2dDbGdMU0FFZ0FBQUVIQmljbUp6WTNMZ0VIRGdFSEhnRWZBUjRCRng0QkZ3WVBBUVlIQmlZbkR3SWlKejhCUGdFek5oY0hCaFVXSHdFV056NEJOeTRCTHdFdUFTYzJQd0UyTnhZWFB3SVdBcFEzQXd3SkFnRUNBVkpCUzJZQ0FTY1dSVUl4RHcwakFnSkFHRWhpTGwwaU1nd0dDd0VlRGc4SEJnb0NCUU1FTXhRNE1FNW9Bd005SDIwcFFBSURSQTVKWDJnck1Rd0dEUUxJNFJjREFRY0xNVlZLQVFObFFpa3RCeElSRWhFS09UUmFUQnBFQkFFZkxEb05Bd3Q0T2pnS0FnMGJFQk5WSHd3WUFnTnhTVDBxQlIwTFNENWJSUTVCQXdGSk93MENBd0FBZU5wallHUmdZQURpWFRrL0o4ZnoyM3hsWUdaaEFJSEgreFlsSStqL0w1aW1NVjBDY2prWW1FQ2lBR3hERFFRQWVOcGpZR1JnWUdiNHo4REF3RlRHWVByL0h0TTBCcUFJQ21BQ0FHS0RCQ2tDZGdBQUFuUUFOUUFBQUFBQWRBQUFlTnBqWUdSZ1lHQmk4R1FBMFF4UUVna0FBQWUrQUU4QWVOcE5qckZxd3pBVVJZK3BZNmhieUpRTUhZcW1qTVoyK2dHRkRKbXlaaXdra1FndVNBcXlZOGdTK2dIOTZENHJHdnFFSGtmblhRa0JKWGN5cHNxWXh6NVZUaUduQjg5NFlaRzRrS1VTbDd5eDRva3NmeGJ6em1maW5GZStFczlZOHAyNEVQK1R1T1NEMzQyM2wrdGdndHA1YllJN1dkczE5ZDZFdnZOT05WWDlFRnZqVERnTVJxdmpUZW14NjhlelZldXFyVm8yZUN3WHJnd1lndnhzSjBaSGRweGtadWxvcU5sSDE4dkp5MFNKcThUK1Qyd2w0V0xxRUYvVGtqcHlrNjRaSmROTFAwdGFzWmE3N2JUL0FPQ0NNTDE0Mm1OZ1prQUdqQXhvQUFBQWpnQUYpIGZvcm1hdCgnd29mZicpO30KQGZvbnQtZmFjZXtmb250LWZhbWlseTpjbXI3O3NyYzp1cmwoZGF0YTphcHBsaWNhdGlvbi94LWZvbnQtd29mZjtiYXNlNjQsZDA5R1JnQUJBQUFBQUFUTUFBb0FBQUFBQlhBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUJQVXk4eUFBQUE5QUFBQUVNQUFBQmdoVXQwZTJOdFlYQUFBQUU0QUFBQUxBQUFBRFFBREFDR1oyeDVaZ0FBQVdRQUFBSUZBQUFDUkVwYnltWm9aV0ZrQUFBRGJBQUFBQzhBQUFBMktXZUlXR2hvWldFQUFBT2NBQUFBSHdBQUFDUUZSd0lMYUcxMGVBQUFBN3dBQUFBT0FBQUFEZ1hCQUhSc2IyTmhBQUFEekFBQUFBd0FBQUFNQVJZQm9HMWhlSEFBQUFQWUFBQUFHQUFBQUNBQUNBQThibUZ0WlFBQUEvQUFBQURKQUFBQk11MEtrZXh3YjNOMEFBQUV2QUFBQUJBQUFBQWdBQU1BQVhqYVkyQm1TbWFjd01ES3dNQTBpK25zUHhHR2ZoRE4rSWJ4RFlNeEl5Y0RFTEF4d0FFakF4SklLUzVMQjBvYU1CZ3pNL3dIOHBraDBraHEvZ09GQWNWYURMWUFlTnBqWUdCZ1ltQmdZQVppRVNESkNLWlpHQlNBTkFzUWd2akcvLzhEU1lQLy8vOWZCUE1aQUZGbEJvOTQya1dSeTI3VFVCQ0d6OHh4Yk9KS1NYT3huVGdYeDNadGl5VGs0c2cyTkdwQ0VHbEphV2hFbTBhb2dJb1FSUlFLRVNEV0NGV3c0RUdBQlR4QTM0RDNZSWxZSUNSV0ZDWXJWa2Yvek5ITTk4L1BrSFgrZnNjMGZtUTZhekVHcXBRQVNaUmNyd0dlRzdsUkQ2SXdLb05XQnE2R3BJS1FPcllyMGpkTnBTb3VZMXd5eXAxbmM5OG9uNHNqcVFxcHRmMjhyZjh3SittNElDakpZYzBhcDVkaXlPWFVGbXg0NCtyTTdndEMzNTVWeDU2M1ZiKzFNaERBZDRMWFo4ZlFHcmFmWG5xN2U2RUY5Vzd0K1BOcW8rOHpZSE1pKzRhZldKN2VsS2gyUVdsQ0VvS09IM3FwQkhnQm9ZVXF6SGhsNUQyY3pOZTlVWVhYZDdQbXk0NnloTy8vZk5VVmh3T2lvK2dvWitPd2dtb0RaQnJGQm94aGpMeWZaOHlSekNqc1F3OWRqOXlWZ1F6YW91dVJmM0tmb0cyaUZDME9FR0hNT05zSGxINFhydkR0c2J1WDkxUUFLeU5YRVY3Y2UvQ080N1E3cmQ3NDZTekpDVHc5TFlyaXI4TGh5UUZDTFVBbldTeUE0bzRlYzNoMGQrT29QclNHQUlKOE9iTmdpU2lIQkg1Z3F5UnNNUWkxeFRJNmVBTWtBbEsxN0NLVkh2aXFwaTc0aUVtaWpQNFhJanBDQXlCM1VSZEUwKzNrbEN4ZmQ0eHB5ZWZGZkZ2QStaZFhDRmNuMDl1QWI1NGNuSEN3bWdhQWJsbEhWbk9IdzNYWTQ2bGw1SkFzNWdibW9FbURUTEdwbFFEQzN1YjJXdnUra1Ruc1RaNXptRjZyRkN2NWxNUHJKY0ROT3pkMzJEKy9jRnFTQUFBQWVOcGpZR1JnWUFEaUE3L1B2SS9udC9uS3dNekNBQUtQOXkxS1J0RC8zekJkWmxvSjVISXdNSUZFQVkvRURlQUFlTnBqWUdSZ1lHYjR6OERBd0hTWndaakJsRW1JQVNpQ0FwZ0FQZGNDV0FBQzB3QUFBa2NBTXdCd0FFRUFOd0FBQUFBQUFBQlNBSDRBeEFFaWVOcGpZR1JnWUdCbHNHWmdZZ0FCUmdZMEFBQUd5QUJGZU5vOWpERUx3akFRaGI5aUZhMkRnK0RnSU1FZlVMUUtMbTRPVHE0T2J0WUU2ZEJVMGxwMEVYKzYxeEM4a09PNzk5NGRrUEFob3F1SWllOWR4ZkltZ2Z1TW1RWWVpTDRJbkRCblNZOG9Ib215WUI4NFpzZ2xjSjhaZWVDQjZLL0FDVnUraDZwOFBCdmoxS25TeHRsYjZYWm40K3Fpc21xZHJycnhhS3h4MThab2xiK1Zib3U2dlpkcWsyWnB4b0dLa2dkUEdnd094VWtVN2RseUU4K3g0K3pubWtJOEs1azFLYXUvZXhUWCtzVFZYOUdTeUhsTDE3U3lVMHUvUzFheGtiMnMrejlaTWk1TkFBQUFlTnBqWUdaQUJvd01hQUFBQUk0QUJRPT0pIGZvcm1hdCgnd29mZicpO30KdGV4dC5mMCB7Zm9udC1mYW1pbHk6Y21taTEwO2ZvbnQtc2l6ZTo5Ljk2MjY0cHh9CnRleHQuZjEge2ZvbnQtZmFtaWx5OmNtbWk3O2ZvbnQtc2l6ZTo2Ljk3Mzg0OHB4fQp0ZXh0LmYyIHtmb250LWZhbWlseTpjbXI3O2ZvbnQtc2l6ZTo2Ljk3Mzg0OHB4fQpdXT4KPC9zdHlsZT4KPGcgaWQ9J3BhZ2UxJz4KPGcgc3Ryb2tlLW1pdGVybGltaXQ9JzEwJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgyLjE4MDA4OCwtNjQuMjAyODczKXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknPgo8ZyBmaWxsPScjMDAwJyBzdHJva2U9JyMwMDAnPgo8ZyBzdHJva2Utd2lkdGg9JzAuNCc+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC03NC40NTgyNywtMi42NjY2NyknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMi4xODAwODgsLTY0LjIwMjg3MylzY2FsZSgtMSwtMSknPgo8ZyBzdHJva2U9JyMwMDAnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMTEuNzU4NzQ2LC02NC4yMDI4NzMpc2NhbGUoMC45OTYyNjQsLTAuOTk2MjY0KSc+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC01LjMwOTA0LDAuMCknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMTEuNzU4NzQ2LC02NC4yMDI4NzMpc2NhbGUoLTEsLTEpJz4KPGcgZmlsbD0nIzAwMCc+CjxnIHN0cm9rZT0nbm9uZSc+Cjx0ZXh0IGNsYXNzPSdmMCcgeD0nMTEuNzU4NzQ2JyB5PSctNjQuMjAyODczJz5TPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjInIHg9JzE3Ljg2Nzc5MScgeT0nLTYyLjcwODQ5Mic+MDwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZT0nIzAwMCcgc3Ryb2tlLW1pdGVybGltaXQ9JzEwJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSg1NC44MjYzNjgsLTY0LjIwMjg3MylzY2FsZSgwLjk5NjI2NCwtMC45OTYyNjQpJz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTUuMzA5MDQsMC4wKSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSg1NC44MjYzNjgsLTY0LjIwMjg3MylzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YwJyB4PSc1NC44MjYzNjgnIHk9Jy02NC4yMDI4NzMnPlM8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMicgeD0nNjAuOTM1NDE0JyB5PSctNjIuNzA4NDkyJz4xPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlPScjMDAwJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDk3Ljg5Mzk5MSwtNjQuMjAyODczKXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtNS4zMDkwNCwwLjApJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKDk3Ljg5Mzk5MSwtNjQuMjAyODczKXNjYWxlKC0xLC0xKSc+CjxnIGZpbGw9JyMwMDAnPgo8ZyBzdHJva2U9J25vbmUnPgo8dGV4dCBjbGFzcz0nZjAnIHg9Jzk3Ljg5Mzk5MScgeT0nLTY0LjIwMjg3Myc+UzwvdGV4dD4KPHRleHQgY2xhc3M9J2YyJyB4PScxMDQuMDAzMDM2JyB5PSctNjIuNzA4NDkyJz4yPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlPScjMDAwJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDE0MC45NjE2MTMsLTY0LjIwMjg3MylzY2FsZSgwLjk5NjI2NCwtMC45OTYyNjQpJz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTUuMzA5MDQsMC4wKSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSgxNDAuOTYxNjEzLC02NC4yMDI4NzMpc2NhbGUoLTEsLTEpJz4KPGcgZmlsbD0nIzAwMCc+CjxnIHN0cm9rZT0nbm9uZSc+Cjx0ZXh0IGNsYXNzPSdmMCcgeD0nMTQwLjk2MTYxMycgeT0nLTY0LjIwMjg3Myc+UzwvdGV4dD4KPHRleHQgY2xhc3M9J2YyJyB4PScxNDcuMDcwNjU4JyB5PSctNjIuNzA4NDkyJz4zPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZS13aWR0aD0nMC4zOTk5OCc+CjxwYXRoIGQ9J00tNTUuMDI5MTEtLjE2NjY3SC0zMS44MjkxJyBmaWxsPSdub25lJy8+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0zMS42MjkxMiwtMC4xNjY2NyknPgo8ZyBzdHJva2UtZGFzaGFycmF5PSdub25lJyBzdHJva2UtZGFzaG9mZnNldD0nMC4wJz4KIDxnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCc+CiA8ZyBzdHJva2UtbGluZWpvaW49J3JvdW5kJz4KIDxwYXRoIGQ9J00tMi4wNzk4OCAyLjM5OTg2Qy0xLjY5OTg5IC45NTk5Mi0uODUzMTMgLjI3OTk4IDAgMEMtLjg1MzEzLS4yNzk5OC0xLjY5OTg5LS45NTk5Mi0yLjA3OTg4LTIuMzk5ODYnIGZpbGw9J25vbmUnLz4KIDwvZz4KIDwvZz4KIDwvZz4KPC9nPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtNDUuNzAwNzksMi4xODYwOCknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMi4xODAwODgsLTY0LjIwMjg3MylzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YxJyB4PScyLjE4MDA4OCcgeT0nLTY0LjIwMjg3Myc+bjwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZS13aWR0aD0nMC4zOTk5OCc+CjxwYXRoIGQ9J00tMTEuNzk5OTktLjE2NjY3SDExLjQwMDAyJyBmaWxsPSdub25lJy8+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDExLjYsLTAuMTY2NjcpJz4KPGcgc3Ryb2tlLWRhc2hhcnJheT0nbm9uZScgc3Ryb2tlLWRhc2hvZmZzZXQ9JzAuMCc+CiA8ZyBzdHJva2UtbGluZWNhcD0ncm91bmQnPgogPGcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc+CiA8cGF0aCBkPSdNLTIuMDc5ODggMi4zOTk4NkMtMS42OTk4OSAuOTU5OTItLjg1MzEzIC4yNzk5OCAwIDBDLS44NTMxMy0uMjc5OTgtMS42OTk4OS0uOTU5OTItMi4wNzk4OC0yLjM5OTg2JyBmaWxsPSdub25lJy8+CiA8L2c+CiA8L2c+CiA8L2c+CjwvZz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTEuODk3MDUsMi4xODYwOCknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMi4xODAwODgsLTY0LjIwMjg3MylzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YxJyB4PScyLjE4MDA4OCcgeT0nLTY0LjIwMjg3Myc+ZTwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZS13aWR0aD0nMC4zOTk5OCc+CjxwYXRoIGQ9J00zMS40MjkxNC0uMTY2NjdINTQuNjI5MTUnIGZpbGw9J25vbmUnLz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoNTQuODI5MTMsLTAuMTY2NjcpJz4KPGcgc3Ryb2tlLWRhc2hhcnJheT0nbm9uZScgc3Ryb2tlLWRhc2hvZmZzZXQ9JzAuMCc+CiA8ZyBzdHJva2UtbGluZWNhcD0ncm91bmQnPgogPGcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc+CiA8cGF0aCBkPSdNLTIuMDc5ODggMi4zOTk4NkMtMS42OTk4OSAuOTU5OTItLjg1MzEzIC4yNzk5OCAwIDBDLS44NTMxMy0uMjc5OTgtMS42OTk4OS0uOTU5OTItMi4wNzk4OC0yLjM5OTg2JyBmaWxsPSdub25lJy8+CiA8L2c+CiA8L2c+CiA8L2c+CjwvZz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoNDAuMjQyNDMsMi4xODYwOCknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMi4xODAwODgsLTY0LjIwMjg3MylzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YxJyB4PScyLjE4MDA4OCcgeT0nLTY0LjIwMjg3Myc+dzwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9zdmc+"></fr:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>662</fr:anchor><fr:addr type="machine">#372</fr:addr><fr:route>unstable-372.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-            <fr:tex display="block">                 \begin {align*}                     S\space  n &amp;= (\lambda  n.\lambda  f.\lambda  x.f(n\space  f\space  x))\space  n \\                     &amp;\to _\beta  \lambda  f.\lambda  x.f(n\space  f\space  x) \\                     &amp;\to _\beta  \lambda  f.\lambda  x.f^n(x) \\                     &amp;\to _\beta  n+1                 \end {align*}             </fr:tex>
-        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
+
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
+
+
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
+
+ \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
+
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
+
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     &gt;={Triangle[open]},-&gt;.&gt;
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}-&gt;
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}-&gt;
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {-&gt;},
+   square/south/.style = {-&gt;},
+   square/west/.style = {-&gt;},
+   square/east/.style = {-&gt;},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  </fr:resource-source><fr:resource-source type="latex" part="body">
+        \begin {tikzcd}
+            {S_0} &amp; {S_1} &amp; {S_2} &amp; {S_3}
+            \arrow [&quot;n&quot;, from=1-1, to=1-2]
+            \arrow [&quot;e&quot;, from=1-2, to=1-3]
+            \arrow [&quot;w&quot;, from=1-3, to=1-4]
+        \end {tikzcd}
+    </fr:resource-source></fr:resource></fr:figure>
  
+</fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>655</fr:anchor>
+                <fr:addr type="machine">#369</fr:addr>
+                <fr:route>unstable-369.xml</fr:route>
+                <fr:title text="A formalism for recognizers">A formalism for recognizers</fr:title>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Transition diagrams can be viewed as formal mathematics objects called <fr:strong>finite automata</fr:strong>.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>656</fr:anchor>
+                    <fr:addr type="user">def-003M</fr:addr>
+                    <fr:route>def-003M.xml</fr:route>
+                    <fr:title text="Finite Automata">Finite Automata</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>A <fr:strong>finite automata (FA)</fr:strong> is a five-tuple <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> where
+    <fr:ul><fr:li><fr:tex display="inline">S</fr:tex> is the finite set of states in the recognizer including <fr:tex display="inline">s_e</fr:tex>,
+            the error state.</fr:li>
+        <fr:li><fr:tex display="inline">\Sigma </fr:tex> is the finite alphabet used by the recognizer. 
+            <fr:tex display="inline">\Sigma </fr:tex> is the union of the edge labels in the transition diagram.</fr:li>
+        <fr:li><fr:tex display="inline">\delta (s, c)</fr:tex> is the recognizer&apos;s transition function, which 
+            maps each state <fr:tex display="inline">s\in  S</fr:tex> and character <fr:tex display="inline">c\in \Sigma </fr:tex> into some next state.
+            In state <fr:tex display="inline">s_i</fr:tex> with input character <fr:tex display="inline">c</fr:tex> the FA takes the transition
+            <fr:tex display="inline">s_i \xrightarrow {c} \delta (s_i, c)</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">s_0\in  S</fr:tex> is the initial state of the recognizer.</fr:li>
+        <fr:li><fr:tex display="inline">S_A</fr:tex> is the set of accepting states, <fr:tex display="inline">S_A\subseteq  S</fr:tex>.</fr:li></fr:ul>
+    <fr:tex display="inline">\delta </fr:tex> is only partially defined. For all other combinations of the 
+    state <fr:tex display="inline">s_i</fr:tex> and input char <fr:tex display="inline">c</fr:tex> we can define <fr:tex display="inline">\delta (s_i,c)=s_e</fr:tex>.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>An FA <fr:strong>accpets</fr:strong> a string <fr:tex display="inline">x</fr:tex> and iff starting in <fr:tex display="inline">s_0</fr:tex>,
+        the sequence of chars in  <fr:tex display="inline">x</fr:tex> takes the FA to an accepting state
+        when the entire string has been consumed.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>657</fr:anchor>
+                    <fr:addr type="user">def-003N</fr:addr>
+                    <fr:route>def-003N.xml</fr:route>
+                    <fr:title text="Accepts">Accepts</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>If the string <fr:tex display="inline">x</fr:tex> consists characters <fr:tex display="inline">x_1, x_2, \ldots , x_n</fr:tex> then the
+    FA <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> <fr:strong>accpets</fr:strong> <fr:tex display="inline">x</fr:tex> iff there is a sequence
+    <fr:tex display="block">         \delta (             \delta (                 \dots \delta (\delta (                     \delta (s_0,x_1),x_2),x_3)\dots ,                 x_{n-1}             )             ,x_n         )\in  S_A     </fr:tex></fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>658</fr:anchor>
+                <fr:addr type="machine">#370</fr:addr>
+                <fr:route>unstable-370.xml</fr:route>
+                <fr:title text="Recognize more complex words">Recognize more complex words</fr:title>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>The char-by-char model is very simple and now we consider about numbers.
+        For simplicity, we consider only unsigned integers: An unsigned integer is either
+        zero or series of one or more digits where the first one is non-zero.</fr:p>
+ 
+  
+  <fr:figure><fr:resource hash="a55a074002c90d74861b032ab9b21f15"><fr:resource-content><fr:img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPCEtLSBUaGlzIGZpbGUgd2FzIGdlbmVyYXRlZCBieSBkdmlzdmdtIDMuMi4yIC0tPgo8c3ZnIHZlcnNpb249JzEuMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycgd2lkdGg9JzEzMS4xNzA1OHB0JyBoZWlnaHQ9JzE1NC4xNTU2OTFwdCcgdmlld0JveD0nLTcyIC03MiA4Ny40NDcwNTQgMTAyLjc3MDQ2MSc+CjxzdHlsZSB0eXBlPSd0ZXh0L2Nzcyc+CjwhW0NEQVRBW0Bmb250LWZhY2V7Zm9udC1mYW1pbHk6Y21taTc7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQUxvQUFvQUFBQUFBMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRU1BQUFCZ2hVbDBJMk50WVhBQUFBRTRBQUFBS1FBQUFEUUFEQUNCWjJ4NVpnQUFBV1FBQUFBc0FBQUFMTXNMM0lab1pXRmtBQUFCa0FBQUFDMEFBQUEyS1ZtR09XaG9aV0VBQUFIQUFBQUFJQUFBQUNRRVhnSThhRzEwZUFBQUFlQUFBQUFJQUFBQUNBUWhBSFJzYjJOaEFBQUI2QUFBQUFZQUFBQUdBQllBQUcxaGVIQUFBQUh3QUFBQUZ3QUFBQ0FBQkFBTWJtRnRaUUFBQWdnQUFBRFBBQUFCT1BOaEtxTndiM04wQUFBQzJBQUFBQkFBQUFBZ0FBTUFBWGphWTJCbUVtQ2N3TURLd01BMGkrbnNQeEdHZmhETitJYnhEWU14SXljREVMQXh3QUVqQXhKSUtTNUxCMHJxTWVneE0vd0g4cGtoMGtocS9nT0ZBYVprREZ3QWVOcGpZR0JnWW1CZ1lBWmlFU0RKQ0taWkdCU0FOQXNRZ3ZoNi8vOUR5UCtYd1h3R0FGRUlCb29BQUFBQUFRQjBBQUFBNkFCMkFBb0FBRGNPQVFjaUpqUTJOeklXNkFFZ0doVWtJQm9XSXpvWElnRWdNeUlCSUhqYVkyQmtZR0FBNGwwYUUxTGorVzIrTWpDek1JREE0MzJMa3BGcHBtTU1aVUNLZzRFSnhBTUFKMlVLRkFBQUFIamFZMkJrWUdCbStNL0F3TUIwaktHRW9aamhCUU5RQkFVd0FRQlhPUU9lQXNZQUFBRmJBSFFBQUFBQUFCWUFBSGphWTJCa1lHQmdZdUJtQU5FTVVCSUpBQUFCc0FBUkFIamFUWXc5YjhJd0VJYWZpQVNKTUxDZ0RoMktoODRSQkNTMkxneE1yRXdzZ0YyVXdUWnlRaVNrcW1OL2R5K3VoNTdrMC9OK25JR1NiektHeVpqRlBVeE9JZXFQQzZiTUU0OUZMUktYdlBMT2lDeWZpUFBHUitKY2tsUGlnaGMrRTQvRi8wcGNzdUZuNSszOTBabWdEbDZiNEs3V050dWpDVzNqblZwVnk2ajN4cGx3N294V2w2ZlNmZFAyTjZ2V1ZWM1Y3UEJZN2p6b01BUVVCM0YwWk1kVk1rdkRsbU4wV21FdnZtSkZ4ZkpmdnBmY3hjNDUvcVNsYytFcFc5TkxvNVY5azY1aUxaZjE4SDRCekNzditRQjQybU5nWmtBR2pBeG9BQUFBamdBRikgZm9ybWF0KCd3b2ZmJyk7fQpAZm9udC1mYWNle2ZvbnQtZmFtaWx5OmNtbWkxMDtzcmM6dXJsKGRhdGE6YXBwbGljYXRpb24veC1mb250LXdvZmY7YmFzZTY0LGQwOUdSZ0FCQUFBQUFBT29BQW9BQUFBQUJCUUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFCUFV5OHlBQUFBOUFBQUFFTUFBQUJnaFc1MHJXTnRZWEFBQUFFNEFBQUFLUUFBQURRQURBQ21aMng1WmdBQUFXUUFBQURvQUFBQTZLS3NWOGRvWldGa0FBQUNUQUFBQUM4QUFBQTJLU3FJZldob1pXRUFBQUo4QUFBQUlBQUFBQ1FGemdGWGFHMTBlQUFBQXB3QUFBQUlBQUFBQ0FUcUFEVnNiMk5oQUFBQ3BBQUFBQVlBQUFBR0FIUUFBRzFoZUhBQUFBS3NBQUFBRndBQUFDQUFCQUJLYm1GdFpRQUFBc1FBQUFEVUFBQUJQcGtSZGNkd2IzTjBBQUFEbUFBQUFCQUFBQUFnQUFNQUFYamFZMkJtS21XY3dNREt3TUEwaStuc1B4R0dmaEROK0lieERZTXhJeWNERUxBeHdBRWpBeEpJS1M1TEIwb0dNd1F6TS93SDhwa2gwa2hxL2dPRkFkUEJEUXNBZU5wallHQmdZbUJnWUFaaUVTREpDS1paR0JTQU5Bc1FndmpCLy85RHlQL3J3SHdHQUZRUkJxOEFBQUFBQVFBMS8rZ0NsZ0xTQUVnQUFBRUhCaWNtSnpZM0xnRUhEZ0VISGdFZkFSNEJGeDRCRndZUEFRWUhCaVluRHdJaUp6OEJQZ0V6TmhjSEJoVVdId0VXTno0Qk55NEJMd0V1QVNjMlB3RTJOeFlYUHdJV0FwUTNBd3dKQWdFQ0FWSkJTMllDQVNjV1JVSXhEdzBqQWdKQUdFaGlMbDBpTWd3R0N3RWVEZzhIQmdvQ0JRTUVNeFE0TUU1b0F3TTlIMjBwUUFJRFJBNUpYMmdyTVF3R0RRTEk0UmNEQVFjTE1WVktBUU5sUWlrdEJ4SVJFaEVLT1RSYVRCcEVCQUVmTERvTkF3dDRPamdLQWcwYkVCTlZId3dZQWdOeFNUMHFCUjBMU0Q1YlJRNUJBd0ZKT3cwQ0F3QUFlTnBqWUdSZ1lBRGlYVGsvSjhmejIzeGxZR1poQUlISCt4WWxJK2ovTDVpbU1WMENjamtZbUVDaUFHeEREUVFBZU5wallHUmdZR2I0ejhEQXdGVEdZUHIvSHRNMEJxQUlDbUFDQUdLREJDa0NkZ0FBQW5RQU5RQUFBQUFBZEFBQWVOcGpZR1JnWUdCaThHUUEwUXhRRWdrQUFBZStBRThBZU5wTmpyRnF3ekFVUlkrcFk2aGJ5SlFNSFlxbWpNWjIrZ0dGREpteVppd2trUWd1U0FxeVk4Z1MrZ0g5NkQ0ckd2cUVIa2ZuWFFrQkpYY3lwc3FZeHo1VlRpR25CODk0WVpHNGtLVVNsN3l4NG9rc2Z4Ynp6bWZpbkZlK0VzOVk4cDI0RVArVHVPU0QzNDIzbCt0Z2d0cDViWUk3V2RzMTlkNkV2dk5PTlZYOUVGdmpURGdNUnF2alRlbXg2OGV6VmV1cXJWbzJlQ3dYcmd3WWd2eHNKMFpIZHB4a1p1bG9xTmxIMTh2SnkwU0pxOFQrVDJ3bDRXTHFFRi9Ua2pweWs2NFpKZE5MUDB0YXNaYTc3YlQvQU9DQ01MMTQybU5nWmtBR2pBeG9BQUFBamdBRikgZm9ybWF0KCd3b2ZmJyk7fQpAZm9udC1mYWNle2ZvbnQtZmFtaWx5OmNtcjc7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQVRnQUFvQUFBQUFCWUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRU1BQUFCZ2hVdDBnV050WVhBQUFBRTRBQUFBTWdBQUFEd0FWQUNJWjJ4NVpnQUFBV3dBQUFJVUFBQUNURUlUUmZKb1pXRmtBQUFEZ0FBQUFDOEFBQUEyS1dlSVdXaG9aV0VBQUFPd0FBQUFId0FBQUNRRlJ3SUxhRzEwZUFBQUE5QUFBQUFPQUFBQURnWEJBSFJzYjJOaEFBQUQ0QUFBQUF3QUFBQU1BUllCcEcxaGVIQUFBQVBzQUFBQUdBQUFBQ0FBQ0FBOWJtRnRaUUFBQkFRQUFBREpBQUFCTXUwS2tleHdiM04wQUFBRTBBQUFBQkFBQUFBZ0FBTUFBWGphWTJCbVNtYWN3TURLd01BMGkrbnNQeEdHZmhETitJYnhEWU14SXljREVMQXh3QUVqQXhKSUtTNUxCMG9hTUZneU0vd0g4cGtoMGtocS9nT0ZBY1lJREx3QWVOcGpZR0JnWW1CZ1lBWmlFU0RKQ0taWkdEU0FOQnVRWmdUS0dqRlkvdjhQNUJ1QTZQOFgvNThHcXdJQ0FJMVpDTllBQUhqYUhaSExidE5BRklibm5QR2xjU0RCU1R4dUxzM0ZyajBsU1pNMHdiWWdKV21KUW9uYVFLbmFwaWkwQXBXTEFCVWl3UmFwQ3dSSWlFZGd4d0lRdkVERkMvQWVMQkVMVklrVmhUR3IwVDh6bXZQOTh4RWtyYjgvTUlFZlNJWTBDQUdteGtCVlZKZlhnTHVCRzNRZzhJTThtSG1nekJmSjg4V0o3U3JpbXNuRUxwN0JpRnJJdDU1TW1vWDhWQVJGS29wMGNaeTJNejlMNjRtSUpCbnhmc1VhSnFJeVVrMWZneFUrTEkvc3JpUjE3VkY1eVBsYTljYnNzZ1JOeHpzOE9ZQkdmK0h4K1plYjh3Mm90aXNIWHk3VXVrMENaQ0xJdnVOSGtoYXJyckEyR0hXSWc5ZHErbHlQQWZjRW1zOWdSSXNEZm45OWNwa1BpclM2bVNvOWF4bFJmUFBuVzhad0tDQTZSZ2ExVkFSbWtkVkFFMCtSWlVKUUZ0M1BFdUtvcGNEdlFnZGRMdHJsUVJTMEZaZUwvcUo5VEV4VDFDRDhnQURsd3NrWVVQMmR2VVN2RGQzdE5HY0FWbElySXp5OWZmY1Z4YTMyVnZucUx5ZXF4ZkRvS0tjb3g5bDdMMjRoVkR4MDRya3NHTzdnRVlVSGV5c1BxMzJyRHlCcFMwbUJRUUxoSVlhZnlCeHBDelJQYUJBS3hMd09tRDR6bFJEQWNua293MkFoWU1BRWo4L0Q2djl0aFVwU29STDRyRjlaM0Qya1VNL05qN083cjZsMFhkNllyRzRBMXFlbklWNHd1OGs1Yjlxb3ZXMk5LRVNOVXcwK3RJMklxck1BRmd5bmcvajhUbS9WTERQQWQxL2Y3OGszY2ZGY25VSTJOV1hMN0RSUVN5OHM3Y1BPL3N5T1pUaUFRYjYzM1p1eHNvVDhBMUxTWFVaNDJtTmdaR0JnQU9JTGY2NGF4L1BiZkdWZ1ptRUFnY2Y3RmlVajZQOXZtQzR6clFKeU9SaVlRS0lBZE5RTlB3QjQybU5nWkdCZ1p2alB3TURBZEpuQm1NR1VTWWdCS0lJQ21BQTkxd0pZQUFMVEFBQUNSd0F6QUhBQVFRQTNBQUFBQUFBQUFGSUFmZ0RFQVNaNDJtTmdaR0JnWUdXd1lXQmlBQUZHQmpRQUFBYmhBRVo0MmoyTU1RdkNNQkNGdjJJVnJZT0Q0T0Fnd1I5UXRBb3ViZzVPcmc1dTFnVHAwRlRTV25RUmY3clhFTHlRNDd2MzNoMlE4Q0dpcTRpSjcxM0Y4aWFCKzR5WkJoNkl2Z2ljTUdkSmp5Z2VpYkpnSHpobXlDVndueGw1NElIb3I4QUpXNzZIcW53OEcrUFVxZExHMlZ2cGRtZmo2cUt5YXAydXV2Rm9ySEhYeG1pVnY1VnVpN3E5bDJxVFptbkdnWXFTQjA4YURBN0ZTUlR0MlhJVHo3SGo3T2VhUWp3cm1UVXBxNzk3Rk5mNnhOVmYwWkxJZVV2WHRMSlRTNzlMVnJHUnZhejdQMWt5TGswQUFBQjQybU5nWmtBR2pBeG9BQUFBamdBRikgZm9ybWF0KCd3b2ZmJyk7fQp0ZXh0LmYwIHtmb250LWZhbWlseTpjbW1pMTA7Zm9udC1zaXplOjkuOTYyNjRweH0KdGV4dC5mMSB7Zm9udC1mYW1pbHk6Y21taTc7Zm9udC1zaXplOjYuOTczODQ4cHh9CnRleHQuZjIge2ZvbnQtZmFtaWx5OmNtcjc7Zm9udC1zaXplOjYuOTczODQ4cHh9Cl1dPgo8L3N0eWxlPgo8ZyBpZD0ncGFnZTEnPgo8ZyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC00MC44ODc1MzUsLTEwLjU1MzczMSlzY2FsZSgwLjk5NjI2NCwtMC45OTYyNjQpJz4KPGcgZmlsbD0nIzAwMCcgc3Ryb2tlPScjMDAwJz4KPGcgc3Ryb2tlLXdpZHRoPScwLjQnPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtMzEuMjI5MTQsLTM2LjMxOTQ2KSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSgtNDAuODg3NTM1LC0xMC41NTM3MzEpc2NhbGUoLTEsLTEpJz4KPGcgc3Ryb2tlPScjMDAwJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0zMS4zMDg4NzcsLTc3LjYwNzg1MSlzY2FsZSgwLjk5NjI2NCwtMC45OTYyNjQpJy8+CjxnIHN0cm9rZT0nIzAwMCcgc3Ryb2tlLW1pdGVybGltaXQ9JzEwJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgxMS43NTg3NDYsLTc3LjYwNzg1MSlzY2FsZSgwLjk5NjI2NCwtMC45OTYyNjQpJz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTUuMzA5MDQsMC4wKSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSgxMS43NTg3NDYsLTc3LjYwNzg1MSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YwJyB4PScxMS43NTg3NDYnIHk9Jy03Ny42MDc4NTEnPlM8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMicgeD0nMTcuODY3NzkxJyB5PSctNzYuMTEzNDcnPjI8L3RleHQ+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8ZyBzdHJva2U9JyMwMDAnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTMxLjMwODg3NywtNDQuMDgwNzkxKXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtNS4zMDkwNCwwLjApJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKC0zMS4zMDg4NzcsLTQ0LjA4MDc5MSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YwJyB4PSctMzEuMzA4ODc3JyB5PSctNDQuMDgwNzkxJz5TPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjInIHg9Jy0yNS4xOTk4MzEnIHk9Jy00Mi41ODY0MSc+MDwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZT0nIzAwMCcgc3Ryb2tlLW1pdGVybGltaXQ9JzEwJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtMzEuMzA4ODc3LC0xMC41NTM3MzEpc2NhbGUoMC45OTYyNjQsLTAuOTk2MjY0KScvPgo8ZyBzdHJva2U9JyMwMDAnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMTEuNzU4NzQ2LC0xMC41NTM3MzEpc2NhbGUoMC45OTYyNjQsLTAuOTk2MjY0KSc+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC01LjMwOTA0LDAuMCknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMTEuNzU4NzQ2LC0xMC41NTM3MzEpc2NhbGUoLTEsLTEpJz4KPGcgZmlsbD0nIzAwMCc+CjxnIHN0cm9rZT0nbm9uZSc+Cjx0ZXh0IGNsYXNzPSdmMCcgeD0nMTEuNzU4NzQ2JyB5PSctMTAuNTUzNzMxJz5TPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjInIHg9JzE3Ljg2Nzc5MScgeT0nLTkuMDU5MzUnPjE8L3RleHQ+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlLXdpZHRoPScwLjM5OTk4Jz4KPHBhdGggZD0nTTI1LjQzNDQyIDQxLjY3OTE1QzM0LjY2Njk4IDYxLjQ3NjcyIDUxLjIyNjcgNDcuMjk0NyAzMS43OTE2MSAzOC4yMzE0NScgZmlsbD0nbm9uZScvPgo8ZyB0cmFuc2Zvcm09J21hdHJpeCgtMC45MDYzLC0wLjQyMjYyLDAuNDIyNjIsLTAuOTA2MywzMS42MTAzOCwzOC4xNDY5NCknPgo8ZyBzdHJva2UtZGFzaGFycmF5PSdub25lJyBzdHJva2UtZGFzaG9mZnNldD0nMC4wJz4KIDxnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCc+CiA8ZyBzdHJva2UtbGluZWpvaW49J3JvdW5kJz4KIDxwYXRoIGQ9J00tMi4wNzk4OCAyLjM5OTg2Qy0xLjY5OTg5IC45NTk5Mi0uODUzMTMgLjI3OTk4IDAgMEMtLjg1MzEzLS4yNzk5OC0xLjY5OTg5LS45NTk5Mi0yLjA3OTg4LTIuMzk5ODYnIGZpbGw9J25vbmUnLz4KIDwvZz4KIDwvZz4KIDwvZz4KPC9nPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSg0MS42NzA4LDUzLjEwOTcpJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKC00MC44ODc1MzUsLTEwLjU1MzczMSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YyJyB4PSctNDAuODg3NTM1JyB5PSctMTAuNTUzNzMxJz4wPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjEnIHg9Jy0zNi45MTYyOTQnIHk9Jy0xMC41NTM3MzEnPi4uPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjInIHg9Jy0zMi4xODQwMTInIHk9Jy0xMC41NTM3MzEnPjk8L3RleHQ+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8ZyBzdHJva2Utd2lkdGg9JzAuMzk5OTgnPgo8cGF0aCBkPSdNLTExLjc5OTk5LTcuODA1ODVMMTEuNDg0NC0yNS45MzM1NScgZmlsbD0nbm9uZScvPgo8ZyB0cmFuc2Zvcm09J21hdHJpeCgwLjc4OTA1LC0wLjYxNDI5LDAuNjE0MjksMC43ODkwNSwxMS42NDIxOCwtMjYuMDU2MzgpJz4KPGcgc3Ryb2tlLWRhc2hhcnJheT0nbm9uZScgc3Ryb2tlLWRhc2hvZmZzZXQ9JzAuMCc+CiA8ZyBzdHJva2UtbGluZWNhcD0ncm91bmQnPgogPGcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc+CiA8cGF0aCBkPSdNLTIuMDc5ODggMi4zOTk4NkMtMS42OTk4OSAuOTU5OTItLjg1MzEzIC4yNzk5OCAwIDBDLS44NTMxMy0uMjc5OTgtMS42OTk4OS0uOTU5OTItMi4wNzk4OC0yLjM5OTg2JyBmaWxsPSdub25lJy8+CiA8L2c+CiA8L2c+CiA8L2c+CjwvZz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMi4zNTI3NSwtMTQuNjM5NzkpJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKC00MC44ODc1MzUsLTEwLjU1MzczMSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YyJyB4PSctNDAuODg3NTM1JyB5PSctMTAuNTUzNzMxJz4wPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlLXdpZHRoPScwLjM5OTk4Jz4KPHBhdGggZD0nTS0xMS43OTk5OSA3LjQ3MjVMMTEuNDg0NCAyNS42MDAyJyBmaWxsPSdub25lJy8+CjxnIHRyYW5zZm9ybT0nbWF0cml4KDAuNzg5MDUsMC42MTQyOSwtMC42MTQyOSwwLjc4OTA1LDExLjY0MjE4LDI1LjcyMzA0KSc+CjxnIHN0cm9rZS1kYXNoYXJyYXk9J25vbmUnIHN0cm9rZS1kYXNob2Zmc2V0PScwLjAnPgogPGcgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJz4KIDxnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnPgogPHBhdGggZD0nTS0yLjA3OTg4IDIuMzk5ODZDLTEuNjk5ODkgLjk1OTkyLS44NTMxMyAuMjc5OTggMCAwQy0uODUzMTMtLjI3OTk4LTEuNjk5ODktLjk1OTkyLTIuMDc5ODgtMi4zOTk4NicgZmlsbD0nbm9uZScvPgogPC9nPgogPC9nPgogPC9nPgo8L2c+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0xNS4wNzUwMSwxOS4wMTE5NSknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoLTQwLjg4NzUzNSwtMTAuNTUzNzMxKXNjYWxlKC0xLC0xKSc+CjxnIGZpbGw9JyMwMDAnPgo8ZyBzdHJva2U9J25vbmUnPgo8dGV4dCBjbGFzcz0nZjInIHg9Jy00MC44ODc1MzUnIHk9Jy0xMC41NTM3MzEnPjE8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMScgeD0nLTM2LjkxNjI5NCcgeT0nLTEwLjU1MzczMSc+Li48L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMicgeD0nLTMyLjE4NDAxMicgeT0nLTEwLjU1MzczMSc+OTwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9zdmc+"></fr:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+   
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
 
-    <fr:p>Using the iteration property we can define mathematical functions 
-        over the natural numbers in lambda calculus.
-        The addition of two Church numerals <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> is defined as follows:
-        <fr:tex display="block">             m+n = \lambda  n.\lambda  k. n\space  S\space  k         </fr:tex></fr:p>
-    <fr:p>The multiplication of two Church numerals <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> is defined by
-        iterating the addition function <fr:tex display="inline">m</fr:tex> times:
-        <fr:tex display="block">             m*n = \lambda  n.\lambda  k. n\space  (k + ) \space  0         </fr:tex></fr:p>
-    <fr:p>The exponentiation of two Church numerals <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> is defined as follows:
-        <fr:tex display="block">             m^n = \lambda  m.\lambda  n. n\space  (m *) \space  1         </fr:tex></fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>663</fr:anchor><fr:addr type="machine">#374</fr:addr><fr:route>unstable-374.xml</fr:route><fr:title text="The Schema of Iteration"><fr:strong>The Schema of Iteration</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>As we saw before, a natural number <fr:tex display="inline">n</fr:tex> is represented by a function 
-        that iterates its first argument <fr:tex display="inline">n</fr:tex> times on its second argument.
-        <fr:tex display="block">             n = \lambda  g.\lambda  c.g^n(c)         </fr:tex>
-        Another way to specify such a function schematically is 
-        <fr:tex display="block">             \begin {align*}                 f \space 0 &amp;= c \\                 f (n+1) &amp;= g\space  (f\space  n)             \end {align*}         </fr:tex>
-        If such a function satisfies such a <fr:strong>schema of iteration</fr:strong>, then it can 
-        be defined in the lambda calculus on Church numerals as
-        <fr:tex display="block">             f = \lambda  n.n \space  g \space  c         </fr:tex>
-        This definition is <fr:strong>total</fr:strong> which means it is defined for all natural numbers.
-        Let&apos;s define the multiplication again
-        <fr:tex display="block">             \begin {align*}                 m*0 &amp;= 0 \\                 m*(n+1) &amp;= m + (m*n)             \end {align*}         </fr:tex>
-        To fit our schema of iteration, we can define the multiplication by abstracting over <fr:tex display="inline">k</fr:tex>:
-        <fr:tex display="block">             \begin {align*}                 \text {times}\space  0 &amp;= \lambda  k.0 \\                 \text {times}\space  (n+1) &amp;= \lambda  k.k + (\text {times}\space  n\space  k)             \end {align*}         </fr:tex>
-        where the <fr:tex display="inline">c</fr:tex> and <fr:tex display="inline">g</fr:tex> are
-        <fr:tex display="block">             \begin {align*}                 c &amp;= \lambda  k.0 \\                 g &amp;= \lambda  r.\lambda  k.k+(r\space  k)             \end {align*}         </fr:tex>
-        and we obtain
-        <fr:tex display="block">             \text {times} = \lambda  n.n(\lambda  rk. k + (r\space  k))(\lambda  k.0)         </fr:tex></fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>664</fr:anchor><fr:addr type="machine">#379</fr:addr><fr:route>unstable-379.xml</fr:route><fr:title text="The Schema of Primitive Recursion"><fr:strong>The Schema of Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-    <fr:p>Everything appears simply until we think of a very simple function,
-        the <fr:strong>predecessor function</fr:strong> <fr:tex display="inline">\text {pred}</fr:tex> defined by
-        <fr:tex display="block">             \begin {align*}                 \text {pred}\space  0 = 0 \\                 \text {pred}\space  (n+1) = n             \end {align*}         </fr:tex>
-        What we would need is the <fr:strong>schema of primitive recursion</fr:strong>
-        <fr:tex display="block">             \begin {align*}                 f\space  0 &amp;= c \\                 f\space  (n+1) &amp;= g\space  n\space  (f\space  n)             \end {align*}         </fr:tex>
-        With which we can define the predecessor function by 
-        <fr:tex display="block">             g = \lambda  x.\lambda  y.x         </fr:tex></fr:p>
-    
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>665</fr:anchor><fr:addr type="machine">#375</fr:addr><fr:route>unstable-375.xml</fr:route><fr:title text="Define predecessor function"><fr:strong>Define predecessor function</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        The key idea is to gain access to <fr:tex display="inline">n</fr:tex> in the schema of 
-        primitive recursion by rebuilding it during the iteration.
-        <fr:tex display="block">             \text {pred}_2\space  n = \langle  n, \text {pred}\space  n \rangle          </fr:tex>
-        The key step is to express the definition by a schema of iteration
-        rather than primitive recursion.
-        <fr:tex display="block">             \text {pred}_2\space  0 = \langle  0, 0 \rangle          </fr:tex>
-        We need a helper function for the successor case
-        <fr:tex display="block">             \text {letPair}\space \langle  e_1,e_2\rangle \space  k = k\space  e_1\space  e_2         </fr:tex>
-        This function passes the elements of the pair to a <fr:strong>continuation</fr:strong> <fr:tex display="inline">k</fr:tex>.
-        <fr:tex display="block">             \text {pred}_2 (n+1) = \text {letPair}\space  (\text {pred}_2\space  n)\space  (\lambda  xy. \langle  x+1, x \rangle )          </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>666</fr:anchor><fr:addr type="machine">#376</fr:addr><fr:route>unstable-376.xml</fr:route><fr:title text="Define Pairs"><fr:strong>Define Pairs</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        Now we need to define pairs and <fr:tex display="inline">\text {letPair}</fr:tex>.
-        The idea is to simply abstract over the continuation itself.
-        <fr:tex display="block">             \begin {align*}                 \langle  x,y\rangle  &amp;= \lambda  k.k\space  x\space  y \\                 \text {pair} &amp;= \lambda  x.\lambda  y.\lambda  k.k\space  x\space  y \\                  \text {letPair} &amp;= \lambda  p.p             \end {align*}         </fr:tex>
-        The letPair is not really needed here.
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
 
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>667</fr:anchor><fr:addr type="machine">#377</fr:addr><fr:route>unstable-377.xml</fr:route><fr:title text="Summary"><fr:strong>Summary</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        Summarizing the above and we obtain the full definition of the predecessor function.
-        <fr:tex display="block">             \begin {align*}                 \text {pred}_2 &amp;= \lambda  n.n\space  (\lambda  p.p (\lambda  xy.\text {pair} \space  (x+1) \space  x))\space  \text {pair} (\space  0 \space  0)\\                  \text {pred} &amp;= \lambda  n. (\text {pred}_2\space  n) \space  (\lambda  xy.y)             \end {align*}            </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
 
-    
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>668</fr:anchor><fr:addr type="machine">#378</fr:addr><fr:route>unstable-378.xml</fr:route><fr:title text="General Primitive Recursion"><fr:strong>General Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors><fr:parent>cs-0002</fr:parent></fr:frontmatter><fr:mainmatter>
-        The general case of primitive recursion follows by a similar pattern.
-        We begin by defining a function <fr:tex display="inline">f_2</fr:tex>:
-        <fr:tex display="block">             f_2\space  n = \langle  n, f\space  n \rangle          </fr:tex>
-        We can define <fr:tex display="inline">f_2</fr:tex> using the schema of iteration
-        <fr:tex display="block">             \begin {align*}                 f_2\space  0 &amp;= \langle  0, c \rangle  \\                 f_2\space  (n+1) &amp;= \text {letPair}\space  (f_2\space  n)\space  (\lambda  xy.\langle  x+1, g\space  x\space  y \rangle ) \\                 f\space  n &amp;= \text {letPair}\space  (f_2\space  n)\space  (\lambda  xy.y)             \end {align*}         </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
 
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-<fr:p>When computing over natural numbers we can restrict the functions that can be 
-    formed in schematic ways to obtain a language in which all functions <fr:strong>terminate</fr:strong>.
-    Because if <fr:tex display="inline">c</fr:tex> and <fr:tex display="inline">g</fr:tex> are terminating then so is <fr:tex display="inline">f</fr:tex> formed from them by primitive recursion.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     &gt;={Triangle[open]},-&gt;.&gt;
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}-&gt;
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}-&gt;
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {-&gt;},
+   square/south/.style = {-&gt;},
+   square/west/.style = {-&gt;},
+   square/east/.style = {-&gt;},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  </fr:resource-source><fr:resource-source type="latex" part="body">
+        \begin {tikzcd}
+            &amp; {S_2}
+            \arrow [out=65, in=25 ,loop,&quot;0..9&quot;]
+            \\
+            {S_0} \\
+            &amp; {S_1}
+            \arrow [&quot;0&quot;, from=2-1, to=3-2]
+            \arrow [&quot;{1..9}&quot;, from=2-1, to=1-2]
+        \end {tikzcd}
+    </fr:resource-source></fr:resource></fr:figure>
+ 
+<fr:p>And the code implementation can be:</fr:p><fr:pre>    state &lt;- s0;
+    char &lt;-nextChar();
+    while (state != se and char != eof) {
+        state &lt;- delta(state, char);
+        char &lt;- nextChar();
+    }
+    if (state in SA) {
+        return Acceptance();
+    } else {
+        reportError();
+    }</fr:pre><fr:p>Another example is to recognize <fr:strong>identifiers</fr:strong> which are sequences of letters and digits,
+        starting with a letter. Many languages include other special characters for identifiers.
+        The FA for unsigned integers and identifiers are different in syntactic categories.</fr:p></fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>659</fr:anchor>
+                <fr:addr type="machine">#371</fr:addr>
+                <fr:route>unstable-371.xml</fr:route>
+                <fr:title text="Regular Expressions">Regular Expressions</fr:title>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The set of words accpeted by a finite automata <fr:tex display="inline">F</fr:tex> forms a language <fr:tex display="inline">L(F)</fr:tex>.
+        The transition diagram of <fr:tex display="inline">F</fr:tex> specifies the syntactic structure of <fr:tex display="inline">L(F)</fr:tex>.
+        But such representation is complex and non-intuitive.
+        Most systems use a notation called <fr:strong>regular expressions</fr:strong> to specify the language.
+        Any language described by an RE is considered a <fr:strong>regular language</fr:strong>.
+        RE is equivalent to FA.</fr:p>
+                <fr:p>To work with REs in a rigorous way, we need a foraml definition.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

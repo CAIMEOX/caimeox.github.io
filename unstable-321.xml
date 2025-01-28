@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1111</fr:anchor><fr:addr type="machine">#321</fr:addr><fr:route>unstable-321.xml</fr:route><fr:title text="Matrix Multiplication › 
-    Derivation
-"><fr:link type="local" href="def-002T.xml" addr="def-002T" title="Matrix Multiplication">Matrix Multiplication</fr:link> › 
-    <fr:strong>Derivation</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-002T</fr:parent></fr:frontmatter><fr:mainmatter>
-    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
-    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
-    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
-    <fr:tex display="block">         \begin {align*}             (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\             &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\             &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\             &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\         \end {align*}     </fr:tex>
-    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
-    <fr:tex display="block">         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
-</fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1112</fr:anchor><fr:addr type="user">def-002T</fr:addr><fr:route>def-002T.xml</fr:route><fr:title text="Matrix Multiplication">Matrix Multiplication</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> be a <fr:tex display="inline">n\times  p</fr:tex> matrix.
-    Then <fr:tex display="inline">AC</fr:tex> is defined as the <fr:tex display="inline">m\times  p</fr:tex> matrix <fr:tex display="inline">C</fr:tex> such that
-    <fr:tex display="block">         C_{ij} = \sum _{k=1}^n A_{ik}B_{kj}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>638</fr:anchor><fr:addr type="machine">#321</fr:addr><fr:route>unstable-321.xml</fr:route><fr:title text="
-    Derivation
-">
-    <fr:strong>Derivation</fr:strong>
-</fr:title><fr:authors></fr:authors><fr:parent>def-002T</fr:parent></fr:frontmatter><fr:mainmatter>
-    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
-    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
-    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
-    <fr:tex display="block">         \begin {align*}             (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\             &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\             &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\             &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\         \end {align*}     </fr:tex>
-    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
-    <fr:tex display="block">         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>1353</fr:anchor>
+    <fr:addr type="machine">#321</fr:addr>
+    <fr:route>unstable-321.xml</fr:route>
+    <fr:title text="Probability Density › Expectation Value"><fr:link type="local" href="def-0031.xml" addr="def-0031" title="Probability Density">Probability Density</fr:link> › Expectation Value</fr:title>
+    <fr:authors></fr:authors>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    The <fr:strong>expectation value</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
+    <fr:tex display="block">         \langle  f(x) \rangle  = \int _{-\infty }^{\infty } f(x)p(x)dx     </fr:tex>
+</fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>1354</fr:anchor>
+            <fr:addr type="user">def-0031</fr:addr>
+            <fr:route>def-0031.xml</fr:route>
+            <fr:title text="Probability Density">Probability Density</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter><fr:p>A <fr:strong>probability density</fr:strong> is a function <fr:tex display="inline">p(x)</fr:tex> such that:
+    <fr:ul><fr:li><fr:tex display="inline">p(x)\geq  0</fr:tex> for all <fr:tex display="inline">x</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">\int _{-\infty }^{\infty } p(x)dx = 1</fr:tex>.</fr:li></fr:ul>
+    With this we can define the <fr:strong>probability function</fr:strong> in an interval <fr:tex display="inline">[a,b]</fr:tex> as:
+    <fr:tex display="block">         P(a, b) = \int _a^b p(x)dx     </fr:tex></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>479</fr:anchor><fr:addr type="machine">#321</fr:addr><fr:route>unstable-321.xml</fr:route><fr:title text="Expectation Value">Expectation Value</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    The <fr:strong>expectation value</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
+    <fr:tex display="block">         \langle  f(x) \rangle  = \int _{-\infty }^{\infty } f(x)p(x)dx     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>480</fr:anchor><fr:addr type="machine">#322</fr:addr><fr:route>unstable-322.xml</fr:route><fr:title text="Variance">Variance</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    The <fr:strong>variance</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
+    <fr:tex display="block">         \sigma ^2 :\equiv  \langle  x^2 \rangle  - \langle  x \rangle ^2     </fr:tex>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+</fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

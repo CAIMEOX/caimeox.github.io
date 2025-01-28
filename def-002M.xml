@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1615</fr:anchor><fr:addr type="user">def-002M</fr:addr><fr:route>def-002M.xml</fr:route><fr:title text="Preimage">Preimage</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">f:X\to  Y</fr:tex> be a function and <fr:tex display="inline">y\in  Y</fr:tex>.
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>1624</fr:anchor>
+    <fr:addr type="user">def-002M</fr:addr>
+    <fr:route>def-002M.xml</fr:route>
+    <fr:title text="Preimage">Preimage</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+    <fr:authors></fr:authors>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>Let <fr:tex display="inline">f:X\to  Y</fr:tex> be a function and <fr:tex display="inline">y\in  Y</fr:tex>.
     The <fr:strong>preimage</fr:strong> of <fr:tex display="inline">y</fr:tex> under <fr:tex display="inline">f</fr:tex>, denoted by <fr:tex display="inline">f^{-1}(y)</fr:tex>, is the subset
     of <fr:tex display="inline">X</fr:tex> defined by
     <fr:tex display="block">         f^{-1}(y) = \set {x \in  X \mid  f(x) = y}     </fr:tex>
     For a subset <fr:tex display="inline">B \subseteq  Y</fr:tex>, the <fr:strong>preimage</fr:strong> of <fr:tex display="inline">B</fr:tex> under <fr:tex display="inline">f</fr:tex> is the subset
     of <fr:tex display="inline">X</fr:tex> defined by
-    <fr:tex display="block">         f^{-1}(B) = \set {x \in  X \mid  f(x) \in  B}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+    <fr:tex display="block">         f^{-1}(B) = \set {x \in  X \mid  f(x) \in  B}     </fr:tex></fr:p>
+  </fr:mainmatter>
+  <fr:backmatter></fr:backmatter>
+</fr:tree>

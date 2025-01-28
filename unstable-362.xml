@@ -1,88 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>912</fr:anchor><fr:addr type="machine">#362</fr:addr><fr:route>unstable-362.xml</fr:route><fr:title text="Introduction to Programming Language Semantic › Abstract Machine › Defunctionalise"><fr:link type="local" href="unstable-360.xml" addr="#360" title="Introduction to Programming Language Semantic › Abstract Machine"><fr:link type="local" href="cs-0006.xml" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</fr:link> › Abstract Machine</fr:link> › Defunctionalise</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#360</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>We use continuation to make the order of evaluation explicit in the semantics,
-            but this also makes the semantics into a higher-order function.
-            Hence our second step is to regain the first-order nature of the original semantics by 
-            eliminating the use of continuations but <fr:strong>retaining</fr:strong> the explicit order of evaluation they introduced.</fr:p><fr:p>A standard technique for eliminating the use of functions as arguments is <fr:strong>defunctionalisation</fr:strong>.
-            We do not usually need the entire function-space of possible argument functions, 
-            there only a few forms of such functions are actually used.
-            Hence we represent the argument functions that we actually need using 
-            a datatype rather than functions.</fr:p><fr:p>We begin by defining three combinators <fr:strong>halt</fr:strong>, <fr:strong>next</fr:strong> and <fr:strong>add</fr:strong> 
-            for constructing the continuations we used.</fr:p>
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">halt :: Continuation
-halt n = n
-
-next :: Expr -&gt; Continuation -&gt; Continuation
-next y c = \n -&gt; eval&apos; y (add n c)
-
-add :: Integer -&gt; Continuation -&gt; Continuation
-add n c = \m -&gt; c (n + m)</html:code></fr:pre>
-<fr:p>Use the combinators, our continuation semantics can now be written as:</fr:p>
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval :: Expr -&gt; Integer
-eavl e = eval&apos; e halt
-
-eval&apos; :: Expr -&gt; Continuation -&gt; Integer
-eval&apos; (Val n) c = c n 
-eval&apos; (Add x y) c = eval&apos; x (next y c)</html:code></fr:pre>
-<fr:p>Now we declare a new datatype for continuations, consists of three constructors.</fr:p>
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data CONT = HALT | NEXT Expr CONT | ADD Integer CONT</html:code></fr:pre>
-<fr:p>The following translation function forms a denotational semantics for <fr:code>CONT</fr:code></fr:p>
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">exec :: CONT -&gt; Continuation
-exec HALT = halt
-exec (NEXT y c) = next y (exec c)
-exec (ADD n c) = add n (exec c)</html:code></fr:pre>
-<fr:p>This function is usually called <fr:strong>apply</fr:strong>, which can be viewed as 
-            applying a representation of a continuation to an integer to give another integer.
-            We want to define a new semantics <fr:tex display="inline">\text {eval}&apos;</fr:tex> which behaves in the same way 
-            as our previous <fr:tex display="inline">\text {eval}&apos;</fr:tex> except that it uses values of type <fr:code>CONT</fr:code> 
-            rather than <fr:code>Continuation</fr:code>.
-            
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos;&apos; :: Expr -&gt; CONT -&gt; Integer</html:code></fr:pre>
-
-            The desired behavior of <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> is:
-            <fr:tex display="block">                 \text {eval}&apos;&apos;\space  e\space  c = \text {eval}&apos;\space  e\space  (\text {exec}\space  c)             </fr:tex></fr:p><fr:p>As before, we proceed by structural induction on expression <fr:tex display="inline">e</fr:tex>.
-            The base case <fr:tex display="inline">e=\text {Val}\space  n</fr:tex> is trivial
-            <fr:tex display="block">                 \begin {align*}                     \text {eval}&apos;&apos;\space (\text {Val}\space  n)\space  c                     &amp;= \text {eval}&apos;\space (\text {Val}\space  n)\space  (\text {exec}\space  c) \\                     &amp;= \text {exec}\space  c\space  n \\                 \end {align*}             </fr:tex></fr:p><fr:p>For the inductive case <fr:tex display="inline">e = \text {Add}\space  x\space  y</fr:tex>:
-            <fr:tex display="block">                 \begin {align*}                     \text {eval}&apos;&apos;\space (\text {Add}\space  x\space  y)\space  c                      &amp;= \text {eval}&apos;\space (\text {Add}\space  x\space  y)\space  (\text {exec}\space  c) \\                     &amp;= \text {eval}&apos;\space  x\space (\text {next}\space  y\space (\text {exec}\space  c)) \\                      &amp;= \text {eval}&apos;\space  x\space (\text {exec}\space (\text {NEXT}\space  y\space  c)) \\                     &amp;= \text {eval}&apos;&apos;\space  x\space  (\text {NEXT}\space  y\space  c)                 \end {align*}             </fr:tex>
-            The last step uses the inductive hypothesis for <fr:tex display="inline">x</fr:tex></fr:p><fr:p>In the basic case, <fr:tex display="inline">\text {exec}</fr:tex> still refers to the semantic <fr:tex display="inline">\text {eval}&apos;</fr:tex>,
-            via the combinator <fr:tex display="inline">\text {next}</fr:tex>. Hence we need to compute a new definition 
-            for <fr:tex display="inline">\text {exec}</fr:tex> that refers to our new <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex>.</fr:p><fr:tex display="block">             \begin {align*}                 \text {exec}\space \text {HALT}\space  n                  &amp;= \text {halt}\space  n                 \\                  &amp;= n                             \end {align*}         </fr:tex><fr:p>The other case is also easy to compute, no need to induction.</fr:p><fr:tex display="block">             \begin {align*}                 \text {exec}\space (\text {NEXT}\space  y\space  c)\space  n                  &amp;= \text {eval}&apos;&apos;\space  y\space (\text {ADD}\space  n\space  c)                 \\                  \text {exec}\space (\text {ADD}\space  n\space  c)\space  m                  &amp;= \text {exec}\space  c\space (n+m)             \end {align*}         </fr:tex><fr:p>Our original semantics <fr:tex display="inline">\text {eval}</fr:tex> can be recovered from the new 
-            semantics <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> too.</fr:p><fr:tex display="block">             \begin {align*}                 \text {eval}\space  e                  &amp;= \text {eval}&apos;\space  e\space (\lambda  n\to  n) \\                  &amp;= \text {eval}&apos;\space  e\space \text {halt} \\                  &amp;= \text {eval}&apos;\space  e\space (\text {exec}\space \text {HALT}) \\                  &amp;= \text {eval}&apos;&apos;\space  e\text {HALT}             \end {align*}         </fr:tex><fr:p>In summary, we have calculated the following definitions:</fr:p>
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos;&apos; :: Expr -&gt; CONT -&gt; Integer
-eval&apos;&apos; (Val n) c = exec c n 
-eval&apos;&apos; (Add x y) c = eval&apos;&apos; x (NEXT y c)
-
-exec :: CONT -&gt; Integer -&gt; Integer
-exec HALT n = n 
-exec (NEXT y c) n = eval&apos;&apos; y (ADD n c)
-exec (ADD n c) m = exec c (n + m)
-
-eval :: Expr -&gt; Integer
-eval e = eval&apos;&apos; e HALT</html:code></fr:pre>
-<fr:p>The four components (<fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex>, <fr:tex display="inline">\text {eval}</fr:tex>, <fr:tex display="inline">\text {exec}</fr:tex> and <fr:code>CONT</fr:code>)
-            forms an abstract machine.</fr:p><fr:p><fr:code>CONT</fr:code> is the type of <fr:strong>control stack</fr:strong> which comprises 
-            instructions that determine how the machine should continue after evaluating
-            the current expression. Sometimes it is called an &quot;eval/continue&quot; machine.
-            The control stack can also be defined as a list of instructions.
-            
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">type CONT = [INST]
-data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex display="inline">\text {eval}</fr:tex> evaluates an expression and give an integer by simply 
-            call the <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> with empty control stack <fr:tex display="inline">\text {HALT}</fr:tex>.</fr:p><fr:p><fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> evaluates an expression in the context of a control stack.
-            If the expression is an integer, we execute the control stack using this 
-            integer as an argument. If the expression is an addition, 
-            we evaluate the first argument <fr:tex display="inline">x</fr:tex> and place the instruction <fr:tex display="inline">\text {NEXT}\space  y</fr:tex>
-            on the top of the control stack.</fr:p><fr:p><fr:tex display="inline">\text {exec}</fr:tex> executes the control stack. If the control stack is empty,
-            then just return the integer argument as the result. If the top instruction
-            is <fr:tex display="inline">\text {NEXT}\space  y</fr:tex>, we evaluate <fr:tex display="inline">y</fr:tex> and place the instruction <fr:tex display="inline">\text {ADD}\space  n</fr:tex>
-            to the stack top. If the top instruction is <fr:tex display="inline">\text {ADD}\space  n</fr:tex>,evaluation of the 
-            two arguments of an addition is complete, and we execute the remaining control stack 
-            in the context of the sum of the resulting integers.</fr:p></fr:mainmatter><fr:backmatter><fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title text="Context">Context</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>913</fr:anchor><fr:addr type="user">cs-0006</fr:addr><fr:route>cs-0006.xml</fr:route><fr:title text="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</fr:title><fr:taxon>Programming Language Theory</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>I decided to read one paper or article every week.
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>893</fr:anchor>
+    <fr:addr type="machine">#362</fr:addr>
+    <fr:route>unstable-362.xml</fr:route>
+    <fr:taxon>Proof</fr:taxon>
+    <fr:date>
+      <fr:year>2024</fr:year>
+      <fr:month>3</fr:month>
+      <fr:day>11</fr:day>
+    </fr:date>
+    <fr:authors></fr:authors>
+  </fr:frontmatter>
+  <fr:mainmatter>
+        The proof consists of three parts: the base case, the reduction rule and the structural rule.
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space (\text {Val}\space  n)\space (\text {Val}\space  m)\rrbracket                  &amp;= \llbracket \text {Val}\space  n\rrbracket  + \llbracket \text {Val}\space  m\rrbracket  \\                 &amp;= n + m \\                 &amp;= \llbracket \text {Val}\space (n+m)\rrbracket              \end {align*}         </fr:tex>
+        and
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space  x\space  y\rrbracket                  &amp;= \llbracket x\rrbracket  + \llbracket y\rrbracket   \\                 &amp;= \llbracket x&apos;\rrbracket  + \llbracket y\rrbracket  (\text {By assumption }\llbracket x\rrbracket =\llbracket x&apos;\rrbracket ) \\                 &amp;= \llbracket \text {Add}\space  x&apos;\space  y\rrbracket              \end {align*}         </fr:tex>
+        and 
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space  x\space  y\rrbracket                  &amp;= \llbracket x\rrbracket  + \llbracket y\rrbracket   \\                 &amp;= \llbracket x\rrbracket  + \llbracket y&apos;\rrbracket  (\text {By assumption }\llbracket y\rrbracket =\llbracket y&apos;\rrbracket ) \\                  &amp;= \llbracket \text {Add}\space  x\space  y&apos;\rrbracket              \end {align*}         </fr:tex>
+    </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>894</fr:anchor>
+            <fr:addr type="user">cs-0006</fr:addr>
+            <fr:route>cs-0006.xml</fr:route>
+            <fr:title text="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</fr:title>
+            <fr:taxon>Programming Language Theory</fr:taxon>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>3</fr:month>
+              <fr:day>11</fr:day>
+            </fr:date>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>I decided to read one paper or article every week.
     This week&apos;s topic is programming language semantics, refer to <fr:strong>Graham Huttons</fr:strong>&apos;s 
-    paper <fr:link type="local" href="pl-123.xml" addr="pl-123" title="Programming language semantics: It&apos;s easy as 1,2,3">Programming language semantics: It&apos;s easy as 1,2,3</fr:link>.</fr:p><fr:p><fr:strong>Semantics</fr:strong> is the general term for the study of meaning.
+    paper <fr:link type="local" href="pl-123.xml" addr="pl-123" title="Programming language semantics: It&apos;s easy as 1,2,3">Programming language semantics: It&apos;s easy as 1,2,3</fr:link>.</fr:p>
+            <fr:p><fr:strong>Semantics</fr:strong> is the general term for the study of meaning.
     <fr:strong>Programming language semantics</fr:strong> gives precise mathematical meaning to programs.
     We use a simple <fr:strong>arithmetic expression language</fr:strong> 
     (including integers and addition only) to illustrate the basic concepts.
     This is an example of <fr:strong>Occam&apos;s razor</fr:strong>, a philosophical principle that favours the 
-    simplest explanation for a phenomenon.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>689</fr:anchor><fr:addr type="machine">#352</fr:addr><fr:route>unstable-352.xml</fr:route><fr:title text="Arithmetic Expressions">Arithmetic Expressions</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Now let&apos;s define our language of arithmetic expressions
+    simplest explanation for a phenomenon.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>670</fr:anchor>
+                <fr:addr type="machine">#357</fr:addr>
+                <fr:route>unstable-357.xml</fr:route>
+                <fr:title text="Arithmetic Expressions">Arithmetic Expressions</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>Now let&apos;s define our language of arithmetic expressions
         built up from the set of integers and the operation of addition.
         Use a <fr:strong>context-free</fr:strong> grammar.
         <fr:tex display="block">             E:\equiv \mathbb {Z} | E+E         </fr:tex></fr:p><fr:p>An expression is either an integer value or the addition of two sub-expressions.
@@ -90,7 +72,23 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex dis
         written in normal textual form. This grammar can be easily translated into 
         a <fr:strong>Haskell</fr:strong> data type.</fr:p>
   <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data Expr = Val Integer | Add Expr Expr</html:code></fr:pre>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>691</fr:anchor><fr:addr type="machine">#353</fr:addr><fr:route>unstable-353.xml</fr:route><fr:title text="Denotational Semantics">Denotational Semantics</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Now we consider <fr:strong>denotational semantics</fr:strong>, 
+</fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>671</fr:anchor>
+                <fr:addr type="machine">#358</fr:addr>
+                <fr:route>unstable-358.xml</fr:route>
+                <fr:title text="Denotational Semantics">Denotational Semantics</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>Now we consider <fr:strong>denotational semantics</fr:strong>, 
         where the terms in a language is defined using a 
         <fr:strong>valuation function</fr:strong> that maps terms into values in an appropriate <fr:strong>semantic domain</fr:strong>.</fr:p><fr:p>Formally, for a language <fr:tex display="inline">T</fr:tex> of syntactic terms comprises
         two components: a set <fr:tex display="inline">V</fr:tex> of <fr:strong>semantic values</fr:strong> and a 
@@ -122,7 +120,7 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex dis
         that is, for every expression <fr:tex display="inline">e</fr:tex> there is an integer <fr:tex display="inline">n</fr:tex> such that <fr:tex display="inline">\llbracket  e\rrbracket  = n</fr:tex>.</fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>692</fr:anchor><fr:addr type="machine">#354</fr:addr><fr:route>unstable-354.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#353</fr:parent></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>672</fr:anchor><fr:addr type="machine">#359</fr:addr><fr:route>unstable-359.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         For the base case <fr:tex display="inline">e = \text {Val} \space  n</fr:tex>, we have <fr:tex display="inline">\llbracket  e\rrbracket  = n</fr:tex> trivially.
         For the inductive case <fr:tex display="inline">e = \text {Add} \space  e_1\space  e_2</fr:tex>,
         we can assume by induction that <fr:tex display="inline">\llbracket  e_1\rrbracket  = n_1</fr:tex> and <fr:tex display="inline">\llbracket  e_2\rrbracket  = n_2</fr:tex>
@@ -149,7 +147,23 @@ fold f g (Add x y) = g (fold f g x) (fold f g y)</html:code></fr:pre>
 <fr:p>Note that the above semantics for expressions does not specify the order
         of evaluation. If we do wish to make evaluation order explicit 
         this requires the introduction of additional structure into the semantics,
-        named <fr:strong>abstract machines</fr:strong> (Discuss later).</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>696</fr:anchor><fr:addr type="machine">#355</fr:addr><fr:route>unstable-355.xml</fr:route><fr:title text="Small-Step Operational Semantics">Small-Step Operational Semantics</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Another popular approach to semantics is the <fr:strong>operational approach</fr:strong>,
+        named <fr:strong>abstract machines</fr:strong> (Discuss later).</fr:p></fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>673</fr:anchor>
+                <fr:addr type="machine">#360</fr:addr>
+                <fr:route>unstable-360.xml</fr:route>
+                <fr:title text="Small-Step Operational Semantics">Small-Step Operational Semantics</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>Another popular approach to semantics is the <fr:strong>operational approach</fr:strong>,
         where the meaning of terms is defined using an <fr:strong>execution relation</fr:strong>
         that specifies how terms can be executed in an appropriate machine model.
         There are two basic forms of operational semantics:
@@ -212,7 +226,23 @@ unfold f g x = Node (f x) [unfold f g x&apos; | x&apos; &lt;- g x]</html:code></
         But we can modify the inference rules to achieve this. Replace the second <fr:tex display="inline">\text {Add}</fr:tex> 
         rule by the following rule ensures the first argument of addition is 
         always reduced first.
-        <fr:tex display="block">             \frac {                 y\to  y&apos;             }{                 \text {Add} (\text {Val}\space  n)\space  y \to  \text {Add} (\text {Val}\space  n)\space  y&apos;             }         </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>701</fr:anchor><fr:addr type="machine">#356</fr:addr><fr:route>unstable-356.xml</fr:route><fr:title text="Rule induction">Rule induction</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>For denotational semantics we have structural induction,
+        <fr:tex display="block">             \frac {                 y\to  y&apos;             }{                 \text {Add} (\text {Val}\space  n)\space  y \to  \text {Add} (\text {Val}\space  n)\space  y&apos;             }         </fr:tex></fr:p></fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>674</fr:anchor>
+                <fr:addr type="machine">#361</fr:addr>
+                <fr:route>unstable-361.xml</fr:route>
+                <fr:title text="Rule induction">Rule induction</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>For denotational semantics we have structural induction,
         dual to this, for operational semantics we have <fr:strong>rule induction</fr:strong>.
         This allows us to perform proofs by considering the structure of the rules 
         that are used to define the semantics.</fr:p><fr:p>We introduce the idea of rule induction using a simple numeric example.
@@ -236,7 +266,7 @@ unfold f g x = Node (f x) [unfold f g x&apos; | x&apos; &lt;- g x]</html:code></
         <fr:tex display="block">             \forall  e\to  e&apos;. \llbracket e\rrbracket  = \llbracket e&apos;\rrbracket          </fr:tex></fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>702</fr:anchor><fr:addr type="machine">#357</fr:addr><fr:route>unstable-357.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#356</fr:parent></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>675</fr:anchor><fr:addr type="machine">#362</fr:addr><fr:route>unstable-362.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         The proof consists of three parts: the base case, the reduction rule and the structural rule.
         <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space (\text {Val}\space  n)\space (\text {Val}\space  m)\rrbracket                  &amp;= \llbracket \text {Val}\space  n\rrbracket  + \llbracket \text {Val}\space  m\rrbracket  \\                 &amp;= n + m \\                 &amp;= \llbracket \text {Val}\space (n+m)\rrbracket              \end {align*}         </fr:tex>
         and
@@ -245,7 +275,23 @@ unfold f g x = Node (f x) [unfold f g x&apos; | x&apos; &lt;- g x]</html:code></
         <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space  x\space  y\rrbracket                  &amp;= \llbracket x\rrbracket  + \llbracket y\rrbracket   \\                 &amp;= \llbracket x\rrbracket  + \llbracket y&apos;\rrbracket  (\text {By assumption }\llbracket y\rrbracket =\llbracket y&apos;\rrbracket ) \\                  &amp;= \llbracket \text {Add}\space  x\space  y&apos;\rrbracket              \end {align*}         </fr:tex>
     </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
  
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>703</fr:anchor><fr:addr type="machine">#358</fr:addr><fr:route>unstable-358.xml</fr:route><fr:title text="Contextual Semantics">Contextual Semantics</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>The small-step semantics for expressions above has one basic reduction rule 
+</fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>676</fr:anchor>
+                <fr:addr type="machine">#363</fr:addr>
+                <fr:route>unstable-363.xml</fr:route>
+                <fr:title text="Contextual Semantics">Contextual Semantics</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>The small-step semantics for expressions above has one basic reduction rule 
         for adding values and two structural rules that allow addition to be performed
         in larger expressions. Separating these two kinds of rules results 
         the notion of <fr:strong>contextual semantics</fr:strong> (or <fr:strong>reduction semantics</fr:strong>).</fr:p><fr:p>Informally, a context in this setting is a term with a &quot;<fr:strong>hole</fr:strong>&quot;, 
@@ -304,7 +350,23 @@ trans e = [fill c x&apos; | (c, x) &lt;- split e, x&apos; &lt;- reduce x]</html:
         form <fr:tex display="inline">e=c\space [x]</fr:tex> for some context <fr:tex display="inline">c</fr:tex> and reducible expression <fr:tex display="inline">x</fr:tex>. This can be 
         proved by induction on the expression <fr:tex display="inline">e</fr:tex>.</fr:p><fr:p>Contexts are related to a number of other important concepts in
         programming and semantics, including the use of continuations to make control flow
-        explicit (John C. Reynolds 1972).</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>709</fr:anchor><fr:addr type="machine">#359</fr:addr><fr:route>unstable-359.xml</fr:route><fr:title text="Big-step Semantics">Big-step Semantics</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>Big-step semantics is also known as <fr:strong>natural semantics</fr:strong>,
+        explicit (John C. Reynolds 1972).</fr:p></fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>677</fr:anchor>
+                <fr:addr type="machine">#364</fr:addr>
+                <fr:route>unstable-364.xml</fr:route>
+                <fr:title text="Big-step Semantics">Big-step Semantics</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>Big-step semantics is also known as <fr:strong>natural semantics</fr:strong>,
         which focus on large execution step. For a language T of syntactic terms
         comprises two components: a set <fr:tex display="inline">V</fr:tex> of values and 
         an evaluation relation between <fr:tex display="inline">T</fr:tex> and <fr:tex display="inline">V</fr:tex> that relates each term 
@@ -321,17 +383,50 @@ eval (Add x y) = [n + m | n &lt;- eval x, m &lt;- eval y]</html:code></fr:pre>
         Formally, the denotational and big-step semantics for the expression language
         are equivalent, which can be captured by the following property:
         <fr:tex display="block">             \llbracket e\rrbracket  = n \iff  e\Downarrow  n         </fr:tex>
-        This is easily verified by induction.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>711</fr:anchor><fr:addr type="machine">#360</fr:addr><fr:route>unstable-360.xml</fr:route><fr:title text="Abstract Machine">Abstract Machine</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>cs-0006</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>All the exmaples we have meet focused on explaining semantic ideas,
+        This is easily verified by induction.</fr:p></fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>678</fr:anchor>
+                <fr:addr type="machine">#365</fr:addr>
+                <fr:route>unstable-365.xml</fr:route>
+                <fr:title text="Abstract Machine">Abstract Machine</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>All the exmaples we have meet focused on explaining semantic ideas,
         now we show how language of integers and addition can also be used to help 
         discover semantic ideas.
         We show how it can be used as the basis for discovering how to implement 
-        an <fr:strong>abstract machine</fr:strong>.</fr:p><fr:p>Remember the evaluation order problem we meet before,
+        an <fr:strong>abstract machine</fr:strong>.</fr:p>
+                <fr:p>Remember the evaluation order problem we meet before,
         if we want to make evaluation order explicit, we can introduce additional
-        structure into the semantics by constructing an abstract machine.</fr:p><fr:p>Formally, an abstract machine is usually deifned by a set of syntactic rewrite ruless 
+        structure into the semantics by constructing an abstract machine.</fr:p>
+                <fr:p>Formally, an abstract machine is usually deifned by a set of syntactic rewrite ruless 
         that make explicit how each step of evaluation proceeds.
         This section we show how an abstract machine for our example language can 
         be systematically derived from the evaluation function using steps
-        based on two important semantic concepts, <fr:strong>continuations</fr:strong> and <fr:strong>defunctionalisation</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>712</fr:anchor><fr:addr type="machine">#361</fr:addr><fr:route>unstable-361.xml</fr:route><fr:title text="Add Continuations">Add Continuations</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#360</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>We want to make the order of evaluation explicit in the semantics itself.
+        based on two important semantic concepts, <fr:strong>continuations</fr:strong> and <fr:strong>defunctionalisation</fr:strong>.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>679</fr:anchor>
+                    <fr:addr type="machine">#366</fr:addr>
+                    <fr:route>unstable-366.xml</fr:route>
+                    <fr:title text="Add Continuations">Add Continuations</fr:title>
+                    <fr:date>
+                      <fr:year>2024</fr:year>
+                      <fr:month>3</fr:month>
+                      <fr:day>11</fr:day>
+                    </fr:date>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter><fr:p>We want to make the order of evaluation explicit in the semantics itself.
             A standard technique for achieving this aim is to rewrite the semantics
             in <fr:strong>continuation-passing style</fr:strong>.</fr:p><fr:p>In our setting, a continuation is a function that will be applied to the result of an
             evaluation. Formally, for our semantics <fr:code>eval :: Expr -&gt; Integer</fr:code>, a continuation
@@ -357,7 +452,23 @@ eval&apos; (Add x y) c = eval&apos; x (\n -&gt; eval&apos; y (\m -&gt; c (n + m)
 <fr:p>Our original semantics can be recovered from the new semantics by
             using the identity continuation <fr:tex display="inline">\lambda  n \to  n</fr:tex></fr:p>
   <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval e = eval&apos; e (\n -&gt; n)</html:code></fr:pre>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>717</fr:anchor><fr:addr type="machine">#362</fr:addr><fr:route>unstable-362.xml</fr:route><fr:title text="Defunctionalise">Defunctionalise</fr:title><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors><fr:parent>#360</fr:parent></fr:frontmatter><fr:mainmatter><fr:p>We use continuation to make the order of evaluation explicit in the semantics,
+</fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>680</fr:anchor>
+                    <fr:addr type="machine">#367</fr:addr>
+                    <fr:route>unstable-367.xml</fr:route>
+                    <fr:title text="Defunctionalise">Defunctionalise</fr:title>
+                    <fr:date>
+                      <fr:year>2024</fr:year>
+                      <fr:month>3</fr:month>
+                      <fr:day>11</fr:day>
+                    </fr:date>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter><fr:p>We use continuation to make the order of evaluation explicit in the semantics,
             but this also makes the semantics into a higher-order function.
             Hence our second step is to regain the first-order nature of the original semantics by 
             eliminating the use of continuations but <fr:strong>retaining</fr:strong> the explicit order of evaluation they introduced.</fr:p><fr:p>A standard technique for eliminating the use of functions as arguments is <fr:strong>defunctionalisation</fr:strong>.
@@ -433,4 +544,17 @@ data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex dis
             is <fr:tex display="inline">\text {NEXT}\space  y</fr:tex>, we evaluate <fr:tex display="inline">y</fr:tex> and place the instruction <fr:tex display="inline">\text {ADD}\space  n</fr:tex>
             to the stack top. If the top instruction is <fr:tex display="inline">\text {ADD}\space  n</fr:tex>,evaluation of the 
             two arguments of an addition is complete, and we execute the remaining control stack 
-            in the context of the sum of the resulting integers.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:backmatter></fr:tree>
+            in the context of the sum of the resulting integers.</fr:p></fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
