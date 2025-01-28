@@ -31,10 +31,11 @@ jobs:
       - name: Install Forester
         run: |
           sudo apt install libev-dev
-          opam install -y forester=4.3.1
-          # git clone https://git.sr.ht/~jonsterling/ocaml-forester
-          # cd ocaml-forester
-          # opam pin add -y . --locked
+          git clone https://git.sr.ht/~jonsterling/ocaml-forester
+          cd ocaml-forester
+          git checkout 4.3.1
+          opam pin add -y .
+          # opam install -y forester=4.3.1
 
       - name: "Setup TeX Live"
         uses: teatimeguest/setup-texlive-action@v3
