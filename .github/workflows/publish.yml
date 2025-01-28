@@ -23,6 +23,19 @@ jobs:
           submodules: recursive
           fetch-depth: 1
 
+      - name: "Set-up OCaml"
+        uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: "5.2.0"
+
+      - name: Install Forester
+        run: |
+          sudo apt install libev-dev
+          opam install -y forester=4.3.1
+          # git clone https://git.sr.ht/~jonsterling/ocaml-forester
+          # cd ocaml-forester
+          # opam pin add -y . --locked
+
       - name: "Setup TeX Live"
         uses: teatimeguest/setup-texlive-action@v3
         with:
@@ -50,19 +63,6 @@ jobs:
 
       - name: "Check `tlmgr` version"
         run: tlmgr --version
-
-      - name: "Set-up OCaml"
-        uses: ocaml/setup-ocaml@v2
-        with:
-          ocaml-compiler: "5.1"
-
-      - name: Install Forester
-        run: |
-          sudo apt install libev-dev
-          opam install -y forester
-          # git clone https://git.sr.ht/~jonsterling/ocaml-forester
-          # cd ocaml-forester
-          # opam pin add -y . --locked
 
       - name: "Build forest"
         run: make release
