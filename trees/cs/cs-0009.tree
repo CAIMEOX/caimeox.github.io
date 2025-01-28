@@ -1,0 +1,33 @@
+\title{Algebraic Effects}
+\taxon{Algebra}
+\import{macros}
+\date{202-01-28}
+\p{
+    Notes about algebraic effects and handlers.
+}
+\subtree{
+    \title{Algebraic Theories}
+    \p{
+        In algebra we study mathematical structures that are equipped with operations
+        satisfying equational laws.
+    }
+    \transclude{def-004M}
+    \transclude{def-004N}
+    \transclude{def-004O}
+    \transclude{def-004P}
+    \transclude{def-004Q}
+    \p{
+        We may organize the models of an algebraic theory #{T} into a category #{\model(T)}
+        whose objects are the models of the theory and the morphisms are the model homomorphisms.
+    }
+    \p{
+        So far we have considered the models of an algebraic theory as sets with operations.
+        More generally we can consider models in any category #{C} with finite products.
+        Hence the definition of an interpretation and a model may be directly transcribed.
+    }
+    \transclude{def-004R}
+    \p{
+        Of special interest are the free models of an algebraic theory.
+    }
+    \transclude{def-004S}
+}

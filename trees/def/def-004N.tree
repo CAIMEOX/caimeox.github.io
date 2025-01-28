@@ -1,0 +1,6 @@
+\title{Algebraic Theories}
+\taxon{Definition}
+\p{
+    An \strong{algebraic (equational) theory} #{T = (\Sigma_T, E_T)} is given by 
+    a signature #{\Sigma_T} and a collection #{\Epsilon_T} of equations over the terms of this signature.
+}

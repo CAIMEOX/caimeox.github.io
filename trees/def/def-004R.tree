@@ -1,0 +1,23 @@
+\title{Interpretation over Category}
+\taxon{Definition}
+\import{macros}
+\p{
+    An interpretation #{I} in #{C} is given by
+    \ul{
+        \li{An object #{|I|} in #{C}, called the \strong{carrier}}
+        \li{For each operation symbol #{\op_i}, a morphism in #{C}
+            ##{
+                [\op_i]_I : |I|^i \to |I|
+            }
+        }
+    }
+    Notice that a nullary symbol is interpreted as a morphism #{|I|^0 \to |I|},
+    which is a morphism form the terminal object #{1\to|I|} in #{C}.
+}
+\p{
+    Similarly, the interpretation can be extended to terms and equations in the same way.
+    A model of an algebraic theory #{T} in #{C} is an interpretation #{M} of its signature #{\Sigma_T} 
+    which validates all the equations #{E_T}.
+    The definition of a homomorphism is now the morphism in the category #{C}.
+    The #{T\text{-models}} and #{T\text{-homomorphisms}} in #{C} form another category, denoted by #{\model_C(T)}.
+}

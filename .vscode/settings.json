@@ -7,10 +7,12 @@
   "nixEnvSelector.nixFile": "${workspaceRoot}/flake.nix",
   "cmake.configureOnOpen": false,
   "cSpell.words": [
+    "arities",
     "functors",
     "monoid",
     "morphism",
     "morphisms",
+    "nullary",
     "semiring"
   ],
   "liveServer.settings.port": 5501

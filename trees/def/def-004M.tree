@@ -1,0 +1,30 @@
+\title{Signatures, terms and equations}
+\taxon{Definition}
+\import{macros}
+\p{
+    A signature #{\Sigma} is a collection of operation symbols with arities #{\{(\op_i, \arity_i)\}_i}. The operation 
+    symbols opi may be any anything, but are usually thought of as syntactic entities, while arities #{\arity_i} are 
+    non-negative integers. An operation symbol whose arity is 0 is called a constant or a nullary symbol. 
+    Operation symbols with arities #{1}, #{2} and #{3} are referred to as unary, binary, and ternary, respectively.
+}
+\p{
+    A list of distinct variables #{x_1, \cdots, c_k} is called a \strong{context}. 
+    The #{\Sigma\text{-terms}} in this context are built inductively using the following rules:
+    \ul{
+        \li{Each variable #{x_i} is a #{\Sigma\text{-term}} in this context}
+        \li{If #{t_1, \cdots, t_{\arity_i}} are #{\Sigma\text{-terms}} in this context, then #{\op_i(t_1, \cdots, t_{\arity_i})} is a #{\Sigma\text{-term}} in this context}
+    }
+    We write 
+    ##{
+        x_1, \cdots, x_k \mid t
+    }
+    to indicate that #{t} is a #{\Sigma\text{-term}} in the context #{x_1, \cdots, x_k}.
+    A \strong{closed} #{\Sigma\text{-term}} is a term in the empty context.
+}
+\p{
+    A #{\Sigma\text{-equation}} is a pair of #{\Sigma\text{-terms}} #{l} and #{r} in the context #{x_1, \cdots, x_k}:
+    ##{
+        x_1, \cdots, x_k \mid l = r
+    }
+    We shall often elide the context and write simply #{l = r}.
+}

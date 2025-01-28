@@ -1,0 +1,11 @@
+\title{Models of algebraic theories}
+\taxon{Definition}
+\p{
+    A \strong{model} #{M} of an algebraic theory #{T} is an interpretation of the signature #{\Sigma_T} 
+    which validates all the equations #{E_T}.
+    That is, for each equations #{x_1, \cdots, x_k \mid l = r} in #{E_T}, we have:
+    ##{
+        [x_1, \cdots, x_k \mid l]_M = [x_1, \cdots, x_k \mid r]_M
+    }
+    We refer to a model of #{T} as a #{T\text{-algebra}} or #{T\text{-model}}.
+}

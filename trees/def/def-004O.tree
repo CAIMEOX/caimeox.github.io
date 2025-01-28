@@ -1,0 +1,42 @@
+\title{Interpretation of Signatures}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{\Sigma} be a signature, 
+    an \strong{interpretation} #{I} of #{\Sigma} is given by the following data:
+    \ul{
+        \li{
+            A set #{|I|} called the \strong{carrier} of the interpretation
+        }
+        \li{
+            For each operation symbol #{\op_i}, a map
+            ##{
+                [\op_i]_I : |I|^i \to |I|
+            }
+        }
+    }
+    The bracket #{[]_I} here is called the \strong{semantic bracket} and is typically used when 
+    syntactic entities (operation symbols, terms, equations) are mapped to their mathematical counterparts.
+}
+\p{
+    The interpretation can be extended to terms and equations.
+    A #{\Sigma\text{-term}} #{t} in the context #{x_1, \cdots, x_k} is interpreted as a function
+    ##{
+        [x_1, \cdots, x_k \mid t]_I : |I|^k \to |I|
+    }
+    as follows:
+    \ul{
+        \li{The variable #{x_i} is interpreted as the i-th projection
+            ##{
+                [x_1, \cdots, x_k \mid x_i]_I : |I|^k \to |I|, \quad (a_1, \cdots, a_k) \mapsto a_i
+            }
+        }
+        \li{
+            A compound term in context #{x_1, \cdots, x_k} is interpreted as the composition of the 
+            semantic brackets of the operation symbols and the terms:
+            ##{
+                |I|^k \xrightarrow{[t_1]_I, \cdots, [t_{\arity_i}]_I} |I|^{\arity_i} \xrightarrow{[\op_i]_I} |I|
+            }
+        }
+    }
+}

@@ -122,3 +122,8 @@
 \def\mor{\text{Mor}}
 \def\cat{\mathbf{Cat}}
 \def\homset{\hom_\text{set}}
+
+% Universal Algebra
+\def\op{\text{op}}
+\def\arity{\text{ar}}
+\def\model{\mathscr{Mod}}
