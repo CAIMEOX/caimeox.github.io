@@ -126,4 +126,4 @@
 % Universal Algebra
 \def\op{\text{op}}
 \def\arity{\text{ar}}
-\def\model{\mathscr{Mod}}
+\def\model{\mathbf{Mod}}

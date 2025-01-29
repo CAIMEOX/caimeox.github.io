@@ -2,7 +2,7 @@
 \taxon{Definition}
 \p{
     Let #{M} and #{N} be models of an algebraic theory #{T}.
-    A \strong{model homomorphism} from #{M} to #{N} is a function #{f:|M|\to|N|} that preserves the interpretation of the operations of #{T}.
+    A \strong{T-homomorphism} from #{M} to #{N} is a function #{f:|M|\to|N|} that preserves the interpretation of the operations of #{T}.
     That is, for each operation symbol #{f\in\Sigma_T}, we have:
     ##{
         f_N \circ (f, \cdots, f) = f \circ f_M

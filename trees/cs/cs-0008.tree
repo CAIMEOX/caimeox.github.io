@@ -76,7 +76,7 @@
     \subtree{
         \title{Type Class}
         \p{
-            We abstract the graph construction primitives defined above as the type class Graph (Note that assocaited types requires \code{TypeFamilies} GHC extension):
+            We abstract the graph construction primitives defined above as the type class Graph (Note that associated types requires \code{TypeFamilies} GHC extension):
             \codeblock{language-haskell}{\startverb
             class Graph g where
                 type Vertex g
