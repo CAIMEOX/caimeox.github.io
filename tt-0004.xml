@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>982</fr:anchor>
+    <fr:anchor>983</fr:anchor>
     <fr:addr type="user">tt-0004</fr:addr>
     <fr:route>tt-0004.xml</fr:route>
     <fr:title text="Inductive Types">Inductive Types</fr:title>
@@ -121,7 +121,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>983</fr:anchor>
+            <fr:anchor>984</fr:anchor>
             <fr:addr type="user">hott-2022</fr:addr>
             <fr:route>hott-2022.xml</fr:route>
             <fr:title text="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:title>
@@ -148,7 +148,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>985</fr:anchor>
+            <fr:anchor>986</fr:anchor>
             <fr:addr type="user">posts</fr:addr>
             <fr:route>posts.xml</fr:route>
             <fr:title text="Blog posts">Blog posts</fr:title>
@@ -1764,7 +1764,7 @@
                         <fr:authors></fr:authors>
                       </fr:frontmatter>
                       <fr:mainmatter>
-                        <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that assocaited types requires <fr:code>TypeFamilies</fr:code> GHC extension):
+                        <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that associated types requires <fr:code>TypeFamilies</fr:code> GHC extension):
             
   <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">class Graph g where
     type Vertex g

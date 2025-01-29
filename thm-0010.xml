@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1684</fr:anchor>
+    <fr:anchor>1687</fr:anchor>
     <fr:addr type="user">thm-0010</fr:addr>
     <fr:route>thm-0010.xml</fr:route>
     <fr:title text="Reduction and normal forms">Reduction and normal forms</fr:title>
@@ -20,7 +20,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1685</fr:anchor>
+            <fr:anchor>1688</fr:anchor>
             <fr:addr type="user">cs-0005</fr:addr>
             <fr:route>cs-0005.xml</fr:route>
             <fr:title text="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</fr:title>

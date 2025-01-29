@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1305</fr:anchor>
+    <fr:anchor>1306</fr:anchor>
     <fr:addr type="machine">#244</fr:addr>
     <fr:route>unstable-244.xml</fr:route>
     <fr:title text="Set Operations › Disjoint Union"><fr:link type="local" href="def-002V.xml" addr="def-002V" title="Set Operations">Set Operations</fr:link> › Disjoint Union</fr:title>
@@ -21,7 +21,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1306</fr:anchor>
+            <fr:anchor>1307</fr:anchor>
             <fr:addr type="user">def-002V</fr:addr>
             <fr:route>def-002V.xml</fr:route>
             <fr:title text="Set Operations">Set Operations</fr:title>

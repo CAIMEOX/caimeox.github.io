@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1431</fr:anchor>
+    <fr:anchor>1432</fr:anchor>
     <fr:addr type="user">eg-0003</fr:addr>
     <fr:route>eg-0003.xml</fr:route>
     <fr:title text="Integration is linear map">Integration is linear map</fr:title>
@@ -26,7 +26,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1432</fr:anchor>
+            <fr:anchor>1433</fr:anchor>
             <fr:addr type="user">math-0005</fr:addr>
             <fr:route>math-0005.xml</fr:route>
             <fr:title text="Linear Maps">Linear Maps</fr:title>

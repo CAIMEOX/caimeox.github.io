@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1795</fr:anchor>
+    <fr:anchor>1798</fr:anchor>
     <fr:addr type="user">def-004K</fr:addr>
     <fr:route>def-004K.xml</fr:route>
     <fr:title text="Transverse wave and Longitudinal wave">Transverse wave and Longitudinal wave</fr:title>
@@ -21,7 +21,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1796</fr:anchor>
+            <fr:anchor>1799</fr:anchor>
             <fr:addr type="user">phy-0005</fr:addr>
             <fr:route>phy-0005.xml</fr:route>
             <fr:title text="Simple Harmonic Motion">Simple Harmonic Motion</fr:title>
@@ -57,7 +57,7 @@
     and <fr:tex display="inline">\phi </fr:tex> is the initial <fr:strong>phase</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>762</fr:anchor>
+                <fr:anchor>763</fr:anchor>
                 <fr:addr type="machine">#282</fr:addr>
                 <fr:route>unstable-282.xml</fr:route>
                 <fr:title text="Energy">Energy</fr:title>
@@ -79,7 +79,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>763</fr:anchor>
+                <fr:anchor>764</fr:anchor>
                 <fr:addr type="machine">#283</fr:addr>
                 <fr:route>unstable-283.xml</fr:route>
                 <fr:title text="Superposition">Superposition</fr:title>
@@ -122,7 +122,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>764</fr:anchor>
+                <fr:anchor>765</fr:anchor>
                 <fr:addr type="machine">#284</fr:addr>
                 <fr:route>unstable-284.xml</fr:route>
                 <fr:title text="Wave">Wave</fr:title>
@@ -140,7 +140,7 @@
                 <fr:p>According to the direction of vibration and propagation, waves can be classified into two types.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>765</fr:anchor>
+                    <fr:anchor>766</fr:anchor>
                     <fr:addr type="user">def-004K</fr:addr>
                     <fr:route>def-004K.xml</fr:route>
                     <fr:title text="Transverse wave and Longitudinal wave">Transverse wave and Longitudinal wave</fr:title>
@@ -155,7 +155,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>766</fr:anchor>
+                    <fr:anchor>767</fr:anchor>
                     <fr:addr type="machine">#285</fr:addr>
                     <fr:route>unstable-285.xml</fr:route>
                     <fr:title text="Basic Quantities">Basic Quantities</fr:title>
@@ -172,7 +172,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>767</fr:anchor>
+                    <fr:anchor>768</fr:anchor>
                     <fr:addr type="machine">#286</fr:addr>
                     <fr:route>unstable-286.xml</fr:route>
                     <fr:title text="Basic Principle">Basic Principle</fr:title>

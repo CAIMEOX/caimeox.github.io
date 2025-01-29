@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1059</fr:anchor>
+    <fr:anchor>1060</fr:anchor>
     <fr:addr type="machine">#317</fr:addr>
     <fr:route>unstable-317.xml</fr:route>
     <fr:taxon>Proof</fr:taxon>
@@ -28,7 +28,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1060</fr:anchor>
+            <fr:anchor>1061</fr:anchor>
             <fr:addr type="user">def-004H</fr:addr>
             <fr:route>def-004H.xml</fr:route>
             <fr:title text="Observational Equality of {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>

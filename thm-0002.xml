@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1474</fr:anchor>
+    <fr:anchor>1475</fr:anchor>
     <fr:addr type="user">thm-0002</fr:addr>
     <fr:route>thm-0002.xml</fr:route>
     <fr:title text="Length of linearly independent list  length of spanning list">Length of linearly independent list <fr:tex display="inline">\leq </fr:tex> length of spanning list</fr:title>
@@ -20,7 +20,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1475</fr:anchor>
+            <fr:anchor>1476</fr:anchor>
             <fr:addr type="user">math-0002</fr:addr>
             <fr:route>math-0002.xml</fr:route>
             <fr:title text="Finite Dimensional Vector Space">Finite Dimensional Vector Space</fr:title>
@@ -393,7 +393,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1476</fr:anchor>
+            <fr:anchor>1477</fr:anchor>
             <fr:addr type="user">math-0002</fr:addr>
             <fr:route>math-0002.xml</fr:route>
             <fr:title text="Finite Dimensional Vector Space">Finite Dimensional Vector Space</fr:title>

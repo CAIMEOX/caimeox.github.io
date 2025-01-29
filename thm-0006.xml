@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1181</fr:anchor>
+    <fr:anchor>1182</fr:anchor>
     <fr:addr type="user">thm-0006</fr:addr>
     <fr:route>thm-0006.xml</fr:route>
     <fr:title text="Basis of finite-dimensional vector space">Basis of finite-dimensional vector space</fr:title>
@@ -20,7 +20,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1182</fr:anchor>
+            <fr:anchor>1183</fr:anchor>
             <fr:addr type="user">math-0002</fr:addr>
             <fr:route>math-0002.xml</fr:route>
             <fr:title text="Finite Dimensional Vector Space">Finite Dimensional Vector Space</fr:title>

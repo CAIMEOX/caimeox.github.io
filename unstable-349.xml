@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>773</fr:anchor>
+    <fr:anchor>774</fr:anchor>
     <fr:addr type="machine">#349</fr:addr>
     <fr:route>unstable-349.xml</fr:route>
     <fr:title text="Algebraic Graphs › Graphs à la Carte › Binary Relation"><fr:link type="local" href="unstable-348.xml" addr="#348" title="Algebraic Graphs › Graphs à la Carte"><fr:link type="local" href="cs-0008.xml" addr="cs-0008" title="Algebraic Graphs">Algebraic Graphs</fr:link> › Graphs à la Carte</fr:link> › Binary Relation</fr:title>
@@ -63,7 +63,7 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>774</fr:anchor>
+            <fr:anchor>775</fr:anchor>
             <fr:addr type="user">cs-0008</fr:addr>
             <fr:route>cs-0008.xml</fr:route>
             <fr:title text="Algebraic Graphs">Algebraic Graphs</fr:title>
@@ -182,7 +182,7 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
                     <fr:authors></fr:authors>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that assocaited types requires <fr:code>TypeFamilies</fr:code> GHC extension):
+                    <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that associated types requires <fr:code>TypeFamilies</fr:code> GHC extension):
             
   <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">class Graph g where
     type Vertex g

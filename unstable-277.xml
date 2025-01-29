@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>980</fr:anchor>
+    <fr:anchor>981</fr:anchor>
     <fr:addr type="machine">#277</fr:addr>
     <fr:route>unstable-277.xml</fr:route>
     <fr:title text="Inductive Types › Special Case of Coproduct"><fr:link type="local" href="tt-0004.xml" addr="tt-0004" title="Inductive Types">Inductive Types</fr:link> › <fr:strong>Special Case of Coproduct</fr:strong></fr:title>
@@ -27,7 +27,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>981</fr:anchor>
+            <fr:anchor>982</fr:anchor>
             <fr:addr type="user">tt-0004</fr:addr>
             <fr:route>tt-0004.xml</fr:route>
             <fr:title text="Inductive Types">Inductive Types</fr:title>

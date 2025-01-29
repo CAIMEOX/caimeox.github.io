@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>777</fr:anchor>
+    <fr:anchor>778</fr:anchor>
     <fr:addr type="machine">#343</fr:addr>
     <fr:route>unstable-343.xml</fr:route>
     <fr:title text="Algebraic Graphs › Core of Algebraic Graphs › Graph Construction"><fr:link type="local" href="unstable-342.xml" addr="#342" title="Algebraic Graphs › Core of Algebraic Graphs"><fr:link type="local" href="cs-0008.xml" addr="cs-0008" title="Algebraic Graphs">Algebraic Graphs</fr:link> › Core of Algebraic Graphs</fr:link> › Graph Construction</fr:title>
@@ -32,7 +32,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>778</fr:anchor>
+            <fr:anchor>779</fr:anchor>
             <fr:addr type="user">cs-0008</fr:addr>
             <fr:route>cs-0008.xml</fr:route>
             <fr:title text="Algebraic Graphs">Algebraic Graphs</fr:title>
@@ -151,7 +151,7 @@
                     <fr:authors></fr:authors>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that assocaited types requires <fr:code>TypeFamilies</fr:code> GHC extension):
+                    <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that associated types requires <fr:code>TypeFamilies</fr:code> GHC extension):
             
   <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">class Graph g where
     type Vertex g

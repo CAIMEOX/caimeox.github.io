@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>978</fr:anchor>
+    <fr:anchor>979</fr:anchor>
     <fr:addr type="machine">#276</fr:addr>
     <fr:route>unstable-276.xml</fr:route>
     <fr:title text="Inductive Types › General Inductive Type"><fr:link type="local" href="tt-0004.xml" addr="tt-0004" title="Inductive Types">Inductive Types</fr:link> › <fr:strong>General Inductive Type</fr:strong></fr:title>
@@ -29,7 +29,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>979</fr:anchor>
+            <fr:anchor>980</fr:anchor>
             <fr:addr type="user">tt-0004</fr:addr>
             <fr:route>tt-0004.xml</fr:route>
             <fr:title text="Inductive Types">Inductive Types</fr:title>

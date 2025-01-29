@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1002</fr:anchor>
+    <fr:anchor>1007</fr:anchor>
     <fr:addr type="user">tt-0002</fr:addr>
     <fr:route>tt-0002.xml</fr:route>
     <fr:title text="Introduction to Type Theory">Introduction to Type Theory</fr:title>
@@ -171,7 +171,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1003</fr:anchor>
+            <fr:anchor>1008</fr:anchor>
             <fr:addr type="user">hott-book-2013</fr:addr>
             <fr:route>hott-book-2013.xml</fr:route>
             <fr:title text="Homotopy Type Theory: Univalent Foundations of Mathematics">Homotopy Type Theory: Univalent Foundations of Mathematics</fr:title>
@@ -186,7 +186,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1005</fr:anchor>
+            <fr:anchor>1010</fr:anchor>
             <fr:addr type="user">hott-2022</fr:addr>
             <fr:route>hott-2022.xml</fr:route>
             <fr:title text="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:title>
@@ -213,7 +213,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1007</fr:anchor>
+            <fr:anchor>1012</fr:anchor>
             <fr:addr type="user">posts</fr:addr>
             <fr:route>posts.xml</fr:route>
             <fr:title text="Blog posts">Blog posts</fr:title>
@@ -1829,7 +1829,7 @@
                         <fr:authors></fr:authors>
                       </fr:frontmatter>
                       <fr:mainmatter>
-                        <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that assocaited types requires <fr:code>TypeFamilies</fr:code> GHC extension):
+                        <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that associated types requires <fr:code>TypeFamilies</fr:code> GHC extension):
             
   <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">class Graph g where
     type Vertex g

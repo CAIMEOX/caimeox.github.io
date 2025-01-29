@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>833</fr:anchor>
+    <fr:anchor>834</fr:anchor>
     <fr:addr type="user">tt-0006</fr:addr>
     <fr:route>tt-0006.xml</fr:route>
     <fr:title text="Universe">Universe</fr:title>
@@ -225,7 +225,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>834</fr:anchor>
+            <fr:anchor>835</fr:anchor>
             <fr:addr type="user">hott-2022</fr:addr>
             <fr:route>hott-2022.xml</fr:route>
             <fr:title text="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:title>
@@ -243,7 +243,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>836</fr:anchor>
+            <fr:anchor>837</fr:anchor>
             <fr:addr type="user">ncatlab</fr:addr>
             <fr:route>ncatlab.xml</fr:route>
             <fr:title text="NLab">NLab</fr:title>
@@ -269,7 +269,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>837</fr:anchor>
+            <fr:anchor>838</fr:anchor>
             <fr:addr type="user">posts</fr:addr>
             <fr:route>posts.xml</fr:route>
             <fr:title text="Blog posts">Blog posts</fr:title>
@@ -1885,7 +1885,7 @@
                         <fr:authors></fr:authors>
                       </fr:frontmatter>
                       <fr:mainmatter>
-                        <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that assocaited types requires <fr:code>TypeFamilies</fr:code> GHC extension):
+                        <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that associated types requires <fr:code>TypeFamilies</fr:code> GHC extension):
             
   <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">class Graph g where
     type Vertex g

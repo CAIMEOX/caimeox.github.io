@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1251</fr:anchor>
+    <fr:anchor>1252</fr:anchor>
     <fr:addr type="user">thm-000Y</fr:addr>
     <fr:route>thm-000Y.xml</fr:route>
     <fr:title text="Congruence Property of Substitution">Congruence Property of Substitution</fr:title>
@@ -23,7 +23,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1252</fr:anchor>
+            <fr:anchor>1253</fr:anchor>
             <fr:addr type="user">tt-0001</fr:addr>
             <fr:route>tt-0001.xml</fr:route>
             <fr:title text="Untyped Lambda Calculus">Untyped Lambda Calculus</fr:title>

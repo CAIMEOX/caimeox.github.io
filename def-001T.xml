@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1278</fr:anchor>
+    <fr:anchor>1279</fr:anchor>
     <fr:addr type="user">def-001T</fr:addr>
     <fr:route>def-001T.xml</fr:route>
     <fr:title text="Dependent Function Type">Dependent Function Type</fr:title>
@@ -40,7 +40,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1279</fr:anchor>
+            <fr:anchor>1280</fr:anchor>
             <fr:addr type="user">tt-0002</fr:addr>
             <fr:route>tt-0002.xml</fr:route>
             <fr:title text="Introduction to Type Theory">Introduction to Type Theory</fr:title>
@@ -214,7 +214,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1280</fr:anchor>
+            <fr:anchor>1281</fr:anchor>
             <fr:addr type="user">def-001U</fr:addr>
             <fr:route>def-001U.xml</fr:route>
             <fr:title text="Ordinary Function Type">Ordinary Function Type</fr:title>

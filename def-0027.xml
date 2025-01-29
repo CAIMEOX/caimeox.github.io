@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1620</fr:anchor>
+    <fr:anchor>1623</fr:anchor>
     <fr:addr type="user">def-0027</fr:addr>
     <fr:route>def-0027.xml</fr:route>
     <fr:title text="Polynomial">Polynomial</fr:title>
@@ -23,7 +23,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1621</fr:anchor>
+            <fr:anchor>1624</fr:anchor>
             <fr:addr type="user">def-0026</fr:addr>
             <fr:route>def-0026.xml</fr:route>
             <fr:title text="{P}_m (R)">
@@ -42,7 +42,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1622</fr:anchor>
+            <fr:anchor>1625</fr:anchor>
             <fr:addr type="user">def-0028</fr:addr>
             <fr:route>def-0028.xml</fr:route>
             <fr:title text="Degree of polynomial">Degree of polynomial</fr:title>
@@ -60,7 +60,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1623</fr:anchor>
+            <fr:anchor>1626</fr:anchor>
             <fr:addr type="user">eg-0002</fr:addr>
             <fr:route>eg-0002.xml</fr:route>
             <fr:title text="Differentiation is linear map">Differentiation is linear map</fr:title>

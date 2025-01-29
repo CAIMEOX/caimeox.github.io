@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1355</fr:anchor>
+    <fr:anchor>1356</fr:anchor>
     <fr:addr type="user">def-001G</fr:addr>
     <fr:route>def-001G.xml</fr:route>
     <fr:title text="Fiber and Value">Fiber and Value</fr:title>
@@ -24,7 +24,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1356</fr:anchor>
+            <fr:anchor>1357</fr:anchor>
             <fr:addr type="user">tt-0002</fr:addr>
             <fr:route>tt-0002.xml</fr:route>
             <fr:title text="Introduction to Type Theory">Introduction to Type Theory</fr:title>
@@ -198,7 +198,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1357</fr:anchor>
+            <fr:anchor>1358</fr:anchor>
             <fr:addr type="user">def-0019</fr:addr>
             <fr:route>def-0019.xml</fr:route>
             <fr:title text="Section of Type Family">Section of Type Family</fr:title>
@@ -215,7 +215,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1358</fr:anchor>
+            <fr:anchor>1359</fr:anchor>
             <fr:addr type="user">def-0018</fr:addr>
             <fr:route>def-0018.xml</fr:route>
             <fr:title text="Type Family">Type Family</fr:title>

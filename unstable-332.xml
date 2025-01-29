@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1067</fr:anchor>
+    <fr:anchor>1068</fr:anchor>
     <fr:addr type="machine">#332</fr:addr>
     <fr:route>unstable-332.xml</fr:route>
     <fr:title text="Identity Type › Variable Version"><fr:link type="local" href="def-002N.xml" addr="def-002N" title="Identity Type">Identity Type</fr:link> › <fr:strong>Variable Version</fr:strong></fr:title>
@@ -23,7 +23,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1068</fr:anchor>
+            <fr:anchor>1069</fr:anchor>
             <fr:addr type="user">def-002N</fr:addr>
             <fr:route>def-002N.xml</fr:route>
             <fr:title text="Identity Type">Identity Type</fr:title>

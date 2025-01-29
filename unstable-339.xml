@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1071</fr:anchor>
+    <fr:anchor>1072</fr:anchor>
     <fr:addr type="machine">#339</fr:addr>
     <fr:route>unstable-339.xml</fr:route>
     <fr:title text="Addition over {N} › Construction"><fr:link type="local" href="def-001Z.xml" addr="def-001Z" title="Addition over {N}">Addition over <fr:tex display="inline">\mathbb {N}</fr:tex></fr:link> › <fr:strong>Construction</fr:strong></fr:title>
@@ -34,7 +34,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1072</fr:anchor>
+            <fr:anchor>1073</fr:anchor>
             <fr:addr type="user">def-001Z</fr:addr>
             <fr:route>def-001Z.xml</fr:route>
             <fr:title text="Addition over {N}">Addition over <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>

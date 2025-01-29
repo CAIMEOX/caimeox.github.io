@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1740</fr:anchor>
+    <fr:anchor>1743</fr:anchor>
     <fr:addr type="user">thm-0005</fr:addr>
     <fr:route>thm-0005.xml</fr:route>
     <fr:title text="Spanning List contains a basis">Spanning List contains a basis</fr:title>
@@ -20,7 +20,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1741</fr:anchor>
+            <fr:anchor>1744</fr:anchor>
             <fr:addr type="user">math-0002</fr:addr>
             <fr:route>math-0002.xml</fr:route>
             <fr:title text="Finite Dimensional Vector Space">Finite Dimensional Vector Space</fr:title>
@@ -393,7 +393,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1742</fr:anchor>
+            <fr:anchor>1745</fr:anchor>
             <fr:addr type="user">math-0002</fr:addr>
             <fr:route>math-0002.xml</fr:route>
             <fr:title text="Finite Dimensional Vector Space">Finite Dimensional Vector Space</fr:title>
