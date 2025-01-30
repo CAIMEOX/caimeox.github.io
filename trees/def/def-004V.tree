@@ -1,0 +1,57 @@
+\title{Monoidal Category}
+\taxon{Definition}
+\import{macros}
+\p{
+    A \strong{monoid category} is a tuple 
+    #{(C, \otimes, I, \alpha, \lambda, \rho)} where
+    \ul{
+        \li{
+            #{C} is a category
+        }
+        \li{
+            #{\otimes} is a bifunctor #{C \times C \to C}
+        }
+        \li{
+            #{I} is an object in #{C}
+        }
+        \li{
+            #{\alpha, \lambda, \rho} are natural isomorphism (associator)
+            ##{
+                \begin{align*}
+                    \alpha_{A, B, C} &: (A \otimes B) \otimes C \to A \otimes (B \otimes C) \\
+                    \lambda_A &: I \otimes A \to A \\
+                    \rho_A &: A \otimes I \to A
+                \end{align*}
+            }
+            such that #{\lambda_I = \rho_I} and the following diagrams commute:
+            \graph{
+                % https://q.uiver.app/#q=WzAsNSxbMCwwLCJBXFxvdGltZXMgKEJcXG90aW1lcyBDXFxvdGltZXMgRCkiXSxbMiwwLCIoQVxcb3RpbWVzIEIpXFxvdGltZXMoQ1xcb3RpbWVzIEQpIl0sWzQsMCwiKChBXFxvdGltZXMgQilcXG90aW1lcyBDKVxcb3RpbWVzIEQiXSxbMCwyLCJBXFxvdGltZXMgKChCXFxvdGltZXMgQylcXG90aW1lcyBEKSJdLFs0LDIsIihBXFxvdGltZXMgKEJcXG90aW1lcyBDKSlcXG90aW1lcyBEIl0sWzAsMSwiXFxhbHBoYSJdLFsxLDIsIlxcYWxwaGEiXSxbMyw0LCJcXGFscGhhIl0sWzAsMywiXFx0ZXh0e2lkfVxcb3RpbWVzXFxhbHBoYSIsMl0sWzIsNCwiXFxhbHBoYVxcb3RpbWVzXFx0ZXh0e2lkfSJdXQ==
+                \begin{tikzcd}
+                    {A\otimes (B\otimes C\otimes D)} && {(A\otimes B)\otimes(C\otimes D)} && {((A\otimes B)\otimes C)\otimes D} \\
+                    \\
+                    {A\otimes ((B\otimes C)\otimes D)} &&&& {(A\otimes (B\otimes C))\otimes D}
+                    \arrow["\alpha", from=1-1, to=1-3]
+                    \arrow["{\text{id}\otimes\alpha}"', from=1-1, to=3-1]
+                    \arrow["\alpha", from=1-3, to=1-5]
+                    \arrow["{\alpha\otimes\text{id}}", from=1-5, to=3-5]
+                    \arrow["\alpha", from=3-1, to=3-5]
+                \end{tikzcd}
+            }
+            \graph{
+                % https://q.uiver.app/#q=WzAsMyxbMCwwLCJBXFxvdGltZXMgKElcXG90aW1lcyBCKSJdLFsyLDAsIihBXFxvdGltZXMgSSlcXG90aW1lcyBCIl0sWzEsMiwiQVxcb3RpbWVzIEIiXSxbMCwxLCJcXGFscGhhIl0sWzAsMiwiXFx0ZXh0e2lkfVxcb3RpbWVzIEEiLDJdLFsxLDIsIlxccmhvXFxvdGltZXNcXHRleHR7aWR9Il1d
+                \begin{tikzcd}
+                    {A\otimes (I\otimes B)} && {(A\otimes I)\otimes B} \\
+                    \\
+                    & {A\otimes B}
+                    \arrow["\alpha", from=1-1, to=1-3]
+                    \arrow["{\text{id}\otimes A}"', from=1-1, to=3-2]
+                    \arrow["{\rho\otimes\text{id}}", from=1-3, to=3-2]
+                \end{tikzcd}
+            }
+        }
+    }
+    A monoidal category is said to be \strong{strict} when the 
+    natural isomorphisms #{\alpha, \lambda, \rho} are identities.
+    With additional natural isomorphism #{\gamma_{A,B}:A\otimes B\to B\otimes A} 
+    and some coherence conditions, we get a \strong{symmetric monoidal category}.
+}

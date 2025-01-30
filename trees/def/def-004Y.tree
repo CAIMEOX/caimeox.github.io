@@ -1,0 +1,33 @@
+\title{Free Monoid}
+\taxon{Definition}
+\import{macros}
+\def\ins{\text{ins}}
+\def\free{\text{free}}
+\p{
+    Let #{(C, \otimes, I, \alpha, \lambda, \rho)} be a monoidal category.
+    The \strong{free monoid} on an object #{X} in #{C} is a monoid 
+    #{(F, m_F, e_F)} together with a morphism #{\ins : X\to F} 
+    (insertion of generators)
+    such that for any monoid #{(G, m_G, e_G)} and any 
+    morphism #{f : X \to G} there exist a unique 
+    monoid homomorphism #{\free(f) : F \to G} that makes 
+    the following diagram commute:
+    \graph{
+        % https://q.uiver.app/#q=WzAsMyxbMCwwLCJYIl0sWzIsMCwiRiJdLFsyLDIsIkciXSxbMCwyLCJmIiwyXSxbMSwyLCJcXHRleHR7ZnJlZX0oZikiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwxLCJcXHRleHR7aW5zfSJdXQ==
+        \begin{tikzcd}
+            X && F \\
+            \\
+            && G
+            \arrow["{\text{ins}}", from=1-1, to=1-3]
+            \arrow["f"', from=1-1, to=3-3]
+            \arrow["{\text{free}(f)}", dashed, from=1-3, to=3-3]
+        \end{tikzcd}
+    }
+}
+\p{
+    Monoids in a monoidal category #{C} and monoid homomorphisms
+    form a category, denoted by #{\text{Mon}(C)}.
+    When the left-adjoint #{(-)^*} to the forgetful functor 
+    #{U : \text{Mon(C)} \to C} exists, it maps 
+    an object #{X} to the free monoid on #{X}.
+}

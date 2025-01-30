@@ -1,0 +1,28 @@
+\title{Sub-Monoid}
+\taxon{Definition}
+\import{macros}
+\p{
+    Given a monoid #{(M, e, m)} in #{C}, and a monic 
+    #{i : M' \hookrightarrow M} in #PC
+    such that for some unique maps #{e'} and #{m'},
+    the following diagram commutes: 
+}
+\graph{
+    % https://q.uiver.app/#q=WzAsNSxbMiwwLCIgTSJdLFs0LDAsIk1cXG90aW1lcyBNIl0sWzIsMiwiTSciXSxbNCwyLCJNJyBcXG90aW1lcyBNJyJdLFswLDEsIkkiXSxbMSwwLCJtIiwyXSxbMiwwLCJpIl0sWzMsMSwiaSBcXG90aW1lcyBpIiwyXSxbMywyLCJtJyIsMl0sWzQsMCwiZSJdLFs0LDIsImUnIl1d
+    \begin{tikzcd}
+        && { M} && {M\otimes M} \\
+        I \\
+        && {M'} && {M' \otimes M'}
+        \arrow["m"', from=1-5, to=1-3]
+        \arrow["e", from=2-1, to=1-3]
+        \arrow["{e'}", from=2-1, to=3-3]
+        \arrow["i", from=3-3, to=1-3]
+        \arrow["{i \otimes i}"', from=3-5, to=1-5]
+        \arrow["{m'}"', from=3-5, to=3-3]
+    \end{tikzcd}
+}
+\p{
+    Then #{(M', e', m')} is a sub-monoid of #{(M, e, m)},
+    induced by the monic #{i}, which is a monoid monomorphism 
+    from #{M'} to #{M}.
+}

@@ -1,0 +1,19 @@
+\title{Exponential}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{A} be an object of a monoidal category 
+    #{(C, \otimes, \alpha, \lambda, \rho)}.
+    An exponential #{-^A} is the right adjoint to the functor
+    #{- \otimes A}, which is characterised by the an isomorphism:
+    ##{
+        \lfloor-\rfloor : \hom(X \otimes A, B) \cong \hom(X, B^A) : \lceil - \rceil
+    }
+    natural in #{X} and #{B}.
+    The \strong{counit} of the adjunction is the evaluation map
+    #{\ev_B : B^A \otimes A \to B}.
+    When the exponential to #{A} exists,
+    we say #{A} is an \strong{exponent}.
+    A monoidal category with all exponentials is called a \strong{right-closed monoidal category}
+    or said to \strong{have exponentials}.
+}

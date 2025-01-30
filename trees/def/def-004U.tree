@@ -1,0 +1,24 @@
+\title{Cayley representation for Set Monoids}
+\taxon{Definition}
+\import{macros}
+\p{
+    For every set #{M} we can construct the monoid of 
+    endomorphisms #{(M\to M, \circ, \id)}.
+}
+\p{
+    #{M} is a sub-monoid of a monoid #{M'} if 
+    there is an injection #{i : M \hookrightarrow M'} 
+    such that #{i(e) = e'} and 
+    #{i(a \circ b) = i(a) \circ' i(b)} for all #{a, b \in M}.
+    Every [monoid](def-0007) #{M} is a sub-monoid of the
+    monoid of endomorphisms #{(M\to M, \circ, \id)}.
+}
+\p{
+    This can be proved by constructing an injection 
+    map #{\rep : M\to(M\to M)} by #{\rep : a \mapsto \lambda x.a\circ x},
+    which is easy to verify that #{\rep} is a monoid homomorphism.
+    Moreover, #{\rep} is an injection,
+    since we have a function #{\abs : (M\to M) \to M} given by
+    #{\abs : f \mapsto f(e)}.
+    and #{\abs\circ\rep = \id_M}. 
+}

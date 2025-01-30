@@ -10,7 +10,16 @@
 }
 \scope{
     \put\transclude/numbered{true}
-    \transclude{posts}
-    \transclude{notes}
+    \subtree{
+        \title{Posts}
+        \p{Click to navigate my [blog posts](posts).}
+    }
+    \subtree{
+        \title{Notes}
+        \p{
+            [Notes](notes) are usually excerpts from some books/papers I read.
+            I try to make it as self-contained as possible.
+        }
+    }
     \transclude{projects}
 }

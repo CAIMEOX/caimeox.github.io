@@ -1,0 +1,19 @@
+\title{Monoid of endomorphisms}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{(C, \otimes, I, \alpha, \lambda, \rho)} be a monoidal category.
+    The \strong{monoid of endomorphisms} on any 
+    exponent #{A \in C} is given by the diagram:
+    ##{
+        I \xrightarrow{i_A} A^A \xleftarrow{c_A} A^A \otimes A^A
+    }
+    where #{i_A} and #{c_A} are defined:
+    ##{
+        \begin{align*}
+            i_A &= \lfloor I \otimes A \xrightarrow{\lambda_A} A \rfloor \\ 
+            c_A &= \lfloor (A^A \otimes A^A)\otimes A^A \xrightarrow{\alpha^{-1}} A\otimes {A \otimes A}
+                \xrightarrow{\id_{A^A} \otimes \eval_A} A^A\otimes A \xrightarrow{\eval_A} A \rfloor
+        \end{align*}
+    }
+}

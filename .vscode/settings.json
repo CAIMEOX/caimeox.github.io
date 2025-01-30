@@ -8,8 +8,12 @@
   "cmake.configureOnOpen": false,
   "cSpell.words": [
     "arities",
+    "bifunctor",
+    "endofunctors",
     "functors",
+    "monic",
     "monoid",
+    "monoidal",
     "morphism",
     "morphisms",
     "nullary",

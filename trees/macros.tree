@@ -127,3 +127,8 @@
 \def\op{\text{op}}
 \def\arity{\text{ar}}
 \def\model{\mathbf{Mod}}
+
+% Functional Programming
+\def\rep{\text{rep}}
+\def\abs{\text{abs}}
+\def\eval{\text{ev}}

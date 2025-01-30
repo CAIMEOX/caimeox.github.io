@@ -1,0 +1,55 @@
+\title{Monoid in Monoidal Category}
+\taxon{Definition}
+\import{macros}
+\p{
+    A monoid in a monoidal category #{(C, \otimes, I, \alpha, \lambda, \rho)} 
+    is a tuple #{(M, m, e)} where #{m} and #{e} are morphisms in #{C}.
+    ##{
+        I \xrightarrow{e} M \xleftarrow{m} M \otimes M
+    }
+    such that the following diagrams commute:
+    \graph{
+        % https://q.uiver.app/#q=WzAsNSxbMCwwLCIoTVxcb3RpbWVzIE0pXFxvdGltZXMgTSJdLFswLDIsIk1cXG90aW1lcyAoTVxcb3RpbWVzIE0pIl0sWzIsMiwiTVxcb3RpbWVzIE0iXSxbNCwyLCJNIl0sWzQsMCwiTVxcb3RpbWVzIE0iXSxbMSwwLCJcXGFscGhhIl0sWzEsMiwiXFx0ZXh0e2lkfVxcb3RpbWVzIG0iLDJdLFsyLDMsIm0iLDJdLFs0LDMsIm0iXSxbMCw0LCJtXFxvdGltZXMgXFx0ZXh0e2lkfSJdXQ==
+        \begin{tikzcd}
+            {(M\otimes M)\otimes M} &&&& {M\otimes M} \\
+            \\
+            {M\otimes (M\otimes M)} && {M\otimes M} && M
+            \arrow["{m\otimes \text{id}}", from=1-1, to=1-5]
+            \arrow["m", from=1-5, to=3-5]
+            \arrow["\alpha", from=3-1, to=1-1]
+            \arrow["{\text{id}\otimes m}"', from=3-1, to=3-3]
+            \arrow["m"', from=3-3, to=3-5]
+        \end{tikzcd}
+    }
+    \graph{
+        % https://q.uiver.app/#q=WzAsNCxbMCwwLCJNXFxvdGltZXMgTSAiXSxbMiwwLCJNIFxcb3RpbWVzIEkiXSxbMiwyLCJNIl0sWzAsMiwiSVxcb3RpbWVzIE0iXSxbMSwwLCJcXHRleHR7aWR9XFxvdGltZXMgZSIsMl0sWzMsMCwiZVxcb3RpbWVzIFxcdGV4dHtpZH0iXSxbMywyLCJcXGxhbWJkYSIsMl0sWzEsMiwiXFxyaG8iXSxbMCwyLCJtIl1d
+        \begin{tikzcd}
+            {M\otimes M } && {M \otimes I} \\
+            \\
+            {I\otimes M} && M
+            \arrow["m", from=1-1, to=3-3]
+            \arrow["{\text{id}\otimes e}"', from=1-3, to=1-1]
+            \arrow["\rho", from=1-3, to=3-3]
+            \arrow["{e\otimes \text{id}}", from=3-1, to=1-1]
+            \arrow["\lambda"', from=3-1, to=3-3]
+        \end{tikzcd}
+    }
+}
+\p{
+    A monoid homomorphism is an arrow 
+    #{f: M_1 \to M_2} in #{C} such that the diagrams
+    \graph{
+        % https://q.uiver.app/#q=WzAsNSxbMCwxLCJJIl0sWzEsMCwiTV8xIl0sWzEsMiwiTV8yIl0sWzMsMCwiTV8xXFxvdGltZXMgTV8xIl0sWzMsMiwiTV8yXFxvdGltZXMgTV8yIl0sWzAsMSwiZV8xIl0sWzAsMiwiZV8yIiwyXSxbNCwyLCJtXzIiXSxbMywxLCJtXzEiLDJdLFszLDQsImZcXG90aW1lcyBmIl0sWzEsMiwiZiIsMl1d
+        \begin{tikzcd}
+            & {M_1} && {M_1\otimes M_1} \\
+            I \\
+            & {M_2} && {M_2\otimes M_2}
+            \arrow["f"', from=1-2, to=3-2]
+            \arrow["{m_1}"', from=1-4, to=1-2]
+            \arrow["{f\otimes f}", from=1-4, to=3-4]
+            \arrow["{e_1}", from=2-1, to=1-2]
+            \arrow["{e_2}"', from=2-1, to=3-2]
+            \arrow["{m_2}", from=3-4, to=3-2]
+        \end{tikzcd}
+    }
+}

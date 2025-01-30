@@ -1,0 +1,90 @@
+\title{Notions of Computation as Monoids}
+\taxon{Logic in Computer Science}
+\date{2025-01-30}
+\import{macros}
+\p{
+    When constructing a semantic model of a system or when structuring 
+    computer code, there are several notions of computation that one might 
+    consider. The popular ones can be monads, applicative functors and arrows.
+    Each of these notions of computation has particular characteristics 
+    that makes them more suitable for some tasks than for others.
+    In fact, these representations can be unified as monoids in
+    a monodial category, and there is much to be gained from unifying
+    all three different notions under a single conceptual framework.
+    \ul{
+        \li{Monads are known to be monoids in a monoidal category of endofunctors}
+        \li{Arrows have been recently shown to be strong monoids in a monoidal category of profunctors}
+        \li{Applicative functors are usually presented as lax monoidal functors with a compatible strength, 
+        or monoids in a monoidal category of endofunctors using the Day convolution as a tensor}
+    }
+}
+\subtree{
+    \title{Cayley representation}
+    \transclude{def-004U}
+    \p{
+        The Cayley representation can be adapted to
+        the List \code{([a], ++, [])} in Haskell, resulting the famous
+        Difference Lists.
+    }
+    \codeblock{language-haskell}{\startverb
+        type EList a = [a] -> [a]
+        
+        rep :: [a] -> EList a
+        rep xs = (xs ++)
+
+        abs :: EList a -> [a]
+        abs f = f []
+    \stopverb}
+}
+\subtree{
+    \title{Monoidal Category}
+    \p{
+        The ordinary notion of monoid in category Set
+        of sets and functions is restrictive,
+        so generalize monoids to other categories.
+        What we need are notions of
+        \ul{
+            \li{
+                a pairing operation for expressing the type of the multiplication,
+            }
+            \li{
+                a type for expressing the unit.
+            }
+        }
+        We can not directly extend set binary functions #{X \times X \to X} 
+        to monoid multiplication in a category, because the category may not have
+        products. Instead, we need to use a bifunctor #{\otimes : C \times C \to C}
+        which abstracts the product operation.
+        The unit object is a special object #{I} in the category.
+    }
+    \transclude{def-004V}
+    \p{
+        The idea of currying a function can be generalized
+        to a monoidal category with exponential.
+    }
+    \transclude{def-004W}
+    \transclude{def-004X}
+    \p{
+        For a set #{A} we can generate the free monoid #{A^*}.
+        We can then define the notion of free monoid 
+        in terms of monoidal category.
+    }
+    \transclude{def-004Y}
+    \p{
+        It is well known that the free monoid over 
+        a set #{A} is the set of lists of #{A}.
+        In Haskell this is just the list type \code{List a}.
+        \codeblock{language-haskell}{data List a = Nil | Cons a (List a)}
+    }
+    \transclude{def-004Z}
+    \p{
+        Every exponent in a monoidal category induces 
+        a monoid of endomorphisms.
+    }
+    \transclude{def-0050}
+    \p{
+        The \strong{Cayley} theorem states that every monoid
+        in a monoidal category is a sub-monoid of 
+        endomorphisms whenever #{M} is an exponent.
+    }
+}
