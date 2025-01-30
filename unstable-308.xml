@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>851</fr:anchor>
+    <fr:anchor>880</fr:anchor>
     <fr:addr type="machine">#308</fr:addr>
     <fr:route>unstable-308.xml</fr:route>
-    <fr:title text="Matrix Computation › Rank"><fr:link type="local" href="math-0008.xml" addr="math-0008" title="Matrix Computation">Matrix Computation</fr:link> › Rank</fr:title>
+    <fr:title text="Matrix Computation › Solving a Linear System"><fr:link type="local" href="math-0008.xml" addr="math-0008" title="Matrix Computation">Matrix Computation</fr:link> › Solving a Linear System</fr:title>
     <fr:date>
       <fr:year>2024</fr:year>
       <fr:month>6</fr:month>
@@ -13,77 +13,55 @@
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>Now let&apos;s talk about the concept of <fr:strong>rank</fr:strong>.
-        In linear algebra, the (column)<fr:strong>rank</fr:strong> of a matrix <fr:tex display="inline">A</fr:tex> is the dimension of the vector space 
-        generated (or spanned) by its columns.</fr:p>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>743</fr:anchor>
-        <fr:addr type="user">def-004J</fr:addr>
-        <fr:route>def-004J.xml</fr:route>
-        <fr:title text="Rank">Rank</fr:title>
+        <fr:anchor>676</fr:anchor>
+        <fr:addr type="user">thm-0011</fr:addr>
+        <fr:route>thm-0011.xml</fr:route>
+        <fr:title text="Cramer&apos;s rule">Cramer&apos;s rule</fr:title>
+        <fr:taxon>Theorem</fr:taxon>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>Consider a system of <fr:tex display="inline">n</fr:tex> linear equations for <fr:tex display="inline">n</fr:tex> unknowns, represented in matrix multiplication form as follows:
+    <fr:tex display="block">         A \cdot  X = B     </fr:tex>
+    where <fr:tex display="inline">A</fr:tex> is a square matrix of order <fr:tex display="inline">n</fr:tex>, <fr:tex display="inline">X</fr:tex> is a column matrix of order <fr:tex display="inline">n</fr:tex> and <fr:tex display="inline">B</fr:tex> is a column matrix of order <fr:tex display="inline">n</fr:tex>.
+    <fr:tex display="block">         X = \begin {bmatrix} x_1 \\ x_2 \\ \vdots  \\ x_n \end {bmatrix}     </fr:tex>
+    The Cramer&apos;s rule states that the solution to the system of equations is given by:
+    <fr:tex display="block">         x_i = \frac {\text {det}(A_i)}{\text {det}(A)}     </fr:tex>
+    where <fr:tex display="inline">A_i</fr:tex> is the matrix obtained by replacing the <fr:tex display="inline">i</fr:tex>th column of <fr:tex display="inline">A</fr:tex> by <fr:tex display="inline">B</fr:tex>.</fr:p>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+    <fr:p>Matrix partitioning is the process of dividing a matrix into smaller submatrices. 
+        This is often done to simplify the computation of matrix operations, such as matrix multiplication.</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:anchor>677</fr:anchor>
+        <fr:addr type="user">def-0049</fr:addr>
+        <fr:route>def-0049.xml</fr:route>
+        <fr:title text="Matrix Partitioning">Matrix Partitioning</fr:title>
         <fr:taxon>Definition</fr:taxon>
         <fr:authors></fr:authors>
       </fr:frontmatter>
       <fr:mainmatter>
-        <fr:p>The rank of a linear map or operator <fr:tex display="inline">\Phi </fr:tex> is defined as the dimension of its range:
-    <fr:tex display="block">         \text {rank}(M)\equiv \dim (\text {range }(M))     </fr:tex>
-    Note that the range (<fr:strong>column space</fr:strong>) of a matrix <fr:tex display="inline">M</fr:tex> is the <fr:link type="local" href="def-000M.xml" addr="def-000M" title="Linear Span">span</fr:link> of its column vectors.</fr:p>
+        <fr:p>Let <fr:tex display="inline">A \in  \mathbb {C}^{m\times  n} </fr:tex>. A <fr:strong>partitioning</fr:strong> of <fr:tex display="inline">A</fr:tex> is a representation of <fr:tex display="inline">A</fr:tex> in the form
+    <fr:tex display="block">         A = \begin {bmatrix}             A_{11} &amp; A_{12} &amp; \cdots  &amp; A_{1q} \\             A_{21} &amp; A_{22} &amp; \cdots  &amp; A_{2q} \\             \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\             A_{p1} &amp; A_{p2} &amp; \cdots  &amp; A_{pq}         \end {bmatrix}     </fr:tex>
+    where <fr:tex display="inline">A_{ij} \in  \mathbb {C}^{m_i \times  n_j} </fr:tex> for <fr:tex display="inline">1 \leq  i \leq  p</fr:tex> and <fr:tex display="inline">1 \leq  j \leq  q</fr:tex> such that
+    <fr:tex display="block">         \sum _{i=1}^p m_i = m \quad  \text {and} \quad  \sum _{j=1}^q n_j = n.     </fr:tex>
+    The partitioned matrix operations are similar to the operations on the normal matrix.</fr:p>
       </fr:mainmatter>
       <fr:backmatter></fr:backmatter>
     </fr:tree>
-    <fr:p>Similarly we can define the row rank of a matrix. A fundamental result in linear algebra is 
-        that the column rank and the row rank are always equal. Hence we can simply call it the rank of a matrix.
-        If the column rank equals to the column size, we say that the matrix is full column rank.</fr:p>
-    <fr:p>A common approach to finding the rank of a matrix is to reduce it to a simpler form, 
-        generally <fr:strong>row echelon form</fr:strong>, by elementary row operations.
-        Row operations do not change the row space (hence do not change the row rank), and, being 
-        invertible, map the column space to an isomorphic space (hence do not change the column rank).
-        <fr:tex display="block">             A \sim  B \implies  \text {rank}(A) = \text {rank}(B)             \\              \text {rank}(A) = \text {rank}(A^T)         </fr:tex>
-        Once in row echelon form, the rank is clearly the same for both row rank and column rank, 
-        and equals to the number of <fr:strong>pivots</fr:strong> (or basic columns) and also the number of non-zero rows.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
-      <fr:frontmatter>
-        <fr:anchor>744</fr:anchor>
-        <fr:addr type="user">def-004I</fr:addr>
-        <fr:route>def-004I.xml</fr:route>
-        <fr:title text="Row Echelon Form">Row Echelon Form</fr:title>
-        <fr:taxon>Definition</fr:taxon>
-        <fr:authors></fr:authors>
-      </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:p>A matrix is in <fr:strong>row echelon form</fr:strong> if
-    <fr:ul><fr:li>All rows having only zero entries are at the bottom</fr:li>
-        <fr:li>The leading entry (that is, the <fr:strong>left-most</fr:strong> nonzero entry) of every nonzero row, called
-            the <fr:strong>pivot</fr:strong>, is on the right of the leading entry of every row above.</fr:li></fr:ul>
-    Some texts add the condition that the leading coefficient must be <fr:tex display="inline">1</fr:tex>
-    while others require this only in <fr:strong>reduced row echelon form</fr:strong>.</fr:p>
-      </fr:mainmatter>
-      <fr:backmatter></fr:backmatter>
-    </fr:tree>
-    <fr:p>For instance, matrix <fr:tex display="inline">A = \begin {bmatrix}1&amp;2&amp;1\\-2&amp;-3&amp;1\\3&amp;5&amp;0\end {bmatrix}</fr:tex> can be transformed into reduced row-echelon form:
-        <fr:tex display="block">\begin {aligned}{\begin {bmatrix}1&amp;2&amp;1\\-2&amp;-3&amp;1\\3&amp;5&amp;0\end {bmatrix}}&amp;\xrightarrow  {2R_{1}+R_{2}\to  R_{2}} {\begin {bmatrix}1&amp;2&amp;1\\0&amp;1&amp;3\\3&amp;5&amp;0\end {bmatrix}}\xrightarrow  {-3R_{1}+R_{3}\to  R_{3}} {\begin {bmatrix}1&amp;2&amp;1\\0&amp;1&amp;3\\0&amp;-1&amp;-3\end {bmatrix}}\\&amp;\xrightarrow  {R_{2}+R_{3}\to  R_{3}} \,\,{\begin {bmatrix}1&amp;2&amp;1\\0&amp;1&amp;3\\0&amp;0&amp;0\end {bmatrix}}\xrightarrow  {-2R_{2}+R_{1}\to  R_{1}} {\begin {bmatrix}1&amp;0&amp;-5\\0&amp;1&amp;3\\0&amp;0&amp;0\end {bmatrix}}~.\end {aligned}</fr:tex>
-        The final matrix has two non-zero rows and thus the rank of matrix <fr:tex display="inline">A</fr:tex> is <fr:tex display="inline">2</fr:tex>.</fr:p>
-    <fr:p>The determinantal rank of a matrix is the order of the largest non-zero minor of the matrix.
-        It is also the number of non-zero eigenvalues of the matrix. 
-        This does not give an efficient way of computing the rank, but it is useful theoretically: 
-        a single non-zero minor witnesses a lower bound for the rank of the matrix,
-        which can be useful to prove that certain operations do not lower the rank of a matrix.</fr:p>
-    <fr:p>We can conclude the properties of rank:
-        <fr:tex display="block">             \begin {align*}                 &amp;0 \leq  \text {rank}(A_{m\times  n}) \leq  \min (m,n) \\                 &amp;\text {rank}(A^T) = \text {rank}(A) \\                  &amp; A \sim  B \implies  \text {rank}(A)=\text {rank}(B) \\                  &amp; P, Q \text { is invertible} \implies  \text {rank}(PAQ) = \text {rank}(A) \\                  &amp; \max (\text {rank}(A), \text {rank}(B)) \leq  \text {rank}(A, B) \leq  \text {rank}(A) + \text {rank}(B) \\                  &amp; \text {rank}(A+B) \leq  \text {rank}(A) + \text {rank}(B) \\                 &amp; \text {rank}(AB) \leq  \min (\text {rank}(A), \text {rank}(B)) \\                  &amp; A_{m\times  n}B_{n\times  l} = O\implies  \text {rank}(A) + \text {rank}(B) \leq  n             \end {align*}         </fr:tex></fr:p>
-    <fr:p>With such properties we can prove an important theorem:
-        <fr:tex display="block">             AB = O \land  A \text { is full rank} \implies  B = O         </fr:tex>
-        which is known as the cancellation law of matrix multiplication.</fr:p>
-    <fr:p>The rank of a matrix is also related to the solution of a linear system.
-        If the rank of the coefficient matrix is less than the rank of the augmented matrix, 
-        then the system is inconsistent. Hence there does not exist a solution.
-        Similarly we have the following discussion: For a <fr:tex display="inline">n</fr:tex>-variable linear system <fr:tex display="inline">Ax = b</fr:tex>
-        <fr:ul><fr:li>If <fr:tex display="inline">\text {rank}(A) &lt; \text {rank}(A,b)</fr:tex>, the solution does not exist.</fr:li>
-            <fr:li>If <fr:tex display="inline">\text {rank}(A)=\text {rank}(A,b)=n</fr:tex>, there is a unique solution.</fr:li>
-            <fr:li>Ig <fr:tex display="inline">\text {rank}(A)=\text {rank}(A,b)&lt;n</fr:tex>, there are infinite solutions.</fr:li></fr:ul>
-        This leads two fundamental theorems of linear systems:
-        <fr:ul><fr:li><fr:tex display="inline">n</fr:tex>-variable regular linear system <fr:tex display="inline">Ax = 0</fr:tex> has a non-trivial solution iff <fr:tex display="inline">\text {rank}(A) &lt; n</fr:tex>.</fr:li>
-            <fr:li>Matrix equation <fr:tex display="inline">AX = B</fr:tex> has solutions iff <fr:tex display="inline">\text {rank}(A) = \text {rank}(A,B)</fr:tex>.</fr:li></fr:ul></fr:p>
+    <fr:p>If the partitioned matrix is formed as diagonal blocks, then we can compute the determinant of the matrix by the following formula:
+        <fr:tex display="block">             \det  A = \det  A_1 \cdot  \det  A_2 \cdots  \det  A_n         </fr:tex>
+        And the inverse of the matrix is
+        <fr:tex display="block">             A^{-1} = \begin {bmatrix}                 A_1^{-1} &amp; O &amp; \cdots  &amp; O \\                 O &amp; A_2^{-1} &amp; \cdots  &amp; O \\                 \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                 O &amp; O &amp; \cdots  &amp; A_n^{-1}             \end {bmatrix}         </fr:tex></fr:p>
+    <fr:p>The column partitioning of matrix is useful. 
+        If we have <fr:tex display="inline">m\times  s</fr:tex> matrix <fr:tex display="inline">A = (a_{ij})</fr:tex> and <fr:tex display="inline">s\times  n</fr:tex> matrix <fr:tex display="inline">B=(b_{ij})</fr:tex>,
+        their product can be written:
+        <fr:tex display="block">             AB = \begin {bmatrix} A_1 \\ A_2 \\ \vdots  A_m \end {bmatrix}             \begin {bmatrix}                 B_1 &amp; B_2 &amp; \cdots  &amp; B_n             \end {bmatrix} =              \begin {bmatrix}                 A_1B_1 &amp; A_1B_2 &amp; \cdots  &amp; A_1B_n \\                 A_2B_1 &amp; A_2B_2 &amp; \cdots  &amp; A_2B_n \\                 \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                 A_mB_1 &amp; A_mB_2 &amp; \cdots  &amp; A_mB_n             \end {bmatrix}         </fr:tex>
+        We can show that <fr:tex display="inline">A=O\iff  A^TA=O</fr:tex>.</fr:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -94,7 +72,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>852</fr:anchor>
+            <fr:anchor>881</fr:anchor>
             <fr:addr type="user">math-0008</fr:addr>
             <fr:route>math-0008.xml</fr:route>
             <fr:title text="Matrix Computation">Matrix Computation</fr:title>
@@ -110,7 +88,7 @@
             <fr:p>This post shows operations and applications over matrix, refers to Wikipedia.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>726</fr:anchor>
+                <fr:anchor>665</fr:anchor>
                 <fr:addr type="user">def-0043</fr:addr>
                 <fr:route>def-0043.xml</fr:route>
                 <fr:title text="Transpose">Transpose</fr:title>
@@ -133,7 +111,7 @@
     Then the matrix is called symmetric.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>727</fr:anchor>
+                <fr:anchor>666</fr:anchor>
                 <fr:addr type="user">def-001N</fr:addr>
                 <fr:route>def-001N.xml</fr:route>
                 <fr:title text="Symmetric Matrix">Symmetric Matrix</fr:title>
@@ -149,7 +127,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>728</fr:anchor>
+                <fr:anchor>667</fr:anchor>
                 <fr:addr type="user">def-0044</fr:addr>
                 <fr:route>def-0044.xml</fr:route>
                 <fr:title text="Determinant">Determinant</fr:title>
@@ -168,7 +146,7 @@
             <fr:p>To compute the inverse of a matrix, we need <fr:strong>Adjugate matrix</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>729</fr:anchor>
+                <fr:anchor>668</fr:anchor>
                 <fr:addr type="user">def-0045</fr:addr>
                 <fr:route>def-0045.xml</fr:route>
                 <fr:title text="First Minor and Cofactor">First Minor and Cofactor</fr:title>
@@ -186,7 +164,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>730</fr:anchor>
+                <fr:anchor>669</fr:anchor>
                 <fr:addr type="user">def-0046</fr:addr>
                 <fr:route>def-0046.xml</fr:route>
                 <fr:title text="Cofactor Matrix">Cofactor Matrix</fr:title>
@@ -205,7 +183,7 @@
     <fr:tex display="block">         A^{-1} = \frac {1}{\det  A} \cdot  \text {adj} A = \frac {1}{\det  A} \cdot  C^T     </fr:tex></fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>731</fr:anchor>
+                <fr:anchor>670</fr:anchor>
                 <fr:addr type="user">def-0047</fr:addr>
                 <fr:route>def-0047.xml</fr:route>
                 <fr:title text="Singular Matrix">Singular Matrix</fr:title>
@@ -219,9 +197,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>732</fr:anchor>
-                <fr:addr type="machine">#303</fr:addr>
-                <fr:route>unstable-303.xml</fr:route>
+                <fr:anchor>671</fr:anchor>
+                <fr:addr type="machine">#305</fr:addr>
+                <fr:route>unstable-305.xml</fr:route>
                 <fr:title text="An important property of the inverse of a matrix">An important property of the inverse of a matrix</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -233,7 +211,7 @@
               <fr:mainmatter><fr:p><fr:tex display="block">             A \cdot  \text {adj} A = \text {adj} A \cdot  A = \det  A \cdot  I         </fr:tex></fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>733</fr:anchor><fr:addr type="machine">#304</fr:addr><fr:route>unstable-304.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>672</fr:anchor><fr:addr type="machine">#306</fr:addr><fr:route>unstable-306.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         Let <fr:tex display="inline">A \cdot  \text {adj} A = (b_{ij})</fr:tex> and we have
         <fr:tex display="block">             b_{ij} = a_{i1}A_{j1} + a_{i2}A_{j2} + \cdots  + a_{in}A_{jn} = \delta _{ij} \cdot  \det  A         </fr:tex>
         Hence we have <fr:tex display="inline">A \cdot  \text {adj} A = \det  A \cdot  I</fr:tex> 
@@ -244,9 +222,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>734</fr:anchor>
-                <fr:addr type="machine">#305</fr:addr>
-                <fr:route>unstable-305.xml</fr:route>
+                <fr:anchor>673</fr:anchor>
+                <fr:addr type="machine">#307</fr:addr>
+                <fr:route>unstable-307.xml</fr:route>
                 <fr:title text="Matrix Polynomial and Computation">Matrix Polynomial and Computation</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -258,7 +236,7 @@
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>735</fr:anchor>
+                    <fr:anchor>674</fr:anchor>
                     <fr:addr type="user">def-0048</fr:addr>
                     <fr:route>def-0048.xml</fr:route>
                     <fr:title text="Matrix Polynomial">Matrix Polynomial</fr:title>
@@ -282,9 +260,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>736</fr:anchor>
-                <fr:addr type="machine">#306</fr:addr>
-                <fr:route>unstable-306.xml</fr:route>
+                <fr:anchor>675</fr:anchor>
+                <fr:addr type="machine">#308</fr:addr>
+                <fr:route>unstable-308.xml</fr:route>
                 <fr:title text="Solving a Linear System">Solving a Linear System</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -296,7 +274,7 @@
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>737</fr:anchor>
+                    <fr:anchor>676</fr:anchor>
                     <fr:addr type="user">thm-0011</fr:addr>
                     <fr:route>thm-0011.xml</fr:route>
                     <fr:title text="Cramer&apos;s rule">Cramer&apos;s rule</fr:title>
@@ -318,7 +296,7 @@
         This is often done to simplify the computation of matrix operations, such as matrix multiplication.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>738</fr:anchor>
+                    <fr:anchor>677</fr:anchor>
                     <fr:addr type="user">def-0049</fr:addr>
                     <fr:route>def-0049.xml</fr:route>
                     <fr:title text="Matrix Partitioning">Matrix Partitioning</fr:title>
@@ -348,9 +326,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>739</fr:anchor>
-                <fr:addr type="machine">#307</fr:addr>
-                <fr:route>unstable-307.xml</fr:route>
+                <fr:anchor>678</fr:anchor>
+                <fr:addr type="machine">#309</fr:addr>
+                <fr:route>unstable-309.xml</fr:route>
                 <fr:title text="Matrix Transformation">Matrix Transformation</fr:title>
                 <fr:taxon>Section</fr:taxon>
                 <fr:date>
@@ -363,7 +341,7 @@
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>740</fr:anchor>
+                    <fr:anchor>679</fr:anchor>
                     <fr:addr type="user">def-004A</fr:addr>
                     <fr:route>def-004A.xml</fr:route>
                     <fr:title text="Elementary Operations">Elementary Operations</fr:title>
@@ -386,7 +364,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>741</fr:anchor>
+                    <fr:anchor>680</fr:anchor>
                     <fr:addr type="user">def-004B</fr:addr>
                     <fr:route>def-004B.xml</fr:route>
                     <fr:title text="Column / Row Equivalence">Column / Row Equivalence</fr:title>
@@ -415,9 +393,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>742</fr:anchor>
-                <fr:addr type="machine">#308</fr:addr>
-                <fr:route>unstable-308.xml</fr:route>
+                <fr:anchor>681</fr:anchor>
+                <fr:addr type="machine">#310</fr:addr>
+                <fr:route>unstable-310.xml</fr:route>
                 <fr:title text="Rank">Rank</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -432,7 +410,7 @@
         generated (or spanned) by its columns.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>743</fr:anchor>
+                    <fr:anchor>682</fr:anchor>
                     <fr:addr type="user">def-004J</fr:addr>
                     <fr:route>def-004J.xml</fr:route>
                     <fr:title text="Rank">Rank</fr:title>
@@ -458,7 +436,7 @@
         and equals to the number of <fr:strong>pivots</fr:strong> (or basic columns) and also the number of non-zero rows.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>744</fr:anchor>
+                    <fr:anchor>683</fr:anchor>
                     <fr:addr type="user">def-004I</fr:addr>
                     <fr:route>def-004I.xml</fr:route>
                     <fr:title text="Row Echelon Form">Row Echelon Form</fr:title>
@@ -503,9 +481,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>745</fr:anchor>
-                <fr:addr type="machine">#309</fr:addr>
-                <fr:route>unstable-309.xml</fr:route>
+                <fr:anchor>684</fr:anchor>
+                <fr:addr type="machine">#311</fr:addr>
+                <fr:route>unstable-311.xml</fr:route>
                 <fr:title text="Linear Combinations">Linear Combinations</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -518,7 +496,7 @@
                 <fr:p></fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>746</fr:anchor>
+                    <fr:anchor>685</fr:anchor>
                     <fr:addr type="user">def-000L</fr:addr>
                     <fr:route>def-000L.xml</fr:route>
                     <fr:title text="Linear Combination">Linear Combination</fr:title>
@@ -539,7 +517,7 @@
         <fr:tex display="block">             \text {rank}(A) = \text {rank}(B) = \text {rank}(A, B)         </fr:tex></fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>747</fr:anchor>
+                    <fr:anchor>686</fr:anchor>
                     <fr:addr type="user">def-000P</fr:addr>
                     <fr:route>def-000P.xml</fr:route>
                     <fr:title text="Linearly independent">Linearly independent</fr:title>

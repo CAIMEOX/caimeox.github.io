@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1154</fr:anchor>
+    <fr:anchor>1181</fr:anchor>
     <fr:addr type="user">def-001Z</fr:addr>
     <fr:route>def-001Z.xml</fr:route>
     <fr:title text="Addition over {N}">Addition over <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
@@ -13,7 +13,7 @@
     which satisfies the following specification:
     <fr:tex display="block">         \begin {align*}             \text {add}_\mathbb {N}(n, 0)&amp;:\equiv  n             \\             \text {add}_\mathbb {N}(m,\text {succ}(n))&amp;:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))         \end {align*}     </fr:tex>
     abbreviated as <fr:tex display="inline">m + n</fr:tex> for <fr:tex display="inline">\text {add}_\mathbb {N}(m,n)</fr:tex>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>432</fr:anchor><fr:addr type="machine">#339</fr:addr><fr:route>unstable-339.xml</fr:route><fr:title text="Construction"><fr:strong>Construction</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>728</fr:anchor><fr:addr type="machine">#341</fr:addr><fr:route>unstable-341.xml</fr:route><fr:title text="Construction"><fr:strong>Construction</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     
         <fr:p>We construct the additon by perform induction over the second variable <fr:tex display="inline">n</fr:tex>.
             That is, to construct an element
@@ -41,7 +41,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1155</fr:anchor>
+            <fr:anchor>1182</fr:anchor>
             <fr:addr type="user">tt-0003</fr:addr>
             <fr:route>tt-0003.xml</fr:route>
             <fr:title text="Natural Numbers {N}">Natural Numbers <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
@@ -63,7 +63,7 @@
     Just like in dependent function type, we need four inference rules to define the natural numbers.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>430</fr:anchor>
+                <fr:anchor>726</fr:anchor>
                 <fr:addr type="user">def-001Y</fr:addr>
                 <fr:route>def-001Y.xml</fr:route>
                 <fr:title text="Natural Number">Natural Number</fr:title>
@@ -93,7 +93,7 @@
     perform some basic construction over <fr:tex display="inline">\mathbb {N}</fr:tex>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>431</fr:anchor>
+                <fr:anchor>727</fr:anchor>
                 <fr:addr type="user">def-001Z</fr:addr>
                 <fr:route>def-001Z.xml</fr:route>
                 <fr:title text="Addition over {N}">Addition over <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
@@ -105,7 +105,7 @@
     which satisfies the following specification:
     <fr:tex display="block">         \begin {align*}             \text {add}_\mathbb {N}(n, 0)&amp;:\equiv  n             \\             \text {add}_\mathbb {N}(m,\text {succ}(n))&amp;:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))         \end {align*}     </fr:tex>
     abbreviated as <fr:tex display="inline">m + n</fr:tex> for <fr:tex display="inline">\text {add}_\mathbb {N}(m,n)</fr:tex>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>432</fr:anchor><fr:addr type="machine">#339</fr:addr><fr:route>unstable-339.xml</fr:route><fr:title text="Construction"><fr:strong>Construction</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>728</fr:anchor><fr:addr type="machine">#341</fr:addr><fr:route>unstable-341.xml</fr:route><fr:title text="Construction"><fr:strong>Construction</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     
         <fr:p>We construct the additon by perform induction over the second variable <fr:tex display="inline">n</fr:tex>.
             That is, to construct an element
@@ -137,7 +137,7 @@
     <fr:tex display="inline">f</fr:tex> is said to be defined by <fr:strong>pattern matching</fr:strong> on the variable <fr:tex display="inline">n</fr:tex>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>433</fr:anchor>
+                <fr:anchor>729</fr:anchor>
                 <fr:addr type="user">eg-0001</fr:addr>
                 <fr:route>eg-0001.xml</fr:route>
                 <fr:title text="Fibonacci Function">Fibonacci Function</fr:title>

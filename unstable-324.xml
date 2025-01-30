@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1107</fr:anchor>
+    <fr:anchor>1885</fr:anchor>
     <fr:addr type="machine">#324</fr:addr>
     <fr:route>unstable-324.xml</fr:route>
-    <fr:title text="Associator › 
-    Construction of Associator
-"><fr:link type="local" href="def-002W.xml" addr="def-002W" title="Associator">Associator</fr:link> › 
-    <fr:strong>Construction of Associator</fr:strong>
-</fr:title>
+    <fr:title text="Probability Density › Variance"><fr:link type="local" href="def-0031.xml" addr="def-0031" title="Probability Density">Probability Density</fr:link> › Variance</fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    By definition it suffices to show that
-    <fr:tex display="block">         \Pi _{(z:A)}\Pi _{(q:x=_Az)}         \Pi _{(w:A)}\Pi _{(r:z=_Aw)}         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    Let <fr:tex display="inline">q:x=_Az</fr:tex> and <fr:tex display="inline">r:z=_Aw</fr:tex>. By computation rule of identity types
-    <fr:tex display="block">         \text {refl}_x\cdot  q \equiv  q     </fr:tex>
-    Then we can conclude that
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r \equiv  q\cdot  r     </fr:tex>
-    similarly <fr:tex display="inline">\text {refl}_x\cdot  (q\cdot  r) \equiv  q\cdot  r</fr:tex>.
-    Hence we have the left and right side
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    are judgementally equal, 
-    so we can simply define the associator as
-    <fr:tex display="block">         \text {assoc}(\text {refl}_x,q,r) :\equiv  \text {refl}_{q\cdot  r}     </fr:tex>
+    The <fr:strong>variance</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
+    <fr:tex display="block">         \sigma ^2 :\equiv  \langle  x^2 \rangle  - \langle  x \rangle ^2     </fr:tex>
 </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -34,35 +20,26 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1108</fr:anchor>
-            <fr:addr type="user">def-002W</fr:addr>
-            <fr:route>def-002W.xml</fr:route>
-            <fr:title text="Associator">Associator</fr:title>
+            <fr:anchor>1886</fr:anchor>
+            <fr:addr type="user">def-0031</fr:addr>
+            <fr:route>def-0031.xml</fr:route>
+            <fr:title text="Probability Density">Probability Density</fr:title>
             <fr:taxon>Definition</fr:taxon>
             <fr:authors></fr:authors>
           </fr:frontmatter>
-          <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
-    These are 3 consecutive identifications
-    <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
-    we define the <fr:strong>associator</fr:strong>:
-    <fr:tex display="block">         \text {assoc}: (p,q,r): (p\cdot  q)\cdot  r = p\cdot  (q\cdot  r)     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>458</fr:anchor><fr:addr type="machine">#324</fr:addr><fr:route>unstable-324.xml</fr:route><fr:title text="
-    Construction of Associator
-">
-    <fr:strong>Construction of Associator</fr:strong>
-</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
-    By definition it suffices to show that
-    <fr:tex display="block">         \Pi _{(z:A)}\Pi _{(q:x=_Az)}         \Pi _{(w:A)}\Pi _{(r:z=_Aw)}         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    Let <fr:tex display="inline">q:x=_Az</fr:tex> and <fr:tex display="inline">r:z=_Aw</fr:tex>. By computation rule of identity types
-    <fr:tex display="block">         \text {refl}_x\cdot  q \equiv  q     </fr:tex>
-    Then we can conclude that
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r \equiv  q\cdot  r     </fr:tex>
-    similarly <fr:tex display="inline">\text {refl}_x\cdot  (q\cdot  r) \equiv  q\cdot  r</fr:tex>.
-    Hence we have the left and right side
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    are judgementally equal, 
-    so we can simply define the associator as
-    <fr:tex display="block">         \text {assoc}(\text {refl}_x,q,r) :\equiv  \text {refl}_{q\cdot  r}     </fr:tex>
+          <fr:mainmatter><fr:p>A <fr:strong>probability density</fr:strong> is a function <fr:tex display="inline">p(x)</fr:tex> such that:
+    <fr:ul><fr:li><fr:tex display="inline">p(x)\geq  0</fr:tex> for all <fr:tex display="inline">x</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">\int _{-\infty }^{\infty } p(x)dx = 1</fr:tex>.</fr:li></fr:ul>
+    With this we can define the <fr:strong>probability function</fr:strong> in an interval <fr:tex display="inline">[a,b]</fr:tex> as:
+    <fr:tex display="block">         P(a, b) = \int _a^b p(x)dx     </fr:tex></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>775</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="Expectation Value">Expectation Value</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    The <fr:strong>expectation value</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
+    <fr:tex display="block">         \langle  f(x) \rangle  = \int _{-\infty }^{\infty } f(x)p(x)dx     </fr:tex>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>776</fr:anchor><fr:addr type="machine">#324</fr:addr><fr:route>unstable-324.xml</fr:route><fr:title text="Variance">Variance</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    The <fr:strong>variance</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
+    <fr:tex display="block">         \sigma ^2 :\equiv  \langle  x^2 \rangle  - \langle  x \rangle ^2     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 </fr:mainmatter>
           <fr:backmatter></fr:backmatter>

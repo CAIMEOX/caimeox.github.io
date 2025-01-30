@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1302</fr:anchor>
+    <fr:anchor>1334</fr:anchor>
     <fr:addr type="user">def-000K</fr:addr>
     <fr:route>def-000K.xml</fr:route>
     <fr:title text="Direct Sum">Direct Sum</fr:title>
@@ -24,7 +24,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1303</fr:anchor>
+            <fr:anchor>1335</fr:anchor>
             <fr:addr type="user">math-0001</fr:addr>
             <fr:route>math-0001.xml</fr:route>
             <fr:title text="Introduction to Vector Space">Introduction to Vector Space</fr:title>
@@ -44,7 +44,7 @@
     The definition abstracts and generalizes these properties.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>571</fr:anchor>
+                <fr:anchor>501</fr:anchor>
                 <fr:addr type="user">def-000H</fr:addr>
                 <fr:route>def-000H.xml</fr:route>
                 <fr:title text="Vector Space">Vector Space</fr:title>
@@ -69,7 +69,7 @@
     we are more interested with sums of subspaces.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>572</fr:anchor>
+                <fr:anchor>502</fr:anchor>
                 <fr:addr type="user">def-000I</fr:addr>
                 <fr:route>def-000I.xml</fr:route>
                 <fr:title text="Linear Subspace">Linear Subspace</fr:title>
@@ -88,7 +88,7 @@
             <fr:p>After that we can define the sum of subsets.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>573</fr:anchor>
+                <fr:anchor>503</fr:anchor>
                 <fr:addr type="user">def-000J</fr:addr>
                 <fr:route>def-000J.xml</fr:route>
                 <fr:title text="Sum of subsets">Sum of subsets</fr:title>
@@ -109,7 +109,7 @@
     in only one way. This leads to the definition of direct sum.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>574</fr:anchor>
+                <fr:anchor>504</fr:anchor>
                 <fr:addr type="user">def-000K</fr:addr>
                 <fr:route>def-000K.xml</fr:route>
                 <fr:title text="Direct Sum">Direct Sum</fr:title>

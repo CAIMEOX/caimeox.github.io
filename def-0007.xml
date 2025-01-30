@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1561</fr:anchor>
+    <fr:anchor>1597</fr:anchor>
     <fr:addr type="user">def-0007</fr:addr>
     <fr:route>def-0007.xml</fr:route>
     <fr:title text="Monoid">Monoid</fr:title>
@@ -22,7 +22,35 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1562</fr:anchor>
+            <fr:anchor>1598</fr:anchor>
+            <fr:addr type="user">def-004U</fr:addr>
+            <fr:route>def-004U.xml</fr:route>
+            <fr:title text="Cayley representation for Set Monoids">Cayley representation for Set Monoids</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>For every set <fr:tex display="inline">M</fr:tex> we can construct the monoid of 
+    endomorphisms <fr:tex display="inline">(M\to  M, \circ , \text {id})</fr:tex>.</fr:p>
+            <fr:p><fr:tex display="inline">M</fr:tex> is a sub-monoid of a monoid <fr:tex display="inline">M&apos;</fr:tex> if 
+    there is an injection <fr:tex display="inline">i : M \hookrightarrow  M&apos;</fr:tex> 
+    such that <fr:tex display="inline">i(e) = e&apos;</fr:tex> and 
+    <fr:tex display="inline">i(a \circ  b) = i(a) \circ &apos; i(b)</fr:tex> for all <fr:tex display="inline">a, b \in  M</fr:tex>.
+    Every <fr:link type="local" href="def-0007.xml" addr="def-0007" title="Monoid">monoid</fr:link> <fr:tex display="inline">M</fr:tex> is a sub-monoid of the
+    monoid of endomorphisms <fr:tex display="inline">(M\to  M, \circ , \text {id})</fr:tex>.</fr:p>
+            <fr:p>This can be proved by constructing an injection 
+    map <fr:tex display="inline">\text {rep} : M\to (M\to  M)</fr:tex> by <fr:tex display="inline">\text {rep} : a \mapsto  \lambda  x.a\circ  x</fr:tex>,
+    which is easy to verify that <fr:tex display="inline">\text {rep}</fr:tex> is a monoid homomorphism.
+    Moreover, <fr:tex display="inline">\text {rep}</fr:tex> is an injection,
+    since we have a function <fr:tex display="inline">\text {abs} : (M\to  M) \to  M</fr:tex> given by
+    <fr:tex display="inline">\text {abs} : f \mapsto  f(e)</fr:tex>.
+    and <fr:tex display="inline">\text {abs}\circ \text {rep} = \text {id}_M</fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>1599</fr:anchor>
             <fr:addr type="user">def-002A</fr:addr>
             <fr:route>def-002A.xml</fr:route>
             <fr:title text="Product of Linear Maps">Product of Linear Maps</fr:title>

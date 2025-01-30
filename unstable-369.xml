@@ -1,57 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1145</fr:anchor>
+    <fr:anchor>923</fr:anchor>
     <fr:addr type="machine">#369</fr:addr>
     <fr:route>unstable-369.xml</fr:route>
-    <fr:title text="Scanners › A formalism for recognizers"><fr:link type="local" href="cs-0004.xml" addr="cs-0004" title="Scanners">Scanners</fr:link> › A formalism for recognizers</fr:title>
+    <fr:title text="Introduction to Programming Language Semantic › Abstract Machine"><fr:link type="local" href="cs-0006.xml" addr="cs-0006" title="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</fr:link> › Abstract Machine</fr:title>
+    <fr:date>
+      <fr:year>2024</fr:year>
+      <fr:month>3</fr:month>
+      <fr:day>11</fr:day>
+    </fr:date>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>Transition diagrams can be viewed as formal mathematics objects called <fr:strong>finite automata</fr:strong>.</fr:p>
+    <fr:p>All the exmaples we have meet focused on explaining semantic ideas,
+        now we show how language of integers and addition can also be used to help 
+        discover semantic ideas.
+        We show how it can be used as the basis for discovering how to implement 
+        an <fr:strong>abstract machine</fr:strong>.</fr:p>
+    <fr:p>Remember the evaluation order problem we meet before,
+        if we want to make evaluation order explicit, we can introduce additional
+        structure into the semantics by constructing an abstract machine.</fr:p>
+    <fr:p>Formally, an abstract machine is usually deifned by a set of syntactic rewrite ruless 
+        that make explicit how each step of evaluation proceeds.
+        This section we show how an abstract machine for our example language can 
+        be systematically derived from the evaluation function using steps
+        based on two important semantic concepts, <fr:strong>continuations</fr:strong> and <fr:strong>defunctionalisation</fr:strong>.</fr:p>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>656</fr:anchor>
-        <fr:addr type="user">def-003M</fr:addr>
-        <fr:route>def-003M.xml</fr:route>
-        <fr:title text="Finite Automata">Finite Automata</fr:title>
-        <fr:taxon>Definition</fr:taxon>
+        <fr:anchor>609</fr:anchor>
+        <fr:addr type="machine">#370</fr:addr>
+        <fr:route>unstable-370.xml</fr:route>
+        <fr:title text="Add Continuations">Add Continuations</fr:title>
+        <fr:date>
+          <fr:year>2024</fr:year>
+          <fr:month>3</fr:month>
+          <fr:day>11</fr:day>
+        </fr:date>
         <fr:authors></fr:authors>
       </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:p>A <fr:strong>finite automata (FA)</fr:strong> is a five-tuple <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> where
-    <fr:ul><fr:li><fr:tex display="inline">S</fr:tex> is the finite set of states in the recognizer including <fr:tex display="inline">s_e</fr:tex>,
-            the error state.</fr:li>
-        <fr:li><fr:tex display="inline">\Sigma </fr:tex> is the finite alphabet used by the recognizer. 
-            <fr:tex display="inline">\Sigma </fr:tex> is the union of the edge labels in the transition diagram.</fr:li>
-        <fr:li><fr:tex display="inline">\delta (s, c)</fr:tex> is the recognizer&apos;s transition function, which 
-            maps each state <fr:tex display="inline">s\in  S</fr:tex> and character <fr:tex display="inline">c\in \Sigma </fr:tex> into some next state.
-            In state <fr:tex display="inline">s_i</fr:tex> with input character <fr:tex display="inline">c</fr:tex> the FA takes the transition
-            <fr:tex display="inline">s_i \xrightarrow {c} \delta (s_i, c)</fr:tex>.</fr:li>
-        <fr:li><fr:tex display="inline">s_0\in  S</fr:tex> is the initial state of the recognizer.</fr:li>
-        <fr:li><fr:tex display="inline">S_A</fr:tex> is the set of accepting states, <fr:tex display="inline">S_A\subseteq  S</fr:tex>.</fr:li></fr:ul>
-    <fr:tex display="inline">\delta </fr:tex> is only partially defined. For all other combinations of the 
-    state <fr:tex display="inline">s_i</fr:tex> and input char <fr:tex display="inline">c</fr:tex> we can define <fr:tex display="inline">\delta (s_i,c)=s_e</fr:tex>.</fr:p>
-      </fr:mainmatter>
+      <fr:mainmatter><fr:p>We want to make the order of evaluation explicit in the semantics itself.
+            A standard technique for achieving this aim is to rewrite the semantics
+            in <fr:strong>continuation-passing style</fr:strong>.</fr:p><fr:p>In our setting, a continuation is a function that will be applied to the result of an
+            evaluation. Formally, for our semantics <fr:code>eval :: Expr -&gt; Integer</fr:code>, a continuation
+            is a function of type <fr:code>Integer -&gt; Integer</fr:code> that will be applied to the resulting integer
+            to give a new integer. (This type can be generalized to <fr:code>Integer -&gt; a</fr:code>, but we do not need now)
+            We capture the notion of such a continuation using the following type declaration:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">type Continuation = Integer -&gt; Integer</html:code></fr:pre>
+<fr:p>We now define a new semantics <fr:tex display="inline">\text {eval}&apos;</fr:tex>, which takes an expression and returns
+            an integer as previously but also takes a continuation as an additional argument,
+            which is applied to the result of evaluating the expression.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos; :: Expr -&gt; Continuation -&gt; Integer</html:code></fr:pre>
+<fr:p>The behavior of <fr:tex display="inline">\text {eval}&apos;</fr:tex> should be:</fr:p><fr:tex display="block">             \text {eval}&apos;\space  e\space  c = \text {c (eval e)}         </fr:tex><fr:p>We want to calculate a definition that satisfies the specification.
+            Using structural induction on the expression <fr:tex display="inline">e</fr:tex>, we construct 
+            the term <fr:tex display="inline">\text {eval}&apos;\space  e\space  c</fr:tex> by gradually removing the reference to <fr:code>eval</fr:code>.
+            For the base case, <fr:tex display="inline">e = \text {Val}\space  n</fr:tex> we have</fr:p><fr:tex display="block">             \begin {align*}                 \text {eval}&apos;\space (\text {Val}\space  n)\space  c                  &amp;= c\space  (\text {eval}\space  (\text {Val}\space  n)) \\                 &amp;= c\space  n             \end {align*}         </fr:tex><fr:p>For the inductive case, <fr:tex display="inline">e = \text {Add}\space  x\space  y</fr:tex> we begin in the same way:</fr:p><fr:tex display="block">             \begin {align*}                 \text {eval}&apos;\space (\text {Add}\space  x\space  y)\space  c                  &amp;= c\space  (\text {eval}\space  (\text {Add}\space  x\space  y)) \\                 &amp;= c\space  (\text {eval}\space  x + \text {eval}\space  y)             \end {align*}         </fr:tex><fr:p>However, no further definition can be applied now, so we consider the inductive hypothesis:
+            Forall <fr:tex display="inline">c&apos;</fr:tex> and <fr:tex display="inline">c&apos;&apos;</fr:tex> we have <fr:tex display="inline">\text {eval}&apos;\space  x\space  c&apos; = c&apos;(\text {eval}\space  x)</fr:tex> and
+            <fr:tex display="inline">\text {eval}&apos;\space  y\space  c&apos;&apos; = c&apos;&apos;(\text {eval}\space  y)</fr:tex>. This can readily be achieved by 
+            abstracting over <fr:tex display="inline">\text {eval}\space  x</fr:tex> and <fr:tex display="inline">\text {eval}\space  y</fr:tex> using lambda abstraction.</fr:p><fr:tex display="block">             \begin {align*}                 &amp; c\space  (\text {eval}\space  x + \text {eval}\space  y) \\                 =&amp; (\lambda  n\to  c\space (n+\text {eval}\space  y)) \\                 =&amp; \text {eval}&apos;\space  x\space  (\lambda  n\to  c\space (n+\text {eval}\space  y)) \\                  =&amp; \text {eval}&apos;\space  x\space  (\lambda  n\to  (\lambda  m\to  c\space (n+m))(\text {eval}\space  y)) \\                  =&amp; \text {eval}&apos;\space  x\space  (\lambda  n\to  \text {eval}&apos;\space  y\space  (\lambda  m\to  c\space (n+m)))             \end {align*}         </fr:tex><fr:p>The final term does not refer to <fr:tex display="inline">\text {eval}</fr:tex> now.
+            In summary we have calculated the following definition</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos; :: Expr -&gt; Continuation -&gt; Integer
+eval&apos; (Val n) c = c n 
+eval&apos; (Add x y) c = eval&apos; x (\n -&gt; eval&apos; y (\m -&gt; c (n + m)))</html:code></fr:pre>
+<fr:p>Our original semantics can be recovered from the new semantics by
+            using the identity continuation <fr:tex display="inline">\lambda  n \to  n</fr:tex></fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval e = eval&apos; e (\n -&gt; n)</html:code></fr:pre>
+</fr:mainmatter>
       <fr:backmatter></fr:backmatter>
     </fr:tree>
-    <fr:p>An FA <fr:strong>accpets</fr:strong> a string <fr:tex display="inline">x</fr:tex> and iff starting in <fr:tex display="inline">s_0</fr:tex>,
-        the sequence of chars in  <fr:tex display="inline">x</fr:tex> takes the FA to an accepting state
-        when the entire string has been consumed.</fr:p>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>657</fr:anchor>
-        <fr:addr type="user">def-003N</fr:addr>
-        <fr:route>def-003N.xml</fr:route>
-        <fr:title text="Accepts">Accepts</fr:title>
-        <fr:taxon>Definition</fr:taxon>
+        <fr:anchor>610</fr:anchor>
+        <fr:addr type="machine">#371</fr:addr>
+        <fr:route>unstable-371.xml</fr:route>
+        <fr:title text="Defunctionalise">Defunctionalise</fr:title>
+        <fr:date>
+          <fr:year>2024</fr:year>
+          <fr:month>3</fr:month>
+          <fr:day>11</fr:day>
+        </fr:date>
         <fr:authors></fr:authors>
       </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:p>If the string <fr:tex display="inline">x</fr:tex> consists characters <fr:tex display="inline">x_1, x_2, \ldots , x_n</fr:tex> then the
-    FA <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> <fr:strong>accpets</fr:strong> <fr:tex display="inline">x</fr:tex> iff there is a sequence
-    <fr:tex display="block">         \delta (             \delta (                 \dots \delta (\delta (                     \delta (s_0,x_1),x_2),x_3)\dots ,                 x_{n-1}             )             ,x_n         )\in  S_A     </fr:tex></fr:p>
-      </fr:mainmatter>
+      <fr:mainmatter><fr:p>We use continuation to make the order of evaluation explicit in the semantics,
+            but this also makes the semantics into a higher-order function.
+            Hence our second step is to regain the first-order nature of the original semantics by 
+            eliminating the use of continuations but <fr:strong>retaining</fr:strong> the explicit order of evaluation they introduced.</fr:p><fr:p>A standard technique for eliminating the use of functions as arguments is <fr:strong>defunctionalisation</fr:strong>.
+            We do not usually need the entire function-space of possible argument functions, 
+            there only a few forms of such functions are actually used.
+            Hence we represent the argument functions that we actually need using 
+            a datatype rather than functions.</fr:p><fr:p>We begin by defining three combinators <fr:strong>halt</fr:strong>, <fr:strong>next</fr:strong> and <fr:strong>add</fr:strong> 
+            for constructing the continuations we used.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">halt :: Continuation
+halt n = n
+
+next :: Expr -&gt; Continuation -&gt; Continuation
+next y c = \n -&gt; eval&apos; y (add n c)
+
+add :: Integer -&gt; Continuation -&gt; Continuation
+add n c = \m -&gt; c (n + m)</html:code></fr:pre>
+<fr:p>Use the combinators, our continuation semantics can now be written as:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval :: Expr -&gt; Integer
+eavl e = eval&apos; e halt
+
+eval&apos; :: Expr -&gt; Continuation -&gt; Integer
+eval&apos; (Val n) c = c n 
+eval&apos; (Add x y) c = eval&apos; x (next y c)</html:code></fr:pre>
+<fr:p>Now we declare a new datatype for continuations, consists of three constructors.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data CONT = HALT | NEXT Expr CONT | ADD Integer CONT</html:code></fr:pre>
+<fr:p>The following translation function forms a denotational semantics for <fr:code>CONT</fr:code></fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">exec :: CONT -&gt; Continuation
+exec HALT = halt
+exec (NEXT y c) = next y (exec c)
+exec (ADD n c) = add n (exec c)</html:code></fr:pre>
+<fr:p>This function is usually called <fr:strong>apply</fr:strong>, which can be viewed as 
+            applying a representation of a continuation to an integer to give another integer.
+            We want to define a new semantics <fr:tex display="inline">\text {eval}&apos;</fr:tex> which behaves in the same way 
+            as our previous <fr:tex display="inline">\text {eval}&apos;</fr:tex> except that it uses values of type <fr:code>CONT</fr:code> 
+            rather than <fr:code>Continuation</fr:code>.
+            
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos;&apos; :: Expr -&gt; CONT -&gt; Integer</html:code></fr:pre>
+
+            The desired behavior of <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> is:
+            <fr:tex display="block">                 \text {eval}&apos;&apos;\space  e\space  c = \text {eval}&apos;\space  e\space  (\text {exec}\space  c)             </fr:tex></fr:p><fr:p>As before, we proceed by structural induction on expression <fr:tex display="inline">e</fr:tex>.
+            The base case <fr:tex display="inline">e=\text {Val}\space  n</fr:tex> is trivial
+            <fr:tex display="block">                 \begin {align*}                     \text {eval}&apos;&apos;\space (\text {Val}\space  n)\space  c                     &amp;= \text {eval}&apos;\space (\text {Val}\space  n)\space  (\text {exec}\space  c) \\                     &amp;= \text {exec}\space  c\space  n \\                 \end {align*}             </fr:tex></fr:p><fr:p>For the inductive case <fr:tex display="inline">e = \text {Add}\space  x\space  y</fr:tex>:
+            <fr:tex display="block">                 \begin {align*}                     \text {eval}&apos;&apos;\space (\text {Add}\space  x\space  y)\space  c                      &amp;= \text {eval}&apos;\space (\text {Add}\space  x\space  y)\space  (\text {exec}\space  c) \\                     &amp;= \text {eval}&apos;\space  x\space (\text {next}\space  y\space (\text {exec}\space  c)) \\                      &amp;= \text {eval}&apos;\space  x\space (\text {exec}\space (\text {NEXT}\space  y\space  c)) \\                     &amp;= \text {eval}&apos;&apos;\space  x\space  (\text {NEXT}\space  y\space  c)                 \end {align*}             </fr:tex>
+            The last step uses the inductive hypothesis for <fr:tex display="inline">x</fr:tex></fr:p><fr:p>In the basic case, <fr:tex display="inline">\text {exec}</fr:tex> still refers to the semantic <fr:tex display="inline">\text {eval}&apos;</fr:tex>,
+            via the combinator <fr:tex display="inline">\text {next}</fr:tex>. Hence we need to compute a new definition 
+            for <fr:tex display="inline">\text {exec}</fr:tex> that refers to our new <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex>.</fr:p><fr:tex display="block">             \begin {align*}                 \text {exec}\space \text {HALT}\space  n                  &amp;= \text {halt}\space  n                 \\                  &amp;= n                             \end {align*}         </fr:tex><fr:p>The other case is also easy to compute, no need to induction.</fr:p><fr:tex display="block">             \begin {align*}                 \text {exec}\space (\text {NEXT}\space  y\space  c)\space  n                  &amp;= \text {eval}&apos;&apos;\space  y\space (\text {ADD}\space  n\space  c)                 \\                  \text {exec}\space (\text {ADD}\space  n\space  c)\space  m                  &amp;= \text {exec}\space  c\space (n+m)             \end {align*}         </fr:tex><fr:p>Our original semantics <fr:tex display="inline">\text {eval}</fr:tex> can be recovered from the new 
+            semantics <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> too.</fr:p><fr:tex display="block">             \begin {align*}                 \text {eval}\space  e                  &amp;= \text {eval}&apos;\space  e\space (\lambda  n\to  n) \\                  &amp;= \text {eval}&apos;\space  e\space \text {halt} \\                  &amp;= \text {eval}&apos;\space  e\space (\text {exec}\space \text {HALT}) \\                  &amp;= \text {eval}&apos;&apos;\space  e\text {HALT}             \end {align*}         </fr:tex><fr:p>In summary, we have calculated the following definitions:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos;&apos; :: Expr -&gt; CONT -&gt; Integer
+eval&apos;&apos; (Val n) c = exec c n 
+eval&apos;&apos; (Add x y) c = eval&apos;&apos; x (NEXT y c)
+
+exec :: CONT -&gt; Integer -&gt; Integer
+exec HALT n = n 
+exec (NEXT y c) n = eval&apos;&apos; y (ADD n c)
+exec (ADD n c) m = exec c (n + m)
+
+eval :: Expr -&gt; Integer
+eval e = eval&apos;&apos; e HALT</html:code></fr:pre>
+<fr:p>The four components (<fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex>, <fr:tex display="inline">\text {eval}</fr:tex>, <fr:tex display="inline">\text {exec}</fr:tex> and <fr:code>CONT</fr:code>)
+            forms an abstract machine.</fr:p><fr:p><fr:code>CONT</fr:code> is the type of <fr:strong>control stack</fr:strong> which comprises 
+            instructions that determine how the machine should continue after evaluating
+            the current expression. Sometimes it is called an &quot;eval/continue&quot; machine.
+            The control stack can also be defined as a list of instructions.
+            
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">type CONT = [INST]
+data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex display="inline">\text {eval}</fr:tex> evaluates an expression and give an integer by simply 
+            call the <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> with empty control stack <fr:tex display="inline">\text {HALT}</fr:tex>.</fr:p><fr:p><fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> evaluates an expression in the context of a control stack.
+            If the expression is an integer, we execute the control stack using this 
+            integer as an argument. If the expression is an addition, 
+            we evaluate the first argument <fr:tex display="inline">x</fr:tex> and place the instruction <fr:tex display="inline">\text {NEXT}\space  y</fr:tex>
+            on the top of the control stack.</fr:p><fr:p><fr:tex display="inline">\text {exec}</fr:tex> executes the control stack. If the control stack is empty,
+            then just return the integer argument as the result. If the top instruction
+            is <fr:tex display="inline">\text {NEXT}\space  y</fr:tex>, we evaluate <fr:tex display="inline">y</fr:tex> and place the instruction <fr:tex display="inline">\text {ADD}\space  n</fr:tex>
+            to the stack top. If the top instruction is <fr:tex display="inline">\text {ADD}\space  n</fr:tex>,evaluation of the 
+            two arguments of an addition is complete, and we execute the remaining control stack 
+            in the context of the sum of the resulting integers.</fr:p></fr:mainmatter>
       <fr:backmatter></fr:backmatter>
     </fr:tree>
   </fr:mainmatter>
@@ -64,729 +170,524 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1146</fr:anchor>
-            <fr:addr type="user">cs-0004</fr:addr>
-            <fr:route>cs-0004.xml</fr:route>
-            <fr:title text="Scanners">Scanners</fr:title>
-            <fr:taxon>Computer Science</fr:taxon>
+            <fr:anchor>924</fr:anchor>
+            <fr:addr type="user">cs-0006</fr:addr>
+            <fr:route>cs-0006.xml</fr:route>
+            <fr:title text="Introduction to Programming Language Semantic">Introduction to Programming Language Semantic</fr:title>
+            <fr:taxon>Programming Language Theory</fr:taxon>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>3</fr:month>
+              <fr:day>11</fr:day>
+            </fr:date>
             <fr:authors></fr:authors>
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>The scanner&apos;s task is to transform a stream of characters into a stream 
-    of words in the input language. Each word must be classified into a 
-    <fr:strong>syntactic category</fr:strong>.
-    This note refers to <fr:link type="local" href="eng-compiler-2022.xml" addr="eng-compiler-2022" title="Engineering a Compiler">Engineering a compiler</fr:link></fr:p>
-            <fr:p>The first stage of a compiler is to perform <fr:strong>lexical analysis</fr:strong> by a scanner.
-    The parser or <fr:strong>syntax analyzer</fr:strong> will fit the stream of words to a grammatical 
-    model of the input language.</fr:p>
-            <fr:p>Scanner construction has a strong foundation in formal language theory.
-    Scanners are based on <fr:strong>recognizers</fr:strong> that simulate <fr:strong>deterministic finite automata</fr:strong>.
-    We can specify the lexical structure using a set of <fr:strong>regular expression</fr:strong>.</fr:p>
-            <fr:p>Each time a scanner recognizes a word, it will return a <fr:strong>token</fr:strong> that
-    contains the word (<fr:strong>lexeme</fr:strong>) and its syntactic category.
-    The scanner uses <fr:strong>microsyntax</fr:strong> (the lexical structure of a language) to 
-    find and classify words. <fr:strong>Keywords</fr:strong> are <fr:strong>identifiers</fr:strong> but have special meanings.</fr:p>
+            <fr:p>I decided to read one paper or article every week.
+    This week&apos;s topic is programming language semantics, refer to <fr:strong>Graham Huttons</fr:strong>&apos;s 
+    paper <fr:link type="local" href="pl-123.xml" addr="pl-123" title="Programming language semantics: It&apos;s easy as 1,2,3">Programming language semantics: It&apos;s easy as 1,2,3</fr:link>.</fr:p>
+            <fr:p><fr:strong>Semantics</fr:strong> is the general term for the study of meaning.
+    <fr:strong>Programming language semantics</fr:strong> gives precise mathematical meaning to programs.
+    We use a simple <fr:strong>arithmetic expression language</fr:strong> 
+    (including integers and addition only) to illustrate the basic concepts.
+    This is an example of <fr:strong>Occam&apos;s razor</fr:strong>, a philosophical principle that favours the 
+    simplest explanation for a phenomenon.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>654</fr:anchor>
-                <fr:addr type="machine">#368</fr:addr>
-                <fr:route>unstable-368.xml</fr:route>
-                <fr:title text="A first look at recognizers">A first look at recognizers</fr:title>
+                <fr:anchor>600</fr:anchor>
+                <fr:addr type="machine">#361</fr:addr>
+                <fr:route>unstable-361.xml</fr:route>
+                <fr:title text="Arithmetic Expressions">Arithmetic Expressions</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
                 <fr:authors></fr:authors>
               </fr:frontmatter>
-              <fr:mainmatter><fr:p>A char-by-char algorithm to recognize words is trivial.
-        Consider we want to recognize the word <fr:code>new</fr:code>.
-        We can write down the following code.</fr:p><fr:pre>    c &lt;- nextChar();
-    if (c == &apos;n&apos;) {
-        c &lt;- nextChar();
-        if (c == &apos;e&apos;) {
-            c &lt;- nextChar();
-            if (c == &apos;w&apos;) {
-                return newToken();
-            }
-        }
-    }
-    reportError();</fr:pre><fr:p>We can also represent the code fragment using the simple <fr:strong>transition diagram</fr:strong>.</fr:p>
+              <fr:mainmatter><fr:p>Now let&apos;s define our language of arithmetic expressions
+        built up from the set of integers and the operation of addition.
+        Use a <fr:strong>context-free</fr:strong> grammar.
+        <fr:tex display="block">             E:\equiv \mathbb {Z} | E+E         </fr:tex></fr:p><fr:p>An expression is either an integer value or the addition of two sub-expressions.
+        We assume that parentheses can be <fr:strong>freely</fr:strong> used as required to disambiguate expressions 
+        written in normal textual form. This grammar can be easily translated into 
+        a <fr:strong>Haskell</fr:strong> data type.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data Expr = Val Integer | Add Expr Expr</html:code></fr:pre>
+</fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>601</fr:anchor>
+                <fr:addr type="machine">#362</fr:addr>
+                <fr:route>unstable-362.xml</fr:route>
+                <fr:title text="Denotational Semantics">Denotational Semantics</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>Now we consider <fr:strong>denotational semantics</fr:strong>, 
+        where the terms in a language is defined using a 
+        <fr:strong>valuation function</fr:strong> that maps terms into values in an appropriate <fr:strong>semantic domain</fr:strong>.</fr:p><fr:p>Formally, for a language <fr:tex display="inline">T</fr:tex> of syntactic terms comprises
+        two components: a set <fr:tex display="inline">V</fr:tex> of <fr:strong>semantic values</fr:strong> and a 
+        <fr:strong>valuation function</fr:strong> of type <fr:tex display="inline">T\to  V</fr:tex> that maps terms to 
+        their meanings as values.
+        This function is written by enclosing a term in a <fr:strong>semantic brackets</fr:strong> 
+        (Also known as Oxford or Strachey brackets),
+        writing <fr:tex display="inline">\llbracket  t\rrbracket </fr:tex> for the value of term <fr:tex display="inline">t</fr:tex>.
+        In addition, the valuation function is required to be <fr:strong>compositional</fr:strong>,
+        the meaning  of a <fr:strong>compound term</fr:strong> is defined purely in terms of the meaning
+        of its sub-terms.</fr:p><fr:p>Compositionality aids understanding by ensuring that the semantics is modular
+        and supports the use of simple <fr:strong>equational reasoning</fr:strong> techniques for proving properties of
+        the semantics. When the set of semantic values is clear, a denotational semantics is often
+        identified with the underlying valuation function.</fr:p><fr:p>Taking <fr:tex display="inline">V</fr:tex> the Haskell type <fr:code>Integer</fr:code> of integers and define a valuation function
+        of type <fr:code>Expr -&gt; Integer</fr:code> (by following equations) we can define the denotational semantics of our expression language.
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Val} \space  n\rrbracket  &amp;= n \\                 \llbracket \text {Add} \space  e_1\space  e_2\rrbracket  &amp;= \llbracket  e_1\rrbracket  + \llbracket  e_2\rrbracket              \end {align*}         </fr:tex>
+        This definition satisfies the compositionality requirement obviously.
+        Note that the symbol <fr:tex display="inline">+</fr:tex> has two different purposes.
+        On the left side, it is a <fr:strong>syntactic</fr:strong> constructor for building terms,
+        while on the right side, it is a <fr:strong>semantic</fr:strong> operator for adding integers.</fr:p><fr:p>Compositionality simplifies reasoning because it allows us to 
+        replace <fr:strong>equals by equals</fr:strong>. For example,
+        <fr:tex display="block">             \frac {                 \llbracket  e_1\rrbracket  = n_1 \quad  \llbracket  e_2\rrbracket  = n_2             }{                 \llbracket \text {Add} \space  e_1\space  e_2\rrbracket  =                 \llbracket \text {Add} \space  n_1\space  n_2\rrbracket              }         </fr:tex>
+        we can freely replace the two argument expressions of an addition by other expressions with the same meanings, 
+        and the meaning of the whole addition will remain unchanged.
+        Using the definition of the valuation function, we can prove this property.
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add} \space  e_1\space  e_2\rrbracket  &amp;=                  \llbracket  e_1\rrbracket  + \llbracket  e_2\rrbracket  (\text {By definition of } \llbracket -\rrbracket ) \\                 &amp;= \llbracket  n_1\rrbracket  + \llbracket  n_2\rrbracket  (\text {Assumptions}) \\                  &amp;= \llbracket \text {Add} \space  n_1\space  n_2\rrbracket  (\text {By definition of } \llbracket -\rrbracket )             \end {align*}         </fr:tex></fr:p><fr:p>Given that terms and their semantics are built up <fr:strong>inductively</fr:strong>,
+        proofs about denotational semantics typically  proceed using <fr:strong>structural induction</fr:strong>.
+        Let us show that our expression semantics is <fr:strong>total</fr:strong>,
+        that is, for every expression <fr:tex display="inline">e</fr:tex> there is an integer <fr:tex display="inline">n</fr:tex> such that <fr:tex display="inline">\llbracket  e\rrbracket  = n</fr:tex>.</fr:p>
  
-  
-  <fr:figure><fr:resource hash="f4faee11facb506838a5d69a56ea34ed"><fr:resource-content><fr:img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPCEtLSBUaGlzIGZpbGUgd2FzIGdlbmVyYXRlZCBieSBkdmlzdmdtIDMuMi4yIC0tPgo8c3ZnIHZlcnNpb249JzEuMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycgd2lkdGg9JzIyMi41NDAyNjlwdCcgaGVpZ2h0PScyMy4zOTEzOTJwdCcgdmlld0JveD0nLTcyIC03MiAxNDguMzYwMTc5IDE1LjU5NDI2Mic+CjxzdHlsZSB0eXBlPSd0ZXh0L2Nzcyc+CjwhW0NEQVRBW0Bmb250LWZhY2V7Zm9udC1mYW1pbHk6Y21taTc7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQVVRQUFvQUFBQUFCZXdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRVFBQUFCZ2hZQjFJR050WVhBQUFBRTRBQUFBTXdBQUFFUUFnZ0ZHWjJ4NVpnQUFBV3dBQUFKQkFBQUNySTFQcVl0b1pXRmtBQUFEc0FBQUFDOEFBQUEyS2JZdDdHaG9aV0VBQUFQZ0FBQUFIZ0FBQUNRR1VRS0NhRzEwZUFBQUJBQUFBQUFRQUFBQUVBc1NBS1ZzYjJOaEFBQUVFQUFBQUFvQUFBQUtBYXdBem0xaGVIQUFBQVFjQUFBQUdBQUFBQ0FBQndCWmJtRnRaUUFBQkRRQUFBRFBBQUFCT1BOaEtxTndiM04wQUFBRkJBQUFBQXdBQUFBZ0FBTUFBSGphWTJCbU9zSTRnWUdWZ1lGcEZ0UFpmeUlNL1NDYThRM2pHd1pqUms0R0lHQmpnQU5HQmlTUVVseVdEcFJNWlNoblp2Z1A1RE5EcEpIVS9BY0tBd0QydGcyUWVOcGpZR0JnWW1CZ1lBWmlFU0RKQ0taWkdBeUFOQWNRZ3VSU0dmSVl5di8vUjdEK3ovay81WDhQV0MwWUFBRHpoZ3ZDQUhqYUpaRTliOU5nRklYZmUvM1YyTTVyTzNsdHAyM2lPblpxeDAzbGZOcW1jdUs0TkZXQmdxZ0FVWW1CZ1kyRmdhK05nYi9CeUIvZ1R5RDRKUXpzcUF0RHNjTjRwSE9Qem5NdVFYSitld04vNFRzSlNFcEk1b3NhT0RDMzFwQm1xUU1tMDBDVVlrZ3FsYVh6bVdWYm9pUks0ZHlxZFJhREgxUlMvRlUyQUNFZDY2dFdtY3ROWmJaWHZIL3hrcjluZHA0K3l5NEEvRHZIazgrejN2TFFTM2dZKzlhY05wUGZROU1wQ2xRRnZWUkFGV21rRDNsOGMvVjJ3N1JrTXVxc1RNcnZnaWhRbGprdXh5VFpKVUFtdHpmNEZYNlF4NFNzdVRSWkJDRUZpY0lZNHFwdWdaWmRRSlphdGxpWHBtQ0s5cXh1YlR0UWw1UzhJRnhzdWJLME91UTBwRndRZmhxcGlxaTFIVThSSkZrUmdSbU44R3dqMmRmbDhYTU9HYmJWcHN4MTNieUZoaXlDclJoK01id0RuS3BaRmlJYm5WeU9xTlJqUXNQc01qajlOb2x0M2V3Q2xERlRBRkU3ZGRvRFBFcjZPV0o4UDE2SytYNi9iM2k0WHJVUTdZbHR4Znc0VWhWM2NQZHMycHB6dUN6NnZROVhUS09nRzJUTCs0YzdnSi9rdWhJYVVMQXR1K0tzR0pORkdJVC9ZVm1OV3JOUkNNVXhCR0dRMVI3SnE1RDl5clhZZnNvQm05VUprZ1BiZ0dvSnJnQWI5M3VVNTVyYVNYbkllanQ2b0hIZ21Uc1JCaDY5M0V3ZXRnYWxIczNOc1lDeUhDbmNycnRzZzFHTjFLbG1XQitsd0xkMEZ6QS8yT3ZMQTRsWEhkWmM4WER4cmpBSHZpOEl1WFB1cnBTWkszWE1QbUEzQzc5cy9DZTg1MDFOeExiU3ZXb0h3OWZXQXlqV09tS0RUaTB6Rm1CNnFOSTRlaFhsQVFKcmpyck1PUG40YUI4T0NDSC9BSjNGV05FQUFBQjQybU5nWkdCZ0FHSzV5ZDN0OGZ3Mlh4bVlXUmhBNFBIK3I3TVE5UDh2elBLTXg0RmNEZ1lta0NnQVZnQU10UUI0Mm1OZ1pHQmdadmpQQUNUOUdBd1k5Sm5sR1lBaUtJQUZBREUrQWRzQUFBTEdBQUFDS3dCRkF0TUFNQU5PQURBQUFBQUFBRllBemdGV0FBQjQybU5nWkdCZ1lHR0lZR0JpQUFGR0JqUUFBQW1DQUdGNDJrMk1QVy9DTUJDR240Z0VpVEN3b0E0ZGlvZk9FUVFrdGk0TVRLeE1MSUJkbE1FMmNrSWtwS3BqZjNjdnJvZWU1TlB6ZnB5QmttOHloc21ZeFQxTVRpSHFqd3VtekJPUFJTMFNsN3p5em9nc240anp4a2ZpWEpKVDRvSVhQaE9QeGY5S1hMTGhaK2Z0L2RHWm9BNWVtK0N1MWpiYm93bHQ0NTFhVmN1bzk4YVpjTzZNVnBlbjBuM1Q5amVyMWxWZDFlendXTzQ4NkRBRUZBZHhkR1RIVlRKTHc1WmpkRnBoTDc1aVJjWHlYNzZYM01YT09mNmtwWFBoS1Z2VFM2T1ZmWk91WWkyWDlmQitBY3dyTC9rQWVOcGpZR2JBQ3dBQWZRQUUpIGZvcm1hdCgnd29mZicpO30KQGZvbnQtZmFjZXtmb250LWZhbWlseTpjbW1pMTA7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQU9vQUFvQUFBQUFCQlFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRU1BQUFCZ2hXNTByV050WVhBQUFBRTRBQUFBS1FBQUFEUUFEQUNtWjJ4NVpnQUFBV1FBQUFEb0FBQUE2S0tzVjhkb1pXRmtBQUFDVEFBQUFDOEFBQUEyS1MwdTYyaG9aV0VBQUFKOEFBQUFJQUFBQUNRRnpnRlhhRzEwZUFBQUFwd0FBQUFJQUFBQUNBVHFBRFZzYjJOaEFBQUNwQUFBQUFZQUFBQUdBSFFBQUcxaGVIQUFBQUtzQUFBQUZ3QUFBQ0FBQkFCS2JtRnRaUUFBQXNRQUFBRFVBQUFCUHBrUmRjZHdiM04wQUFBRG1BQUFBQkFBQUFBZ0FBTUFBWGphWTJCbUttV2N3TURLd01BMGkrbnNQeEdHZmhETitJYnhEWU14SXljREVMQXh3QUVqQXhKSUtTNUxCMG9HTXdRek0vd0g4cGtoMGtocS9nT0ZBZFBCRFFzQWVOcGpZR0JnWW1CZ1lBWmlFU0RKQ0taWkdCU0FOQXNRZ3ZqQi8vOUR5UC9yd0h3R0FGUVJCcThBQUFBQUFRQTEvK2dDbGdMU0FFZ0FBQUVIQmljbUp6WTNMZ0VIRGdFSEhnRWZBUjRCRng0QkZ3WVBBUVlIQmlZbkR3SWlKejhCUGdFek5oY0hCaFVXSHdFV056NEJOeTRCTHdFdUFTYzJQd0UyTnhZWFB3SVdBcFEzQXd3SkFnRUNBVkpCUzJZQ0FTY1dSVUl4RHcwakFnSkFHRWhpTGwwaU1nd0dDd0VlRGc4SEJnb0NCUU1FTXhRNE1FNW9Bd005SDIwcFFBSURSQTVKWDJnck1Rd0dEUUxJNFJjREFRY0xNVlZLQVFObFFpa3RCeElSRWhFS09UUmFUQnBFQkFFZkxEb05Bd3Q0T2pnS0FnMGJFQk5WSHd3WUFnTnhTVDBxQlIwTFNENWJSUTVCQXdGSk93MENBd0FBZU5wallHUmdZQURpWGVscnRzZnoyM3hsWUdaaEFJSEgrNy9PUXREL1h6Qk5ZN29FNUhJd01JRkVBWDNXRGV3QWVOcGpZR1JnWUdiNHo4REF3RlRHWVByL0h0TTBCcUFJQ21BQ0FHS0RCQ2tDZGdBQUFuUUFOUUFBQUFBQWRBQUFlTnBqWUdSZ1lHQmk4R1FBMFF4UUVna0FBQWUrQUU4QWVOcE5qckZxd3pBVVJZK3BZNmhieUpRTUhZcW1qTVoyK2dHRkRKbXlaaXdra1FndVNBcXlZOGdTK2dIOTZENHJHdnFFSGtmblhRa0JKWGN5cHNxWXh6NVZUaUduQjg5NFlaRzRrS1VTbDd5eDRva3NmeGJ6em1maW5GZStFczlZOHAyNEVQK1R1T1NEMzQyM2wrdGdndHA1YllJN1dkczE5ZDZFdnZOT05WWDlFRnZqVERnTVJxdmpUZW14NjhlelZldXFyVm8yZUN3WHJnd1lndnhzSjBaSGRweGtadWxvcU5sSDE4dkp5MFNKcThUK1Qyd2w0V0xxRUYvVGtqcHlrNjRaSmROTFAwdGFzWmE3N2JUL0FPQ0NNTDE0Mm1OZ1prQUdqQXhvQUFBQWpnQUYpIGZvcm1hdCgnd29mZicpO30KQGZvbnQtZmFjZXtmb250LWZhbWlseTpjbXI3O3NyYzp1cmwoZGF0YTphcHBsaWNhdGlvbi94LWZvbnQtd29mZjtiYXNlNjQsZDA5R1JnQUJBQUFBQUFUTUFBb0FBQUFBQlhBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUJQVXk4eUFBQUE5QUFBQUVNQUFBQmdoVXQwZTJOdFlYQUFBQUU0QUFBQUxBQUFBRFFBREFDR1oyeDVaZ0FBQVdRQUFBSUZBQUFDUkVwYnltWm9aV0ZrQUFBRGJBQUFBQzhBQUFBMktXb3V4bWhvWldFQUFBT2NBQUFBSHdBQUFDUUZSd0lMYUcxMGVBQUFBN3dBQUFBT0FBQUFEZ1hCQUhSc2IyTmhBQUFEekFBQUFBd0FBQUFNQVJZQm9HMWhlSEFBQUFQWUFBQUFHQUFBQUNBQUNBQThibUZ0WlFBQUEvQUFBQURKQUFBQk11MEtrZXh3YjNOMEFBQUV2QUFBQUJBQUFBQWdBQU1BQVhqYVkyQm1TbWFjd01ES3dNQTBpK25zUHhHR2ZoRE4rSWJ4RFlNeEl5Y0RFTEF4d0FFakF4SklLUzVMQjBvYU1CZ3pNL3dIOHBraDBraHEvZ09GQWNWYURMWUFlTnBqWUdCZ1ltQmdZQVppRVNESkNLWlpHQlNBTkFzUWd2akcvLzhEU1lQLy8vOWZCUE1aQUZGbEJvOTQya1dSeTI3VFVCQ0d6OHh4Yk9KS1NYT3huVGdYeDNadGl5VGs0c2cyTkdwQ0VHbEphV2hFbTBhb2dJb1FSUlFLRVNEV0NGV3c0RUdBQlR4QTM0RDNZSWxZSUNSV0ZDWXJWa2Yvek5ITTk4L1BrSFgrZnNjMGZtUTZhekVHcXBRQVNaUmNyd0dlRzdsUkQ2SXdLb05XQnE2R3BJS1FPcllyMGpkTnBTb3VZMXd5eXAxbmM5OG9uNHNqcVFxcHRmMjhyZjh3SittNElDakpZYzBhcDVkaXlPWFVGbXg0NCtyTTdndEMzNTVWeDU2M1ZiKzFNaERBZDRMWFo4ZlFHcmFmWG5xN2U2RUY5Vzd0K1BOcW8rOHpZSE1pKzRhZldKN2VsS2gyUVdsQ0VvS09IM3FwQkhnQm9ZVXF6SGhsNUQyY3pOZTlVWVhYZDdQbXk0NnloTy8vZk5VVmh3T2lvK2dvWitPd2dtb0RaQnJGQm94aGpMeWZaOHlSekNqc1F3OWRqOXlWZ1F6YW91dVJmM0tmb0cyaUZDME9FR0hNT05zSGxINFhydkR0c2J1WDkxUUFLeU5YRVY3Y2UvQ080N1E3cmQ3NDZTekpDVHc5TFlyaXI4TGh5UUZDTFVBbldTeUE0bzRlYzNoMGQrT29QclNHQUlKOE9iTmdpU2lIQkg1Z3F5UnNNUWkxeFRJNmVBTWtBbEsxN0NLVkh2aXFwaTc0aUVtaWpQNFhJanBDQXlCM1VSZEUwKzNrbEN4ZmQ0eHB5ZWZGZkZ2QStaZFhDRmNuMDl1QWI1NGNuSEN3bWdhQWJsbEhWbk9IdzNYWTQ2bGw1SkFzNWdibW9FbURUTEdwbFFEQzN1YjJXdnUra1Ruc1RaNXptRjZyRkN2NWxNUHJKY0ROT3pkMzJEKy9jRnFTQUFBQWVOcGpZR1JnWUFEaUE5OGFoT1A1YmI0eU1MTXdnTURqL1Y5bkllai9iNWd1TTYwRWNqa1ltRUNpQUhhRERja0FlTnBqWUdSZ1lHYjR6OERBd0hTWndaakJsRW1JQVNpQ0FwZ0FQZGNDV0FBQzB3QUFBa2NBTXdCd0FFRUFOd0FBQUFBQUFBQlNBSDRBeEFFaWVOcGpZR1JnWUdCbHNHWmdZZ0FCUmdZMEFBQUd5QUJGZU5vOWpERUx3akFRaGI5aUZhMkRnK0RnSU1FZlVMUUtMbTRPVHE0T2J0WUU2ZEJVMGxwMEVYKzYxeEM4a09PNzk5NGRrUEFob3F1SWllOWR4ZkltZ2Z1TW1RWWVpTDRJbkRCblNZOG9Ib215WUI4NFpzZ2xjSjhaZWVDQjZLL0FDVnUraDZwOFBCdmoxS25TeHRsYjZYWm40K3Fpc21xZHJycnhhS3h4MThab2xiK1Zib3U2dlpkcWsyWnB4b0dLa2dkUEdnd094VWtVN2RseUU4K3g0K3pubWtJOEs1azFLYXUvZXhUWCtzVFZYOUdTeUhsTDE3U3lVMHUvUzFheGtiMnMrejlaTWk1TkFBQUFlTnBqWUdaQUJvd01hQUFBQUk0QUJRPT0pIGZvcm1hdCgnd29mZicpO30KdGV4dC5mMCB7Zm9udC1mYW1pbHk6Y21taTEwO2ZvbnQtc2l6ZTo5Ljk2MjY0cHh9CnRleHQuZjEge2ZvbnQtZmFtaWx5OmNtbWk3O2ZvbnQtc2l6ZTo2Ljk3Mzg0OHB4fQp0ZXh0LmYyIHtmb250LWZhbWlseTpjbXI3O2ZvbnQtc2l6ZTo2Ljk3Mzg0OHB4fQpdXT4KPC9zdHlsZT4KPGcgaWQ9J3BhZ2UxJz4KPGcgc3Ryb2tlLW1pdGVybGltaXQ9JzEwJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgyLjE4MDA4OCwtNjQuMjAyODczKXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknPgo8ZyBmaWxsPScjMDAwJyBzdHJva2U9JyMwMDAnPgo8ZyBzdHJva2Utd2lkdGg9JzAuNCc+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC03NC40NTgyNywtMi42NjY2NyknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMi4xODAwODgsLTY0LjIwMjg3MylzY2FsZSgtMSwtMSknPgo8ZyBzdHJva2U9JyMwMDAnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMTEuNzU4NzQ2LC02NC4yMDI4NzMpc2NhbGUoMC45OTYyNjQsLTAuOTk2MjY0KSc+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC01LjMwOTA0LDAuMCknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMTEuNzU4NzQ2LC02NC4yMDI4NzMpc2NhbGUoLTEsLTEpJz4KPGcgZmlsbD0nIzAwMCc+CjxnIHN0cm9rZT0nbm9uZSc+Cjx0ZXh0IGNsYXNzPSdmMCcgeD0nMTEuNzU4NzQ2JyB5PSctNjQuMjAyODczJz5TPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjInIHg9JzE3Ljg2Nzc5MScgeT0nLTYyLjcwODQ5Mic+MDwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZT0nIzAwMCcgc3Ryb2tlLW1pdGVybGltaXQ9JzEwJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSg1NC44MjYzNjgsLTY0LjIwMjg3MylzY2FsZSgwLjk5NjI2NCwtMC45OTYyNjQpJz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTUuMzA5MDQsMC4wKSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSg1NC44MjYzNjgsLTY0LjIwMjg3MylzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YwJyB4PSc1NC44MjYzNjgnIHk9Jy02NC4yMDI4NzMnPlM8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMicgeD0nNjAuOTM1NDE0JyB5PSctNjIuNzA4NDkyJz4xPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlPScjMDAwJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDk3Ljg5Mzk5MSwtNjQuMjAyODczKXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtNS4zMDkwNCwwLjApJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKDk3Ljg5Mzk5MSwtNjQuMjAyODczKXNjYWxlKC0xLC0xKSc+CjxnIGZpbGw9JyMwMDAnPgo8ZyBzdHJva2U9J25vbmUnPgo8dGV4dCBjbGFzcz0nZjAnIHg9Jzk3Ljg5Mzk5MScgeT0nLTY0LjIwMjg3Myc+UzwvdGV4dD4KPHRleHQgY2xhc3M9J2YyJyB4PScxMDQuMDAzMDM2JyB5PSctNjIuNzA4NDkyJz4yPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlPScjMDAwJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDE0MC45NjE2MTMsLTY0LjIwMjg3MylzY2FsZSgwLjk5NjI2NCwtMC45OTYyNjQpJz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTUuMzA5MDQsMC4wKSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSgxNDAuOTYxNjEzLC02NC4yMDI4NzMpc2NhbGUoLTEsLTEpJz4KPGcgZmlsbD0nIzAwMCc+CjxnIHN0cm9rZT0nbm9uZSc+Cjx0ZXh0IGNsYXNzPSdmMCcgeD0nMTQwLjk2MTYxMycgeT0nLTY0LjIwMjg3Myc+UzwvdGV4dD4KPHRleHQgY2xhc3M9J2YyJyB4PScxNDcuMDcwNjU4JyB5PSctNjIuNzA4NDkyJz4zPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZS13aWR0aD0nMC4zOTk5OCc+CjxwYXRoIGQ9J00tNTUuMDI5MTEtLjE2NjY3SC0zMS44MjkxJyBmaWxsPSdub25lJy8+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0zMS42MjkxMiwtMC4xNjY2NyknPgo8ZyBzdHJva2UtZGFzaGFycmF5PSdub25lJyBzdHJva2UtZGFzaG9mZnNldD0nMC4wJz4KIDxnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCc+CiA8ZyBzdHJva2UtbGluZWpvaW49J3JvdW5kJz4KIDxwYXRoIGQ9J00tMi4wNzk4OCAyLjM5OTg2Qy0xLjY5OTg5IC45NTk5Mi0uODUzMTMgLjI3OTk4IDAgMEMtLjg1MzEzLS4yNzk5OC0xLjY5OTg5LS45NTk5Mi0yLjA3OTg4LTIuMzk5ODYnIGZpbGw9J25vbmUnLz4KIDwvZz4KIDwvZz4KIDwvZz4KPC9nPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtNDUuNzAwNzksMi4xODYwOCknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMi4xODAwODgsLTY0LjIwMjg3MylzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YxJyB4PScyLjE4MDA4OCcgeT0nLTY0LjIwMjg3Myc+bjwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZS13aWR0aD0nMC4zOTk5OCc+CjxwYXRoIGQ9J00tMTEuNzk5OTktLjE2NjY3SDExLjQwMDAyJyBmaWxsPSdub25lJy8+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDExLjYsLTAuMTY2NjcpJz4KPGcgc3Ryb2tlLWRhc2hhcnJheT0nbm9uZScgc3Ryb2tlLWRhc2hvZmZzZXQ9JzAuMCc+CiA8ZyBzdHJva2UtbGluZWNhcD0ncm91bmQnPgogPGcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc+CiA8cGF0aCBkPSdNLTIuMDc5ODggMi4zOTk4NkMtMS42OTk4OSAuOTU5OTItLjg1MzEzIC4yNzk5OCAwIDBDLS44NTMxMy0uMjc5OTgtMS42OTk4OS0uOTU5OTItMi4wNzk4OC0yLjM5OTg2JyBmaWxsPSdub25lJy8+CiA8L2c+CiA8L2c+CiA8L2c+CjwvZz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTEuODk3MDUsMi4xODYwOCknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMi4xODAwODgsLTY0LjIwMjg3MylzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YxJyB4PScyLjE4MDA4OCcgeT0nLTY0LjIwMjg3Myc+ZTwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZS13aWR0aD0nMC4zOTk5OCc+CjxwYXRoIGQ9J00zMS40MjkxNC0uMTY2NjdINTQuNjI5MTUnIGZpbGw9J25vbmUnLz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoNTQuODI5MTMsLTAuMTY2NjcpJz4KPGcgc3Ryb2tlLWRhc2hhcnJheT0nbm9uZScgc3Ryb2tlLWRhc2hvZmZzZXQ9JzAuMCc+CiA8ZyBzdHJva2UtbGluZWNhcD0ncm91bmQnPgogPGcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc+CiA8cGF0aCBkPSdNLTIuMDc5ODggMi4zOTk4NkMtMS42OTk4OSAuOTU5OTItLjg1MzEzIC4yNzk5OCAwIDBDLS44NTMxMy0uMjc5OTgtMS42OTk4OS0uOTU5OTItMi4wNzk4OC0yLjM5OTg2JyBmaWxsPSdub25lJy8+CiA8L2c+CiA8L2c+CiA8L2c+CjwvZz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoNDAuMjQyNDMsMi4xODYwOCknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMi4xODAwODgsLTY0LjIwMjg3MylzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YxJyB4PScyLjE4MDA4OCcgeT0nLTY0LjIwMjg3Myc+dzwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9zdmc+"></fr:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
    
-  \RequirePackage{tikz}
- \RequirePackage{amsmath}
- \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
-
- \definecolor{catccolor}{RGB}{255,244,138}
- \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
- \tikzstyle{catc}=[catccolor!60]
- \tikzstyle{catd}=[orange!40]
- \tikzstyle{cate}=[red!40]
- \tikzstyle{catf}=[blue!10]
- \tikzstyle{catg}=[green!25]
-
-
- \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
- \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
-
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
-   \path
-     coordinate (#1nw)
-     ++(#2,-#3) coordinate (#1se)
-     coordinate (#1sw) at (#1se -| #1nw)
-     coordinate (#1ne) at (#1nw -| #1se)
-   ;
-
-   \path[spath/save = #1north] (#1nw) to (#1ne);
-   \path[spath/save = #1west] (#1nw) to (#1sw);
-   \path[spath/save = #1east] (#1ne) to (#1se);
-   \path[spath/save = #1south] (#1sw) to (#1se);
- }
-
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>602</fr:anchor><fr:addr type="machine">#363</fr:addr><fr:route>unstable-363.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+        For the base case <fr:tex display="inline">e = \text {Val} \space  n</fr:tex>, we have <fr:tex display="inline">\llbracket  e\rrbracket  = n</fr:tex> trivially.
+        For the inductive case <fr:tex display="inline">e = \text {Add} \space  e_1\space  e_2</fr:tex>,
+        we can assume by induction that <fr:tex display="inline">\llbracket  e_1\rrbracket  = n_1</fr:tex> and <fr:tex display="inline">\llbracket  e_2\rrbracket  = n_2</fr:tex>
+        for some integers <fr:tex display="inline">n_1</fr:tex> and <fr:tex display="inline">n_2</fr:tex>. Then <fr:tex display="inline">\llbracket  e\rrbracket  = n_1 + n_2</fr:tex> by definition of the valuation function,
+        indicates this case is also true. Therefore, the semantics is total.
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ 
+<fr:p>The valuation function can be translated into a Haskell function</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval :: Expr -&gt; Integer
+eval (Val n) = n
+eval (Add x y) = eval x + eval y</html:code></fr:pre>
+<fr:p>More generally, a denotational semantics can be viewed as an evaluator (or <fr:strong>interpreter</fr:strong>).
+        Even <fr:strong>eval</fr:strong> is defined recursively, the semantics is compositional its behavior
+        can be understood  as simply replacing the <fr:strong>constructors</fr:strong> for expressions by other functions.
+        In this manner, a denotational semantics can also be viewed as an evaluation function that
+        is defined by <fr:strong>folding</fr:strong> over the syntax of the source language.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval :: Expr -&gt; Integer
+eval = fold id (+)</html:code></fr:pre>
+<fr:p>The fold operator captures the ideas of replacing constructors
+        of the language by other functions</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">fold :: (Integer -&gt; a) -&gt; (a -&gt; a -&gt; a) -&gt; Expr -&gt; a 
+fold f g (Val n) = f n
+fold f g (Add x y) = g (fold f g x) (fold f g y)</html:code></fr:pre>
+<fr:p>Note that the above semantics for expressions does not specify the order
+        of evaluation. If we do wish to make evaluation order explicit 
+        this requires the introduction of additional structure into the semantics,
+        named <fr:strong>abstract machines</fr:strong> (Discuss later).</fr:p></fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>603</fr:anchor>
+                <fr:addr type="machine">#364</fr:addr>
+                <fr:route>unstable-364.xml</fr:route>
+                <fr:title text="Small-Step Operational Semantics">Small-Step Operational Semantics</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>Another popular approach to semantics is the <fr:strong>operational approach</fr:strong>,
+        where the meaning of terms is defined using an <fr:strong>execution relation</fr:strong>
+        that specifies how terms can be executed in an appropriate machine model.
+        There are two basic forms of operational semantics:
+        <fr:ul><fr:li><fr:strong>small-step</fr:strong>: describes the individual steps of execution</fr:li>
+            <fr:li><fr:strong>big-step</fr:strong>: describes the overall results of execution</fr:li></fr:ul>
+        In this section we consider the small-step approach, 
+        which is also known as <fr:strong>structural operational semantics</fr:strong>.</fr:p><fr:p>Formally, a small-step operational semantics for a language <fr:tex display="inline">T</fr:tex> of syntactic terms
+        comprises two components:
+        a set <fr:tex display="inline">S</fr:tex> of <fr:strong>execution states</fr:strong> and 
+        a <fr:strong>transition relation</fr:strong> of type <fr:tex display="inline">S\to  S</fr:tex> that specifies how terms can be executed.
+        If there is a transition from state <fr:tex display="inline">s</fr:tex> to state <fr:tex display="inline">s&apos;</fr:tex> in a single execution step, we write <fr:tex display="inline">s\to  s&apos;</fr:tex>.</fr:p><fr:p>Arithmetic expressions have a simple small-step operational semantics,
+        given by taking <fr:tex display="inline">S</fr:tex> as the Haskell type. And we define transition relation 
+        on <fr:code>Expr</fr:code> by the following inference rules.
+        <fr:tex display="block">             \begin {align*}                 \frac {}{                     \text {Add}\space (\text {Val}\space  n_1)\space (\text {Val}\space  n_2)\to \text {Val}\space (n_1+n_2)                 } \\                 \frac {x\to  x&apos;}{\text {Add} \space  x\space  y\to \text {Add} \space  x&apos;\space  y}                  \quad                   \frac {y\to  y&apos;}{\text {Add} \space  x\space  y\to \text {Add} \space  x\space  y&apos;}             \end {align*}         </fr:tex></fr:p><fr:p>The first rule states that two values can be added to give a single value and is called a
+        <fr:strong>reduction</fr:strong> (or <fr:strong>contraction</fr:strong>) rule.
+        An expression that matches such a rule is termed a reducible expression or <fr:strong>redex</fr:strong>.
+        The last two rules are called <fr:strong>structural</fr:strong> (or <fr:strong>congruence</fr:strong>) rules as 
+        they specify how larger terms can be reduced.</fr:p><fr:p>The semantics is <fr:strong>non-deterministic</fr:strong> because an expression
+        may have more than one possible transition.
+        This is obviously from the structural rules, which allow either sub-expression to be reduced first.</fr:p><fr:p>We can now capture a the relation between the denotational and operational semantics,
+        namely that making a transition does not change the denotation of an expression.
+        <fr:tex display="block">             \frac {                 e\to  e&apos;             }{                 \llbracket e\rrbracket  = \llbracket e&apos;\rrbracket              }         </fr:tex>
+        This property can be proved by induction on the structure of the expression <fr:tex display="inline">e</fr:tex>.
+        Note that by using the &quot;equals by equals&quot; and the assumption <fr:tex display="inline">x\to  x&apos;</fr:tex> we can easily 
+        prove the inductive case. The details are omitted here as it involves quite a bit of 
+        case analysis. We will later see the <fr:strong>principle of rule induction</fr:strong>, which gives 
+        a simpler and more direct way to prove such properties.</fr:p><fr:p>Evaluation of an expression using the small-step semantics proceeds by a series of zero
+        or more transition steps. Formally we can write <fr:tex display="inline">e\to ^* e&apos;</fr:tex> to indicate that <fr:tex display="inline">e</fr:tex> can be
+        reduced to <fr:tex display="inline">e&apos;</fr:tex> in zero or more steps.
+        We can generate a transition tree that captures all possible execution
+        paths for an expression. Using the list comprehension we can define a 
+        function that returns the list of all expressions that can be reduced 
+        from a given expression <fr:tex display="inline">e</fr:tex> in a single transition.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">trans :: Expr -&gt; [Expr]
+trans (Val n) = []
+trans (Add (Val n) (Val m)) = [Val (n + m)]
+trans (Add x y) = [Add x&apos; y | x&apos; &lt;- trans x] ++ [Add x y&apos; | y&apos; &lt;- trans y]</html:code></fr:pre>
+<fr:p>We can define a Haskell datatype for transition trees 
+        and an execution function that converts expressions into 
+        transition trees.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data Tree a = Node a [Tree a]
+exec :: Expr -&gt; Tree Expr
+exec e = Node e [exec e&apos; | e&apos; &lt;- trans e]</html:code></fr:pre>
+<fr:p>Though <fr:code>exec</fr:code> is defined recursively, its behavior can be understood as simply applying
+        the identity function to give the root of the tree and the transition function to generate a 
+        list of residual expressions to be processed to give the subtrees.
+        A small-step semantics can be viewed as giving rise to an execution
+        function that is defined by <fr:strong>unfolding</fr:strong> to transition trees.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">exec :: Expr -&gt; Tree Expr
+exec = unfold id trans</html:code></fr:pre>
+<fr:p>The <fr:code>unfold</fr:code> function captures the idea of generating a tree 
+        from a seed value <fr:tex display="inline">x</fr:tex> by applying a function <fr:tex display="inline">f</fr:tex> to give the root 
+        and a function <fr:tex display="inline">g</fr:tex> to give a list of residual values to be processed
+        for the subtrees.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">unfold :: (t -&gt; a) -&gt; (t -&gt; [t]) -&gt; t -&gt; Tree a
+unfold f g x = Node (f x) [unfold f g x&apos; | x&apos; &lt;- g x]</html:code></fr:pre>
+<fr:p>The operational semantics corresponds to <fr:strong>unfolding to transition trees</fr:strong>,
+        while denotational semantics corresponds to <fr:strong>folding over syntax trees</fr:strong>.
+        Thinking about semantics in terms of recursion operators reveals a duality</fr:p><fr:p>The above semantics for expressions does not specify the order of evaluation.
+        But we can modify the inference rules to achieve this. Replace the second <fr:tex display="inline">\text {Add}</fr:tex> 
+        rule by the following rule ensures the first argument of addition is 
+        always reduced first.
+        <fr:tex display="block">             \frac {                 y\to  y&apos;             }{                 \text {Add} (\text {Val}\space  n)\space  y \to  \text {Add} (\text {Val}\space  n)\space  y&apos;             }         </fr:tex></fr:p></fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>604</fr:anchor>
+                <fr:addr type="machine">#365</fr:addr>
+                <fr:route>unstable-365.xml</fr:route>
+                <fr:title text="Rule induction">Rule induction</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>For denotational semantics we have structural induction,
+        dual to this, for operational semantics we have <fr:strong>rule induction</fr:strong>.
+        This allows us to perform proofs by considering the structure of the rules 
+        that are used to define the semantics.</fr:p><fr:p>We introduce the idea of rule induction using a simple numeric example.
+        We begin by inductively defining a set of natural numbers.
+        <fr:tex display="block">                 \frac {}{0\in \mathbb {N}} \quad                   \frac {n\in \mathbb {N}}{n+1\in \mathbb {N}}         </fr:tex>
+        This is the standard definition of the natural numbers using peano axioms,
+        where the first rule states that zero is a natural number and the second rule states that
+        if <fr:tex display="inline">n</fr:tex> is a natural number then so is <fr:tex display="inline">n+1</fr:tex>.</fr:p><fr:p>For the inductively defined set <fr:tex display="inline">\mathbb {N}</fr:tex>. The principle of rule induction
+        states that in order to prove a property <fr:tex display="inline">P(n)</fr:tex> for all natural numbers <fr:tex display="inline">n</fr:tex>,
+        it suffices to prove that <fr:tex display="inline">P(0)</fr:tex> holds and that if <fr:tex display="inline">P(n)</fr:tex> holds then <fr:tex display="inline">P(n+1)</fr:tex> holds.
+        <fr:tex display="block">             \frac {                 P(0)\quad \forall  n\in \mathbb {N}. P(n)\to  P(n+1)             }{                 \forall  n\in \mathbb {N}. P(n)             }         </fr:tex>
+        Notice that this is the well-known <fr:strong>principle of mathematical induction</fr:strong>.</fr:p><fr:p>The concept of rule induction can easily be generalised to multiple base and 
+        inductive cases, to rule with multiple preconditions and so on.
+        For the small-step semantics of expressions, we have one base case and two inductive cases.
+        Hence if we want to show that some property <fr:tex display="inline">P(e,e&apos;)</fr:tex> on pairs of expression holds for 
+        all transition <fr:tex display="inline">e\to  e&apos;</fr:tex>, we can use rule induction:
+        <fr:tex display="block">             \frac {                 \begin {align*}                     P(\text {Add}\space (\text {Val}\space  n_1)\space (\text {Val}\space  n_2),\text {Val}\space (n_1+n_2)) \\                     \forall  x\to  x&apos;. P(x,x&apos;)\to  P(\text {Add}\space  x\space  y,\text {Add}\space  x&apos;\space  y) \\                     \forall  y\to  y&apos;. P(y,y&apos;)\to  P(\text {Add}\space  x\space  y,\text {Add}\space  x\space  y&apos;)                 \end {align*}             }{                 \forall  e\to  e&apos;. P(e,e&apos;)             }         </fr:tex>
+        We write <fr:tex display="inline">\forall  x\to  y.P(x,y)</fr:tex> as shorthand for 
+        <fr:tex display="block">\forall  x,y.x\to  y\Rightarrow  P(x,y)</fr:tex>. Now we give the proof 
+        of the property <fr:tex display="inline">\llbracket e\rrbracket  = \llbracket e&apos;\rrbracket </fr:tex> for all transitions <fr:tex display="inline">e\to  e&apos;</fr:tex>.
+        <fr:tex display="block">             \forall  e\to  e&apos;. \llbracket e\rrbracket  = \llbracket e&apos;\rrbracket          </fr:tex></fr:p>
+ 
    
-  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
- \usetikzlibrary{matrix,arrows}
- \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
- \usetikzlibrary{decorations.pathreplacing}
- \usetikzlibrary{decorations.pathmorphing}
- \usetikzlibrary{decorations.markings}
-
- \tikzset{
-   desc/.style={sloped, fill=white,inner sep=2pt},
-   upright desc/.style={fill=white,inner sep=2pt},
-   pullback/.style = {
-     append after command={
-       \pgfextra{
-         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
-       }
-     }
-   },
-   pullback 45/.style = {
-     append after command={
-       \pgfextra{
-         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
-       }
-     }
-   },
-   ne pullback/.style = {
-     append after command={
-       \pgfextra{
-         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
-       }
-     }
-   },
-   sw pullback/.style = {
-     append after command={
-       \pgfextra{
-         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
-       }
-     }
-   },
-   dotted pullback/.style = {
-     append after command={
-       \pgfextra{
-         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
-       }
-     }
-   },
-   muted pullback/.style = {
-     append after command={
-       \pgfextra{
-         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
-       }
-     }
-   },
-   pushout/.style = {
-     append after command={
-       \pgfextra{
-         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
-       }
-     }
-   },
-   between/.style args={#1 and #2}{
-     at = ($(#1)!0.5!(#2)$)
-   },
-   diagram/.style = {
-     on grid,
-     node distance=2cm,
-     commutative diagrams/every diagram,
-     line width = .5pt,
-     every node/.append style = {
-       commutative diagrams/every cell,
-     }
-   },
-   fibration/.style = {
-     -{Triangle[open]}
-   },
-   etale/.style = {
-     -{Triangle[open]}
-   },
-   etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
-   },
-   opfibration/.style = {
-     -{Triangle}
-   },
-   lies over/.style = {
-     |-{Triangle[open]}
-   },
-   op lies over/.style = {
-     |-{Triangle}
-   },
-   embedding/.style = {
-     {right hook}-&gt;
-   },
-   open immersion/.style = {
-     {right hook}-{Triangle[open]}
-   },
-   closed immersion/.style = {
-     {right hook}-{Triangle}
-   },
-   closed immersion*/.style = {
-     {left hook}-{Triangle}
-   },
-   embedding*/.style = {
-     {left hook}-&gt;
-   },
-   open immersion*/.style = {
-     {left hook}-{Triangle[open]}
-   },
-   exists/.style = {
-     densely dashed
-   },
- }
-
- \newlength{\dontworryaboutit}
-
- \tikzset{
-   inline diagram/.style = {
-     commutative diagrams/every diagram,
-     commutative diagrams/cramped,
-     line width = .5pt,
-     every node/.append style = {
-       commutative diagrams/every cell,
-       anchor = base,
-       inner sep = 0pt
-     },
-     every path/.append style = {
-       outer xsep = 2pt
-     }
-   }
- }
-
- \tikzset{
-   square/nw/.style = {},
-   square/ne/.style = {},
-   square/se/.style = {},
-   square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
-   square/north/node/.style = {above},
-   square/south/node/.style = {below},
-   square/west/node/.style = {left},
-   square/east/node/.style = {right},
- }
-
- \ExplSyntaxOn
-
- \bool_new:N \l_jon_glue_west
-
- \keys_define:nn { jon-tikz/diagram } {
-   nw .tl_set:N = \l_jon_tikz_diagram_nw,
-   sw .tl_set:N = \l_jon_tikz_diagram_sw,
-   ne .tl_set:N = \l_jon_tikz_diagram_ne,
-   se .tl_set:N = \l_jon_tikz_diagram_se,
-
-   width .tl_set:N = \l_jon_tikz_diagram_width,
-   height .tl_set:N = \l_jon_tikz_diagram_height,
-
-   north .tl_set:N = \l_jon_tikz_diagram_north,
-   south .tl_set:N = \l_jon_tikz_diagram_south,
-   west .tl_set:N = \l_jon_tikz_diagram_west,
-   east .tl_set:N = \l_jon_tikz_diagram_east,
-
-   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
-   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
-   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
-   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
-
-   glue .choice:,
-   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
-
-   glue~target .tl_set:N = \l_jon_tikz_glue_target,
-
-   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
-   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
-   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
-   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
-   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
-   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
-   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
-   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
-
-   draft .meta:n = {
-     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
-     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
-     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
-     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
-     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
-     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
-     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
-     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
-   }
- }
-
- \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
- \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
-
-
- \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
-   \texttt{\textcolor{red}{#1}}
- }
-
- \keys_set:nn { jon-tikz/diagram } {
-   glue~target = {},
- }
-
-
- \cs_new:Nn \__jon_tikz_render_square:nn {
-   \group_begin:
-   \keys_set:nn {jon-tikz/diagram} {#2}
-   \bool_if:nTF \l_jon_glue_west {
-     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
-     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
-     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
-     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
-     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
-   } {
-     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
-     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
-     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
-
-     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
-     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
-     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
-     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
-     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
-   }
-   \group_end:
- }
-
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
-   \__jon_tikz_render_square:nn {#1} {#2}
- }
-
-
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
-   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
-     \__jon_tikz_render_square:nn {#1} {#3}
-   \end{tikzpicture}
- }
-
- \ExplSyntaxOff
-
-  </fr:resource-source><fr:resource-source type="latex" part="body">
-        \begin {tikzcd}
-            {S_0} &amp; {S_1} &amp; {S_2} &amp; {S_3}
-            \arrow [&quot;n&quot;, from=1-1, to=1-2]
-            \arrow [&quot;e&quot;, from=1-2, to=1-3]
-            \arrow [&quot;w&quot;, from=1-3, to=1-4]
-        \end {tikzcd}
-    </fr:resource-source></fr:resource></fr:figure>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>605</fr:anchor><fr:addr type="machine">#366</fr:addr><fr:route>unstable-366.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+        The proof consists of three parts: the base case, the reduction rule and the structural rule.
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space (\text {Val}\space  n)\space (\text {Val}\space  m)\rrbracket                  &amp;= \llbracket \text {Val}\space  n\rrbracket  + \llbracket \text {Val}\space  m\rrbracket  \\                 &amp;= n + m \\                 &amp;= \llbracket \text {Val}\space (n+m)\rrbracket              \end {align*}         </fr:tex>
+        and
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space  x\space  y\rrbracket                  &amp;= \llbracket x\rrbracket  + \llbracket y\rrbracket   \\                 &amp;= \llbracket x&apos;\rrbracket  + \llbracket y\rrbracket  (\text {By assumption }\llbracket x\rrbracket =\llbracket x&apos;\rrbracket ) \\                 &amp;= \llbracket \text {Add}\space  x&apos;\space  y\rrbracket              \end {align*}         </fr:tex>
+        and 
+        <fr:tex display="block">             \begin {align*}                 \llbracket \text {Add}\space  x\space  y\rrbracket                  &amp;= \llbracket x\rrbracket  + \llbracket y\rrbracket   \\                 &amp;= \llbracket x\rrbracket  + \llbracket y&apos;\rrbracket  (\text {By assumption }\llbracket y\rrbracket =\llbracket y&apos;\rrbracket ) \\                  &amp;= \llbracket \text {Add}\space  x\space  y&apos;\rrbracket              \end {align*}         </fr:tex>
+    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
  
 </fr:mainmatter>
               <fr:backmatter></fr:backmatter>
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>655</fr:anchor>
+                <fr:anchor>606</fr:anchor>
+                <fr:addr type="machine">#367</fr:addr>
+                <fr:route>unstable-367.xml</fr:route>
+                <fr:title text="Contextual Semantics">Contextual Semantics</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>The small-step semantics for expressions above has one basic reduction rule 
+        for adding values and two structural rules that allow addition to be performed
+        in larger expressions. Separating these two kinds of rules results 
+        the notion of <fr:strong>contextual semantics</fr:strong> (or <fr:strong>reduction semantics</fr:strong>).</fr:p><fr:p>Informally, a context in this setting is a term with a &quot;<fr:strong>hole</fr:strong>&quot;, 
+        usually written as <fr:tex display="inline">[-]</fr:tex>, which can be filled with another term later.
+        In a contextual semantics, the hole represents the location where a <fr:strong>single</fr:strong>
+        basic step of execution may take place within a term.</fr:p><fr:p>Consider the following transition in our small-step semantics.
+        <fr:tex display="block">             (1+2)+(3+4)\to  3+(3+4)         </fr:tex>
+        The addition is performed on the left side.
+        We say that we can perform the basic step <fr:tex display="inline">1+2\to 3</fr:tex> in the 
+        <fr:strong>context</fr:strong> <fr:tex display="inline">[-]+(3+4)</fr:tex> where <fr:tex display="inline">[-]</fr:tex> implies the location of the
+        addition takes place.</fr:p><fr:p>The language <fr:tex display="inline">C</fr:tex> of contexts of arithmetic expressions can be formally defined by 
+        <fr:tex display="block">             C:\equiv [-]|C+E|E+C         </fr:tex>
+        As previously, we can define a Haskell datatype for contexts.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data Cont = Hole | Add Cont Expr | Add Expr Cont</html:code></fr:pre>
+<fr:p>The kind of context is known as &quot;outside-in&quot; as locating the hole involves
+        navigating from the outside of the context inwards. To fill the hole in 
+        a context <fr:tex display="inline">c</fr:tex> with an expression <fr:tex display="inline">e</fr:tex> we write <fr:tex display="inline">c\space [e]</fr:tex>:
+        <fr:tex display="block">             \begin {align*}                 \text {Hole}\space [e] &amp;= e \\                 (\text {AddL}\space c\space r)\space [e] &amp;= \text {Add}\space  (c\space [e])\space  r \\                 (\text {AddR}\space l\space c)\space [e] &amp;= \text {Add}\space  l\space (c\space [e])             \end {align*}         </fr:tex></fr:p><fr:p>Use the idea of hole filling we can redefine the small-step semantics
+        for expressions in contextual style.
+        <fr:tex display="block">             \frac {}{                 \text {Add}\space (\text {Val}\space  n_1)\space (\text {Val}\space  n_2)\rightarrowtail  \text {Val}\space (n_1+n_2)             } \quad              \frac {                 e \rightarrowtail  e&apos;             }{                 c\space  [e] \to  c\space  [e&apos;]             }         </fr:tex>
+        This first rule defines a reduction relation <fr:tex display="inline">\rightarrowtail </fr:tex> that captures the basic behavior of addition,
+        while the second defines a transition relation <fr:tex display="inline">\to </fr:tex> that allows the first rule to be applied in 
+        any context.</fr:p><fr:p>We have now refactored the small-step semantics into a single reduction rule and a single structural rule.
+        If we subsequently want to extend the language with other features,
+        it only requires adding new reduction rules and extending the notion of contexts
+        but not need to adding new structural rules.</fr:p><fr:p>Now we define the hole filling function in Haskell.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">fill :: Cont -&gt; Expr -&gt; Expr
+fill Hole e = e
+fill (AddL c r) e = Add (fill c e) r
+fill (AddR l c) e = Add l (fill c e)</html:code></fr:pre>
+<fr:p>The dual operation which splits an expression into all possible pairs of 
+    contexts and expressions can be defined:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">split :: Expr -&gt; [(Cont,Expr)]
+split e = (Hole, e) : case e of
+Val n -&gt; []
+Add l r -&gt; [(AddL c r, x) | (c, x) &lt;- split l] ++ 
+            [(AddR l c, x) | (c, x) &lt;- split r]</html:code></fr:pre>
+<fr:p>A pair <fr:tex display="inline">(c,x)</fr:tex> comprising a context #[c] and an expression <fr:tex display="inline">x</fr:tex> is
+        an element of the list returned by <fr:code>split e</fr:code> precisely when <fr:code>fill c x = e</fr:code>.
+        The contextual semantics can be translated into Haskell function that returns
+        the lists of all expressions that can be reached by performing a single reduction step.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">reduce :: Expr -&gt; [Expr]
+reduce (Add (Val n) (Val m)) = [Val (n + m)]
+reduce _ = []</html:code></fr:pre>
+<fr:p>or a single transition step.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">trans :: Expr -&gt; [Expr]
+trans e = [fill c x&apos; | (c, x) &lt;- split e, x&apos; &lt;- reduce x]</html:code></fr:pre>
+<fr:p>This function splits the given expression into all possible context 
+        and expression pairs, then considering any reduction that can made by each component
+        expression, and finally filling the hole in the context with the reduced expression.</fr:p><fr:p>Notice that the contextual semantics does not specify an evaluation
+        order for addition and is non-deterministic. We can modify the language
+        of contexts to achieve so.
+        <fr:tex display="block">             C:\equiv [-]|C+E|\mathbb {Z}+C         </fr:tex>
+        This version of the semantics also satisfies a <fr:strong>unique decomposition property</fr:strong>,
+        that is, any expression <fr:tex display="inline">e</fr:tex> that is not a value can be uniquely decomposed into the 
+        form <fr:tex display="inline">e=c\space [x]</fr:tex> for some context <fr:tex display="inline">c</fr:tex> and reducible expression <fr:tex display="inline">x</fr:tex>. This can be 
+        proved by induction on the expression <fr:tex display="inline">e</fr:tex>.</fr:p><fr:p>Contexts are related to a number of other important concepts in
+        programming and semantics, including the use of continuations to make control flow
+        explicit (John C. Reynolds 1972).</fr:p></fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>607</fr:anchor>
+                <fr:addr type="machine">#368</fr:addr>
+                <fr:route>unstable-368.xml</fr:route>
+                <fr:title text="Big-step Semantics">Big-step Semantics</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter><fr:p>Big-step semantics is also known as <fr:strong>natural semantics</fr:strong>,
+        which focus on large execution step. For a language T of syntactic terms
+        comprises two components: a set <fr:tex display="inline">V</fr:tex> of values and 
+        an evaluation relation between <fr:tex display="inline">T</fr:tex> and <fr:tex display="inline">V</fr:tex> that relates each term 
+        to all values that can be reached by fully executing the term.
+        If a term <fr:tex display="inline">t</fr:tex> and a value <fr:tex display="inline">v</fr:tex> are related, we say that <fr:tex display="inline">t</fr:tex> can evaluate to <fr:tex display="inline">v</fr:tex> 
+        and write this as <fr:tex display="inline">t\Downarrow  v</fr:tex></fr:p><fr:tex display="block">         \frac {}{             \text {Val}\space  n\Downarrow  n         }         \quad          \frac {             x\Downarrow  n\quad  y\Downarrow  m          }{             \text {Add}\space  x\space  y\Downarrow  n+m         }     </fr:tex><fr:p>The Haskell function definition is similar to the small-step semantics,
+        by using the list comprehension.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval :: Expr -&gt; [Integer]
+eval (Val n) = [n]
+eval (Add x y) = [n + m | n &lt;- eval x, m &lt;- eval y]</html:code></fr:pre>
+<fr:p>This is similar to denotational semantics but using inference rules
+        rather than a functional manner.
+        However, there is no need for a big-step semantics to be compositional.
+        Formally, the denotational and big-step semantics for the expression language
+        are equivalent, which can be captured by the following property:
+        <fr:tex display="block">             \llbracket e\rrbracket  = n \iff  e\Downarrow  n         </fr:tex>
+        This is easily verified by induction.</fr:p></fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>608</fr:anchor>
                 <fr:addr type="machine">#369</fr:addr>
                 <fr:route>unstable-369.xml</fr:route>
-                <fr:title text="A formalism for recognizers">A formalism for recognizers</fr:title>
+                <fr:title text="Abstract Machine">Abstract Machine</fr:title>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>3</fr:month>
+                  <fr:day>11</fr:day>
+                </fr:date>
                 <fr:authors></fr:authors>
               </fr:frontmatter>
               <fr:mainmatter>
-                <fr:p>Transition diagrams can be viewed as formal mathematics objects called <fr:strong>finite automata</fr:strong>.</fr:p>
+                <fr:p>All the exmaples we have meet focused on explaining semantic ideas,
+        now we show how language of integers and addition can also be used to help 
+        discover semantic ideas.
+        We show how it can be used as the basis for discovering how to implement 
+        an <fr:strong>abstract machine</fr:strong>.</fr:p>
+                <fr:p>Remember the evaluation order problem we meet before,
+        if we want to make evaluation order explicit, we can introduce additional
+        structure into the semantics by constructing an abstract machine.</fr:p>
+                <fr:p>Formally, an abstract machine is usually deifned by a set of syntactic rewrite ruless 
+        that make explicit how each step of evaluation proceeds.
+        This section we show how an abstract machine for our example language can 
+        be systematically derived from the evaluation function using steps
+        based on two important semantic concepts, <fr:strong>continuations</fr:strong> and <fr:strong>defunctionalisation</fr:strong>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>656</fr:anchor>
-                    <fr:addr type="user">def-003M</fr:addr>
-                    <fr:route>def-003M.xml</fr:route>
-                    <fr:title text="Finite Automata">Finite Automata</fr:title>
-                    <fr:taxon>Definition</fr:taxon>
+                    <fr:anchor>609</fr:anchor>
+                    <fr:addr type="machine">#370</fr:addr>
+                    <fr:route>unstable-370.xml</fr:route>
+                    <fr:title text="Add Continuations">Add Continuations</fr:title>
+                    <fr:date>
+                      <fr:year>2024</fr:year>
+                      <fr:month>3</fr:month>
+                      <fr:day>11</fr:day>
+                    </fr:date>
                     <fr:authors></fr:authors>
                   </fr:frontmatter>
-                  <fr:mainmatter>
-                    <fr:p>A <fr:strong>finite automata (FA)</fr:strong> is a five-tuple <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> where
-    <fr:ul><fr:li><fr:tex display="inline">S</fr:tex> is the finite set of states in the recognizer including <fr:tex display="inline">s_e</fr:tex>,
-            the error state.</fr:li>
-        <fr:li><fr:tex display="inline">\Sigma </fr:tex> is the finite alphabet used by the recognizer. 
-            <fr:tex display="inline">\Sigma </fr:tex> is the union of the edge labels in the transition diagram.</fr:li>
-        <fr:li><fr:tex display="inline">\delta (s, c)</fr:tex> is the recognizer&apos;s transition function, which 
-            maps each state <fr:tex display="inline">s\in  S</fr:tex> and character <fr:tex display="inline">c\in \Sigma </fr:tex> into some next state.
-            In state <fr:tex display="inline">s_i</fr:tex> with input character <fr:tex display="inline">c</fr:tex> the FA takes the transition
-            <fr:tex display="inline">s_i \xrightarrow {c} \delta (s_i, c)</fr:tex>.</fr:li>
-        <fr:li><fr:tex display="inline">s_0\in  S</fr:tex> is the initial state of the recognizer.</fr:li>
-        <fr:li><fr:tex display="inline">S_A</fr:tex> is the set of accepting states, <fr:tex display="inline">S_A\subseteq  S</fr:tex>.</fr:li></fr:ul>
-    <fr:tex display="inline">\delta </fr:tex> is only partially defined. For all other combinations of the 
-    state <fr:tex display="inline">s_i</fr:tex> and input char <fr:tex display="inline">c</fr:tex> we can define <fr:tex display="inline">\delta (s_i,c)=s_e</fr:tex>.</fr:p>
-                  </fr:mainmatter>
+                  <fr:mainmatter><fr:p>We want to make the order of evaluation explicit in the semantics itself.
+            A standard technique for achieving this aim is to rewrite the semantics
+            in <fr:strong>continuation-passing style</fr:strong>.</fr:p><fr:p>In our setting, a continuation is a function that will be applied to the result of an
+            evaluation. Formally, for our semantics <fr:code>eval :: Expr -&gt; Integer</fr:code>, a continuation
+            is a function of type <fr:code>Integer -&gt; Integer</fr:code> that will be applied to the resulting integer
+            to give a new integer. (This type can be generalized to <fr:code>Integer -&gt; a</fr:code>, but we do not need now)
+            We capture the notion of such a continuation using the following type declaration:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">type Continuation = Integer -&gt; Integer</html:code></fr:pre>
+<fr:p>We now define a new semantics <fr:tex display="inline">\text {eval}&apos;</fr:tex>, which takes an expression and returns
+            an integer as previously but also takes a continuation as an additional argument,
+            which is applied to the result of evaluating the expression.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos; :: Expr -&gt; Continuation -&gt; Integer</html:code></fr:pre>
+<fr:p>The behavior of <fr:tex display="inline">\text {eval}&apos;</fr:tex> should be:</fr:p><fr:tex display="block">             \text {eval}&apos;\space  e\space  c = \text {c (eval e)}         </fr:tex><fr:p>We want to calculate a definition that satisfies the specification.
+            Using structural induction on the expression <fr:tex display="inline">e</fr:tex>, we construct 
+            the term <fr:tex display="inline">\text {eval}&apos;\space  e\space  c</fr:tex> by gradually removing the reference to <fr:code>eval</fr:code>.
+            For the base case, <fr:tex display="inline">e = \text {Val}\space  n</fr:tex> we have</fr:p><fr:tex display="block">             \begin {align*}                 \text {eval}&apos;\space (\text {Val}\space  n)\space  c                  &amp;= c\space  (\text {eval}\space  (\text {Val}\space  n)) \\                 &amp;= c\space  n             \end {align*}         </fr:tex><fr:p>For the inductive case, <fr:tex display="inline">e = \text {Add}\space  x\space  y</fr:tex> we begin in the same way:</fr:p><fr:tex display="block">             \begin {align*}                 \text {eval}&apos;\space (\text {Add}\space  x\space  y)\space  c                  &amp;= c\space  (\text {eval}\space  (\text {Add}\space  x\space  y)) \\                 &amp;= c\space  (\text {eval}\space  x + \text {eval}\space  y)             \end {align*}         </fr:tex><fr:p>However, no further definition can be applied now, so we consider the inductive hypothesis:
+            Forall <fr:tex display="inline">c&apos;</fr:tex> and <fr:tex display="inline">c&apos;&apos;</fr:tex> we have <fr:tex display="inline">\text {eval}&apos;\space  x\space  c&apos; = c&apos;(\text {eval}\space  x)</fr:tex> and
+            <fr:tex display="inline">\text {eval}&apos;\space  y\space  c&apos;&apos; = c&apos;&apos;(\text {eval}\space  y)</fr:tex>. This can readily be achieved by 
+            abstracting over <fr:tex display="inline">\text {eval}\space  x</fr:tex> and <fr:tex display="inline">\text {eval}\space  y</fr:tex> using lambda abstraction.</fr:p><fr:tex display="block">             \begin {align*}                 &amp; c\space  (\text {eval}\space  x + \text {eval}\space  y) \\                 =&amp; (\lambda  n\to  c\space (n+\text {eval}\space  y)) \\                 =&amp; \text {eval}&apos;\space  x\space  (\lambda  n\to  c\space (n+\text {eval}\space  y)) \\                  =&amp; \text {eval}&apos;\space  x\space  (\lambda  n\to  (\lambda  m\to  c\space (n+m))(\text {eval}\space  y)) \\                  =&amp; \text {eval}&apos;\space  x\space  (\lambda  n\to  \text {eval}&apos;\space  y\space  (\lambda  m\to  c\space (n+m)))             \end {align*}         </fr:tex><fr:p>The final term does not refer to <fr:tex display="inline">\text {eval}</fr:tex> now.
+            In summary we have calculated the following definition</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos; :: Expr -&gt; Continuation -&gt; Integer
+eval&apos; (Val n) c = c n 
+eval&apos; (Add x y) c = eval&apos; x (\n -&gt; eval&apos; y (\m -&gt; c (n + m)))</html:code></fr:pre>
+<fr:p>Our original semantics can be recovered from the new semantics by
+            using the identity continuation <fr:tex display="inline">\lambda  n \to  n</fr:tex></fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval e = eval&apos; e (\n -&gt; n)</html:code></fr:pre>
+</fr:mainmatter>
                   <fr:backmatter></fr:backmatter>
                 </fr:tree>
-                <fr:p>An FA <fr:strong>accpets</fr:strong> a string <fr:tex display="inline">x</fr:tex> and iff starting in <fr:tex display="inline">s_0</fr:tex>,
-        the sequence of chars in  <fr:tex display="inline">x</fr:tex> takes the FA to an accepting state
-        when the entire string has been consumed.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>657</fr:anchor>
-                    <fr:addr type="user">def-003N</fr:addr>
-                    <fr:route>def-003N.xml</fr:route>
-                    <fr:title text="Accepts">Accepts</fr:title>
-                    <fr:taxon>Definition</fr:taxon>
+                    <fr:anchor>610</fr:anchor>
+                    <fr:addr type="machine">#371</fr:addr>
+                    <fr:route>unstable-371.xml</fr:route>
+                    <fr:title text="Defunctionalise">Defunctionalise</fr:title>
+                    <fr:date>
+                      <fr:year>2024</fr:year>
+                      <fr:month>3</fr:month>
+                      <fr:day>11</fr:day>
+                    </fr:date>
                     <fr:authors></fr:authors>
                   </fr:frontmatter>
-                  <fr:mainmatter>
-                    <fr:p>If the string <fr:tex display="inline">x</fr:tex> consists characters <fr:tex display="inline">x_1, x_2, \ldots , x_n</fr:tex> then the
-    FA <fr:tex display="inline">(S,\Sigma ,\delta ,s_0,S_A)</fr:tex> <fr:strong>accpets</fr:strong> <fr:tex display="inline">x</fr:tex> iff there is a sequence
-    <fr:tex display="block">         \delta (             \delta (                 \dots \delta (\delta (                     \delta (s_0,x_1),x_2),x_3)\dots ,                 x_{n-1}             )             ,x_n         )\in  S_A     </fr:tex></fr:p>
-                  </fr:mainmatter>
+                  <fr:mainmatter><fr:p>We use continuation to make the order of evaluation explicit in the semantics,
+            but this also makes the semantics into a higher-order function.
+            Hence our second step is to regain the first-order nature of the original semantics by 
+            eliminating the use of continuations but <fr:strong>retaining</fr:strong> the explicit order of evaluation they introduced.</fr:p><fr:p>A standard technique for eliminating the use of functions as arguments is <fr:strong>defunctionalisation</fr:strong>.
+            We do not usually need the entire function-space of possible argument functions, 
+            there only a few forms of such functions are actually used.
+            Hence we represent the argument functions that we actually need using 
+            a datatype rather than functions.</fr:p><fr:p>We begin by defining three combinators <fr:strong>halt</fr:strong>, <fr:strong>next</fr:strong> and <fr:strong>add</fr:strong> 
+            for constructing the continuations we used.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">halt :: Continuation
+halt n = n
+
+next :: Expr -&gt; Continuation -&gt; Continuation
+next y c = \n -&gt; eval&apos; y (add n c)
+
+add :: Integer -&gt; Continuation -&gt; Continuation
+add n c = \m -&gt; c (n + m)</html:code></fr:pre>
+<fr:p>Use the combinators, our continuation semantics can now be written as:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval :: Expr -&gt; Integer
+eavl e = eval&apos; e halt
+
+eval&apos; :: Expr -&gt; Continuation -&gt; Integer
+eval&apos; (Val n) c = c n 
+eval&apos; (Add x y) c = eval&apos; x (next y c)</html:code></fr:pre>
+<fr:p>Now we declare a new datatype for continuations, consists of three constructors.</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">data CONT = HALT | NEXT Expr CONT | ADD Integer CONT</html:code></fr:pre>
+<fr:p>The following translation function forms a denotational semantics for <fr:code>CONT</fr:code></fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">exec :: CONT -&gt; Continuation
+exec HALT = halt
+exec (NEXT y c) = next y (exec c)
+exec (ADD n c) = add n (exec c)</html:code></fr:pre>
+<fr:p>This function is usually called <fr:strong>apply</fr:strong>, which can be viewed as 
+            applying a representation of a continuation to an integer to give another integer.
+            We want to define a new semantics <fr:tex display="inline">\text {eval}&apos;</fr:tex> which behaves in the same way 
+            as our previous <fr:tex display="inline">\text {eval}&apos;</fr:tex> except that it uses values of type <fr:code>CONT</fr:code> 
+            rather than <fr:code>Continuation</fr:code>.
+            
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos;&apos; :: Expr -&gt; CONT -&gt; Integer</html:code></fr:pre>
+
+            The desired behavior of <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> is:
+            <fr:tex display="block">                 \text {eval}&apos;&apos;\space  e\space  c = \text {eval}&apos;\space  e\space  (\text {exec}\space  c)             </fr:tex></fr:p><fr:p>As before, we proceed by structural induction on expression <fr:tex display="inline">e</fr:tex>.
+            The base case <fr:tex display="inline">e=\text {Val}\space  n</fr:tex> is trivial
+            <fr:tex display="block">                 \begin {align*}                     \text {eval}&apos;&apos;\space (\text {Val}\space  n)\space  c                     &amp;= \text {eval}&apos;\space (\text {Val}\space  n)\space  (\text {exec}\space  c) \\                     &amp;= \text {exec}\space  c\space  n \\                 \end {align*}             </fr:tex></fr:p><fr:p>For the inductive case <fr:tex display="inline">e = \text {Add}\space  x\space  y</fr:tex>:
+            <fr:tex display="block">                 \begin {align*}                     \text {eval}&apos;&apos;\space (\text {Add}\space  x\space  y)\space  c                      &amp;= \text {eval}&apos;\space (\text {Add}\space  x\space  y)\space  (\text {exec}\space  c) \\                     &amp;= \text {eval}&apos;\space  x\space (\text {next}\space  y\space (\text {exec}\space  c)) \\                      &amp;= \text {eval}&apos;\space  x\space (\text {exec}\space (\text {NEXT}\space  y\space  c)) \\                     &amp;= \text {eval}&apos;&apos;\space  x\space  (\text {NEXT}\space  y\space  c)                 \end {align*}             </fr:tex>
+            The last step uses the inductive hypothesis for <fr:tex display="inline">x</fr:tex></fr:p><fr:p>In the basic case, <fr:tex display="inline">\text {exec}</fr:tex> still refers to the semantic <fr:tex display="inline">\text {eval}&apos;</fr:tex>,
+            via the combinator <fr:tex display="inline">\text {next}</fr:tex>. Hence we need to compute a new definition 
+            for <fr:tex display="inline">\text {exec}</fr:tex> that refers to our new <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex>.</fr:p><fr:tex display="block">             \begin {align*}                 \text {exec}\space \text {HALT}\space  n                  &amp;= \text {halt}\space  n                 \\                  &amp;= n                             \end {align*}         </fr:tex><fr:p>The other case is also easy to compute, no need to induction.</fr:p><fr:tex display="block">             \begin {align*}                 \text {exec}\space (\text {NEXT}\space  y\space  c)\space  n                  &amp;= \text {eval}&apos;&apos;\space  y\space (\text {ADD}\space  n\space  c)                 \\                  \text {exec}\space (\text {ADD}\space  n\space  c)\space  m                  &amp;= \text {exec}\space  c\space (n+m)             \end {align*}         </fr:tex><fr:p>Our original semantics <fr:tex display="inline">\text {eval}</fr:tex> can be recovered from the new 
+            semantics <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> too.</fr:p><fr:tex display="block">             \begin {align*}                 \text {eval}\space  e                  &amp;= \text {eval}&apos;\space  e\space (\lambda  n\to  n) \\                  &amp;= \text {eval}&apos;\space  e\space \text {halt} \\                  &amp;= \text {eval}&apos;\space  e\space (\text {exec}\space \text {HALT}) \\                  &amp;= \text {eval}&apos;&apos;\space  e\text {HALT}             \end {align*}         </fr:tex><fr:p>In summary, we have calculated the following definitions:</fr:p>
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">eval&apos;&apos; :: Expr -&gt; CONT -&gt; Integer
+eval&apos;&apos; (Val n) c = exec c n 
+eval&apos;&apos; (Add x y) c = eval&apos;&apos; x (NEXT y c)
+
+exec :: CONT -&gt; Integer -&gt; Integer
+exec HALT n = n 
+exec (NEXT y c) n = eval&apos;&apos; y (ADD n c)
+exec (ADD n c) m = exec c (n + m)
+
+eval :: Expr -&gt; Integer
+eval e = eval&apos;&apos; e HALT</html:code></fr:pre>
+<fr:p>The four components (<fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex>, <fr:tex display="inline">\text {eval}</fr:tex>, <fr:tex display="inline">\text {exec}</fr:tex> and <fr:code>CONT</fr:code>)
+            forms an abstract machine.</fr:p><fr:p><fr:code>CONT</fr:code> is the type of <fr:strong>control stack</fr:strong> which comprises 
+            instructions that determine how the machine should continue after evaluating
+            the current expression. Sometimes it is called an &quot;eval/continue&quot; machine.
+            The control stack can also be defined as a list of instructions.
+            
+  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">type CONT = [INST]
+data INST = NEXT Expr | ADD Integer</html:code></fr:pre></fr:p><fr:p><fr:tex display="inline">\text {eval}</fr:tex> evaluates an expression and give an integer by simply 
+            call the <fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> with empty control stack <fr:tex display="inline">\text {HALT}</fr:tex>.</fr:p><fr:p><fr:tex display="inline">\text {eval}&apos;&apos;</fr:tex> evaluates an expression in the context of a control stack.
+            If the expression is an integer, we execute the control stack using this 
+            integer as an argument. If the expression is an addition, 
+            we evaluate the first argument <fr:tex display="inline">x</fr:tex> and place the instruction <fr:tex display="inline">\text {NEXT}\space  y</fr:tex>
+            on the top of the control stack.</fr:p><fr:p><fr:tex display="inline">\text {exec}</fr:tex> executes the control stack. If the control stack is empty,
+            then just return the integer argument as the result. If the top instruction
+            is <fr:tex display="inline">\text {NEXT}\space  y</fr:tex>, we evaluate <fr:tex display="inline">y</fr:tex> and place the instruction <fr:tex display="inline">\text {ADD}\space  n</fr:tex>
+            to the stack top. If the top instruction is <fr:tex display="inline">\text {ADD}\space  n</fr:tex>,evaluation of the 
+            two arguments of an addition is complete, and we execute the remaining control stack 
+            in the context of the sum of the resulting integers.</fr:p></fr:mainmatter>
                   <fr:backmatter></fr:backmatter>
                 </fr:tree>
-              </fr:mainmatter>
-              <fr:backmatter></fr:backmatter>
-            </fr:tree>
-            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
-              <fr:frontmatter>
-                <fr:anchor>658</fr:anchor>
-                <fr:addr type="machine">#370</fr:addr>
-                <fr:route>unstable-370.xml</fr:route>
-                <fr:title text="Recognize more complex words">Recognize more complex words</fr:title>
-                <fr:authors></fr:authors>
-              </fr:frontmatter>
-              <fr:mainmatter><fr:p>The char-by-char model is very simple and now we consider about numbers.
-        For simplicity, we consider only unsigned integers: An unsigned integer is either
-        zero or series of one or more digits where the first one is non-zero.</fr:p>
- 
-  
-  <fr:figure><fr:resource hash="a55a074002c90d74861b032ab9b21f15"><fr:resource-content><fr:img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPCEtLSBUaGlzIGZpbGUgd2FzIGdlbmVyYXRlZCBieSBkdmlzdmdtIDMuMi4yIC0tPgo8c3ZnIHZlcnNpb249JzEuMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycgd2lkdGg9JzEzMS4xNzA1OHB0JyBoZWlnaHQ9JzE1NC4xNTU2OTFwdCcgdmlld0JveD0nLTcyIC03MiA4Ny40NDcwNTQgMTAyLjc3MDQ2MSc+CjxzdHlsZSB0eXBlPSd0ZXh0L2Nzcyc+CjwhW0NEQVRBW0Bmb250LWZhY2V7Zm9udC1mYW1pbHk6Y21taTc7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQUxvQUFvQUFBQUFBMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRU1BQUFCZ2hVbDBJMk50WVhBQUFBRTRBQUFBS1FBQUFEUUFEQUNCWjJ4NVpnQUFBV1FBQUFBc0FBQUFMTXNMM0lab1pXRmtBQUFCa0FBQUFDMEFBQUEyS1Z3c3FXaG9aV0VBQUFIQUFBQUFJQUFBQUNRRVhnSThhRzEwZUFBQUFlQUFBQUFJQUFBQUNBUWhBSFJzYjJOaEFBQUI2QUFBQUFZQUFBQUdBQllBQUcxaGVIQUFBQUh3QUFBQUZ3QUFBQ0FBQkFBTWJtRnRaUUFBQWdnQUFBRFBBQUFCT1BOaEtxTndiM04wQUFBQzJBQUFBQkFBQUFBZ0FBTUFBWGphWTJCbUVtQ2N3TURLd01BMGkrbnNQeEdHZmhETitJYnhEWU14SXljREVMQXh3QUVqQXhKSUtTNUxCMHJxTWVneE0vd0g4cGtoMGtocS9nT0ZBYVprREZ3QWVOcGpZR0JnWW1CZ1lBWmlFU0RKQ0taWkdCU0FOQXNRZ3ZoNi8vOUR5UCtYd1h3R0FGRUlCb29BQUFBQUFRQjBBQUFBNkFCMkFBb0FBRGNPQVFjaUpqUTJOeklXNkFFZ0doVWtJQm9XSXpvWElnRWdNeUlCSUhqYVkyQmtZR0FBNGwzS3pxM3gvRFpmR1poWkdFRGc4ZjZ2czVGcHBtTU1aVUNLZzRFSnhBTUFPSG9LK2dBQUFIamFZMkJrWUdCbStNL0F3TUIwaktHRW9aamhCUU5RQkFVd0FRQlhPUU9lQXNZQUFBRmJBSFFBQUFBQUFCWUFBSGphWTJCa1lHQmdZdUJtQU5FTVVCSUpBQUFCc0FBUkFIamFUWXc5YjhJd0VJYWZpQVNKTUxDZ0RoMktoODRSQkNTMkxneE1yRXdzZ0YyVXdUWnlRaVNrcW1OL2R5K3VoNTdrMC9OK25JR1NiektHeVpqRlBVeE9JZXFQQzZiTUU0OUZMUktYdlBMT2lDeWZpUFBHUitKY2tsUGlnaGMrRTQvRi8wcGNzdUZuNSszOTBabWdEbDZiNEs3V050dWpDVzNqblZwVnk2ajN4cGx3N294V2w2ZlNmZFAyTjZ2V1ZWM1Y3UEJZN2p6b01BUVVCM0YwWk1kVk1rdkRsbU4wV21FdnZtSkZ4ZkpmdnBmY3hjNDUvcVNsYytFcFc5TkxvNVY5azY1aUxaZjE4SDRCekNzditRQjQybU5nWmtBR2pBeG9BQUFBamdBRikgZm9ybWF0KCd3b2ZmJyk7fQpAZm9udC1mYWNle2ZvbnQtZmFtaWx5OmNtbWkxMDtzcmM6dXJsKGRhdGE6YXBwbGljYXRpb24veC1mb250LXdvZmY7YmFzZTY0LGQwOUdSZ0FCQUFBQUFBT29BQW9BQUFBQUJCUUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFCUFV5OHlBQUFBOUFBQUFFTUFBQUJnaFc1MHJXTnRZWEFBQUFFNEFBQUFLUUFBQURRQURBQ21aMng1WmdBQUFXUUFBQURvQUFBQTZLS3NWOGRvWldGa0FBQUNUQUFBQUM4QUFBQTJLUzB1N1dob1pXRUFBQUo4QUFBQUlBQUFBQ1FGemdGWGFHMTBlQUFBQXB3QUFBQUlBQUFBQ0FUcUFEVnNiMk5oQUFBQ3BBQUFBQVlBQUFBR0FIUUFBRzFoZUhBQUFBS3NBQUFBRndBQUFDQUFCQUJLYm1GdFpRQUFBc1FBQUFEVUFBQUJQcGtSZGNkd2IzTjBBQUFEbUFBQUFCQUFBQUFnQUFNQUFYamFZMkJtS21XY3dNREt3TUEwaStuc1B4R0dmaEROK0lieERZTXhJeWNERUxBeHdBRWpBeEpJS1M1TEIwb0dNd1F6TS93SDhwa2gwa2hxL2dPRkFkUEJEUXNBZU5wallHQmdZbUJnWUFaaUVTREpDS1paR0JTQU5Bc1FndmpCLy85RHlQL3J3SHdHQUZRUkJxOEFBQUFBQVFBMS8rZ0NsZ0xTQUVnQUFBRUhCaWNtSnpZM0xnRUhEZ0VISGdFZkFSNEJGeDRCRndZUEFRWUhCaVluRHdJaUp6OEJQZ0V6TmhjSEJoVVdId0VXTno0Qk55NEJMd0V1QVNjMlB3RTJOeFlYUHdJV0FwUTNBd3dKQWdFQ0FWSkJTMllDQVNjV1JVSXhEdzBqQWdKQUdFaGlMbDBpTWd3R0N3RWVEZzhIQmdvQ0JRTUVNeFE0TUU1b0F3TTlIMjBwUUFJRFJBNUpYMmdyTVF3R0RRTEk0UmNEQVFjTE1WVktBUU5sUWlrdEJ4SVJFaEVLT1RSYVRCcEVCQUVmTERvTkF3dDRPamdLQWcwYkVCTlZId3dZQWdOeFNUMHFCUjBMU0Q1YlJRNUJBd0ZKT3cwQ0F3QUFlTnBqWUdSZ1lBRGlYZWxyTnNmejIzeGxZR1poQUlISCs3L09SdEQvWHpCTlk3b0U1SEl3TUlGRUFYMVlEZW9BZU5wallHUmdZR2I0ejhEQXdGVEdZUHIvSHRNMEJxQUlDbUFDQUdLREJDa0NkZ0FBQW5RQU5RQUFBQUFBZEFBQWVOcGpZR1JnWUdCaThHUUEwUXhRRWdrQUFBZStBRThBZU5wTmpyRnF3ekFVUlkrcFk2aGJ5SlFNSFlxbWpNWjIrZ0dGREpteVppd2trUWd1U0FxeVk4Z1MrZ0g5NkQ0ckd2cUVIa2ZuWFFrQkpYY3lwc3FZeHo1VlRpR25CODk0WVpHNGtLVVNsN3l4NG9rc2Z4Ynp6bWZpbkZlK0VzOVk4cDI0RVArVHVPU0QzNDIzbCt0Z2d0cDViWUk3V2RzMTlkNkV2dk5PTlZYOUVGdmpURGdNUnF2alRlbXg2OGV6VmV1cXJWbzJlQ3dYcmd3WWd2eHNKMFpIZHB4a1p1bG9xTmxIMTh2SnkwU0pxOFQrVDJ3bDRXTHFFRi9Ua2pweWs2NFpKZE5MUDB0YXNaYTc3YlQvQU9DQ01MMTQybU5nWmtBR2pBeG9BQUFBamdBRikgZm9ybWF0KCd3b2ZmJyk7fQpAZm9udC1mYWNle2ZvbnQtZmFtaWx5OmNtcjc7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQVRnQUFvQUFBQUFCWUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRU1BQUFCZ2hVdDBnV050WVhBQUFBRTRBQUFBTWdBQUFEd0FWQUNJWjJ4NVpnQUFBV3dBQUFJVUFBQUNURUlUUmZKb1pXRmtBQUFEZ0FBQUFDOEFBQUEyS1dvdXlXaG9aV0VBQUFPd0FBQUFId0FBQUNRRlJ3SUxhRzEwZUFBQUE5QUFBQUFPQUFBQURnWEJBSFJzYjJOaEFBQUQ0QUFBQUF3QUFBQU1BUllCcEcxaGVIQUFBQVBzQUFBQUdBQUFBQ0FBQ0FBOWJtRnRaUUFBQkFRQUFBREpBQUFCTXUwS2tleHdiM04wQUFBRTBBQUFBQkFBQUFBZ0FBTUFBWGphWTJCbVNtYWN3TURLd01BMGkrbnNQeEdHZmhETitJYnhEWU14SXljREVMQXh3QUVqQXhKSUtTNUxCMG9hTUZneU0vd0g4cGtoMGtocS9nT0ZBY1lJREx3QWVOcGpZR0JnWW1CZ1lBWmlFU0RKQ0taWkdEU0FOQnVRWmdUS0dqRlkvdjhQNUJ1QTZQOFgvNThHcXdJQ0FJMVpDTllBQUhqYUhaSExidE5BRklibm5QR2xjU0RCU1R4dUxzM0ZyajBsU1pNMHdiWWdKV21KUW9uYVFLbmFwaWkwQXBXTEFCVWl3UmFwQ3dSSWlFZGd4d0lRdkVERkMvQWVMQkVMVklrVmhUR3IwVDh6bXZQOTh4RWtyYjgvTUlFZlNJWTBDQUdteGtCVlZKZlhnTHVCRzNRZzhJTThtSG1nekJmSjg4V0o3U3JpbXNuRUxwN0JpRnJJdDU1TW1vWDhWQVJGS29wMGNaeTJNejlMNjRtSUpCbnhmc1VhSnFJeVVrMWZneFUrTEkvc3JpUjE3VkY1eVBsYTljYnNzZ1JOeHpzOE9ZQkdmK0h4K1plYjh3Mm90aXNIWHk3VXVrMENaQ0xJdnVOSGtoYXJyckEyR0hXSWc5ZHErbHlQQWZjRW1zOWdSSXNEZm45OWNwa1BpclM2bVNvOWF4bFJmUFBuVzhad0tDQTZSZ2ExVkFSbWtkVkFFMCtSWlVKUUZ0M1BFdUtvcGNEdlFnZGRMdHJsUVJTMEZaZUwvcUo5VEV4VDFDRDhnQURsd3NrWVVQMmR2VVN2RGQzdE5HY0FWbElySXp5OWZmY1Z4YTMyVnZucUx5ZXF4ZkRvS0tjb3g5bDdMMjRoVkR4MDRya3NHTzdnRVlVSGV5c1BxMzJyRHlCcFMwbUJRUUxoSVlhZnlCeHBDelJQYUJBS3hMd09tRDR6bFJEQWNua293MkFoWU1BRWo4L0Q2djl0aFVwU29STDRyRjlaM0Qya1VNL05qN083cjZsMFhkNllyRzRBMXFlbklWNHd1OGs1Yjlxb3ZXMk5LRVNOVXcwK3RJMklxck1BRmd5bmcvajhUbS9WTERQQWQxL2Y3OGszY2ZGY25VSTJOV1hMN0RSUVN5OHM3Y1BPL3N5T1pUaUFRYjYzM1p1eHNvVDhBMUxTWFVaNDJtTmdaR0JnQU9JTDN6dUM0L2x0dmpJd3N6Q0F3T1A5WDJjajZQOXZtQzR6clFKeU9SaVlRS0lBaGVrT0pRQjQybU5nWkdCZ1p2alB3TURBZEpuQm1NR1VTWWdCS0lJQ21BQTkxd0pZQUFMVEFBQUNSd0F6QUhBQVFRQTNBQUFBQUFBQUFGSUFmZ0RFQVNaNDJtTmdaR0JnWUdXd1lXQmlBQUZHQmpRQUFBYmhBRVo0MmoyTU1RdkNNQkNGdjJJVnJZT0Q0T0Fnd1I5UXRBb3ViZzVPcmc1dTFnVHAwRlRTV25RUmY3clhFTHlRNDd2MzNoMlE4Q0dpcTRpSjcxM0Y4aWFCKzR5WkJoNkl2Z2ljTUdkSmp5Z2VpYkpnSHpobXlDVndueGw1NElIb3I4QUpXNzZIcW53OEcrUFVxZExHMlZ2cGRtZmo2cUt5YXAydXV2Rm9ySEhYeG1pVnY1VnVpN3E5bDJxVFptbkdnWXFTQjA4YURBN0ZTUlR0MlhJVHo3SGo3T2VhUWp3cm1UVXBxNzk3Rk5mNnhOVmYwWkxJZVV2WHRMSlRTNzlMVnJHUnZhejdQMWt5TGswQUFBQjQybU5nWmtBR2pBeG9BQUFBamdBRikgZm9ybWF0KCd3b2ZmJyk7fQp0ZXh0LmYwIHtmb250LWZhbWlseTpjbW1pMTA7Zm9udC1zaXplOjkuOTYyNjRweH0KdGV4dC5mMSB7Zm9udC1mYW1pbHk6Y21taTc7Zm9udC1zaXplOjYuOTczODQ4cHh9CnRleHQuZjIge2ZvbnQtZmFtaWx5OmNtcjc7Zm9udC1zaXplOjYuOTczODQ4cHh9Cl1dPgo8L3N0eWxlPgo8ZyBpZD0ncGFnZTEnPgo8ZyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC00MC44ODc1MzUsLTEwLjU1MzczMSlzY2FsZSgwLjk5NjI2NCwtMC45OTYyNjQpJz4KPGcgZmlsbD0nIzAwMCcgc3Ryb2tlPScjMDAwJz4KPGcgc3Ryb2tlLXdpZHRoPScwLjQnPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtMzEuMjI5MTQsLTM2LjMxOTQ2KSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSgtNDAuODg3NTM1LC0xMC41NTM3MzEpc2NhbGUoLTEsLTEpJz4KPGcgc3Ryb2tlPScjMDAwJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0zMS4zMDg4NzcsLTc3LjYwNzg1MSlzY2FsZSgwLjk5NjI2NCwtMC45OTYyNjQpJy8+CjxnIHN0cm9rZT0nIzAwMCcgc3Ryb2tlLW1pdGVybGltaXQ9JzEwJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgxMS43NTg3NDYsLTc3LjYwNzg1MSlzY2FsZSgwLjk5NjI2NCwtMC45OTYyNjQpJz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTUuMzA5MDQsMC4wKSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSgxMS43NTg3NDYsLTc3LjYwNzg1MSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YwJyB4PScxMS43NTg3NDYnIHk9Jy03Ny42MDc4NTEnPlM8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMicgeD0nMTcuODY3NzkxJyB5PSctNzYuMTEzNDcnPjI8L3RleHQ+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8ZyBzdHJva2U9JyMwMDAnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTMxLjMwODg3NywtNDQuMDgwNzkxKXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtNS4zMDkwNCwwLjApJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKC0zMS4zMDg4NzcsLTQ0LjA4MDc5MSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YwJyB4PSctMzEuMzA4ODc3JyB5PSctNDQuMDgwNzkxJz5TPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjInIHg9Jy0yNS4xOTk4MzEnIHk9Jy00Mi41ODY0MSc+MDwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZT0nIzAwMCcgc3Ryb2tlLW1pdGVybGltaXQ9JzEwJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtMzEuMzA4ODc3LC0xMC41NTM3MzEpc2NhbGUoMC45OTYyNjQsLTAuOTk2MjY0KScvPgo8ZyBzdHJva2U9JyMwMDAnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMTEuNzU4NzQ2LC0xMC41NTM3MzEpc2NhbGUoMC45OTYyNjQsLTAuOTk2MjY0KSc+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC01LjMwOTA0LDAuMCknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoMTEuNzU4NzQ2LC0xMC41NTM3MzEpc2NhbGUoLTEsLTEpJz4KPGcgZmlsbD0nIzAwMCc+CjxnIHN0cm9rZT0nbm9uZSc+Cjx0ZXh0IGNsYXNzPSdmMCcgeD0nMTEuNzU4NzQ2JyB5PSctMTAuNTUzNzMxJz5TPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjInIHg9JzE3Ljg2Nzc5MScgeT0nLTkuMDU5MzUnPjE8L3RleHQ+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlLXdpZHRoPScwLjM5OTk4Jz4KPHBhdGggZD0nTTI1LjQzNDQyIDQxLjY3OTE1QzM0LjY2Njk4IDYxLjQ3NjcyIDUxLjIyNjcgNDcuMjk0NyAzMS43OTE2MSAzOC4yMzE0NScgZmlsbD0nbm9uZScvPgo8ZyB0cmFuc2Zvcm09J21hdHJpeCgtMC45MDYzLC0wLjQyMjYyLDAuNDIyNjIsLTAuOTA2MywzMS42MTAzOCwzOC4xNDY5NCknPgo8ZyBzdHJva2UtZGFzaGFycmF5PSdub25lJyBzdHJva2UtZGFzaG9mZnNldD0nMC4wJz4KIDxnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCc+CiA8ZyBzdHJva2UtbGluZWpvaW49J3JvdW5kJz4KIDxwYXRoIGQ9J00tMi4wNzk4OCAyLjM5OTg2Qy0xLjY5OTg5IC45NTk5Mi0uODUzMTMgLjI3OTk4IDAgMEMtLjg1MzEzLS4yNzk5OC0xLjY5OTg5LS45NTk5Mi0yLjA3OTg4LTIuMzk5ODYnIGZpbGw9J25vbmUnLz4KIDwvZz4KIDwvZz4KIDwvZz4KPC9nPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSg0MS42NzA4LDUzLjEwOTcpJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKC00MC44ODc1MzUsLTEwLjU1MzczMSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YyJyB4PSctNDAuODg3NTM1JyB5PSctMTAuNTUzNzMxJz4wPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjEnIHg9Jy0zNi45MTYyOTQnIHk9Jy0xMC41NTM3MzEnPi4uPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjInIHg9Jy0zMi4xODQwMTInIHk9Jy0xMC41NTM3MzEnPjk8L3RleHQ+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8ZyBzdHJva2Utd2lkdGg9JzAuMzk5OTgnPgo8cGF0aCBkPSdNLTExLjc5OTk5LTcuODA1ODVMMTEuNDg0NC0yNS45MzM1NScgZmlsbD0nbm9uZScvPgo8ZyB0cmFuc2Zvcm09J21hdHJpeCgwLjc4OTA1LC0wLjYxNDI5LDAuNjE0MjksMC43ODkwNSwxMS42NDIxOCwtMjYuMDU2MzgpJz4KPGcgc3Ryb2tlLWRhc2hhcnJheT0nbm9uZScgc3Ryb2tlLWRhc2hvZmZzZXQ9JzAuMCc+CiA8ZyBzdHJva2UtbGluZWNhcD0ncm91bmQnPgogPGcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc+CiA8cGF0aCBkPSdNLTIuMDc5ODggMi4zOTk4NkMtMS42OTk4OSAuOTU5OTItLjg1MzEzIC4yNzk5OCAwIDBDLS44NTMxMy0uMjc5OTgtMS42OTk4OS0uOTU5OTItMi4wNzk4OC0yLjM5OTg2JyBmaWxsPSdub25lJy8+CiA8L2c+CiA8L2c+CiA8L2c+CjwvZz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMi4zNTI3NSwtMTQuNjM5NzkpJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKC00MC44ODc1MzUsLTEwLjU1MzczMSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YyJyB4PSctNDAuODg3NTM1JyB5PSctMTAuNTUzNzMxJz4wPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlLXdpZHRoPScwLjM5OTk4Jz4KPHBhdGggZD0nTS0xMS43OTk5OSA3LjQ3MjVMMTEuNDg0NCAyNS42MDAyJyBmaWxsPSdub25lJy8+CjxnIHRyYW5zZm9ybT0nbWF0cml4KDAuNzg5MDUsMC42MTQyOSwtMC42MTQyOSwwLjc4OTA1LDExLjY0MjE4LDI1LjcyMzA0KSc+CjxnIHN0cm9rZS1kYXNoYXJyYXk9J25vbmUnIHN0cm9rZS1kYXNob2Zmc2V0PScwLjAnPgogPGcgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJz4KIDxnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnPgogPHBhdGggZD0nTS0yLjA3OTg4IDIuMzk5ODZDLTEuNjk5ODkgLjk1OTkyLS44NTMxMyAuMjc5OTggMCAwQy0uODUzMTMtLjI3OTk4LTEuNjk5ODktLjk1OTkyLTIuMDc5ODgtMi4zOTk4NicgZmlsbD0nbm9uZScvPgogPC9nPgogPC9nPgogPC9nPgo8L2c+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0xNS4wNzUwMSwxOS4wMTE5NSknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoLTQwLjg4NzUzNSwtMTAuNTUzNzMxKXNjYWxlKC0xLC0xKSc+CjxnIGZpbGw9JyMwMDAnPgo8ZyBzdHJva2U9J25vbmUnPgo8dGV4dCBjbGFzcz0nZjInIHg9Jy00MC44ODc1MzUnIHk9Jy0xMC41NTM3MzEnPjE8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMScgeD0nLTM2LjkxNjI5NCcgeT0nLTEwLjU1MzczMSc+Li48L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMicgeD0nLTMyLjE4NDAxMicgeT0nLTEwLjU1MzczMSc+OTwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9zdmc+"></fr:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
-   
-  \RequirePackage{tikz}
- \RequirePackage{amsmath}
- \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
-
- \definecolor{catccolor}{RGB}{255,244,138}
- \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
- \tikzstyle{catc}=[catccolor!60]
- \tikzstyle{catd}=[orange!40]
- \tikzstyle{cate}=[red!40]
- \tikzstyle{catf}=[blue!10]
- \tikzstyle{catg}=[green!25]
-
-
- \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
- \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
-
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
-   \path
-     coordinate (#1nw)
-     ++(#2,-#3) coordinate (#1se)
-     coordinate (#1sw) at (#1se -| #1nw)
-     coordinate (#1ne) at (#1nw -| #1se)
-   ;
-
-   \path[spath/save = #1north] (#1nw) to (#1ne);
-   \path[spath/save = #1west] (#1nw) to (#1sw);
-   \path[spath/save = #1east] (#1ne) to (#1se);
-   \path[spath/save = #1south] (#1sw) to (#1se);
- }
-
-   
-  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
- \usetikzlibrary{matrix,arrows}
- \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
- \usetikzlibrary{decorations.pathreplacing}
- \usetikzlibrary{decorations.pathmorphing}
- \usetikzlibrary{decorations.markings}
-
- \tikzset{
-   desc/.style={sloped, fill=white,inner sep=2pt},
-   upright desc/.style={fill=white,inner sep=2pt},
-   pullback/.style = {
-     append after command={
-       \pgfextra{
-         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
-       }
-     }
-   },
-   pullback 45/.style = {
-     append after command={
-       \pgfextra{
-         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
-       }
-     }
-   },
-   ne pullback/.style = {
-     append after command={
-       \pgfextra{
-         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
-       }
-     }
-   },
-   sw pullback/.style = {
-     append after command={
-       \pgfextra{
-         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
-       }
-     }
-   },
-   dotted pullback/.style = {
-     append after command={
-       \pgfextra{
-         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
-       }
-     }
-   },
-   muted pullback/.style = {
-     append after command={
-       \pgfextra{
-         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
-       }
-     }
-   },
-   pushout/.style = {
-     append after command={
-       \pgfextra{
-         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
-       }
-     }
-   },
-   between/.style args={#1 and #2}{
-     at = ($(#1)!0.5!(#2)$)
-   },
-   diagram/.style = {
-     on grid,
-     node distance=2cm,
-     commutative diagrams/every diagram,
-     line width = .5pt,
-     every node/.append style = {
-       commutative diagrams/every cell,
-     }
-   },
-   fibration/.style = {
-     -{Triangle[open]}
-   },
-   etale/.style = {
-     -{Triangle[open]}
-   },
-   etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
-   },
-   opfibration/.style = {
-     -{Triangle}
-   },
-   lies over/.style = {
-     |-{Triangle[open]}
-   },
-   op lies over/.style = {
-     |-{Triangle}
-   },
-   embedding/.style = {
-     {right hook}-&gt;
-   },
-   open immersion/.style = {
-     {right hook}-{Triangle[open]}
-   },
-   closed immersion/.style = {
-     {right hook}-{Triangle}
-   },
-   closed immersion*/.style = {
-     {left hook}-{Triangle}
-   },
-   embedding*/.style = {
-     {left hook}-&gt;
-   },
-   open immersion*/.style = {
-     {left hook}-{Triangle[open]}
-   },
-   exists/.style = {
-     densely dashed
-   },
- }
-
- \newlength{\dontworryaboutit}
-
- \tikzset{
-   inline diagram/.style = {
-     commutative diagrams/every diagram,
-     commutative diagrams/cramped,
-     line width = .5pt,
-     every node/.append style = {
-       commutative diagrams/every cell,
-       anchor = base,
-       inner sep = 0pt
-     },
-     every path/.append style = {
-       outer xsep = 2pt
-     }
-   }
- }
-
- \tikzset{
-   square/nw/.style = {},
-   square/ne/.style = {},
-   square/se/.style = {},
-   square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
-   square/north/node/.style = {above},
-   square/south/node/.style = {below},
-   square/west/node/.style = {left},
-   square/east/node/.style = {right},
- }
-
- \ExplSyntaxOn
-
- \bool_new:N \l_jon_glue_west
-
- \keys_define:nn { jon-tikz/diagram } {
-   nw .tl_set:N = \l_jon_tikz_diagram_nw,
-   sw .tl_set:N = \l_jon_tikz_diagram_sw,
-   ne .tl_set:N = \l_jon_tikz_diagram_ne,
-   se .tl_set:N = \l_jon_tikz_diagram_se,
-
-   width .tl_set:N = \l_jon_tikz_diagram_width,
-   height .tl_set:N = \l_jon_tikz_diagram_height,
-
-   north .tl_set:N = \l_jon_tikz_diagram_north,
-   south .tl_set:N = \l_jon_tikz_diagram_south,
-   west .tl_set:N = \l_jon_tikz_diagram_west,
-   east .tl_set:N = \l_jon_tikz_diagram_east,
-
-   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
-   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
-   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
-   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
-
-   glue .choice:,
-   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
-
-   glue~target .tl_set:N = \l_jon_tikz_glue_target,
-
-   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
-   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
-   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
-   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
-   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
-   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
-   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
-   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
-
-   draft .meta:n = {
-     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
-     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
-     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
-     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
-     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
-     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
-     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
-     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
-   }
- }
-
- \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
- \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
-
-
- \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
-   \texttt{\textcolor{red}{#1}}
- }
-
- \keys_set:nn { jon-tikz/diagram } {
-   glue~target = {},
- }
-
-
- \cs_new:Nn \__jon_tikz_render_square:nn {
-   \group_begin:
-   \keys_set:nn {jon-tikz/diagram} {#2}
-   \bool_if:nTF \l_jon_glue_west {
-     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
-     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
-     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
-     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
-     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
-   } {
-     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
-     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
-     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
-
-     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
-     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
-     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
-     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
-     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
-   }
-   \group_end:
- }
-
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
-   \__jon_tikz_render_square:nn {#1} {#2}
- }
-
-
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
-   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
-     \__jon_tikz_render_square:nn {#1} {#3}
-   \end{tikzpicture}
- }
-
- \ExplSyntaxOff
-
-  </fr:resource-source><fr:resource-source type="latex" part="body">
-        \begin {tikzcd}
-            &amp; {S_2}
-            \arrow [out=65, in=25 ,loop,&quot;0..9&quot;]
-            \\
-            {S_0} \\
-            &amp; {S_1}
-            \arrow [&quot;0&quot;, from=2-1, to=3-2]
-            \arrow [&quot;{1..9}&quot;, from=2-1, to=1-2]
-        \end {tikzcd}
-    </fr:resource-source></fr:resource></fr:figure>
- 
-<fr:p>And the code implementation can be:</fr:p><fr:pre>    state &lt;- s0;
-    char &lt;-nextChar();
-    while (state != se and char != eof) {
-        state &lt;- delta(state, char);
-        char &lt;- nextChar();
-    }
-    if (state in SA) {
-        return Acceptance();
-    } else {
-        reportError();
-    }</fr:pre><fr:p>Another example is to recognize <fr:strong>identifiers</fr:strong> which are sequences of letters and digits,
-        starting with a letter. Many languages include other special characters for identifiers.
-        The FA for unsigned integers and identifiers are different in syntactic categories.</fr:p></fr:mainmatter>
-              <fr:backmatter></fr:backmatter>
-            </fr:tree>
-            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
-              <fr:frontmatter>
-                <fr:anchor>659</fr:anchor>
-                <fr:addr type="machine">#371</fr:addr>
-                <fr:route>unstable-371.xml</fr:route>
-                <fr:title text="Regular Expressions">Regular Expressions</fr:title>
-                <fr:authors></fr:authors>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <fr:p>The set of words accpeted by a finite automata <fr:tex display="inline">F</fr:tex> forms a language <fr:tex display="inline">L(F)</fr:tex>.
-        The transition diagram of <fr:tex display="inline">F</fr:tex> specifies the syntactic structure of <fr:tex display="inline">L(F)</fr:tex>.
-        But such representation is complex and non-intuitive.
-        Most systems use a notation called <fr:strong>regular expressions</fr:strong> to specify the language.
-        Any language described by an RE is considered a <fr:strong>regular language</fr:strong>.
-        RE is equivalent to FA.</fr:p>
-                <fr:p>To work with REs in a rigorous way, we need a foraml definition.</fr:p>
               </fr:mainmatter>
               <fr:backmatter></fr:backmatter>
             </fr:tree>

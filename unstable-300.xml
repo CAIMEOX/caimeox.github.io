@@ -1,40 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>942</fr:anchor>
+    <fr:anchor>1591</fr:anchor>
     <fr:addr type="machine">#300</fr:addr>
     <fr:route>unstable-300.xml</fr:route>
-    <fr:title text="Time-independent Schrodinger Equation › 
-    Conservation of energy
-"><fr:link type="local" href="phy-0003.xml" addr="phy-0003" title="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</fr:link> › 
-    <fr:strong>Conservation of energy</fr:strong>
-</fr:title>
-    <fr:date>
-      <fr:year>2024</fr:year>
-      <fr:month>2</fr:month>
-      <fr:day>4</fr:day>
-    </fr:date>
+    <fr:title text="Classical Mechanics › Rigid Body Dynamics › Moment of Inertia"><fr:link type="local" href="unstable-299.xml" addr="#299" title="Classical Mechanics › Rigid Body Dynamics"><fr:link type="local" href="phy-0004.xml" addr="phy-0004" title="Classical Mechanics">Classical Mechanics</fr:link> › Rigid Body Dynamics</fr:link> › Moment of Inertia</fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    This also means that the energy of the system is conserved.
-    In classical mechanics, the <fr:strong>total energy</fr:strong> (kinetic + potential) of a system is called the <fr:strong>Hamiltonian</fr:strong>.
-    <fr:tex display="block">         H(x,p) = \frac {p^2}{2m} + V(x)     </fr:tex>
-    In quantum mechanics, the Hamiltonian is an operator,
-    obtained by substituting <fr:tex display="inline">p\to  -i\hbar \frac {\partial }{\partial  x}</fr:tex>:
-    <fr:tex display="block">         \hat {H} = -\frac {\hbar ^2}{2m}\frac {\partial ^2}{\partial  x^2} + V(x)     </fr:tex>
-    Thus the time-independent Schrodinger equation can be written as:
-    <fr:tex display="block">         \hat {H}\psi (x) = E\psi (x)     </fr:tex>
-    The expectation value of the total energy gives the energy of the system:
-    <fr:tex display="block">         \begin {align*}             \langle  H \rangle  &amp;= \int  \psi ^*(x)\hat {H}\psi (x)dx              \\             &amp;= \int  \psi ^*(x)E\psi (x)dx             \\             &amp;= E\int  |\psi (x)|^2dx             \\             &amp;= E\int  |\Psi (x)|^2dx             \\             &amp;= E                    \end {align*}     </fr:tex>
-    and
-    <fr:tex display="block">         \begin {align*}             \langle  H^2 \rangle  &amp;=              \int  \psi ^*(x)\hat {H}^2\psi (x)dx             \\             &amp;= E^2\int  |\psi (x)|^2 dx                   \\             &amp;= E^2               \end {align*}     </fr:tex>
-    where 
-    <fr:tex display="block">         \hat {H}^2\psi  = \hat {H}(\hat {H}\psi ) = \hat {H}(E\psi ) = E(\hat {H}\psi ) = E^2\psi      </fr:tex>
-    Hence the variance of the energy is zero given by
-    <fr:tex display="block">         \Delta  H = \sqrt {\langle  H^2 \rangle  - \langle  H \rangle ^2} = 0     </fr:tex>
-    This implies that the energy of the system is conserved.
-</fr:mainmatter>
+    <fr:p>When a body is free to rotate around an axis, torque must be applied to change its angular momentum.
+            The amount of torque needed to cause any given angular acceleration
+            is proportional to the moment of inertia of the body.
+            The moment of inertia plays the role in rotational kinetics that mass (inertia) plays in linear kinetics,
+            both characterize the resistance of a body to changes in its motion.</fr:p>
+  </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
@@ -44,81 +23,256 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>943</fr:anchor>
-            <fr:addr type="user">phy-0003</fr:addr>
-            <fr:route>phy-0003.xml</fr:route>
-            <fr:title text="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</fr:title>
-            <fr:taxon>Quantum Mechanics</fr:taxon>
-            <fr:date>
-              <fr:year>2024</fr:year>
-              <fr:month>2</fr:month>
-              <fr:day>4</fr:day>
-            </fr:date>
+            <fr:anchor>1592</fr:anchor>
+            <fr:addr type="user">phy-0004</fr:addr>
+            <fr:route>phy-0004.xml</fr:route>
+            <fr:title text="Classical Mechanics">Classical Mechanics</fr:title>
+            <fr:taxon>Mechanics</fr:taxon>
             <fr:authors></fr:authors>
           </fr:frontmatter>
-          <fr:mainmatter><fr:p>Refer to chapter 2 in <fr:link type="local" href="quantum-2018.xml" addr="quantum-2018" title="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</fr:link></fr:p><fr:p>In previous section we use the <fr:link type="local" href="def-0030.xml" addr="def-0030" title="Schrodinger&apos;s equation">Schrodinger equation</fr:link> to compute things.
-    The variable <fr:tex display="inline">t</fr:tex> is annoying which makes things complicated, and we would like to get rid of it.
-    In this section we shall assume that the potential energy <fr:tex display="inline">V</fr:tex> is independent of time.
-    In that case the Schrodinger equation becomes:
-    <fr:tex display="block">         i\hbar \frac {\partial }{\partial  t}\psi (x,t) = -\frac {\hbar ^2}{2m}\frac {\partial ^2\psi (x,t)}{\partial  x^2} + V(x)\psi (x,t)     </fr:tex>
-    This equation can be solved by <fr:strong>separation of variables</fr:strong>.
-    We assume the spatial and time dependencies of the solution can be separated.
-    In other words we look for solutions of the <fr:em>product form</fr:em>:
-    <fr:tex display="block">         \Psi (x,t) = \psi (x)\phi (t)     </fr:tex>
-    This is an absurd restriction, but it works and we can get interesting results.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>485</fr:anchor><fr:addr type="machine">#299</fr:addr><fr:route>unstable-299.xml</fr:route><fr:title text="Solve the equation"><fr:strong>Solve the equation</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
-    <fr:p>Now substitute the product form into the Schrodinger equation:
-        <fr:tex display="block">             i\hbar  \psi (x) \frac {\partial }{\partial  t}(\phi (t)) = -\frac {\hbar ^2}{2m}\phi (t)\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)\psi (x)\phi (t)         </fr:tex>
-        Divide both sides by <fr:tex display="inline">\psi (x)\phi (t)</fr:tex>:
-        <fr:tex display="block">             i\hbar  \frac {1}{\phi (t)} \frac {\partial }{\partial  t}(\phi (t)) = -\frac {\hbar ^2}{2m\psi (x)}\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)         </fr:tex>
-        Notice that the left side depends only on <fr:tex display="inline">t</fr:tex> and the right side depends only on <fr:tex display="inline">x</fr:tex>.
-        They are equal if and only if they are both equal to a <fr:em>constant</fr:em>.
-        Otherwise if I change the left side and level the right side unchanged, I get a contradiction.
-        The constant is the energy of the system, and we denote it by <fr:tex display="inline">E</fr:tex>.
-        <fr:tex display="block">             E:\equiv  i\hbar  \frac {1}{\phi (t)} \frac {\partial }{\partial  t}(\phi (t))          </fr:tex>
-        and 
-        <fr:tex display="block">             E:\equiv  -\frac {\hbar ^2}{2m\psi (x)}\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)         </fr:tex>
-        We have two equations:
-        <fr:tex display="block">             \begin {align*}                 \frac {d\phi }{dt} &amp;= -\frac {iE}{\hbar }\phi \\                 -\frac {\hbar ^2}{2m}\frac {d^2\psi }{dx^2} + V\psi  &amp;= E\psi              \end {align*}         </fr:tex>
-        Now the partial differential equation has been reduced to two <fr:strong>ordinary differential equations</fr:strong>.
-        The first one is easy to solve:
-        <fr:tex display="block">             \phi (t) = \phi (0)e^{-iEt/\hbar }         </fr:tex>
-        Thus the complete solution is (note that the constant <fr:tex display="inline">\phi (0)</fr:tex> was absorbed into <fr:tex display="inline">\psi (x)</fr:tex>):
-        <fr:tex display="block">             \Psi (x,t) = \psi (x)e^{-iEt/\hbar }         </fr:tex>
-        The second one is the <fr:strong>time-independent Schrodinger equation</fr:strong>,
-        we can&apos;t go further unless we know the potential energy <fr:tex display="inline">V(x)</fr:tex>.</fr:p>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-<fr:p>Now we give a name to the time-independent Schrodinger equation.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>486</fr:anchor><fr:addr type="user">def-0034</fr:addr><fr:route>def-0034.xml</fr:route><fr:title text="Stationary State">Stationary State</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>stationary state</fr:strong> is a quantum state with all observables independent of time.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Thought the wave function is time-dependent,
-    <fr:tex display="block">         \Psi (x,t) = \psi (x)e^{-iEt/\hbar }     </fr:tex>
-    But if we compute the probability density, it is time-independent:
-    <fr:tex display="block">         |\Psi (x,t)|^2 = \psi ^*(x)e^{+iEt/\hbar }\psi (x)e^{-iEt/\hbar } = |\psi (x)|^2      </fr:tex>
-    Hence the expectation value is constant in time. 
-    Then <fr:tex display="inline">\langle  p \rangle  = 0</fr:tex> all the time.
-    Nothing happens in the stationary state.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>487</fr:anchor><fr:addr type="machine">#300</fr:addr><fr:route>unstable-300.xml</fr:route><fr:title text="
-    Conservation of energy
-">
-    <fr:strong>Conservation of energy</fr:strong>
-</fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
-    This also means that the energy of the system is conserved.
-    In classical mechanics, the <fr:strong>total energy</fr:strong> (kinetic + potential) of a system is called the <fr:strong>Hamiltonian</fr:strong>.
-    <fr:tex display="block">         H(x,p) = \frac {p^2}{2m} + V(x)     </fr:tex>
-    In quantum mechanics, the Hamiltonian is an operator,
-    obtained by substituting <fr:tex display="inline">p\to  -i\hbar \frac {\partial }{\partial  x}</fr:tex>:
-    <fr:tex display="block">         \hat {H} = -\frac {\hbar ^2}{2m}\frac {\partial ^2}{\partial  x^2} + V(x)     </fr:tex>
-    Thus the time-independent Schrodinger equation can be written as:
-    <fr:tex display="block">         \hat {H}\psi (x) = E\psi (x)     </fr:tex>
-    The expectation value of the total energy gives the energy of the system:
-    <fr:tex display="block">         \begin {align*}             \langle  H \rangle  &amp;= \int  \psi ^*(x)\hat {H}\psi (x)dx              \\             &amp;= \int  \psi ^*(x)E\psi (x)dx             \\             &amp;= E\int  |\psi (x)|^2dx             \\             &amp;= E\int  |\Psi (x)|^2dx             \\             &amp;= E                    \end {align*}     </fr:tex>
-    and
-    <fr:tex display="block">         \begin {align*}             \langle  H^2 \rangle  &amp;=              \int  \psi ^*(x)\hat {H}^2\psi (x)dx             \\             &amp;= E^2\int  |\psi (x)|^2 dx                   \\             &amp;= E^2               \end {align*}     </fr:tex>
-    where 
-    <fr:tex display="block">         \hat {H}^2\psi  = \hat {H}(\hat {H}\psi ) = \hat {H}(E\psi ) = E(\hat {H}\psi ) = E^2\psi      </fr:tex>
-    Hence the variance of the energy is zero given by
-    <fr:tex display="block">         \Delta  H = \sqrt {\langle  H^2 \rangle  - \langle  H \rangle ^2} = 0     </fr:tex>
-    This implies that the energy of the system is conserved.
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter>
+          <fr:mainmatter>
+            <fr:p>Notes about the classic mechanics. 
+    Most of the content is based on the Wikipedia page about the subject.</fr:p>
+            <fr:p>The motion of a body can only be described relative to something else—other bodies, 
+    observers, or a set of spacetime coordinates. These are called <fr:strong>frames of reference</fr:strong>. 
+    All physical laws take their simplest form in an <fr:strong>inertial</fr:strong> frame.
+    <fr:strong>Galilean invariance</fr:strong> or <fr:strong>Galilean relativity</fr:strong> states that the 
+    laws of motion are the same in all <fr:strong>inertial frames of reference</fr:strong>.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>688</fr:anchor>
+                <fr:addr type="machine">#289</fr:addr>
+                <fr:route>unstable-289.xml</fr:route>
+                <fr:title text="Center of mass">Center of mass</fr:title>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The center of mass of a distribution of mass in space is the unique point 
+        at any given time where the weighted relative position of the distributed mass sums to zero.
+        <fr:ul><fr:li><fr:strong>System of particles</fr:strong>
+                <fr:tex display="block">                     \vec {R} = \frac {\sum  m_i \vec {r}_i}{\sum  m_i}                 </fr:tex></fr:li>
+            <fr:li><fr:strong>Continuous volume</fr:strong>
+                <fr:p>If the mass is distributed continuously, the center of mass is given by the
+                    following formula:
+                    <fr:tex display="block">                         \vec {R} = \frac {\int  \vec {r} dm}{\int  dm}                     </fr:tex></fr:p></fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>689</fr:anchor>
+                <fr:addr type="machine">#290</fr:addr>
+                <fr:route>unstable-290.xml</fr:route>
+                <fr:title text="Work and Energy">Work and Energy</fr:title>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p><fr:strong>Work</fr:strong> is the energy transferred to or from an object via the application of force along a displacement.
+        <fr:ul><fr:li>Positive Work: The force has a component in the direction of the displacement.</fr:li>
+            <fr:li>Negative Work: The force has a component opposite to the direction of the displacement.</fr:li></fr:ul>
+        Both force and displacement are vectors. The work done is given by the dot product of the two vectors,
+        where the result is a scalar. The work can be given by line integrals:
+        <fr:tex display="block">             W = \int _C \vec {F} \cdot  d\vec {r}         </fr:tex>
+        where <fr:tex display="inline">d\vec {r}</fr:tex> is the tiny displacement vector along the path <fr:tex display="inline">C</fr:tex>.
+        For motion along a straight line, we have a degenerated case of the line integral:
+        <fr:tex display="block">             W = \vec {F} \cdot  \vec {r}         </fr:tex></fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>690</fr:anchor>
+                    <fr:addr type="user">thm-0012</fr:addr>
+                    <fr:route>thm-0012.xml</fr:route>
+                    <fr:title text="Work-Energy Principle">Work-Energy Principle</fr:title>
+                    <fr:taxon>Principle</fr:taxon>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>An increase in the kinetic energy of a <fr:strong>rigid body</fr:strong> is caused by an equal amount 
+    of positive work done on the body by the resultant force acting on that body. 
+    Conversely, a decrease in kinetic energy is caused by an equal amount of negative work done by the resultant force.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:p>Work on a free (no fields), rigid (no internal degrees of freedom) body, is equal to the change
+        in kinetic energy <fr:tex display="inline">E_k</fr:tex> corresponding to the linear velocity and angular velocity of that body.
+        <fr:tex display="block">             W = \Delta  E_k         </fr:tex></fr:p>
+                <fr:p>The work of forces generated by a potential function is known as potential energy 
+        and the forces are said to be <fr:strong>conservative</fr:strong>. 
+        Work on an object that is merely displaced in a conservative force field, without 
+        change in velocity or rotation, is equal to minus the change of potential energy <fr:tex display="inline">E_p</fr:tex> of the object
+        <fr:tex display="block">             W = -\Delta  E_p         </fr:tex></fr:p>
+                <fr:p>The time derivative of the work is called <fr:strong>power</fr:strong>:
+        <fr:tex display="block">             P = \frac {dW}{dt}         </fr:tex>
+        <fr:tex display="inline">dW</fr:tex> can be written as the dot product of the force and the velocity of the object <fr:tex display="inline">dW = \vec {F} \cdot  d\vec {r}</fr:tex>,
+        hence the power can be written as:
+        <fr:tex display="block">             P = \vec {F} \cdot  \frac {d\vec {r}}{dt} = \vec {F} \cdot  \vec {v}         </fr:tex>
+        The work then can be expressed as the integral of the power over time:
+        <fr:tex display="block">             W = \int _{\Delta  t} P dt = \int _{\Delta  t} \vec {F} \cdot  \vec {v} dt          </fr:tex></fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>691</fr:anchor>
+                    <fr:addr type="machine">#291</fr:addr>
+                    <fr:route>unstable-291.xml</fr:route>
+                    <fr:title text="Kinetic Energy">Kinetic Energy</fr:title>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter><fr:p>The kinetic energy of a point object, or a non-rotating rigid body depends on the 
+            mass of the body as well as its speed.
+            <fr:tex display="block">                 E_k = \frac {1}{2} m v^2 = \frac {p^2}{2m}             </fr:tex></fr:p>
+ 
+   
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>692</fr:anchor><fr:addr type="machine">#292</fr:addr><fr:route>unstable-292.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            The work done in accelerating a particle with mass m during the infinitesimal time 
+            interval <fr:tex display="inline">dt</fr:tex> is given by the dot product of force <fr:tex display="inline">\vec {F}</fr:tex> and the infinitesimal displacement <fr:tex display="inline">d\vec {x}</fr:tex>
+            <fr:tex display="block">                 dW = \vec {F} \cdot  d\vec {x}                  = \frac {d\vec {p}}{dt} \cdot  \vec {v}dt                 = \vec {v}\cdot  d\vec {p} = \vec {v} \cdot  d(m\vec {v})             </fr:tex>
+            Applying the product rule of differentiation, we get:
+            <fr:tex display="block">                 d(\vec {v}\cdot \vec {v}) = 2\vec {v} \cdot  d\vec {v}             </fr:tex>
+            Therefore we have:
+            <fr:tex display="block">                 \vec {v} \cdot  d(m\vec {v}) = \frac {m}{2} d(\vec {v} \cdot  \vec {v})              </fr:tex>
+            Since this is a total differential (that is, it only depends on the final state, 
+            not how the particle got there), we can integrate it and call the result kinetic energy:
+            <fr:tex display="block">                 E_k = \int _{v_1}^{v_2} \vec {p} \cdot  d\vec {v} = \frac {1}{2} m (v_2^2-v_1^2)             </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ 
+<fr:p>If a rigid body <fr:tex display="inline">Q</fr:tex> is rotating about any line through the center of mass then it has <fr:strong>rotational kinetic energy</fr:strong>
+            (<fr:tex display="inline">E_r</fr:tex>) which is simply the sum of the kinetic energies of its moving parts, and is thus given by:
+            <fr:tex display="block">                 E_r = \int _Q \frac {v^2dm}{2} = \int _Q \frac {(r\omega )^2dm}{2} = \frac {\omega ^2}{2}\int _Qr^2dm = \frac {1}{2}I\omega ^2             </fr:tex>
+            <fr:ul><fr:li><fr:tex display="inline">I = \int _Qr^2dm</fr:tex> is the moment of inertia of the body.</fr:li>
+                <fr:li><fr:tex display="inline">\omega </fr:tex> is the angular velocity of the body.</fr:li>
+                <fr:li><fr:tex display="inline">r</fr:tex> is the distance from the axis of rotation.</fr:li></fr:ul></fr:p></fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>693</fr:anchor>
+                <fr:addr type="machine">#293</fr:addr>
+                <fr:route>unstable-293.xml</fr:route>
+                <fr:title text="Momentum">Momentum</fr:title>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p><fr:strong>Momentum</fr:strong> depends on the frame of reference, but in any inertial frame it is a conserved quantity,
+        meaning that if a closed system is not affected by external forces, its total linear momentum does not change.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>694</fr:anchor>
+                    <fr:addr type="machine">#294</fr:addr>
+                    <fr:route>unstable-294.xml</fr:route>
+                    <fr:title text="Definition in Classic Mechanics">Definition in Classic Mechanics</fr:title>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>For a system with one or more particles, the total momentum is the sum of the momenta of the individual particles.
+            <fr:tex display="block">                 \vec {p} = \sum  m_i \vec {v}_i             </fr:tex>
+            Or use the center of mass:
+            <fr:tex display="block">                 \vec {p} = M \vec {V}             </fr:tex>
+            where <fr:tex display="inline">M</fr:tex> is the total mass of the system and <fr:tex display="inline">\vec {V}</fr:tex> is the velocity of the center of mass.
+            This formula is known as the <fr:strong>Euler&apos;s first law of motion</fr:strong>.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>695</fr:anchor>
+                    <fr:addr type="machine">#295</fr:addr>
+                    <fr:route>unstable-295.xml</fr:route>
+                    <fr:title text="Relation to force">Relation to force</fr:title>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>From Newton&apos;s second law, the rate of change of the momentum of a particle is equal to the 
+            instantaneous force <fr:tex display="inline">F</fr:tex> acting on it
+            <fr:tex display="block">                 \vec {F} = \frac {d\vec {p}}{dt}             </fr:tex>
+            Hence the change in momentum in time interval <fr:tex display="inline">(t_1, t_2)</fr:tex> can be written as:
+            <fr:tex display="block">                 I = \Delta \vec {p} = \int _{t_1}^{t_2} \vec {F} dt = \int _{\vec {p_1}}^{\vec {p_2}} d\vec {p}             </fr:tex>
+            We read this as the <fr:strong>impulse</fr:strong> <fr:tex display="inline">I</fr:tex> is equal to the change in momentum.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>696</fr:anchor>
+                    <fr:addr type="machine">#296</fr:addr>
+                    <fr:route>unstable-296.xml</fr:route>
+                    <fr:title text="Law of Conservation of Momentum">Law of Conservation of Momentum</fr:title>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>In a closed system the total momentum remains constant.
+            A closed system means that the system is not affected by external forces.
+            Or approximately the external forces are extremely small.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>697</fr:anchor>
+                    <fr:addr type="machine">#297</fr:addr>
+                    <fr:route>unstable-297.xml</fr:route>
+                    <fr:title text="Angular Momentum">Angular Momentum</fr:title>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter><fr:p>A force applied perpendicularly to a lever multiplied by its distance from the 
+            lever&apos;s fulcrum (the length of the lever arm) is its <fr:strong>torque</fr:strong>.
+            <fr:tex display="block">                 \vec {\tau } = \vec {r} \times  \vec {F}             </fr:tex>
+            The magnitude of torque is <fr:tex display="inline">\tau  = rF\sin \theta  </fr:tex> (<fr:tex display="inline">r</fr:tex> is the magnitude of the
+            <fr:strong>position vector</fr:strong> <fr:tex display="inline">\vec {r}</fr:tex> and <fr:tex display="inline">\theta </fr:tex> is the angle between the force
+            vector and the lever arm vector).</fr:p><fr:p>In three-dimensional Euclidean Space, the torque can be written as the components:
+            <fr:tex display="block">                 \vec {\tau } = \begin {pmatrix}                     \tau _x \\                     \tau _y \\                     \tau _z                 \end {pmatrix} = \begin {pmatrix}                     yF_z - zF_y \\                     zF_x - xF_z \\                     xF_y - yF_x                 \end {pmatrix}             </fr:tex>
+            The component of torque in the direction of an axis is called the torque to that axis.</fr:p><fr:p>The net torque determines the rate of change of the body&apos;s angular momentum.
+            <fr:tex display="block">                 \vec {\tau } = \frac {d\vec {L}}{dt}             </fr:tex>
+            The angular momentum of a particle is defined as:
+            <fr:tex display="block">                 \vec {L} = \vec {r} \times  \vec {p}             </fr:tex></fr:p>
+ 
+   
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>698</fr:anchor><fr:addr type="machine">#298</fr:addr><fr:route>unstable-298.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+            Now we prove the equivalence of definitions.
+            <fr:tex display="block">                 \frac {d\vec {L}}{dt} = \vec {r}\times \frac {d\vec {p}}{dt} + \frac {d\vec {r}}{dt}\times \vec {p}             </fr:tex>
+            The rate of change of linear momentum is the force and the rate of change of position is velocity.
+            <fr:tex display="block">                 \frac {d\vec {L}}{dt} = \vec {r}\times \vec {F} + \vec {v}\times \vec {p}             </fr:tex>
+            The cross product of <fr:tex display="inline">\vec {p}</fr:tex> with <fr:tex display="inline">\vec {v}</fr:tex> is <fr:tex display="inline">0</fr:tex> because velocity and momentum are parallel.
+            Hence we have:
+            <fr:tex display="block">                 \frac {d\vec {L}}{dt} = \vec {r}\times \vec {F} = \tau              </fr:tex>
+        </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+ 
+<fr:p>The above statement leads to the Conservation of Angular Momentum.</fr:p></fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>699</fr:anchor>
+                <fr:addr type="machine">#299</fr:addr>
+                <fr:route>unstable-299.xml</fr:route>
+                <fr:title text="Rigid Body Dynamics">Rigid Body Dynamics</fr:title>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>700</fr:anchor>
+                    <fr:addr type="machine">#300</fr:addr>
+                    <fr:route>unstable-300.xml</fr:route>
+                    <fr:title text="Moment of Inertia">Moment of Inertia</fr:title>
+                    <fr:authors></fr:authors>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>When a body is free to rotate around an axis, torque must be applied to change its angular momentum.
+            The amount of torque needed to cause any given angular acceleration
+            is proportional to the moment of inertia of the body.
+            The moment of inertia plays the role in rotational kinetics that mass (inertia) plays in linear kinetics,
+            both characterize the resistance of a body to changes in its motion.</fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter></fr:backmatter>
+                </fr:tree>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
+          </fr:mainmatter>
           <fr:backmatter></fr:backmatter>
         </fr:tree>
       </fr:mainmatter>

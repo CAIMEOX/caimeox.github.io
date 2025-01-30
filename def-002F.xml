@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1769</fr:anchor>
+    <fr:anchor>1822</fr:anchor>
     <fr:addr type="user">def-002F</fr:addr>
     <fr:route>def-002F.xml</fr:route>
     <fr:title text="Surjective">Surjective</fr:title>
@@ -21,7 +21,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1770</fr:anchor>
+            <fr:anchor>1823</fr:anchor>
             <fr:addr type="user">math-0005</fr:addr>
             <fr:route>math-0005.xml</fr:route>
             <fr:title text="Linear Maps">Linear Maps</fr:title>
@@ -42,7 +42,7 @@
     For vector spaces we study the <fr:strong>linear maps</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>596</fr:anchor>
+                <fr:anchor>526</fr:anchor>
                 <fr:addr type="user">def-0025</fr:addr>
                 <fr:route>def-0025.xml</fr:route>
                 <fr:title text="Linear Map">Linear Map</fr:title>
@@ -62,7 +62,7 @@
     <fr:tex display="block">         \mathcal {L}(V,W) = \{  T: V \to  W | T \text { is a linear map} \}     </fr:tex></fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>597</fr:anchor>
+                <fr:anchor>527</fr:anchor>
                 <fr:addr type="user">eg-0002</fr:addr>
                 <fr:route>eg-0002.xml</fr:route>
                 <fr:title text="Differentiation is linear map">Differentiation is linear map</fr:title>
@@ -80,7 +80,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>598</fr:anchor>
+                <fr:anchor>528</fr:anchor>
                 <fr:addr type="user">eg-0003</fr:addr>
                 <fr:route>eg-0003.xml</fr:route>
                 <fr:title text="Integration is linear map">Integration is linear map</fr:title>
@@ -102,7 +102,7 @@
     vectors in a basis by the following theorem.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>599</fr:anchor>
+                <fr:anchor>529</fr:anchor>
                 <fr:addr type="user">thm-000F</fr:addr>
                 <fr:route>thm-000F.xml</fr:route>
                 <fr:title text="Linear maps and basis of domain">Linear maps and basis of domain</fr:title>
@@ -122,7 +122,7 @@
     This leads to a surprising result: the set of linear maps is actually a vector space.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>600</fr:anchor>
+                <fr:anchor>530</fr:anchor>
                 <fr:addr type="user">def-0029</fr:addr>
                 <fr:route>def-0029.xml</fr:route>
                 <fr:title text="Addition and scalar multiplication over {L}(V,W)">Addition and scalar multiplication over <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex></fr:title>
@@ -146,7 +146,7 @@
     This can form a <fr:strong>monoid</fr:strong> or even a <fr:strong>group</fr:strong> under certain conditions.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>601</fr:anchor>
+                <fr:anchor>531</fr:anchor>
                 <fr:addr type="user">def-002A</fr:addr>
                 <fr:route>def-002A.xml</fr:route>
                 <fr:title text="Product of Linear Maps">Product of Linear Maps</fr:title>
@@ -179,7 +179,7 @@
     For linear maps, the kernel is the <fr:strong>null space</fr:strong></fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>602</fr:anchor>
+                <fr:anchor>532</fr:anchor>
                 <fr:addr type="user">def-002C</fr:addr>
                 <fr:route>def-002C.xml</fr:route>
                 <fr:title text="Null Space">Null Space</fr:title>
@@ -197,7 +197,7 @@
     To check whether a linear map is injective, we can just check whether the null space is trivial.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>603</fr:anchor>
+                <fr:anchor>533</fr:anchor>
                 <fr:addr type="user">thm-000G</fr:addr>
                 <fr:route>thm-000G.xml</fr:route>
                 <fr:title text="Injectivity equivalent to Kernel Triviality">Injectivity equivalent to Kernel Triviality</fr:title>
@@ -213,7 +213,7 @@
     This is called the <fr:strong>range</fr:strong> of the linear map, just like <fr:link type="local" href="def-002E.xml" addr="def-002E" title="Range">range</fr:link> of normal function.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>604</fr:anchor>
+                <fr:anchor>534</fr:anchor>
                 <fr:addr type="user">thm-000H</fr:addr>
                 <fr:route>thm-000H.xml</fr:route>
                 <fr:title text="Range is a subspace">Range is a subspace</fr:title>
@@ -228,7 +228,7 @@
             <fr:p>The next theorem plays a crucial role in the study of linear maps.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>605</fr:anchor>
+                <fr:anchor>535</fr:anchor>
                 <fr:addr type="user">thm-000I</fr:addr>
                 <fr:route>thm-000I.xml</fr:route>
                 <fr:title text="Fundamental Theorems of Linear Maps">Fundamental Theorems of Linear Maps</fr:title>
@@ -247,7 +247,7 @@
     This can be easily proved by the fundamental theorem of linear maps.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>606</fr:anchor>
+                <fr:anchor>536</fr:anchor>
                 <fr:addr type="user">thm-000M</fr:addr>
                 <fr:route>thm-000M.xml</fr:route>
                 <fr:title text="Map to smaller dimension is not injective">Map to smaller dimension is not injective</fr:title>
@@ -265,7 +265,7 @@
     to a <fr:em>larger</fr:em> (In dimension) vector space can be <fr:link type="local" href="def-002F.xml" addr="def-002F" title="Surjective">surjective</fr:link>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>607</fr:anchor>
+                <fr:anchor>537</fr:anchor>
                 <fr:addr type="user">thm-000N</fr:addr>
                 <fr:route>thm-000N.xml</fr:route>
                 <fr:title text="Map to bigger dimension is not surjective">Map to bigger dimension is not surjective</fr:title>
@@ -283,7 +283,7 @@
     The idea here is to express linear equations system in terms of linear maps.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>608</fr:anchor>
+                <fr:anchor>538</fr:anchor>
                 <fr:addr type="user">eg-0004</fr:addr>
                 <fr:route>eg-0004.xml</fr:route>
                 <fr:title text="Homogeneous Linear Equations System">Homogeneous Linear Equations System</fr:title>
@@ -306,7 +306,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>609</fr:anchor>
+                <fr:anchor>539</fr:anchor>
                 <fr:addr type="user">thm-000O</fr:addr>
                 <fr:route>thm-000O.xml</fr:route>
                 <fr:title text="Homogeneous system of linear equations">Homogeneous system of linear equations</fr:title>
@@ -324,7 +324,7 @@
     <fr:tex display="inline">T</fr:tex> is not injective if <fr:tex display="inline">n &gt; m</fr:tex>. This results the theorem above.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>610</fr:anchor>
+                <fr:anchor>540</fr:anchor>
                 <fr:addr type="user">eg-0005</fr:addr>
                 <fr:route>eg-0005.xml</fr:route>
                 <fr:title text="Inhomogeneous Linear Equations System">Inhomogeneous Linear Equations System</fr:title>
@@ -348,7 +348,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>611</fr:anchor>
+                <fr:anchor>541</fr:anchor>
                 <fr:addr type="user">thm-000P</fr:addr>
                 <fr:route>thm-000P.xml</fr:route>
                 <fr:title text="Inhomogeneous system of linear equations">Inhomogeneous system of linear equations</fr:title>
@@ -368,7 +368,7 @@
     This leads to the definition of the matrix representation of a linear map.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>612</fr:anchor>
+                <fr:anchor>542</fr:anchor>
                 <fr:addr type="user">def-002R</fr:addr>
                 <fr:route>def-002R.xml</fr:route>
                 <fr:title text="Matrix">Matrix</fr:title>
@@ -387,7 +387,7 @@
             <fr:p>Now we can define the matrix representation of a linear map.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>613</fr:anchor>
+                <fr:anchor>543</fr:anchor>
                 <fr:addr type="user">def-002S</fr:addr>
                 <fr:route>def-002S.xml</fr:route>
                 <fr:title text="Matrix of Linear Maps">Matrix of Linear Maps</fr:title>
@@ -402,7 +402,7 @@
     <fr:tex display="block">         T(v_j) = \sum _{i=1}^m \mathcal {M}(T)_{ij}w_i     </fr:tex>
     Or we denote <fr:tex display="inline">\mathcal {M}(T)</fr:tex> as <fr:tex display="inline">\mathcal {M}(T, (v_1,\ldots ,v_n), (w_1,\ldots ,w_m))</fr:tex>.</fr:p><fr:p>If <fr:tex display="inline">T</fr:tex> maps <fr:tex display="inline">n</fr:tex>-dimensional vector space to <fr:tex display="inline">m</fr:tex>-dimensional vector space,
     then <fr:tex display="inline">\mathcal {M}(T)</fr:tex> is a <fr:tex display="inline">m\times  n</fr:tex> matrix.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>614</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>544</fr:anchor><fr:addr type="machine">#328</fr:addr><fr:route>unstable-328.xml</fr:route><fr:title text="
     Addition
 ">
     <fr:strong>Addition</fr:strong>
@@ -414,7 +414,7 @@
     <fr:tex display="block">         \mathcal {M}(T+S) = \mathcal {M}(T) + \mathcal {M}(S)     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>615</fr:anchor><fr:addr type="machine">#327</fr:addr><fr:route>unstable-327.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>545</fr:anchor><fr:addr type="machine">#329</fr:addr><fr:route>unstable-329.xml</fr:route><fr:title text="
     Scalar Multiplication
 ">
     <fr:strong>Scalar Multiplication</fr:strong>
@@ -426,7 +426,7 @@
     <fr:tex display="block">         \mathcal {M}(cT) = c\mathcal {M}(T)     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>616</fr:anchor><fr:addr type="machine">#328</fr:addr><fr:route>unstable-328.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>546</fr:anchor><fr:addr type="machine">#330</fr:addr><fr:route>unstable-330.xml</fr:route><fr:title text="
     Set of Matrices
 ">
     <fr:strong>Set of Matrices</fr:strong>
@@ -440,7 +440,7 @@
             <fr:p>We can see that <fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex> is itself a vector space.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>617</fr:anchor>
+                <fr:anchor>547</fr:anchor>
                 <fr:addr type="user">thm-000Q</fr:addr>
                 <fr:route>thm-000Q.xml</fr:route>
                 <fr:title text="{F}^{m n} = mn">
@@ -461,7 +461,7 @@
     This makes no sense now but indicates the definition of <fr:strong>matrix multiplication</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>618</fr:anchor>
+                <fr:anchor>548</fr:anchor>
                 <fr:addr type="user">def-002T</fr:addr>
                 <fr:route>def-002T.xml</fr:route>
                 <fr:title text="Matrix Multiplication">Matrix Multiplication</fr:title>
@@ -471,7 +471,7 @@
               <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> be a <fr:tex display="inline">n\times  p</fr:tex> matrix.
     Then <fr:tex display="inline">AC</fr:tex> is defined as the <fr:tex display="inline">m\times  p</fr:tex> matrix <fr:tex display="inline">C</fr:tex> such that
     <fr:tex display="block">         C_{ij} = \sum _{k=1}^n A_{ik}B_{kj}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>619</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>549</fr:anchor><fr:addr type="machine">#327</fr:addr><fr:route>unstable-327.xml</fr:route><fr:title text="
     Derivation
 ">
     <fr:strong>Derivation</fr:strong>
@@ -491,7 +491,7 @@
     However, it satisfies the associative law and the distributive law.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>620</fr:anchor>
+                <fr:anchor>550</fr:anchor>
                 <fr:addr type="user">def-002Y</fr:addr>
                 <fr:route>def-002Y.xml</fr:route>
                 <fr:title text="A_{j} and A_{ j}"><fr:tex display="inline">A_{j\cdot }</fr:tex> and <fr:tex display="inline">A_{\cdot  j}</fr:tex></fr:title>
@@ -510,7 +510,7 @@
             <fr:p>With the notation we can think of matrix multiplication in another perspective.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>621</fr:anchor>
+                <fr:anchor>551</fr:anchor>
                 <fr:addr type="user">thm-000R</fr:addr>
                 <fr:route>thm-000R.xml</fr:route>
                 <fr:title text="Entry pf matrix product">Entry pf matrix product</fr:title>
@@ -528,7 +528,7 @@
             <fr:p>We have an interesting observation.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>622</fr:anchor>
+                <fr:anchor>552</fr:anchor>
                 <fr:addr type="user">thm-000S</fr:addr>
                 <fr:route>thm-000S.xml</fr:route>
                 <fr:title text="Linear Combination of columns">Linear Combination of columns</fr:title>
@@ -548,7 +548,7 @@
             <fr:p>Now we begin the study the invertibility of linear maps.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>623</fr:anchor>
+                <fr:anchor>553</fr:anchor>
                 <fr:addr type="user">def-002Z</fr:addr>
                 <fr:route>def-002Z.xml</fr:route>
                 <fr:title text="Inverse">Inverse</fr:title>
@@ -571,7 +571,7 @@
     it is <fr:strong>bijective</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>624</fr:anchor>
+                <fr:anchor>554</fr:anchor>
                 <fr:addr type="user">thm-000T</fr:addr>
                 <fr:route>thm-000T.xml</fr:route>
                 <fr:title text="Isomorphism of equal dimensions">Isomorphism of equal dimensions</fr:title>
@@ -586,7 +586,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>625</fr:anchor>
+                <fr:anchor>555</fr:anchor>
                 <fr:addr type="user">thm-000U</fr:addr>
                 <fr:route>thm-000U.xml</fr:route>
                 <fr:title text="{L}(V,W) is isomorphic to {F}^{m n}"><fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> is isomorphic to <fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex></fr:title>
@@ -603,7 +603,7 @@
             <fr:p>This has a trivial corollary.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>626</fr:anchor>
+                <fr:anchor>556</fr:anchor>
                 <fr:addr type="user">thm-000V</fr:addr>
                 <fr:route>thm-000V.xml</fr:route>
                 <fr:title text="Dimension product">Dimension product</fr:title>
@@ -622,7 +622,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1771</fr:anchor>
+            <fr:anchor>1824</fr:anchor>
             <fr:addr type="user">def-002H</fr:addr>
             <fr:route>def-002H.xml</fr:route>
             <fr:title text="Set Isomorphism">Set Isomorphism</fr:title>

@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1176</fr:anchor>
+    <fr:anchor>1820</fr:anchor>
     <fr:addr type="machine">#285</fr:addr>
     <fr:route>unstable-285.xml</fr:route>
-    <fr:title text="Simple Harmonic Motion › Wave › Basic Quantities"><fr:link type="local" href="unstable-284.xml" addr="#284" title="Simple Harmonic Motion › Wave"><fr:link type="local" href="phy-0005.xml" addr="phy-0005" title="Simple Harmonic Motion">Simple Harmonic Motion</fr:link> › Wave</fr:link> › Basic Quantities</fr:title>
+    <fr:title text="Simple Harmonic Motion › Superposition"><fr:link type="local" href="phy-0005.xml" addr="phy-0005" title="Simple Harmonic Motion">Simple Harmonic Motion</fr:link> › Superposition</fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>The wavelength, frequency, speed and period are four import quantities of a wave.
-            Now we give their relations.</fr:p>
-    <fr:p>The <fr:strong>wavelength</fr:strong> <fr:tex display="inline">\lambda </fr:tex> of a sinusoidal waveform traveling at constant speed <fr:tex display="inline">v</fr:tex> is given by
-            <fr:tex display="block">                 \lambda  = vT = \frac {v}{f}             </fr:tex>
-            where <fr:tex display="inline">f</fr:tex> is the frequency of the wave and <fr:tex display="inline">T</fr:tex> is the period of the wave.</fr:p>
+    <fr:p>According to the principle of superposition of SHM, the resultant displacement
+        of a number of waves in a medium at a particular point is the vector sum of the individual 
+        displacements produced by each of the waves at that point. 
+        Consider two waves having the same angular frequency (Suppose <fr:tex display="inline">\phi _2 &gt; \phi _1</fr:tex>) in the same line:
+        <fr:tex display="block">             x_{1}(t)=A_{1}\cos (\omega  t+\phi _{1}) \\             x_{2}(t)=A_{2}\cos (\omega  t+\phi _{2})         </fr:tex>
+        Use vector addition we can easily compute the resultant displacement
+        <fr:tex display="block">             A = \sqrt {A_{1}^{2}+A_{2}^{2}+2A_{1}A_{2}\cos (\phi _{2}-\phi _{1})} \\         </fr:tex>
+        and the resultant initial phase
+        <fr:tex display="block">             \phi  = \arctan \left (\frac {A_{1}\sin \phi _{1}+A_{2}\sin \phi _{2}}{A_{1}\cos \phi _{1}+A_{2}\cos \phi _{2}}\right )         </fr:tex></fr:p>
+    <fr:p>For some special case, the resultant displacement can be simplified:
+        <fr:ul><fr:li>If <fr:tex display="inline">\phi _2 - \phi _1 = 2k\pi , k \in \mathbb {Z}</fr:tex> then the resultant displacement is
+                <fr:tex display="block">                     A = A_{1}+A_{2}                 </fr:tex></fr:li>
+            <fr:li>If <fr:tex display="inline">\phi _2 - \phi _1 = (2k+1)\pi , k \in \mathbb {Z}</fr:tex> then the resultant displacement is
+                <fr:tex display="block">                     A = |A_{1}-A_{2}|                 </fr:tex></fr:li></fr:ul></fr:p>
+    <fr:p>If the angular frequencies are different, the resultant displacement changes with time.
+        For instance, given <fr:tex display="block">             x_1 = A_1\cos (\omega _1t+\phi _1) \\             x_2 = A_2\cos (\omega _2t+\phi _2)         </fr:tex>
+        the resultant displacement is
+        <fr:tex display="block">             A = \sqrt {A_{1}^{2}+A_{2}^{2}+2A_{1}A_{2}\cos ((\omega _{2}-\omega _{1})t+\phi _{2}-\phi _{1})}         </fr:tex></fr:p>
+    <fr:p>If two waves are perpendicular to each other
+        <fr:tex display="block">             x = A\cos (\omega  t + \alpha )              \\              y = B\cos (\omega  t + \beta )         </fr:tex>
+        we can compute that
+        <fr:tex display="block">             \frac {x^2}{A^2} + \frac {y^2}{B^2} -             \frac {xy}{AB}\cos (\beta -\alpha ) = \sin ^2(\beta -\alpha )         </fr:tex>
+        which is the equation of an ellipse.</fr:p>
+    <fr:ul><fr:li><fr:tex display="inline">\beta  - \alpha  = 0 \text { or } \pi </fr:tex> the ellipse becomes two line:
+            <fr:tex display="block">                 (\frac {x}{A}\pm \frac {y}{B})^2 = 0 \implies  y = \pm  \frac {B}{A}x             </fr:tex>
+            The trajectory is two straight line cross the origin.
+            The resultant amplitude is <fr:tex display="inline">C = A^2 + B^2</fr:tex></fr:li>
+        <fr:li><fr:tex display="inline">\beta  - \alpha  = \pm \frac {\pi }{2}</fr:tex> the ellipse becomes a regular ellipse,
+            i.e., the ellipse that takes the coordinates axis as its major axis.
+            <fr:tex display="block">                 \frac {x^2}{A^2} + \frac {y^2}{B^2} = 1             </fr:tex>
+            If <fr:tex display="inline">\beta  - \alpha  &gt; 0</fr:tex> the ellipse is clockwise, otherwise it is counter-clockwise.</fr:li></fr:ul>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -23,7 +49,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1177</fr:anchor>
+            <fr:anchor>1821</fr:anchor>
             <fr:addr type="user">phy-0005</fr:addr>
             <fr:route>phy-0005.xml</fr:route>
             <fr:title text="Simple Harmonic Motion">Simple Harmonic Motion</fr:title>
@@ -59,9 +85,9 @@
     and <fr:tex display="inline">\phi </fr:tex> is the initial <fr:strong>phase</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>763</fr:anchor>
-                <fr:addr type="machine">#282</fr:addr>
-                <fr:route>unstable-282.xml</fr:route>
+                <fr:anchor>702</fr:anchor>
+                <fr:addr type="machine">#284</fr:addr>
+                <fr:route>unstable-284.xml</fr:route>
                 <fr:title text="Energy">Energy</fr:title>
                 <fr:authors></fr:authors>
               </fr:frontmatter>
@@ -81,9 +107,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>764</fr:anchor>
-                <fr:addr type="machine">#283</fr:addr>
-                <fr:route>unstable-283.xml</fr:route>
+                <fr:anchor>703</fr:anchor>
+                <fr:addr type="machine">#285</fr:addr>
+                <fr:route>unstable-285.xml</fr:route>
                 <fr:title text="Superposition">Superposition</fr:title>
                 <fr:authors></fr:authors>
               </fr:frontmatter>
@@ -124,9 +150,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>765</fr:anchor>
-                <fr:addr type="machine">#284</fr:addr>
-                <fr:route>unstable-284.xml</fr:route>
+                <fr:anchor>704</fr:anchor>
+                <fr:addr type="machine">#286</fr:addr>
+                <fr:route>unstable-286.xml</fr:route>
                 <fr:title text="Wave">Wave</fr:title>
                 <fr:authors></fr:authors>
               </fr:frontmatter>
@@ -142,7 +168,7 @@
                 <fr:p>According to the direction of vibration and propagation, waves can be classified into two types.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>766</fr:anchor>
+                    <fr:anchor>705</fr:anchor>
                     <fr:addr type="user">def-004K</fr:addr>
                     <fr:route>def-004K.xml</fr:route>
                     <fr:title text="Transverse wave and Longitudinal wave">Transverse wave and Longitudinal wave</fr:title>
@@ -157,9 +183,9 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>767</fr:anchor>
-                    <fr:addr type="machine">#285</fr:addr>
-                    <fr:route>unstable-285.xml</fr:route>
+                    <fr:anchor>706</fr:anchor>
+                    <fr:addr type="machine">#287</fr:addr>
+                    <fr:route>unstable-287.xml</fr:route>
                     <fr:title text="Basic Quantities">Basic Quantities</fr:title>
                     <fr:authors></fr:authors>
                   </fr:frontmatter>
@@ -174,9 +200,9 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>768</fr:anchor>
-                    <fr:addr type="machine">#286</fr:addr>
-                    <fr:route>unstable-286.xml</fr:route>
+                    <fr:anchor>707</fr:anchor>
+                    <fr:addr type="machine">#288</fr:addr>
+                    <fr:route>unstable-288.xml</fr:route>
                     <fr:title text="Basic Principle">Basic Principle</fr:title>
                     <fr:authors></fr:authors>
                   </fr:frontmatter>

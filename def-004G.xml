@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1762</fr:anchor>
+    <fr:anchor>1815</fr:anchor>
     <fr:addr type="user">def-004G</fr:addr>
     <fr:route>def-004G.xml</fr:route>
     <fr:title text="Successor Universe">Successor Universe</fr:title>
@@ -24,7 +24,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1763</fr:anchor>
+            <fr:anchor>1816</fr:anchor>
             <fr:addr type="user">tt-0006</fr:addr>
             <fr:route>tt-0006.xml</fr:route>
             <fr:title text="Universe">Universe</fr:title>
@@ -51,9 +51,9 @@
     Another reason is that it allows us to define types equipped with structure such as group.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>467</fr:anchor>
-                <fr:addr type="machine">#270</fr:addr>
-                <fr:route>unstable-270.xml</fr:route>
+                <fr:anchor>763</fr:anchor>
+                <fr:addr type="machine">#272</fr:addr>
+                <fr:route>unstable-272.xml</fr:route>
                 <fr:title text="Specification">Specification</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -65,7 +65,7 @@
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>468</fr:anchor>
+                    <fr:anchor>764</fr:anchor>
                     <fr:addr type="user">def-004E</fr:addr>
                     <fr:route>def-004E.xml</fr:route>
                     <fr:title text="Tarski Universe">Tarski Universe</fr:title>
@@ -101,9 +101,9 @@
     if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.</fr:p>
                     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                       <fr:frontmatter>
-                        <fr:anchor>469</fr:anchor>
-                        <fr:addr type="machine">#318</fr:addr>
-                        <fr:route>unstable-318.xml</fr:route>
+                        <fr:anchor>765</fr:anchor>
+                        <fr:addr type="machine">#320</fr:addr>
+                        <fr:route>unstable-320.xml</fr:route>
                         <fr:title text="Enough Universe">Enough Universe</fr:title>
                         <fr:authors></fr:authors>
                       </fr:frontmatter>
@@ -119,7 +119,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>470</fr:anchor>
+                    <fr:anchor>766</fr:anchor>
                     <fr:addr type="user">thm-0013</fr:addr>
                     <fr:route>thm-0013.xml</fr:route>
                     <fr:title text="Enough Universe">Enough Universe</fr:title>
@@ -140,7 +140,7 @@
                 <fr:p>Using the assumption we can obtain many specific universes.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>471</fr:anchor>
+                    <fr:anchor>767</fr:anchor>
                     <fr:addr type="user">def-004F</fr:addr>
                     <fr:route>def-004F.xml</fr:route>
                     <fr:title text="Base Universe">Base Universe</fr:title>
@@ -155,7 +155,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>472</fr:anchor>
+                    <fr:anchor>768</fr:anchor>
                     <fr:addr type="user">def-004G</fr:addr>
                     <fr:route>def-004G.xml</fr:route>
                     <fr:title text="Successor Universe">Successor Universe</fr:title>
@@ -177,9 +177,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>473</fr:anchor>
-                <fr:addr type="machine">#271</fr:addr>
-                <fr:route>unstable-271.xml</fr:route>
+                <fr:anchor>769</fr:anchor>
+                <fr:addr type="machine">#273</fr:addr>
+                <fr:route>unstable-273.xml</fr:route>
                 <fr:title text="Observational Equality">Observational Equality</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -195,7 +195,7 @@
         equality on  <fr:tex display="inline">\mathbb {N}</fr:tex>. It can be used to show that equality of natural numbers is <fr:strong>decidable</fr:strong>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>474</fr:anchor>
+                    <fr:anchor>770</fr:anchor>
                     <fr:addr type="user">def-004H</fr:addr>
                     <fr:route>def-004H.xml</fr:route>
                     <fr:title text="Observational Equality of {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
@@ -208,7 +208,7 @@
     
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>475</fr:anchor><fr:addr type="machine">#317</fr:addr><fr:route>unstable-317.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>771</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
         it suffices to provide
         <fr:tex display="block">             \begin {align*}                 &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\                  &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))             \end {align*}         </fr:tex>
@@ -252,7 +252,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1764</fr:anchor>
+            <fr:anchor>1817</fr:anchor>
             <fr:addr type="user">thm-0013</fr:addr>
             <fr:route>thm-0013.xml</fr:route>
             <fr:title text="Enough Universe">Enough Universe</fr:title>

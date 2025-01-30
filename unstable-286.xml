@@ -1,17 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1178</fr:anchor>
+    <fr:anchor>1897</fr:anchor>
     <fr:addr type="machine">#286</fr:addr>
     <fr:route>unstable-286.xml</fr:route>
-    <fr:title text="Simple Harmonic Motion › Wave › Basic Principle"><fr:link type="local" href="unstable-284.xml" addr="#284" title="Simple Harmonic Motion › Wave"><fr:link type="local" href="phy-0005.xml" addr="phy-0005" title="Simple Harmonic Motion">Simple Harmonic Motion</fr:link> › Wave</fr:link> › Basic Principle</fr:title>
+    <fr:title text="Simple Harmonic Motion › Wave"><fr:link type="local" href="phy-0005.xml" addr="phy-0005" title="Simple Harmonic Motion">Simple Harmonic Motion</fr:link> › Wave</fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>The <fr:strong>principle of superposition</fr:strong> states that when two or more waves overlap, the resultant displacement
+    <fr:p>A <fr:strong>wave</fr:strong> is a propagating dynamic disturbance (change from equilibrium) of one or more quantities.
+        Waves are often described by a wave equation (standing wave field of two opposite waves) or a one-way 
+        <fr:strong>wave equation</fr:strong> for single wave propagation in a defined direction.</fr:p>
+    <fr:p>There are two types of waves that are commonly stdudied: mechanical waves and electromagnetic waves.
+        <fr:ul><fr:li>A <fr:strong>mechanical wave</fr:strong> is a local deformation (strain) in some physical medium that propagates
+                form particle to particle by creating local stresses that cause strain in neighboring particles.</fr:li>
+            <fr:li>The electromagnetic wave us propagating by the coupling between the electric and magnetic 
+                fields. Electromagnetic waves can travel through a vacuum and through some dielectric media.</fr:li></fr:ul></fr:p>
+    <fr:p>According to the direction of vibration and propagation, waves can be classified into two types.</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:anchor>705</fr:anchor>
+        <fr:addr type="user">def-004K</fr:addr>
+        <fr:route>def-004K.xml</fr:route>
+        <fr:title text="Transverse wave and Longitudinal wave">Transverse wave and Longitudinal wave</fr:title>
+        <fr:taxon>Definition</fr:taxon>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:ul><fr:li>A <fr:strong>transverse wave</fr:strong> is a wave that oscillates perpendicularly to the direction of the wave&apos;s advance.</fr:li>
+    <fr:li>A <fr:strong>longitudinal wave</fr:strong> is a wave that oscillates parallel to the direction of the wave&apos;s advance.</fr:li></fr:ul>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:anchor>706</fr:anchor>
+        <fr:addr type="machine">#287</fr:addr>
+        <fr:route>unstable-287.xml</fr:route>
+        <fr:title text="Basic Quantities">Basic Quantities</fr:title>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>The wavelength, frequency, speed and period are four import quantities of a wave.
+            Now we give their relations.</fr:p>
+        <fr:p>The <fr:strong>wavelength</fr:strong> <fr:tex display="inline">\lambda </fr:tex> of a sinusoidal waveform traveling at constant speed <fr:tex display="inline">v</fr:tex> is given by
+            <fr:tex display="block">                 \lambda  = vT = \frac {v}{f}             </fr:tex>
+            where <fr:tex display="inline">f</fr:tex> is the frequency of the wave and <fr:tex display="inline">T</fr:tex> is the period of the wave.</fr:p>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:anchor>707</fr:anchor>
+        <fr:addr type="machine">#288</fr:addr>
+        <fr:route>unstable-288.xml</fr:route>
+        <fr:title text="Basic Principle">Basic Principle</fr:title>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>The <fr:strong>principle of superposition</fr:strong> states that when two or more waves overlap, the resultant displacement
             at any point is the vector sum of the displacements of the individual waves at that point.</fr:p>
-    <fr:p>The <fr:strong>Huygens principle</fr:strong> states that each point on a <fr:strong>wavefront</fr:strong> is a source of spherical wavelets and the
+        <fr:p>The <fr:strong>Huygens principle</fr:strong> states that each point on a <fr:strong>wavefront</fr:strong> is a source of spherical wavelets and the
             wavefront at a later time is the <fr:strong>envelope</fr:strong> of these wavelets.</fr:p>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+    <fr:p>If the displacement of origin <fr:tex display="inline">O</fr:tex> can be expressed as
+        <fr:tex display="block">             y_O = A\cos (\omega  t)         </fr:tex> 
+        Such a vibration propagates along x-axis, the displacement of a point <fr:tex display="inline">P</fr:tex> (at <fr:tex display="inline">x</fr:tex>) at time <fr:tex display="inline">t</fr:tex> is
+        <fr:tex display="block">             y = A\cos (\omega  t - 2\pi  f \frac {x}{v}) = A\cos  \omega (t - \frac {x}{v})         </fr:tex>
+        The distance between <fr:tex display="inline">P</fr:tex> and <fr:tex display="inline">O</fr:tex> is <fr:tex display="inline">x</fr:tex>, in this time period the origin vibrates <fr:tex display="inline">\frac {x}{v}f</fr:tex> times.
+        Every vibration changes the phase with <fr:tex display="inline">2\pi </fr:tex>. Hence <fr:tex display="inline">P</fr:tex> is behind <fr:tex display="inline">O</fr:tex> in <fr:tex display="inline">2\pi  f \frac {x}{v}</fr:tex> in phase.</fr:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -22,7 +81,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1179</fr:anchor>
+            <fr:anchor>1898</fr:anchor>
             <fr:addr type="user">phy-0005</fr:addr>
             <fr:route>phy-0005.xml</fr:route>
             <fr:title text="Simple Harmonic Motion">Simple Harmonic Motion</fr:title>
@@ -58,9 +117,9 @@
     and <fr:tex display="inline">\phi </fr:tex> is the initial <fr:strong>phase</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>763</fr:anchor>
-                <fr:addr type="machine">#282</fr:addr>
-                <fr:route>unstable-282.xml</fr:route>
+                <fr:anchor>702</fr:anchor>
+                <fr:addr type="machine">#284</fr:addr>
+                <fr:route>unstable-284.xml</fr:route>
                 <fr:title text="Energy">Energy</fr:title>
                 <fr:authors></fr:authors>
               </fr:frontmatter>
@@ -80,9 +139,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>764</fr:anchor>
-                <fr:addr type="machine">#283</fr:addr>
-                <fr:route>unstable-283.xml</fr:route>
+                <fr:anchor>703</fr:anchor>
+                <fr:addr type="machine">#285</fr:addr>
+                <fr:route>unstable-285.xml</fr:route>
                 <fr:title text="Superposition">Superposition</fr:title>
                 <fr:authors></fr:authors>
               </fr:frontmatter>
@@ -123,9 +182,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>765</fr:anchor>
-                <fr:addr type="machine">#284</fr:addr>
-                <fr:route>unstable-284.xml</fr:route>
+                <fr:anchor>704</fr:anchor>
+                <fr:addr type="machine">#286</fr:addr>
+                <fr:route>unstable-286.xml</fr:route>
                 <fr:title text="Wave">Wave</fr:title>
                 <fr:authors></fr:authors>
               </fr:frontmatter>
@@ -141,7 +200,7 @@
                 <fr:p>According to the direction of vibration and propagation, waves can be classified into two types.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>766</fr:anchor>
+                    <fr:anchor>705</fr:anchor>
                     <fr:addr type="user">def-004K</fr:addr>
                     <fr:route>def-004K.xml</fr:route>
                     <fr:title text="Transverse wave and Longitudinal wave">Transverse wave and Longitudinal wave</fr:title>
@@ -156,9 +215,9 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>767</fr:anchor>
-                    <fr:addr type="machine">#285</fr:addr>
-                    <fr:route>unstable-285.xml</fr:route>
+                    <fr:anchor>706</fr:anchor>
+                    <fr:addr type="machine">#287</fr:addr>
+                    <fr:route>unstable-287.xml</fr:route>
                     <fr:title text="Basic Quantities">Basic Quantities</fr:title>
                     <fr:authors></fr:authors>
                   </fr:frontmatter>
@@ -173,9 +232,9 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>768</fr:anchor>
-                    <fr:addr type="machine">#286</fr:addr>
-                    <fr:route>unstable-286.xml</fr:route>
+                    <fr:anchor>707</fr:anchor>
+                    <fr:addr type="machine">#288</fr:addr>
+                    <fr:route>unstable-288.xml</fr:route>
                     <fr:title text="Basic Principle">Basic Principle</fr:title>
                     <fr:authors></fr:authors>
                   </fr:frontmatter>

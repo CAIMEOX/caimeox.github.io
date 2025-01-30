@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1464</fr:anchor>
+    <fr:anchor>1500</fr:anchor>
     <fr:addr type="user">def-001P</fr:addr>
     <fr:route>def-001P.xml</fr:route>
     <fr:title text="Kronecker Delta">Kronecker Delta</fr:title>
@@ -21,7 +21,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1465</fr:anchor>
+            <fr:anchor>1501</fr:anchor>
             <fr:addr type="user">math-0007</fr:addr>
             <fr:route>math-0007.xml</fr:route>
             <fr:title text="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:title>
@@ -38,9 +38,9 @@
     Refer to <fr:link type="external" href="A%20Visual%20Introduction%20to%20Differential%20Forms%20and%20Calculus%20on%20Manifolds">df-cm-2018</fr:link>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>712</fr:anchor>
-                <fr:addr type="machine">#310</fr:addr>
-                <fr:route>unstable-310.xml</fr:route>
+                <fr:anchor>651</fr:anchor>
+                <fr:addr type="machine">#312</fr:addr>
+                <fr:route>unstable-312.xml</fr:route>
                 <fr:title text="Review of Vector Spaces">Review of Vector Spaces</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -53,7 +53,7 @@
                 <fr:p>We now start with introducing the vector space over the field of real numbers <fr:tex display="inline">\mathbb {R}</fr:tex>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>713</fr:anchor>
+                    <fr:anchor>652</fr:anchor>
                     <fr:addr type="user">def-000H</fr:addr>
                     <fr:route>def-000H.xml</fr:route>
                     <fr:title text="Vector Space">Vector Space</fr:title>
@@ -87,7 +87,7 @@
         Now we can give formal definition of the matrix representation of a linear transformation.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>714</fr:anchor>
+                    <fr:anchor>653</fr:anchor>
                     <fr:addr type="user">def-003W</fr:addr>
                     <fr:route>def-003W.xml</fr:route>
                     <fr:title text="Matrix Representation of Linear Transformation over {R}^n">Matrix Representation of Linear Transformation over <fr:tex display="inline">\mathbb {R}^n</fr:tex></fr:title>
@@ -119,9 +119,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>715</fr:anchor>
-                <fr:addr type="machine">#311</fr:addr>
-                <fr:route>unstable-311.xml</fr:route>
+                <fr:anchor>654</fr:anchor>
+                <fr:addr type="machine">#313</fr:addr>
+                <fr:route>unstable-313.xml</fr:route>
                 <fr:title text="Dot Products">Dot Products</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -136,7 +136,7 @@
         Dot product is also used to define lengths and angles.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>716</fr:anchor>
+                    <fr:anchor>655</fr:anchor>
                     <fr:addr type="user">def-0041</fr:addr>
                     <fr:route>def-0041.xml</fr:route>
                     <fr:title text="Dot Product (Coordinate Form)">Dot Product (Coordinate Form)</fr:title>
@@ -160,7 +160,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>717</fr:anchor>
+                    <fr:anchor>656</fr:anchor>
                     <fr:addr type="user">def-0042</fr:addr>
                     <fr:route>def-0042.xml</fr:route>
                     <fr:title text="Dot Product (Geometric Form)">Dot Product (Geometric Form)</fr:title>
@@ -191,9 +191,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>718</fr:anchor>
-                <fr:addr type="machine">#312</fr:addr>
-                <fr:route>unstable-312.xml</fr:route>
+                <fr:anchor>657</fr:anchor>
+                <fr:addr type="machine">#314</fr:addr>
+                <fr:route>unstable-314.xml</fr:route>
                 <fr:title text="Volume and Determinants">Volume and Determinants</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -223,9 +223,9 @@
         to a real number which is the volume of <fr:tex display="inline">\mathscr {P}</fr:tex>. Now we present the three properties in mathematical form.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>719</fr:anchor>
-                    <fr:addr type="machine">#313</fr:addr>
-                    <fr:route>unstable-313.xml</fr:route>
+                    <fr:anchor>658</fr:anchor>
+                    <fr:addr type="machine">#315</fr:addr>
+                    <fr:route>unstable-315.xml</fr:route>
                     <fr:title text="Properties of Volume">Properties of Volume</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -246,9 +246,9 @@
         The first property is that the volumes are signed.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>720</fr:anchor>
-                    <fr:addr type="machine">#314</fr:addr>
-                    <fr:route>unstable-314.xml</fr:route>
+                    <fr:anchor>659</fr:anchor>
+                    <fr:addr type="machine">#316</fr:addr>
+                    <fr:route>unstable-316.xml</fr:route>
                     <fr:title text="Derived Properties of Volume Function">Derived Properties of Volume Function</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -269,7 +269,7 @@
                 <fr:p>We almost ready to derive the formula for determinant. The final ingredient we need to do is <fr:strong>permutations</fr:strong>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>721</fr:anchor>
+                    <fr:anchor>660</fr:anchor>
                     <fr:addr type="user">def-003Y</fr:addr>
                     <fr:route>def-003Y.xml</fr:route>
                     <fr:title text="Permutation">Permutation</fr:title>
@@ -289,7 +289,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>722</fr:anchor>
+                    <fr:anchor>661</fr:anchor>
                     <fr:addr type="user">def-003Z</fr:addr>
                     <fr:route>def-003Z.xml</fr:route>
                     <fr:title text="Transposition">Transposition</fr:title>
@@ -308,7 +308,7 @@
         which is called the <fr:strong>parity</fr:strong> of the permutation.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>723</fr:anchor>
+                    <fr:anchor>662</fr:anchor>
                     <fr:addr type="user">def-0040</fr:addr>
                     <fr:route>def-0040.xml</fr:route>
                     <fr:title text="Sign of Permutation">Sign of Permutation</fr:title>
@@ -339,9 +339,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>724</fr:anchor>
-                <fr:addr type="machine">#315</fr:addr>
-                <fr:route>unstable-315.xml</fr:route>
+                <fr:anchor>663</fr:anchor>
+                <fr:addr type="machine">#317</fr:addr>
+                <fr:route>unstable-317.xml</fr:route>
                 <fr:title text="Derivatives of Multivariable Functions">Derivatives of Multivariable Functions</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -404,7 +404,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1466</fr:anchor>
+            <fr:anchor>1502</fr:anchor>
             <fr:addr type="user">phy-0001</fr:addr>
             <fr:route>phy-0001.xml</fr:route>
             <fr:title text="Special Relativity and Extra Dimensions">Special Relativity and Extra Dimensions</fr:title>
@@ -442,7 +442,7 @@
     The minus sign on the left of <fr:tex display="inline">\Delta  s^2</fr:tex> implies that <fr:tex display="inline">\Delta  s^2 &gt;0</fr:tex> for events that are <fr:strong>timelike separated</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>490</fr:anchor>
+                <fr:anchor>786</fr:anchor>
                 <fr:addr type="user">def-001H</fr:addr>
                 <fr:route>def-001H.xml</fr:route>
                 <fr:title text="Timelike Separated Events">Timelike Separated Events</fr:title>
@@ -461,7 +461,7 @@
     move faster than light.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>491</fr:anchor>
+                <fr:anchor>787</fr:anchor>
                 <fr:addr type="user">def-001I</fr:addr>
                 <fr:route>def-001I.xml</fr:route>
                 <fr:title text="Lightlike Separated Events">Lightlike Separated Events</fr:title>
@@ -476,7 +476,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>492</fr:anchor>
+                <fr:anchor>788</fr:anchor>
                 <fr:addr type="user">def-001J</fr:addr>
                 <fr:route>def-001J.xml</fr:route>
                 <fr:title text="Spacelike Separated Events">Spacelike Separated Events</fr:title>
@@ -512,7 +512,7 @@
     and the metric is defined by</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>493</fr:anchor>
+                <fr:anchor>789</fr:anchor>
                 <fr:addr type="user">def-001L</fr:addr>
                 <fr:route>def-001L.xml</fr:route>
                 <fr:title text="Minkowski Metric">Minkowski Metric</fr:title>
@@ -549,7 +549,7 @@
     where <fr:tex display="inline">\delta ^\mu _\nu </fr:tex> is the <fr:link type="local" href="def-001P.xml" addr="def-001P" title="Kronecker Delta">Kronecker Delta</fr:link>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>494</fr:anchor>
+                <fr:anchor>790</fr:anchor>
                 <fr:addr type="user">thm-0004</fr:addr>
                 <fr:route>thm-0004.xml</fr:route>
                 <fr:title text="Raise Indices">Raise Indices</fr:title>
@@ -566,7 +566,7 @@
     inertial frames.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>495</fr:anchor>
+                <fr:anchor>791</fr:anchor>
                 <fr:addr type="user">def-001Q</fr:addr>
                 <fr:route>def-001Q.xml</fr:route>
                 <fr:title text="Lorentz Transformations">Lorentz Transformations</fr:title>
@@ -596,7 +596,7 @@
     the <fr:strong>light-cone coordinates</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>496</fr:anchor>
+                <fr:anchor>792</fr:anchor>
                 <fr:addr type="user">def-001R</fr:addr>
                 <fr:route>def-001R.xml</fr:route>
                 <fr:title text="Light-cone Coordinates">Light-cone Coordinates</fr:title>
@@ -672,7 +672,7 @@
     The time measured by the clock is called the <fr:strong>proper time</fr:strong> between the two events.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>497</fr:anchor>
+                <fr:anchor>793</fr:anchor>
                 <fr:addr type="user">def-001S</fr:addr>
                 <fr:route>def-001S.xml</fr:route>
                 <fr:title text="Proper Time">Proper Time</fr:title>

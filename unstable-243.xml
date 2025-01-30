@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1438</fr:anchor>
+    <fr:anchor>1643</fr:anchor>
     <fr:addr type="machine">#243</fr:addr>
     <fr:route>unstable-243.xml</fr:route>
-    <fr:title text="Set Operations › Intersection"><fr:link type="local" href="def-002V.xml" addr="def-002V" title="Set Operations">Set Operations</fr:link> › Intersection</fr:title>
-    <fr:authors></fr:authors>
+    <fr:title text="The Rabbit Hole › Notes"><fr:link type="local" href="index.xml" addr="index" title="The Rabbit Hole">The Rabbit Hole</fr:link> › Notes</fr:title>
+    <fr:authors>
+      <fr:author>CAIMEO</fr:author>
+    </fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p><fr:tex display="block">         \bigcap _{i\in  I}X_i = \set {x:\forall  i\in  I, x\in  X_i}     </fr:tex>
-    Note that <fr:tex display="inline">I \neq  \emptyset </fr:tex> here.</fr:p>
+    <fr:p><fr:link type="local" href="notes.xml" addr="notes" title="Notes">Notes</fr:link> are usually excerpts from some books/papers I read.
+            I try to make it as self-contained as possible.</fr:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -18,77 +20,70 @@
         <fr:authors></fr:authors>
       </fr:frontmatter>
       <fr:mainmatter>
-        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="true" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1439</fr:anchor>
-            <fr:addr type="user">def-002V</fr:addr>
-            <fr:route>def-002V.xml</fr:route>
-            <fr:title text="Set Operations">Set Operations</fr:title>
-            <fr:taxon>Definition</fr:taxon>
-            <fr:authors></fr:authors>
+            <fr:anchor>1645</fr:anchor>
+            <fr:addr type="user">index</fr:addr>
+            <fr:route>index.xml</fr:route>
+            <fr:title text="The Rabbit Hole">The Rabbit Hole</fr:title>
+            <fr:authors>
+              <fr:author>CAIMEO</fr:author>
+            </fr:authors>
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>Let <fr:tex display="inline">(X_i)_{i\in  I}</fr:tex> be a family of sets.</fr:p>
-            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
-              <fr:frontmatter>
-                <fr:anchor>542</fr:anchor>
-                <fr:addr type="machine">#242</fr:addr>
-                <fr:route>unstable-242.xml</fr:route>
-                <fr:title text="Union">Union</fr:title>
-                <fr:authors></fr:authors>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <fr:p>
-                  <fr:tex display="block">         \bigcup _{i\in  I}X_i = \set {x:\exists  i\in  I \text { such that } x\in  X_i}     </fr:tex>
-                </fr:p>
-              </fr:mainmatter>
-              <fr:backmatter></fr:backmatter>
-            </fr:tree>
-            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
-              <fr:frontmatter>
-                <fr:anchor>543</fr:anchor>
-                <fr:addr type="machine">#243</fr:addr>
-                <fr:route>unstable-243.xml</fr:route>
-                <fr:title text="Intersection">Intersection</fr:title>
-                <fr:authors></fr:authors>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <fr:p><fr:tex display="block">         \bigcap _{i\in  I}X_i = \set {x:\forall  i\in  I, x\in  X_i}     </fr:tex>
-    Note that <fr:tex display="inline">I \neq  \emptyset </fr:tex> here.</fr:p>
-              </fr:mainmatter>
-              <fr:backmatter></fr:backmatter>
-            </fr:tree>
-            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
-              <fr:frontmatter>
-                <fr:anchor>544</fr:anchor>
-                <fr:addr type="machine">#244</fr:addr>
-                <fr:route>unstable-244.xml</fr:route>
-                <fr:title text="Disjoint Union">Disjoint Union</fr:title>
-                <fr:authors></fr:authors>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <fr:p>
-                  <fr:tex display="block">         \bigsqcup _{i\in  I}X_i = \set {(x,i):x\in  X_i, i\in  I}     </fr:tex>
-                </fr:p>
-              </fr:mainmatter>
-              <fr:backmatter></fr:backmatter>
-            </fr:tree>
-            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
-              <fr:frontmatter>
-                <fr:anchor>545</fr:anchor>
-                <fr:addr type="machine">#245</fr:addr>
-                <fr:route>unstable-245.xml</fr:route>
-                <fr:title text="Product">Product</fr:title>
-                <fr:authors></fr:authors>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <fr:p>
-                  <fr:tex display="block">         \prod _{i\in  I}X_i = \set {(x_i)_{i\in  I}:\forall  i\in  I, x_i\in  X_i}     </fr:tex>
-                </fr:p>
-              </fr:mainmatter>
-              <fr:backmatter></fr:backmatter>
-            </fr:tree>
-          </fr:mainmatter>
+    
+    
+    <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1229</fr:anchor><fr:addr type="user">caimeo</fr:addr><fr:route>caimeo.xml</fr:route><fr:title text="CAIMEO">CAIMEO</fr:title><fr:taxon>Person</fr:taxon><fr:authors></fr:authors><fr:meta name="position">Student</fr:meta><fr:meta name="external">https://github.com/CAIMEOX</fr:meta></fr:frontmatter><fr:mainmatter><fr:p>A student interested in math, physics and computer science.</fr:p><fr:p><fr:ul><fr:li>Learning Programming Language Theory and Type Theory</fr:li>
+        <fr:li>Attend in writing articles about String Theory</fr:li>
+        <fr:li>Reading Type Theory and Formal Proof and Homotopy Type Theory</fr:li>
+        <fr:li>Working on CommandLisp</fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+    
+    <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1230</fr:anchor><fr:addr type="user">about</fr:addr><fr:route>about.xml</fr:route><fr:title text="Rabbit Hole">Rabbit Hole</fr:title><fr:taxon>About</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         i\hbar  \frac {\partial }{\partial  t} \Psi (x, t) = \hat {H} \Psi (x, t)     </fr:tex></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1156</fr:anchor><fr:addr type="machine">#389</fr:addr><fr:route>unstable-389.xml</fr:route><fr:title text="
+    What is this website about?
+">
+    <fr:strong>What is this website about?</fr:strong>
+</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:p>This website is a collection of my notes and posts on various topics in 
+        <fr:strong>computer science, mathematics, physics, and programming language theory</fr:strong>.
+        It is a place where I can organize my thoughts and share my understanding of these topics.
+        I hope it can be helpful to others who are interested in these subjects.</fr:p>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1157</fr:anchor><fr:addr type="machine">#390</fr:addr><fr:route>unstable-390.xml</fr:route><fr:title text="
+    What is the meaning of &quot;Rabbit Hole&quot;?
+">
+    <fr:strong>What is the meaning of &quot;Rabbit Hole&quot;?</fr:strong>
+</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    The name of this website &quot;<fr:strong>Rabbit Hole</fr:strong>&quot; carries a metaphorical significance inspired by Lewis Carroll&apos;s 
+    <fr:em>Alice&apos;s Adventures in Wonderland</fr:em>, 
+    meaning to delve into a topic or pursue a line of thought that leads to unexpected or complex places.
+    It can refer to getting deeply involved in researching a subject, exploring a particular interest, or going through 
+    a series of trees in the forest that leads to a chain of related topics.
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1158</fr:anchor><fr:addr type="machine">#391</fr:addr><fr:route>unstable-391.xml</fr:route><fr:title text="
+    How to navigate?
+">
+    <fr:strong>How to navigate?</fr:strong>
+</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>    <fr:p>This website is a “<fr:em>forest</fr:em>” created using the <fr:strong>Forester</fr:strong> tool.
+        To navigate my forest, press <fr:code>Ctrl-K</fr:code> to search for specific topics or definitions.
+        Or click the nodes to expand the trees of various subjects.</fr:p>
+    <fr:p>A tree in Forester is associated to an unique address of the form <fr:code>xxx-NNNN</fr:code>,
+        where <fr:code>xxx</fr:code> is the <fr:strong>namespace</fr:strong> and <fr:code>NNNN</fr:code> is the <fr:strong>ID</fr:strong> (A base-36 number of 4 digits) of the tree.
+        The namespace implies the category of the tree node, for instance,
+        <fr:code>tt</fr:code> for Type Theory and <fr:code>math</fr:code> for Mathematics.</fr:p>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1231</fr:anchor><fr:addr type="machine">#242</fr:addr><fr:route>unstable-242.xml</fr:route><fr:title text="Posts">Posts</fr:title><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Click to navigate my <fr:link type="local" href="posts.xml" addr="posts" title="Blog posts">blog posts</fr:link>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1233</fr:anchor><fr:addr type="machine">#243</fr:addr><fr:route>unstable-243.xml</fr:route><fr:title text="Notes">Notes</fr:title><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="local" href="notes.xml" addr="notes" title="Notes">Notes</fr:link> are usually excerpts from some books/papers I read.
+            I try to make it as self-contained as possible.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1235</fr:anchor><fr:addr type="user">projects</fr:addr><fr:route>projects.xml</fr:route><fr:title text="Projects">Projects</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The programming projects I&apos;ve worked on.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1236</fr:anchor><fr:addr type="user">proj-0001</fr:addr><fr:route>proj-0001.xml</fr:route><fr:title text="Command Lisp">Command Lisp</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/CAIMEOX/CommandLisp">Command Lisp</fr:link> is a simplified language designed for Minecraft Bedrock Command System, characterized by a very high level of abstraction, which is also a dialect of Lisp.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1237</fr:anchor><fr:addr type="user">proj-0002</fr:addr><fr:route>proj-0002.xml</fr:route><fr:title text="Pure Eval">Pure Eval</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/PureEval/PureEval">Pure Eval</fr:link> was created for the <fr:link type="local" href="proj-0003.xml" addr="proj-0003" title="Voxel Geometry">VoxelGeometry</fr:link> project, aiming to build a compact yet powerful JavaScript functional utility toolkit.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1238</fr:anchor><fr:addr type="user">proj-0003</fr:addr><fr:route>proj-0003.xml</fr:route><fr:title text="Voxel Geometry">Voxel Geometry</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/CAIMEOX/VoxelGeometry">Voxel Geometry</fr:link> is voxel geometry library which is used to construct Space (A collection of 3-dimension Vectors) and perform transformation between Spaces.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1239</fr:anchor><fr:addr type="user">proj-0004</fr:addr><fr:route>proj-0004.xml</fr:route><fr:title text="Minecraft ScriptAPI wrapper">Minecraft ScriptAPI wrapper</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.</fr:p><fr:ul><fr:li><fr:link type="external" href="https://github.com/CAIMEOX/rescript-bedrock">ReScript</fr:link></fr:li>
+    <fr:li><fr:link type="external" href="https://github.com/CAIMEOX/pure_bedrock">PureScript</fr:link></fr:li>
+    <fr:li><fr:link type="external" href="https://github.com/CAIMEOX/BedrockFP">Idris2</fr:link></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1240</fr:anchor><fr:addr type="user">proj-0005</fr:addr><fr:route>proj-0005.xml</fr:route><fr:title text="MoonBit Core">MoonBit Core</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/moonbitlang/core">MoonBit Core</fr:link> is the standard library of the MoonBit language.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+</fr:mainmatter>
           <fr:backmatter></fr:backmatter>
         </fr:tree>
       </fr:mainmatter>

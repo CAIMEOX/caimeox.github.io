@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1109</fr:anchor>
+    <fr:anchor>1132</fr:anchor>
     <fr:addr type="machine">#325</fr:addr>
     <fr:route>unstable-325.xml</fr:route>
-    <fr:title text="Matrix Multiplication › 
-    Derivation
-"><fr:link type="local" href="def-002T.xml" addr="def-002T" title="Matrix Multiplication">Matrix Multiplication</fr:link> › 
-    <fr:strong>Derivation</fr:strong>
+    <fr:title text="Unit Law Operations › 
+    Construction of Unit Law
+"><fr:link type="local" href="def-002X.xml" addr="def-002X" title="Unit Law Operations">Unit Law Operations</fr:link> › 
+    <fr:strong>Construction of Unit Law</fr:strong>
 </fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
-    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
-    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
-    <fr:tex display="block">         \begin {align*}             (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\             &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\             &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\             &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\         \end {align*}     </fr:tex>
-    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
-    <fr:tex display="block">         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
+    By elimination it suffices to construct:
+    <fr:tex display="block">         \begin {align*}             \text {left-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\             \text {right-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x         \end {align*}     </fr:tex>
+    In both cases we need only to construct <fr:tex display="inline">\text {refl}_{\text {refl}_x}</fr:tex>.
 </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -28,27 +25,24 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1110</fr:anchor>
-            <fr:addr type="user">def-002T</fr:addr>
-            <fr:route>def-002T.xml</fr:route>
-            <fr:title text="Matrix Multiplication">Matrix Multiplication</fr:title>
+            <fr:anchor>1133</fr:anchor>
+            <fr:addr type="user">def-002X</fr:addr>
+            <fr:route>def-002X.xml</fr:route>
+            <fr:title text="Unit Law Operations">Unit Law Operations</fr:title>
             <fr:taxon>Definition</fr:taxon>
             <fr:authors></fr:authors>
           </fr:frontmatter>
-          <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> be a <fr:tex display="inline">n\times  p</fr:tex> matrix.
-    Then <fr:tex display="inline">AC</fr:tex> is defined as the <fr:tex display="inline">m\times  p</fr:tex> matrix <fr:tex display="inline">C</fr:tex> such that
-    <fr:tex display="block">         C_{ij} = \sum _{k=1}^n A_{ik}B_{kj}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>619</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
-    Derivation
+          <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
+    We defined the <fr:strong>unit law</fr:strong> operations for <fr:tex display="inline">x=_Ay</fr:tex>:
+    <fr:tex display="block">         \begin {align*}             \text {left-unit} &amp; : (x=_Ay)\to  (\text {refl}_x\cdot  x = x) \\             \text {right-unit} &amp; : (x=_Ay)\to  (x\cdot \text {refl}_y = x)         \end {align*}     </fr:tex></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>756</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
+    Construction of Unit Law
 ">
-    <fr:strong>Derivation</fr:strong>
+    <fr:strong>Construction of Unit Law</fr:strong>
 </fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
-    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
-    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
-    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
-    <fr:tex display="block">         \begin {align*}             (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\             &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\             &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\             &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\         \end {align*}     </fr:tex>
-    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
-    <fr:tex display="block">         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
+    By elimination it suffices to construct:
+    <fr:tex display="block">         \begin {align*}             \text {left-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\             \text {right-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x         \end {align*}     </fr:tex>
+    In both cases we need only to construct <fr:tex display="inline">\text {refl}_{\text {refl}_x}</fr:tex>.
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 </fr:mainmatter>
           <fr:backmatter></fr:backmatter>

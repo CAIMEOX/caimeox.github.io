@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1105</fr:anchor>
+    <fr:anchor>1386</fr:anchor>
     <fr:addr type="machine">#323</fr:addr>
     <fr:route>unstable-323.xml</fr:route>
-    <fr:title text="Unit Law Operations › 
-    Construction of Unit Law
-"><fr:link type="local" href="def-002X.xml" addr="def-002X" title="Unit Law Operations">Unit Law Operations</fr:link> › 
-    <fr:strong>Construction of Unit Law</fr:strong>
-</fr:title>
+    <fr:title text="Probability Density › Expectation Value"><fr:link type="local" href="def-0031.xml" addr="def-0031" title="Probability Density">Probability Density</fr:link> › Expectation Value</fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    By elimination it suffices to construct:
-    <fr:tex display="block">         \begin {align*}             \text {left-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\             \text {right-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x         \end {align*}     </fr:tex>
-    In both cases we need only to construct <fr:tex display="inline">\text {refl}_{\text {refl}_x}</fr:tex>.
+    The <fr:strong>expectation value</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
+    <fr:tex display="block">         \langle  f(x) \rangle  = \int _{-\infty }^{\infty } f(x)p(x)dx     </fr:tex>
 </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -25,24 +20,26 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1106</fr:anchor>
-            <fr:addr type="user">def-002X</fr:addr>
-            <fr:route>def-002X.xml</fr:route>
-            <fr:title text="Unit Law Operations">Unit Law Operations</fr:title>
+            <fr:anchor>1387</fr:anchor>
+            <fr:addr type="user">def-0031</fr:addr>
+            <fr:route>def-0031.xml</fr:route>
+            <fr:title text="Probability Density">Probability Density</fr:title>
             <fr:taxon>Definition</fr:taxon>
             <fr:authors></fr:authors>
           </fr:frontmatter>
-          <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
-    We defined the <fr:strong>unit law</fr:strong> operations for <fr:tex display="inline">x=_Ay</fr:tex>:
-    <fr:tex display="block">         \begin {align*}             \text {left-unit} &amp; : (x=_Ay)\to  (\text {refl}_x\cdot  x = x) \\             \text {right-unit} &amp; : (x=_Ay)\to  (x\cdot \text {refl}_y = x)         \end {align*}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>460</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="
-    Construction of Unit Law
-">
-    <fr:strong>Construction of Unit Law</fr:strong>
-</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
-    By elimination it suffices to construct:
-    <fr:tex display="block">         \begin {align*}             \text {left-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\             \text {right-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x         \end {align*}     </fr:tex>
-    In both cases we need only to construct <fr:tex display="inline">\text {refl}_{\text {refl}_x}</fr:tex>.
+          <fr:mainmatter><fr:p>A <fr:strong>probability density</fr:strong> is a function <fr:tex display="inline">p(x)</fr:tex> such that:
+    <fr:ul><fr:li><fr:tex display="inline">p(x)\geq  0</fr:tex> for all <fr:tex display="inline">x</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">\int _{-\infty }^{\infty } p(x)dx = 1</fr:tex>.</fr:li></fr:ul>
+    With this we can define the <fr:strong>probability function</fr:strong> in an interval <fr:tex display="inline">[a,b]</fr:tex> as:
+    <fr:tex display="block">         P(a, b) = \int _a^b p(x)dx     </fr:tex></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>775</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="Expectation Value">Expectation Value</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    The <fr:strong>expectation value</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
+    <fr:tex display="block">         \langle  f(x) \rangle  = \int _{-\infty }^{\infty } f(x)p(x)dx     </fr:tex>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>776</fr:anchor><fr:addr type="machine">#324</fr:addr><fr:route>unstable-324.xml</fr:route><fr:title text="Variance">Variance</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    The <fr:strong>variance</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
+    <fr:tex display="block">         \sigma ^2 :\equiv  \langle  x^2 \rangle  - \langle  x \rangle ^2     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 </fr:mainmatter>
           <fr:backmatter></fr:backmatter>

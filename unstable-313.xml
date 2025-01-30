@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>861</fr:anchor>
+    <fr:anchor>886</fr:anchor>
     <fr:addr type="machine">#313</fr:addr>
     <fr:route>unstable-313.xml</fr:route>
-    <fr:title text="Vector Calculus and Geometry of Space › Volume and Determinants › Properties of Volume"><fr:link type="local" href="unstable-312.xml" addr="#312" title="Vector Calculus and Geometry of Space › Volume and Determinants"><fr:link type="local" href="math-0007.xml" addr="math-0007" title="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:link> › Volume and Determinants</fr:link> › Properties of Volume</fr:title>
+    <fr:title text="Vector Calculus and Geometry of Space › Dot Products"><fr:link type="local" href="math-0007.xml" addr="math-0007" title="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:link> › Dot Products</fr:title>
     <fr:date>
       <fr:year>2024</fr:year>
       <fr:month>4</fr:month>
@@ -13,10 +13,61 @@
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:ul><fr:li><fr:tex display="inline"> D(I) = I </fr:tex> where <fr:tex display="inline">I = [e_1, e_2, \cdots , e_n]</fr:tex> is the identity matrix.</fr:li>
-            <fr:li><fr:tex display="inline"> D(v_1, v_2, \cdots , v_n) = 0 </fr:tex> if <fr:tex display="inline">v_i = v_j</fr:tex> for any <fr:tex display="inline">i\neq  j</fr:tex>.</fr:li>
-            <fr:li><fr:tex display="inline"> D(v_1, \cdots , v_{j-1}, v+cw, v_{j+1}, \cdots , v_n) \\                  = D(v_1, \cdots , v_{j-1}, v, v_{j+1}, \cdots , v_n) + cD(v_1, \cdots , v_{j-1}, w, v_{j+1}, \cdots , v_n) </fr:tex>
-                for any <fr:tex display="inline">1 \leq  j \leq  n</fr:tex>, that is, <fr:tex display="inline">D</fr:tex> is linear.</fr:li></fr:ul>
+    <fr:p>In linear algebra, <fr:strong>dot product</fr:strong> or <fr:strong>scalar product</fr:strong> is an operation that takes two vectors and returns a scalar.
+        Geometrically, it is the product of the Euclidean magnitudes of the two vectors and the cosine of the angle between them.
+        Dot product is also used to define lengths and angles.</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:anchor>655</fr:anchor>
+        <fr:addr type="user">def-0041</fr:addr>
+        <fr:route>def-0041.xml</fr:route>
+        <fr:title text="Dot Product (Coordinate Form)">Dot Product (Coordinate Form)</fr:title>
+        <fr:taxon>Definition</fr:taxon>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>The <fr:strong>dot product</fr:strong> of two vectors <fr:tex display="inline">\vec {a} = (a_1, a_2, \cdots , a_n)</fr:tex> and <fr:tex display="inline">\vec {b} = (b_1, b_2, \cdots , b_n)</fr:tex> is defined as
+    <fr:tex display="block">         \vec {a}\cdot \vec {b} = a_1b_1 + a_2b_2 + \cdots  + a_nb_n = \sum _{i=1}^n a_ib_i.     </fr:tex>
+    The dot product is also called the <fr:strong>inner product</fr:strong> or <fr:strong>scalar product</fr:strong>.
+    The dot product satisfies the following properties:
+    <fr:ul><fr:li><fr:strong>Commutative</fr:strong>: <fr:tex display="inline">\vec {a}\cdot \vec {b} = \vec {b}\cdot \vec {a}</fr:tex></fr:li>
+        <fr:li><fr:strong>Distributive</fr:strong>: <fr:tex display="inline">\vec {a}\cdot (\vec {b} + \vec {c}) = \vec {a}\cdot \vec {b} + \vec {a}\cdot \vec {c}</fr:tex></fr:li>
+        <fr:li><fr:strong>Bilinear</fr:strong>: <fr:tex display="inline">\vec {a}\cdot (k\vec {b}) = k(\vec {a}\cdot \vec {b}) = (\vec {a}\cdot  k\vec {b})</fr:tex></fr:li>
+        <fr:li><fr:strong>Scalar Multiplication</fr:strong>: <fr:tex display="inline">(c_1\vec {a}) \cdot  (c_2\vec {b}) = c_1c_2(\vec {a}\cdot \vec {b})</fr:tex></fr:li>
+        <fr:li><fr:strong>Orthogonality</fr:strong>: If <fr:tex display="inline">\vec {a}\cdot \vec {b} = 0</fr:tex>, then <fr:tex display="inline">\vec {a}</fr:tex> and <fr:tex display="inline">\vec {b}</fr:tex> are <fr:strong>orthogonal</fr:strong></fr:li>
+        <fr:li><fr:strong>Product Rule</fr:strong>: If <fr:tex display="inline">\vec {a}</fr:tex> and <fr:tex display="inline">\vec {b}</fr:tex> are vector valued differentiable functions then the derivative 
+            of <fr:tex display="inline">\vec {a}\cdot \vec {b}</fr:tex> is given by the rule <fr:tex display="inline">(\vec {a}\cdot \vec {b})&apos; = \vec {a}&apos;\cdot \vec {b} + \vec {a}\cdot \vec {b}&apos;</fr:tex></fr:li></fr:ul></fr:p>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:anchor>656</fr:anchor>
+        <fr:addr type="user">def-0042</fr:addr>
+        <fr:route>def-0042.xml</fr:route>
+        <fr:title text="Dot Product (Geometric Form)">Dot Product (Geometric Form)</fr:title>
+        <fr:taxon>Definition</fr:taxon>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>In <fr:strong>Euclidean space</fr:strong>, a <fr:strong>Euclidean vector</fr:strong> is a geometric object that possesses both 
+    a norm and a direction. The <fr:strong>dot product</fr:strong> of two vectors <fr:tex display="inline">\vec {a}</fr:tex> and <fr:tex display="inline">\vec {b}</fr:tex> is defined as
+    <fr:tex display="block">         \vec {a}\cdot \vec {b} = \lVert \vec {a}\rVert \lVert \vec {b}\rVert \cos \theta      </fr:tex>
+    where <fr:tex display="inline">\theta </fr:tex> is the angle between the two vectors.</fr:p>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+    <fr:p>The geometric definition of dot product helps us express the projection of one vector onto another as well as the component of 
+        one vector in the direction of another. By simple geometry we can derive the formula for the <fr:strong>projection</fr:strong>
+        <fr:tex display="block">             \text {proj}_{\vec {a}}\vec {b} = \frac {\vec {a}\cdot \vec {b}}{\lVert \vec {a}\rVert }\frac {\vec {a}}{\lVert \vec {a}\rVert }         </fr:tex>
+        and the <fr:strong>component</fr:strong> of <fr:tex display="inline">\vec {b}</fr:tex> in the direction <fr:tex display="inline">\vec {a}</fr:tex> is given by
+        <fr:tex display="block">             \text {comp}_{\vec {a}}\vec {b} = \lVert \text {proj}_{\vec {a}}\vec {b}\rVert  = \frac {\vec {a}\cdot \vec {b}}{\lVert \vec {a}\rVert }         </fr:tex></fr:p>
+    <fr:p>Two points determine a line, and so does a point and a vector. Define the base point vector <fr:tex display="inline">\vec {b}=(x,y,z)</fr:tex> and
+        the direction vector <fr:tex display="inline">\vec {v}=(a,b,c)</fr:tex> then the line is given by <fr:tex display="inline">\vec {r}(t)</fr:tex>
+        <fr:tex display="block">             \vec {r}(t) = t\vec {v} + \vec {b} = (at+x, bt+y, ct+z)         </fr:tex>
+        Solving for <fr:tex display="inline">t</fr:tex> in the equation we get
+        <fr:tex display="block">             t = \frac {x-at}{a} = \frac {y-bt}{b} = \frac {z-ct}{c}         </fr:tex>
+        which is the <fr:strong>equation of line</fr:strong>.</fr:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -27,7 +78,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>862</fr:anchor>
+            <fr:anchor>887</fr:anchor>
             <fr:addr type="user">math-0007</fr:addr>
             <fr:route>math-0007.xml</fr:route>
             <fr:title text="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:title>
@@ -44,9 +95,9 @@
     Refer to <fr:link type="external" href="A%20Visual%20Introduction%20to%20Differential%20Forms%20and%20Calculus%20on%20Manifolds">df-cm-2018</fr:link>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>712</fr:anchor>
-                <fr:addr type="machine">#310</fr:addr>
-                <fr:route>unstable-310.xml</fr:route>
+                <fr:anchor>651</fr:anchor>
+                <fr:addr type="machine">#312</fr:addr>
+                <fr:route>unstable-312.xml</fr:route>
                 <fr:title text="Review of Vector Spaces">Review of Vector Spaces</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -59,7 +110,7 @@
                 <fr:p>We now start with introducing the vector space over the field of real numbers <fr:tex display="inline">\mathbb {R}</fr:tex>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>713</fr:anchor>
+                    <fr:anchor>652</fr:anchor>
                     <fr:addr type="user">def-000H</fr:addr>
                     <fr:route>def-000H.xml</fr:route>
                     <fr:title text="Vector Space">Vector Space</fr:title>
@@ -93,7 +144,7 @@
         Now we can give formal definition of the matrix representation of a linear transformation.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>714</fr:anchor>
+                    <fr:anchor>653</fr:anchor>
                     <fr:addr type="user">def-003W</fr:addr>
                     <fr:route>def-003W.xml</fr:route>
                     <fr:title text="Matrix Representation of Linear Transformation over {R}^n">Matrix Representation of Linear Transformation over <fr:tex display="inline">\mathbb {R}^n</fr:tex></fr:title>
@@ -125,9 +176,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>715</fr:anchor>
-                <fr:addr type="machine">#311</fr:addr>
-                <fr:route>unstable-311.xml</fr:route>
+                <fr:anchor>654</fr:anchor>
+                <fr:addr type="machine">#313</fr:addr>
+                <fr:route>unstable-313.xml</fr:route>
                 <fr:title text="Dot Products">Dot Products</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -142,7 +193,7 @@
         Dot product is also used to define lengths and angles.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>716</fr:anchor>
+                    <fr:anchor>655</fr:anchor>
                     <fr:addr type="user">def-0041</fr:addr>
                     <fr:route>def-0041.xml</fr:route>
                     <fr:title text="Dot Product (Coordinate Form)">Dot Product (Coordinate Form)</fr:title>
@@ -166,7 +217,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>717</fr:anchor>
+                    <fr:anchor>656</fr:anchor>
                     <fr:addr type="user">def-0042</fr:addr>
                     <fr:route>def-0042.xml</fr:route>
                     <fr:title text="Dot Product (Geometric Form)">Dot Product (Geometric Form)</fr:title>
@@ -197,9 +248,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>718</fr:anchor>
-                <fr:addr type="machine">#312</fr:addr>
-                <fr:route>unstable-312.xml</fr:route>
+                <fr:anchor>657</fr:anchor>
+                <fr:addr type="machine">#314</fr:addr>
+                <fr:route>unstable-314.xml</fr:route>
                 <fr:title text="Volume and Determinants">Volume and Determinants</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -229,9 +280,9 @@
         to a real number which is the volume of <fr:tex display="inline">\mathscr {P}</fr:tex>. Now we present the three properties in mathematical form.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>719</fr:anchor>
-                    <fr:addr type="machine">#313</fr:addr>
-                    <fr:route>unstable-313.xml</fr:route>
+                    <fr:anchor>658</fr:anchor>
+                    <fr:addr type="machine">#315</fr:addr>
+                    <fr:route>unstable-315.xml</fr:route>
                     <fr:title text="Properties of Volume">Properties of Volume</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -252,9 +303,9 @@
         The first property is that the volumes are signed.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>720</fr:anchor>
-                    <fr:addr type="machine">#314</fr:addr>
-                    <fr:route>unstable-314.xml</fr:route>
+                    <fr:anchor>659</fr:anchor>
+                    <fr:addr type="machine">#316</fr:addr>
+                    <fr:route>unstable-316.xml</fr:route>
                     <fr:title text="Derived Properties of Volume Function">Derived Properties of Volume Function</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -275,7 +326,7 @@
                 <fr:p>We almost ready to derive the formula for determinant. The final ingredient we need to do is <fr:strong>permutations</fr:strong>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>721</fr:anchor>
+                    <fr:anchor>660</fr:anchor>
                     <fr:addr type="user">def-003Y</fr:addr>
                     <fr:route>def-003Y.xml</fr:route>
                     <fr:title text="Permutation">Permutation</fr:title>
@@ -295,7 +346,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>722</fr:anchor>
+                    <fr:anchor>661</fr:anchor>
                     <fr:addr type="user">def-003Z</fr:addr>
                     <fr:route>def-003Z.xml</fr:route>
                     <fr:title text="Transposition">Transposition</fr:title>
@@ -314,7 +365,7 @@
         which is called the <fr:strong>parity</fr:strong> of the permutation.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>723</fr:anchor>
+                    <fr:anchor>662</fr:anchor>
                     <fr:addr type="user">def-0040</fr:addr>
                     <fr:route>def-0040.xml</fr:route>
                     <fr:title text="Sign of Permutation">Sign of Permutation</fr:title>
@@ -345,9 +396,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>724</fr:anchor>
-                <fr:addr type="machine">#315</fr:addr>
-                <fr:route>unstable-315.xml</fr:route>
+                <fr:anchor>663</fr:anchor>
+                <fr:addr type="machine">#317</fr:addr>
+                <fr:route>unstable-317.xml</fr:route>
                 <fr:title text="Derivatives of Multivariable Functions">Derivatives of Multivariable Functions</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
