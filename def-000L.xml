@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1523</fr:anchor>
+    <fr:anchor>1548</fr:anchor>
     <fr:addr type="user">def-000L</fr:addr>
     <fr:route>def-000L.xml</fr:route>
     <fr:title text="Linear Combination">Linear Combination</fr:title>
@@ -24,7 +24,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1524</fr:anchor>
+            <fr:anchor>1549</fr:anchor>
             <fr:addr type="user">math-0008</fr:addr>
             <fr:route>math-0008.xml</fr:route>
             <fr:title text="Matrix Computation">Matrix Computation</fr:title>
@@ -40,7 +40,7 @@
             <fr:p>This post shows operations and applications over matrix, refers to Wikipedia.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>665</fr:anchor>
+                <fr:anchor>679</fr:anchor>
                 <fr:addr type="user">def-0043</fr:addr>
                 <fr:route>def-0043.xml</fr:route>
                 <fr:title text="Transpose">Transpose</fr:title>
@@ -63,7 +63,7 @@
     Then the matrix is called symmetric.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>666</fr:anchor>
+                <fr:anchor>680</fr:anchor>
                 <fr:addr type="user">def-001N</fr:addr>
                 <fr:route>def-001N.xml</fr:route>
                 <fr:title text="Symmetric Matrix">Symmetric Matrix</fr:title>
@@ -79,7 +79,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>667</fr:anchor>
+                <fr:anchor>681</fr:anchor>
                 <fr:addr type="user">def-0044</fr:addr>
                 <fr:route>def-0044.xml</fr:route>
                 <fr:title text="Determinant">Determinant</fr:title>
@@ -98,7 +98,7 @@
             <fr:p>To compute the inverse of a matrix, we need <fr:strong>Adjugate matrix</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>668</fr:anchor>
+                <fr:anchor>682</fr:anchor>
                 <fr:addr type="user">def-0045</fr:addr>
                 <fr:route>def-0045.xml</fr:route>
                 <fr:title text="First Minor and Cofactor">First Minor and Cofactor</fr:title>
@@ -116,7 +116,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>669</fr:anchor>
+                <fr:anchor>683</fr:anchor>
                 <fr:addr type="user">def-0046</fr:addr>
                 <fr:route>def-0046.xml</fr:route>
                 <fr:title text="Cofactor Matrix">Cofactor Matrix</fr:title>
@@ -135,7 +135,7 @@
     <fr:tex display="block">         A^{-1} = \frac {1}{\det  A} \cdot  \text {adj} A = \frac {1}{\det  A} \cdot  C^T     </fr:tex></fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>670</fr:anchor>
+                <fr:anchor>684</fr:anchor>
                 <fr:addr type="user">def-0047</fr:addr>
                 <fr:route>def-0047.xml</fr:route>
                 <fr:title text="Singular Matrix">Singular Matrix</fr:title>
@@ -149,7 +149,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>671</fr:anchor>
+                <fr:anchor>685</fr:anchor>
                 <fr:addr type="machine">#305</fr:addr>
                 <fr:route>unstable-305.xml</fr:route>
                 <fr:title text="An important property of the inverse of a matrix">An important property of the inverse of a matrix</fr:title>
@@ -163,7 +163,7 @@
               <fr:mainmatter><fr:p><fr:tex display="block">             A \cdot  \text {adj} A = \text {adj} A \cdot  A = \det  A \cdot  I         </fr:tex></fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>672</fr:anchor><fr:addr type="machine">#306</fr:addr><fr:route>unstable-306.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>686</fr:anchor><fr:addr type="machine">#306</fr:addr><fr:route>unstable-306.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         Let <fr:tex display="inline">A \cdot  \text {adj} A = (b_{ij})</fr:tex> and we have
         <fr:tex display="block">             b_{ij} = a_{i1}A_{j1} + a_{i2}A_{j2} + \cdots  + a_{in}A_{jn} = \delta _{ij} \cdot  \det  A         </fr:tex>
         Hence we have <fr:tex display="inline">A \cdot  \text {adj} A = \det  A \cdot  I</fr:tex> 
@@ -174,7 +174,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>673</fr:anchor>
+                <fr:anchor>687</fr:anchor>
                 <fr:addr type="machine">#307</fr:addr>
                 <fr:route>unstable-307.xml</fr:route>
                 <fr:title text="Matrix Polynomial and Computation">Matrix Polynomial and Computation</fr:title>
@@ -188,7 +188,7 @@
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>674</fr:anchor>
+                    <fr:anchor>688</fr:anchor>
                     <fr:addr type="user">def-0048</fr:addr>
                     <fr:route>def-0048.xml</fr:route>
                     <fr:title text="Matrix Polynomial">Matrix Polynomial</fr:title>
@@ -212,7 +212,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>675</fr:anchor>
+                <fr:anchor>689</fr:anchor>
                 <fr:addr type="machine">#308</fr:addr>
                 <fr:route>unstable-308.xml</fr:route>
                 <fr:title text="Solving a Linear System">Solving a Linear System</fr:title>
@@ -226,7 +226,7 @@
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>676</fr:anchor>
+                    <fr:anchor>690</fr:anchor>
                     <fr:addr type="user">thm-0011</fr:addr>
                     <fr:route>thm-0011.xml</fr:route>
                     <fr:title text="Cramer&apos;s rule">Cramer&apos;s rule</fr:title>
@@ -248,7 +248,7 @@
         This is often done to simplify the computation of matrix operations, such as matrix multiplication.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>677</fr:anchor>
+                    <fr:anchor>691</fr:anchor>
                     <fr:addr type="user">def-0049</fr:addr>
                     <fr:route>def-0049.xml</fr:route>
                     <fr:title text="Matrix Partitioning">Matrix Partitioning</fr:title>
@@ -278,7 +278,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>678</fr:anchor>
+                <fr:anchor>692</fr:anchor>
                 <fr:addr type="machine">#309</fr:addr>
                 <fr:route>unstable-309.xml</fr:route>
                 <fr:title text="Matrix Transformation">Matrix Transformation</fr:title>
@@ -293,7 +293,7 @@
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>679</fr:anchor>
+                    <fr:anchor>693</fr:anchor>
                     <fr:addr type="user">def-004A</fr:addr>
                     <fr:route>def-004A.xml</fr:route>
                     <fr:title text="Elementary Operations">Elementary Operations</fr:title>
@@ -316,7 +316,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>680</fr:anchor>
+                    <fr:anchor>694</fr:anchor>
                     <fr:addr type="user">def-004B</fr:addr>
                     <fr:route>def-004B.xml</fr:route>
                     <fr:title text="Column / Row Equivalence">Column / Row Equivalence</fr:title>
@@ -345,7 +345,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>681</fr:anchor>
+                <fr:anchor>695</fr:anchor>
                 <fr:addr type="machine">#310</fr:addr>
                 <fr:route>unstable-310.xml</fr:route>
                 <fr:title text="Rank">Rank</fr:title>
@@ -362,7 +362,7 @@
         generated (or spanned) by its columns.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>682</fr:anchor>
+                    <fr:anchor>696</fr:anchor>
                     <fr:addr type="user">def-004J</fr:addr>
                     <fr:route>def-004J.xml</fr:route>
                     <fr:title text="Rank">Rank</fr:title>
@@ -388,7 +388,7 @@
         and equals to the number of <fr:strong>pivots</fr:strong> (or basic columns) and also the number of non-zero rows.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>683</fr:anchor>
+                    <fr:anchor>697</fr:anchor>
                     <fr:addr type="user">def-004I</fr:addr>
                     <fr:route>def-004I.xml</fr:route>
                     <fr:title text="Row Echelon Form">Row Echelon Form</fr:title>
@@ -433,7 +433,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>684</fr:anchor>
+                <fr:anchor>698</fr:anchor>
                 <fr:addr type="machine">#311</fr:addr>
                 <fr:route>unstable-311.xml</fr:route>
                 <fr:title text="Linear Combinations">Linear Combinations</fr:title>
@@ -448,7 +448,7 @@
                 <fr:p></fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>685</fr:anchor>
+                    <fr:anchor>699</fr:anchor>
                     <fr:addr type="user">def-000L</fr:addr>
                     <fr:route>def-000L.xml</fr:route>
                     <fr:title text="Linear Combination">Linear Combination</fr:title>
@@ -469,7 +469,7 @@
         <fr:tex display="block">             \text {rank}(A) = \text {rank}(B) = \text {rank}(A, B)         </fr:tex></fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>686</fr:anchor>
+                    <fr:anchor>700</fr:anchor>
                     <fr:addr type="user">def-000P</fr:addr>
                     <fr:route>def-000P.xml</fr:route>
                     <fr:title text="Linearly independent">Linearly independent</fr:title>
@@ -492,7 +492,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1525</fr:anchor>
+            <fr:anchor>1550</fr:anchor>
             <fr:addr type="user">math-0002</fr:addr>
             <fr:route>math-0002.xml</fr:route>
             <fr:title text="Finite Dimensional Vector Space">Finite Dimensional Vector Space</fr:title>
@@ -510,7 +510,7 @@
             <fr:p>Adding up scalar mulitples of vectors in a list gives a linear combination.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>506</fr:anchor>
+                <fr:anchor>513</fr:anchor>
                 <fr:addr type="user">def-000L</fr:addr>
                 <fr:route>def-000L.xml</fr:route>
                 <fr:title text="Linear Combination">Linear Combination</fr:title>
@@ -530,7 +530,7 @@
     Hence we have span for linear combinations.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>507</fr:anchor>
+                <fr:anchor>514</fr:anchor>
                 <fr:addr type="user">def-000M</fr:addr>
                 <fr:route>def-000M.xml</fr:route>
                 <fr:title text="Linear Span">Linear Span</fr:title>
@@ -555,7 +555,7 @@
             <fr:p>The discussion about <fr:strong>spans</fr:strong> leads to a key definition in linear algebra.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>508</fr:anchor>
+                <fr:anchor>515</fr:anchor>
                 <fr:addr type="user">def-000N</fr:addr>
                 <fr:route>def-000N.xml</fr:route>
                 <fr:title text="Finite-Dimensional Vector Space">Finite-Dimensional Vector Space</fr:title>
@@ -570,7 +570,7 @@
             <fr:p>The opposite of finite-dimensional is infinite-dimensional.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>509</fr:anchor>
+                <fr:anchor>516</fr:anchor>
                 <fr:addr type="user">def-000O</fr:addr>
                 <fr:route>def-000O.xml</fr:route>
                 <fr:title text="Infinite-dimensional vector space">Infinite-dimensional vector space</fr:title>
@@ -588,7 +588,7 @@
     linear independence.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>510</fr:anchor>
+                <fr:anchor>517</fr:anchor>
                 <fr:addr type="user">def-000P</fr:addr>
                 <fr:route>def-000P.xml</fr:route>
                 <fr:title text="Linearly independent">Linearly independent</fr:title>
@@ -608,7 +608,7 @@
     the following definition.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>511</fr:anchor>
+                <fr:anchor>518</fr:anchor>
                 <fr:addr type="user">def-000Q</fr:addr>
                 <fr:route>def-000Q.xml</fr:route>
                 <fr:title text="Linearly dependent">Linearly dependent</fr:title>
@@ -627,7 +627,7 @@
     without changing the span.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>512</fr:anchor>
+                <fr:anchor>519</fr:anchor>
                 <fr:addr type="user">thm-0001</fr:addr>
                 <fr:route>thm-0001.xml</fr:route>
                 <fr:title text="Linear Dependence Lemma">Linear Dependence Lemma</fr:title>
@@ -644,7 +644,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>513</fr:anchor>
+                <fr:anchor>520</fr:anchor>
                 <fr:addr type="user">thm-0002</fr:addr>
                 <fr:route>thm-0002.xml</fr:route>
                 <fr:title text="Length of linearly independent list  length of spanning list">Length of linearly independent list <fr:tex display="inline">\leq </fr:tex> length of spanning list</fr:title>
@@ -660,7 +660,7 @@
     Now we are ready to define a basis.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>514</fr:anchor>
+                <fr:anchor>521</fr:anchor>
                 <fr:addr type="user">def-000R</fr:addr>
                 <fr:route>def-000R.xml</fr:route>
                 <fr:title text="Basis">Basis</fr:title>
@@ -680,7 +680,7 @@
     where <fr:tex display="inline">e_i</fr:tex> is the vector with <fr:tex display="inline">1</fr:tex> at <fr:tex display="inline">i</fr:tex>-th position and <fr:tex display="inline">0</fr:tex> elsewhere.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>515</fr:anchor>
+                <fr:anchor>522</fr:anchor>
                 <fr:addr type="user">thm-0005</fr:addr>
                 <fr:route>thm-0005.xml</fr:route>
                 <fr:title text="Spanning List contains a basis">Spanning List contains a basis</fr:title>
@@ -695,7 +695,7 @@
             <fr:p>From the <fr:link type="local" href="thm-0005.xml" addr="thm-0005" title="Spanning List contains a basis">theorem</fr:link> we can infer a corollary.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>516</fr:anchor>
+                <fr:anchor>523</fr:anchor>
                 <fr:addr type="user">thm-0006</fr:addr>
                 <fr:route>thm-0006.xml</fr:route>
                 <fr:title text="Basis of finite-dimensional vector space">Basis of finite-dimensional vector space</fr:title>
@@ -711,7 +711,7 @@
     We can adjoin one or more vectors to a linearly independent list to form a basis.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>517</fr:anchor>
+                <fr:anchor>524</fr:anchor>
                 <fr:addr type="user">thm-0007</fr:addr>
                 <fr:route>thm-0007.xml</fr:route>
                 <fr:title text="Linearly dependent list extends to a basis">Linearly dependent list extends to a basis</fr:title>
@@ -728,7 +728,7 @@
     with another subspace to form a direct sum of the whole space.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>518</fr:anchor>
+                <fr:anchor>525</fr:anchor>
                 <fr:addr type="user">thm-0008</fr:addr>
                 <fr:route>thm-0008.xml</fr:route>
                 <fr:title text="Direct Sum of Subspaces of V">Direct Sum of Subspaces of <fr:tex display="inline">V</fr:tex></fr:title>
@@ -750,7 +750,7 @@
     That is, every basis has the same length.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>519</fr:anchor>
+                <fr:anchor>526</fr:anchor>
                 <fr:addr type="user">thm-0009</fr:addr>
                 <fr:route>thm-0009.xml</fr:route>
                 <fr:title text="Basis length is invariant">Basis length is invariant</fr:title>
@@ -767,7 +767,7 @@
     Now we can formally define the dimension of such spaces.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>520</fr:anchor>
+                <fr:anchor>527</fr:anchor>
                 <fr:addr type="user">def-001V</fr:addr>
                 <fr:route>def-001V.xml</fr:route>
                 <fr:title text="Dimension">Dimension</fr:title>
@@ -784,7 +784,7 @@
     Hence we can talk about the dimension of a subspace.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>521</fr:anchor>
+                <fr:anchor>528</fr:anchor>
                 <fr:addr type="user">thm-000A</fr:addr>
                 <fr:route>thm-000A.xml</fr:route>
                 <fr:title text="Dimension of a subspace">Dimension of a subspace</fr:title>
@@ -804,7 +804,7 @@
     The next theorems simplifies the task:</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>522</fr:anchor>
+                <fr:anchor>529</fr:anchor>
                 <fr:addr type="user">thm-000B</fr:addr>
                 <fr:route>thm-000B.xml</fr:route>
                 <fr:title text="Linearly independent list of the right length is a basis">Linearly independent list of the right length is a basis</fr:title>
@@ -819,7 +819,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>523</fr:anchor>
+                <fr:anchor>530</fr:anchor>
                 <fr:addr type="user">thm-000C</fr:addr>
                 <fr:route>thm-000C.xml</fr:route>
                 <fr:title text="Spanning list of the right length is a basis">Spanning list of the right length is a basis</fr:title>
@@ -836,7 +836,7 @@
     This is analogous to the <fr:link type="local" href="thm-000E.xml" addr="thm-000E" title="Inclusion-Exclusion Principle">inclusion-exclusion principle</fr:link>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>524</fr:anchor>
+                <fr:anchor>531</fr:anchor>
                 <fr:addr type="user">thm-000D</fr:addr>
                 <fr:route>thm-000D.xml</fr:route>
                 <fr:title text="Dimension of a sum">Dimension of a sum</fr:title>
@@ -865,7 +865,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1526</fr:anchor>
+            <fr:anchor>1551</fr:anchor>
             <fr:addr type="user">def-001R</fr:addr>
             <fr:route>def-001R.xml</fr:route>
             <fr:title text="Light-cone Coordinates">Light-cone Coordinates</fr:title>
@@ -893,7 +893,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1527</fr:anchor>
+            <fr:anchor>1552</fr:anchor>
             <fr:addr type="user">def-000H</fr:addr>
             <fr:route>def-000H.xml</fr:route>
             <fr:title text="Vector Space">Vector Space</fr:title>

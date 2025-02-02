@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1707</fr:anchor>
+    <fr:anchor>1739</fr:anchor>
     <fr:addr type="user">def-001S</fr:addr>
     <fr:route>def-001S.xml</fr:route>
     <fr:title text="Proper Time">Proper Time</fr:title>
@@ -21,7 +21,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1708</fr:anchor>
+            <fr:anchor>1740</fr:anchor>
             <fr:addr type="user">phy-0001</fr:addr>
             <fr:route>phy-0001.xml</fr:route>
             <fr:title text="Special Relativity and Extra Dimensions">Special Relativity and Extra Dimensions</fr:title>
@@ -59,7 +59,7 @@
     The minus sign on the left of <fr:tex display="inline">\Delta  s^2</fr:tex> implies that <fr:tex display="inline">\Delta  s^2 &gt;0</fr:tex> for events that are <fr:strong>timelike separated</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>786</fr:anchor>
+                <fr:anchor>800</fr:anchor>
                 <fr:addr type="user">def-001H</fr:addr>
                 <fr:route>def-001H.xml</fr:route>
                 <fr:title text="Timelike Separated Events">Timelike Separated Events</fr:title>
@@ -78,7 +78,7 @@
     move faster than light.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>787</fr:anchor>
+                <fr:anchor>801</fr:anchor>
                 <fr:addr type="user">def-001I</fr:addr>
                 <fr:route>def-001I.xml</fr:route>
                 <fr:title text="Lightlike Separated Events">Lightlike Separated Events</fr:title>
@@ -93,7 +93,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>788</fr:anchor>
+                <fr:anchor>802</fr:anchor>
                 <fr:addr type="user">def-001J</fr:addr>
                 <fr:route>def-001J.xml</fr:route>
                 <fr:title text="Spacelike Separated Events">Spacelike Separated Events</fr:title>
@@ -129,7 +129,7 @@
     and the metric is defined by</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>789</fr:anchor>
+                <fr:anchor>803</fr:anchor>
                 <fr:addr type="user">def-001L</fr:addr>
                 <fr:route>def-001L.xml</fr:route>
                 <fr:title text="Minkowski Metric">Minkowski Metric</fr:title>
@@ -166,7 +166,7 @@
     where <fr:tex display="inline">\delta ^\mu _\nu </fr:tex> is the <fr:link type="local" href="def-001P.xml" addr="def-001P" title="Kronecker Delta">Kronecker Delta</fr:link>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>790</fr:anchor>
+                <fr:anchor>804</fr:anchor>
                 <fr:addr type="user">thm-0004</fr:addr>
                 <fr:route>thm-0004.xml</fr:route>
                 <fr:title text="Raise Indices">Raise Indices</fr:title>
@@ -183,7 +183,7 @@
     inertial frames.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>791</fr:anchor>
+                <fr:anchor>805</fr:anchor>
                 <fr:addr type="user">def-001Q</fr:addr>
                 <fr:route>def-001Q.xml</fr:route>
                 <fr:title text="Lorentz Transformations">Lorentz Transformations</fr:title>
@@ -213,7 +213,7 @@
     the <fr:strong>light-cone coordinates</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>792</fr:anchor>
+                <fr:anchor>806</fr:anchor>
                 <fr:addr type="user">def-001R</fr:addr>
                 <fr:route>def-001R.xml</fr:route>
                 <fr:title text="Light-cone Coordinates">Light-cone Coordinates</fr:title>
@@ -289,7 +289,7 @@
     The time measured by the clock is called the <fr:strong>proper time</fr:strong> between the two events.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>793</fr:anchor>
+                <fr:anchor>807</fr:anchor>
                 <fr:addr type="user">def-001S</fr:addr>
                 <fr:route>def-001S.xml</fr:route>
                 <fr:title text="Proper Time">Proper Time</fr:title>

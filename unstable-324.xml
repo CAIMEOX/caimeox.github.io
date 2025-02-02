@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1885</fr:anchor>
+    <fr:anchor>1920</fr:anchor>
     <fr:addr type="machine">#324</fr:addr>
     <fr:route>unstable-324.xml</fr:route>
     <fr:title text="Probability Density › Variance"><fr:link type="local" href="def-0031.xml" addr="def-0031" title="Probability Density">Probability Density</fr:link> › Variance</fr:title>
@@ -20,7 +20,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1886</fr:anchor>
+            <fr:anchor>1921</fr:anchor>
             <fr:addr type="user">def-0031</fr:addr>
             <fr:route>def-0031.xml</fr:route>
             <fr:title text="Probability Density">Probability Density</fr:title>
@@ -32,12 +32,12 @@
         <fr:li><fr:tex display="inline">\int _{-\infty }^{\infty } p(x)dx = 1</fr:tex>.</fr:li></fr:ul>
     With this we can define the <fr:strong>probability function</fr:strong> in an interval <fr:tex display="inline">[a,b]</fr:tex> as:
     <fr:tex display="block">         P(a, b) = \int _a^b p(x)dx     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>775</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="Expectation Value">Expectation Value</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>789</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="Expectation Value">Expectation Value</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The <fr:strong>expectation value</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
     <fr:tex display="block">         \langle  f(x) \rangle  = \int _{-\infty }^{\infty } f(x)p(x)dx     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>776</fr:anchor><fr:addr type="machine">#324</fr:addr><fr:route>unstable-324.xml</fr:route><fr:title text="Variance">Variance</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>790</fr:anchor><fr:addr type="machine">#324</fr:addr><fr:route>unstable-324.xml</fr:route><fr:title text="Variance">Variance</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The <fr:strong>variance</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
     <fr:tex display="block">         \sigma ^2 :\equiv  \langle  x^2 \rangle  - \langle  x \rangle ^2     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>

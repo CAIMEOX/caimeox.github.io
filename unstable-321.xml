@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1089</fr:anchor>
+    <fr:anchor>1103</fr:anchor>
     <fr:addr type="machine">#321</fr:addr>
     <fr:route>unstable-321.xml</fr:route>
     <fr:title text="Category › With one collection"><fr:link type="local" href="def-003E.xml" addr="def-003E" title="Category">Category</fr:link> › <fr:strong>With one collection</fr:strong></fr:title>
@@ -30,7 +30,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1090</fr:anchor>
+            <fr:anchor>1104</fr:anchor>
             <fr:addr type="user">def-003E</fr:addr>
             <fr:route>def-003E.xml</fr:route>
             <fr:title text="Category">Category</fr:title>
@@ -38,7 +38,7 @@
             <fr:authors></fr:authors>
           </fr:frontmatter>
           <fr:mainmatter>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>560</fr:anchor><fr:addr type="machine">#321</fr:addr><fr:route>unstable-321.xml</fr:route><fr:title text="With one collection"><fr:strong>With one collection</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>567</fr:anchor><fr:addr type="machine">#321</fr:addr><fr:route>unstable-321.xml</fr:route><fr:title text="With one collection"><fr:strong>With one collection</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     A <fr:strong>category</fr:strong> <fr:tex display="inline">C</fr:tex> consists
     <fr:ul><fr:li>A collection of <fr:strong>objects</fr:strong> <fr:tex display="inline">C_0</fr:tex> (<fr:tex display="inline">\text {Ob}(C)</fr:tex>).</fr:li>
         <fr:li>A collection <fr:tex display="inline">C_1</fr:tex> (<fr:tex display="inline">\text {Mor}(C)</fr:tex>) of <fr:strong>morphisms</fr:strong> (arrows).</fr:li>
@@ -53,7 +53,7 @@
     If the identity map and its axioms are omitted then one speaks of a <fr:strong>semicategory</fr:strong>.
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>561</fr:anchor><fr:addr type="machine">#322</fr:addr><fr:route>unstable-322.xml</fr:route><fr:title text="With a family of collections of morphisms"><fr:strong>With a family of collections of morphisms</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>568</fr:anchor><fr:addr type="machine">#322</fr:addr><fr:route>unstable-322.xml</fr:route><fr:title text="With a family of collections of morphisms"><fr:strong>With a family of collections of morphisms</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     A <fr:strong>category</fr:strong> <fr:tex display="inline">C</fr:tex> consists
     <fr:ul><fr:li>A collection of <fr:strong>objects</fr:strong> <fr:tex display="inline">C_0</fr:tex> (<fr:tex display="inline">\text {Ob}(C)</fr:tex>).</fr:li>
         <fr:li>For every pair of objects <fr:tex display="inline">x, y</fr:tex>, a collection <fr:tex display="inline">C_1(x, y)</fr:tex> (<fr:tex display="inline">\hom _C(x,y)</fr:tex>) of <fr:strong>morphisms</fr:strong> from <fr:tex display="inline">x</fr:tex> to <fr:tex display="inline">y</fr:tex>.</fr:li>

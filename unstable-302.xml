@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>969</fr:anchor>
+    <fr:anchor>983</fr:anchor>
     <fr:addr type="machine">#302</fr:addr>
     <fr:route>unstable-302.xml</fr:route>
     <fr:title text="Time-independent Schrodinger Equation › 
@@ -44,7 +44,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>970</fr:anchor>
+            <fr:anchor>984</fr:anchor>
             <fr:addr type="user">phy-0003</fr:addr>
             <fr:route>phy-0003.xml</fr:route>
             <fr:title text="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</fr:title>
@@ -66,7 +66,7 @@
     In other words we look for solutions of the <fr:em>product form</fr:em>:
     <fr:tex display="block">         \Psi (x,t) = \psi (x)\phi (t)     </fr:tex>
     This is an absurd restriction, but it works and we can get interesting results.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>781</fr:anchor><fr:addr type="machine">#301</fr:addr><fr:route>unstable-301.xml</fr:route><fr:title text="Solve the equation"><fr:strong>Solve the equation</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>795</fr:anchor><fr:addr type="machine">#301</fr:addr><fr:route>unstable-301.xml</fr:route><fr:title text="Solve the equation"><fr:strong>Solve the equation</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>Now substitute the product form into the Schrodinger equation:
         <fr:tex display="block">             i\hbar  \psi (x) \frac {\partial }{\partial  t}(\phi (t)) = -\frac {\hbar ^2}{2m}\phi (t)\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)\psi (x)\phi (t)         </fr:tex>
         Divide both sides by <fr:tex display="inline">\psi (x)\phi (t)</fr:tex>:
@@ -88,14 +88,14 @@
         The second one is the <fr:strong>time-independent Schrodinger equation</fr:strong>,
         we can&apos;t go further unless we know the potential energy <fr:tex display="inline">V(x)</fr:tex>.</fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-<fr:p>Now we give a name to the time-independent Schrodinger equation.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>782</fr:anchor><fr:addr type="user">def-0034</fr:addr><fr:route>def-0034.xml</fr:route><fr:title text="Stationary State">Stationary State</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>stationary state</fr:strong> is a quantum state with all observables independent of time.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Thought the wave function is time-dependent,
+<fr:p>Now we give a name to the time-independent Schrodinger equation.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>796</fr:anchor><fr:addr type="user">def-0034</fr:addr><fr:route>def-0034.xml</fr:route><fr:title text="Stationary State">Stationary State</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>stationary state</fr:strong> is a quantum state with all observables independent of time.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Thought the wave function is time-dependent,
     <fr:tex display="block">         \Psi (x,t) = \psi (x)e^{-iEt/\hbar }     </fr:tex>
     But if we compute the probability density, it is time-independent:
     <fr:tex display="block">         |\Psi (x,t)|^2 = \psi ^*(x)e^{+iEt/\hbar }\psi (x)e^{-iEt/\hbar } = |\psi (x)|^2      </fr:tex>
     Hence the expectation value is constant in time. 
     Then <fr:tex display="inline">\langle  p \rangle  = 0</fr:tex> all the time.
     Nothing happens in the stationary state.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>783</fr:anchor><fr:addr type="machine">#302</fr:addr><fr:route>unstable-302.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>797</fr:anchor><fr:addr type="machine">#302</fr:addr><fr:route>unstable-302.xml</fr:route><fr:title text="
     Conservation of energy
 ">
     <fr:strong>Conservation of energy</fr:strong>

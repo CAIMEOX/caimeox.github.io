@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1159</fr:anchor>
+    <fr:anchor>1168</fr:anchor>
     <fr:addr type="machine">#390</fr:addr>
     <fr:route>unstable-390.xml</fr:route>
     <fr:title text="Rabbit Hole › 
-    What is the meaning of &quot;Rabbit Hole&quot;?
+    What is this website about?
 "><fr:link type="local" href="about.xml" addr="about" title="Rabbit Hole">Rabbit Hole</fr:link> › 
-    <fr:strong>What is the meaning of &quot;Rabbit Hole&quot;?</fr:strong>
+    <fr:strong>What is this website about?</fr:strong>
 </fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    The name of this website &quot;<fr:strong>Rabbit Hole</fr:strong>&quot; carries a metaphorical significance inspired by Lewis Carroll&apos;s 
-    <fr:em>Alice&apos;s Adventures in Wonderland</fr:em>, 
-    meaning to delve into a topic or pursue a line of thought that leads to unexpected or complex places.
-    It can refer to getting deeply involved in researching a subject, exploring a particular interest, or going through 
-    a series of trees in the forest that leads to a chain of related topics.
+    <fr:p>This website is a collection of my notes and posts on various topics in 
+        <fr:strong>computer science, mathematics, physics, and programming language theory</fr:strong>.
+        It is a place where I can organize my thoughts and share my understanding of these topics.
+        I hope it can be helpful to others who are interested in these subjects.</fr:p>
 </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -27,7 +26,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1160</fr:anchor>
+            <fr:anchor>1169</fr:anchor>
             <fr:addr type="user">about</fr:addr>
             <fr:route>about.xml</fr:route>
             <fr:title text="Rabbit Hole">Rabbit Hole</fr:title>
@@ -35,7 +34,7 @@
             <fr:authors></fr:authors>
           </fr:frontmatter>
           <fr:mainmatter><fr:p><fr:tex display="block">         i\hbar  \frac {\partial }{\partial  t} \Psi (x, t) = \hat {H} \Psi (x, t)     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1156</fr:anchor><fr:addr type="machine">#389</fr:addr><fr:route>unstable-389.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1170</fr:anchor><fr:addr type="machine">#390</fr:addr><fr:route>unstable-390.xml</fr:route><fr:title text="
     What is this website about?
 ">
     <fr:strong>What is this website about?</fr:strong>
@@ -46,7 +45,7 @@
         I hope it can be helpful to others who are interested in these subjects.</fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1157</fr:anchor><fr:addr type="machine">#390</fr:addr><fr:route>unstable-390.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1171</fr:anchor><fr:addr type="machine">#391</fr:addr><fr:route>unstable-391.xml</fr:route><fr:title text="
     What is the meaning of &quot;Rabbit Hole&quot;?
 ">
     <fr:strong>What is the meaning of &quot;Rabbit Hole&quot;?</fr:strong>
@@ -58,7 +57,7 @@
     a series of trees in the forest that leads to a chain of related topics.
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1158</fr:anchor><fr:addr type="machine">#391</fr:addr><fr:route>unstable-391.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1172</fr:anchor><fr:addr type="machine">#392</fr:addr><fr:route>unstable-392.xml</fr:route><fr:title text="
     How to navigate?
 ">
     <fr:strong>How to navigate?</fr:strong>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1134</fr:anchor>
+    <fr:anchor>1148</fr:anchor>
     <fr:addr type="machine">#326</fr:addr>
     <fr:route>unstable-326.xml</fr:route>
     <fr:title text="Associator › 
@@ -34,7 +34,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1135</fr:anchor>
+            <fr:anchor>1149</fr:anchor>
             <fr:addr type="user">def-002W</fr:addr>
             <fr:route>def-002W.xml</fr:route>
             <fr:title text="Associator">Associator</fr:title>
@@ -46,7 +46,7 @@
     <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
     we define the <fr:strong>associator</fr:strong>:
     <fr:tex display="block">         \text {assoc}: (p,q,r): (p\cdot  q)\cdot  r = p\cdot  (q\cdot  r)     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>754</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>768</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
     Construction of Associator
 ">
     <fr:strong>Construction of Associator</fr:strong>

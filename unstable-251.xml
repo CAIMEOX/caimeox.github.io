@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>951</fr:anchor>
+    <fr:anchor>965</fr:anchor>
     <fr:addr type="machine">#251</fr:addr>
     <fr:route>unstable-251.xml</fr:route>
     <fr:title text="Simply Typed Lambda Calculus and Representation Theorems › Characterizing the Booleans › Representation of Booleans"><fr:link type="local" href="unstable-250.xml" addr="#250" title="Simply Typed Lambda Calculus and Representation Theorems › Characterizing the Booleans"><fr:link type="local" href="cs-0005.xml" addr="cs-0005" title="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</fr:link> › Characterizing the Booleans</fr:link> › Representation of Booleans</fr:title>
@@ -25,7 +25,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>952</fr:anchor>
+            <fr:anchor>966</fr:anchor>
             <fr:addr type="user">cs-0005</fr:addr>
             <fr:route>cs-0005.xml</fr:route>
             <fr:title text="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</fr:title>
@@ -52,7 +52,7 @@
     <fr:tex display="block">         \begin {align*}             \text {true} &amp;= \lambda  x.\lambda  y.x : \alpha \to (\beta \to \alpha )\\             \text {false} &amp;= \lambda  x.\lambda  y.y : \alpha \to (\beta \to \beta )         \end {align*}     </fr:tex></fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>591</fr:anchor>
+                <fr:anchor>605</fr:anchor>
                 <fr:addr type="machine">#248</fr:addr>
                 <fr:route>unstable-248.xml</fr:route>
                 <fr:title text="Typing Judgment">Typing Judgment</fr:title>
@@ -80,7 +80,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>592</fr:anchor>
+                <fr:anchor>606</fr:anchor>
                 <fr:addr type="machine">#249</fr:addr>
                 <fr:route>unstable-249.xml</fr:route>
                 <fr:title text="The Limits of Simple Types">The Limits of Simple Types</fr:title>
@@ -111,7 +111,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>593</fr:anchor>
+                <fr:anchor>607</fr:anchor>
                 <fr:addr type="machine">#250</fr:addr>
                 <fr:route>unstable-250.xml</fr:route>
                 <fr:title text="Characterizing the Booleans">Characterizing the Booleans</fr:title>
@@ -126,7 +126,7 @@
                 <fr:p>We now show that the representation of the booleans is correct.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>594</fr:anchor>
+                    <fr:anchor>608</fr:anchor>
                     <fr:addr type="machine">#251</fr:addr>
                     <fr:route>unstable-251.xml</fr:route>
                     <fr:title text="Representation of Booleans">Representation of Booleans</fr:title>
@@ -147,7 +147,7 @@
     correctness of the representation of the booleans.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>595</fr:anchor>
+                    <fr:anchor>609</fr:anchor>
                     <fr:addr type="user">def-003O</fr:addr>
                     <fr:route>def-003O.xml</fr:route>
                     <fr:title text="Weak Normalization">Weak Normalization</fr:title>
@@ -165,7 +165,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>596</fr:anchor>
+                <fr:anchor>610</fr:anchor>
                 <fr:addr type="machine">#252</fr:addr>
                 <fr:route>unstable-252.xml</fr:route>
                 <fr:title text="Reduction revised">Reduction revised</fr:title>
@@ -195,7 +195,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>597</fr:anchor>
+                <fr:anchor>611</fr:anchor>
                 <fr:addr type="machine">#253</fr:addr>
                 <fr:route>unstable-253.xml</fr:route>
                 <fr:title text="Normal Forms and Reduction">Normal Forms and Reduction</fr:title>
@@ -215,7 +215,7 @@
                 <fr:p>We have theorem that ensures that the first property holds. (Proof is omitted).</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>598</fr:anchor>
+                    <fr:anchor>612</fr:anchor>
                     <fr:addr type="user">thm-0010</fr:addr>
                     <fr:route>thm-0010.xml</fr:route>
                     <fr:title text="Reduction and normal forms">Reduction and normal forms</fr:title>

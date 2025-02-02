@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1097</fr:anchor>
+    <fr:anchor>1111</fr:anchor>
     <fr:addr type="machine">#340</fr:addr>
     <fr:route>unstable-340.xml</fr:route>
     <fr:title text="Type Negation › Proof of negation"><fr:link type="local" href="def-0022.xml" addr="def-0022" title="Type Negation">Type Negation</fr:link> › <fr:strong>Proof of negation</fr:strong></fr:title>
@@ -20,7 +20,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1098</fr:anchor>
+            <fr:anchor>1112</fr:anchor>
             <fr:addr type="user">def-0022</fr:addr>
             <fr:route>def-0022.xml</fr:route>
             <fr:title text="Type Negation">Type Negation</fr:title>
@@ -31,7 +31,7 @@
     <fr:tex display="block">         \neg  A :\equiv  A \to  \emptyset      </fr:tex>
     A type <fr:tex display="inline">A</fr:tex> is said to be <fr:strong>empty</fr:strong> if and only if <fr:tex display="inline">\neg  A</fr:tex> is inhabited.
     <fr:tex display="block">         \text {empty}(A) :\equiv  \neg  A     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>735</fr:anchor><fr:addr type="machine">#340</fr:addr><fr:route>unstable-340.xml</fr:route><fr:title text="Proof of negation"><fr:strong>Proof of negation</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>749</fr:anchor><fr:addr type="machine">#340</fr:addr><fr:route>unstable-340.xml</fr:route><fr:title text="Proof of negation"><fr:strong>Proof of negation</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         <fr:p>To prove <fr:tex display="inline">\neg  A</fr:tex>, we need to show that <fr:tex display="inline">A</fr:tex> implies a contradiction.
             In other words, constructing a function of type <fr:tex display="inline">A \to  \emptyset </fr:tex>.</fr:p>
     </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>

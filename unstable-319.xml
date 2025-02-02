@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1087</fr:anchor>
+    <fr:anchor>1101</fr:anchor>
     <fr:addr type="machine">#319</fr:addr>
     <fr:route>unstable-319.xml</fr:route>
     <fr:taxon>Proof</fr:taxon>
@@ -28,7 +28,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1088</fr:anchor>
+            <fr:anchor>1102</fr:anchor>
             <fr:addr type="user">def-004H</fr:addr>
             <fr:route>def-004H.xml</fr:route>
             <fr:title text="Observational Equality of {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
@@ -41,7 +41,7 @@
     
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>771</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>785</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
         it suffices to provide
         <fr:tex display="block">             \begin {align*}                 &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\                  &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))             \end {align*}         </fr:tex>

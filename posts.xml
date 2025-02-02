@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1216</fr:anchor>
+    <fr:anchor>1235</fr:anchor>
     <fr:addr type="user">posts</fr:addr>
     <fr:route>posts.xml</fr:route>
     <fr:title text="Blog posts">Blog posts</fr:title>
@@ -10,7 +10,7 @@
   <fr:mainmatter>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>711</fr:anchor>
+        <fr:anchor>725</fr:anchor>
         <fr:addr type="user">tt-0002</fr:addr>
         <fr:route>tt-0002.xml</fr:route>
         <fr:title text="Introduction to Type Theory">Introduction to Type Theory</fr:title>
@@ -51,7 +51,7 @@
     or equivalently if you can construct a term <fr:tex display="inline">h : a =_A b</fr:tex>.</fr:p>
     <fr:p>In type theory there is also a requirement for a judgment-level equality.
         This is called <fr:strong>judgmental equality</fr:strong>, meaning &quot;equal by definition&quot;.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>712</fr:anchor><fr:addr type="user">def-0015</fr:addr><fr:route>def-0015.xml</fr:route><fr:title text="Judgemental Equality">Judgemental Equality</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Judgemental equality</fr:strong> of terms is given by the following judgement:
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>726</fr:anchor><fr:addr type="user">def-0015</fr:addr><fr:route>def-0015.xml</fr:route><fr:title text="Judgemental Equality">Judgemental Equality</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Judgemental equality</fr:strong> of terms is given by the following judgement:
     <fr:tex display="block">         \Gamma \vdash  a\equiv  a&apos;:A     </fr:tex>
     <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">a&apos;</fr:tex> are judgementally equal terms of type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.</fr:p><fr:p>Note that the notation <fr:tex display="inline">\equiv </fr:tex> binds more loosely than anything else.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
     <fr:p>judgments may depend on <fr:em>assumptions</fr:em> of the form <fr:tex display="inline">x:A</fr:tex> where <fr:tex display="inline">x</fr:tex> is a
@@ -63,7 +63,7 @@
         The notation <fr:tex display="inline">\vdash </fr:tex> means making conclusion from assumptions.</fr:p>
 <fr:p>Remember the difference between axiom and (inference) rules.
     <fr:ul><fr:li>Rules allow us to conclude one judgment from a collection of other judgments.</fr:li>
-        <fr:li>Axioms are judgments that are assumed to be true without proof.</fr:li></fr:ul></fr:p><fr:p>We start by introduction to Matrin Lof&apos;s dependent type theory.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>713</fr:anchor><fr:addr type="user">def-0017</fr:addr><fr:route>def-0017.xml</fr:route><fr:title text="Dependent type theory: Judgments">Dependent type theory: Judgments</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+        <fr:li>Axioms are judgments that are assumed to be true without proof.</fr:li></fr:ul></fr:p><fr:p>We start by introduction to Matrin Lof&apos;s dependent type theory.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>727</fr:anchor><fr:addr type="user">def-0017</fr:addr><fr:route>def-0017.xml</fr:route><fr:title text="Dependent type theory: Judgments">Dependent type theory: Judgments</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>There are four kinds of judgments in Martin Lof&apos;s dependent type theory:</fr:p>
     <fr:ul><fr:li><fr:tex display="inline">A</fr:tex> is a well-formed type in context <fr:tex display="inline">\Gamma </fr:tex>
             <fr:tex display="block">                 \Gamma  \vdash  A \space \text {type}             </fr:tex></fr:li>
@@ -78,12 +78,12 @@
     may depend on any previous declared variables.
 
     To introduce types dependent on terms, 
-    we need the notation of type families.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>714</fr:anchor><fr:addr type="user">def-0018</fr:addr><fr:route>def-0018.xml</fr:route><fr:title text="Type Family">Type Family</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Consider a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
+    we need the notation of type families.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>728</fr:anchor><fr:addr type="user">def-0018</fr:addr><fr:route>def-0018.xml</fr:route><fr:title text="Type Family">Type Family</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Consider a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
     A <fr:strong>family</fr:strong> of types over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>
     is a type <fr:tex display="inline">B(x)</fr:tex> in context <fr:tex display="inline">\Gamma , x:A</fr:tex>.
     <fr:tex display="block">         \Gamma , x:A \vdash  B(x) \space \text {type}     </fr:tex>
     <fr:tex display="inline">B</fr:tex> is a family of types over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
-    Alternatively, we say that <fr:tex display="inline">B(x)</fr:tex> is a type <fr:strong>indexed</fr:strong> by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Now we can define a term of a type family, that is, a section of a type family.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>715</fr:anchor><fr:addr type="user">def-0019</fr:addr><fr:route>def-0019.xml</fr:route><fr:title text="Section of Type Family">Section of Type Family</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">B</fr:tex> be a <fr:link type="local" href="def-0018.xml" addr="def-0018" title="Type Family">type family</fr:link> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
+    Alternatively, we say that <fr:tex display="inline">B(x)</fr:tex> is a type <fr:strong>indexed</fr:strong> by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Now we can define a term of a type family, that is, a section of a type family.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>729</fr:anchor><fr:addr type="user">def-0019</fr:addr><fr:route>def-0019.xml</fr:route><fr:title text="Section of Type Family">Section of Type Family</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">B</fr:tex> be a <fr:link type="local" href="def-0018.xml" addr="def-0018" title="Type Family">type family</fr:link> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
     A <fr:strong>section</fr:strong> of <fr:tex display="inline">B</fr:tex> is a term <fr:tex display="inline">b</fr:tex> of type <fr:tex display="inline">B(x)</fr:tex> in context <fr:tex display="inline">\Gamma ,x:A</fr:tex>.
     <fr:tex display="block">         \Gamma , x:A \vdash  b : B(x)     </fr:tex>
     Alternatively, we say that <fr:tex display="inline">b</fr:tex> is a term of <fr:tex display="inline">B(x)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>We now ready to present the inference rules for dependent type theory.
@@ -94,7 +94,7 @@
         <fr:li>Vairable conversion</fr:li>
         <fr:li>Substitution</fr:li>
         <fr:li>Weakening</fr:li>
-        <fr:li>Generic element</fr:li></fr:ul></fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>716</fr:anchor><fr:addr type="user">def-001A</fr:addr><fr:route>def-001A.xml</fr:route><fr:title text="
+        <fr:li>Generic element</fr:li></fr:ul></fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>730</fr:anchor><fr:addr type="user">def-001A</fr:addr><fr:route>def-001A.xml</fr:route><fr:title text="
     Formation of contexts, types and terms
 ">
     Formation of contexts, types and terms
@@ -102,13 +102,13 @@
     about contexts, types and terms, can be used freely.</fr:p><fr:ul><fr:li><fr:tex display="block">             \frac {                 \Gamma ,x:A\vdash  B(x)\space \text {type}             }{                 \Gamma \vdash  A\space \text {type}             }         </fr:tex></fr:li>
     <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}             }{                 \Gamma \vdash  A\space \text {type}             }             \quad              \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}             }{                 \Gamma \vdash  B\space \text {type}             }         </fr:tex></fr:li>
     <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  a:A             }{                 \Gamma \vdash  A\space \text {type}             }         </fr:tex></fr:li>
-    <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  a\equiv  b:A             }{                 \Gamma \vdash  a:A             }             \quad               \frac {                 \Gamma \vdash  a\equiv  b:A             }{                 \Gamma \vdash  b:A             }         </fr:tex></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>717</fr:anchor><fr:addr type="user">def-001B</fr:addr><fr:route>def-001B.xml</fr:route><fr:title text="
+    <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  a\equiv  b:A             }{                 \Gamma \vdash  a:A             }             \quad               \frac {                 \Gamma \vdash  a\equiv  b:A             }{                 \Gamma \vdash  b:A             }         </fr:tex></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>731</fr:anchor><fr:addr type="user">def-001B</fr:addr><fr:route>def-001B.xml</fr:route><fr:title text="
     Judgmental equality is equivalence relation
 ">
     Judgmental equality is equivalence relation
 </fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Judgmental equality on types and on elements is an <fr:link type="local" href="def-000X.xml" addr="def-000X" title="Equivalence Relation">equivalence relation</fr:link> 
     simply postulate that these relations are reflexive, symmetric, and transitive:</fr:p><fr:ul><fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  a:A             }{                 \Gamma \vdash  a\equiv  a:A             }             \quad              \frac {                 \Gamma \vdash  a\equiv  b:A             }{                 \Gamma \vdash  b\equiv  a:A             }             \quad              \frac {                 \Gamma \vdash  a\equiv  b:A                 \quad                  \Gamma \vdash  b\equiv  c:A             }{                 \Gamma \vdash  a\equiv  c:A             }         </fr:tex></fr:li>
-    <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  A\space \text {type}             }{                 \Gamma \vdash  A\equiv  A\space \text {type}             }             \quad              \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}             }{                 \Gamma \vdash  B\equiv  A\space \text {type}             }             \quad              \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}                 \quad                  \Gamma \vdash  B\equiv  C\space \text {type}             }{                 \Gamma \vdash  A\equiv  C\space \text {type}             }         </fr:tex></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>718</fr:anchor><fr:addr type="user">def-001C</fr:addr><fr:route>def-001C.xml</fr:route><fr:title text="Variable Conversion">Variable Conversion</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This rule postulates that we can
+    <fr:li><fr:tex display="block">             \frac {                 \Gamma \vdash  A\space \text {type}             }{                 \Gamma \vdash  A\equiv  A\space \text {type}             }             \quad              \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}             }{                 \Gamma \vdash  B\equiv  A\space \text {type}             }             \quad              \frac {                 \Gamma \vdash  A\equiv  B\space \text {type}                 \quad                  \Gamma \vdash  B\equiv  C\space \text {type}             }{                 \Gamma \vdash  A\equiv  C\space \text {type}             }         </fr:tex></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>732</fr:anchor><fr:addr type="user">def-001C</fr:addr><fr:route>def-001C.xml</fr:route><fr:title text="Variable Conversion">Variable Conversion</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This rule postulates that we can
     convert the type of a variable to a judgmentally equal type.
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\equiv  A&apos;\space \text {type}             \quad              \Gamma ,x:A,\Delta \vdash  B(x)\space \text {type}         }{             \Gamma ,x:A&apos;,\Delta \vdash  B(x)\space \text {type}         }     </fr:tex>
     Similarly, we can convert judgmental equality of types and terms.
@@ -116,20 +116,20 @@
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\equiv  A&apos;\space \text {type}             \quad              \Gamma ,x:A,\Delta \vdash  \mathcal {J}         }{             \Gamma ,x:A&apos;,\Delta \vdash  \mathcal {J}         }VC     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Consider a term <fr:tex display="inline">f:B(x)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
     and we also have a term <fr:tex display="inline">a:A</fr:tex>.
     We can simultaneously substitute <fr:tex display="inline">a</fr:tex> for all occurrences of <fr:tex display="inline">x</fr:tex> in <fr:tex display="inline">f</fr:tex>
-    to obtain a new term <fr:tex display="inline">f[x:=a]:B(a)</fr:tex>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>719</fr:anchor><fr:addr type="user">def-001D</fr:addr><fr:route>def-001D.xml</fr:route><fr:title text="Substitution">Substitution</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The substitution rule postulates that we can substitute a term for a variable.
+    to obtain a new term <fr:tex display="inline">f[x:=a]:B(a)</fr:tex>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>733</fr:anchor><fr:addr type="user">def-001D</fr:addr><fr:route>def-001D.xml</fr:route><fr:title text="Substitution">Substitution</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The substitution rule postulates that we can substitute a term for a variable.
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A             \quad              \Gamma ,x:A,\Delta \vdash  \mathcal {J}         }{             \Gamma ,\Delta [x:=a]\vdash  \mathcal {J}[x:=a]         }S     </fr:tex>
     The notation <fr:tex display="inline">\Gamma ,\Delta [x:=a]</fr:tex> means that we substitute <fr:tex display="inline">a</fr:tex> for <fr:tex display="inline">x</fr:tex> in <fr:tex display="inline">\Delta </fr:tex>.</fr:p><fr:p>With the substitution rule, we need two more <fr:em>congruence rules</fr:em> to
     convert judgmental equality of terms and types.
     <fr:tex display="block">         \frac {             \Gamma \vdash  a\equiv  a&apos;:A             \quad              \Gamma ,x:A,\Delta \vdash  B \space \text {type}         }{             \Gamma ,\Delta [x:=a]\vdash  B[x:=a]\equiv  B[x:=a&apos;] \space \text {type}         }     </fr:tex>
 
-    <fr:tex display="block">         \frac {             \Gamma \vdash  A\equiv  A&apos;\space \text {type}             \quad              \Gamma ,x:A,\Delta \vdash  b:A         }{             \Gamma ,\Delta [x:=a]\vdash  b[x:=a]\equiv  b[x:=a&apos;]:A&apos;[x:=a] \space \text {type}         }     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>720</fr:anchor><fr:addr type="user">def-001G</fr:addr><fr:route>def-001G.xml</fr:route><fr:title text="Fiber and Value">Fiber and Value</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">B</fr:tex> be a <fr:link type="local" href="def-0018.xml" addr="def-0018" title="Type Family">type family</fr:link> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
+    <fr:tex display="block">         \frac {             \Gamma \vdash  A\equiv  A&apos;\space \text {type}             \quad              \Gamma ,x:A,\Delta \vdash  b:A         }{             \Gamma ,\Delta [x:=a]\vdash  b[x:=a]\equiv  b[x:=a&apos;]:A&apos;[x:=a] \space \text {type}         }     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>734</fr:anchor><fr:addr type="user">def-001G</fr:addr><fr:route>def-001G.xml</fr:route><fr:title text="Fiber and Value">Fiber and Value</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">B</fr:tex> be a <fr:link type="local" href="def-0018.xml" addr="def-0018" title="Type Family">type family</fr:link> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
     an a well-formed term <fr:tex display="inline">a:A</fr:tex>,
     then we say that <fr:tex display="inline">B[x:=a]</fr:tex> is the <fr:strong>fiber</fr:strong> of <fr:tex display="inline">B</fr:tex> at <fr:tex display="inline">a</fr:tex>, denoted <fr:tex display="inline">B(a)</fr:tex>.</fr:p><fr:p>Let <fr:tex display="inline">b</fr:tex> a <fr:link type="local" href="def-0019.xml" addr="def-0019" title="Section of Type Family">section</fr:link> of <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
     then we say that <fr:tex display="inline">b(a):\equiv  b[x:=a]</fr:tex> is the <fr:strong>value</fr:strong> of <fr:tex display="inline">b</fr:tex> at <fr:tex display="inline">a</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>The process of expanding the context by a fresh variable of type <fr:tex display="inline">A</fr:tex> is called weakening (by <fr:tex display="inline">A</fr:tex>).
     Intuitively, weakening is the process of adding a new hypothesis to the context.
-    And the hypothesis will weaken the conclusion.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>721</fr:anchor><fr:addr type="user">def-001E</fr:addr><fr:route>def-001E.xml</fr:route><fr:title text="Weakening">Weakening</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Weakening rule asserts that we can add a variable to the context.
+    And the hypothesis will weaken the conclusion.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>735</fr:anchor><fr:addr type="user">def-001E</fr:addr><fr:route>def-001E.xml</fr:route><fr:title text="Weakening">Weakening</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Weakening rule asserts that we can add a variable to the context.
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\space \text {type}             \quad               \Gamma ,\Delta \vdash  \mathcal {J}         }{             \Gamma ,x:A,\Delta \vdash  \mathcal {J}         }W      </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Finally, the generic elemets rule ensures that
-    the variables declared in a context.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>722</fr:anchor><fr:addr type="user">def-001F</fr:addr><fr:route>def-001F.xml</fr:route><fr:title text="Generic Elements">Generic Elements</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The rule for the generic element asserts that 
+    the variables declared in a context.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>736</fr:anchor><fr:addr type="user">def-001F</fr:addr><fr:route>def-001F.xml</fr:route><fr:title text="Generic Elements">Generic Elements</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The rule for the generic element asserts that 
     any hypothetical element <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma ,x:A</fr:tex>
     is also an element of <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma ,x:A</fr:tex>.
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\space \text {type}         }{             \Gamma ,x:A\vdash  x:A         }\delta      </fr:tex>
@@ -146,7 +146,7 @@
         <fr:li>Introduction rule</fr:li>
         <fr:li>Elimination rule</fr:li>
         <fr:li>Computation rule</fr:li></fr:ul>
-    Besides these we also need the <fr:strong>congruence rule</fr:strong> for judgmental equality.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>723</fr:anchor><fr:addr type="user">def-001T</fr:addr><fr:route>def-001T.xml</fr:route><fr:title text="Dependent Function Type">Dependent Function Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Formation Rule</fr:strong>
+    Besides these we also need the <fr:strong>congruence rule</fr:strong> for judgmental equality.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>737</fr:anchor><fr:addr type="user">def-001T</fr:addr><fr:route>def-001T.xml</fr:route><fr:title text="Dependent Function Type">Dependent Function Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:strong>Formation Rule</fr:strong>
     For any type family <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>:
     <fr:tex display="block">         \frac {             \Gamma ,x:A\vdash  B(x)\space \text {type}         }{             \Gamma \vdash  \Pi _{(x:A)}B(x)\space \text {type}         }\Pi      </fr:tex>
     We also require that the operation of forming dependent function types
@@ -163,7 +163,7 @@
     <fr:tex display="block">         \frac {             \Gamma \vdash  f\equiv  f&apos;:\Pi _{(x:A)}B(x)         }{             \Gamma ,x:A\vdash  f(x)\equiv  f&apos;(x):B(x)         }ev\text {-eq}     </fr:tex></fr:p><fr:p><fr:strong>Computation Rule (<fr:tex display="inline">\beta </fr:tex>-reduction)</fr:strong>
     <fr:tex display="block">         \frac {             \Gamma ,x:A\vdash  b(x):B(x)         }{             \Gamma ,x:A\vdash  (\lambda  y.b(y))(x)\equiv  b(x):B(x)         }\beta      </fr:tex>
     We postulate that all elements of a dependent function type are dependent functions.
-    <fr:tex display="block">         \frac {             \Gamma \vdash  f:\Pi _{(x:A)}B(x)         }{             \Gamma \vdash  f\equiv  \lambda  x.f(x):\Pi _{(x:A)}B(x)         }\eta      </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>A degenrated case of dependent function type is the ordinary function type.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>724</fr:anchor><fr:addr type="user">def-001U</fr:addr><fr:route>def-001U.xml</fr:route><fr:title text="Ordinary Function Type">Ordinary Function Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A special case of <fr:link type="local" href="def-001T.xml" addr="def-001T" title="Dependent Function Type"><fr:tex display="inline">\Pi </fr:tex>-type</fr:link> is the <fr:strong>ordinary function type</fr:strong>.
+    <fr:tex display="block">         \frac {             \Gamma \vdash  f:\Pi _{(x:A)}B(x)         }{             \Gamma \vdash  f\equiv  \lambda  x.f(x):\Pi _{(x:A)}B(x)         }\eta      </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>A degenrated case of dependent function type is the ordinary function type.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>738</fr:anchor><fr:addr type="user">def-001U</fr:addr><fr:route>def-001U.xml</fr:route><fr:title text="Ordinary Function Type">Ordinary Function Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A special case of <fr:link type="local" href="def-001T.xml" addr="def-001T" title="Dependent Function Type"><fr:tex display="inline">\Pi </fr:tex>-type</fr:link> is the <fr:strong>ordinary function type</fr:strong>.
     Using weakening rule we can obtain thee type <fr:tex display="inline">A\to  B</fr:tex> of ordinary function from <fr:tex display="inline">A</fr:tex> to <fr:tex display="inline">B</fr:tex>
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\space \text {type}             \quad              \Gamma \vdash  B\space \text {type}         }{\dfrac {             \Gamma ,x:A\vdash  B\space \text {type}         }{             \Gamma \vdash  \Pi _{(x:A)}B\space \text {type}         }\Pi }W     </fr:tex>
     A term <fr:tex display="inline">f: \Pi _{(x:A)}B</fr:tex> is an ordinary function. The type <fr:tex display="inline">A \to  B</fr:tex> is defined:
@@ -175,7 +175,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>725</fr:anchor>
+        <fr:anchor>739</fr:anchor>
         <fr:addr type="user">tt-0003</fr:addr>
         <fr:route>tt-0003.xml</fr:route>
         <fr:title text="Natural Numbers {N}">Natural Numbers <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
@@ -197,7 +197,7 @@
     Just like in dependent function type, we need four inference rules to define the natural numbers.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>726</fr:anchor>
+            <fr:anchor>740</fr:anchor>
             <fr:addr type="user">def-001Y</fr:addr>
             <fr:route>def-001Y.xml</fr:route>
             <fr:title text="Natural Number">Natural Number</fr:title>
@@ -227,7 +227,7 @@
     perform some basic construction over <fr:tex display="inline">\mathbb {N}</fr:tex>.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>727</fr:anchor>
+            <fr:anchor>741</fr:anchor>
             <fr:addr type="user">def-001Z</fr:addr>
             <fr:route>def-001Z.xml</fr:route>
             <fr:title text="Addition over {N}">Addition over <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
@@ -239,7 +239,7 @@
     which satisfies the following specification:
     <fr:tex display="block">         \begin {align*}             \text {add}_\mathbb {N}(n, 0)&amp;:\equiv  n             \\             \text {add}_\mathbb {N}(m,\text {succ}(n))&amp;:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))         \end {align*}     </fr:tex>
     abbreviated as <fr:tex display="inline">m + n</fr:tex> for <fr:tex display="inline">\text {add}_\mathbb {N}(m,n)</fr:tex>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>728</fr:anchor><fr:addr type="machine">#341</fr:addr><fr:route>unstable-341.xml</fr:route><fr:title text="Construction"><fr:strong>Construction</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>742</fr:anchor><fr:addr type="machine">#341</fr:addr><fr:route>unstable-341.xml</fr:route><fr:title text="Construction"><fr:strong>Construction</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     
         <fr:p>We construct the additon by perform induction over the second variable <fr:tex display="inline">n</fr:tex>.
             That is, to construct an element
@@ -271,7 +271,7 @@
     <fr:tex display="inline">f</fr:tex> is said to be defined by <fr:strong>pattern matching</fr:strong> on the variable <fr:tex display="inline">n</fr:tex>.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>729</fr:anchor>
+            <fr:anchor>743</fr:anchor>
             <fr:addr type="user">eg-0001</fr:addr>
             <fr:route>eg-0001.xml</fr:route>
             <fr:title text="Fibonacci Function">Fibonacci Function</fr:title>
@@ -290,7 +290,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>730</fr:anchor>
+        <fr:anchor>744</fr:anchor>
         <fr:addr type="user">tt-0004</fr:addr>
         <fr:route>tt-0004.xml</fr:route>
         <fr:title text="Inductive Types">Inductive Types</fr:title>
@@ -308,7 +308,7 @@
     Refer to <fr:link type="local" href="hott-2022.xml" addr="hott-2022" title="Introduction to Homotopy Type Theory">Egbert Rijke&apos;s Book</fr:link>.</fr:p><fr:p>This section is much more informal than the previous one.
     Without displaying the inference rules, we will just present the <fr:strong>constructor</fr:strong>
     and <fr:strong>induction principle</fr:strong> of each inductive type.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>731</fr:anchor><fr:addr type="machine">#278</fr:addr><fr:route>unstable-278.xml</fr:route><fr:title text="General Inductive Type"><fr:strong>General Inductive Type</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>745</fr:anchor><fr:addr type="machine">#278</fr:addr><fr:route>unstable-278.xml</fr:route><fr:title text="General Inductive Type"><fr:strong>General Inductive Type</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>Just like <fr:tex display="inline">\mathbb {N}</fr:tex>, other inductive types can be defined by 
     their constructors and induction principles (and computation rules).</fr:p>
     <fr:ul><fr:li>The constructors specify the structure of the type equipped.</fr:li>
@@ -316,27 +316,27 @@
             a section of an arbitrary type family over the inductive type.</fr:li>
         <fr:li>The computation rules specify the behavior of the constructors.</fr:li></fr:ul>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>732</fr:anchor><fr:addr type="user">def-0020</fr:addr><fr:route>def-0020.xml</fr:route><fr:title text="Unit Type">Unit Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>unit type</fr:strong> is the simplest inductive type.
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>746</fr:anchor><fr:addr type="user">def-0020</fr:addr><fr:route>def-0020.xml</fr:route><fr:title text="Unit Type">Unit Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>unit type</fr:strong> is the simplest inductive type.
         It has only one constructor, denoted by <fr:tex display="inline">\star :\textbf {1}</fr:tex>.</fr:p><fr:p>The induction principle of the unit type is trivial.
         It says that to define a dependent function <fr:tex display="inline">f:\Pi  _{(x:\textbf {1})} P(x)</fr:tex>, 
         it suffices to give a value <fr:tex display="inline">p:P(\star )</fr:tex>.
         <fr:tex display="block">             f (\star ) :\equiv  p         </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>A degenrate inductive type is the <fr:strong>empty type</fr:strong>.
     It has no constructor, and its induction principle is trivial.
-    Empty type is connected to the <fr:strong>exfalso quodlibet principle</fr:strong> in logic.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>733</fr:anchor><fr:addr type="user">def-0021</fr:addr><fr:route>def-0021.xml</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>empty type</fr:strong> is a degenerate inductive type <fr:tex display="inline">\emptyset </fr:tex> satisfying 
+    Empty type is connected to the <fr:strong>exfalso quodlibet principle</fr:strong> in logic.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>747</fr:anchor><fr:addr type="user">def-0021</fr:addr><fr:route>def-0021.xml</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>empty type</fr:strong> is a degenerate inductive type <fr:tex display="inline">\emptyset </fr:tex> satisfying 
     the following induction principle:
     <fr:tex display="block">         \text {ind}_\emptyset  : \Pi _{(x:\emptyset )}P(x)     </fr:tex>
     And a special case is <fr:strong>exfalso</fr:strong>:
     <fr:tex display="block">         \text {exfalso} :\equiv  \text {ind}_\emptyset  : \empty  \to  A      </fr:tex>
     which can draw any conclusion.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>With the empty type we can define the <fr:strong>negation</fr:strong> of a type
-    and the <fr:strong>proof of negation</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>734</fr:anchor><fr:addr type="user">def-0022</fr:addr><fr:route>def-0022.xml</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>negation</fr:strong> of type <fr:tex display="inline">A</fr:tex> is defined as
+    and the <fr:strong>proof of negation</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>748</fr:anchor><fr:addr type="user">def-0022</fr:addr><fr:route>def-0022.xml</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>negation</fr:strong> of type <fr:tex display="inline">A</fr:tex> is defined as
     <fr:tex display="block">         \neg  A :\equiv  A \to  \emptyset      </fr:tex>
     A type <fr:tex display="inline">A</fr:tex> is said to be <fr:strong>empty</fr:strong> if and only if <fr:tex display="inline">\neg  A</fr:tex> is inhabited.
     <fr:tex display="block">         \text {empty}(A) :\equiv  \neg  A     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>735</fr:anchor><fr:addr type="machine">#340</fr:addr><fr:route>unstable-340.xml</fr:route><fr:title text="Proof of negation"><fr:strong>Proof of negation</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>749</fr:anchor><fr:addr type="machine">#340</fr:addr><fr:route>unstable-340.xml</fr:route><fr:title text="Proof of negation"><fr:strong>Proof of negation</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         <fr:p>To prove <fr:tex display="inline">\neg  A</fr:tex>, we need to show that <fr:tex display="inline">A</fr:tex> implies a contradiction.
             In other words, constructing a function of type <fr:tex display="inline">A \to  \emptyset </fr:tex>.</fr:p>
     </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>736</fr:anchor><fr:addr type="user">def-0023</fr:addr><fr:route>def-0023.xml</fr:route><fr:title text="Coproduct Type">Coproduct Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex> be types. The <fr:strong>coproduct (disjoint sum)</fr:strong> <fr:tex display="inline">A+B</fr:tex> is a typed defined by the following constructors:
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>750</fr:anchor><fr:addr type="user">def-0023</fr:addr><fr:route>def-0023.xml</fr:route><fr:title text="Coproduct Type">Coproduct Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex> be types. The <fr:strong>coproduct (disjoint sum)</fr:strong> <fr:tex display="inline">A+B</fr:tex> is a typed defined by the following constructors:
     <fr:ul><fr:li><fr:tex display="inline">\text {inl}:A\to  A+B</fr:tex></fr:li>
         <fr:li><fr:tex display="inline">\text {inr}:B\to  A+B</fr:tex></fr:li></fr:ul>
     For any type family indexed by <fr:tex display="inline">x:A+B</fr:tex>, satisfies the following induction principle:
@@ -347,15 +347,15 @@
     <fr:tex display="block">         \begin {align*}             f&amp;:\Pi _{(x:A)}P(\text {inl}(x))\\             g&amp;:\Pi _{(y:B)}P(\text {inr}(y))         \end {align*}     </fr:tex>
     This can be presented by pattern matching to define a function <fr:tex display="inline">h:\Pi  _{(z:A+B)}.P(z)</fr:tex>:
     <fr:tex display="block">         \begin {align*}             h(\text {inl}(x))&amp;:\equiv  f(x)\\             h(\text {inr}(y))&amp;:\equiv  g(y)         \end {align*}     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>737</fr:anchor><fr:addr type="machine">#279</fr:addr><fr:route>unstable-279.xml</fr:route><fr:title text="Special Case of Coproduct"><fr:strong>Special Case of Coproduct</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>751</fr:anchor><fr:addr type="machine">#279</fr:addr><fr:route>unstable-279.xml</fr:route><fr:title text="Special Case of Coproduct"><fr:strong>Special Case of Coproduct</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The special case of coproduct type is also called the <fr:strong>sum type</fr:strong>.
     <fr:tex display="block">         \text {ind}_+: (A \to  X) \to  (B \to  X) \to  (A+B \to  X)     </fr:tex>
     which is very similar to the <fr:strong>elimination rule</fr:strong> of disjunction in logic.
     <fr:tex display="block">         (P\to  Q) \to  (R\to  Q) \to  (P\vee  R\to  Q)     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 <fr:p>The dependent version of sum type is called the <fr:strong>dependent sum type (dependent coproduct)</fr:strong> traditionally.
-    Its terms are ordered pairs.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>738</fr:anchor><fr:addr type="user">def-0024</fr:addr><fr:route>def-0024.xml</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>dependent pair type</fr:strong> is a inductive type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex> (<fr:tex display="inline">(x:A) \times  B(x)</fr:tex>)</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>739</fr:anchor><fr:addr type="machine">#335</fr:addr><fr:route>unstable-335.xml</fr:route><fr:title text="
+    Its terms are ordered pairs.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>752</fr:anchor><fr:addr type="user">def-0024</fr:addr><fr:route>def-0024.xml</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>dependent pair type</fr:strong> is a inductive type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex> (<fr:tex display="inline">(x:A) \times  B(x)</fr:tex>)</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>753</fr:anchor><fr:addr type="machine">#335</fr:addr><fr:route>unstable-335.xml</fr:route><fr:title text="
     Formation Rule
 ">
     <fr:strong>Formation Rule</fr:strong>
@@ -364,7 +364,7 @@
     <fr:tex display="block">         \frac {             \Gamma \vdash  A\space \text {type}             \quad              \Gamma ,x:A\vdash  B(x)\space \text {type}         }{             \Gamma \vdash  (x:A) \times  B(x)\space \text {type}         }     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>740</fr:anchor><fr:addr type="machine">#336</fr:addr><fr:route>unstable-336.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>754</fr:anchor><fr:addr type="machine">#336</fr:addr><fr:route>unstable-336.xml</fr:route><fr:title text="
     Introduction Rule
 ">
     <fr:strong>Introduction Rule</fr:strong>
@@ -373,7 +373,7 @@
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A             \quad              \Gamma \vdash  b(a):B(a)         }{             \Gamma \vdash  (a,b):(x:A)\times  B(x)         }     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>741</fr:anchor><fr:addr type="machine">#337</fr:addr><fr:route>unstable-337.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>755</fr:anchor><fr:addr type="machine">#337</fr:addr><fr:route>unstable-337.xml</fr:route><fr:title text="
     Elimination Rule
 ">
     <fr:strong>Elimination Rule</fr:strong>
@@ -382,7 +382,7 @@
         <fr:tex display="block">             \frac {                 \Gamma \vdash  p:(x:A)\times  B(x)             }{                 \begin {align*}                     \Gamma &amp;\vdash  \text {pr}_A(p):A\\                     \Gamma &amp;\vdash  \text {pr}_B(p):B(\text {pr}_A(p))                 \end {align*}             }         </fr:tex></fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>742</fr:anchor><fr:addr type="machine">#338</fr:addr><fr:route>unstable-338.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>756</fr:anchor><fr:addr type="machine">#338</fr:addr><fr:route>unstable-338.xml</fr:route><fr:title text="
     Computation Rule
 ">
     <fr:strong>Computation Rule</fr:strong>
@@ -390,7 +390,7 @@
     <fr:p><fr:tex display="block">             \frac {                 \Gamma \vdash  x:A                  \quad                   \Gamma \vdash  y:B(x)             }{                 \begin {align*}                     \Gamma &amp;\vdash  \text {pr}_A((x,y))=x:A\\                     \Gamma &amp;\vdash  \text {pr}_B((x,y))=y:B(x)                 \end {align*}             }         </fr:tex></fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>743</fr:anchor><fr:addr type="machine">#339</fr:addr><fr:route>unstable-339.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>757</fr:anchor><fr:addr type="machine">#339</fr:addr><fr:route>unstable-339.xml</fr:route><fr:title text="
     Special Case
 ">
     <fr:strong>Special Case</fr:strong>
@@ -405,7 +405,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>744</fr:anchor>
+        <fr:anchor>758</fr:anchor>
         <fr:addr type="user">tt-0005</fr:addr>
         <fr:route>tt-0005.xml</fr:route>
         <fr:title text="Identity Types">Identity Types</fr:title>
@@ -429,7 +429,7 @@
     This gives every type a <fr:strong>groupoid structure</fr:strong>.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>745</fr:anchor>
+            <fr:anchor>759</fr:anchor>
             <fr:addr type="user">def-002N</fr:addr>
             <fr:route>def-002N.xml</fr:route>
             <fr:title text="Identity Type">Identity Type</fr:title>
@@ -444,7 +444,7 @@
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A         }{             \Gamma ,x:A\vdash  a=_Ax\space \text {type}         }     </fr:tex>
     The only constructor is the refl:
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A         }{             \Gamma \vdash  \text {refl}_a:a=_Ax         }     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>746</fr:anchor><fr:addr type="machine">#333</fr:addr><fr:route>unstable-333.xml</fr:route><fr:title text="Path Induction / Identification Elimination"><fr:strong>Path Induction / Identification Elimination</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>760</fr:anchor><fr:addr type="machine">#333</fr:addr><fr:route>unstable-333.xml</fr:route><fr:title text="Path Induction / Identification Elimination"><fr:strong>Path Induction / Identification Elimination</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The induction principle of the identity type states that
     for any type family <fr:tex display="inline">P(x,p)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> and <fr:tex display="inline">p:a=_Ax</fr:tex>,
     <fr:tex display="block">         \text {ind-eq}_{a}:P(a, \text {refl}_a)\to  (x:A)\to  (p:a=_Ax)\to  P(x,p)     </fr:tex>
@@ -456,7 +456,7 @@
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 <fr:p>A term of <fr:tex display="inline">a=_Ax</fr:tex> is called a <fr:strong>identification</fr:strong> of <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">x</fr:tex>,
     or the <fr:strong>path</fr:strong> from <fr:tex display="inline">a</fr:tex> to <fr:tex display="inline">x</fr:tex>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>747</fr:anchor><fr:addr type="machine">#334</fr:addr><fr:route>unstable-334.xml</fr:route><fr:title text="Variable Version"><fr:strong>Variable Version</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>761</fr:anchor><fr:addr type="machine">#334</fr:addr><fr:route>unstable-334.xml</fr:route><fr:title text="Variable Version"><fr:strong>Variable Version</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     We can form an identity type with variables of <fr:tex display="inline">A</fr:tex>.
     <fr:tex display="block">         \Gamma ,x:A,y:A\vdash  x=_Ay\space \text {type}     </fr:tex>
     with the following introduction rule:
@@ -468,7 +468,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>748</fr:anchor>
+            <fr:anchor>762</fr:anchor>
             <fr:addr type="machine">#274</fr:addr>
             <fr:route>unstable-274.xml</fr:route>
             <fr:title text="The groupoid structure of types">The groupoid structure of types</fr:title>
@@ -484,7 +484,7 @@
         which implies the <fr:em>transitivity</fr:em> and <fr:em>symmetry</fr:em> of the identity type.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>749</fr:anchor>
+                <fr:anchor>763</fr:anchor>
                 <fr:addr type="user">def-002O</fr:addr>
                 <fr:route>def-002O.xml</fr:route>
                 <fr:title text="Concatenation Operation">Concatenation Operation</fr:title>
@@ -497,7 +497,7 @@
     <fr:tex display="block">         \text {concat}: (x:A)\to  (y:A)\to  (z:A)\to  (x=_Ay)\to  (y=_Az)\to  (x=_Az)     </fr:tex></fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>750</fr:anchor>
+                    <fr:anchor>764</fr:anchor>
                     <fr:addr type="machine">#332</fr:addr>
                     <fr:route>unstable-332.xml</fr:route>
                     <fr:title text="Construction of Concatenation">Construction of Concatenation</fr:title>
@@ -522,7 +522,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>751</fr:anchor>
+                <fr:anchor>765</fr:anchor>
                 <fr:addr type="user">def-002P</fr:addr>
                 <fr:route>def-002P.xml</fr:route>
                 <fr:title text="Inverse Operation">Inverse Operation</fr:title>
@@ -535,7 +535,7 @@
     Most of the time we write <fr:tex display="inline">p^{-1}</fr:tex> for <fr:tex display="inline">\text {inv}(p)</fr:tex>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>752</fr:anchor>
+                    <fr:anchor>766</fr:anchor>
                     <fr:addr type="machine">#331</fr:addr>
                     <fr:route>unstable-331.xml</fr:route>
                     <fr:title text="Construction of Inverse">Construction of Inverse</fr:title>
@@ -560,7 +560,7 @@
         <fr:tex display="block">             (p\cdot  q)\cdot  r = p\cdot (q\cdot  r)         </fr:tex></fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>753</fr:anchor>
+                <fr:anchor>767</fr:anchor>
                 <fr:addr type="user">def-002W</fr:addr>
                 <fr:route>def-002W.xml</fr:route>
                 <fr:title text="Associator">Associator</fr:title>
@@ -572,7 +572,7 @@
     <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
     we define the <fr:strong>associator</fr:strong>:
     <fr:tex display="block">         \text {assoc}: (p,q,r): (p\cdot  q)\cdot  r = p\cdot  (q\cdot  r)     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>754</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>768</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
     Construction of Associator
 ">
     <fr:strong>Construction of Associator</fr:strong>
@@ -595,7 +595,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>755</fr:anchor>
+                <fr:anchor>769</fr:anchor>
                 <fr:addr type="user">def-002X</fr:addr>
                 <fr:route>def-002X.xml</fr:route>
                 <fr:title text="Unit Law Operations">Unit Law Operations</fr:title>
@@ -605,7 +605,7 @@
               <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
     We defined the <fr:strong>unit law</fr:strong> operations for <fr:tex display="inline">x=_Ay</fr:tex>:
     <fr:tex display="block">         \begin {align*}             \text {left-unit} &amp; : (x=_Ay)\to  (\text {refl}_x\cdot  x = x) \\             \text {right-unit} &amp; : (x=_Ay)\to  (x\cdot \text {refl}_y = x)         \end {align*}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>756</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>770</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
     Construction of Unit Law
 ">
     <fr:strong>Construction of Unit Law</fr:strong>
@@ -622,7 +622,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>757</fr:anchor>
+            <fr:anchor>771</fr:anchor>
             <fr:addr type="machine">#275</fr:addr>
             <fr:route>unstable-275.xml</fr:route>
             <fr:title text="The action on identifications of functions">The action on identifications of functions</fr:title>
@@ -637,7 +637,7 @@
             <fr:p>Every function preserves identifications.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>758</fr:anchor>
+                <fr:anchor>772</fr:anchor>
                 <fr:addr type="user">def-004C</fr:addr>
                 <fr:route>def-004C.xml</fr:route>
                 <fr:title text="Action on Paths">Action on Paths</fr:title>
@@ -672,7 +672,7 @@
         elements from different types.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>759</fr:anchor>
+                <fr:anchor>773</fr:anchor>
                 <fr:addr type="user">def-004D</fr:addr>
                 <fr:route>def-004D.xml</fr:route>
                 <fr:title text="Transport">Transport</fr:title>
@@ -700,7 +700,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>760</fr:anchor>
+            <fr:anchor>774</fr:anchor>
             <fr:addr type="machine">#276</fr:addr>
             <fr:route>unstable-276.xml</fr:route>
             <fr:title text="Uniqueness of refl">Uniqueness of refl</fr:title>
@@ -722,7 +722,7 @@
         <fr:tex display="inline">(a, \text {refl}_a = y)</fr:tex> in the type <fr:tex display="inline">\Sigma _(x:A) a = x</fr:tex> for any <fr:tex display="inline">y:\Sigma _(x:A) a = x </fr:tex></fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>761</fr:anchor><fr:addr type="machine">#277</fr:addr><fr:route>unstable-277.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>775</fr:anchor><fr:addr type="machine">#277</fr:addr><fr:route>unstable-277.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         By <fr:tex display="inline">\Sigma </fr:tex> induction it suffices to show that there is an identification
         <fr:tex display="block">             (a, \text {refl}_a) = (x, p)         </fr:tex>
         forall <fr:tex display="inline">x:A</fr:tex> and <fr:tex display="inline">p:a=x</fr:tex>. Then perform the induction principle of identity types.
@@ -739,7 +739,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>762</fr:anchor>
+        <fr:anchor>776</fr:anchor>
         <fr:addr type="user">tt-0006</fr:addr>
         <fr:route>tt-0006.xml</fr:route>
         <fr:title text="Universe">Universe</fr:title>
@@ -766,7 +766,7 @@
     Another reason is that it allows us to define types equipped with structure such as group.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>763</fr:anchor>
+            <fr:anchor>777</fr:anchor>
             <fr:addr type="machine">#272</fr:addr>
             <fr:route>unstable-272.xml</fr:route>
             <fr:title text="Specification">Specification</fr:title>
@@ -780,7 +780,7 @@
           <fr:mainmatter>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>764</fr:anchor>
+                <fr:anchor>778</fr:anchor>
                 <fr:addr type="user">def-004E</fr:addr>
                 <fr:route>def-004E.xml</fr:route>
                 <fr:title text="Tarski Universe">Tarski Universe</fr:title>
@@ -816,7 +816,7 @@
     if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>765</fr:anchor>
+                    <fr:anchor>779</fr:anchor>
                     <fr:addr type="machine">#320</fr:addr>
                     <fr:route>unstable-320.xml</fr:route>
                     <fr:title text="Enough Universe">Enough Universe</fr:title>
@@ -834,7 +834,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>766</fr:anchor>
+                <fr:anchor>780</fr:anchor>
                 <fr:addr type="user">thm-0013</fr:addr>
                 <fr:route>thm-0013.xml</fr:route>
                 <fr:title text="Enough Universe">Enough Universe</fr:title>
@@ -855,7 +855,7 @@
             <fr:p>Using the assumption we can obtain many specific universes.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>767</fr:anchor>
+                <fr:anchor>781</fr:anchor>
                 <fr:addr type="user">def-004F</fr:addr>
                 <fr:route>def-004F.xml</fr:route>
                 <fr:title text="Base Universe">Base Universe</fr:title>
@@ -870,7 +870,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>768</fr:anchor>
+                <fr:anchor>782</fr:anchor>
                 <fr:addr type="user">def-004G</fr:addr>
                 <fr:route>def-004G.xml</fr:route>
                 <fr:title text="Successor Universe">Successor Universe</fr:title>
@@ -892,7 +892,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>769</fr:anchor>
+            <fr:anchor>783</fr:anchor>
             <fr:addr type="machine">#273</fr:addr>
             <fr:route>unstable-273.xml</fr:route>
             <fr:title text="Observational Equality">Observational Equality</fr:title>
@@ -910,7 +910,7 @@
         equality on  <fr:tex display="inline">\mathbb {N}</fr:tex>. It can be used to show that equality of natural numbers is <fr:strong>decidable</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>770</fr:anchor>
+                <fr:anchor>784</fr:anchor>
                 <fr:addr type="user">def-004H</fr:addr>
                 <fr:route>def-004H.xml</fr:route>
                 <fr:title text="Observational Equality of {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
@@ -923,7 +923,7 @@
     
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>771</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>785</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
         it suffices to provide
         <fr:tex display="block">             \begin {align*}                 &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\                  &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))             \end {align*}         </fr:tex>
@@ -958,7 +958,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>772</fr:anchor>
+        <fr:anchor>786</fr:anchor>
         <fr:addr type="user">phy-0002</fr:addr>
         <fr:route>phy-0002.xml</fr:route>
         <fr:title text="The Wave Function">The Wave Function</fr:title>
@@ -984,7 +984,7 @@
     this is what we normally do in classic mechanics.</fr:p><fr:p>For <fr:strong>Quantum Mechanics</fr:strong>, we have a different perspective.
     We would like to look for the <fr:strong>wave function</fr:strong>, <fr:tex display="inline">\Psi (x, t)</fr:tex>.
     To determine it we need to solve the <fr:strong>Schrodinger equation</fr:strong>.
-    <fr:tex display="block">         i\hbar \frac {\partial }{\partial  t}\Psi (x,t) = -\frac {\hbar ^2}{2m}\frac {\partial ^2\Psi (x,t)}{\partial  x^2} + V(x,t)\Psi (x,t)     </fr:tex></fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>773</fr:anchor><fr:addr type="user">def-0030</fr:addr><fr:route>def-0030.xml</fr:route><fr:title text="Schrodinger&apos;s equation">Schrodinger&apos;s equation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>Schrodinger equation</fr:strong> is a linear partial differential equation that describes the wave function of a quantum system.
+    <fr:tex display="block">         i\hbar \frac {\partial }{\partial  t}\Psi (x,t) = -\frac {\hbar ^2}{2m}\frac {\partial ^2\Psi (x,t)}{\partial  x^2} + V(x,t)\Psi (x,t)     </fr:tex></fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>787</fr:anchor><fr:addr type="user">def-0030</fr:addr><fr:route>def-0030.xml</fr:route><fr:title text="Schrodinger&apos;s equation">Schrodinger&apos;s equation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>Schrodinger equation</fr:strong> is a linear partial differential equation that describes the wave function of a quantum system.
     It is given by (the general form):
     <fr:tex display="block">         i\hbar \frac {\partial }{\partial  t}\Psi (\vec {r},t) = \hat {H}\Psi (\vec {r},t)     </fr:tex>
     where:
@@ -1008,17 +1008,17 @@
         <fr:li><fr:strong>Agnostic interpretation</fr:strong>: The question is meaningless, refuse to answer.</fr:li></fr:ul></fr:p><fr:p>Nowadays, the Copenhagen interpretation is the most widely accepted interpretation.
     The particle does not have a definite position before the measurement.
     The operation of measurement <fr:strong>collapses</fr:strong> the wave function to a definite position.</fr:p><fr:p>Probability is the key concept in quantum mechanics.
-    Now I will introduce some terimnologies related to continuous probability.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>774</fr:anchor><fr:addr type="user">def-0031</fr:addr><fr:route>def-0031.xml</fr:route><fr:title text="Probability Density">Probability Density</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>probability density</fr:strong> is a function <fr:tex display="inline">p(x)</fr:tex> such that:
+    Now I will introduce some terimnologies related to continuous probability.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>788</fr:anchor><fr:addr type="user">def-0031</fr:addr><fr:route>def-0031.xml</fr:route><fr:title text="Probability Density">Probability Density</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>probability density</fr:strong> is a function <fr:tex display="inline">p(x)</fr:tex> such that:
     <fr:ul><fr:li><fr:tex display="inline">p(x)\geq  0</fr:tex> for all <fr:tex display="inline">x</fr:tex>.</fr:li>
         <fr:li><fr:tex display="inline">\int _{-\infty }^{\infty } p(x)dx = 1</fr:tex>.</fr:li></fr:ul>
     With this we can define the <fr:strong>probability function</fr:strong> in an interval <fr:tex display="inline">[a,b]</fr:tex> as:
     <fr:tex display="block">         P(a, b) = \int _a^b p(x)dx     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>775</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="Expectation Value">Expectation Value</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>789</fr:anchor><fr:addr type="machine">#323</fr:addr><fr:route>unstable-323.xml</fr:route><fr:title text="Expectation Value">Expectation Value</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The <fr:strong>expectation value</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
     <fr:tex display="block">         \langle  f(x) \rangle  = \int _{-\infty }^{\infty } f(x)p(x)dx     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>776</fr:anchor><fr:addr type="machine">#324</fr:addr><fr:route>unstable-324.xml</fr:route><fr:title text="Variance">Variance</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>790</fr:anchor><fr:addr type="machine">#324</fr:addr><fr:route>unstable-324.xml</fr:route><fr:title text="Variance">Variance</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The <fr:strong>variance</fr:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
     <fr:tex display="block">         \sigma ^2 :\equiv  \langle  x^2 \rangle  - \langle  x \rangle ^2     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
@@ -1033,7 +1033,7 @@
     the wave function.</fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>777</fr:anchor><fr:addr type="machine">#303</fr:addr><fr:route>unstable-303.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>791</fr:anchor><fr:addr type="machine">#303</fr:addr><fr:route>unstable-303.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         Differentiate the normalization condition with respect to time:
         <fr:tex display="block">             \frac {d}{dt}\int _{-\infty }^{\infty } |\Psi (x,t)|^2 dx =              \int _{-\infty }^{\infty } \frac {\partial }{\partial  t}|\Psi (x,t)|^2 dx         </fr:tex>
         With the product rule:
@@ -1064,7 +1064,7 @@
     and the subsequent measurements will give the same result.</fr:p><fr:p>Actually, the expectation value is the <fr:em>average</fr:em> of 
     repeated measurements on an ensemble of identical prepared systems,
     not the average of repeated measurements on a <fr:em>single</fr:em> system.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>778</fr:anchor><fr:addr type="machine">#304</fr:addr><fr:route>unstable-304.xml</fr:route><fr:title text="Construction."><fr:strong>Construction.</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>792</fr:anchor><fr:addr type="machine">#304</fr:addr><fr:route>unstable-304.xml</fr:route><fr:title text="Construction."><fr:strong>Construction.</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     As times goes on, the expectation values varies.
     We naturally ask how fast it moves?
     Use simple calculus we can get the answer.
@@ -1093,7 +1093,7 @@
     For this moment we only concerned with the qualitative argument.</fr:p><fr:p>The wavelength of a wave function <fr:tex display="inline">\Psi </fr:tex> is related to the momentum of the particle.
     This result from the <fr:strong>de Broglie formula</fr:strong>.
     <fr:tex display="block">         p = \frac {h}{\lambda } = \frac {2\pi \hbar }{\lambda }     </fr:tex>
-    Now we can give a qualitative argument for the uncertainty principle.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>779</fr:anchor><fr:addr type="user">def-0033</fr:addr><fr:route>def-0033.xml</fr:route><fr:title text="Heisenberg Uncertainty Principle">Heisenberg Uncertainty Principle</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>Heisenberg Uncertainty Principle</fr:strong> states that
+    Now we can give a qualitative argument for the uncertainty principle.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>793</fr:anchor><fr:addr type="user">def-0033</fr:addr><fr:route>def-0033.xml</fr:route><fr:title text="Heisenberg Uncertainty Principle">Heisenberg Uncertainty Principle</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The <fr:strong>Heisenberg Uncertainty Principle</fr:strong> states that
     it is impossible to measure simultaneously the position and the momentum of a particle
     with arbitrary precision.
     The product of the uncertainties in position and momentum is bounded by:
@@ -1104,7 +1104,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>780</fr:anchor>
+        <fr:anchor>794</fr:anchor>
         <fr:addr type="user">phy-0003</fr:addr>
         <fr:route>phy-0003.xml</fr:route>
         <fr:title text="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</fr:title>
@@ -1126,7 +1126,7 @@
     In other words we look for solutions of the <fr:em>product form</fr:em>:
     <fr:tex display="block">         \Psi (x,t) = \psi (x)\phi (t)     </fr:tex>
     This is an absurd restriction, but it works and we can get interesting results.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>781</fr:anchor><fr:addr type="machine">#301</fr:addr><fr:route>unstable-301.xml</fr:route><fr:title text="Solve the equation"><fr:strong>Solve the equation</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>795</fr:anchor><fr:addr type="machine">#301</fr:addr><fr:route>unstable-301.xml</fr:route><fr:title text="Solve the equation"><fr:strong>Solve the equation</fr:strong></fr:title><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>Now substitute the product form into the Schrodinger equation:
         <fr:tex display="block">             i\hbar  \psi (x) \frac {\partial }{\partial  t}(\phi (t)) = -\frac {\hbar ^2}{2m}\phi (t)\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)\psi (x)\phi (t)         </fr:tex>
         Divide both sides by <fr:tex display="inline">\psi (x)\phi (t)</fr:tex>:
@@ -1148,14 +1148,14 @@
         The second one is the <fr:strong>time-independent Schrodinger equation</fr:strong>,
         we can&apos;t go further unless we know the potential energy <fr:tex display="inline">V(x)</fr:tex>.</fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-<fr:p>Now we give a name to the time-independent Schrodinger equation.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>782</fr:anchor><fr:addr type="user">def-0034</fr:addr><fr:route>def-0034.xml</fr:route><fr:title text="Stationary State">Stationary State</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>stationary state</fr:strong> is a quantum state with all observables independent of time.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Thought the wave function is time-dependent,
+<fr:p>Now we give a name to the time-independent Schrodinger equation.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>796</fr:anchor><fr:addr type="user">def-0034</fr:addr><fr:route>def-0034.xml</fr:route><fr:title text="Stationary State">Stationary State</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>stationary state</fr:strong> is a quantum state with all observables independent of time.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Thought the wave function is time-dependent,
     <fr:tex display="block">         \Psi (x,t) = \psi (x)e^{-iEt/\hbar }     </fr:tex>
     But if we compute the probability density, it is time-independent:
     <fr:tex display="block">         |\Psi (x,t)|^2 = \psi ^*(x)e^{+iEt/\hbar }\psi (x)e^{-iEt/\hbar } = |\psi (x)|^2      </fr:tex>
     Hence the expectation value is constant in time. 
     Then <fr:tex display="inline">\langle  p \rangle  = 0</fr:tex> all the time.
     Nothing happens in the stationary state.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>783</fr:anchor><fr:addr type="machine">#302</fr:addr><fr:route>unstable-302.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>797</fr:anchor><fr:addr type="machine">#302</fr:addr><fr:route>unstable-302.xml</fr:route><fr:title text="
     Conservation of energy
 ">
     <fr:strong>Conservation of energy</fr:strong>
@@ -1183,7 +1183,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>784</fr:anchor>
+        <fr:anchor>798</fr:anchor>
         <fr:addr type="user">phy-0001</fr:addr>
         <fr:route>phy-0001.xml</fr:route>
         <fr:title text="Special Relativity and Extra Dimensions">Special Relativity and Extra Dimensions</fr:title>
@@ -1221,7 +1221,7 @@
     The minus sign on the left of <fr:tex display="inline">\Delta  s^2</fr:tex> implies that <fr:tex display="inline">\Delta  s^2 &gt;0</fr:tex> for events that are <fr:strong>timelike separated</fr:strong>.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>786</fr:anchor>
+            <fr:anchor>800</fr:anchor>
             <fr:addr type="user">def-001H</fr:addr>
             <fr:route>def-001H.xml</fr:route>
             <fr:title text="Timelike Separated Events">Timelike Separated Events</fr:title>
@@ -1240,7 +1240,7 @@
     move faster than light.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>787</fr:anchor>
+            <fr:anchor>801</fr:anchor>
             <fr:addr type="user">def-001I</fr:addr>
             <fr:route>def-001I.xml</fr:route>
             <fr:title text="Lightlike Separated Events">Lightlike Separated Events</fr:title>
@@ -1255,7 +1255,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>788</fr:anchor>
+            <fr:anchor>802</fr:anchor>
             <fr:addr type="user">def-001J</fr:addr>
             <fr:route>def-001J.xml</fr:route>
             <fr:title text="Spacelike Separated Events">Spacelike Separated Events</fr:title>
@@ -1291,7 +1291,7 @@
     and the metric is defined by</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>789</fr:anchor>
+            <fr:anchor>803</fr:anchor>
             <fr:addr type="user">def-001L</fr:addr>
             <fr:route>def-001L.xml</fr:route>
             <fr:title text="Minkowski Metric">Minkowski Metric</fr:title>
@@ -1328,7 +1328,7 @@
     where <fr:tex display="inline">\delta ^\mu _\nu </fr:tex> is the <fr:link type="local" href="def-001P.xml" addr="def-001P" title="Kronecker Delta">Kronecker Delta</fr:link>.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>790</fr:anchor>
+            <fr:anchor>804</fr:anchor>
             <fr:addr type="user">thm-0004</fr:addr>
             <fr:route>thm-0004.xml</fr:route>
             <fr:title text="Raise Indices">Raise Indices</fr:title>
@@ -1345,7 +1345,7 @@
     inertial frames.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>791</fr:anchor>
+            <fr:anchor>805</fr:anchor>
             <fr:addr type="user">def-001Q</fr:addr>
             <fr:route>def-001Q.xml</fr:route>
             <fr:title text="Lorentz Transformations">Lorentz Transformations</fr:title>
@@ -1375,7 +1375,7 @@
     the <fr:strong>light-cone coordinates</fr:strong>.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>792</fr:anchor>
+            <fr:anchor>806</fr:anchor>
             <fr:addr type="user">def-001R</fr:addr>
             <fr:route>def-001R.xml</fr:route>
             <fr:title text="Light-cone Coordinates">Light-cone Coordinates</fr:title>
@@ -1451,7 +1451,7 @@
     The time measured by the clock is called the <fr:strong>proper time</fr:strong> between the two events.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>793</fr:anchor>
+            <fr:anchor>807</fr:anchor>
             <fr:addr type="user">def-001S</fr:addr>
             <fr:route>def-001S.xml</fr:route>
             <fr:title text="Proper Time">Proper Time</fr:title>
@@ -1498,7 +1498,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>794</fr:anchor>
+        <fr:anchor>808</fr:anchor>
         <fr:addr type="user">cs-0008</fr:addr>
         <fr:route>cs-0008.xml</fr:route>
         <fr:title text="Algebraic Graphs">Algebraic Graphs</fr:title>
@@ -1515,9 +1515,9 @@
     which built on rigorous mathematical foundation that allows us to apply equational reasoning for proving the correctness of graph transformation algorithms.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>631</fr:anchor>
-            <fr:addr type="machine">#345</fr:addr>
-            <fr:route>unstable-345.xml</fr:route>
+            <fr:anchor>645</fr:anchor>
+            <fr:addr type="machine">#346</fr:addr>
+            <fr:route>unstable-346.xml</fr:route>
             <fr:title text="Introduction to Graphs">Introduction to Graphs</fr:title>
             <fr:date>
               <fr:year>2024</fr:year>
@@ -1565,9 +1565,9 @@
         </fr:tree>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>632</fr:anchor>
-            <fr:addr type="machine">#346</fr:addr>
-            <fr:route>unstable-346.xml</fr:route>
+            <fr:anchor>646</fr:anchor>
+            <fr:addr type="machine">#347</fr:addr>
+            <fr:route>unstable-347.xml</fr:route>
             <fr:title text="Core of Algebraic Graphs">Core of Algebraic Graphs</fr:title>
             <fr:date>
               <fr:year>2024</fr:year>
@@ -1579,9 +1579,9 @@
           <fr:mainmatter>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>633</fr:anchor>
-                <fr:addr type="machine">#347</fr:addr>
-                <fr:route>unstable-347.xml</fr:route>
+                <fr:anchor>647</fr:anchor>
+                <fr:addr type="machine">#348</fr:addr>
+                <fr:route>unstable-348.xml</fr:route>
                 <fr:title text="Graph Construction">Graph Construction</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -1605,9 +1605,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>634</fr:anchor>
-                <fr:addr type="machine">#348</fr:addr>
-                <fr:route>unstable-348.xml</fr:route>
+                <fr:anchor>648</fr:anchor>
+                <fr:addr type="machine">#349</fr:addr>
+                <fr:route>unstable-349.xml</fr:route>
                 <fr:title text="Type Class">Type Class</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -1651,9 +1651,9 @@ clique = foldr (connect . vertex) empty</html:code></fr:pre></fr:p>
         </fr:tree>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>635</fr:anchor>
-            <fr:addr type="machine">#349</fr:addr>
-            <fr:route>unstable-349.xml</fr:route>
+            <fr:anchor>649</fr:anchor>
+            <fr:addr type="machine">#350</fr:addr>
+            <fr:route>unstable-350.xml</fr:route>
             <fr:title text="Algebraic Structure">Algebraic Structure</fr:title>
             <fr:date>
               <fr:year>2024</fr:year>
@@ -1666,9 +1666,9 @@ clique = foldr (connect . vertex) empty</html:code></fr:pre></fr:p>
             <fr:p>In this section we characterise the <fr:code>Graph</fr:code> type class with a set of axioms that reveal an algebraic structure very similar to a semiring. This provides a convenient framework for proving graph properties, using equational reasoning. The presented characterization is generally useful for formal verification, as well as automated testing of graph library APIs.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>636</fr:anchor>
-                <fr:addr type="machine">#350</fr:addr>
-                <fr:route>unstable-350.xml</fr:route>
+                <fr:anchor>650</fr:anchor>
+                <fr:addr type="machine">#351</fr:addr>
+                <fr:route>unstable-351.xml</fr:route>
                 <fr:title text="Axioms">Axioms</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -1719,9 +1719,9 @@ edges = foldr (overlay . uncurry edge) empty</html:code></fr:pre>
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>637</fr:anchor>
-                <fr:addr type="machine">#351</fr:addr>
-                <fr:route>unstable-351.xml</fr:route>
+                <fr:anchor>651</fr:anchor>
+                <fr:addr type="machine">#352</fr:addr>
+                <fr:route>unstable-352.xml</fr:route>
                 <fr:title text="Partial Order">Partial Order</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -1743,9 +1743,9 @@ isSubgraphOf x y = overlay x y == y</html:code></fr:pre></fr:p>
         </fr:tree>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>638</fr:anchor>
-            <fr:addr type="machine">#352</fr:addr>
-            <fr:route>unstable-352.xml</fr:route>
+            <fr:anchor>652</fr:anchor>
+            <fr:addr type="machine">#353</fr:addr>
+            <fr:route>unstable-353.xml</fr:route>
             <fr:title text="Graphs à la Carte">Graphs à la Carte</fr:title>
             <fr:date>
               <fr:year>2024</fr:year>
@@ -1758,9 +1758,9 @@ isSubgraphOf x y = overlay x y == y</html:code></fr:pre></fr:p>
             <fr:p>Now we define some instances of the Grpah, and extend the axioms to construct more complex graphs.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>639</fr:anchor>
-                <fr:addr type="machine">#353</fr:addr>
-                <fr:route>unstable-353.xml</fr:route>
+                <fr:anchor>653</fr:anchor>
+                <fr:addr type="machine">#354</fr:addr>
+                <fr:route>unstable-354.xml</fr:route>
                 <fr:title text="Binary Relation">Binary Relation</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -1829,7 +1829,7 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1217</fr:anchor>
+            <fr:anchor>1236</fr:anchor>
             <fr:addr type="user">string-theory-2009</fr:addr>
             <fr:route>string-theory-2009.xml</fr:route>
             <fr:title text="A First Course in String Theory">A First Course in String Theory</fr:title>
@@ -1848,7 +1848,7 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1219</fr:anchor>
+            <fr:anchor>1238</fr:anchor>
             <fr:addr type="user">hott-book-2013</fr:addr>
             <fr:route>hott-book-2013.xml</fr:route>
             <fr:title text="Homotopy Type Theory: Univalent Foundations of Mathematics">Homotopy Type Theory: Univalent Foundations of Mathematics</fr:title>
@@ -1863,7 +1863,7 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1221</fr:anchor>
+            <fr:anchor>1240</fr:anchor>
             <fr:addr type="user">hott-2022</fr:addr>
             <fr:route>hott-2022.xml</fr:route>
             <fr:title text="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:title>
@@ -1881,7 +1881,7 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1223</fr:anchor>
+            <fr:anchor>1242</fr:anchor>
             <fr:addr type="user">quantum-2018</fr:addr>
             <fr:route>quantum-2018.xml</fr:route>
             <fr:title text="Introduction to Quantum Mechanics">Introduction to Quantum Mechanics</fr:title>
@@ -1900,7 +1900,7 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1226</fr:anchor>
+            <fr:anchor>1245</fr:anchor>
             <fr:addr type="user">ncatlab</fr:addr>
             <fr:route>ncatlab.xml</fr:route>
             <fr:title text="NLab">NLab</fr:title>
@@ -1926,7 +1926,7 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="true" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1227</fr:anchor>
+            <fr:anchor>1246</fr:anchor>
             <fr:addr type="user">index</fr:addr>
             <fr:route>index.xml</fr:route>
             <fr:title text="The Rabbit Hole">The Rabbit Hole</fr:title>
@@ -1937,13 +1937,13 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
           <fr:mainmatter>
     
     
-    <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1229</fr:anchor><fr:addr type="user">caimeo</fr:addr><fr:route>caimeo.xml</fr:route><fr:title text="CAIMEO">CAIMEO</fr:title><fr:taxon>Person</fr:taxon><fr:authors></fr:authors><fr:meta name="position">Student</fr:meta><fr:meta name="external">https://github.com/CAIMEOX</fr:meta></fr:frontmatter><fr:mainmatter><fr:p>A student interested in math, physics and computer science.</fr:p><fr:p><fr:ul><fr:li>Learning Programming Language Theory and Type Theory</fr:li>
+    <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1248</fr:anchor><fr:addr type="user">caimeo</fr:addr><fr:route>caimeo.xml</fr:route><fr:title text="CAIMEO">CAIMEO</fr:title><fr:taxon>Person</fr:taxon><fr:authors></fr:authors><fr:meta name="position">Student</fr:meta><fr:meta name="external">https://github.com/CAIMEOX</fr:meta></fr:frontmatter><fr:mainmatter><fr:p>A student interested in math, physics and computer science.</fr:p><fr:p><fr:ul><fr:li>Learning Programming Language Theory and Type Theory</fr:li>
         <fr:li>Attend in writing articles about String Theory</fr:li>
         <fr:li>Reading Type Theory and Formal Proof and Homotopy Type Theory</fr:li>
         <fr:li>Working on CommandLisp</fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
     
-    <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1230</fr:anchor><fr:addr type="user">about</fr:addr><fr:route>about.xml</fr:route><fr:title text="Rabbit Hole">Rabbit Hole</fr:title><fr:taxon>About</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         i\hbar  \frac {\partial }{\partial  t} \Psi (x, t) = \hat {H} \Psi (x, t)     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1156</fr:anchor><fr:addr type="machine">#389</fr:addr><fr:route>unstable-389.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1249</fr:anchor><fr:addr type="user">about</fr:addr><fr:route>about.xml</fr:route><fr:title text="Rabbit Hole">Rabbit Hole</fr:title><fr:taxon>About</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block">         i\hbar  \frac {\partial }{\partial  t} \Psi (x, t) = \hat {H} \Psi (x, t)     </fr:tex></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1170</fr:anchor><fr:addr type="machine">#390</fr:addr><fr:route>unstable-390.xml</fr:route><fr:title text="
     What is this website about?
 ">
     <fr:strong>What is this website about?</fr:strong>
@@ -1954,7 +1954,7 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
         I hope it can be helpful to others who are interested in these subjects.</fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1157</fr:anchor><fr:addr type="machine">#390</fr:addr><fr:route>unstable-390.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1171</fr:anchor><fr:addr type="machine">#391</fr:addr><fr:route>unstable-391.xml</fr:route><fr:title text="
     What is the meaning of &quot;Rabbit Hole&quot;?
 ">
     <fr:strong>What is the meaning of &quot;Rabbit Hole&quot;?</fr:strong>
@@ -1966,7 +1966,7 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
     a series of trees in the forest that leads to a chain of related topics.
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1158</fr:anchor><fr:addr type="machine">#391</fr:addr><fr:route>unstable-391.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1172</fr:anchor><fr:addr type="machine">#392</fr:addr><fr:route>unstable-392.xml</fr:route><fr:title text="
     How to navigate?
 ">
     <fr:strong>How to navigate?</fr:strong>
@@ -1981,12 +1981,12 @@ R {domain = fromList [1,2,3], relation = fromList [(1,2),(1,3),(2,3)]}</html:cod
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
     
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1231</fr:anchor><fr:addr type="machine">#242</fr:addr><fr:route>unstable-242.xml</fr:route><fr:title text="Posts">Posts</fr:title><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Click to navigate my <fr:link type="local" href="posts.xml" addr="posts" title="Blog posts">blog posts</fr:link>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1233</fr:anchor><fr:addr type="machine">#243</fr:addr><fr:route>unstable-243.xml</fr:route><fr:title text="Notes">Notes</fr:title><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="local" href="notes.xml" addr="notes" title="Notes">Notes</fr:link> are usually excerpts from some books/papers I read.
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1250</fr:anchor><fr:addr type="machine">#242</fr:addr><fr:route>unstable-242.xml</fr:route><fr:title text="Posts">Posts</fr:title><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Click to navigate my <fr:link type="local" href="posts.xml" addr="posts" title="Blog posts">blog posts</fr:link>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1252</fr:anchor><fr:addr type="machine">#243</fr:addr><fr:route>unstable-243.xml</fr:route><fr:title text="Notes">Notes</fr:title><fr:authors><fr:author>CAIMEO</fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="local" href="notes.xml" addr="notes" title="Notes">Notes</fr:link> are usually excerpts from some books/papers I read.
             I try to make it as self-contained as possible.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1235</fr:anchor><fr:addr type="user">projects</fr:addr><fr:route>projects.xml</fr:route><fr:title text="Projects">Projects</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The programming projects I&apos;ve worked on.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1236</fr:anchor><fr:addr type="user">proj-0001</fr:addr><fr:route>proj-0001.xml</fr:route><fr:title text="Command Lisp">Command Lisp</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/CAIMEOX/CommandLisp">Command Lisp</fr:link> is a simplified language designed for Minecraft Bedrock Command System, characterized by a very high level of abstraction, which is also a dialect of Lisp.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1237</fr:anchor><fr:addr type="user">proj-0002</fr:addr><fr:route>proj-0002.xml</fr:route><fr:title text="Pure Eval">Pure Eval</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/PureEval/PureEval">Pure Eval</fr:link> was created for the <fr:link type="local" href="proj-0003.xml" addr="proj-0003" title="Voxel Geometry">VoxelGeometry</fr:link> project, aiming to build a compact yet powerful JavaScript functional utility toolkit.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1238</fr:anchor><fr:addr type="user">proj-0003</fr:addr><fr:route>proj-0003.xml</fr:route><fr:title text="Voxel Geometry">Voxel Geometry</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/CAIMEOX/VoxelGeometry">Voxel Geometry</fr:link> is voxel geometry library which is used to construct Space (A collection of 3-dimension Vectors) and perform transformation between Spaces.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1239</fr:anchor><fr:addr type="user">proj-0004</fr:addr><fr:route>proj-0004.xml</fr:route><fr:title text="Minecraft ScriptAPI wrapper">Minecraft ScriptAPI wrapper</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.</fr:p><fr:ul><fr:li><fr:link type="external" href="https://github.com/CAIMEOX/rescript-bedrock">ReScript</fr:link></fr:li>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1254</fr:anchor><fr:addr type="user">projects</fr:addr><fr:route>projects.xml</fr:route><fr:title text="Projects">Projects</fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The programming projects I&apos;ve worked on.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1255</fr:anchor><fr:addr type="user">proj-0001</fr:addr><fr:route>proj-0001.xml</fr:route><fr:title text="Command Lisp">Command Lisp</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/CAIMEOX/CommandLisp">Command Lisp</fr:link> is a simplified language designed for Minecraft Bedrock Command System, characterized by a very high level of abstraction, which is also a dialect of Lisp.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1256</fr:anchor><fr:addr type="user">proj-0002</fr:addr><fr:route>proj-0002.xml</fr:route><fr:title text="Pure Eval">Pure Eval</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/PureEval/PureEval">Pure Eval</fr:link> was created for the <fr:link type="local" href="proj-0003.xml" addr="proj-0003" title="Voxel Geometry">VoxelGeometry</fr:link> project, aiming to build a compact yet powerful JavaScript functional utility toolkit.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1257</fr:anchor><fr:addr type="user">proj-0003</fr:addr><fr:route>proj-0003.xml</fr:route><fr:title text="Voxel Geometry">Voxel Geometry</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/CAIMEOX/VoxelGeometry">Voxel Geometry</fr:link> is voxel geometry library which is used to construct Space (A collection of 3-dimension Vectors) and perform transformation between Spaces.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1258</fr:anchor><fr:addr type="user">proj-0004</fr:addr><fr:route>proj-0004.xml</fr:route><fr:title text="Minecraft ScriptAPI wrapper">Minecraft ScriptAPI wrapper</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.</fr:p><fr:ul><fr:li><fr:link type="external" href="https://github.com/CAIMEOX/rescript-bedrock">ReScript</fr:link></fr:li>
     <fr:li><fr:link type="external" href="https://github.com/CAIMEOX/pure_bedrock">PureScript</fr:link></fr:li>
-    <fr:li><fr:link type="external" href="https://github.com/CAIMEOX/BedrockFP">Idris2</fr:link></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1240</fr:anchor><fr:addr type="user">proj-0005</fr:addr><fr:route>proj-0005.xml</fr:route><fr:title text="MoonBit Core">MoonBit Core</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/moonbitlang/core">MoonBit Core</fr:link> is the standard library of the MoonBit language.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+    <fr:li><fr:link type="external" href="https://github.com/CAIMEOX/BedrockFP">Idris2</fr:link></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>1259</fr:anchor><fr:addr type="user">proj-0005</fr:addr><fr:route>proj-0005.xml</fr:route><fr:title text="MoonBit Core">MoonBit Core</fr:title><fr:taxon>Project</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:link type="external" href="https://github.com/moonbitlang/core">MoonBit Core</fr:link> is the standard library of the MoonBit language.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 </fr:mainmatter>
           <fr:backmatter></fr:backmatter>
         </fr:tree>

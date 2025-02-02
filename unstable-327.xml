@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1136</fr:anchor>
+    <fr:anchor>1150</fr:anchor>
     <fr:addr type="machine">#327</fr:addr>
     <fr:route>unstable-327.xml</fr:route>
     <fr:title text="Matrix Multiplication › 
@@ -28,7 +28,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1137</fr:anchor>
+            <fr:anchor>1151</fr:anchor>
             <fr:addr type="user">def-002T</fr:addr>
             <fr:route>def-002T.xml</fr:route>
             <fr:title text="Matrix Multiplication">Matrix Multiplication</fr:title>
@@ -38,7 +38,7 @@
           <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> be a <fr:tex display="inline">n\times  p</fr:tex> matrix.
     Then <fr:tex display="inline">AC</fr:tex> is defined as the <fr:tex display="inline">m\times  p</fr:tex> matrix <fr:tex display="inline">C</fr:tex> such that
     <fr:tex display="block">         C_{ij} = \sum _{k=1}^n A_{ik}B_{kj}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>549</fr:anchor><fr:addr type="machine">#327</fr:addr><fr:route>unstable-327.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>556</fr:anchor><fr:addr type="machine">#327</fr:addr><fr:route>unstable-327.xml</fr:route><fr:title text="
     Derivation
 ">
     <fr:strong>Derivation</fr:strong>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1286</fr:anchor>
+    <fr:anchor>1306</fr:anchor>
     <fr:addr type="machine">#331</fr:addr>
     <fr:route>unstable-331.xml</fr:route>
     <fr:title text="Inverse Operation › Construction of Inverse"><fr:link type="local" href="def-002P.xml" addr="def-002P" title="Inverse Operation">Inverse Operation</fr:link> › Construction of Inverse</fr:title>
@@ -21,7 +21,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1287</fr:anchor>
+            <fr:anchor>1307</fr:anchor>
             <fr:addr type="user">def-002P</fr:addr>
             <fr:route>def-002P.xml</fr:route>
             <fr:title text="Inverse Operation">Inverse Operation</fr:title>
@@ -34,7 +34,7 @@
     Most of the time we write <fr:tex display="inline">p^{-1}</fr:tex> for <fr:tex display="inline">\text {inv}(p)</fr:tex>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>752</fr:anchor>
+                <fr:anchor>766</fr:anchor>
                 <fr:addr type="machine">#331</fr:addr>
                 <fr:route>unstable-331.xml</fr:route>
                 <fr:title text="Construction of Inverse">Construction of Inverse</fr:title>

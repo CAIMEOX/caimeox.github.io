@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>813</fr:anchor>
+    <fr:anchor>819</fr:anchor>
     <fr:addr type="machine">#348</fr:addr>
     <fr:route>unstable-348.xml</fr:route>
-    <fr:title text="Algebraic Graphs › Core of Algebraic Graphs › Type Class"><fr:link type="local" href="unstable-346.xml" addr="#346" title="Algebraic Graphs › Core of Algebraic Graphs"><fr:link type="local" href="cs-0008.xml" addr="cs-0008" title="Algebraic Graphs">Algebraic Graphs</fr:link> › Core of Algebraic Graphs</fr:link> › Type Class</fr:title>
+    <fr:title text="Algebraic Graphs › Core of Algebraic Graphs › Graph Construction"><fr:link type="local" href="unstable-347.xml" addr="#347" title="Algebraic Graphs › Core of Algebraic Graphs"><fr:link type="local" href="cs-0008.xml" addr="cs-0008" title="Algebraic Graphs">Algebraic Graphs</fr:link> › Core of Algebraic Graphs</fr:link> › Graph Construction</fr:title>
     <fr:date>
       <fr:year>2024</fr:year>
       <fr:month>10</fr:month>
@@ -13,32 +13,15 @@
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>We abstract the graph construction primitives defined above as the type class Graph (Note that associated types requires <fr:code>TypeFamilies</fr:code> GHC extension):
-            
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">class Graph g where
-    type Vertex g
-    empty :: g
-    vertex :: Vertex g -&gt; g
-    overlay :: g -&gt; g -&gt; g
-    connect :: g -&gt; g -&gt; g</html:code></fr:pre></fr:p>
-    <fr:p>This interface is very simple and easy to use, which allows fewer opportunities for usage errors and greater opportunities for reuse.
-            Now let&apos;s create some functions to construct graphs. For instance, a single edge is obtained by connecting two vertices:
-            
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">edge :: (Graph g) =&gt; Vertex g -&gt; Vertex g -&gt; g
-edge x y = connect (vertex x) (vertex y)</html:code></fr:pre></fr:p>
-    <fr:p>A graph that contains a given list of isolated vertices can be constructed as follows:
-            
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">vertices :: Graph g =&gt; [Vertex g] -&gt; g
-vertices = foldr (overlay . vertex) empty</html:code></fr:pre>
-
-            which turns each vertex into a singleton graph and overlay the results. By replacing the 
-            <fr:code>overlay</fr:code> with <fr:code>connect</fr:code> we can construct a full connected graph.
-            
-  <fr:pre><html:code xmlns:html="http://www.w3.org/1999/xhtml" class="language-haskell">clique :: (Graph g) =&gt; [Vertex g] -&gt; g
-clique = foldr (connect . vertex) empty</html:code></fr:pre></fr:p>
-    <fr:p>The graph construction functions defined above are total, fully polymorphic, and elegant. 
-            Thanks to the minimalistic core type class, it is easy to wrap our favourite graph library into the described interface, 
-            and reuse the functions defined with graph class.</fr:p>
+    <fr:p>The simplest possible graph is the empty graph. We denote it by <fr:tex display="inline"> \epsilon  = (\varnothing , \varnothing ) </fr:tex>.
+            A graph with a single vertex is <fr:tex display="inline"> \text {Vertex} x = (\{x\}, \varnothing ) </fr:tex>.
+            To construct larger graphs from the above primitives we define binary operations overlay and connect, denoted by <fr:tex display="inline"> + </fr:tex> and <fr:tex display="inline"> \to  </fr:tex> respectively.
+            The overlay operation <fr:tex display="inline"> + </fr:tex> is defined as:
+            <fr:tex display="block">                 (V_1, E_1) + (V_2, E_2) = (V_1 \cup  V_2, E_1 \cup  E_2)             </fr:tex>
+            The connect operation <fr:tex display="inline"> \to  </fr:tex> is defined similarly (We give it a higher precedence than <fr:tex display="inline"> + </fr:tex>):
+            <fr:tex display="block">                 (V_1, E_1) \to  (V_2, E_2) = (V_1 \cup  V_2, E_1 \cup  E_2 \cup  V_1 \times  V_2)             </fr:tex></fr:p>
+    <fr:p>As shown above, the core can be represented by a simple data type <fr:code>Graph</fr:code>, parameterized by the type of vertices <fr:code>a</fr:code>.
+            We can push this further by defining a type class <fr:code>GraphLike</fr:code> that captures the core operations of the algebraic graph.</fr:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -49,7 +32,7 @@ clique = foldr (connect . vertex) empty</html:code></fr:pre></fr:p>
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>814</fr:anchor>
+            <fr:anchor>820</fr:anchor>
             <fr:addr type="user">cs-0008</fr:addr>
             <fr:route>cs-0008.xml</fr:route>
             <fr:title text="Algebraic Graphs">Algebraic Graphs</fr:title>
@@ -66,9 +49,9 @@ clique = foldr (connect . vertex) empty</html:code></fr:pre></fr:p>
     which built on rigorous mathematical foundation that allows us to apply equational reasoning for proving the correctness of graph transformation algorithms.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>631</fr:anchor>
-                <fr:addr type="machine">#345</fr:addr>
-                <fr:route>unstable-345.xml</fr:route>
+                <fr:anchor>645</fr:anchor>
+                <fr:addr type="machine">#346</fr:addr>
+                <fr:route>unstable-346.xml</fr:route>
                 <fr:title text="Introduction to Graphs">Introduction to Graphs</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -116,9 +99,9 @@ clique = foldr (connect . vertex) empty</html:code></fr:pre></fr:p>
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>632</fr:anchor>
-                <fr:addr type="machine">#346</fr:addr>
-                <fr:route>unstable-346.xml</fr:route>
+                <fr:anchor>646</fr:anchor>
+                <fr:addr type="machine">#347</fr:addr>
+                <fr:route>unstable-347.xml</fr:route>
                 <fr:title text="Core of Algebraic Graphs">Core of Algebraic Graphs</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -130,9 +113,9 @@ clique = foldr (connect . vertex) empty</html:code></fr:pre></fr:p>
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>633</fr:anchor>
-                    <fr:addr type="machine">#347</fr:addr>
-                    <fr:route>unstable-347.xml</fr:route>
+                    <fr:anchor>647</fr:anchor>
+                    <fr:addr type="machine">#348</fr:addr>
+                    <fr:route>unstable-348.xml</fr:route>
                     <fr:title text="Graph Construction">Graph Construction</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -156,9 +139,9 @@ clique = foldr (connect . vertex) empty</html:code></fr:pre></fr:p>
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>634</fr:anchor>
-                    <fr:addr type="machine">#348</fr:addr>
-                    <fr:route>unstable-348.xml</fr:route>
+                    <fr:anchor>648</fr:anchor>
+                    <fr:addr type="machine">#349</fr:addr>
+                    <fr:route>unstable-349.xml</fr:route>
                     <fr:title text="Type Class">Type Class</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -202,9 +185,9 @@ clique = foldr (connect . vertex) empty</html:code></fr:pre></fr:p>
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>635</fr:anchor>
-                <fr:addr type="machine">#349</fr:addr>
-                <fr:route>unstable-349.xml</fr:route>
+                <fr:anchor>649</fr:anchor>
+                <fr:addr type="machine">#350</fr:addr>
+                <fr:route>unstable-350.xml</fr:route>
                 <fr:title text="Algebraic Structure">Algebraic Structure</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -217,9 +200,9 @@ clique = foldr (connect . vertex) empty</html:code></fr:pre></fr:p>
                 <fr:p>In this section we characterise the <fr:code>Graph</fr:code> type class with a set of axioms that reveal an algebraic structure very similar to a semiring. This provides a convenient framework for proving graph properties, using equational reasoning. The presented characterization is generally useful for formal verification, as well as automated testing of graph library APIs.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>636</fr:anchor>
-                    <fr:addr type="machine">#350</fr:addr>
-                    <fr:route>unstable-350.xml</fr:route>
+                    <fr:anchor>650</fr:anchor>
+                    <fr:addr type="machine">#351</fr:addr>
+                    <fr:route>unstable-351.xml</fr:route>
                     <fr:title text="Axioms">Axioms</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -270,9 +253,9 @@ edges = foldr (overlay . uncurry edge) empty</html:code></fr:pre>
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>637</fr:anchor>
-                    <fr:addr type="machine">#351</fr:addr>
-                    <fr:route>unstable-351.xml</fr:route>
+                    <fr:anchor>651</fr:anchor>
+                    <fr:addr type="machine">#352</fr:addr>
+                    <fr:route>unstable-352.xml</fr:route>
                     <fr:title text="Partial Order">Partial Order</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -294,9 +277,9 @@ isSubgraphOf x y = overlay x y == y</html:code></fr:pre></fr:p>
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>638</fr:anchor>
-                <fr:addr type="machine">#352</fr:addr>
-                <fr:route>unstable-352.xml</fr:route>
+                <fr:anchor>652</fr:anchor>
+                <fr:addr type="machine">#353</fr:addr>
+                <fr:route>unstable-353.xml</fr:route>
                 <fr:title text="Graphs à la Carte">Graphs à la Carte</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -309,9 +292,9 @@ isSubgraphOf x y = overlay x y == y</html:code></fr:pre></fr:p>
                 <fr:p>Now we define some instances of the Grpah, and extend the axioms to construct more complex graphs.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>639</fr:anchor>
-                    <fr:addr type="machine">#353</fr:addr>
-                    <fr:route>unstable-353.xml</fr:route>
+                    <fr:anchor>653</fr:anchor>
+                    <fr:addr type="machine">#354</fr:addr>
+                    <fr:route>unstable-354.xml</fr:route>
                     <fr:title text="Binary Relation">Binary Relation</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>

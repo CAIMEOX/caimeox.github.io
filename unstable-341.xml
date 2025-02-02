@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1099</fr:anchor>
+    <fr:anchor>1113</fr:anchor>
     <fr:addr type="machine">#341</fr:addr>
     <fr:route>unstable-341.xml</fr:route>
     <fr:title text="Addition over {N} › Construction"><fr:link type="local" href="def-001Z.xml" addr="def-001Z" title="Addition over {N}">Addition over <fr:tex display="inline">\mathbb {N}</fr:tex></fr:link> › <fr:strong>Construction</fr:strong></fr:title>
@@ -34,7 +34,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1100</fr:anchor>
+            <fr:anchor>1114</fr:anchor>
             <fr:addr type="user">def-001Z</fr:addr>
             <fr:route>def-001Z.xml</fr:route>
             <fr:title text="Addition over {N}">Addition over <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
@@ -46,7 +46,7 @@
     which satisfies the following specification:
     <fr:tex display="block">         \begin {align*}             \text {add}_\mathbb {N}(n, 0)&amp;:\equiv  n             \\             \text {add}_\mathbb {N}(m,\text {succ}(n))&amp;:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))         \end {align*}     </fr:tex>
     abbreviated as <fr:tex display="inline">m + n</fr:tex> for <fr:tex display="inline">\text {add}_\mathbb {N}(m,n)</fr:tex>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>728</fr:anchor><fr:addr type="machine">#341</fr:addr><fr:route>unstable-341.xml</fr:route><fr:title text="Construction"><fr:strong>Construction</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>742</fr:anchor><fr:addr type="machine">#341</fr:addr><fr:route>unstable-341.xml</fr:route><fr:title text="Construction"><fr:strong>Construction</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     
         <fr:p>We construct the additon by perform induction over the second variable <fr:tex display="inline">n</fr:tex>.
             That is, to construct an element

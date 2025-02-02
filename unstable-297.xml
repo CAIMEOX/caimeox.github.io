@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1194</fr:anchor>
+    <fr:anchor>1213</fr:anchor>
     <fr:addr type="machine">#297</fr:addr>
     <fr:route>unstable-297.xml</fr:route>
     <fr:title text="Classical Mechanics › Momentum › Angular Momentum"><fr:link type="local" href="unstable-293.xml" addr="#293" title="Classical Mechanics › Momentum"><fr:link type="local" href="phy-0004.xml" addr="phy-0004" title="Classical Mechanics">Classical Mechanics</fr:link> › Momentum</fr:link> › Angular Momentum</fr:title>
@@ -20,7 +20,7 @@
             <fr:tex display="block">                 \vec {L} = \vec {r} \times  \vec {p}             </fr:tex></fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>698</fr:anchor><fr:addr type="machine">#298</fr:addr><fr:route>unstable-298.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>712</fr:anchor><fr:addr type="machine">#298</fr:addr><fr:route>unstable-298.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
             Now we prove the equivalence of definitions.
             <fr:tex display="block">                 \frac {d\vec {L}}{dt} = \vec {r}\times \frac {d\vec {p}}{dt} + \frac {d\vec {r}}{dt}\times \vec {p}             </fr:tex>
             The rate of change of linear momentum is the force and the rate of change of position is velocity.
@@ -40,7 +40,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1195</fr:anchor>
+            <fr:anchor>1214</fr:anchor>
             <fr:addr type="user">phy-0004</fr:addr>
             <fr:route>phy-0004.xml</fr:route>
             <fr:title text="Classical Mechanics">Classical Mechanics</fr:title>
@@ -57,7 +57,7 @@
     laws of motion are the same in all <fr:strong>inertial frames of reference</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>688</fr:anchor>
+                <fr:anchor>702</fr:anchor>
                 <fr:addr type="machine">#289</fr:addr>
                 <fr:route>unstable-289.xml</fr:route>
                 <fr:title text="Center of mass">Center of mass</fr:title>
@@ -77,7 +77,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>689</fr:anchor>
+                <fr:anchor>703</fr:anchor>
                 <fr:addr type="machine">#290</fr:addr>
                 <fr:route>unstable-290.xml</fr:route>
                 <fr:title text="Work and Energy">Work and Energy</fr:title>
@@ -95,7 +95,7 @@
         <fr:tex display="block">             W = \vec {F} \cdot  \vec {r}         </fr:tex></fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>690</fr:anchor>
+                    <fr:anchor>704</fr:anchor>
                     <fr:addr type="user">thm-0012</fr:addr>
                     <fr:route>thm-0012.xml</fr:route>
                     <fr:title text="Work-Energy Principle">Work-Energy Principle</fr:title>
@@ -126,7 +126,7 @@
         <fr:tex display="block">             W = \int _{\Delta  t} P dt = \int _{\Delta  t} \vec {F} \cdot  \vec {v} dt          </fr:tex></fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>691</fr:anchor>
+                    <fr:anchor>705</fr:anchor>
                     <fr:addr type="machine">#291</fr:addr>
                     <fr:route>unstable-291.xml</fr:route>
                     <fr:title text="Kinetic Energy">Kinetic Energy</fr:title>
@@ -137,7 +137,7 @@
             <fr:tex display="block">                 E_k = \frac {1}{2} m v^2 = \frac {p^2}{2m}             </fr:tex></fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>692</fr:anchor><fr:addr type="machine">#292</fr:addr><fr:route>unstable-292.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>706</fr:anchor><fr:addr type="machine">#292</fr:addr><fr:route>unstable-292.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
             The work done in accelerating a particle with mass m during the infinitesimal time 
             interval <fr:tex display="inline">dt</fr:tex> is given by the dot product of force <fr:tex display="inline">\vec {F}</fr:tex> and the infinitesimal displacement <fr:tex display="inline">d\vec {x}</fr:tex>
             <fr:tex display="block">                 dW = \vec {F} \cdot  d\vec {x}                  = \frac {d\vec {p}}{dt} \cdot  \vec {v}dt                 = \vec {v}\cdot  d\vec {p} = \vec {v} \cdot  d(m\vec {v})             </fr:tex>
@@ -163,7 +163,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>693</fr:anchor>
+                <fr:anchor>707</fr:anchor>
                 <fr:addr type="machine">#293</fr:addr>
                 <fr:route>unstable-293.xml</fr:route>
                 <fr:title text="Momentum">Momentum</fr:title>
@@ -174,7 +174,7 @@
         meaning that if a closed system is not affected by external forces, its total linear momentum does not change.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>694</fr:anchor>
+                    <fr:anchor>708</fr:anchor>
                     <fr:addr type="machine">#294</fr:addr>
                     <fr:route>unstable-294.xml</fr:route>
                     <fr:title text="Definition in Classic Mechanics">Definition in Classic Mechanics</fr:title>
@@ -192,7 +192,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>695</fr:anchor>
+                    <fr:anchor>709</fr:anchor>
                     <fr:addr type="machine">#295</fr:addr>
                     <fr:route>unstable-295.xml</fr:route>
                     <fr:title text="Relation to force">Relation to force</fr:title>
@@ -210,7 +210,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>696</fr:anchor>
+                    <fr:anchor>710</fr:anchor>
                     <fr:addr type="machine">#296</fr:addr>
                     <fr:route>unstable-296.xml</fr:route>
                     <fr:title text="Law of Conservation of Momentum">Law of Conservation of Momentum</fr:title>
@@ -225,7 +225,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>697</fr:anchor>
+                    <fr:anchor>711</fr:anchor>
                     <fr:addr type="machine">#297</fr:addr>
                     <fr:route>unstable-297.xml</fr:route>
                     <fr:title text="Angular Momentum">Angular Momentum</fr:title>
@@ -244,7 +244,7 @@
             <fr:tex display="block">                 \vec {L} = \vec {r} \times  \vec {p}             </fr:tex></fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>698</fr:anchor><fr:addr type="machine">#298</fr:addr><fr:route>unstable-298.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>712</fr:anchor><fr:addr type="machine">#298</fr:addr><fr:route>unstable-298.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
             Now we prove the equivalence of definitions.
             <fr:tex display="block">                 \frac {d\vec {L}}{dt} = \vec {r}\times \frac {d\vec {p}}{dt} + \frac {d\vec {r}}{dt}\times \vec {p}             </fr:tex>
             The rate of change of linear momentum is the force and the rate of change of position is velocity.
@@ -262,7 +262,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>699</fr:anchor>
+                <fr:anchor>713</fr:anchor>
                 <fr:addr type="machine">#299</fr:addr>
                 <fr:route>unstable-299.xml</fr:route>
                 <fr:title text="Rigid Body Dynamics">Rigid Body Dynamics</fr:title>
@@ -271,7 +271,7 @@
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>700</fr:anchor>
+                    <fr:anchor>714</fr:anchor>
                     <fr:addr type="machine">#300</fr:addr>
                     <fr:route>unstable-300.xml</fr:route>
                     <fr:title text="Moment of Inertia">Moment of Inertia</fr:title>

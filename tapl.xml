@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1864</fr:anchor>
+    <fr:anchor>1899</fr:anchor>
     <fr:addr type="user">tapl</fr:addr>
     <fr:route>tapl.xml</fr:route>
     <fr:title text="Types and Programming Languages">Types and Programming Languages</fr:title>
@@ -23,7 +23,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1866</fr:anchor>
+            <fr:anchor>1901</fr:anchor>
             <fr:addr type="user">cs-0003</fr:addr>
             <fr:route>cs-0003.xml</fr:route>
             <fr:title text="Recursion">Recursion</fr:title>
@@ -39,7 +39,7 @@
     Refer to <fr:link type="local" href="tapl.xml" addr="tapl" title="Types and Programming Languages">TAPL</fr:link></fr:p>
   
     
-    <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>581</fr:anchor><fr:addr type="machine">#376</fr:addr><fr:route>unstable-376.xml</fr:route><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:strong>General Recursion</fr:strong>
+    <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>595</fr:anchor><fr:addr type="machine">#377</fr:addr><fr:route>unstable-377.xml</fr:route><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:strong>General Recursion</fr:strong>
     <fr:p>Let&apos;s first consider the <fr:strong>greatest common divisor</fr:strong> function <fr:tex display="inline">\gcd (a,b)</fr:tex></fr:p>
     <fr:tex display="block">         \begin {align*}             \gcd \space  a\space  a &amp;= a \\             \gcd \space  a\space  b &amp;= \gcd \space  (a-b)\space  b  \text { if } b &gt; a \\             \gcd \space  a\space  b &amp;= \gcd \space  a\space  (b-a)  \text { if } a &gt; b         \end {align*}     </fr:tex>
     This recursion is terminating because the arguments are decreasing.
@@ -69,7 +69,7 @@
 
   
     
-    <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>582</fr:anchor><fr:addr type="machine">#377</fr:addr><fr:route>unstable-377.xml</fr:route><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:strong>Define Functions By Recursion</fr:strong>
+    <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>596</fr:anchor><fr:addr type="machine">#378</fr:addr><fr:route>unstable-378.xml</fr:route><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>2</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:strong>Define Functions By Recursion</fr:strong>
     <fr:p>Consider the factorial function:</fr:p>
     <fr:tex display="block">         \text {fact}\space  n = \text {if } (n=0)\space  1\space  (n\space  \text {fact}\space  (n-1))     </fr:tex>
     This requires a test <fr:tex display="inline">\text {if0}</fr:tex> satisfies:
@@ -87,7 +87,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1867</fr:anchor>
+            <fr:anchor>1902</fr:anchor>
             <fr:addr type="user">cs-0002</fr:addr>
             <fr:route>cs-0002.xml</fr:route>
             <fr:title text="Primitive Recursion in Lambda Calculus">Primitive Recursion in Lambda Calculus</fr:title>
@@ -97,7 +97,7 @@
           <fr:mainmatter><fr:p>We begin with the <fr:strong>schema of iteration</fr:strong> and then proceed 
     the more complex schema of primitive recursion and general recursion.
     Refer to <fr:link type="local" href="tapl.xml" addr="tapl" title="Types and Programming Languages">TAPL</fr:link>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>569</fr:anchor><fr:addr type="machine">#378</fr:addr><fr:route>unstable-378.xml</fr:route><fr:title text="Function Composition"><fr:strong>Function Composition</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>583</fr:anchor><fr:addr type="machine">#379</fr:addr><fr:route>unstable-379.xml</fr:route><fr:title text="Function Composition"><fr:strong>Function Composition</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     Giving two functions <fr:tex display="inline">f, g</fr:tex> we can compose then to get a new function <fr:tex display="inline">f\circ  g = f(g(x))</fr:tex>.
     Using <fr:tex display="inline">\lambda </fr:tex>-notation, we can define the composition of two functions as follows:
     <fr:tex display="block">         f\circ  g = \lambda  x.f(g(x))     </fr:tex>
@@ -114,7 +114,7 @@
     (And more discipline has to be imposed or expansion does not terminate).
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>570</fr:anchor><fr:addr type="machine">#379</fr:addr><fr:route>unstable-379.xml</fr:route><fr:title text="Non-termination"><fr:strong>Non-termination</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>584</fr:anchor><fr:addr type="machine">#380</fr:addr><fr:route>unstable-380.xml</fr:route><fr:title text="Non-termination"><fr:strong>Non-termination</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>The well-known <fr:link type="local" href="eg-0007.xml" addr="eg-0007" title="Divergent Combinator"><fr:strong>divergent combinator</fr:strong></fr:link> implies that 
         the lambda calculus is not strongly normalizing.</fr:p>
     <fr:p>However, we can always compute a normal form if one exists.
@@ -130,7 +130,7 @@
         reduce the argument of a function before applying beta reduction.</fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>571</fr:anchor><fr:addr type="machine">#380</fr:addr><fr:route>unstable-380.xml</fr:route><fr:title text="Church-Rosser Property"><fr:strong>Church-Rosser Property</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>585</fr:anchor><fr:addr type="machine">#381</fr:addr><fr:route>unstable-381.xml</fr:route><fr:title text="Church-Rosser Property"><fr:strong>Church-Rosser Property</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The outcome of a computation <fr:tex display="inline">e</fr:tex> is its normal form.
     It is naturally to ask the question whether the normal form is unique.
     The key to this question is the <fr:strong>Church-Rosser property</fr:strong> or <fr:strong>confluence</fr:strong>:
@@ -139,7 +139,7 @@
     This implies the uniqueness of the normal form.
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>572</fr:anchor><fr:addr type="machine">#382</fr:addr><fr:route>unstable-382.xml</fr:route><fr:title text="Representing Natural Numbers"><fr:strong>Representing Natural Numbers</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>586</fr:anchor><fr:addr type="machine">#383</fr:addr><fr:route>unstable-383.xml</fr:route><fr:title text="Representing Natural Numbers"><fr:strong>Representing Natural Numbers</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>We can represent natural numbers in lambda calculus by using the 
         <fr:strong>Church numerals</fr:strong> or <fr:strong>Church encoding</fr:strong>.
         The two abstractions should be related in some ways: 
@@ -159,7 +159,7 @@
     
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>573</fr:anchor><fr:addr type="machine">#381</fr:addr><fr:route>unstable-381.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>587</fr:anchor><fr:addr type="machine">#382</fr:addr><fr:route>unstable-382.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
             <fr:tex display="block">                 \begin {align*}                     S\space  n &amp;= (\lambda  n.\lambda  f.\lambda  x.f(n\space  f\space  x))\space  n \\                     &amp;\to _\beta  \lambda  f.\lambda  x.f(n\space  f\space  x) \\                     &amp;\to _\beta  \lambda  f.\lambda  x.f^n(x) \\                     &amp;\to _\beta  n+1                 \end {align*}             </fr:tex>
         </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
  
@@ -175,7 +175,7 @@
         <fr:tex display="block">             m^n = \lambda  m.\lambda  n. n\space  (m *) \space  1         </fr:tex></fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>574</fr:anchor><fr:addr type="machine">#383</fr:addr><fr:route>unstable-383.xml</fr:route><fr:title text="The Schema of Iteration"><fr:strong>The Schema of Iteration</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>588</fr:anchor><fr:addr type="machine">#384</fr:addr><fr:route>unstable-384.xml</fr:route><fr:title text="The Schema of Iteration"><fr:strong>The Schema of Iteration</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>As we saw before, a natural number <fr:tex display="inline">n</fr:tex> is represented by a function 
         that iterates its first argument <fr:tex display="inline">n</fr:tex> times on its second argument.
         <fr:tex display="block">             n = \lambda  g.\lambda  c.g^n(c)         </fr:tex>
@@ -195,7 +195,7 @@
         <fr:tex display="block">             \text {times} = \lambda  n.n(\lambda  rk. k + (r\space  k))(\lambda  k.0)         </fr:tex></fr:p>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>575</fr:anchor><fr:addr type="machine">#388</fr:addr><fr:route>unstable-388.xml</fr:route><fr:title text="The Schema of Primitive Recursion"><fr:strong>The Schema of Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>589</fr:anchor><fr:addr type="machine">#389</fr:addr><fr:route>unstable-389.xml</fr:route><fr:title text="The Schema of Primitive Recursion"><fr:strong>The Schema of Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     <fr:p>Everything appears simply until we think of a very simple function,
         the <fr:strong>predecessor function</fr:strong> <fr:tex display="inline">\text {pred}</fr:tex> defined by
         <fr:tex display="block">             \begin {align*}                 \text {pred}\space  0 = 0 \\                 \text {pred}\space  (n+1) = n             \end {align*}         </fr:tex>
@@ -205,7 +205,7 @@
         <fr:tex display="block">             g = \lambda  x.\lambda  y.x         </fr:tex></fr:p>
     
     
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>576</fr:anchor><fr:addr type="machine">#384</fr:addr><fr:route>unstable-384.xml</fr:route><fr:title text="Define predecessor function"><fr:strong>Define predecessor function</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>590</fr:anchor><fr:addr type="machine">#385</fr:addr><fr:route>unstable-385.xml</fr:route><fr:title text="Define predecessor function"><fr:strong>Define predecessor function</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         The key idea is to gain access to <fr:tex display="inline">n</fr:tex> in the schema of 
         primitive recursion by rebuilding it during the iteration.
         <fr:tex display="block">             \text {pred}_2\space  n = \langle  n, \text {pred}\space  n \rangle          </fr:tex>
@@ -219,7 +219,7 @@
     </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
     
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>577</fr:anchor><fr:addr type="machine">#385</fr:addr><fr:route>unstable-385.xml</fr:route><fr:title text="Define Pairs"><fr:strong>Define Pairs</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>591</fr:anchor><fr:addr type="machine">#386</fr:addr><fr:route>unstable-386.xml</fr:route><fr:title text="Define Pairs"><fr:strong>Define Pairs</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         Now we need to define pairs and <fr:tex display="inline">\text {letPair}</fr:tex>.
         The idea is to simply abstract over the continuation itself.
         <fr:tex display="block">             \begin {align*}                 \langle  x,y\rangle  &amp;= \lambda  k.k\space  x\space  y \\                 \text {pair} &amp;= \lambda  x.\lambda  y.\lambda  k.k\space  x\space  y \\                  \text {letPair} &amp;= \lambda  p.p             \end {align*}         </fr:tex>
@@ -227,13 +227,13 @@
     </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
     
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>578</fr:anchor><fr:addr type="machine">#386</fr:addr><fr:route>unstable-386.xml</fr:route><fr:title text="Summary"><fr:strong>Summary</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>592</fr:anchor><fr:addr type="machine">#387</fr:addr><fr:route>unstable-387.xml</fr:route><fr:title text="Summary"><fr:strong>Summary</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         Summarizing the above and we obtain the full definition of the predecessor function.
         <fr:tex display="block">             \begin {align*}                 \text {pred}_2 &amp;= \lambda  n.n\space  (\lambda  p.p (\lambda  xy.\text {pair} \space  (x+1) \space  x))\space  \text {pair} (\space  0 \space  0)\\                  \text {pred} &amp;= \lambda  n. (\text {pred}_2\space  n) \space  (\lambda  xy.y)             \end {align*}            </fr:tex>
     </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 
     
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>579</fr:anchor><fr:addr type="machine">#387</fr:addr><fr:route>unstable-387.xml</fr:route><fr:title text="General Primitive Recursion"><fr:strong>General Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>593</fr:anchor><fr:addr type="machine">#388</fr:addr><fr:route>unstable-388.xml</fr:route><fr:title text="General Primitive Recursion"><fr:strong>General Primitive Recursion</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         The general case of primitive recursion follows by a similar pattern.
         We begin by defining a function <fr:tex display="inline">f_2</fr:tex>:
         <fr:tex display="block">             f_2\space  n = \langle  n, f\space  n \rangle          </fr:tex>

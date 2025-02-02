@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1000</fr:anchor>
+    <fr:anchor>1014</fr:anchor>
     <fr:addr type="machine">#274</fr:addr>
     <fr:route>unstable-274.xml</fr:route>
     <fr:title text="Identity Types › The groupoid structure of types"><fr:link type="local" href="tt-0005.xml" addr="tt-0005" title="Identity Types">Identity Types</fr:link> › The groupoid structure of types</fr:title>
@@ -17,7 +17,7 @@
         which implies the <fr:em>transitivity</fr:em> and <fr:em>symmetry</fr:em> of the identity type.</fr:p>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>749</fr:anchor>
+        <fr:anchor>763</fr:anchor>
         <fr:addr type="user">def-002O</fr:addr>
         <fr:route>def-002O.xml</fr:route>
         <fr:title text="Concatenation Operation">Concatenation Operation</fr:title>
@@ -30,7 +30,7 @@
     <fr:tex display="block">         \text {concat}: (x:A)\to  (y:A)\to  (z:A)\to  (x=_Ay)\to  (y=_Az)\to  (x=_Az)     </fr:tex></fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>750</fr:anchor>
+            <fr:anchor>764</fr:anchor>
             <fr:addr type="machine">#332</fr:addr>
             <fr:route>unstable-332.xml</fr:route>
             <fr:title text="Construction of Concatenation">Construction of Concatenation</fr:title>
@@ -55,7 +55,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>751</fr:anchor>
+        <fr:anchor>765</fr:anchor>
         <fr:addr type="user">def-002P</fr:addr>
         <fr:route>def-002P.xml</fr:route>
         <fr:title text="Inverse Operation">Inverse Operation</fr:title>
@@ -68,7 +68,7 @@
     Most of the time we write <fr:tex display="inline">p^{-1}</fr:tex> for <fr:tex display="inline">\text {inv}(p)</fr:tex>.</fr:p>
         <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>752</fr:anchor>
+            <fr:anchor>766</fr:anchor>
             <fr:addr type="machine">#331</fr:addr>
             <fr:route>unstable-331.xml</fr:route>
             <fr:title text="Construction of Inverse">Construction of Inverse</fr:title>
@@ -93,7 +93,7 @@
         <fr:tex display="block">             (p\cdot  q)\cdot  r = p\cdot (q\cdot  r)         </fr:tex></fr:p>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>753</fr:anchor>
+        <fr:anchor>767</fr:anchor>
         <fr:addr type="user">def-002W</fr:addr>
         <fr:route>def-002W.xml</fr:route>
         <fr:title text="Associator">Associator</fr:title>
@@ -105,7 +105,7 @@
     <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
     we define the <fr:strong>associator</fr:strong>:
     <fr:tex display="block">         \text {assoc}: (p,q,r): (p\cdot  q)\cdot  r = p\cdot  (q\cdot  r)     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>754</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>768</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
     Construction of Associator
 ">
     <fr:strong>Construction of Associator</fr:strong>
@@ -128,7 +128,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>755</fr:anchor>
+        <fr:anchor>769</fr:anchor>
         <fr:addr type="user">def-002X</fr:addr>
         <fr:route>def-002X.xml</fr:route>
         <fr:title text="Unit Law Operations">Unit Law Operations</fr:title>
@@ -138,7 +138,7 @@
       <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
     We defined the <fr:strong>unit law</fr:strong> operations for <fr:tex display="inline">x=_Ay</fr:tex>:
     <fr:tex display="block">         \begin {align*}             \text {left-unit} &amp; : (x=_Ay)\to  (\text {refl}_x\cdot  x = x) \\             \text {right-unit} &amp; : (x=_Ay)\to  (x\cdot \text {refl}_y = x)         \end {align*}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>756</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>770</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
     Construction of Unit Law
 ">
     <fr:strong>Construction of Unit Law</fr:strong>
@@ -160,7 +160,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1001</fr:anchor>
+            <fr:anchor>1015</fr:anchor>
             <fr:addr type="user">tt-0005</fr:addr>
             <fr:route>tt-0005.xml</fr:route>
             <fr:title text="Identity Types">Identity Types</fr:title>
@@ -184,7 +184,7 @@
     This gives every type a <fr:strong>groupoid structure</fr:strong>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>745</fr:anchor>
+                <fr:anchor>759</fr:anchor>
                 <fr:addr type="user">def-002N</fr:addr>
                 <fr:route>def-002N.xml</fr:route>
                 <fr:title text="Identity Type">Identity Type</fr:title>
@@ -199,7 +199,7 @@
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A         }{             \Gamma ,x:A\vdash  a=_Ax\space \text {type}         }     </fr:tex>
     The only constructor is the refl:
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A         }{             \Gamma \vdash  \text {refl}_a:a=_Ax         }     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>746</fr:anchor><fr:addr type="machine">#333</fr:addr><fr:route>unstable-333.xml</fr:route><fr:title text="Path Induction / Identification Elimination"><fr:strong>Path Induction / Identification Elimination</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>760</fr:anchor><fr:addr type="machine">#333</fr:addr><fr:route>unstable-333.xml</fr:route><fr:title text="Path Induction / Identification Elimination"><fr:strong>Path Induction / Identification Elimination</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The induction principle of the identity type states that
     for any type family <fr:tex display="inline">P(x,p)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> and <fr:tex display="inline">p:a=_Ax</fr:tex>,
     <fr:tex display="block">         \text {ind-eq}_{a}:P(a, \text {refl}_a)\to  (x:A)\to  (p:a=_Ax)\to  P(x,p)     </fr:tex>
@@ -211,7 +211,7 @@
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 <fr:p>A term of <fr:tex display="inline">a=_Ax</fr:tex> is called a <fr:strong>identification</fr:strong> of <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">x</fr:tex>,
     or the <fr:strong>path</fr:strong> from <fr:tex display="inline">a</fr:tex> to <fr:tex display="inline">x</fr:tex>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>747</fr:anchor><fr:addr type="machine">#334</fr:addr><fr:route>unstable-334.xml</fr:route><fr:title text="Variable Version"><fr:strong>Variable Version</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>761</fr:anchor><fr:addr type="machine">#334</fr:addr><fr:route>unstable-334.xml</fr:route><fr:title text="Variable Version"><fr:strong>Variable Version</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     We can form an identity type with variables of <fr:tex display="inline">A</fr:tex>.
     <fr:tex display="block">         \Gamma ,x:A,y:A\vdash  x=_Ay\space \text {type}     </fr:tex>
     with the following introduction rule:
@@ -223,7 +223,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>748</fr:anchor>
+                <fr:anchor>762</fr:anchor>
                 <fr:addr type="machine">#274</fr:addr>
                 <fr:route>unstable-274.xml</fr:route>
                 <fr:title text="The groupoid structure of types">The groupoid structure of types</fr:title>
@@ -239,7 +239,7 @@
         which implies the <fr:em>transitivity</fr:em> and <fr:em>symmetry</fr:em> of the identity type.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>749</fr:anchor>
+                    <fr:anchor>763</fr:anchor>
                     <fr:addr type="user">def-002O</fr:addr>
                     <fr:route>def-002O.xml</fr:route>
                     <fr:title text="Concatenation Operation">Concatenation Operation</fr:title>
@@ -252,7 +252,7 @@
     <fr:tex display="block">         \text {concat}: (x:A)\to  (y:A)\to  (z:A)\to  (x=_Ay)\to  (y=_Az)\to  (x=_Az)     </fr:tex></fr:p>
                     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                       <fr:frontmatter>
-                        <fr:anchor>750</fr:anchor>
+                        <fr:anchor>764</fr:anchor>
                         <fr:addr type="machine">#332</fr:addr>
                         <fr:route>unstable-332.xml</fr:route>
                         <fr:title text="Construction of Concatenation">Construction of Concatenation</fr:title>
@@ -277,7 +277,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>751</fr:anchor>
+                    <fr:anchor>765</fr:anchor>
                     <fr:addr type="user">def-002P</fr:addr>
                     <fr:route>def-002P.xml</fr:route>
                     <fr:title text="Inverse Operation">Inverse Operation</fr:title>
@@ -290,7 +290,7 @@
     Most of the time we write <fr:tex display="inline">p^{-1}</fr:tex> for <fr:tex display="inline">\text {inv}(p)</fr:tex>.</fr:p>
                     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                       <fr:frontmatter>
-                        <fr:anchor>752</fr:anchor>
+                        <fr:anchor>766</fr:anchor>
                         <fr:addr type="machine">#331</fr:addr>
                         <fr:route>unstable-331.xml</fr:route>
                         <fr:title text="Construction of Inverse">Construction of Inverse</fr:title>
@@ -315,7 +315,7 @@
         <fr:tex display="block">             (p\cdot  q)\cdot  r = p\cdot (q\cdot  r)         </fr:tex></fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>753</fr:anchor>
+                    <fr:anchor>767</fr:anchor>
                     <fr:addr type="user">def-002W</fr:addr>
                     <fr:route>def-002W.xml</fr:route>
                     <fr:title text="Associator">Associator</fr:title>
@@ -327,7 +327,7 @@
     <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
     we define the <fr:strong>associator</fr:strong>:
     <fr:tex display="block">         \text {assoc}: (p,q,r): (p\cdot  q)\cdot  r = p\cdot  (q\cdot  r)     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>754</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>768</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
     Construction of Associator
 ">
     <fr:strong>Construction of Associator</fr:strong>
@@ -350,7 +350,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>755</fr:anchor>
+                    <fr:anchor>769</fr:anchor>
                     <fr:addr type="user">def-002X</fr:addr>
                     <fr:route>def-002X.xml</fr:route>
                     <fr:title text="Unit Law Operations">Unit Law Operations</fr:title>
@@ -360,7 +360,7 @@
                   <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
     We defined the <fr:strong>unit law</fr:strong> operations for <fr:tex display="inline">x=_Ay</fr:tex>:
     <fr:tex display="block">         \begin {align*}             \text {left-unit} &amp; : (x=_Ay)\to  (\text {refl}_x\cdot  x = x) \\             \text {right-unit} &amp; : (x=_Ay)\to  (x\cdot \text {refl}_y = x)         \end {align*}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>756</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>770</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
     Construction of Unit Law
 ">
     <fr:strong>Construction of Unit Law</fr:strong>
@@ -377,7 +377,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>757</fr:anchor>
+                <fr:anchor>771</fr:anchor>
                 <fr:addr type="machine">#275</fr:addr>
                 <fr:route>unstable-275.xml</fr:route>
                 <fr:title text="The action on identifications of functions">The action on identifications of functions</fr:title>
@@ -392,7 +392,7 @@
                 <fr:p>Every function preserves identifications.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>758</fr:anchor>
+                    <fr:anchor>772</fr:anchor>
                     <fr:addr type="user">def-004C</fr:addr>
                     <fr:route>def-004C.xml</fr:route>
                     <fr:title text="Action on Paths">Action on Paths</fr:title>
@@ -427,7 +427,7 @@
         elements from different types.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>759</fr:anchor>
+                    <fr:anchor>773</fr:anchor>
                     <fr:addr type="user">def-004D</fr:addr>
                     <fr:route>def-004D.xml</fr:route>
                     <fr:title text="Transport">Transport</fr:title>
@@ -455,7 +455,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>760</fr:anchor>
+                <fr:anchor>774</fr:anchor>
                 <fr:addr type="machine">#276</fr:addr>
                 <fr:route>unstable-276.xml</fr:route>
                 <fr:title text="Uniqueness of refl">Uniqueness of refl</fr:title>
@@ -477,7 +477,7 @@
         <fr:tex display="inline">(a, \text {refl}_a = y)</fr:tex> in the type <fr:tex display="inline">\Sigma _(x:A) a = x</fr:tex> for any <fr:tex display="inline">y:\Sigma _(x:A) a = x </fr:tex></fr:p>
  
    
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>761</fr:anchor><fr:addr type="machine">#277</fr:addr><fr:route>unstable-277.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>775</fr:anchor><fr:addr type="machine">#277</fr:addr><fr:route>unstable-277.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
         By <fr:tex display="inline">\Sigma </fr:tex> induction it suffices to show that there is an identification
         <fr:tex display="block">             (a, \text {refl}_a) = (x, p)         </fr:tex>
         forall <fr:tex display="inline">x:A</fr:tex> and <fr:tex display="inline">p:a=x</fr:tex>. Then perform the induction principle of identity types.

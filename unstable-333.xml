@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1093</fr:anchor>
+    <fr:anchor>1107</fr:anchor>
     <fr:addr type="machine">#333</fr:addr>
     <fr:route>unstable-333.xml</fr:route>
     <fr:title text="Identity Type › Path Induction / Identification Elimination"><fr:link type="local" href="def-002N.xml" addr="def-002N" title="Identity Type">Identity Type</fr:link> › <fr:strong>Path Induction / Identification Elimination</fr:strong></fr:title>
@@ -26,7 +26,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1094</fr:anchor>
+            <fr:anchor>1108</fr:anchor>
             <fr:addr type="user">def-002N</fr:addr>
             <fr:route>def-002N.xml</fr:route>
             <fr:title text="Identity Type">Identity Type</fr:title>
@@ -41,7 +41,7 @@
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A         }{             \Gamma ,x:A\vdash  a=_Ax\space \text {type}         }     </fr:tex>
     The only constructor is the refl:
     <fr:tex display="block">         \frac {             \Gamma \vdash  a:A         }{             \Gamma \vdash  \text {refl}_a:a=_Ax         }     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>746</fr:anchor><fr:addr type="machine">#333</fr:addr><fr:route>unstable-333.xml</fr:route><fr:title text="Path Induction / Identification Elimination"><fr:strong>Path Induction / Identification Elimination</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>760</fr:anchor><fr:addr type="machine">#333</fr:addr><fr:route>unstable-333.xml</fr:route><fr:title text="Path Induction / Identification Elimination"><fr:strong>Path Induction / Identification Elimination</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     The induction principle of the identity type states that
     for any type family <fr:tex display="inline">P(x,p)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> and <fr:tex display="inline">p:a=_Ax</fr:tex>,
     <fr:tex display="block">         \text {ind-eq}_{a}:P(a, \text {refl}_a)\to  (x:A)\to  (p:a=_Ax)\to  P(x,p)     </fr:tex>
@@ -53,7 +53,7 @@
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 <fr:p>A term of <fr:tex display="inline">a=_Ax</fr:tex> is called a <fr:strong>identification</fr:strong> of <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">x</fr:tex>,
     or the <fr:strong>path</fr:strong> from <fr:tex display="inline">a</fr:tex> to <fr:tex display="inline">x</fr:tex>.</fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>747</fr:anchor><fr:addr type="machine">#334</fr:addr><fr:route>unstable-334.xml</fr:route><fr:title text="Variable Version"><fr:strong>Variable Version</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>761</fr:anchor><fr:addr type="machine">#334</fr:addr><fr:route>unstable-334.xml</fr:route><fr:title text="Variable Version"><fr:strong>Variable Version</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
     We can form an identity type with variables of <fr:tex display="inline">A</fr:tex>.
     <fr:tex display="block">         \Gamma ,x:A,y:A\vdash  x=_Ay\space \text {type}     </fr:tex>
     with the following introduction rule:

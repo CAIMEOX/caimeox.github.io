@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>1949</fr:anchor>
+    <fr:addr type="user">thm-0014</fr:addr>
+    <fr:route>thm-0014.xml</fr:route>
+    <fr:title text="Yoneda Lemma">Yoneda Lemma</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+    <fr:authors></fr:authors>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>Let <fr:tex display="inline">C</fr:tex> be a locally small category,
+    with the presheaf category <fr:tex display="inline">[C^{\text {op}}, \text {Set}]</fr:tex>.
+    For any presheaf <fr:tex display="inline">X \in  [C^{\text {op}}, \text {Set}]</fr:tex>,
+    there is a canonical isomorphism
+    <fr:tex display="block">         \hom _{[C^{\text {op}}, \text {Set}]}(\hom _C(-, c), X) \cong  X(c)     </fr:tex>
+    between the hom-set of presheaf morphism
+    from the representable presheaf <fr:tex display="inline">h_c = \hom _C(-,c)</fr:tex> to <fr:tex display="inline">X</fr:tex>,
+    and the value of <fr:tex display="inline">X</fr:tex> at <fr:tex display="inline">c</fr:tex>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>1950</fr:anchor>
+            <fr:addr type="user">math-0006</fr:addr>
+            <fr:route>math-0006.xml</fr:route>
+            <fr:title text="Category Theory of Utilitarianism">Category Theory of Utilitarianism</fr:title>
+            <fr:taxon>Category Theory</fr:taxon>
+            <fr:authors></fr:authors>
+          </fr:frontmatter>
+          <fr:mainmatter><fr:p>This note is about the category theory and its applications.
+    Instead of reading a well-organized book, I prefer to write down the things I learned
+    from <fr:link type="local" href="ncatlab.xml" addr="ncatlab" title="NLab">ncatlab</fr:link> and papers.</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>565</fr:anchor><fr:addr type="machine">#318</fr:addr><fr:route>unstable-318.xml</fr:route><fr:title text="
+    Ideas">
+    <fr:strong>Ideas</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+        Intuitively, a category is a collection of objects and arrows between them,
+        such arrows can be composed and there is an identity arrow for each object.
+    <fr:p>There are commonly two ways to define a category, which are equivalent in usual 
+        foundations of mathematics. One of them generalizes the notion of <fr:strong>internal category</fr:strong>
+        nicely while the other one is more convenient for <fr:strong>enriched category</fr:strong>.</fr:p>
+    <fr:p>The major difference is whether they use a single collection of all morphisms or
+        several collections of morphisms (<fr:strong>family of collections</fr:strong> indexed by pairs of objects)</fr:p>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>566</fr:anchor><fr:addr type="user">def-003E</fr:addr><fr:route>def-003E.xml</fr:route><fr:title text="Category">Category</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>567</fr:anchor><fr:addr type="machine">#321</fr:addr><fr:route>unstable-321.xml</fr:route><fr:title text="With one collection"><fr:strong>With one collection</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    A <fr:strong>category</fr:strong> <fr:tex display="inline">C</fr:tex> consists
+    <fr:ul><fr:li>A collection of <fr:strong>objects</fr:strong> <fr:tex display="inline">C_0</fr:tex> (<fr:tex display="inline">\text {Ob}(C)</fr:tex>).</fr:li>
+        <fr:li>A collection <fr:tex display="inline">C_1</fr:tex> (<fr:tex display="inline">\text {Mor}(C)</fr:tex>) of <fr:strong>morphisms</fr:strong> (arrows).</fr:li>
+        <fr:li>For every morphism <fr:tex display="inline">f</fr:tex> there are an object <fr:tex display="inline">s(f)</fr:tex> (<fr:strong>source</fr:strong>, domain) and an object <fr:tex display="inline">t(f)</fr:tex> (<fr:strong>target</fr:strong>, codomain).</fr:li>
+        <fr:li>For every pair of morphisms <fr:tex display="inline">f, g</fr:tex> such that <fr:tex display="inline">t(f) = s(g)</fr:tex>, there is a morphism <fr:tex display="inline">g \circ  f</fr:tex> (<fr:strong>composition</fr:strong>) (Also written <fr:tex display="inline">gf</fr:tex> or <fr:tex display="inline">f;g</fr:tex>).</fr:li>
+        <fr:li>For every object <fr:tex display="inline">x</fr:tex>, there is a morphism <fr:tex display="inline">\text {id}_x</fr:tex> (or <fr:tex display="inline">1_x</fr:tex>) called <fr:strong>identity</fr:strong>.</fr:li>
+        <fr:li>The following properties hold:
+            <fr:ul><fr:li><fr:tex display="inline">s(g \circ  f) = s(f)</fr:tex> and <fr:tex display="inline">t(g \circ  f) = t(g)</fr:tex>.</fr:li>
+                <fr:li><fr:tex display="inline">s(1_x) = x</fr:tex> and <fr:tex display="inline">t(1_x) = x</fr:tex>.</fr:li>
+                <fr:li>Composition is <fr:strong>associative</fr:strong>: <fr:tex display="inline">h \circ  (g \circ  f) = (h \circ  g) \circ  f</fr:tex> when <fr:tex display="inline">t(f) = s(g)</fr:tex>, and <fr:tex display="inline">t(g) = s(h)</fr:tex>.</fr:li>
+                <fr:li>Composition satifies the <fr:strong>identity laws</fr:strong>: <fr:tex display="inline">f \circ  \text {id}_x = f</fr:tex> and <fr:tex display="inline">\text {id}_y \circ  f = f</fr:tex></fr:li></fr:ul></fr:li></fr:ul>
+    If the identity map and its axioms are omitted then one speaks of a <fr:strong>semicategory</fr:strong>.
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>568</fr:anchor><fr:addr type="machine">#322</fr:addr><fr:route>unstable-322.xml</fr:route><fr:title text="With a family of collections of morphisms"><fr:strong>With a family of collections of morphisms</fr:strong></fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
+    A <fr:strong>category</fr:strong> <fr:tex display="inline">C</fr:tex> consists
+    <fr:ul><fr:li>A collection of <fr:strong>objects</fr:strong> <fr:tex display="inline">C_0</fr:tex> (<fr:tex display="inline">\text {Ob}(C)</fr:tex>).</fr:li>
+        <fr:li>For every pair of objects <fr:tex display="inline">x, y</fr:tex>, a collection <fr:tex display="inline">C_1(x, y)</fr:tex> (<fr:tex display="inline">\hom _C(x,y)</fr:tex>) of <fr:strong>morphisms</fr:strong> from <fr:tex display="inline">x</fr:tex> to <fr:tex display="inline">y</fr:tex>.</fr:li>
+        <fr:li>For each pair of morphisms <fr:tex display="inline">f</fr:tex> in <fr:tex display="inline">C_1(x,y)</fr:tex> and <fr:tex display="inline">g</fr:tex> in <fr:tex display="inline">C_1(y,z)</fr:tex>, a morphism <fr:tex display="inline">g \circ  f</fr:tex> in <fr:tex display="inline">C_1(x,z)</fr:tex>.
+            called their <fr:strong>composition</fr:strong>.</fr:li>
+        <fr:li>For each object <fr:tex display="inline">x</fr:tex>, a morphism <fr:tex display="inline">\text {id}_x</fr:tex> in <fr:tex display="inline">C_1(x,x)</fr:tex> called the <fr:strong>identity</fr:strong> on <fr:tex display="inline">x</fr:tex>.</fr:li>
+        <fr:li>The following properties hold:
+            <fr:ul><fr:li>Composition is <fr:strong>associative</fr:strong>: <fr:tex display="inline">h \circ  (g \circ  f) = (h \circ  g) \circ  f</fr:tex> for all <fr:tex display="inline">f</fr:tex> in <fr:tex display="inline">C_1(x,y)</fr:tex>, <fr:tex display="inline">g</fr:tex> in <fr:tex display="inline">C_1(y,z)</fr:tex>, and <fr:tex display="inline">h</fr:tex> in <fr:tex display="inline">C_1(z,w)</fr:tex>.</fr:li>
+                <fr:li>Composition satifies the <fr:strong>identity laws</fr:strong>: <fr:tex display="inline">f \circ  \text {id}_x = f</fr:tex> and <fr:tex display="inline">\text {id}_y \circ  f = f</fr:tex> for all <fr:tex display="inline">f</fr:tex> in <fr:tex display="inline">C_1(x,y)</fr:tex>.</fr:li></fr:ul></fr:li></fr:ul>
+    Usually we write <fr:tex display="inline">\text {Mor}(C)</fr:tex> for the disjoint union <fr:tex display="inline">\bigsqcup _{x,y \in  C_0} C_1(x,y)</fr:tex>.
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
+</fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Its common to talk about some objects and their morphisms.
+    Informally, a <fr:strong>diagram</fr:strong> in a category <fr:tex display="inline">C</fr:tex> consists of some 
+    objects of <fr:tex display="inline">C</fr:tex> connected by some morphisms of <fr:tex display="inline">C</fr:tex>.</fr:p><fr:p>This terminology is often used when speaking about <fr:strong>limits</fr:strong> or 
+    <fr:strong>colimits</fr:strong> of a diagram.</fr:p><fr:p>One formal way to define a diagram is to use a <fr:strong>functor</fr:strong> from a (very) small category to <fr:tex display="inline">C</fr:tex>.
+    That is, a functor whose domain is a small category.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>569</fr:anchor><fr:addr type="user">def-003F</fr:addr><fr:route>def-003F.xml</fr:route><fr:title text="Small Category">Small Category</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:link type="local" href="def-003E.xml" addr="def-003E" title="Category">category</fr:link> is said to be <fr:strong>small</fr:strong> 
+    if it has a <fr:strong>samll set</fr:strong> (i.e. a set but not a proper class) of objects and morphisms.
+    In other words a small category is an <fr:strong>internal category</fr:strong> in category of sets.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>We did not explain what a <fr:strong>functor</fr:strong> is, but it is very natural thought.
+    Briefly, a functor is a <fr:strong>homomorphism</fr:strong> between two categories.
+    It maps objects to objects and morphisms to morphisms, preserving the structure of the categories.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>570</fr:anchor><fr:addr type="user">def-003G</fr:addr><fr:route>def-003G.xml</fr:route><fr:title text="Functor">Functor</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>functor</fr:strong> <fr:tex display="inline">F</fr:tex> from a category <fr:tex display="inline">C</fr:tex> to a category <fr:tex display="inline">D</fr:tex> is a map
+    sending each <fr:tex display="inline">x\in  C</fr:tex> to an object <fr:tex display="inline">F(x)\in  D</fr:tex> and each morphism
+    <fr:tex display="inline">f:x\to  y</fr:tex> in <fr:tex display="inline">C</fr:tex> to morphism <fr:tex display="inline">F(f):F(x)\to  F(y)</fr:tex> in <fr:tex display="inline">D</fr:tex>, such that 
+    <fr:ul><fr:li>Composition is preserved: <fr:tex display="inline">F(g\circ  f) = F(g)\circ  F(f)</fr:tex>.</fr:li>
+        <fr:li>Identity is preserved: <fr:tex display="inline">F(\text {id}_x) = \text {id}_{F(x)}</fr:tex>.</fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>For the sake of completeness, we state the definition of the <fr:strong>functor category</fr:strong>
+    and the <fr:strong>natural transformations</fr:strong> between functors.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>571</fr:anchor><fr:addr type="user">def-003I</fr:addr><fr:route>def-003I.xml</fr:route><fr:title text="Functor Category">Functor Category</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">C</fr:tex> and <fr:tex display="inline">D</fr:tex> be categories, the functor category <fr:tex display="inline">D^C</fr:tex> 
+    (or <fr:tex display="inline">[C,D]</fr:tex>) is the category whose
+    <fr:ul><fr:li>objects are functors from <fr:tex display="inline">C</fr:tex> to <fr:tex display="inline">D</fr:tex>.</fr:li>
+        <fr:li>morphisms are <fr:strong>natural transformations</fr:strong> between functors.</fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>572</fr:anchor><fr:addr type="user">def-003J</fr:addr><fr:route>def-003J.xml</fr:route><fr:title text="Natural Transformation">Natural Transformation</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">C</fr:tex> and <fr:tex display="inline">D</fr:tex> be categories and <fr:tex display="inline">F,G:C\to  D</fr:tex> be functors.
+    A <fr:strong>natural transformation</fr:strong> <fr:tex display="inline">\alpha :F\Rightarrow   G</fr:tex> is 
+    an assignment to every object <fr:tex display="inline">x\in  C</fr:tex> of a morphism <fr:tex display="inline">\alpha _x:F(x)\to  G(x)</fr:tex> in <fr:tex display="inline">D</fr:tex>,
+    (called the <fr:strong>component</fr:strong> of <fr:tex display="inline">\alpha </fr:tex> at <fr:tex display="inline">x</fr:tex>)
+    the following diagram commutes in <fr:tex display="inline">D</fr:tex>:
+    
+ 
+  
+  <fr:figure><fr:resource hash="b5e91e181820d504fc4e45a8daad99b3"><fr:resource-content><fr:img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPCEtLSBUaGlzIGZpbGUgd2FzIGdlbmVyYXRlZCBieSBkdmlzdmdtIDMuMi4yIC0tPgo8c3ZnIHZlcnNpb249JzEuMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycgd2lkdGg9JzE2MC42MTcwMTFwdCcgaGVpZ2h0PScxMDkuODE1MzkycHQnIHZpZXdCb3g9Jy03MiAtNzIgMTA3LjA3ODAwNyA3My4yMTAyNjInPgo8c3R5bGUgdHlwZT0ndGV4dC9jc3MnPgo8IVtDREFUQVtAZm9udC1mYWNle2ZvbnQtZmFtaWx5OmNtcjc7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQU40QUFvQUFBQUFBK1FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRU1BQUFCZ2hVTjBMMk50WVhBQUFBRTRBQUFBTEFBQUFEUUFEQUI4WjJ4NVpnQUFBV1FBQUFDNkFBQUF3RXA3Ymxab1pXRmtBQUFDSUFBQUFDNEFBQUEyS1hUR3VHaG9aV0VBQUFKUUFBQUFId0FBQUNRRXlnSWZhRzEwZUFBQUFuQUFBQUFLQUFBQUNnVGtBSFJzYjJOaEFBQUNmQUFBQUFnQUFBQUlBREFBWUcxaGVIQUFBQUtFQUFBQUZ3QUFBQ0FBQlFBY2JtRnRaUUFBQXB3QUFBREpBQUFCTXUwS2tleHdiM04wQUFBRGFBQUFBQkFBQUFBZ0FBTUFBWGphWTJCbVVtU2N3TURLd01BMGkrbnNQeEdHZmhETitJYnhEWU14SXljREVMQXh3QUVqQXhKSUtTNUxCMHBxTUdneU0vd0g4cGtoMGtocS9nT0ZBYXRHREdJQWVOcGpZR0JnWW1CZ1lBWmlFU0RKQ0taWkdCU0FOQXNRZ3ZpYS8vOERTWTMvLy8vZkJQTVpBRkNiQm9WNDJtTmdaQ2o1ejhqWXdNekFJTVhBd0NndUpzTE94cy9JeHM0bUJtVHlNNnFwQTZHNW1qMmpHV01PTHp1N294VzdKVE5qV0JvWE8yK3JLUiszS2hPVExwOFpNd01qa3dDYlNZNUE0YkhlbjdHY0FreU1TYldLQ3JYSlJjMnFUVUFqR1R5QTVvZEF6QmNHbWlvdXhpN0N4czdIcUdadVlzOW94Mml1eDZpdVptcG1IdE5pQmpKUVU4a3NUNXFSbVQ4a2hwRzUwSTJUa1kyWkFXSmExRUtIeEdRbUxtWVdRWi8zQzQ4OHRlSmk0MlJpWUdBQUFON0lJSFFBQUhqYVkyQmtZR0FBNHFNVzR0ZmorVzIrTWpDek1JREE0Nk9PZHhIMGYwYW15OHdnTGdjREU0Z0NBRHRkQ3dJQUFIamFZMkJrWUdCbStNL0F3TUIwbWNHRHdaT3hnUUVvZ2dLWUFFbDBBdTRBQXRNQUFBSEpBSFFBU0FBQUFBQUFBQUF3QUdCNDJtTmdaR0JnWUdhUVpnRFJERkFTQ1FBQUExc0FJZ0I0MmoyTU1RdkNNQkNGdjJJVnJZT0Q0T0Fnd1I5UXRBb3ViZzVPcmc1dTFnVHAwRlRTV25RUmY3clhFTHlRNDd2MzNoMlE4Q0dpcTRpSjcxM0Y4aWFCKzR5WkJoNkl2Z2ljTUdkSmp5Z2VpYkpnSHpobXlDVndueGw1NElIb3I4QUpXNzZIcW53OEcrUFVxZExHMlZ2cGRtZmo2cUt5YXAydXV2Rm9ySEhYeG1pVnY1VnVpN3E5bDJxVFptbkdnWXFTQjA4YURBN0ZTUlR0MlhJVHo3SGo3T2VhUWp3cm1UVXBxNzk3Rk5mNnhOVmYwWkxJZVV2WHRMSlRTNzlMVnJHUnZhejdQMWt5TGswQUFBQjQybU5nWmtBR2pBeG9BQUFBamdBRikgZm9ybWF0KCd3b2ZmJyk7fQpAZm9udC1mYWNle2ZvbnQtZmFtaWx5OmNtbWk1O3NyYzp1cmwoZGF0YTphcHBsaWNhdGlvbi94LWZvbnQtd29mZjtiYXNlNjQsZDA5R1JnQUJBQUFBQUFSOEFBb0FBQUFBQlRnQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUJQVXk4eUFBQUE5QUFBQUVNQUFBQmdoWk4xZ1dOdFlYQUFBQUU0QUFBQUxBQUFBRFFBREFETVoyeDVaZ0FBQVdRQUFBRy9BQUFDRUgxRjE0eG9aV0ZrQUFBREpBQUFBQzhBQUFBMktmWEZxMmhvWldFQUFBTlVBQUFBSGdBQUFDUUdHUUtaYUcxMGVBQUFBM1FBQUFBTUFBQUFEQWxxQUx4c2IyTmhBQUFEZ0FBQUFBZ0FBQUFJQUlvQkNHMWhlSEFBQUFPSUFBQUFGd0FBQUNBQUJRQmFibUZ0WlFBQUE2QUFBQURPQUFBQk9QTmRLcDl3YjNOMEFBQUVjQUFBQUF3QUFBQWdBQU1BQUhqYVkyQm1WbWFjd01ES3dNQTBpK25zUHhHR2ZoRE4rSWJ4RFlNeEl5Y0RFTEF4d0FFakF4SklLUzVMQjBwV01GUXlNL3dIOHBraDBraHEvZ09GQWI4ZURRVUFlTnBqWUdCZ1ltQmdZQVppRVNESkNLWlpHQlNBTkFzUWd2aVYvLzhEeVlyLy8vOTNndmtNQUZjckJ0VjQya1dRMzJyVFlCakc4N3hKazNacGtpWk52L1JQbG5WZGtpOWQyMlJ0bGtSUjJqSW1va3dtYklLaU1zRWpEN3dDUmZBU3ZBQlBSZkFPUE5jNzhFNDhkbjVSUk43bjVQM3p2UEQ4SkVoWDF6L3BLNzVManlVSktUUVRtbXBCS0VERnlxcXNQT2E1bWxwWHpFMksrUnI1aW5sTTFkZ2VWdVVHWlNGY3NWaG5pUGx4VlZ0SzVxMVJpU3RUZkN6aWt0NjZVU1BPZHpSclR3VW83VWZQQm1EdEpoSzlrMThPSHU0N0o0OGV5RFR0MlNQQUduZWQvdVMya1JoWWpNWlh3NmI1NTlCYVhRYm5vODQybjUwUmtxd0hFeCtNQm1qTzdPMmJ2dDQ5Rk5icTFBS1I3cThzNDBqQllPRW54Tk5vN0hxTnhOUmxXczQvM25TU0FGVGVONGxvWnpjMzIwc0YvcXlYRVY5TVFveE1lUzRKRE5MejY1Uys0SnQwTGhwWkVFbnhQM2FBWElRVHFrbnhtTWQxNHJqbVp1S0EvME1Rd0ZQcm1hQllNOXJRWHlDTVByM1kvZnowNUM2UWVNNFFjQ1pPWmgzZGNRNkNscnVaVjhXeEFpOHlnQ0JjTzNLemJUUVI2RFkvWGE1QnVoY0NXWGdyNmdUUUM0VUZGZ1B3N3RmN2w2K0JuSWVoeTFxSHV0V2lhVGU4TjdQSElOKy84QytlRFB3RTJCWjZTMFR1NVk0dDBPUjg2TjU0TlZzbVVDSXIwcVkvV0FMSEprbjZEU3FPUWZVQWVOcGpZR1JnWUFCaWwzK3NqUEg4Tmw4Wm1Ga1lRT0R4VWNlN0NQcS9Ibk1JNHpFZ2w0T0JDU1FLQUNTYkN0SUFlTnBqWUdSZ1lHYjR6d0FrUXhoaUdSeVpkakVBUlZBQU13QkN4UUs1QUFBRFZBQUFBeW9BWHdMc0FGMEFBQUFBQUlvQkNIamFZMkJrWUdCZ1pvaGtBTkVNVUJJSkFBQUphUUJnQUhqYVRZdzliOEl3RUlhZmlBU0pNTENnRGgyS2g4NFJCRmk3TURDeE1yRUFkbEVHMjhnSmtaQ3FqdjNkdmJnZWVwSlB6L3R4QmtxK3lSZ21ZeGIzTURtRnFEOHVtREpQUEJhMVNGenl5anNqc253aXpoc2ZpWE5KVG9rTFh2aE1QQmIvSzNISmhwK2R0L2RIWjRJNmVHMkN1MXJiYkk4bXRJMTNhbFV0bzk0Ylo4SzVNMXBkbmtyM1RkdmZyRnBYZFZXencyTzU4NkRERUZBY3hOR1JIVmZKTEExYmp0RnBoYjM0aWhVVnkzLzVYbklYTytmNGs1Yk9oYWRzVFMrTlZ2Wk51b3ExWE5iRCt3WElteS94QUFCNDJtTmdac0FMQUFCOUFBUT0pIGZvcm1hdCgnd29mZicpO30KQGZvbnQtZmFjZXtmb250LWZhbWlseTpjbW1pMTA7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQVg4QUFvQUFBQUFCeUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRU1BQUFCZ2hXRjAybU50WVhBQUFBRTRBQUFBTlFBQUFEd0F2UUJ6WjJ4NVpnQUFBWEFBQUFNa0FBQUQzT2hicVBGb1pXRmtBQUFFbEFBQUFDOEFBQUEyS2F6R3VXaG9aV0VBQUFURUFBQUFIZ0FBQUNRR0xBRzhhRzEwZUFBQUJPUUFBQUFVQUFBQUZBeHNBSlpzYjJOaEFBQUUrQUFBQUF3QUFBQU1BZTRDNEcxaGVIQUFBQVVFQUFBQUZ3QUFBQ0FBQndCYWJtRnRaUUFBQlJ3QUFBRFVBQUFCUHBrUmRjZHdiM04wQUFBRjhBQUFBQXdBQUFBZ0FBTUFBSGphWTJCbXFtR2N3TURLd01BMGkrbnNQeEdHZmhETitJYnhEWU14SXljREVMQXh3QUVqQXhKSUtTNUxCMHE2TVZReU0vd0g4cGtoMGtocS9nT0ZBZGtIRFNzQWVOcGpZR0JnWW1CZ1lBWmlFU0RKQ0taWkdEU0FOQnVRWmdUS3VqTlUvdjhQNUxzeFZQei8vMy8zLzI2d0tpQUFBSmNiQ1NvQUFBQjQyaVdTUzQvYlZCaUcvWjVqK3lTT2I0bHZtZGl4azB6R1RpWTBrOG5GVHRJeXFVWXRVNGJlbUtLSyt3YllWT3hhSVNGVmJLZzZRdUlIQUJJL2dtVi9BSWdmd0o0MVc2U3lBVTM0UEdOWlBqNzZQbHZuZWI5SGdwUnR0eHpzbFhRcVNSQnFvUG9KbXdhdWVnQ1JwZGs4RC95OGNEWVlRNlgzYnU1YmNOTU5Gbms2UXFvS1BxTnlIa3dUVU1IRWJpOHI4aXhQZDVGdkZFRDM4b2pMbHZqeHZLckFNdGV4Y2k0RGV5dkx4bXRINTE0SWhWMy81RHh4bE9OUE43bkZkY0VaNUNWWFJJMXhqYkZPZ1h0Ym4xV3JqRUUzVlhBcVZ5MFZjR0lXMTRVaDVFZ0FWZWVYU05ZbXJYVUJlK2ZpUHd5dUIweFJtZm1uVWRIMWtmQ2JFbDJRWnR1L2VJMzlJZDJuRGFlakV0MEc4OVFrYUF0cUVLUHdDMkxaNEFqcEFkUWpKS3lZbXNoUzFXTFVORVpXdHBaclh2WVZmdUFIaE81ejdTWlhOUUprZVB6eitlaDJzMll6K2ZuOWNPazBpc0FVTUp3aWdTbnVuSHhwb0NidkIycFhVNWlvdGl0R21xN2YrdVlIeGgvTlQ1KytlRFFjcUhkTTZPejNpMy9wS3lhczlNTW51SnQvL05IK2V6dlBQZ2V6RmExNXNvb2FGY1o0VkFHNDNDTDRSdWZiekZQQmhwN2RzWnJnUHozLzd0bnAvSXpML1QzemdjbjRGWHU4ZmMwaS9DYTlUeHVDOWR3WWhEQUxmTThscEV1b2N1bWwyUkdLcWUrcXdrOG9oK0lJaXpFRXpabDBJQmt1dVhNL29BbzlUWkppTWMrTE1pMzZLUjd2R25KcmRSYkNFRXBjczRmSDQwSmpZVFR0cnhtU3ByNFRPYmJ0OUdaNk8yUjc5ZkRkTnFzSkJYR3RNVGh1SG52Vi9JMzJUWTUrNWtSKzNYS252dUpoOGYzQ3M4TUJYejNRd1NydW9Wcy9rSEVRYTBsWDd2WmFYZGo3Ylprc3dYcnk1S2svQ3NHV0QzVlFjdTdVcVU5a3hJZHV3UkZuU1FUUGNEc3lXU1FQdGRGVkhtUDhnMStsdDY5Y0lINlMreElwaTB2cThpYm8wbjhpdm9xZ1ZHYU15d2hpZUJTUjZxbGxGQnRPL2djZS92NHNlSGsydWJIblZ1a2tXV0JOamY3U2phUHE2TWJrSFJZbEprZGRoSVhQVlNGa05HcU56aks3VmpIbUNOUFptM3pzbVkxR3lQSHk0dXNQdm1JNHZKc0FadENPZU5zQyt1SHczdUFhVU56cWZmRXdHVFExWUhXaTA5RHRTYXRKa1V4MnJTaDVjYnM5Wi9JdDY5Vlo0U1BVYU96L0E0UEdmWUY0Mm1OZ1pHQmdBR0lwOXQzRzhmdzJYeG1ZV1JoQTRQRlJ4N3NJK3I4ZU16ZlRGU0NYZzRFSkpBb0FGa01LWHdCNDJtTmdaR0JnWnZqUEFDUlZHZVQrVDJUbVpnQ0tvQUJXQUVnWUF1NEFBQUoyQUFBQ2tnQW5BeVVBTXdKSkFCNEI5Z0FlQUFBQUFBQjBBUElCZWdIdWVOcGpZR1JnWUdCbGlHUUEwUXhRRWdrQUFBbWZBR0lBZU5wTmpyRnF3ekFVUlkrcFk2aGJ5SlFNSFlxbWpNWjIrZ0dGREpteVppd2trUWd1U0FxeVk4Z1MrZ0g5NkQ0ckd2cUVIa2ZuWFFrQkpYY3lwc3FZeHo1VlRpR25CODk0WVpHNGtLVVNsN3l4NG9rc2Z4Ynp6bWZpbkZlK0VzOVk4cDI0RVArVHVPU0QzNDIzbCt0Z2d0cDViWUk3V2RzMTlkNkV2dk5PTlZYOUVGdmpURGdNUnF2alRlbXg2OGV6VmV1cXJWbzJlQ3dYcmd3WWd2eHNKMFpIZHB4a1p1bG9xTmxIMTh2SnkwU0pxOFQrVDJ3bDRXTHFFRi9Ua2pweWs2NFpKZE5MUDB0YXNaYTc3YlQvQU9DQ01MMTQybU5nWnNBTEFBQjlBQVE9KSBmb3JtYXQoJ3dvZmYnKTt9CkBmb250LWZhY2V7Zm9udC1mYW1pbHk6Y21taTc7c3JjOnVybChkYXRhOmFwcGxpY2F0aW9uL3gtZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQVc0QUFvQUFBQUFCckFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBRWNBQUFCZ2hlRjRlR050WVhBQUFBRThBQUFBTlFBQUFFUUFld1JqWjJ4NVpnQUFBWFFBQUFMZEFBQURiSzJKM1dWb1pXRmtBQUFFVkFBQUFDOEFBQUEyS2dIR3VHaG9aV0VBQUFTRUFBQUFIZ0FBQUNRR29nSXBhRzEwZUFBQUJLUUFBQUFVQUFBQUZBNXJBUmxzYjJOaEFBQUV1QUFBQUF3QUFBQU1BYndDbm0xaGVIQUFBQVRFQUFBQUdBQUFBQ0FBQ0FCUGJtRnRaUUFBQk53QUFBRFBBQUFCT1BOaEtxTndiM04wQUFBRnJBQUFBQXdBQUFBZ0FBTUFBSGphWTJCbWVzUTRnWUdWZ1lGcEZ0UFpmeUlNL1NDYThRM2pHd1pqUms0R0lHQmpnSU5HQmlTUVVseVdEcFIwWTk3SXpQQWZ5R2RtWUFRSk15SlUvQWNLQXdBZVZnNU1BSGphWTJCZ1lHSmdZR0FHWWhFZ3lRaW1XUmdNZ0RRSEVJTGszQm5TbURmKy93OWt1VUZZLzNmL24vc25HS3dXREFEMlpBdmJBQUFBZU5wRmtrOXZHMFVZaC9mM3puakg2N1YzMXV2MXJ1dkUzc1pqNzZaS0V4ZHZ0QnRDNmsxYkdsSTNiUnFKcWswcTZEK3BFWENnQjFTaDNub3BOMVJWUFhCQkFuSGhEQnk0MHk4QVJ6NER4M0tObWEwRWFLU1Izdm5OYU9hWjV6VmdmRENmc3h2MHE3RmpHQkJtNktkaDVtQU1NWWl6TU1qeVZwWm44UmltcnBheVFDSlFjYmtpVkd3S2x1b05VNlNUVUpLcEJrbEJXYXp3Y2NFUlpRclMvTzRyaVdaamM5Rjh6Z0RMVFNKNERpbS93VnBvK1JWaUZ4OStHN21WQzhmRmxzT0U3WUxuZ2xzdW1Ba2FiV0EybDd4SlhBbHdIZ21nMWFOT3JTNTB5QWE2dElLZnU2eTdYdVJBSXppWlkvUmV3NWIrbjE1Rk5oWmFuY0RRT01idS9DOTJqLzR3cnVtQ09WQkpuQlJZUTZMZjdrQUVvUjc1SkN0WUZpZXhNS2VJS0orRVRwbHJJTDFQSDlHejV0VWppQkNFdWY0VGRyZGdvbTdyZHdEMzc2eStQSGozTXZoMnZiRXptejdwMkI1Z2QzcjltS1E0dVBuWUlaTG1Ta2NFZnFVZFdXZWVYWDcxSTlqdGpmMm5MKzZzbVdmTldWMDQ5TnZKWEZhSnJFYnY5dWRFNDcydG4yNStNYkdyeTdReUhzNnFsa1VNYktrS0J1NUt6ZDA4L2RIMVhpWHhWa2JzaDZmUEgrK21OeGhYWERYMkhXSWw4OVg1bUQ2bDM0M3RrbG5pTGVrZ1RyUW1UV3NLalRGRndWUXBOSjNpcmI1QU15djlCVm11VFRza2tXYUJtZUQ3VFplN1hldkNPOHVid0xBZE04aElTamxjWXIwMXVkZW5sanlRYlNlNHFNNXNBU3JRdWR1WDB2UDZ0V3IzYmhuajFjbnJXWE43M2IvRVl0VS9UVU16c1MwQ3Y5cis1dTlicGNSYmh3dEpQQnIrSCtGVXZQbzFIMVNoOVJsa0ZQTTM5QXRlRzJzbHphaVBYUGZiZXFxMSthWXdZNjFIL0tlbmoxQ2psZTBZb1krU1c4ditWM1hvYS9hTXp2SEFyZzNyWHMxRXVucHE2cC85Y3Zmb0h2R2Rwbjl3ZlAyVE9vRXVMVlpFVGNkZEszckp3U3Zuemk5Y0d5WDY0alI2OHVKb21jTmJ0RUUxTHlWU21VcEJ4MWNlN1B2dSt3eEhlL2JTNU1OSGJnMUU3WjNtbGM4T3gycHl5S0JXTjU0dHJKOEhEZjRCRURkNkh3QUFBSGphWTJCa1lHQUE0cXV4dHl2aitXMitNakN6TUlEQTQ2T09keEgwZjMzbUJLWkxRQzRIQXhOSUZBQmNod3dxQUhqYVkyQmtZR0JtK004QUpQc1k3UDlQWlU1Z0FJcWdBRllBVy9NRDBRQUFBc1lBQUFMbEFFY0RqZ0JJQWpvQVN3TDRBRDhBQUFBQUFHNEE2QUZPQWJaNDJtTmdaR0JnWUdYd1kyQmlBQUZHQmpRQUFBaWpBRmg0MmsyTVBXL0NNQkNHbjRnRWlUQ3dvQTRkaW9mT0VRUWt0aTRNVEt4TUxJQmRsTUUyY2tJa3BLcGpmM2N2cm9lZTVOUHpmcHlCa204eWhzbVl4VDFNVGlIcWp3dW16Qk9QUlMwU2w3enl6b2dzbjRqenhrZmlYSkpUNG9JWFBoT1B4ZjlLWExMaForZnQvZEdab0E1ZW0rQ3UxamJib3dsdDQ1MWFWY3VvOThhWmNPNk1WcGVuMG4zVDlqZXIxbFZkMWV6d1dPNDg2REFFRkFkeGRHVEhWVEpMdzVaamRGcGhMNzVpUmNYeVg3NlgzTVhPT2Y2a3BYUGhLVnZUUzZPVmZaT3VZaTJYOWZCK0Fjd3JML2tBZU5wallHYkFDd0FBZlFBRSkgZm9ybWF0KCd3b2ZmJyk7fQpAZm9udC1mYWNle2ZvbnQtZmFtaWx5OmNtcjEwO3NyYzp1cmwoZGF0YTphcHBsaWNhdGlvbi94LWZvbnQtd29mZjtiYXNlNjQsZDA5R1JnQUJBQUFBQUFOZ0FBb0FBQUFBQTlRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUJQVXk4eUFBQUE5QUFBQUVRQUFBQmdoVU56N0dOdFlYQUFBQUU0QUFBQUxBQUFBRFFBREFCOFoyeDVaZ0FBQVdRQUFBQ2dBQUFBcktBQ0hhUm9aV0ZrQUFBQ0JBQUFBQzRBQUFBMktTSEd0MmhvWldFQUFBSTBBQUFBSHdBQUFDUUVqd0c4YUcxMGVBQUFBbFFBQUFBS0FBQUFDZ1JHQUdSc2IyTmhBQUFDWUFBQUFBZ0FBQUFJQUN3QVZtMWhlSEFBQUFKb0FBQUFGd0FBQUNBQUJRQVpibUZ0WlFBQUFvQUFBQUROQUFBQk9JTGpLcWx3YjNOMEFBQURVQUFBQUJBQUFBQWdBQU1BQVhqYVkyQm12TWM0Z1lHVmdZRnBGdFBaZnlJTS9TQ2E4UTNqR3daalJrNEdJR0JqZ0FOR0JpU1FVbHlXRHBUVVlOQmtadmdQNURORHBKSFUvQWNLQXdEdmtRMGVlTnBqWUdCZ1ltQmdZQVppRVNESkNLWlpHQlNBTkFzUWd2aWEvLzhEU1kzLy8vL2ZCUE1aQUZDYkJvVjQybU5nWkVqNXo4QVl3c3pBSU03QXdDcWlwS2F1eDJpdVptWnV4MmpFejhqSEtNNG1KTThveGhnc2xteW9LY1BJS0tObW1DYkd5QlBud2Nqa0VzL1AvSTByS1Q1aWxhM1R3dERrVkI2QnhEL3RsZi8rcFFpeU1BQUJJNE1sMEZ4TmlMbU1ZbXpzZkl4S3BrQlQxVTNVOUJuVnpNMk14TVRsR0JrMXdDYUs4c1o2TVFYN0NERXpNb3FDN1dHQW1wajB0M1hoQjE4aEZpYXdQUUFWSkNGTWVOcGpZR1JnWUFEaUR6Yzc3OGZ6MjN4bFlHWmhBSUhIUngzdkl1ai9ERXdOekNBdUJ3TVRpQUlBY0E0TDlBQUFlTnBqWUdSZ1lHYjR6OERBd05UQVlNbGd5UmpDQUJSQkFVd0FPMndDVUFBQ2dBQUFBWTBBWkFBNUFBQUFBQUFBQUN3QVZuamFZMkJrWUdCZ1pwQmdBTkVNVUJJSkFBQURFQUFmQUhqYVJZdzlpOEpBRUlhZllDSVlDeHV4c0xqYndqb2swZm9hQ3l0YnEydlVYU1ZGTnJLSkFVRXM3M2M3V1JkdVlJZm4vWmdGVWw1RURCTXg4M3VZbUVUVWh4T216QU9QUlgwSFRsbXlZa1FVVDhUNTRpZHdMTWx2NElRRmw4Qmo4WitCVXpiOGJadjZkdStNVS90R0cyZlB0U3Z5ZzNGdDFWaFZaTG5YTzJPTk8zWkdxOU5ENmI1cSsydXQxbG1abFd4cHFMbHhwOFBnVU96RjBaNHRaOGtjQlRrSDc3UlVrbHBwRldUaS91Yzd5YTN2SFAxUFdqb25IckkxdlZ5MXNxL1NWcXpsc2h6ZUcyUEhMeEVBQUFCNDJtTmdaa0FHakF4b0FBQUFqZ0FGKSBmb3JtYXQoJ3dvZmYnKTt9CnRleHQuZjAge2ZvbnQtZmFtaWx5OmNtbWkxMDtmb250LXNpemU6OS45NjI2NHB4fQp0ZXh0LmYxIHtmb250LWZhbWlseTpjbW1pNztmb250LXNpemU6Ni45NzM4NDhweH0KdGV4dC5mMiB7Zm9udC1mYW1pbHk6Y21taTU7Zm9udC1zaXplOjQuOTgxMzJweH0KdGV4dC5mMyB7Zm9udC1mYW1pbHk6Y21yMTA7Zm9udC1zaXplOjkuOTYyNjRweH0KdGV4dC5mNCB7Zm9udC1mYW1pbHk6Y21yNztmb250LXNpemU6Ni45NzM4NDhweH0KXV0+Cjwvc3R5bGU+CjxnIGlkPSdwYWdlMSc+CjxnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTE4LjQ2MDk5OSwtMzMuOTc3MjkxKXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknPgo8ZyBmaWxsPScjMDAwJyBzdHJva2U9JyMwMDAnPgo8ZyBzdHJva2Utd2lkdGg9JzAuNCc+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC01My43Mzk3OCwtMjkuMTU5NzcpJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKC0xOC40NjA5OTksLTMzLjk3NzI5MSlzY2FsZSgtMSwtMSknPgo8ZyBzdHJva2U9JyMwMDAnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTMuNTMzNjU0LC04Ny4wOTc2Mzkpc2NhbGUoMC45OTYyNjQsLTAuOTk2MjY0KSc+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0xMC42NTYyNywwLjApJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKC0zLjUzMzY1NCwtODcuMDk3NjM5KXNjYWxlKC0xLC0xKSc+CjxnIGZpbGw9JyMwMDAnPgo8ZyBzdHJva2U9J25vbmUnPgo8dGV4dCBjbGFzcz0nZjAnIHg9Jy0zLjUzMzY1NCcgeT0nLTg3LjA5NzYzOSc+RjwvdGV4dD4KPHRleHQgY2xhc3M9J2YzJyB4PSc0LjI1NjYwMicgeT0nLTg3LjA5NzYzOSc+KDwvdGV4dD4KPHRleHQgY2xhc3M9J2YwJyB4PSc4LjEzMDk3NScgeT0nLTg3LjA5NzYzOSc+eDwvdGV4dD4KPHRleHQgY2xhc3M9J2YzJyB4PScxMy44MjQ5MDgnIHk9Jy04Ny4wOTc2MzknPik8L3RleHQ+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8ZyBzdHJva2U9JyMwMDAnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMzUuMzAzOTk2LC04Ny4wOTc2Mzkpc2NhbGUoMC45OTYyNjQsLTAuOTk2MjY0KScvPgo8ZyBzdHJva2U9JyMwMDAnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoNzMuOTE1NjU3LC04Ny4wOTc2Mzkpc2NhbGUoMC45OTYyNjQsLTAuOTk2MjY0KSc+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0xMC40Mjk0MywwLjApJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKDczLjkxNTY1NywtODcuMDk3NjM5KXNjYWxlKC0xLC0xKSc+CjxnIGZpbGw9JyMwMDAnPgo8ZyBzdHJva2U9J25vbmUnPgo8dGV4dCBjbGFzcz0nZjAnIHg9JzczLjkxNTY1NycgeT0nLTg3LjA5NzYzOSc+RjwvdGV4dD4KPHRleHQgY2xhc3M9J2YzJyB4PSc4MS43MDU5MTMnIHk9Jy04Ny4wOTc2MzknPig8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMCcgeD0nODUuNTgwMjg3JyB5PSctODcuMDk3NjM5Jz55PC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjMnIHg9JzkwLjgyMjIzJyB5PSctODcuMDk3NjM5Jz4pPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlPScjMDAwJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0zLjUzMzY1NCwtNjMuMDI4MTI1KXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknLz4KPGcgc3Ryb2tlPScjMDAwJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0zLjUzMzY1NCwtMzMuOTc3MjkxKXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtMTAuNjc3NzgsMC4wKSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSgtMy41MzM2NTQsLTMzLjk3NzI5MSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YwJyB4PSctMy41MzM2NTQnIHk9Jy0zMy45NzcyOTEnPkc8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMycgeD0nNC4yOTk0NjMnIHk9Jy0zMy45NzcyOTEnPig8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMCcgeD0nOC4xNzM4MzcnIHk9Jy0zMy45NzcyOTEnPng8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMycgeD0nMTMuODY3NzY5JyB5PSctMzMuOTc3MjkxJz4pPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlPScjMDAwJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDM1LjMwMzk5NiwtMzMuOTc3MjkxKXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknLz4KPGcgc3Ryb2tlPScjMDAwJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDczLjkxNTY1NywtMzMuOTc3MjkxKXNjYWxlKDAuOTk2MjY0LC0wLjk5NjI2NCknPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtMTAuNDUwOTQsMC4wKSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSg3My45MTU2NTcsLTMzLjk3NzI5MSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YwJyB4PSc3My45MTU2NTcnIHk9Jy0zMy45NzcyOTEnPkc8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMycgeD0nODEuNzQ4Nzc0JyB5PSctMzMuOTc3MjkxJz4oPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjAnIHg9Jzg1LjYyMzE0OCcgeT0nLTMzLjk3NzI5MSc+eTwvdGV4dD4KPHRleHQgY2xhc3M9J2YzJyB4PSc5MC44NjUwOTEnIHk9Jy0zMy45NzcyOTEnPik8L3RleHQ+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlLXdpZHRoPScwLjM5OTk4Jz4KPHBhdGggZD0nTS0yMy41OTQ2NSAyNi42NTk3N0gyMy42NDgzNicgZmlsbD0nbm9uZScvPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgyMy44NDgzNCwyNi42NTk3NyknPgo8ZyBzdHJva2UtZGFzaGFycmF5PSdub25lJyBzdHJva2UtZGFzaG9mZnNldD0nMC4wJz4KIDxnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCc+CiA8ZyBzdHJva2UtbGluZWpvaW49J3JvdW5kJz4KIDxwYXRoIGQ9J00tMi4wNzk4OCAyLjM5OTg2Qy0xLjY5OTg5IC45NTk5Mi0uODUzMTMgLjI3OTk4IDAgMEMtLjg1MzEzLS4yNzk5OC0xLjY5OTg5LS45NTk5Mi0yLjA3OTg4LTIuMzk5ODYnIGZpbGw9J25vbmUnLz4KIDwvZz4KIDwvZz4KIDwvZz4KPC9nPgo8ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtOC4zMTQyLDMwLjc2MjUzKSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSgtMTguNDYwOTk5LC0zMy45NzcyOTEpc2NhbGUoLTEsLTEpJz4KPGcgZmlsbD0nIzAwMCc+CjxnIHN0cm9rZT0nbm9uZSc+Cjx0ZXh0IGNsYXNzPSdmMScgeD0nLTE4LjQ2MDk5OScgeT0nLTMzLjk3NzI5MSc+RjwvdGV4dD4KPHRleHQgY2xhc3M9J2Y0JyB4PSctMTIuMzM2MDE3JyB5PSctMzMuOTc3MjkxJz4oPC90ZXh0Pgo8dGV4dCBjbGFzcz0nZjEnIHg9Jy05LjIyMjY3NCcgeT0nLTMzLjk3NzI5MSc+ZjwvdGV4dD4KPHRleHQgY2xhc3M9J2Y0JyB4PSctNC41NTYwOScgeT0nLTMzLjk3NzI5MSc+KTwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZS13aWR0aD0nMC4zOTk5OCc+CjxwYXRoIGQ9J00tMjMuNTczMTQtMjYuNjU5NzdIMjMuNjI2ODUnIGZpbGw9J25vbmUnLz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMjMuODI2ODMsLTI2LjY1OTc3KSc+CjxnIHN0cm9rZS1kYXNoYXJyYXk9J25vbmUnIHN0cm9rZS1kYXNob2Zmc2V0PScwLjAnPgogPGcgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJz4KIDxnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnPgogPHBhdGggZD0nTS0yLjA3OTg4IDIuMzk5ODZDLTEuNjk5ODkgLjk1OTkyLS44NTMxMyAuMjc5OTggMCAwQy0uODUzMTMtLjI3OTk4LTEuNjk5ODktLjk1OTkyLTIuMDc5ODgtMi4zOTk4NicgZmlsbD0nbm9uZScvPgogPC9nPgogPC9nPgogPC9nPgo8L2c+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC04LjM1MzIxLC0yMi41NTcwMiknPgo8ZyBzdHJva2U9J25vbmUnIHRyYW5zZm9ybT0nc2NhbGUoLTEuMDAzNzUsMS4wMDM3NSl0cmFuc2xhdGUoLTE4LjQ2MDk5OSwtMzMuOTc3MjkxKXNjYWxlKC0xLC0xKSc+CjxnIGZpbGw9JyMwMDAnPgo8ZyBzdHJva2U9J25vbmUnPgo8dGV4dCBjbGFzcz0nZjEnIHg9Jy0xOC40NjA5OTknIHk9Jy0zMy45NzcyOTEnPkc8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmNCcgeD0nLTEyLjI1ODI3NicgeT0nLTMzLjk3NzI5MSc+KDwvdGV4dD4KPHRleHQgY2xhc3M9J2YxJyB4PSctOS4xNDQ5MzInIHk9Jy0zMy45NzcyOTEnPmY8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmNCcgeD0nLTQuNDc4MzQ4JyB5PSctMzMuOTc3MjkxJz4pPC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGcgc3Ryb2tlLXdpZHRoPScwLjM5OTk4Jz4KPHBhdGggZD0nTS0zOC43NTY0NSAxNy44MDAwNVYtMTcuNDAwMDknIGZpbGw9J25vbmUnLz4KPGcgdHJhbnNmb3JtPSdtYXRyaXgoMC4wLC0xLjAsMS4wLDAuMCwtMzguNzU2NDUsLTE3LjYwMDA3KSc+CjxnIHN0cm9rZS1kYXNoYXJyYXk9J25vbmUnIHN0cm9rZS1kYXNob2Zmc2V0PScwLjAnPgogPGcgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJz4KIDxnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnPgogPHBhdGggZD0nTS0yLjA3OTg4IDIuMzk5ODZDLTEuNjk5ODkgLjk1OTkyLS44NTMxMyAuMjc5OTggMCAwQy0uODUzMTMtLjI3OTk4LTEuNjk5ODktLjk1OTkyLTIuMDc5ODgtMi4zOTk4NicgZmlsbD0nbm9uZScvPgogPC9nPgogPC9nPgogPC9nPgo8L2c+CjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKC0zNi40MDM3LC0xLjAwNjk0KSc+CjxnIHN0cm9rZT0nbm9uZScgdHJhbnNmb3JtPSdzY2FsZSgtMS4wMDM3NSwxLjAwMzc1KXRyYW5zbGF0ZSgtMTguNDYwOTk5LC0zMy45NzcyOTEpc2NhbGUoLTEsLTEpJz4KPGcgZmlsbD0nIzAwMCc+CjxnIHN0cm9rZT0nbm9uZSc+Cjx0ZXh0IGNsYXNzPSdmMScgeD0nLTE4LjQ2MDk5OScgeT0nLTMzLjk3NzI5MSc+zrE8L3RleHQ+Cjx0ZXh0IGNsYXNzPSdmMicgeD0nLTEzLjI4MTY1OCcgeT0nLTMyLjk4MTAyNyc+eDwvdGV4dD4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjxnIHN0cm9rZS13aWR0aD0nMC4zOTk5OCc+CjxwYXRoIGQ9J00zOC45ODMyOSAxNy44MDAwNVYtMTcuNDAwMDknIGZpbGw9J25vbmUnLz4KPGcgdHJhbnNmb3JtPSdtYXRyaXgoMC4wLC0xLjAsMS4wLDAuMCwzOC45ODMyOSwtMTcuNjAwMDcpJz4KPGcgc3Ryb2tlLWRhc2hhcnJheT0nbm9uZScgc3Ryb2tlLWRhc2hvZmZzZXQ9JzAuMCc+CiA8ZyBzdHJva2UtbGluZWNhcD0ncm91bmQnPgogPGcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc+CiA8cGF0aCBkPSdNLTIuMDc5ODggMi4zOTk4NkMtMS42OTk4OSAuOTU5OTItLjg1MzEzIC4yNzk5OCAwIDBDLS44NTMxMy0uMjc5OTgtMS42OTk4OS0uOTU5OTItMi4wNzk4OC0yLjM5OTg2JyBmaWxsPSdub25lJy8+CiA8L2c+CiA8L2c+CiA8L2c+CjwvZz4KPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoNDEuMzM2MDQsLTAuNTIwODQpJz4KPGcgc3Ryb2tlPSdub25lJyB0cmFuc2Zvcm09J3NjYWxlKC0xLjAwMzc1LDEuMDAzNzUpdHJhbnNsYXRlKC0xOC40NjA5OTksLTMzLjk3NzI5MSlzY2FsZSgtMSwtMSknPgo8ZyBmaWxsPScjMDAwJz4KPGcgc3Ryb2tlPSdub25lJz4KPHRleHQgY2xhc3M9J2YxJyB4PSctMTguNDYwOTk5JyB5PSctMzMuOTc3MjkxJz7OsTwvdGV4dD4KPHRleHQgY2xhc3M9J2YyJyB4PSctMTMuMjgxNjU4JyB5PSctMzIuOTgxMDI3Jz55PC90ZXh0Pgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L3N2Zz4="></fr:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+   
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
+
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
+
+
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
+
+ \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
+
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
+
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     &gt;={Triangle[open]},-&gt;.&gt;
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}-&gt;
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}-&gt;
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {-&gt;},
+   square/south/.style = {-&gt;},
+   square/west/.style = {-&gt;},
+   square/east/.style = {-&gt;},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  </fr:resource-source><fr:resource-source type="latex" part="body">
+        \begin {tikzcd}
+            {F(x)} &amp;&amp; {F(y)} \\
+            \\
+            {G(x)} &amp;&amp; {G(y)}
+            \arrow [&quot;{F(f)}&quot;, from=1-1, to=1-3]
+            \arrow [&quot;{G(f)}&quot;, from=3-1, to=3-3]
+            \arrow [&quot;{\alpha _x}&quot;, from=1-1, to=3-1]
+            \arrow [&quot;{\alpha _y}&quot;, from=1-3, to=3-3]
+        \end {tikzcd}
+    </fr:resource-source></fr:resource></fr:figure></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>We state the concise functorial definition of diagrams of the shape of categories.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>573</fr:anchor><fr:addr type="user">def-003H</fr:addr><fr:route>def-003H.xml</fr:route><fr:title text="Diagram">Diagram</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">C</fr:tex> be a category and <fr:tex display="inline">J</fr:tex> be a small category.
+    A <fr:strong>diagram</fr:strong> of shape <fr:tex display="inline">J</fr:tex> in <fr:tex display="inline">C</fr:tex> is a functor <fr:tex display="inline">X:J\to  C</fr:tex>.
+    The category of <fr:tex display="inline">J</fr:tex>-shaped diagrams in <fr:tex display="inline">C</fr:tex> is the <fr:link type="local" href="def-003I.xml" addr="def-003I" title="Functor Category">functor category</fr:link> <fr:tex display="inline">C^J</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>A limit of a diagram <fr:tex display="inline">F:D\to  C</fr:tex> is an object <fr:tex display="inline">\lim  F</fr:tex> of <fr:tex display="inline">C</fr:tex>
+    equipped with morphisms to the objects <fr:tex display="inline">F(d)</fr:tex> for all <fr:tex display="inline">d\in  D</fr:tex>,
+    such that everything in sight commutes.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>574</fr:anchor><fr:addr type="user">def-0057</fr:addr><fr:route>def-0057.xml</fr:route><fr:title text="Hom Functor">Hom Functor</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>For a locally small category <fr:tex display="inline">C</fr:tex>,
+    the <fr:strong>hom functor</fr:strong> is the functor
+    <fr:tex display="block">         \hom _C : C^{\text {op}} \times  C \to  \text {Set}     </fr:tex>
+    from the product category of the opposite category of <fr:tex display="inline">C</fr:tex>
+    and <fr:tex display="inline">C</fr:tex> into the category of sets <fr:tex display="inline">\text {Set}</fr:tex>.</fr:p><fr:ul><fr:li>An object <fr:tex display="inline">(c,c&apos;) \in  C^{\text {op}} \times  C</fr:tex> is mapped to the set
+        <fr:tex display="inline">\hom _C(c, c&apos;)</fr:tex> in <fr:tex display="inline">\text {Set}</fr:tex>, the set of morphisms
+        <fr:tex display="inline">c \to  c&apos;</fr:tex> in <fr:tex display="inline">C</fr:tex>.</fr:li>
+    <fr:li>A morphism <fr:tex display="inline">(f,g) : (c, c&apos;) \to  (d, d&apos;)</fr:tex> in the product category
+        will be sent to the function <fr:tex display="inline">\hom _C((f,g)) : \hom _C(c, c&apos;) \to  \hom _C(d, d&apos;)</fr:tex>
+        which maps 
+        <fr:tex display="block">             h \mapsto  g \circ  h \circ  f         </fr:tex></fr:li></fr:ul></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>575</fr:anchor><fr:addr type="user">def-0052</fr:addr><fr:route>def-0052.xml</fr:route><fr:title text="Presheaf">Presheaf</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>A <fr:strong>presheaf</fr:strong> on a small category <fr:tex display="inline">C</fr:tex> is a <fr:link type="local" href="def-003G.xml" addr="def-003G" title="Functor">functor</fr:link>
+    <fr:tex display="block">         F : C^{\text {op}} \to  \text {Set}     </fr:tex>
+    from the opposite category of <fr:tex display="inline">C</fr:tex> to the category of sets.
+    Similar to category of functors,
+    we can define the category of presheaves on <fr:tex display="inline">C</fr:tex>, 
+    denoted <fr:tex display="inline">\text {Set}^{C^{\text {op}}}</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p><fr:strong>Representability</fr:strong> is one of the most 
+    fundamental concepts of category theory,
+    with close ties to the notion of 
+    adjoint functor and the Yoneda lemma.
+    It is the crucial concept underlying the idea 
+    of <fr:strong>universal property</fr:strong>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>576</fr:anchor><fr:addr type="user">def-0053</fr:addr><fr:route>def-0053.xml</fr:route><fr:title text="Representable Functors">Representable Functors</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>For a locally small category <fr:tex display="inline">C</fr:tex>, 
+    a presheaf on <fr:tex display="inline">C</fr:tex>, which is of the 
+    form <fr:tex display="inline">F : C^{\text {op}} \to  \text {Set}</fr:tex>,
+    is <fr:strong>representable</fr:strong> if it is
+    natural isomorphic to a hom-functor
+    <fr:tex display="inline">h_X: \hom _C(-, X)</fr:tex> for some object <fr:tex display="inline">X</fr:tex> in <fr:tex display="inline">C</fr:tex>,
+    which sends an object <fr:tex display="inline">U\in  C</fr:tex> to the hom-set
+    <fr:tex display="inline">\hom _C(U,X)</fr:tex>.
+    The object is determined uniquely up to
+    isomorphism in <fr:tex display="inline">C</fr:tex>, and is called 
+    a <fr:strong>representing object</fr:strong> of the presheaf <fr:tex display="inline">F</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>577</fr:anchor><fr:addr type="user">def-0054</fr:addr><fr:route>def-0054.xml</fr:route><fr:title text="Adjoint Functors">Adjoint Functors</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">C</fr:tex> and <fr:tex display="inline">D</fr:tex> be categories,
+    let <fr:tex display="inline">L : C \to  D</fr:tex> and <fr:tex display="inline">R : D \to  C</fr:tex> be functors,
+    then this is called a pair of <fr:strong>adjoint functors</fr:strong>
+    with <fr:tex display="inline">L</fr:tex> <fr:strong>left adjoint</fr:strong> and <fr:tex display="inline">R</fr:tex> <fr:strong>right adjoint</fr:strong>,
+    denoted <fr:tex display="inline">L \dashv  R</fr:tex>,
+    if there exists a <fr:link type="local" href="def-003J.xml" addr="def-003J" title="Natural Transformation">natural isomorphism</fr:link>
+    between the hom-functors of the following form:
+    <fr:tex display="block">         \hom _D(L(-), -) \cong  \hom _C(-, R(-))     </fr:tex>
+    which means <fr:tex display="inline">\forall  c\in  C, d\in  D</fr:tex> there is a bijection of hom-sets:
+    <fr:tex display="block">         \begin {align*}             \hom _D(L(c), d) &amp;\xrightarrow {\cong } \hom _C(c, R(d)) \\              \{ L(c) \xrightarrow {f} d \} &amp;\mapsto  \{ c \xrightarrow {\hat {f}} R(d) \}         \end {align*}     </fr:tex>
+    which is natural in both <fr:tex display="inline">c</fr:tex> and <fr:tex display="inline">d</fr:tex>.
+    This isomorphism is the <fr:strong>adjunction isomorphism</fr:strong> and the 
+    image <fr:tex display="inline">\bar {f}</fr:tex> of a morphism <fr:tex display="inline">f</fr:tex> under this isomorphism 
+    is called the <fr:strong>adjunct</fr:strong> of <fr:tex display="inline">f</fr:tex>, and vice versa.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>578</fr:anchor><fr:addr type="user">def-0055</fr:addr><fr:route>def-0055.xml</fr:route><fr:title text="Adjunction Unit and Counit">Adjunction Unit and Counit</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Consider a pair of adjoint functors
+    <fr:tex display="inline">L \dashv  R</fr:tex>, <fr:tex display="inline">\forall  c\in  C</fr:tex> the 
+    adjunct of the identity morphism <fr:tex display="inline">\text {id}_{L(c)}</fr:tex>
+    is the <fr:strong>unit morphism</fr:strong> of the adjunction
+    at that object, denoted by
+    <fr:tex display="block">         \eta _c = \hat {\text {id}_{L(c)}} : c \to  R(L(c))     </fr:tex>
+    and the adjunct of the identity morphism <fr:tex display="inline">\text {id}_{R(d)}</fr:tex>
+    is the <fr:strong>counit morphism</fr:strong> of the adjunction
+    at that object, denoted by
+    <fr:tex display="block">         \varepsilon _d = \text {id}_{R(d)} : L(R(d)) \to  d     </fr:tex></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:p>Now we reach an important theorem in 
+    category theory, the <fr:strong>Yoneda lemma</fr:strong>,
+    an elementary but central result in
+    category theory, sheaf and topos theory.
+    It says that the set of morphism from a
+    <fr:link type="local" href="def-0053.xml" addr="def-0053" title="Representable Functors">representable presheaf</fr:link> into 
+    an arbitrary presheaf <fr:tex display="inline">X</fr:tex> is in natural bijection
+    with set <fr:tex display="inline">X(c)</fr:tex> assigned by <fr:tex display="inline">X</fr:tex> to the
+    representing object <fr:tex display="inline">c</fr:tex>.</fr:p><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>579</fr:anchor><fr:addr type="user">def-0056</fr:addr><fr:route>def-0056.xml</fr:route><fr:title text="Yoneda Embedding">Yoneda Embedding</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>For a locally small category <fr:tex display="inline">C</fr:tex>,
+    we denote <fr:tex display="inline">[C^{\text {op}}, \text {Set}] := \text {Func}(C^{\text {op}}, \text {Set})</fr:tex>
+    for the functor category out of the opposite category of <fr:tex display="inline">C</fr:tex>
+    into <fr:tex display="inline">\text {Set}</fr:tex>, the category of sets.
+    This is also called the <fr:strong>presheaf category</fr:strong> of <fr:tex display="inline">C</fr:tex>.
+    The functor <fr:tex display="inline">Y : C \to  [C^{\text {op}}, \text {Set}]</fr:tex> defined by
+    <fr:tex display="block">         c \mapsto  \hom _C(-, c)     </fr:tex>
+    from <fr:tex display="inline">C</fr:tex> to its presheaf category
+    is called the <fr:strong>Yoneda embedding</fr:strong>,
+    which sends each object of <fr:tex display="inline">c</fr:tex> into 
+    the <fr:link type="local" href="def-0057.xml" addr="def-0057" title="Hom Functor">hom-functor</fr:link> into that object,
+    also called the presheaf represented by <fr:tex display="inline">c</fr:tex>.</fr:p><fr:p>From the <fr:link type="local" href="def-004W.xml" addr="def-004W" title="Exponential">exponential</fr:link> we know that
+    the Yoneda embedding is just the adjunct 
+    of the hom-functor <fr:tex display="inline">\hom _C(-, -)</fr:tex>
+    under the functor category adjunction:
+    <fr:tex display="block">         \hom (C ^{\text {op}} \times  C, \text {Set}) \cong  \hom (C, [C^{\text {op}}, \text {Set}])     </fr:tex>
+    in the <fr:link type="local" href="def-004V.xml" addr="def-004V" title="Monoidal Category">closed symmetric monoidal category</fr:link></fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>580</fr:anchor><fr:addr type="user">thm-0014</fr:addr><fr:route>thm-0014.xml</fr:route><fr:title text="Yoneda Lemma">Yoneda Lemma</fr:title><fr:taxon>Definition</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Let <fr:tex display="inline">C</fr:tex> be a locally small category,
+    with the presheaf category <fr:tex display="inline">[C^{\text {op}}, \text {Set}]</fr:tex>.
+    For any presheaf <fr:tex display="inline">X \in  [C^{\text {op}}, \text {Set}]</fr:tex>,
+    there is a canonical isomorphism
+    <fr:tex display="block">         \hom _{[C^{\text {op}}, \text {Set}]}(\hom _C(-, c), X) \cong  X(c)     </fr:tex>
+    between the hom-set of presheaf morphism
+    from the representable presheaf <fr:tex display="inline">h_c = \hom _C(-,c)</fr:tex> to <fr:tex display="inline">X</fr:tex>,
+    and the value of <fr:tex display="inline">X</fr:tex> at <fr:tex display="inline">c</fr:tex>.</fr:p></fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:mainmatter>
+          <fr:backmatter></fr:backmatter>
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

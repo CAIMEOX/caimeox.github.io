@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1868</fr:anchor>
+    <fr:anchor>1903</fr:anchor>
     <fr:addr type="machine">#244</fr:addr>
     <fr:route>unstable-244.xml</fr:route>
     <fr:title text="Set Operations › Union"><fr:link type="local" href="def-002V.xml" addr="def-002V" title="Set Operations">Set Operations</fr:link> › Union</fr:title>
@@ -21,7 +21,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1869</fr:anchor>
+            <fr:anchor>1904</fr:anchor>
             <fr:addr type="user">def-002V</fr:addr>
             <fr:route>def-002V.xml</fr:route>
             <fr:title text="Set Operations">Set Operations</fr:title>
@@ -32,7 +32,7 @@
             <fr:p>Let <fr:tex display="inline">(X_i)_{i\in  I}</fr:tex> be a family of sets.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>472</fr:anchor>
+                <fr:anchor>479</fr:anchor>
                 <fr:addr type="machine">#244</fr:addr>
                 <fr:route>unstable-244.xml</fr:route>
                 <fr:title text="Union">Union</fr:title>
@@ -47,7 +47,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>473</fr:anchor>
+                <fr:anchor>480</fr:anchor>
                 <fr:addr type="machine">#245</fr:addr>
                 <fr:route>unstable-245.xml</fr:route>
                 <fr:title text="Intersection">Intersection</fr:title>
@@ -61,7 +61,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>474</fr:anchor>
+                <fr:anchor>481</fr:anchor>
                 <fr:addr type="machine">#246</fr:addr>
                 <fr:route>unstable-246.xml</fr:route>
                 <fr:title text="Disjoint Union">Disjoint Union</fr:title>
@@ -76,7 +76,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>475</fr:anchor>
+                <fr:anchor>482</fr:anchor>
                 <fr:addr type="machine">#247</fr:addr>
                 <fr:route>unstable-247.xml</fr:route>
                 <fr:title text="Product">Product</fr:title>
