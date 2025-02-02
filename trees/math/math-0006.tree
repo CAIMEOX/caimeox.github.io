@@ -56,3 +56,29 @@
     equipped with morphisms to the objects #{F(d)} for all #{d\in D},
     such that everything in sight commutes.
 }
+\transclude{def-0057}
+\transclude{def-0052}
+\p{
+    \strong{Representability} is one of the most 
+    fundamental concepts of category theory,
+    with close ties to the notion of 
+    adjoint functor and the Yoneda lemma.
+    It is the crucial concept underlying the idea 
+    of \strong{universal property}.
+}
+\transclude{def-0053}
+\transclude{def-0054}
+\transclude{def-0055}
+\p{
+    Now we reach an important theorem in 
+    category theory, the \strong{Yoneda lemma},
+    an elementary but central result in
+    category theory, sheaf and topos theory.
+    It says that the set of morphism from a
+    [representable presheaf](def-0053) into 
+    an arbitrary presheaf #{X} is in natural bijection
+    with set #{X(c)} assigned by #{X} to the
+    representing object #{c}.
+}
+\transclude{def-0056}
+\transclude{thm-0014}

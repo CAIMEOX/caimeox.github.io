@@ -1,0 +1,16 @@
+\title{Representable Functors}
+\taxon{Definition}
+\import{macros}
+\p{
+    For a locally small category #{C}, 
+    a presheaf on #{C}, which is of the 
+    form #{F : C^{\op} \to \catset},
+    is \strong{representable} if it is
+    natural isomorphic to a hom-functor
+    #{h_X: \hom_C(-, X)} for some object #{X} in #{C},
+    which sends an object #{U\in C} to the hom-set
+    #{\hom_C(U,X)}.
+    The object is determined uniquely up to
+    isomorphism in #{C}, and is called 
+    a \strong{representing object} of the presheaf #{F}.
+}

@@ -38,15 +38,6 @@
    }
  }
 }
-% \def\graph[a]{
-%     \tex{
-%       \usepackage{tikz-cd}
-%       \usepackage{amssymb}
-%     }{
-%         \a
-%     }
-% }
-
 
 \alloc\base/tex-preamble
 
@@ -122,6 +113,7 @@
 \def\mor{\text{Mor}}
 \def\cat{\mathbf{Cat}}
 \def\homset{\hom_\text{set}}
+\def\catset{\text{Set}}
 
 % Universal Algebra
 \def\op{\text{op}}

@@ -1,0 +1,29 @@
+\title{Yoneda Embedding}
+\taxon{Definition}
+\import{macros}
+\p{
+    For a locally small category #{C},
+    we denote #{[C^{\op}, \catset] := \text{Func}(C^{\op}, \catset)}
+    for the functor category out of the opposite category of #{C}
+    into #{\catset}, the category of sets.
+    This is also called the \strong{presheaf category} of #{C}.
+    The functor #{Y : C \to [C^{\op}, \catset]} defined by
+    ##{
+        c \mapsto \hom_C(-, c)
+    }
+    from #{C} to its presheaf category
+    is called the \strong{Yoneda embedding},
+    which sends each object of #{c} into 
+    the [hom-functor](def-0057) into that object,
+    also called the presheaf represented by #{c}.
+}
+\p{
+    From the [exponential](def-004W) we know that
+    the Yoneda embedding is just the adjunct 
+    of the hom-functor #{\hom_C(-, -)}
+    under the functor category adjunction:
+    ##{
+        \hom(C ^{\op} \times C, \catset) \cong \hom(C, [C^{\op}, \catset])
+    }
+    in the [closed symmetric monoidal category](def-004V)
+}

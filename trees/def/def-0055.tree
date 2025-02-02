@@ -1,0 +1,19 @@
+\title{Adjunction Unit and Counit}
+\taxon{Definition}
+\import{macros}
+\p{
+    Consider a pair of adjoint functors
+    #{L \dashv R}, #{\forall c\in C} the 
+    adjunct of the identity morphism #{\id_{L(c)}}
+    is the \strong{unit morphism} of the adjunction
+    at that object, denoted by
+    ##{
+        \eta_c = \hat{\id_{L(c)}} : c \to R(L(c))
+    }
+    and the adjunct of the identity morphism #{\id_{R(d)}}
+    is the \strong{counit morphism} of the adjunction
+    at that object, denoted by
+    ##{
+        \varepsilon_d = \id_{R(d)} : L(R(d)) \to d
+    }
+}

@@ -1,0 +1,46 @@
+\title{Monad}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{\text{End} = ([\catset, \catset], \circ, \text{Id}, \alpha, \lambda, \rho)}
+    be a (strict, i.e. #{\alpha,\lambda,\rho} are identities) 
+    monoidal category of endofunctors.
+    A monoid in this category consists of 
+    \ul{
+        \li{an endofunctor #{M : \catset \to \catset}}
+        \li{a natural transformation #{\mu : M \circ M \to M}}
+        \li{a unit #{e : \text{Id} \to M}}
+    }
+    such that the following diagrams commute:
+}
+\graph{
+    % https://q.uiver.app/#q=WzAsNSxbMCwwLCIoTSBcXGNpcmMgTSlcXGNpcmMgTSJdLFswLDIsIk1cXGNpcmMgKE1cXGNpcmMgTSkiXSxbMiwyLCJNXFxjaXJjIE0iXSxbNCwwLCJNXFxjaXJjIE0iXSxbNCwyLCJNIl0sWzIsNCwibSIsMl0sWzEsMiwiTW0iLDJdLFswLDMsIm1NIiwyXSxbMyw0LCJtIl0sWzAsMSwiPSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+    \begin{tikzcd}
+        {(M \circ M)\circ M} &&&& {M\circ M} \\
+        \\
+        {M\circ (M\circ M)} && {M\circ M} && M
+        \arrow["mM"', from=1-1, to=1-5]
+        \arrow[equal, from=1-1, to=3-1]
+        \arrow["m", from=1-5, to=3-5]
+        \arrow["Mm"', from=3-1, to=3-3]
+        \arrow["m"', from=3-3, to=3-5]
+    \end{tikzcd}
+}
+\graph{
+    % https://q.uiver.app/#q=WzAsNCxbMCwwLCJNXFxjaXJjIE0iXSxbMiwwLCJNXFxjaXJjIFxcdGV4dHtJZH0iXSxbMCwyLCJcXHRleHR7SWR9XFxjaXJjIE0iXSxbMiwyLCJNIl0sWzEsMCwiTWUiXSxbMiwwLCJlTSJdLFswLDMsIm0iXSxbMSwzLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMywiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+    \begin{tikzcd}
+        {M\circ M} && {M\circ \text{Id}} \\
+        \\
+        {\text{Id}\circ M} && M
+        \arrow["m", from=1-1, to=3-3]
+        \arrow["Me", from=1-3, to=1-1]
+        \arrow[equal, from=1-3, to=3-3]
+        \arrow["eM", from=3-1, to=1-1]
+        \arrow[equal, from=3-1, to=3-3]
+    \end{tikzcd}
+}
+\p{
+    A monoid in #{\text{End}} is called a 
+    \strong{monad}. That is where the slogan 
+    "a monad is a monoid in the category of endofunctors" comes from.
+}

@@ -1,0 +1,26 @@
+\title{Adjoint Functors}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{C} and #{D} be categories,
+    let #{L : C \to D} and #{R : D \to C} be functors,
+    then this is called a pair of \strong{adjoint functors}
+    with #{L} \strong{left adjoint} and #{R} \strong{right adjoint},
+    denoted #{L \dashv R},
+    if there exists a [natural isomorphism](def-003J)
+    between the hom-functors of the following form:
+    ##{
+        \hom_D(L(-), -) \cong \hom_C(-, R(-))
+    }
+    which means #{\forall c\in C, d\in D} there is a bijection of hom-sets:
+    ##{
+        \begin{align*}
+            \hom_D(L(c), d) &\xrightarrow{\cong} \hom_C(c, R(d)) \\ 
+            \{ L(c) \xrightarrow{f} d \} &\mapsto \{ c \xrightarrow{\hat{f}} R(d) \}
+        \end{align*}
+    }
+    which is natural in both #{c} and #{d}.
+    This isomorphism is the \strong{adjunction isomorphism} and the 
+    image #{\bar{f}} of a morphism #{f} under this isomorphism 
+    is called the \strong{adjunct} of #{f}, and vice versa.
+}

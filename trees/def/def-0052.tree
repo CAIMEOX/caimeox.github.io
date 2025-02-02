@@ -1,0 +1,13 @@
+\title{Presheaf}
+\taxon{Definition}
+\import{macros}
+\p{
+    A \strong{presheaf} on a small category #{C} is a [functor](def-003G)
+    ##{
+        F : C^{\op} \to \catset
+    }
+    from the opposite category of #{C} to the category of sets.
+    Similar to category of functors,
+    we can define the category of presheaves on #{C}, 
+    denoted #{\catset^{C^{\op}}}.
+}

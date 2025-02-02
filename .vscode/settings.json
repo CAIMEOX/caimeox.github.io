@@ -9,6 +9,7 @@
   "cSpell.words": [
     "arities",
     "bifunctor",
+    "counit",
     "endofunctors",
     "functors",
     "monic",
@@ -17,7 +18,10 @@
     "morphism",
     "morphisms",
     "nullary",
-    "semiring"
+    "presheaf",
+    "presheaves",
+    "semiring",
+    "Yoneda"
   ],
   "liveServer.settings.port": 5501
 }

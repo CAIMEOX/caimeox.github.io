@@ -1,0 +1,15 @@
+\title{Yoneda Lemma}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{C} be a locally small category,
+    with the presheaf category #{[C^{\op}, \catset]}.
+    For any presheaf #{X \in [C^{\op}, \catset]},
+    there is a canonical isomorphism
+    ##{
+        \hom_{[C^{\op}, \catset]}(\hom_C(-, c), X) \cong X(c)
+    }
+    between the hom-set of presheaf morphism
+    from the representable presheaf #{h_c = \hom_C(-,c)} to #{X},
+    and the value of #{X} at #{c}.
+}

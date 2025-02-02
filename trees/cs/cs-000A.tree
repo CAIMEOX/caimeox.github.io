@@ -88,3 +88,26 @@
         endomorphisms whenever #{M} is an exponent.
     }
 }
+\subtree{
+    \title{Monads as Monoids}
+    \transclude{def-0051}
+    \p{
+        The monad can be implemented as 
+        the type class \code{Triple} in Haskell.
+    }
+    \codeblock{language-haskell}{\startverb
+        class Functor m => Triple m where
+            unit :: a -> m a
+            join :: m (m a) -> m a
+    \stopverb}
+    \p{
+        The familar implementation is the Kleisli extension one:
+        (Note that one can be obtained from the other by 
+        taking \code{unit = return} and \code{join = (>>= id)}, \code{(>>= f) = join . fmap f})
+    }
+    \codeblock{language-haskell}{\startverb
+        class Monad m where
+            return :: a -> m a
+            (>>=) :: m a -> (a -> m b) -> m b
+    \stopverb}
+}
