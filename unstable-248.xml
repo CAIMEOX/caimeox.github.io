@@ -4,7 +4,7 @@
     <fr:anchor>971</fr:anchor>
     <fr:addr type="machine">#248</fr:addr>
     <fr:route>unstable-248.xml</fr:route>
-    <fr:title text="Simply Typed Lambda Calculus and Representation Theorems › Typing Judgment"><fr:link type="local" href="cs-0005.xml" addr="cs-0005" title="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</fr:link> › Typing Judgment</fr:title>
+    <fr:title text="Simply Typed Lambda Calculus and Representation Theorems › The Limits of Simple Types"><fr:link type="local" href="cs-0005.xml" addr="cs-0005" title="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</fr:link> › The Limits of Simple Types</fr:title>
     <fr:date>
       <fr:year>2024</fr:year>
       <fr:month>3</fr:month>
@@ -13,17 +13,20 @@
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>Wem can formalize judgments about expressions and types using <fr:strong>inference rules</fr:strong>.
-        For instance:
-        <fr:tex display="block">             \frac {                 e_1:\tau _1\quad  e_2:\tau _2             }{                 e_1\space  e_2:\tau _2             }         </fr:tex>
-        The application <fr:tex display="inline">e_1\space  e_2</fr:tex> has type <fr:tex display="inline">\tau _2</fr:tex> if <fr:tex display="inline">e_1</fr:tex> has type 
-        <fr:tex display="inline">\tau _1\to \tau _2</fr:tex> and <fr:tex display="inline">e_2</fr:tex> has type <fr:tex display="inline">\tau _1</fr:tex>.</fr:p>
-    <fr:p>We can record the types of variable in a <fr:strong>typing context</fr:strong>.
-        <fr:tex display="block">             \Gamma  :\equiv  x_1:\tau _1,\ldots ,x_n:\tau _n         </fr:tex>
-        And we always assume that all variables declared in a context are distinct.
-        This avoids any ambiguity when we try to determine the type of a variable.
-        The typing judgment now becomes
-        <fr:tex display="block">             \Gamma \vdash  e:\tau          </fr:tex></fr:p>
+    <fr:p>Are there expressions that cannot be typed in the simple type system?
+        Yes, for example, <fr:tex display="inline">\Omega =\lambda  x.x\space  x</fr:tex> cannot be typed.
+        But how do we prove that  <fr:tex display="inline">\Omega </fr:tex> cannot be typed?</fr:p>
+    <fr:p>We can apply the typing rules and get a contradiction.
+        <fr:tex display="inline">\Omega </fr:tex> is a lambda abstraction hence we can assume that it has type <fr:tex display="inline">\tau \to \sigma </fr:tex>.
+        Then <fr:tex display="inline">x</fr:tex> has type <fr:tex display="inline">\tau </fr:tex> and <fr:tex display="inline">x\space  x</fr:tex> has type <fr:tex display="inline">\sigma </fr:tex>.
+        By the application of <fr:tex display="inline">x\space  x</fr:tex> we get that <fr:tex display="inline">\tau =\tau \to \sigma </fr:tex>, 
+        which does not exist.</fr:p>
+    <fr:p>To recover from this in full generality we need <fr:strong>recursive types</fr:strong>.
+        <fr:tex display="block">             \tau  =F\tau          </fr:tex>
+        where <fr:tex display="inline">F=\lambda \alpha .\alpha \to \sigma </fr:tex> and we might have a solution with 
+        <fr:tex display="inline">\tau =Y\space  F</fr:tex>. But such solution is not available to us. We do not have 
+        function from types to types <fr:tex display="inline">F</fr:tex> and a type level Y combinator.
+        However it is ok to construct recursive types (we would do later).</fr:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -61,9 +64,9 @@
     <fr:tex display="block">         \begin {align*}             \text {true} &amp;= \lambda  x.\lambda  y.x : \alpha \to (\beta \to \alpha )\\             \text {false} &amp;= \lambda  x.\lambda  y.y : \alpha \to (\beta \to \beta )         \end {align*}     </fr:tex></fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>605</fr:anchor>
-                <fr:addr type="machine">#248</fr:addr>
-                <fr:route>unstable-248.xml</fr:route>
+                <fr:anchor>700</fr:anchor>
+                <fr:addr type="machine">#247</fr:addr>
+                <fr:route>unstable-247.xml</fr:route>
                 <fr:title text="Typing Judgment">Typing Judgment</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -89,9 +92,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>606</fr:anchor>
-                <fr:addr type="machine">#249</fr:addr>
-                <fr:route>unstable-249.xml</fr:route>
+                <fr:anchor>701</fr:anchor>
+                <fr:addr type="machine">#248</fr:addr>
+                <fr:route>unstable-248.xml</fr:route>
                 <fr:title text="The Limits of Simple Types">The Limits of Simple Types</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -120,9 +123,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>607</fr:anchor>
-                <fr:addr type="machine">#250</fr:addr>
-                <fr:route>unstable-250.xml</fr:route>
+                <fr:anchor>702</fr:anchor>
+                <fr:addr type="machine">#249</fr:addr>
+                <fr:route>unstable-249.xml</fr:route>
                 <fr:title text="Characterizing the Booleans">Characterizing the Booleans</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -135,9 +138,9 @@
                 <fr:p>We now show that the representation of the booleans is correct.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>608</fr:anchor>
-                    <fr:addr type="machine">#251</fr:addr>
-                    <fr:route>unstable-251.xml</fr:route>
+                    <fr:anchor>703</fr:anchor>
+                    <fr:addr type="machine">#250</fr:addr>
+                    <fr:route>unstable-250.xml</fr:route>
                     <fr:title text="Representation of Booleans">Representation of Booleans</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -156,7 +159,7 @@
     correctness of the representation of the booleans.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>609</fr:anchor>
+                    <fr:anchor>704</fr:anchor>
                     <fr:addr type="user">def-003O</fr:addr>
                     <fr:route>def-003O.xml</fr:route>
                     <fr:title text="Weak Normalization">Weak Normalization</fr:title>
@@ -174,9 +177,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>610</fr:anchor>
-                <fr:addr type="machine">#252</fr:addr>
-                <fr:route>unstable-252.xml</fr:route>
+                <fr:anchor>705</fr:anchor>
+                <fr:addr type="machine">#251</fr:addr>
+                <fr:route>unstable-251.xml</fr:route>
                 <fr:title text="Reduction revised">Reduction revised</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -204,9 +207,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>611</fr:anchor>
-                <fr:addr type="machine">#253</fr:addr>
-                <fr:route>unstable-253.xml</fr:route>
+                <fr:anchor>706</fr:anchor>
+                <fr:addr type="machine">#252</fr:addr>
+                <fr:route>unstable-252.xml</fr:route>
                 <fr:title text="Normal Forms and Reduction">Normal Forms and Reduction</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -224,7 +227,7 @@
                 <fr:p>We have theorem that ensures that the first property holds. (Proof is omitted).</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>612</fr:anchor>
+                    <fr:anchor>707</fr:anchor>
                     <fr:addr type="user">thm-0010</fr:addr>
                     <fr:route>thm-0010.xml</fr:route>
                     <fr:title text="Reduction and normal forms">Reduction and normal forms</fr:title>

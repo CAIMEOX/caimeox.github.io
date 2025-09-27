@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1148</fr:anchor>
+    <fr:anchor>1152</fr:anchor>
     <fr:addr type="machine">#326</fr:addr>
     <fr:route>unstable-326.xml</fr:route>
-    <fr:title text="Associator › 
-    Construction of Associator
-"><fr:link type="local" href="def-002W.xml" addr="def-002W" title="Associator">Associator</fr:link> › 
-    <fr:strong>Construction of Associator</fr:strong>
+    <fr:title text="Matrix Multiplication › 
+    Derivation
+"><fr:link type="local" href="def-002T.xml" addr="def-002T" title="Matrix Multiplication">Matrix Multiplication</fr:link> › 
+    <fr:strong>Derivation</fr:strong>
 </fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    By definition it suffices to show that
-    <fr:tex display="block">         \Pi _{(z:A)}\Pi _{(q:x=_Az)}         \Pi _{(w:A)}\Pi _{(r:z=_Aw)}         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    Let <fr:tex display="inline">q:x=_Az</fr:tex> and <fr:tex display="inline">r:z=_Aw</fr:tex>. By computation rule of identity types
-    <fr:tex display="block">         \text {refl}_x\cdot  q \equiv  q     </fr:tex>
-    Then we can conclude that
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r \equiv  q\cdot  r     </fr:tex>
-    similarly <fr:tex display="inline">\text {refl}_x\cdot  (q\cdot  r) \equiv  q\cdot  r</fr:tex>.
-    Hence we have the left and right side
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    are judgementally equal, 
-    so we can simply define the associator as
-    <fr:tex display="block">         \text {assoc}(\text {refl}_x,q,r) :\equiv  \text {refl}_{q\cdot  r}     </fr:tex>
+    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
+    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
+    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
+    <fr:tex display="block">         \begin {align*}             (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\             &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\             &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\             &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\         \end {align*}     </fr:tex>
+    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
+    <fr:tex display="block">         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
 </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -34,35 +28,27 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1149</fr:anchor>
-            <fr:addr type="user">def-002W</fr:addr>
-            <fr:route>def-002W.xml</fr:route>
-            <fr:title text="Associator">Associator</fr:title>
+            <fr:anchor>1153</fr:anchor>
+            <fr:addr type="user">def-002T</fr:addr>
+            <fr:route>def-002T.xml</fr:route>
+            <fr:title text="Matrix Multiplication">Matrix Multiplication</fr:title>
             <fr:taxon>Definition</fr:taxon>
             <fr:authors></fr:authors>
           </fr:frontmatter>
-          <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
-    These are 3 consecutive identifications
-    <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
-    we define the <fr:strong>associator</fr:strong>:
-    <fr:tex display="block">         \text {assoc}: (p,q,r): (p\cdot  q)\cdot  r = p\cdot  (q\cdot  r)     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>768</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
-    Construction of Associator
+          <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> be a <fr:tex display="inline">n\times  p</fr:tex> matrix.
+    Then <fr:tex display="inline">AC</fr:tex> is defined as the <fr:tex display="inline">m\times  p</fr:tex> matrix <fr:tex display="inline">C</fr:tex> such that
+    <fr:tex display="block">         C_{ij} = \sum _{k=1}^n A_{ik}B_{kj}     </fr:tex></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>651</fr:anchor><fr:addr type="machine">#326</fr:addr><fr:route>unstable-326.xml</fr:route><fr:title text="
+    Derivation
 ">
-    <fr:strong>Construction of Associator</fr:strong>
+    <fr:strong>Derivation</fr:strong>
 </fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
-    By definition it suffices to show that
-    <fr:tex display="block">         \Pi _{(z:A)}\Pi _{(q:x=_Az)}         \Pi _{(w:A)}\Pi _{(r:z=_Aw)}         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    Let <fr:tex display="inline">q:x=_Az</fr:tex> and <fr:tex display="inline">r:z=_Aw</fr:tex>. By computation rule of identity types
-    <fr:tex display="block">         \text {refl}_x\cdot  q \equiv  q     </fr:tex>
-    Then we can conclude that
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r \equiv  q\cdot  r     </fr:tex>
-    similarly <fr:tex display="inline">\text {refl}_x\cdot  (q\cdot  r) \equiv  q\cdot  r</fr:tex>.
-    Hence we have the left and right side
-    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
-    are judgementally equal, 
-    so we can simply define the associator as
-    <fr:tex display="block">         \text {assoc}(\text {refl}_x,q,r) :\equiv  \text {refl}_{q\cdot  r}     </fr:tex>
+    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
+    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
+    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
+    <fr:tex display="block">         \begin {align*}             (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\             &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\             &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\             &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\         \end {align*}     </fr:tex>
+    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
+    <fr:tex display="block">         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 </fr:mainmatter>
           <fr:backmatter></fr:backmatter>

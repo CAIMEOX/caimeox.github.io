@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>902</fr:anchor>
+    <fr:anchor>900</fr:anchor>
     <fr:addr type="machine">#315</fr:addr>
     <fr:route>unstable-315.xml</fr:route>
-    <fr:title text="Vector Calculus and Geometry of Space › Volume and Determinants › Properties of Volume"><fr:link type="local" href="unstable-314.xml" addr="#314" title="Vector Calculus and Geometry of Space › Volume and Determinants"><fr:link type="local" href="math-0007.xml" addr="math-0007" title="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:link> › Volume and Determinants</fr:link> › Properties of Volume</fr:title>
+    <fr:title text="Vector Calculus and Geometry of Space › Volume and Determinants › Derived Properties of Volume Function"><fr:link type="local" href="unstable-313.xml" addr="#313" title="Vector Calculus and Geometry of Space › Volume and Determinants"><fr:link type="local" href="math-0007.xml" addr="math-0007" title="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:link> › Volume and Determinants</fr:link> › Derived Properties of Volume Function</fr:title>
     <fr:date>
       <fr:year>2024</fr:year>
       <fr:month>4</fr:month>
@@ -13,10 +13,11 @@
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:ul><fr:li><fr:tex display="inline"> D(I) = I </fr:tex> where <fr:tex display="inline">I = [e_1, e_2, \cdots , e_n]</fr:tex> is the identity matrix.</fr:li>
-            <fr:li><fr:tex display="inline"> D(v_1, v_2, \cdots , v_n) = 0 </fr:tex> if <fr:tex display="inline">v_i = v_j</fr:tex> for any <fr:tex display="inline">i\neq  j</fr:tex>.</fr:li>
-            <fr:li><fr:tex display="inline"> D(v_1, \cdots , v_{j-1}, v+cw, v_{j+1}, \cdots , v_n) \\                  = D(v_1, \cdots , v_{j-1}, v, v_{j+1}, \cdots , v_n) + cD(v_1, \cdots , v_{j-1}, w, v_{j+1}, \cdots , v_n) </fr:tex>
-                for any <fr:tex display="inline">1 \leq  j \leq  n</fr:tex>, that is, <fr:tex display="inline">D</fr:tex> is linear.</fr:li></fr:ul>
+    <fr:ul><fr:li><fr:tex display="inline">D</fr:tex> is alternating, if we switch any two vectors the sign changes.
+                <fr:tex display="block">                     D(v_1, \cdots , v_i, \cdots , v_j, \cdots , v_n) = -D(v_1, \cdots , v_j, \cdots , v_i, \cdots , v_n)                 </fr:tex></fr:li> 
+            <fr:li>If <fr:tex display="inline">v_1, v_2, \cdots , v_n</fr:tex> are <fr:link type="local" href="def-000Q.xml" addr="def-000Q" title="Linearly dependent">linear dependent</fr:link> then
+                <fr:tex display="block">                     D(v_1, v_2, \cdots , v_n) = 0                 </fr:tex></fr:li>
+            <fr:li>Adding a multiple of one vector to another does not change the determinant.</fr:li></fr:ul>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -27,7 +28,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>903</fr:anchor>
+            <fr:anchor>901</fr:anchor>
             <fr:addr type="user">math-0007</fr:addr>
             <fr:route>math-0007.xml</fr:route>
             <fr:title text="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:title>
@@ -44,9 +45,9 @@
     Refer to <fr:link type="external" href="A%20Visual%20Introduction%20to%20Differential%20Forms%20and%20Calculus%20on%20Manifolds">df-cm-2018</fr:link>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>665</fr:anchor>
-                <fr:addr type="machine">#312</fr:addr>
-                <fr:route>unstable-312.xml</fr:route>
+                <fr:anchor>751</fr:anchor>
+                <fr:addr type="machine">#311</fr:addr>
+                <fr:route>unstable-311.xml</fr:route>
                 <fr:title text="Review of Vector Spaces">Review of Vector Spaces</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -59,7 +60,7 @@
                 <fr:p>We now start with introducing the vector space over the field of real numbers <fr:tex display="inline">\mathbb {R}</fr:tex>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>666</fr:anchor>
+                    <fr:anchor>752</fr:anchor>
                     <fr:addr type="user">def-000H</fr:addr>
                     <fr:route>def-000H.xml</fr:route>
                     <fr:title text="Vector Space">Vector Space</fr:title>
@@ -93,7 +94,7 @@
         Now we can give formal definition of the matrix representation of a linear transformation.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>667</fr:anchor>
+                    <fr:anchor>753</fr:anchor>
                     <fr:addr type="user">def-003W</fr:addr>
                     <fr:route>def-003W.xml</fr:route>
                     <fr:title text="Matrix Representation of Linear Transformation over {R}^n">Matrix Representation of Linear Transformation over <fr:tex display="inline">\mathbb {R}^n</fr:tex></fr:title>
@@ -125,9 +126,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>668</fr:anchor>
-                <fr:addr type="machine">#313</fr:addr>
-                <fr:route>unstable-313.xml</fr:route>
+                <fr:anchor>754</fr:anchor>
+                <fr:addr type="machine">#312</fr:addr>
+                <fr:route>unstable-312.xml</fr:route>
                 <fr:title text="Dot Products">Dot Products</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -142,7 +143,7 @@
         Dot product is also used to define lengths and angles.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>669</fr:anchor>
+                    <fr:anchor>755</fr:anchor>
                     <fr:addr type="user">def-0041</fr:addr>
                     <fr:route>def-0041.xml</fr:route>
                     <fr:title text="Dot Product (Coordinate Form)">Dot Product (Coordinate Form)</fr:title>
@@ -166,7 +167,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>670</fr:anchor>
+                    <fr:anchor>756</fr:anchor>
                     <fr:addr type="user">def-0042</fr:addr>
                     <fr:route>def-0042.xml</fr:route>
                     <fr:title text="Dot Product (Geometric Form)">Dot Product (Geometric Form)</fr:title>
@@ -197,9 +198,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>671</fr:anchor>
-                <fr:addr type="machine">#314</fr:addr>
-                <fr:route>unstable-314.xml</fr:route>
+                <fr:anchor>757</fr:anchor>
+                <fr:addr type="machine">#313</fr:addr>
+                <fr:route>unstable-313.xml</fr:route>
                 <fr:title text="Volume and Determinants">Volume and Determinants</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -229,9 +230,9 @@
         to a real number which is the volume of <fr:tex display="inline">\mathscr {P}</fr:tex>. Now we present the three properties in mathematical form.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>672</fr:anchor>
-                    <fr:addr type="machine">#315</fr:addr>
-                    <fr:route>unstable-315.xml</fr:route>
+                    <fr:anchor>758</fr:anchor>
+                    <fr:addr type="machine">#314</fr:addr>
+                    <fr:route>unstable-314.xml</fr:route>
                     <fr:title text="Properties of Volume">Properties of Volume</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -252,9 +253,9 @@
         The first property is that the volumes are signed.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>673</fr:anchor>
-                    <fr:addr type="machine">#316</fr:addr>
-                    <fr:route>unstable-316.xml</fr:route>
+                    <fr:anchor>759</fr:anchor>
+                    <fr:addr type="machine">#315</fr:addr>
+                    <fr:route>unstable-315.xml</fr:route>
                     <fr:title text="Derived Properties of Volume Function">Derived Properties of Volume Function</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -275,7 +276,7 @@
                 <fr:p>We almost ready to derive the formula for determinant. The final ingredient we need to do is <fr:strong>permutations</fr:strong>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>674</fr:anchor>
+                    <fr:anchor>760</fr:anchor>
                     <fr:addr type="user">def-003Y</fr:addr>
                     <fr:route>def-003Y.xml</fr:route>
                     <fr:title text="Permutation">Permutation</fr:title>
@@ -295,7 +296,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>675</fr:anchor>
+                    <fr:anchor>761</fr:anchor>
                     <fr:addr type="user">def-003Z</fr:addr>
                     <fr:route>def-003Z.xml</fr:route>
                     <fr:title text="Transposition">Transposition</fr:title>
@@ -314,7 +315,7 @@
         which is called the <fr:strong>parity</fr:strong> of the permutation.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>676</fr:anchor>
+                    <fr:anchor>762</fr:anchor>
                     <fr:addr type="user">def-0040</fr:addr>
                     <fr:route>def-0040.xml</fr:route>
                     <fr:title text="Sign of Permutation">Sign of Permutation</fr:title>
@@ -345,9 +346,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>677</fr:anchor>
-                <fr:addr type="machine">#317</fr:addr>
-                <fr:route>unstable-317.xml</fr:route>
+                <fr:anchor>763</fr:anchor>
+                <fr:addr type="machine">#316</fr:addr>
+                <fr:route>unstable-316.xml</fr:route>
                 <fr:title text="Derivatives of Multivariable Functions">Derivatives of Multivariable Functions</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>

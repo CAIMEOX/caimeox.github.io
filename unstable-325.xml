@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1146</fr:anchor>
+    <fr:anchor>1150</fr:anchor>
     <fr:addr type="machine">#325</fr:addr>
     <fr:route>unstable-325.xml</fr:route>
-    <fr:title text="Unit Law Operations › 
-    Construction of Unit Law
-"><fr:link type="local" href="def-002X.xml" addr="def-002X" title="Unit Law Operations">Unit Law Operations</fr:link> › 
-    <fr:strong>Construction of Unit Law</fr:strong>
+    <fr:title text="Associator › 
+    Construction of Associator
+"><fr:link type="local" href="def-002W.xml" addr="def-002W" title="Associator">Associator</fr:link> › 
+    <fr:strong>Construction of Associator</fr:strong>
 </fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    By elimination it suffices to construct:
-    <fr:tex display="block">         \begin {align*}             \text {left-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\             \text {right-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x         \end {align*}     </fr:tex>
-    In both cases we need only to construct <fr:tex display="inline">\text {refl}_{\text {refl}_x}</fr:tex>.
+    By definition it suffices to show that
+    <fr:tex display="block">         \Pi _{(z:A)}\Pi _{(q:x=_Az)}         \Pi _{(w:A)}\Pi _{(r:z=_Aw)}         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
+    Let <fr:tex display="inline">q:x=_Az</fr:tex> and <fr:tex display="inline">r:z=_Aw</fr:tex>. By computation rule of identity types
+    <fr:tex display="block">         \text {refl}_x\cdot  q \equiv  q     </fr:tex>
+    Then we can conclude that
+    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r \equiv  q\cdot  r     </fr:tex>
+    similarly <fr:tex display="inline">\text {refl}_x\cdot  (q\cdot  r) \equiv  q\cdot  r</fr:tex>.
+    Hence we have the left and right side
+    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
+    are judgementally equal, 
+    so we can simply define the associator as
+    <fr:tex display="block">         \text {assoc}(\text {refl}_x,q,r) :\equiv  \text {refl}_{q\cdot  r}     </fr:tex>
 </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -25,24 +34,35 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1147</fr:anchor>
-            <fr:addr type="user">def-002X</fr:addr>
-            <fr:route>def-002X.xml</fr:route>
-            <fr:title text="Unit Law Operations">Unit Law Operations</fr:title>
+            <fr:anchor>1151</fr:anchor>
+            <fr:addr type="user">def-002W</fr:addr>
+            <fr:route>def-002W.xml</fr:route>
+            <fr:title text="Associator">Associator</fr:title>
             <fr:taxon>Definition</fr:taxon>
             <fr:authors></fr:authors>
           </fr:frontmatter>
           <fr:mainmatter><fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
-    We defined the <fr:strong>unit law</fr:strong> operations for <fr:tex display="inline">x=_Ay</fr:tex>:
-    <fr:tex display="block">         \begin {align*}             \text {left-unit} &amp; : (x=_Ay)\to  (\text {refl}_x\cdot  x = x) \\             \text {right-unit} &amp; : (x=_Ay)\to  (x\cdot \text {refl}_y = x)         \end {align*}     </fr:tex></fr:p>
-    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>770</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
-    Construction of Unit Law
+    These are 3 consecutive identifications
+    <fr:tex display="block">         p:x=_Ay,q:y=_Az, r:z=_Aw     </fr:tex>
+    we define the <fr:strong>associator</fr:strong>:
+    <fr:tex display="block">         \text {assoc}: (p,q,r): (p\cdot  q)\cdot  r = p\cdot  (q\cdot  r)     </fr:tex></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>462</fr:anchor><fr:addr type="machine">#325</fr:addr><fr:route>unstable-325.xml</fr:route><fr:title text="
+    Construction of Associator
 ">
-    <fr:strong>Construction of Unit Law</fr:strong>
+    <fr:strong>Construction of Associator</fr:strong>
 </fr:title><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
-    By elimination it suffices to construct:
-    <fr:tex display="block">         \begin {align*}             \text {left-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\             \text {right-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x         \end {align*}     </fr:tex>
-    In both cases we need only to construct <fr:tex display="inline">\text {refl}_{\text {refl}_x}</fr:tex>.
+    By definition it suffices to show that
+    <fr:tex display="block">         \Pi _{(z:A)}\Pi _{(q:x=_Az)}         \Pi _{(w:A)}\Pi _{(r:z=_Aw)}         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
+    Let <fr:tex display="inline">q:x=_Az</fr:tex> and <fr:tex display="inline">r:z=_Aw</fr:tex>. By computation rule of identity types
+    <fr:tex display="block">         \text {refl}_x\cdot  q \equiv  q     </fr:tex>
+    Then we can conclude that
+    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r \equiv  q\cdot  r     </fr:tex>
+    similarly <fr:tex display="inline">\text {refl}_x\cdot  (q\cdot  r) \equiv  q\cdot  r</fr:tex>.
+    Hence we have the left and right side
+    <fr:tex display="block">         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)     </fr:tex>
+    are judgementally equal, 
+    so we can simply define the associator as
+    <fr:tex display="block">         \text {assoc}(\text {refl}_x,q,r) :\equiv  \text {refl}_{q\cdot  r}     </fr:tex>
 </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree>
 </fr:mainmatter>
           <fr:backmatter></fr:backmatter>

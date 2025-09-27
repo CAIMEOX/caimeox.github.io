@@ -4,7 +4,7 @@
     <fr:anchor>898</fr:anchor>
     <fr:addr type="machine">#316</fr:addr>
     <fr:route>unstable-316.xml</fr:route>
-    <fr:title text="Vector Calculus and Geometry of Space › Volume and Determinants › Derived Properties of Volume Function"><fr:link type="local" href="unstable-314.xml" addr="#314" title="Vector Calculus and Geometry of Space › Volume and Determinants"><fr:link type="local" href="math-0007.xml" addr="math-0007" title="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:link> › Volume and Determinants</fr:link> › Derived Properties of Volume Function</fr:title>
+    <fr:title text="Vector Calculus and Geometry of Space › Derivatives of Multivariable Functions"><fr:link type="local" href="math-0007.xml" addr="math-0007" title="Vector Calculus and Geometry of Space">Vector Calculus and Geometry of Space</fr:link> › Derivatives of Multivariable Functions</fr:title>
     <fr:date>
       <fr:year>2024</fr:year>
       <fr:month>4</fr:month>
@@ -13,11 +13,51 @@
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:ul><fr:li><fr:tex display="inline">D</fr:tex> is alternating, if we switch any two vectors the sign changes.
-                <fr:tex display="block">                     D(v_1, \cdots , v_i, \cdots , v_j, \cdots , v_n) = -D(v_1, \cdots , v_j, \cdots , v_i, \cdots , v_n)                 </fr:tex></fr:li> 
-            <fr:li>If <fr:tex display="inline">v_1, v_2, \cdots , v_n</fr:tex> are <fr:link type="local" href="def-000Q.xml" addr="def-000Q" title="Linearly dependent">linear dependent</fr:link> then
-                <fr:tex display="block">                     D(v_1, v_2, \cdots , v_n) = 0                 </fr:tex></fr:li>
-            <fr:li>Adding a multiple of one vector to another does not change the determinant.</fr:li></fr:ul>
+    <fr:p>In this section we will introduce the idea of the derivative of a multivariable function. 
+        Recall that a function <fr:tex display="inline">f:\mathbb {R}\to \mathbb {R}</fr:tex> the derivative of <fr:tex display="inline">f</fr:tex> at <fr:tex display="inline">x_0\in \mathbb {R}</fr:tex> is given by
+        <fr:tex display="block">             f&apos;(x_0) = \lim _{h\to  0} \frac {f(x_0+h) - f(x_0)}{h}         </fr:tex>
+        if the limit exists. Now let&apos;s do some transformations:
+        <fr:tex display="block">             \begin {align*}                 &amp; f&apos;(x_0) = \lim _{h\to  0} \frac {f(x_0+h) - f(x_0)}{h} \\                 \implies  &amp; \lim _{h\to  0} \frac {f(x_0+h) - f(x_0) -f&apos;(x_0)h }{h} = 0 \\                 \implies  &amp; \lim _{x\to  x_0} \frac {f(x) - f(x_0) - f&apos;(x_0)(x-x_0)}{x-x_0} = 0 \\                  \implies  &amp; \lim _{x\to  x_0} \frac {|f(x) - f(x_0) - f&apos;(x_0)(x-x_0)|}{|x-x_0|} = 0             \end {align*}         </fr:tex></fr:p>
+    <fr:p>Since <fr:tex display="inline">f&apos;(x_0)</fr:tex> represents the slope of the line tangent to the graph of <fr:tex display="inline">f</fr:tex> at <fr:tex display="inline">(x_0, f(x_0))</fr:tex>,
+        differentiability of <fr:tex display="inline">f</fr:tex> at <fr:tex display="inline">x_0</fr:tex> means that there exists a number <fr:tex display="inline">m</fr:tex> st
+        <fr:tex display="block">             \lim _{x\to  x_0} \frac {|f(x) - f(x_0) - m(x-x_0)|}{|x-x_0|} = 0         </fr:tex>
+        Now consider the function <fr:tex display="inline">T:\mathbb {R}\to \mathbb {R}</fr:tex> where <fr:tex display="inline">T(s) = ms</fr:tex>
+        <fr:tex display="block">             T(s+t) = m(s+t) = ms + mt = T(s) + T(t)             \\              T(cs) = mcs = c(ms) = cT(s)         </fr:tex>
+        then <fr:tex display="inline">T</fr:tex> is a linear transformation. In fact <fr:tex display="inline">T</fr:tex> is the linear function that most closely approximates the 
+        function <fr:tex display="inline">f</fr:tex> at the point <fr:tex display="inline">(x_0, f(x_0))</fr:tex>. So for <fr:tex display="inline">x</fr:tex> values that are very close to <fr:tex display="inline">x_0</fr:tex> we have
+        <fr:tex display="block">             f(x) \approx  m(x-x_0) + f(x_0)         </fr:tex></fr:p>
+    <fr:p>Now let&apos;s generalize the concept of derivatives to functions of the form <fr:tex display="inline">f:\mathbb {R}^n\to \mathbb {R}^m</fr:tex>.
+        We assume the function <fr:tex display="inline">f</fr:tex> has the form
+        <fr:tex display="block">             \begin {align*}                 &amp;f(x_1, x_2, \cdots , x_n) =                  \\                  &amp;(f_1(x_1, x_2, \cdots , x_n), f_2(x_1, x_2, \cdots , x_n), \cdots , f_m(x_1, x_2, \cdots , x_n))             \end {align*}         </fr:tex>
+        We want to search for this linear transformation which we will denoted by <fr:tex display="inline">Df</fr:tex>,
+        that most closely approximates this function <fr:tex display="inline">f:\mathbb {R}^n\to \mathbb {R}^m</fr:tex> at some specific point <fr:tex display="inline">x_0=(x_{1_0}, x_{2_0}, \cdots , x_{n_0}) \in  \mathbb {R}^n</fr:tex>.
+        If <fr:tex display="inline">f</fr:tex> is differentiable at <fr:tex display="inline">x_0</fr:tex> then there exists a linear transformation <fr:tex display="inline">Df(x_0):\mathbb {R}^n\to \mathbb {R}^m</fr:tex> such that
+        <fr:tex display="block">             \lim _{x\to  x_0} \frac {                 \lVert                      f(x) - f(x_0) - Df(x_0)(x-x_0)                 \rVert              }{\lVert x-x_0\rVert } = 0         </fr:tex>
+        The <fr:tex display="inline">\lVert \cdot \rVert </fr:tex> represents the <fr:strong>Euclidean norm</fr:strong> of the vector (Multi-dimensional version of the absolute value)
+        <fr:tex display="block">             \lVert \vec {x}\rVert  = \sqrt {x_1^2 + x_2^2 + \cdots  + x_n^2} = \sqrt {\sum _{i=1}^n x_i^2}         </fr:tex>
+        which is just the length of the vector. This allows us to perform dividing.</fr:p>
+    <fr:p>As before we have
+        <fr:tex display="block">             f(x) \approx  Df(x_0)(x-x_0) + f(x_0)         </fr:tex>
+        Now we want to write <fr:tex display="inline">Df(x)</fr:tex> as a matrix. Denote the basis of <fr:tex display="inline">\mathbb {R}^n</fr:tex> as <fr:tex display="inline">e_j</fr:tex> and the basis of <fr:tex display="inline">\mathbb {R}^m</fr:tex> as <fr:tex display="inline">f_i</fr:tex>.
+        Then we want to find <fr:tex display="inline">a_{ij}</fr:tex> st
+        <fr:tex display="block">             Df(x)(e_j) = \sum _{i=1}^{m} a_{ij} f_j = \begin {bmatrix}                 a_{1j} \\ a_{2j} \\ \vdots  \\ a_{mj}             \end {bmatrix}         </fr:tex>
+        In other words, the <fr:tex display="inline">i</fr:tex>-th component of the <fr:tex display="inline">j</fr:tex>-th column of <fr:tex display="inline">Df(x)</fr:tex> is just the <fr:tex display="inline">i</fr:tex>-th component of the <fr:tex display="inline">Df(x)(e_j)</fr:tex></fr:p>
+    <fr:p>Recall from vector calculus that given a function <fr:tex display="inline">f:\mathbb {R}^n\to \mathbb {R}</fr:tex> we defined the <fr:strong>partial derivative</fr:strong> of <fr:tex display="inline">f</fr:tex> with respect to the <fr:tex display="inline">x_j</fr:tex> as 
+        <fr:tex display="block">             \frac {\partial  f}{\partial  x_j} = \lim _{h\to 0}             \frac {f(x_1,\cdots ,x_j+h,\cdots ,x_n) - f(x_1,\cdots ,x_n)}{h}         </fr:tex>
+        Hence we can define the partial derivatives for each <fr:tex display="inline">f_i (1\leq  i\leq  m)</fr:tex> with respect to each <fr:tex display="inline">x_j (1\leq  j\leq  n)</fr:tex>.
+        <fr:tex display="block">             \frac {\partial  f_i}{\partial  x_j} = \lim _{h\to 0}             \frac {f_i(x_1,\cdots ,x_j+h,\cdots ,x_n) - f_i(x_1,\cdots ,x_n)}{h}         </fr:tex>
+        Thus we have
+        <fr:tex display="block">             \frac {\partial  f_i}{\partial  x_j} = a_{ij}         </fr:tex>
+        To find <fr:tex display="inline">a_{ij}</fr:tex> of <fr:tex display="inline">Df(x_0)</fr:tex> we need to find the <fr:tex display="inline">i</fr:tex>-th element of <fr:tex display="inline">Df(x_0)(e_j)</fr:tex>. Let
+        <fr:tex display="block">             x = \begin {bmatrix}                 x_{1_0} \\ x_{2_0} \\ \vdots  \\ x_{n_0}             \end {bmatrix} + \begin {bmatrix}                 0 \\ \vdots  \\ 1 \\ \vdots  \\ 0             \end {bmatrix} = x_0 + he_j         </fr:tex>
+        We have 
+        <fr:tex display="block">             \lim _{x\to  x_0}\frac {\lVert f(x)-f(x_0)-Df(x_0)(he_j)\rVert }{\lVert he_j\rVert }             \\ \implies               \lim _{h\to 0}\frac {\lVert                  f(x_0+he_j) - f(x_0) -hDf(x_0)(e_j)             \rVert }{\lVert h\rVert } = 0         </fr:tex>
+        The component is given by 
+        <fr:tex display="block">             \lim _{h\to 0}\frac {\lVert f_i(x_0+he_j)-f_i(x_0)-ha_{ij}\rVert }{\lVert h\rVert } = 0             \\ \implies               a_{ij} = \lim _{h\to 0}\frac {f_i(x_0+he_j) - f_i(x_0)}{h}         </fr:tex>
+        which is exactly <fr:tex display="inline">\frac {\partial  f_i}{\partial  x_j}</fr:tex>. Thus the matrix representation of <fr:tex display="inline">Df(x)</fr:tex> is given by 
+        a matrix called the <fr:strong>Jacobin matrix</fr:strong> of <fr:tex display="inline">f</fr:tex>.
+        <fr:tex display="block">             Df(x) = \begin {bmatrix}                 \frac {\partial  f_1}{\partial  x_1} &amp; \frac {\partial  f_1}{\partial  x_2} &amp; \cdots  &amp; \frac {\partial  f_1}{\partial  x_n} \\                 \frac {\partial  f_2}{\partial  x_1} &amp; \frac {\partial  f_2}{\partial  x_2} &amp; \cdots  &amp; \frac {\partial  f_2}{\partial  x_n} \\                 \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\                 \frac {\partial  f_m}{\partial  x_1} &amp; \frac {\partial  f_m}{\partial  x_2} &amp; \cdots  &amp; \frac {\partial  f_m}{\partial  x_n}             \end {bmatrix} = \left [                 \frac {\partial  f_i}{\partial  x_j}             \right ]         </fr:tex>
+        where <fr:tex display="inline">i</fr:tex> ranges row and <fr:tex display="inline">j</fr:tex> ranges column.</fr:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -45,9 +85,9 @@
     Refer to <fr:link type="external" href="A%20Visual%20Introduction%20to%20Differential%20Forms%20and%20Calculus%20on%20Manifolds">df-cm-2018</fr:link>.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>665</fr:anchor>
-                <fr:addr type="machine">#312</fr:addr>
-                <fr:route>unstable-312.xml</fr:route>
+                <fr:anchor>751</fr:anchor>
+                <fr:addr type="machine">#311</fr:addr>
+                <fr:route>unstable-311.xml</fr:route>
                 <fr:title text="Review of Vector Spaces">Review of Vector Spaces</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -60,7 +100,7 @@
                 <fr:p>We now start with introducing the vector space over the field of real numbers <fr:tex display="inline">\mathbb {R}</fr:tex>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>666</fr:anchor>
+                    <fr:anchor>752</fr:anchor>
                     <fr:addr type="user">def-000H</fr:addr>
                     <fr:route>def-000H.xml</fr:route>
                     <fr:title text="Vector Space">Vector Space</fr:title>
@@ -94,7 +134,7 @@
         Now we can give formal definition of the matrix representation of a linear transformation.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>667</fr:anchor>
+                    <fr:anchor>753</fr:anchor>
                     <fr:addr type="user">def-003W</fr:addr>
                     <fr:route>def-003W.xml</fr:route>
                     <fr:title text="Matrix Representation of Linear Transformation over {R}^n">Matrix Representation of Linear Transformation over <fr:tex display="inline">\mathbb {R}^n</fr:tex></fr:title>
@@ -126,9 +166,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>668</fr:anchor>
-                <fr:addr type="machine">#313</fr:addr>
-                <fr:route>unstable-313.xml</fr:route>
+                <fr:anchor>754</fr:anchor>
+                <fr:addr type="machine">#312</fr:addr>
+                <fr:route>unstable-312.xml</fr:route>
                 <fr:title text="Dot Products">Dot Products</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -143,7 +183,7 @@
         Dot product is also used to define lengths and angles.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>669</fr:anchor>
+                    <fr:anchor>755</fr:anchor>
                     <fr:addr type="user">def-0041</fr:addr>
                     <fr:route>def-0041.xml</fr:route>
                     <fr:title text="Dot Product (Coordinate Form)">Dot Product (Coordinate Form)</fr:title>
@@ -167,7 +207,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>670</fr:anchor>
+                    <fr:anchor>756</fr:anchor>
                     <fr:addr type="user">def-0042</fr:addr>
                     <fr:route>def-0042.xml</fr:route>
                     <fr:title text="Dot Product (Geometric Form)">Dot Product (Geometric Form)</fr:title>
@@ -198,9 +238,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>671</fr:anchor>
-                <fr:addr type="machine">#314</fr:addr>
-                <fr:route>unstable-314.xml</fr:route>
+                <fr:anchor>757</fr:anchor>
+                <fr:addr type="machine">#313</fr:addr>
+                <fr:route>unstable-313.xml</fr:route>
                 <fr:title text="Volume and Determinants">Volume and Determinants</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -230,9 +270,9 @@
         to a real number which is the volume of <fr:tex display="inline">\mathscr {P}</fr:tex>. Now we present the three properties in mathematical form.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>672</fr:anchor>
-                    <fr:addr type="machine">#315</fr:addr>
-                    <fr:route>unstable-315.xml</fr:route>
+                    <fr:anchor>758</fr:anchor>
+                    <fr:addr type="machine">#314</fr:addr>
+                    <fr:route>unstable-314.xml</fr:route>
                     <fr:title text="Properties of Volume">Properties of Volume</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -253,9 +293,9 @@
         The first property is that the volumes are signed.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>673</fr:anchor>
-                    <fr:addr type="machine">#316</fr:addr>
-                    <fr:route>unstable-316.xml</fr:route>
+                    <fr:anchor>759</fr:anchor>
+                    <fr:addr type="machine">#315</fr:addr>
+                    <fr:route>unstable-315.xml</fr:route>
                     <fr:title text="Derived Properties of Volume Function">Derived Properties of Volume Function</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -276,7 +316,7 @@
                 <fr:p>We almost ready to derive the formula for determinant. The final ingredient we need to do is <fr:strong>permutations</fr:strong>.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>674</fr:anchor>
+                    <fr:anchor>760</fr:anchor>
                     <fr:addr type="user">def-003Y</fr:addr>
                     <fr:route>def-003Y.xml</fr:route>
                     <fr:title text="Permutation">Permutation</fr:title>
@@ -296,7 +336,7 @@
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>675</fr:anchor>
+                    <fr:anchor>761</fr:anchor>
                     <fr:addr type="user">def-003Z</fr:addr>
                     <fr:route>def-003Z.xml</fr:route>
                     <fr:title text="Transposition">Transposition</fr:title>
@@ -315,7 +355,7 @@
         which is called the <fr:strong>parity</fr:strong> of the permutation.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>676</fr:anchor>
+                    <fr:anchor>762</fr:anchor>
                     <fr:addr type="user">def-0040</fr:addr>
                     <fr:route>def-0040.xml</fr:route>
                     <fr:title text="Sign of Permutation">Sign of Permutation</fr:title>
@@ -346,9 +386,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>677</fr:anchor>
-                <fr:addr type="machine">#317</fr:addr>
-                <fr:route>unstable-317.xml</fr:route>
+                <fr:anchor>763</fr:anchor>
+                <fr:addr type="machine">#316</fr:addr>
+                <fr:route>unstable-316.xml</fr:route>
                 <fr:title text="Derivatives of Multivariable Functions">Derivatives of Multivariable Functions</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>

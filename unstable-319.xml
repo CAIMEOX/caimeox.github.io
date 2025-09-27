@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1101</fr:anchor>
+    <fr:anchor>1389</fr:anchor>
     <fr:addr type="machine">#319</fr:addr>
     <fr:route>unstable-319.xml</fr:route>
-    <fr:taxon>Proof</fr:taxon>
+    <fr:title text="Tarski Universe › Enough Universe"><fr:link type="local" href="def-004E.xml" addr="def-004E" title="Tarski Universe">Tarski Universe</fr:link> › Enough Universe</fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-        We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
-        it suffices to provide
-        <fr:tex display="block">             \begin {align*}                 &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\                  &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))             \end {align*}         </fr:tex>
-        we define <fr:tex display="inline">E_0</fr:tex> by induction:
-        <fr:tex display="block">             \begin {align*}                 &amp;E_0(0) \equiv \textbf {1}\\                  &amp;E_0(\text {succ}(n)) \equiv \textbf {0}             \end {align*}         </fr:tex>
-        and also define <fr:tex display="inline">E_S</fr:tex> by induction:
-        <fr:tex display="block">             \begin {align*}                 &amp;E_S(n,X,0)\equiv \textbf {0}\\                  &amp;E_S(n,X,\text {succ}(m))\equiv  X(m)             \end {align*}         </fr:tex>
-        Therefore we have by the computation rule for the first induction that 
-        the following judgemental equality holds.
-        <fr:tex display="block">             \begin {align*}                 \text {Eq}(0,m) &amp;\equiv  E_0(m) \\                 \text {Eq}(\text {succ}(n),m) &amp;\equiv  E_S(n,\text {Eq}(n),m)             \end {align*}         </fr:tex>
-    </fr:mainmatter>
+    <fr:p>Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
+        If we have only one <fr:tex display="inline">\mathcal {U}</fr:tex>, the <fr:strong>Russell Paradox</fr:strong> may arise.
+        Therefore we assume that there are <fr:strong>enough universes</fr:strong></fr:p>
+  </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
@@ -28,31 +21,55 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1102</fr:anchor>
-            <fr:addr type="user">def-004H</fr:addr>
-            <fr:route>def-004H.xml</fr:route>
-            <fr:title text="Observational Equality of {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
+            <fr:anchor>1390</fr:anchor>
+            <fr:addr type="user">def-004E</fr:addr>
+            <fr:route>def-004E.xml</fr:route>
+            <fr:title text="Tarski Universe">Tarski Universe</fr:title>
             <fr:taxon>Definition</fr:taxon>
             <fr:authors></fr:authors>
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>The observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a binary relation <fr:tex display="inline">\text {Eq}_\mathbb {N}:\mathbb {N}\to (\mathbb {N}\to \mathcal {U}_0)</fr:tex> satisfies
-    <fr:tex display="block">         \begin {align*}             \text {Eq}_\mathbb {N}(0)(0) &amp;\equiv  \textbf {1} \\             \text {Eq}_\mathbb {N}(0)(\text {succ}(n)) &amp;\equiv  \textbf {0} \\             \text {Eq}_\mathbb {N}(\text {succ}(m))(0) &amp;\equiv  \textbf {0} \\             \text {Eq}_\mathbb {N}(\text {succ}(m))(\text {succ}(n)) &amp;\equiv  \text {Eq}_\mathbb {N}(m)(n)         \end {align*}     </fr:tex>
-    
- 
-   
-   <fr:tree toc="false" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>785</fr:anchor><fr:addr type="machine">#319</fr:addr><fr:route>unstable-319.xml</fr:route><fr:taxon>Proof</fr:taxon><fr:authors></fr:authors></fr:frontmatter><fr:mainmatter>
-        We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
-        it suffices to provide
-        <fr:tex display="block">             \begin {align*}                 &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\                  &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))             \end {align*}         </fr:tex>
-        we define <fr:tex display="inline">E_0</fr:tex> by induction:
-        <fr:tex display="block">             \begin {align*}                 &amp;E_0(0) \equiv \textbf {1}\\                  &amp;E_0(\text {succ}(n)) \equiv \textbf {0}             \end {align*}         </fr:tex>
-        and also define <fr:tex display="inline">E_S</fr:tex> by induction:
-        <fr:tex display="block">             \begin {align*}                 &amp;E_S(n,X,0)\equiv \textbf {0}\\                  &amp;E_S(n,X,\text {succ}(m))\equiv  X(m)             \end {align*}         </fr:tex>
-        Therefore we have by the computation rule for the first induction that 
-        the following judgemental equality holds.
-        <fr:tex display="block">             \begin {align*}                 \text {Eq}(0,m) &amp;\equiv  E_0(m) \\                 \text {Eq}(\text {succ}(n),m) &amp;\equiv  E_S(n,\text {Eq}(n),m)             \end {align*}         </fr:tex>
-    </fr:mainmatter><fr:backmatter></fr:backmatter></fr:tree></fr:p>
+            <fr:p>A <fr:strong>universe</fr:strong> consists of a type <fr:tex display="inline">\mathcal {U}</fr:tex> of which the elements are representations of types.
+    It is equipped with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> indexed by <fr:tex display="inline">\mathcal {U}</fr:tex> called <fr:strong>universal type family</fr:strong>.
+    The universe is closed under all the type constructors in the sense that it comes equipped with the following structure:
+    <fr:ul><fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Pi </fr:tex>, equipped with a function
+            <fr:tex display="block">                 \check {\Pi }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
+            for which the judgemental equality
+            <fr:tex display="block">                 \mathcal {T}(\check {\Pi }(X,P))\equiv \Pi _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))             </fr:tex>
+            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Sigma </fr:tex>, equipped with a function
+            <fr:tex display="block">                 \check {\Sigma }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
+            for which the judgemental equality
+            <fr:tex display="block">                 \mathcal {T}(\check {\Sigma }(X,P))\equiv \Sigma _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))             </fr:tex>
+            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under identity types, equipped with a function
+            <fr:tex display="block">                 \check {I}:\Pi _{(X:\mathcal {U})}\mathcal {T}(X)\to \mathcal {T}(X)\to \mathcal {U}             </fr:tex>
+            for which the judgemental equality
+            <fr:tex display="block">                 \mathcal {T}(\check {I}(X,x,y))\equiv  (x=y)             </fr:tex>
+            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">x,y:\mathcal {T}(X)</fr:tex>.</fr:li>
+        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under coproducts, equipped with a function
+            <fr:tex display="block">                 \check {+}:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}             </fr:tex>
+            that satisfies the judgemental equality <fr:tex display="inline">\mathcal {T}(X\check {+}P)\equiv \mathcal {T}(X)+\mathcal {T}(P)</fr:tex></fr:li>
+        <fr:li><fr:tex display="inline">\mathcal {U}</fr:tex> contains elements <fr:tex display="inline">\check {\textbf {1}}, \check {\textbf {0}}, \check {\mathbb {N}} : \mathcal {U}</fr:tex> that satisfies the judgemental equality
+            <fr:tex display="block">                 \mathcal {T}(\check {\textbf {0}})\equiv  \textbf {0},                 \\ \mathcal {T}(\check {\textbf {1}})\equiv  \textbf {1},                 \\ \mathcal {T}(\check {\mathbb {N}})\equiv \mathbb {N}             </fr:tex></fr:li></fr:ul>
+    Consider a universe <fr:tex display="inline">\mathcal {U}</fr:tex> and a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
+    We say that <fr:tex display="inline">A</fr:tex> is a type in <fr:tex display="inline">\mathcal {U}</fr:tex> or that <fr:tex display="inline">\mathcal {U}</fr:tex> contains <fr:tex display="inline">A</fr:tex>,
+    if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>473</fr:anchor>
+                <fr:addr type="machine">#319</fr:addr>
+                <fr:route>unstable-319.xml</fr:route>
+                <fr:title text="Enough Universe">Enough Universe</fr:title>
+                <fr:authors></fr:authors>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
+        If we have only one <fr:tex display="inline">\mathcal {U}</fr:tex>, the <fr:strong>Russell Paradox</fr:strong> may arise.
+        Therefore we assume that there are <fr:strong>enough universes</fr:strong></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter></fr:backmatter>
+            </fr:tree>
           </fr:mainmatter>
           <fr:backmatter></fr:backmatter>
         </fr:tree>

@@ -4,7 +4,7 @@
     <fr:anchor>963</fr:anchor>
     <fr:addr type="machine">#252</fr:addr>
     <fr:route>unstable-252.xml</fr:route>
-    <fr:title text="Simply Typed Lambda Calculus and Representation Theorems › Reduction revised"><fr:link type="local" href="cs-0005.xml" addr="cs-0005" title="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</fr:link> › Reduction revised</fr:title>
+    <fr:title text="Simply Typed Lambda Calculus and Representation Theorems › Normal Forms and Reduction"><fr:link type="local" href="cs-0005.xml" addr="cs-0005" title="Simply Typed Lambda Calculus and Representation Theorems">Simply Typed Lambda Calculus and Representation Theorems</fr:link> › Normal Forms and Reduction</fr:title>
     <fr:date>
       <fr:year>2024</fr:year>
       <fr:month>3</fr:month>
@@ -13,19 +13,26 @@
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>Our characterization of normal forms is quite simple: terms that do not reduce.
-        However, this is a <fr:strong>negative</fr:strong> condition, which is difficult to work with in proofs.
-        We would like to have a <fr:strong>positive</fr:strong> condition, which is easier to work with.</fr:p>
-    <fr:p>We tend to give definitions in the form of inference rules.
-        The property then holds if the judgment can be derived using the rules.
-        (This closely related to the <fr:strong>inductive deefintion</fr:strong>).
-        Before defining the normal forms we formally define <fr:strong>beta reduction</fr:strong>.
-        The judgment here <fr:tex display="inline">e\to  e&apos;</fr:tex> expressing that <fr:tex display="inline">e</fr:tex> reduces to <fr:tex display="inline">e&apos;</fr:tex>.
-        <fr:tex display="block">             \begin {align*}                 \frac {}{(\lambda  x.e_1)e_2\to  e_1[x:=e_2]} (\text {red/beta}) \\                 \frac {e\to  e&apos;}{\lambda  x.e \to  \lambda  x.e&apos;} (\text {red/lam}) \\                 \frac {e_1\to  e_1&apos;}{e_1\space  e_2\to  e_1&apos;\space  e_2} (\text {red/app}_1) \\                 \frac {e_2\to  e_2&apos;}{e_1\space  e_2\to  e_1\space  e_2&apos;} (\text {red/app}_2)                             \end {align*}         </fr:tex></fr:p>
-    <fr:p>A <fr:strong>normal form</fr:strong> is an expression that does not reduce.
-        To give a proper formalization,, we need a separate judgment for <fr:strong>neutral terms</fr:strong>
-        which do not create a redex when applied to an argument.
-        <fr:tex display="block">                                       \begin {align*}                 \frac {e\text { normal}}{\lambda  x.e\text { normal}} (\text {normal/lam}) \\                 \frac {e\text { neutral}}{e\text { normal}} (\text {normal/var}) \\                 \frac {}{x\text { neutral}} (\text {neutral/var}) \\                 \frac {e_1\text { neutral}\quad  e_2\text { normal}}{e_1\space  e_2\text { neutral}} (\text {neutral/app}) \\             \end {align*}         </fr:tex></fr:p>
+    <fr:p>The characterization of normal forms via inference rules is compact,
+        but is it really the same as saying that an expression does not reduce?
+        We break this down into the following two properties.
+        <fr:ul><fr:li>For all expressions <fr:tex display="inline">e</fr:tex>, either <fr:tex display="inline">e</fr:tex> reduces or <fr:tex display="inline">e</fr:tex> is normal</fr:li>
+            <fr:li>For all expressions <fr:tex display="inline">e</fr:tex>, it is not that case <fr:tex display="inline">e</fr:tex> reduces and <fr:tex display="inline">e</fr:tex> is normal</fr:li></fr:ul></fr:p>
+    <fr:p>We have theorem that ensures that the first property holds. (Proof is omitted).</fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:anchor>707</fr:anchor>
+        <fr:addr type="user">thm-0010</fr:addr>
+        <fr:route>thm-0010.xml</fr:route>
+        <fr:title text="Reduction and normal forms">Reduction and normal forms</fr:title>
+        <fr:taxon>Theorem</fr:taxon>
+        <fr:authors></fr:authors>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>For every expression <fr:tex display="inline">e</fr:tex>, either <fr:tex display="inline">e\to  e&apos;</fr:tex> for some expression <fr:tex display="inline">e&apos;</fr:tex> or <fr:tex display="inline">e</fr:tex> is a normal form.</fr:p>
+      </fr:mainmatter>
+      <fr:backmatter></fr:backmatter>
+    </fr:tree>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -63,9 +70,9 @@
     <fr:tex display="block">         \begin {align*}             \text {true} &amp;= \lambda  x.\lambda  y.x : \alpha \to (\beta \to \alpha )\\             \text {false} &amp;= \lambda  x.\lambda  y.y : \alpha \to (\beta \to \beta )         \end {align*}     </fr:tex></fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>605</fr:anchor>
-                <fr:addr type="machine">#248</fr:addr>
-                <fr:route>unstable-248.xml</fr:route>
+                <fr:anchor>700</fr:anchor>
+                <fr:addr type="machine">#247</fr:addr>
+                <fr:route>unstable-247.xml</fr:route>
                 <fr:title text="Typing Judgment">Typing Judgment</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -91,9 +98,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>606</fr:anchor>
-                <fr:addr type="machine">#249</fr:addr>
-                <fr:route>unstable-249.xml</fr:route>
+                <fr:anchor>701</fr:anchor>
+                <fr:addr type="machine">#248</fr:addr>
+                <fr:route>unstable-248.xml</fr:route>
                 <fr:title text="The Limits of Simple Types">The Limits of Simple Types</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -122,9 +129,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>607</fr:anchor>
-                <fr:addr type="machine">#250</fr:addr>
-                <fr:route>unstable-250.xml</fr:route>
+                <fr:anchor>702</fr:anchor>
+                <fr:addr type="machine">#249</fr:addr>
+                <fr:route>unstable-249.xml</fr:route>
                 <fr:title text="Characterizing the Booleans">Characterizing the Booleans</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -137,9 +144,9 @@
                 <fr:p>We now show that the representation of the booleans is correct.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>608</fr:anchor>
-                    <fr:addr type="machine">#251</fr:addr>
-                    <fr:route>unstable-251.xml</fr:route>
+                    <fr:anchor>703</fr:anchor>
+                    <fr:addr type="machine">#250</fr:addr>
+                    <fr:route>unstable-250.xml</fr:route>
                     <fr:title text="Representation of Booleans">Representation of Booleans</fr:title>
                     <fr:date>
                       <fr:year>2024</fr:year>
@@ -158,7 +165,7 @@
     correctness of the representation of the booleans.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>609</fr:anchor>
+                    <fr:anchor>704</fr:anchor>
                     <fr:addr type="user">def-003O</fr:addr>
                     <fr:route>def-003O.xml</fr:route>
                     <fr:title text="Weak Normalization">Weak Normalization</fr:title>
@@ -176,9 +183,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>610</fr:anchor>
-                <fr:addr type="machine">#252</fr:addr>
-                <fr:route>unstable-252.xml</fr:route>
+                <fr:anchor>705</fr:anchor>
+                <fr:addr type="machine">#251</fr:addr>
+                <fr:route>unstable-251.xml</fr:route>
                 <fr:title text="Reduction revised">Reduction revised</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -206,9 +213,9 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>611</fr:anchor>
-                <fr:addr type="machine">#253</fr:addr>
-                <fr:route>unstable-253.xml</fr:route>
+                <fr:anchor>706</fr:anchor>
+                <fr:addr type="machine">#252</fr:addr>
+                <fr:route>unstable-252.xml</fr:route>
                 <fr:title text="Normal Forms and Reduction">Normal Forms and Reduction</fr:title>
                 <fr:date>
                   <fr:year>2024</fr:year>
@@ -226,7 +233,7 @@
                 <fr:p>We have theorem that ensures that the first property holds. (Proof is omitted).</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>612</fr:anchor>
+                    <fr:anchor>707</fr:anchor>
                     <fr:addr type="user">thm-0010</fr:addr>
                     <fr:route>thm-0010.xml</fr:route>
                     <fr:title text="Reduction and normal forms">Reduction and normal forms</fr:title>

@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?><fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>1306</fr:anchor>
+    <fr:anchor>1310</fr:anchor>
     <fr:addr type="machine">#331</fr:addr>
     <fr:route>unstable-331.xml</fr:route>
-    <fr:title text="Inverse Operation › Construction of Inverse"><fr:link type="local" href="def-002P.xml" addr="def-002P" title="Inverse Operation">Inverse Operation</fr:link> › Construction of Inverse</fr:title>
+    <fr:title text="Concatenation Operation › Construction of Concatenation"><fr:link type="local" href="def-002O.xml" addr="def-002O" title="Concatenation Operation">Concatenation Operation</fr:link> › Construction of Concatenation</fr:title>
     <fr:authors></fr:authors>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>By induction, it suffices to construct:
-        <fr:tex display="block">             \text {inv}(x,x,\text {refl}_x) : (x=_Ax)         </fr:tex>
-        for any <fr:tex display="inline">x:A</fr:tex>. And trivially we have <fr:tex display="inline">\text {inv}(x,x,\text {refl}_x)\equiv \text {refl}_x</fr:tex>.</fr:p>
+    <fr:p>We can first construct:
+        <fr:tex display="block">             f(x):(y:A)\to  (x=_Ay)\to (z:A)\to  (y=_Az)\to (x=_Az)         </fr:tex>
+        For any <fr:tex display="inline">x:A</fr:tex>, it suffices to construct
+        <fr:tex display="block">             f(x,x,\text {refl}_x) : (z:A) \to  (x=_Az)\to (x=_Az)         </fr:tex>
+        That is the identity function <fr:tex display="inline">\lambda  z. \text {id}_{x=_Az}</fr:tex>.
+        Then we can define by induction:
+        <fr:tex display="block">             f(x) :\equiv  \text {ind-eq}_{x}(\lambda  z.\text {id})         </fr:tex>
+        Finally:
+        <fr:tex display="block">             \text {concat}_{x,y,z}(p,q) :\equiv  f(x,y,p,z,q)         </fr:tex>
+        Or simply we denote <fr:tex display="inline">\text {concat}(p,q)</fr:tex> as <fr:tex display="inline">p \cdot  q</fr:tex></fr:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
@@ -21,29 +28,36 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>1307</fr:anchor>
-            <fr:addr type="user">def-002P</fr:addr>
-            <fr:route>def-002P.xml</fr:route>
-            <fr:title text="Inverse Operation">Inverse Operation</fr:title>
+            <fr:anchor>1311</fr:anchor>
+            <fr:addr type="user">def-002O</fr:addr>
+            <fr:route>def-002O.xml</fr:route>
+            <fr:title text="Concatenation Operation">Concatenation Operation</fr:title>
             <fr:taxon>Definition</fr:taxon>
             <fr:authors></fr:authors>
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>Let <fr:tex display="inline">A</fr:tex> be a type. The <fr:strong>inverse oepration</fr:strong> is defined:
-    <fr:tex display="block">         \text {inv}: (x:A)\to  (y:A)\to  (x=_Ay)\to  (y=_Ax)     </fr:tex>
-    Most of the time we write <fr:tex display="inline">p^{-1}</fr:tex> for <fr:tex display="inline">\text {inv}(p)</fr:tex>.</fr:p>
+            <fr:p>Let <fr:tex display="inline">A</fr:tex> be a type.
+    The <fr:strong>Concatenation</fr:strong> operation is defined:
+    <fr:tex display="block">         \text {concat}: (x:A)\to  (y:A)\to  (z:A)\to  (x=_Ay)\to  (y=_Az)\to  (x=_Az)     </fr:tex></fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>766</fr:anchor>
+                <fr:anchor>458</fr:anchor>
                 <fr:addr type="machine">#331</fr:addr>
                 <fr:route>unstable-331.xml</fr:route>
-                <fr:title text="Construction of Inverse">Construction of Inverse</fr:title>
+                <fr:title text="Construction of Concatenation">Construction of Concatenation</fr:title>
                 <fr:authors></fr:authors>
               </fr:frontmatter>
               <fr:mainmatter>
-                <fr:p>By induction, it suffices to construct:
-        <fr:tex display="block">             \text {inv}(x,x,\text {refl}_x) : (x=_Ax)         </fr:tex>
-        for any <fr:tex display="inline">x:A</fr:tex>. And trivially we have <fr:tex display="inline">\text {inv}(x,x,\text {refl}_x)\equiv \text {refl}_x</fr:tex>.</fr:p>
+                <fr:p>We can first construct:
+        <fr:tex display="block">             f(x):(y:A)\to  (x=_Ay)\to (z:A)\to  (y=_Az)\to (x=_Az)         </fr:tex>
+        For any <fr:tex display="inline">x:A</fr:tex>, it suffices to construct
+        <fr:tex display="block">             f(x,x,\text {refl}_x) : (z:A) \to  (x=_Az)\to (x=_Az)         </fr:tex>
+        That is the identity function <fr:tex display="inline">\lambda  z. \text {id}_{x=_Az}</fr:tex>.
+        Then we can define by induction:
+        <fr:tex display="block">             f(x) :\equiv  \text {ind-eq}_{x}(\lambda  z.\text {id})         </fr:tex>
+        Finally:
+        <fr:tex display="block">             \text {concat}_{x,y,z}(p,q) :\equiv  f(x,y,p,z,q)         </fr:tex>
+        Or simply we denote <fr:tex display="inline">\text {concat}(p,q)</fr:tex> as <fr:tex display="inline">p \cdot  q</fr:tex></fr:p>
               </fr:mainmatter>
               <fr:backmatter></fr:backmatter>
             </fr:tree>
