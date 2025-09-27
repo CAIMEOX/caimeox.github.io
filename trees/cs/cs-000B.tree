@@ -1,0 +1,7 @@
+\title{Algebraic effects: A literature survey}
+\taxon{Programming Language Theory}
+\date{2025-09-27}
+\import{macros}
+\p{
+    In modern programming language design, the question of how to abstract and manage computational effects has remained central. Effects such as exception handling, state mutation, concurrency, and input/output are indispensable for building real-world systems, yet they complicate reasoning and optimization. Early approaches, including exception mechanisms and monads, provided formal ways to structure effects but often suffered from limited composability and extensibility. More recently, effect systems and effect handlers have emerged as a unifying abstraction: they not only allow diverse effects to be expressed in a uniform manner but also enable static tracking of effects within type systems, balancing expressiveness with safety. This survey provides an overview of research on effect systems in programming languages, tracing their theoretical foundations, formal models, programming practices, and implementation strategies, while also highlighting open challenges and future research directions.
+}
