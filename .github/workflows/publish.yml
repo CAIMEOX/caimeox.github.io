@@ -38,7 +38,7 @@ jobs:
           # opam install -y forester=4.3.1
 
       - name: "Setup TeX Live"
-        uses: teatimeguest/setup-texlive-action@v3
+        uses: TeX-Live/setup-texlive-action@v3
         with:
           packages: >-
             scheme-medium
