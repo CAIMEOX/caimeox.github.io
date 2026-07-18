@@ -27,6 +27,14 @@ test-code-blocks:
 	@$(NODE) --test tests/code-blocks.test.cjs
 .PHONY: test-code-blocks
 
+test-theme:
+	@$(NODE) --test tests/*.test.cjs
+.PHONY: test-theme
+
+test-copy-tex:
+	@python3 -m unittest tests/test_copy_tex.py
+.PHONY: test-copy-tex
+
 typos:
 	@typos trees
 .PHONY: typos
