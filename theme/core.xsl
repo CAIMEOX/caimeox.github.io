@@ -2,7 +2,7 @@
 <!-- SPDX-License-Identifier: CC0-1.0 -->
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:f="http://www.jonmsterling.com/jms-005P.xml"
+  xmlns:f="http://www.forester-notes.org"
   xmlns:mml="http://www.w3.org/1998/Math/MathML"
   xmlns:html="http://www.w3.org/1999/xhtml">
 
@@ -40,10 +40,10 @@
   </xsl:template>
 
   <xsl:template match="f:figcaption">
-   <figcaption>
-     <xsl:apply-templates />
-   </figcaption>
- </xsl:template>
+    <figcaption>
+      <xsl:apply-templates />
+    </figcaption>
+  </xsl:template>
 
   <xsl:template match="f:p">
     <p>
@@ -100,7 +100,7 @@
   </xsl:template>
 
   <xsl:template match="f:img[@src]">
-    <img src="{@src}"/>
+    <img src="{@src}" />
   </xsl:template>
 
   <xsl:template match="f:error | f:info">

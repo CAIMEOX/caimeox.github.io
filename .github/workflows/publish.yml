@@ -6,6 +6,10 @@ on:
     paths:
       - trees/**
       - assets/**
+      - theme/**
+      - tests/**
+      - forest.toml
+      - Makefile
       - .github/workflows/publish.yml
   pull_request:
     branches:
@@ -26,16 +30,16 @@ jobs:
       - name: "Set-up OCaml"
         uses: ocaml/setup-ocaml@v2
         with:
-          ocaml-compiler: "5.2.0"
+          ocaml-compiler: "5.3.0"
 
       - name: Install Forester
         run: |
           sudo apt install libev-dev
           git clone https://git.sr.ht/~jonsterling/ocaml-forester
           cd ocaml-forester
-          git checkout 4.3.1
+          git checkout 5.0
           opam pin add -y .
-          # opam install -y forester=4.3.1
+          # opam install -y forester=5.0
 
       - name: "Setup TeX Live"
         uses: TeX-Live/setup-texlive-action@v3
@@ -74,11 +78,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
           registry-url: https://registry.npmjs.org
 
-      - name: "Convert to Static Rendered KaTeX"
+      - name: "Normalize generated XML"
         run: | 
-          cp ./theme/package.json .
-          cp ./theme/package-lock.json .
-          npm ci
+          npm ci --prefix theme
+          python3 -m unittest tests/test_convert.py
           node ./theme/javascript-source/convert.js
 
       - name: "Deploy"

@@ -1,0 +1,9 @@
+[files]
+extend-exclude = ["trees/latex-preamble.tree"]
+
+[default.extend-words]
+# Forester namespaces and mathematical terminology.
+thm = "thm"
+hom = "hom"
+Hom = "Hom"
+Mor = "Mor"

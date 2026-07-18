@@ -1,6 +1,5 @@
 [forest]
 trees = ["trees"]
 assets = ["assets"]
-theme = "theme"
-root = "index"
-base_url = "https://caimeo.online"
+url = "https://caimeo.space/"
+home = "index"
