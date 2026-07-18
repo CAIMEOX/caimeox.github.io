@@ -4967,7 +4967,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
     
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             <fr:tex display="block"><![CDATA[
                 \begin {align*}
                     S\space  n &= (\lambda  n.\lambda  f.\lambda  x.f(n\space  f\space  x))\space  n \\
@@ -6373,7 +6373,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
     </html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         For the base case <fr:tex display="inline"><![CDATA[e = \text {Val} \space  n]]></fr:tex>, we have <fr:tex display="inline"><![CDATA[\llbracket  e\rrbracket  = n]]></fr:tex> trivially.
         For the inductive case <fr:tex display="inline"><![CDATA[e = \text {Add} \space  e_1\space  e_2]]></fr:tex>,
         we can assume by induction that <fr:tex display="inline"><![CDATA[\llbracket  e_1\rrbracket  = n_1]]></fr:tex> and <fr:tex display="inline"><![CDATA[\llbracket  e_2\rrbracket  = n_2]]></fr:tex>
@@ -6592,7 +6592,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
         ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         The proof consists of three parts: the base case, the reduction rule and the structural rule.
         <fr:tex display="block"><![CDATA[
             \begin {align*}
@@ -10450,7 +10450,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
         ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         Let <fr:tex display="inline"><![CDATA[A \cdot  \text {adj} A = (b_{ij})]]></fr:tex> and we have
         <fr:tex display="block"><![CDATA[
             b_{ij} = a_{i1}A_{j1} + a_{i2}A_{j2} + \cdots  + a_{in}A_{jn} = \delta _{ij} \cdot  \det  A
@@ -11013,7 +11013,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
             ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             The work done in accelerating a particle with mass m during the infinitesimal time 
             interval <fr:tex display="inline"><![CDATA[dt]]></fr:tex> is given by the dot product of force <fr:tex display="inline"><![CDATA[\vec {F}]]></fr:tex> and the infinitesimal displacement <fr:tex display="inline"><![CDATA[d\vec {x}]]></fr:tex>
             <fr:tex display="block"><![CDATA[
@@ -11152,7 +11152,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
             ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             Now we prove the equivalence of definitions.
             <fr:tex display="block"><![CDATA[
                 \frac {d\vec {L}}{dt} = \vec {r}\times \frac {d\vec {p}}{dt} + \frac {d\vec {r}}{dt}\times \vec {p}

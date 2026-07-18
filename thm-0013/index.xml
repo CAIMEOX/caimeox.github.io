@@ -55,22 +55,22 @@
           </fr:frontmatter>
           <fr:mainmatter>
             <html:p>
-    This post discuss the universe in type theory,
+    This note discusses universes in type theory,
     based on Egbert Rijke's <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link> and <fr:link href="/ncatlab/" title="nLab" uri="https://caimeo.space/ncatlab/" display-uri="ncatlab" type="local">NLab</fr:link>.
-    In this post, we regard universe as the representation of types in an internal model 
+    We regard a universe as a representation of types in an internal model
     of the type theory (<html:strong>Tarski universe</html:strong> or <html:strong>universe à la Tarski</html:strong>).
 </html:p>
             <html:p>
-    A universe consist of a type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> with a type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> over <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>.
-    Forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> we think of <fr:tex display="inline"><![CDATA[X]]></fr:tex> as an <html:strong>encoding</html:strong> (representation) of the actual type <fr:tex display="inline"><![CDATA[\mathcal {T}(X)]]></fr:tex>.
-    The type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> is therefore called a <html:strong>unversal type family</html:strong>.
+    A universe consists of a type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> with a type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> over <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>.
+    For every <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex>, we think of <fr:tex display="inline"><![CDATA[X]]></fr:tex> as an <html:strong>encoding</html:strong> of the actual type <fr:tex display="inline"><![CDATA[\mathcal {T}(X)]]></fr:tex>.
+    The type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> is therefore called a <html:strong>universal type family</html:strong>.
 </html:p>
             <html:p>
-    There several reasons to equip type theory with universes.
-    It enables us to define new type families over inductive types, using induction principle.
+    There are several reasons to equip type theory with universes.
+    They enable us to define new type families over inductive types using their induction principles.
     For instance, we can define <html:strong>relations</html:strong> over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>, such as ordering relations <fr:tex display="inline"><![CDATA[\leq ]]></fr:tex>.
     We will soon meet the idea of <html:strong>observational equality</html:strong> for a particular type, different from identity types.
-    Another reason is that it allows us to define types equipped with structure such as group.
+    They also allow us to collect types equipped with structure, such as groups.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
@@ -246,9 +246,9 @@
               <fr:mainmatter>
                 <html:p>
         Now we give the example of <html:strong>observational equality</html:strong> of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>.
-        The key idea is to define a recursive function that reduce the arguments.
-        Observational equality an inductively defined relation, which gives us an algorithm for checking
-        equality on  <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. It can be used to show that equality of natural numbers is <html:strong>decidable</html:strong>.
+        The key idea is to define a recursive family that reduces both arguments.
+        Observational equality is an inductively defined relation that gives an algorithm for checking
+        equality on <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. It can be used to show that equality of natural numbers is <html:strong>decidable</html:strong>.
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
@@ -273,7 +273,7 @@
     
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         We define <fr:tex display="inline"><![CDATA[\text {Eq}]]></fr:tex> by double induction on <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. By the first application of induction
         it suffices to provide
         <fr:tex display="block"><![CDATA[

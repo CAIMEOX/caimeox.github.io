@@ -1069,9 +1069,9 @@
                 <fr:taxon>Type Theory</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter><html:p>
-    In previous post, we have seen the definition of natural numbers as an inductive type.
-    In this post, we will see more examples of inductive types, such as 
-    unit type, empty type, product type, sum type and etc.
+    In the previous note, we saw the definition of natural numbers as an inductive type.
+    Here we study more examples, including the unit type, empty type, coproducts,
+    integers, and dependent pairs.
     Refer to <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke's Book</fr:link>.
 </html:p><html:p>
     This section is much more informal than the previous one.
@@ -1080,15 +1080,15 @@
 </html:p>
     <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="General Inductive Type"><html:strong>General Inductive Type</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
-    Just like <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>, other inductive types can be defined by 
+    Just like <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>, other inductive types can be defined by
     their constructors and induction principles (and computation rules).
     </html:p>
     <html:ul><html:li>
-            The constructors specify the structure of the type equipped.
+            The constructors specify how canonical terms of the type are formed.
         </html:li>
         <html:li>
             The induction principle specifies the data required to construct 
-            a section of an arbitrary type family over the inductive type.
+                a section of an arbitrary type family over the inductive type.
         </html:li>
         <html:li>
             The computation rules specify the behavior of the constructors.
@@ -1107,7 +1107,7 @@
         ]]></fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
     A degenerate inductive type is the <html:strong>empty type</html:strong>.
     It has no constructor, and its induction principle is trivial.
-    Empty type is connected to the <html:strong>exfalso quodlibet principle</html:strong> in logic.
+    The empty type corresponds to the <html:strong>ex falso quodlibet</html:strong> principle in logic.
 </html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0021/</fr:uri><fr:display-uri>def-0021</fr:display-uri><fr:route>/def-0021/</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The <html:strong>empty type</html:strong> is a degenerate inductive type <fr:tex display="inline"><![CDATA[\emptyset ]]></fr:tex> satisfying 
     the following induction principle:
@@ -1121,7 +1121,7 @@
     which can draw any conclusion.
 </html:p></fr:mainmatter></fr:tree><html:p>
     With the empty type we can define the <html:strong>negation</html:strong> of a type
-    and the <html:strong>proof of negation</html:strong>.
+    and the evidence for a negation.
 </html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0022/</fr:uri><fr:display-uri>def-0022</fr:display-uri><fr:route>/def-0022/</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The <html:strong>negation</html:strong> of type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is defined as
     <fr:tex display="block"><![CDATA[
@@ -1176,8 +1176,28 @@
         (P\to  Q) \to  (R\to  Q) \to  (P\vee  R\to  Q)
     ]]></fr:tex>
 </fr:mainmatter></fr:tree>
-<html:p>
-    The dependent version of sum type is called the <html:strong>dependent sum type (dependent coproduct)</html:strong> traditionally.
+<fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="The integers">The integers</fr:title></fr:frontmatter><fr:mainmatter><html:p>
+        Before quotient types are available, the integers can be built directly from coproducts:
+        <fr:tex display="block"><![CDATA[
+            \mathbb {Z} :\equiv  \mathbb {N} + (\mathbf {1}+\mathbb {N}).
+        ]]></fr:tex>
+        The left summand represents the negative integers, while the two pieces of the right
+        summand represent zero and the positive integers. In particular,
+        <fr:tex display="block"><![CDATA[
+            -1 :\equiv  \mathsf {inl}(0),\qquad 
+            0 :\equiv  \mathsf {inr}(\mathsf {inl}(\star )),\qquad 
+            1 :\equiv  \mathsf {inr}(\mathsf {inr}(0)).
+        ]]></fr:tex>
+        Thus every integer has a unique canonical form: <fr:tex display="inline"><![CDATA[-(n+1)]]></fr:tex>, <fr:tex display="inline"><![CDATA[0]]></fr:tex>, or <fr:tex display="inline"><![CDATA[n+1]]></fr:tex>.
+    </html:p><html:p>
+        Coproduct and natural-number induction give an induction principle for <fr:tex display="inline"><![CDATA[\mathbb {Z}]]></fr:tex>.
+        It is enough to provide a value at <fr:tex display="inline"><![CDATA[0]]></fr:tex>, a value at <fr:tex display="inline"><![CDATA[1]]></fr:tex>, a value at <fr:tex display="inline"><![CDATA[-1]]></fr:tex>, and compatible
+        successor steps in the positive and negative directions. This principle defines the
+        successor and predecessor maps without first constructing a quotient of
+        <fr:tex display="inline"><![CDATA[\mathbb {N}\times \mathbb {N}]]></fr:tex>.
+    </html:p></fr:mainmatter></fr:tree><html:p>
+    The dependent version of a product is traditionally called the
+    <html:strong>dependent sum type</html:strong> or <html:strong>dependent pair type</html:strong>.
     Its terms are ordered pairs.
 </html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0024/</fr:uri><fr:display-uri>def-0024</fr:display-uri><fr:route>/def-0024/</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The <html:strong>dependent pair type</html:strong> is a inductive type <fr:tex display="inline"><![CDATA[\Sigma _{(x:A)}B(x)]]></fr:tex> (<fr:tex display="inline"><![CDATA[(x:A) \times  B(x)]]></fr:tex>)
@@ -1290,16 +1310,16 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    This post discuss the identity types in type theory.
+    This note discusses identity types in type theory.
     Refer to <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link>.
 </html:p>
                 <html:p>
     How can we think of <html:strong>equality</html:strong> in type theory?
-    Mentioned before, given a type <fr:tex display="inline"><![CDATA[A]]></fr:tex> and two its elements <fr:tex display="inline"><![CDATA[a,b:A]]></fr:tex>
+    Given a type <fr:tex display="inline"><![CDATA[A]]></fr:tex> and two elements <fr:tex display="inline"><![CDATA[a,b:A]]></fr:tex>,
     we can define a new type <fr:tex display="inline"><![CDATA[a=_Ab]]></fr:tex> which is called the <html:strong>identity type</html:strong>.
-    In this case, a term of <fr:tex display="inline"><![CDATA[a=_Ab]]></fr:tex> is said to be a <html:em>witness</html:em> of the equality of <fr:tex display="inline"><![CDATA[a]]></fr:tex> and <fr:tex display="inline"><![CDATA[b]]></fr:tex>.
-    And this witness is itself a type.
-    We can then define their equality.
+    a term of <fr:tex display="inline"><![CDATA[a=_Ab]]></fr:tex> is a <html:em>witness</html:em> identifying <fr:tex display="inline"><![CDATA[a]]></fr:tex> and <fr:tex display="inline"><![CDATA[b]]></fr:tex>.
+    The witness is a term of an identity type, and two such witnesses can themselves be compared
+    by another identity type.
     This gives every type a <html:strong>groupoid structure</html:strong>.
 </html:p>
                 <fr:tree show-metadata="false">
@@ -1653,9 +1673,9 @@
                       </fr:mainmatter>
                     </fr:tree>
                     <html:p>
-        To construct dependent action on paths if a dependent function <fr:tex display="inline"><![CDATA[f:\Pi _{(x:A)}B(x)]]></fr:tex>.
-        We need a <html:strong>transport</html:strong> because type theory can not distinguish between identified 
-        elements from different types.
+        For a dependent function <fr:tex display="inline"><![CDATA[f:\Pi _{(x:A)}B(x)]]></fr:tex>, its dependent action on paths requires
+        <html:strong>transport</html:strong>, because the two endpoint values live in potentially different fibers.
+        Type theory cannot directly compare terms from different types, even when their indices are identified.
     </html:p>
                     <fr:tree show-metadata="false">
                       <fr:frontmatter>
@@ -1707,24 +1727,26 @@
         The identity type is an inductive family of types.
         For instance, while the type <fr:tex display="inline"><![CDATA[a=x]]></fr:tex> indexed by <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> is inductively generated by <fr:tex display="inline"><![CDATA[\text {refl}_a]]></fr:tex>,
         the type <fr:tex display="inline"><![CDATA[a=a]]></fr:tex> is <html:strong>not</html:strong>, because the endpoint of <fr:tex display="inline"><![CDATA[p:a=a]]></fr:tex> is not free. 
-        We want to show that <fr:tex display="inline"><![CDATA[p=\text {refl}_a]]></fr:tex> for all <fr:tex display="inline"><![CDATA[p:a=a]]></fr:tex>. 
+        In general, we cannot show that <fr:tex display="inline"><![CDATA[p=\text {refl}_a]]></fr:tex> for every <fr:tex display="inline"><![CDATA[p:a=a]]></fr:tex>.
     </html:p><html:p>
         Nevertheless the identity type <fr:tex display="inline"><![CDATA[a=x]]></fr:tex> is generated by a single element <fr:tex display="inline"><![CDATA[\text {refl}_a:a=a]]></fr:tex>,
-        so it is natural to wonder in <html:em>what sense</html:em> the reflexivity identification is unique.
-        We prove that only one pair <fr:tex display="inline"><![CDATA[(a,\text {refl}_a)]]></fr:tex> is unique in the type of all pairs:
+        so it is natural to ask in <html:em>what sense</html:em> the reflexivity identification is unique.
+        The correct statement is that the pair <fr:tex display="inline"><![CDATA[(a,\text {refl}_a)]]></fr:tex> is the center of contraction of
+        the singleton type
         <fr:tex display="block"><![CDATA[
             (x,p):\Sigma _(x:A) a = x 
         ]]></fr:tex>
-        We restate this as a proposition: Consider an element <fr:tex display="inline"><![CDATA[a:A]]></fr:tex>. Then there is an identification
-        <fr:tex display="inline"><![CDATA[(a, \text {refl}_a = y)]]></fr:tex> in the type <fr:tex display="inline"><![CDATA[\Sigma _(x:A) a = x]]></fr:tex> for any <fr:tex display="inline"><![CDATA[y:\Sigma _(x:A) a = x ]]></fr:tex></html:p>
+        That is, for every <fr:tex display="inline"><![CDATA[y:\Sigma _(x:A)(a=x)]]></fr:tex>, there is an identification
+        <fr:tex display="inline"><![CDATA[(a,\text {refl}_a)=y]]></fr:tex>.
+    </html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         By <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex> induction it suffices to show that there is an identification
         <fr:tex display="block"><![CDATA[
             (a, \text {refl}_a) = (x, p)
         ]]></fr:tex>
-        forall <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> and <fr:tex display="inline"><![CDATA[p:a=x]]></fr:tex>. Then perform the induction principle of identity types.
+        for every <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> and <fr:tex display="inline"><![CDATA[p:a=x]]></fr:tex>. Then apply the induction principle of identity types.
         It suffices to show that
         <fr:tex display="block"><![CDATA[
             (a,\text {refl}_a) = (a, \text {refl}_a)
@@ -1733,6 +1755,38 @@
     </fr:mainmatter></fr:tree>
  
 </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:date>
+                      <fr:year>2024</fr:year>
+                      <fr:month>1</fr:month>
+                      <fr:day>31</fr:day>
+                    </fr:date>
+                    <fr:title text="The laws of addition on \mathbb {N}">The laws of addition on <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex></fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+        The computation rules for addition give judgmental equalities
+        <fr:tex display="inline"><![CDATA[m+0\equiv  m]]></fr:tex> and <fr:tex display="inline"><![CDATA[m+\text {succ}(n)\equiv \text {succ}(m+n)]]></fr:tex>. The laws in the other
+        argument are propositional equalities and must be proved by induction:
+        <fr:tex display="block"><![CDATA[
+            0+n=n,\qquad  \text {succ}(m)+n=\text {succ}(m+n).
+        ]]></fr:tex>
+        The inductive step applies <fr:tex display="inline"><![CDATA[\text {succ}]]></fr:tex> to the induction hypothesis using the action on paths.
+    </html:p>
+                    <html:p>
+        These four unit and successor laws are the reusable lemmas needed for the familiar
+        algebraic laws. Induction on the final argument proves associativity,
+        <fr:tex display="block"><![CDATA[
+            (m+n)+k=m+(n+k),
+        ]]></fr:tex>
+        and induction together with both successor laws proves commutativity,
+        <fr:tex display="inline"><![CDATA[m+n=n+m]]></fr:tex>. The distinction matters: computation supplies only judgmental equality;
+        the remaining equations are inhabitants of identity types.
+    </html:p>
+                  </fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>
             </fr:tree>
@@ -1752,22 +1806,22 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    This post discuss the universe in type theory,
+    This note discusses universes in type theory,
     based on Egbert Rijke's <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link> and <fr:link href="/ncatlab/" title="nLab" uri="https://caimeo.space/ncatlab/" display-uri="ncatlab" type="local">NLab</fr:link>.
-    In this post, we regard universe as the representation of types in an internal model 
+    We regard a universe as a representation of types in an internal model
     of the type theory (<html:strong>Tarski universe</html:strong> or <html:strong>universe à la Tarski</html:strong>).
 </html:p>
                 <html:p>
-    A universe consist of a type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> with a type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> over <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>.
-    Forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> we think of <fr:tex display="inline"><![CDATA[X]]></fr:tex> as an <html:strong>encoding</html:strong> (representation) of the actual type <fr:tex display="inline"><![CDATA[\mathcal {T}(X)]]></fr:tex>.
-    The type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> is therefore called a <html:strong>unversal type family</html:strong>.
+    A universe consists of a type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> with a type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> over <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>.
+    For every <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex>, we think of <fr:tex display="inline"><![CDATA[X]]></fr:tex> as an <html:strong>encoding</html:strong> of the actual type <fr:tex display="inline"><![CDATA[\mathcal {T}(X)]]></fr:tex>.
+    The type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> is therefore called a <html:strong>universal type family</html:strong>.
 </html:p>
                 <html:p>
-    There several reasons to equip type theory with universes.
-    It enables us to define new type families over inductive types, using induction principle.
+    There are several reasons to equip type theory with universes.
+    They enable us to define new type families over inductive types using their induction principles.
     For instance, we can define <html:strong>relations</html:strong> over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>, such as ordering relations <fr:tex display="inline"><![CDATA[\leq ]]></fr:tex>.
     We will soon meet the idea of <html:strong>observational equality</html:strong> for a particular type, different from identity types.
-    Another reason is that it allows us to define types equipped with structure such as group.
+    They also allow us to collect types equipped with structure, such as groups.
 </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
@@ -1943,9 +1997,9 @@
                   <fr:mainmatter>
                     <html:p>
         Now we give the example of <html:strong>observational equality</html:strong> of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>.
-        The key idea is to define a recursive function that reduce the arguments.
-        Observational equality an inductively defined relation, which gives us an algorithm for checking
-        equality on  <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. It can be used to show that equality of natural numbers is <html:strong>decidable</html:strong>.
+        The key idea is to define a recursive family that reduces both arguments.
+        Observational equality is an inductively defined relation that gives an algorithm for checking
+        equality on <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. It can be used to show that equality of natural numbers is <html:strong>decidable</html:strong>.
     </html:p>
                     <fr:tree show-metadata="false">
                       <fr:frontmatter>
@@ -1970,7 +2024,7 @@
     
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         We define <fr:tex display="inline"><![CDATA[\text {Eq}]]></fr:tex> by double induction on <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. By the first application of induction
         it suffices to provide
         <fr:tex display="block"><![CDATA[
@@ -2161,7 +2215,7 @@
 </html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         Differentiate the normalization condition with respect to time:
         <fr:tex display="block"><![CDATA[
             \frac {d}{dt}\int _{-\infty }^{\infty } |\Psi (x,t)|^2 dx = 
@@ -8270,7 +8324,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
     
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             <fr:tex display="block"><![CDATA[
                 \begin {align*}
                     S\space  n &= (\lambda  n.\lambda  f.\lambda  x.f(n\space  f\space  x))\space  n \\
@@ -9676,7 +9730,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
     </html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         For the base case <fr:tex display="inline"><![CDATA[e = \text {Val} \space  n]]></fr:tex>, we have <fr:tex display="inline"><![CDATA[\llbracket  e\rrbracket  = n]]></fr:tex> trivially.
         For the inductive case <fr:tex display="inline"><![CDATA[e = \text {Add} \space  e_1\space  e_2]]></fr:tex>,
         we can assume by induction that <fr:tex display="inline"><![CDATA[\llbracket  e_1\rrbracket  = n_1]]></fr:tex> and <fr:tex display="inline"><![CDATA[\llbracket  e_2\rrbracket  = n_2]]></fr:tex>
@@ -9895,7 +9949,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
         ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         The proof consists of three parts: the base case, the reduction rule and the structural rule.
         <fr:tex display="block"><![CDATA[
             \begin {align*}
@@ -13753,7 +13807,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
         ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>6</fr:month><fr:day>10</fr:day></fr:date><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         Let <fr:tex display="inline"><![CDATA[A \cdot  \text {adj} A = (b_{ij})]]></fr:tex> and we have
         <fr:tex display="block"><![CDATA[
             b_{ij} = a_{i1}A_{j1} + a_{i2}A_{j2} + \cdots  + a_{in}A_{jn} = \delta _{ij} \cdot  \det  A
@@ -14316,7 +14370,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
             ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             The work done in accelerating a particle with mass m during the infinitesimal time 
             interval <fr:tex display="inline"><![CDATA[dt]]></fr:tex> is given by the dot product of force <fr:tex display="inline"><![CDATA[\vec {F}]]></fr:tex> and the infinitesimal displacement <fr:tex display="inline"><![CDATA[d\vec {x}]]></fr:tex>
             <fr:tex display="block"><![CDATA[
@@ -14455,7 +14509,7 @@ Another way to define <fr:tex display="inline"><![CDATA[\Lambda ]]></fr:tex> is 
             ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             Now we prove the equivalence of definitions.
             <fr:tex display="block"><![CDATA[
                 \frac {d\vec {L}}{dt} = \vec {r}\times \frac {d\vec {p}}{dt} + \frac {d\vec {r}}{dt}\times \vec {p}

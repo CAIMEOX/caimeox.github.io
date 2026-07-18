@@ -164,7 +164,7 @@
     </html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         For the base case <fr:tex display="inline"><![CDATA[e = \text {Val} \space  n]]></fr:tex>, we have <fr:tex display="inline"><![CDATA[\llbracket  e\rrbracket  = n]]></fr:tex> trivially.
         For the inductive case <fr:tex display="inline"><![CDATA[e = \text {Add} \space  e_1\space  e_2]]></fr:tex>,
         we can assume by induction that <fr:tex display="inline"><![CDATA[\llbracket  e_1\rrbracket  = n_1]]></fr:tex> and <fr:tex display="inline"><![CDATA[\llbracket  e_2\rrbracket  = n_2]]></fr:tex>
@@ -383,7 +383,7 @@
         ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>3</fr:month><fr:day>11</fr:day></fr:date><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         The proof consists of three parts: the base case, the reduction rule and the structural rule.
         <fr:tex display="block"><![CDATA[
             \begin {align*}

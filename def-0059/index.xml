@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors />
+    <fr:uri>https://caimeo.space/def-0059/</fr:uri>
+    <fr:display-uri>def-0059</fr:display-uri>
+    <fr:route>/def-0059/</fr:route>
+    <fr:title text="Homotopy">Homotopy</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    Let <fr:tex display="inline"><![CDATA[B:A\to \mathcal {U}]]></fr:tex> be a type family and let
+    <fr:tex display="inline"><![CDATA[f,g:\Pi _{x:A}B(x)]]></fr:tex> be dependent functions. A <html:strong>homotopy</html:strong> from
+    <fr:tex display="inline"><![CDATA[f]]></fr:tex> to <fr:tex display="inline"><![CDATA[g]]></fr:tex> is a pointwise identification between their values. Its type is
+    <fr:tex display="block"><![CDATA[
+        f\sim  g\;:\equiv \;\Pi _{x:A}\bigl (f(x)=g(x)\bigr ).
+    ]]></fr:tex></html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:uri>https://caimeo.space/tt-000A/</fr:uri>
+            <fr:display-uri>tt-000A</fr:display-uri>
+            <fr:route>/tt-000A/</fr:route>
+            <fr:title text="Equivalences">Equivalences</fr:title>
+            <fr:taxon>Type Theory</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    This note follows Chapter 9 of <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link>.
+    Equivalence is the correct notion of sameness between types; its definition must eventually be
+    shown to be a property of a map rather than extra, non-unique structure.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>18</fr:day>
+                </fr:date>
+                <fr:title text="Homotopies">Homotopies</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-0059/</fr:uri>
+                    <fr:display-uri>def-0059</fr:display-uri>
+                    <fr:route>/def-0059/</fr:route>
+                    <fr:title text="Homotopy">Homotopy</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[B:A\to \mathcal {U}]]></fr:tex> be a type family and let
+    <fr:tex display="inline"><![CDATA[f,g:\Pi _{x:A}B(x)]]></fr:tex> be dependent functions. A <html:strong>homotopy</html:strong> from
+    <fr:tex display="inline"><![CDATA[f]]></fr:tex> to <fr:tex display="inline"><![CDATA[g]]></fr:tex> is a pointwise identification between their values. Its type is
+    <fr:tex display="block"><![CDATA[
+        f\sim  g\;:\equiv \;\Pi _{x:A}\bigl (f(x)=g(x)\bigr ).
+    ]]></fr:tex></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        Homotopies express commutative diagrams in type theory. They have reflexivity, inverse, and
+        concatenation operations inherited pointwise from identity types.
+    </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>18</fr:day>
+                </fr:date>
+                <fr:title text="Bi-invertible maps">Bi-invertible maps</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005G/</fr:uri>
+                    <fr:display-uri>def-005G</fr:display-uri>
+                    <fr:route>/def-005G/</fr:route>
+                    <fr:title text="Section of a Map">Section of a Map</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>. A <html:strong>section</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a map <fr:tex display="inline"><![CDATA[g:B\to  A]]></fr:tex>
+    equipped with a <fr:link href="/def-0059/" title="Homotopy" uri="https://caimeo.space/def-0059/" display-uri="def-0059" type="local">homotopy</fr:link> <fr:tex display="inline"><![CDATA[f\circ  g\sim \mathsf {id}_B]]></fr:tex>.
+    The type of sections of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {sec}(f)
+        :\equiv 
+        \Sigma _{g:B\to  A}\bigl (f\circ  g\sim \mathsf {id}_B\bigr ).
+    ]]></fr:tex>
+    Thus a section of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a right inverse of <fr:tex display="inline"><![CDATA[f]]></fr:tex> up to homotopy.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005H/</fr:uri>
+                    <fr:display-uri>def-005H</fr:display-uri>
+                    <fr:route>/def-005H/</fr:route>
+                    <fr:title text="Retraction of a Map">Retraction of a Map</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>. A <html:strong>retraction</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a map <fr:tex display="inline"><![CDATA[h:B\to  A]]></fr:tex>
+    equipped with a <fr:link href="/def-0059/" title="Homotopy" uri="https://caimeo.space/def-0059/" display-uri="def-0059" type="local">homotopy</fr:link> <fr:tex display="inline"><![CDATA[h\circ  f\sim \mathsf {id}_A]]></fr:tex>.
+    The type of retractions of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {retr}(f)
+        :\equiv 
+        \Sigma _{h:B\to  A}\bigl (h\circ  f\sim \mathsf {id}_A\bigr ).
+    ]]></fr:tex>
+    If <fr:tex display="inline"><![CDATA[f]]></fr:tex> has a retraction, then <fr:tex display="inline"><![CDATA[A]]></fr:tex> is called a retract of <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005B/</fr:uri>
+                    <fr:display-uri>def-005B</fr:display-uri>
+                    <fr:route>/def-005B/</fr:route>
+                    <fr:title text="Bi-invertible Map">Bi-invertible Map</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    A map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> is <html:strong>bi-invertible</html:strong> if it has both a
+    <fr:link href="/def-005G/" title="Section of a Map" uri="https://caimeo.space/def-005G/" display-uri="def-005G" type="local">section</fr:link> and a <fr:link href="/def-005H/" title="Retraction of a Map" uri="https://caimeo.space/def-005H/" display-uri="def-005H" type="local">retraction</fr:link>, or equivalently a separate
+    <fr:link href="/def-005A/" title="Left and Right Inverses" uri="https://caimeo.space/def-005A/" display-uri="def-005A" type="local">right and left inverse</fr:link>. Define
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isBiInv}(f)
+        :\equiv 
+        \mathsf {sec}(f)\times \mathsf {retr}(f).
+    ]]></fr:tex>
+    The left and right inverse maps are supplied independently; their inverse
+    laws imply that they are homotopic.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005C/</fr:uri>
+                    <fr:display-uri>def-005C</fr:display-uri>
+                    <fr:route>/def-005C/</fr:route>
+                    <fr:title text="Equivalence of Types">Equivalence of Types</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    An <html:strong>equivalence</html:strong> from <fr:tex display="inline"><![CDATA[A]]></fr:tex> to <fr:tex display="inline"><![CDATA[B]]></fr:tex> is a map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> equipped
+    with evidence that it is <fr:link href="/def-005B/" title="Bi-invertible Map" uri="https://caimeo.space/def-005B/" display-uri="def-005B" type="local">bi-invertible</fr:link>. The type of equivalences
+    is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isEquiv}(f):\equiv \mathsf {isBiInv}(f),\qquad 
+        A\simeq  B
+        \;:\equiv \;
+        \Sigma _{f:A\to  B}\mathsf {isEquiv}(f).
+    ]]></fr:tex>
+    We write <fr:tex display="inline"><![CDATA[e:A\simeq  B]]></fr:tex> for an equivalence and use its first projection as
+    the underlying map.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005I/</fr:uri>
+                    <fr:display-uri>def-005I</fr:display-uri>
+                    <fr:route>/def-005I/</fr:route>
+                    <fr:title text="Map with an Inverse">Map with an Inverse</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>. We say that <fr:tex display="inline"><![CDATA[f]]></fr:tex> <html:strong>has an inverse</html:strong> if there is a
+    single map <fr:tex display="inline"><![CDATA[g:B\to  A]]></fr:tex> that is both a right inverse and a left inverse of
+    <fr:tex display="inline"><![CDATA[f]]></fr:tex>, up to homotopy. Define
+    <fr:tex display="block"><![CDATA[
+        \mathsf {hasInverse}(f)
+        :\equiv 
+        \Sigma _{g:B\to  A}
+        \bigl (f\circ  g\sim \mathsf {id}_B\bigr )
+        \times 
+        \bigl (g\circ  f\sim \mathsf {id}_A\bigr ).
+    ]]></fr:tex>
+    Thus an element of <fr:tex display="inline"><![CDATA[\mathsf {hasInverse}(f)]]></fr:tex> is a triple <fr:tex display="inline"><![CDATA[(g,G,H)]]></fr:tex>, where
+    <fr:tex display="inline"><![CDATA[G:f\circ  g\sim \mathsf {id}_B]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[H:g\circ  f\sim \mathsf {id}_A]]></fr:tex>.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        It is tempting to define an equivalence using a single inverse. The problem is that
+        <fr:tex display="inline"><![CDATA[\mathsf {hasInverse}(f)]]></fr:tex> can contain nontrivial higher information, whereas
+        <fr:tex display="inline"><![CDATA[\mathsf {isEquiv}(f)]]></fr:tex> will be shown, using function extensionality, to be a proposition.
+        For example, a later calculation gives
+        <fr:tex display="inline"><![CDATA[\mathsf {hasInverse}(\mathsf {id}_{\mathbb {S}^1})\simeq \mathbb {Z}]]></fr:tex>.
+    </html:p>
+                <html:p>
+        Consequently, the following two constructions establish logical equivalence, but they do
+        not assert that the witness types <fr:tex display="inline"><![CDATA[\mathsf {hasInverse}(f)]]></fr:tex> and
+        <fr:tex display="inline"><![CDATA[\mathsf {isEquiv}(f)]]></fr:tex> are themselves equivalent. The composites of the two constructions
+        need not be homotopic to the corresponding identity maps.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-0015/</fr:uri>
+                    <fr:display-uri>thm-0015</fr:display-uri>
+                    <fr:route>/thm-0015/</fr:route>
+                    <fr:title text="A Map with an Inverse Is an Equivalence">A Map with an Inverse Is an Equivalence</fr:title>
+                    <fr:taxon>Proposition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    For every map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>, a <fr:link href="/def-005I/" title="Map with an Inverse" uri="https://caimeo.space/def-005I/" display-uri="def-005I" type="local">map with an inverse</fr:link> determines
+    an <fr:link href="/def-005C/" title="Equivalence of Types" uri="https://caimeo.space/def-005C/" display-uri="def-005C" type="local">equivalence</fr:link>. Explicitly, there is a canonical function
+    <fr:tex display="block"><![CDATA[
+        \mathsf {hasInverse}(f)\to \mathsf {isEquiv}(f).
+    ]]></fr:tex></html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline"><![CDATA[(g,G,H):\mathsf {hasInverse}(f)]]></fr:tex>. By definition,
+    <fr:tex display="block"><![CDATA[
+        G:f\circ  g\sim \mathsf {id}_B,
+        \qquad 
+        H:g\circ  f\sim \mathsf {id}_A.
+    ]]></fr:tex>
+    Therefore <fr:tex display="inline"><![CDATA[(g,G):\mathsf {sec}(f)]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[(g,H):\mathsf {retr}(f)]]></fr:tex>. Pairing them gives
+    <fr:tex display="block"><![CDATA[
+        \bigl ((g,G),(g,H)\bigr )
+        :\mathsf {sec}(f)\times \mathsf {retr}(f)
+        :\equiv \mathsf {isEquiv}(f).
+    ]]></fr:tex>
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-0016/</fr:uri>
+                    <fr:display-uri>thm-0016</fr:display-uri>
+                    <fr:route>/thm-0016/</fr:route>
+                    <fr:title text="An Equivalence Has an Inverse">An Equivalence Has an Inverse</fr:title>
+                    <fr:taxon>Proposition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    For every map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>, an <fr:link href="/def-005C/" title="Equivalence of Types" uri="https://caimeo.space/def-005C/" display-uri="def-005C" type="local">equivalence</fr:link> determines a
+    <fr:link href="/def-005I/" title="Map with an Inverse" uri="https://caimeo.space/def-005I/" display-uri="def-005I" type="local">map with an inverse</fr:link>. Explicitly, there is a canonical function
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isEquiv}(f)\to \mathsf {hasInverse}(f).
+    ]]></fr:tex></html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Suppose that <fr:tex display="inline"><![CDATA[f]]></fr:tex> is equipped with a section and a retraction,
+    <fr:tex display="block"><![CDATA[
+        (g,G):\mathsf {sec}(f),
+        \qquad 
+        (h,H):\mathsf {retr}(f).
+    ]]></fr:tex>
+    Thus <fr:tex display="inline"><![CDATA[g,h:B\to  A]]></fr:tex>,
+    <fr:tex display="inline"><![CDATA[G:f\circ  g\sim \mathsf {id}_B]]></fr:tex>, and
+    <fr:tex display="inline"><![CDATA[H:h\circ  f\sim \mathsf {id}_A]]></fr:tex>. First construct a homotopy
+    <fr:tex display="inline"><![CDATA[K:g\sim  h]]></fr:tex>. For each <fr:tex display="inline"><![CDATA[y:B]]></fr:tex>, define
+    <fr:tex display="block"><![CDATA[
+        K(y)
+        :\equiv 
+        H(g(y))^{-1}\cdot \mathsf {ap}_h(G(y))
+        :g(y)=h(y).
+    ]]></fr:tex>
+    Indeed, the two factors have types
+    <fr:tex display="block"><![CDATA[
+        H(g(y))^{-1}:g(y)=h(f(g(y))),
+        \qquad 
+        \mathsf {ap}_h(G(y)):h(f(g(y)))=h(y),
+    ]]></fr:tex>
+    so their concatenation is well typed.
+
+    We now make the section <fr:tex display="inline"><![CDATA[g]]></fr:tex> into a left inverse as well. For each <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>,
+    define
+    <fr:tex display="block"><![CDATA[
+        H_g(x)
+        :\equiv 
+        K(f(x))\cdot  H(x)
+        :g(f(x))=x.
+    ]]></fr:tex>
+    Therefore <fr:tex display="inline"><![CDATA[H_g:g\circ  f\sim \mathsf {id}_A]]></fr:tex>, while the original homotopy
+    <fr:tex display="inline"><![CDATA[G]]></fr:tex> already gives <fr:tex display="inline"><![CDATA[f\circ  g\sim \mathsf {id}_B]]></fr:tex>. Hence
+    <fr:tex display="block"><![CDATA[
+        (g,G,H_g):\mathsf {hasInverse}(f).
+    ]]></fr:tex>
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        Identity maps, composites, and inverse maps are equivalences. Equivalences satisfy
+        two-out-of-three, so in
+        a composite, any two of the three maps being equivalences forces the third to be one.
+    </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>18</fr:day>
+                </fr:date>
+                <fr:title text="Identities of dependent pairs">Identities of dependent pairs</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        For <fr:tex display="inline"><![CDATA[u=(x,a)]]></fr:tex> and <fr:tex display="inline"><![CDATA[v=(y,b)]]></fr:tex> in <fr:tex display="inline"><![CDATA[\Sigma _{x:A}B(x)]]></fr:tex>, an identity consists of an
+        identity in the base and a compatible identity in the fiber:
+        <fr:tex display="block"><![CDATA[
+            (u=v)\simeq 
+            \Sigma _{p:x=y}\bigl (\mathsf {transport}_B(p,a)=b\bigr ).
+        ]]></fr:tex>
+        This equivalence is the basic tool for calculating equality in structured objects. It also
+        explains why equality of ordinary pairs is componentwise only after accounting for
+        dependency.
+    </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:uri>https://caimeo.space/def-005H/</fr:uri>
+            <fr:display-uri>def-005H</fr:display-uri>
+            <fr:route>/def-005H/</fr:route>
+            <fr:title text="Retraction of a Map">Retraction of a Map</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>. A <html:strong>retraction</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a map <fr:tex display="inline"><![CDATA[h:B\to  A]]></fr:tex>
+    equipped with a <fr:link href="/def-0059/" title="Homotopy" uri="https://caimeo.space/def-0059/" display-uri="def-0059" type="local">homotopy</fr:link> <fr:tex display="inline"><![CDATA[h\circ  f\sim \mathsf {id}_A]]></fr:tex>.
+    The type of retractions of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {retr}(f)
+        :\equiv 
+        \Sigma _{h:B\to  A}\bigl (h\circ  f\sim \mathsf {id}_A\bigr ).
+    ]]></fr:tex>
+    If <fr:tex display="inline"><![CDATA[f]]></fr:tex> has a retraction, then <fr:tex display="inline"><![CDATA[A]]></fr:tex> is called a retract of <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:uri>https://caimeo.space/def-005G/</fr:uri>
+            <fr:display-uri>def-005G</fr:display-uri>
+            <fr:route>/def-005G/</fr:route>
+            <fr:title text="Section of a Map">Section of a Map</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>. A <html:strong>section</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a map <fr:tex display="inline"><![CDATA[g:B\to  A]]></fr:tex>
+    equipped with a <fr:link href="/def-0059/" title="Homotopy" uri="https://caimeo.space/def-0059/" display-uri="def-0059" type="local">homotopy</fr:link> <fr:tex display="inline"><![CDATA[f\circ  g\sim \mathsf {id}_B]]></fr:tex>.
+    The type of sections of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {sec}(f)
+        :\equiv 
+        \Sigma _{g:B\to  A}\bigl (f\circ  g\sim \mathsf {id}_B\bigr ).
+    ]]></fr:tex>
+    Thus a section of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a right inverse of <fr:tex display="inline"><![CDATA[f]]></fr:tex> up to homotopy.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

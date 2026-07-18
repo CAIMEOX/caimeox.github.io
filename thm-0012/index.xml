@@ -150,7 +150,7 @@
             ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             The work done in accelerating a particle with mass m during the infinitesimal time 
             interval <fr:tex display="inline"><![CDATA[dt]]></fr:tex> is given by the dot product of force <fr:tex display="inline"><![CDATA[\vec {F}]]></fr:tex> and the infinitesimal displacement <fr:tex display="inline"><![CDATA[d\vec {x}]]></fr:tex>
             <fr:tex display="block"><![CDATA[
@@ -289,7 +289,7 @@
             ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             Now we prove the equivalence of definitions.
             <fr:tex display="block"><![CDATA[
                 \frac {d\vec {L}}{dt} = \vec {r}\times \frac {d\vec {p}}{dt} + \frac {d\vec {r}}{dt}\times \vec {p}

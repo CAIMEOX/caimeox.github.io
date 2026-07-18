@@ -260,7 +260,7 @@
     
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             <fr:tex display="block"><![CDATA[
                 \begin {align*}
                     S\space  n &= (\lambda  n.\lambda  f.\lambda  x.f(n\space  f\space  x))\space  n \\

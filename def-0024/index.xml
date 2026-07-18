@@ -132,9 +132,9 @@
             <fr:taxon>Type Theory</fr:taxon>
           </fr:frontmatter>
           <fr:mainmatter><html:p>
-    In previous post, we have seen the definition of natural numbers as an inductive type.
-    In this post, we will see more examples of inductive types, such as 
-    unit type, empty type, product type, sum type and etc.
+    In the previous note, we saw the definition of natural numbers as an inductive type.
+    Here we study more examples, including the unit type, empty type, coproducts,
+    integers, and dependent pairs.
     Refer to <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke's Book</fr:link>.
 </html:p><html:p>
     This section is much more informal than the previous one.
@@ -143,15 +143,15 @@
 </html:p>
     <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="General Inductive Type"><html:strong>General Inductive Type</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
-    Just like <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>, other inductive types can be defined by 
+    Just like <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>, other inductive types can be defined by
     their constructors and induction principles (and computation rules).
     </html:p>
     <html:ul><html:li>
-            The constructors specify the structure of the type equipped.
+            The constructors specify how canonical terms of the type are formed.
         </html:li>
         <html:li>
             The induction principle specifies the data required to construct 
-            a section of an arbitrary type family over the inductive type.
+                a section of an arbitrary type family over the inductive type.
         </html:li>
         <html:li>
             The computation rules specify the behavior of the constructors.
@@ -170,7 +170,7 @@
         ]]></fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
     A degenerate inductive type is the <html:strong>empty type</html:strong>.
     It has no constructor, and its induction principle is trivial.
-    Empty type is connected to the <html:strong>exfalso quodlibet principle</html:strong> in logic.
+    The empty type corresponds to the <html:strong>ex falso quodlibet</html:strong> principle in logic.
 </html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0021/</fr:uri><fr:display-uri>def-0021</fr:display-uri><fr:route>/def-0021/</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The <html:strong>empty type</html:strong> is a degenerate inductive type <fr:tex display="inline"><![CDATA[\emptyset ]]></fr:tex> satisfying 
     the following induction principle:
@@ -184,7 +184,7 @@
     which can draw any conclusion.
 </html:p></fr:mainmatter></fr:tree><html:p>
     With the empty type we can define the <html:strong>negation</html:strong> of a type
-    and the <html:strong>proof of negation</html:strong>.
+    and the evidence for a negation.
 </html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0022/</fr:uri><fr:display-uri>def-0022</fr:display-uri><fr:route>/def-0022/</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The <html:strong>negation</html:strong> of type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is defined as
     <fr:tex display="block"><![CDATA[
@@ -239,8 +239,28 @@
         (P\to  Q) \to  (R\to  Q) \to  (P\vee  R\to  Q)
     ]]></fr:tex>
 </fr:mainmatter></fr:tree>
-<html:p>
-    The dependent version of sum type is called the <html:strong>dependent sum type (dependent coproduct)</html:strong> traditionally.
+<fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="The integers">The integers</fr:title></fr:frontmatter><fr:mainmatter><html:p>
+        Before quotient types are available, the integers can be built directly from coproducts:
+        <fr:tex display="block"><![CDATA[
+            \mathbb {Z} :\equiv  \mathbb {N} + (\mathbf {1}+\mathbb {N}).
+        ]]></fr:tex>
+        The left summand represents the negative integers, while the two pieces of the right
+        summand represent zero and the positive integers. In particular,
+        <fr:tex display="block"><![CDATA[
+            -1 :\equiv  \mathsf {inl}(0),\qquad 
+            0 :\equiv  \mathsf {inr}(\mathsf {inl}(\star )),\qquad 
+            1 :\equiv  \mathsf {inr}(\mathsf {inr}(0)).
+        ]]></fr:tex>
+        Thus every integer has a unique canonical form: <fr:tex display="inline"><![CDATA[-(n+1)]]></fr:tex>, <fr:tex display="inline"><![CDATA[0]]></fr:tex>, or <fr:tex display="inline"><![CDATA[n+1]]></fr:tex>.
+    </html:p><html:p>
+        Coproduct and natural-number induction give an induction principle for <fr:tex display="inline"><![CDATA[\mathbb {Z}]]></fr:tex>.
+        It is enough to provide a value at <fr:tex display="inline"><![CDATA[0]]></fr:tex>, a value at <fr:tex display="inline"><![CDATA[1]]></fr:tex>, a value at <fr:tex display="inline"><![CDATA[-1]]></fr:tex>, and compatible
+        successor steps in the positive and negative directions. This principle defines the
+        successor and predecessor maps without first constructing a quotient of
+        <fr:tex display="inline"><![CDATA[\mathbb {N}\times \mathbb {N}]]></fr:tex>.
+    </html:p></fr:mainmatter></fr:tree><html:p>
+    The dependent version of a product is traditionally called the
+    <html:strong>dependent sum type</html:strong> or <html:strong>dependent pair type</html:strong>.
     Its terms are ordered pairs.
 </html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0024/</fr:uri><fr:display-uri>def-0024</fr:display-uri><fr:route>/def-0024/</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The <html:strong>dependent pair type</html:strong> is a inductive type <fr:tex display="inline"><![CDATA[\Sigma _{(x:A)}B(x)]]></fr:tex> (<fr:tex display="inline"><![CDATA[(x:A) \times  B(x)]]></fr:tex>)

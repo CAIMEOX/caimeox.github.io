@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors />
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>7</fr:month>
+      <fr:day>18</fr:day>
+    </fr:date>
+    <fr:uri>https://caimeo.space/tt-0008/</fr:uri>
+    <fr:display-uri>tt-0008</fr:display-uri>
+    <fr:route>/tt-0008/</fr:route>
+    <fr:title text="Modular Arithmetic via Curry-Howard">Modular Arithmetic via Curry-Howard</fr:title>
+    <fr:taxon>Type Theory</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    This note follows Chapter 7 of <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link>.
+    It develops elementary arithmetic inside type theory, where a proposition is represented by
+    the type of its witnesses and a proof is a term of that type.
+</html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>18</fr:day>
+        </fr:date>
+        <fr:title text="Logical operations as type formers">Logical operations as type formers</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+        Conjunction is interpreted by product or dependent-pair types, disjunction by coproducts,
+        implication by function types, and quantifiers by dependent types:
+        <fr:tex display="block"><![CDATA[
+            P\land  Q\rightsquigarrow  P\times  Q,\quad 
+            P\lor  Q\rightsquigarrow  P+Q,\quad 
+            (P\Rightarrow  Q)\rightsquigarrow (P\to  Q),
+        ]]></fr:tex>
+        <fr:tex display="block"><![CDATA[
+            (\forall _{x:A}P(x))\rightsquigarrow \Pi _{x:A}P(x),\qquad 
+            (\exists _{x:A}P(x))\rightsquigarrow \Sigma _{x:A}P(x).
+        ]]></fr:tex>
+        This is evidence-relevant: an existential proof retains both its witness and the evidence.
+    </html:p>
+        <html:p>
+        For example, divisibility is the type
+        <fr:tex display="block"><![CDATA[
+            d\mid  n\;:\equiv \;\Sigma _{k:\mathbb {N}}(d\cdot  k=n).
+        ]]></fr:tex>
+        To prove <fr:tex display="inline"><![CDATA[d\mid  n]]></fr:tex> we construct <fr:tex display="inline"><![CDATA[(k,p)]]></fr:tex>; to use such a proof, we eliminate the
+        dependent pair and obtain the multiplier and its equation.
+    </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>18</fr:day>
+        </fr:date>
+        <fr:title text="Congruence and finite residues">Congruence and finite residues</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+        Congruence modulo <fr:tex display="inline"><![CDATA[k]]></fr:tex> is expressed without quotienting:
+        <fr:tex display="block"><![CDATA[
+            x\equiv _k y\;:\equiv \;\Sigma _{a,b:\mathbb {N}}(x+k\cdot  a=y+k\cdot  b).
+        ]]></fr:tex>
+        Reflexivity, symmetry, and transitivity follow by arithmetic on the witnesses, so this is
+        a typal equivalence relation.
+    </html:p>
+        <html:p>
+        The standard finite types are defined recursively by
+        <fr:tex display="block"><![CDATA[
+            \mathsf {Fin}(0):\equiv \mathbf {0},\qquad 
+            \mathsf {Fin}(k+1):\equiv \mathbf {1}+\mathsf {Fin}(k).
+        ]]></fr:tex>
+        Their constructors give canonical representatives <fr:tex display="inline"><![CDATA[0,\ldots ,k]]></fr:tex>; an inclusion
+        <fr:tex display="inline"><![CDATA[\iota _k:\mathsf {Fin}(k)\to \mathbb {N}]]></fr:tex> records the represented natural number.
+    </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>18</fr:day>
+        </fr:date>
+        <fr:title text="Reduction modulo k+1">Reduction modulo <fr:tex display="inline"><![CDATA[k+1]]></fr:tex></fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+        Recursion defines a residue map
+        <fr:tex display="block"><![CDATA[
+            [-]_{k+1}:\mathbb {N}\to \mathsf {Fin}(k+1)
+        ]]></fr:tex>
+        that cycles after <fr:tex display="inline"><![CDATA[k+1]]></fr:tex> steps. It is split surjective: every residue has its canonical
+        representative, and reducing that representative returns the original residue.
+    </html:p>
+        <html:p>
+        Transporting addition through this reduction defines
+        <fr:tex display="inline"><![CDATA[x+_{k+1}y:\equiv [\iota (x)+\iota (y)]_{k+1}]]></fr:tex>. The residue laws imply the unit,
+        associativity, inverse, and commutativity laws. Hence
+        <fr:tex display="inline"><![CDATA[\mathbb {Z}/(k+1):\equiv \mathsf {Fin}(k+1)]]></fr:tex> is a cyclic abelian group, generated by <fr:tex display="inline"><![CDATA[1]]></fr:tex>.
+        The construction supplies concrete data, not merely an assertion that a quotient exists.
+    </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/egbert-rijke/" title="Egbert Rijke" uri="https://caimeo.space/egbert-rijke/" display-uri="egbert-rijke" type="local">Egbert Rijke</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:uri>https://caimeo.space/hott-2022/</fr:uri>
+            <fr:display-uri>hott-2022</fr:display-uri>
+            <fr:route>/hott-2022/</fr:route>
+            <fr:title text="Introduction to Homotopy Type Theory">Introduction to Homotopy Type Theory</fr:title>
+            <fr:taxon>reference</fr:taxon>
+            <fr:meta name="doi">10.48550/arXiv.2212.11082</fr:meta>
+            <fr:meta name="venue">Logic, Category Theory</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    This is an introductory textbook to univalent mathematics and homotopy type theory, a mathematical foundation that takes advantage of the structural nature of mathematical definitions and constructions. 
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
