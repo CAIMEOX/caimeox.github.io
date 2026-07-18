@@ -1,4 +1,4 @@
-\title{Introduction to Programming Language Semantic}
+\title{Introduction to Programming Language Semantics}
 \date{2024-03-11}
 \taxon{Programming Language Theory}
 \import{macros}
@@ -542,7 +542,7 @@
     
     \title{Abstract Machine}
     \p{
-        All the exmaples we have meet focused on explaining semantic ideas,
+        All the examples we have encountered focused on explaining semantic ideas,
         now we show how language of integers and addition can also be used to help 
         discover semantic ideas.
         We show how it can be used as the basis for discovering how to implement 
@@ -554,7 +554,7 @@
         structure into the semantics by constructing an abstract machine.
     }
     \p{
-        Formally, an abstract machine is usually deifned by a set of syntactic rewrite ruless 
+        Formally, an abstract machine is usually defined by a set of syntactic rewrite rules
         that make explicit how each step of evaluation proceeds.
         This section we show how an abstract machine for our example language can 
         be systematically derived from the evaluation function using steps

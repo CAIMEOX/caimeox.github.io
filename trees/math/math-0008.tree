@@ -200,7 +200,7 @@
                 If #{\rank(A)=\rank(A,b)=n}, there is a unique solution.
             }
             \li{
-                Ig #{\rank(A)=\rank(A,b)<n}, there are infinite solutions.
+                If #{\rank(A)=\rank(A,b)<n}, there are infinite solutions.
             }
         }
         This leads two fundamental theorems of linear systems:
@@ -221,7 +221,7 @@
     }
     \transclude{def-000L}
     \p{
-        Given two sets of vectors, we say that they are eqaul iff their elements can write as linear combinations of each other.
+        Given two sets of vectors, we say that they are equal iff their elements can write as linear combinations of each other.
         This condition can be written using rank:
         ##{
             \rank(A) = \rank(B) = \rank(A, B)

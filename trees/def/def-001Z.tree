@@ -23,7 +23,7 @@
 \block{\strong{Construction}}{
     \scope{
         \p{
-            We construct the additon by perform induction over the second variable #{n}.
+            We construct the addition by performing induction over the second variable #{n}.
             That is, to construct an element
             ##{
                 m:\N \vdash \add(m):\N \to \N

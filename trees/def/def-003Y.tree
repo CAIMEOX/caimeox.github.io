@@ -1,5 +1,5 @@
 \title{Permutation}
-\taxon{Defintion}
+\taxon{Definition}
 \p{
     A \strong{permutation} of a set #{S} is a bijection from #{S} to itself.
     The set of permutation of #{\{1,\cdots, n\}} is usually denoted by #{S_n}.

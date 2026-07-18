@@ -186,7 +186,7 @@
 \subtree{
     \title{Graphs à la Carte}
     \p{
-        Now we define some instances of the Grpah, and extend the axioms to construct more complex graphs.
+        Now we define some instances of the Graph, and extend the axioms to construct more complex graphs.
     }
     \subtree{
         \title{Binary Relation}

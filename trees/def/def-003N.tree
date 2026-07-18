@@ -2,7 +2,7 @@
 \taxon{Definition}
 \p{
     If the string #{x} consists characters #{x_1, x_2, \ldots, x_n} then the
-    FA #{(S,\Sigma,\delta,s_0,S_A)} \strong{accpets} #{x} iff there is a sequence
+    FA #{(S,\Sigma,\delta,s_0,S_A)} \strong{accepts} #{x} iff there is a sequence
     ##{
         \delta(
             \delta(

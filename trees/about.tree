@@ -33,7 +33,7 @@
         Or click the nodes to expand the trees of various subjects.
     }
     \p{
-        A tree in Forester is associated to an unique address of the form \code{xxx-NNNN},
+        A tree in Forester is associated with a unique address of the form \code{xxx-NNNN},
         where \code{xxx} is the \strong{namespace} and \code{NNNN} is the \strong{ID} (A base-36 number of 4 digits) of the tree.
         The namespace implies the category of the tree node, for instance,
         \code{tt} for Type Theory and \code{math} for Mathematics.

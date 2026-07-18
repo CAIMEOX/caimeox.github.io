@@ -3,7 +3,7 @@
 \import{macros}
 \def\inv{\text{inv}}
 \p{
-    Let #{A} be a type. The \strong{inverse oepration} is defined:
+    Let #{A} be a type. The \strong{inverse operation} is defined:
     ##{
         \inv: (x:A)\to (y:A)\to (x=_Ay)\to (y=_Ax)
     }

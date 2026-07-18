@@ -17,7 +17,7 @@
         to establish a final conclusion.
     }
     \p{
-        There arre two main approaches to intuitionistic modal logic.
+        There are two main approaches to intuitionistic modal logic.
         \ul{
             \li{\strong{Nominal}: Assign names to contexts and includes explicit judgments to relate them.}
             \li{\strong{Structural}: Identifies the context with propositions it contains. In this article we
@@ -136,7 +136,7 @@
                 }(\text{vldhyp}_u)
             }
             \p{
-                In terms of a multiple world semantics, we say taht #{A} is valid if #{A} is
+                In terms of a multiple world semantics, we say that #{A} is valid if #{A} is
                 true in \strong{every} possible world. We require that #{A} must be true in a 
                 world about which we assume nothing (#{\Gamma = \cdot}), except the constant-true
                 propositions #{\Delta}.

@@ -57,7 +57,7 @@
                 x \\ y
             \end{bmatrix} = ax + by
         }
-        This explains wht we always denote elements of the vector space as column vectors, because elements of the dual space 
+        This explains what we always denote elements of the vector space as column vectors, because elements of the dual space 
         are written as row vectors and its very important to distinguish between them.
     }
 }
@@ -347,7 +347,7 @@
             a_{ij} = \lim_{h\to0}\frac{f_i(x_0+he_j) - f_i(x_0)}{h}
         }
         which is exactly #{\frac{\partial f_i}{\partial x_j}}. Thus the matrix representation of #{Df(x)} is given by 
-        a matrix called the \strong{Jacobin matrix} of #{f}.
+        a matrix called the \strong{Jacobian matrix} of #{f}.
         ##{
             Df(x) = \begin{bmatrix}
                 \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots & \frac{\partial f_1}{\partial x_n} \\

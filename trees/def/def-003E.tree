@@ -32,7 +32,7 @@
                     Composition is \strong{associative}: #{h \circ (g \circ f) = (h \circ g) \circ f} when #{t(f) = s(g)}, and #{t(g) = s(h)}.
                 }
                 \li{
-                    Composition satifies the \strong{identity laws}: #{f \circ \id_x = f} and #{\id_y \circ f = f}
+                    Composition satisfies the \strong{identity laws}: #{f \circ \id_x = f} and #{\id_y \circ f = f}
                 }
             }
         }
@@ -59,7 +59,7 @@
             The following properties hold:
             \ul{      
                 \li{Composition is \strong{associative}: #{h \circ (g \circ f) = (h \circ g) \circ f} for all #{f} in #{C_1(x,y)}, #{g} in #{C_1(y,z)}, and #{h} in #{C_1(z,w)}.}
-                \li{Composition satifies the \strong{identity laws}: #{f \circ \id_x = f} and #{\id_y \circ f = f} for all #{f} in #{C_1(x,y)}.}
+                \li{Composition satisfies the \strong{identity laws}: #{f \circ \id_x = f} and #{\id_y \circ f = f} for all #{f} in #{C_1(x,y)}.}
             }
         }
     }

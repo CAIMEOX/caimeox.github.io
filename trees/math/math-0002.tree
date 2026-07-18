@@ -7,7 +7,7 @@
     Refer to [Linear Algebra Done Right](linear-algebra-2015).
 }
 \p{
-    Adding up scalar mulitples of vectors in a list gives a linear combination.
+    Adding up scalar multiples of vectors in a list gives a linear combination.
 }
 \transclude{def-000L}
 \p{
@@ -70,8 +70,8 @@
 }
 \transclude{thm-0007}
 \p{
-    Remind the definition of [direct sum](der-000K), we can now show that
-    every subspace of a finite-dimensional vecrtor space can be paired
+    Recall the definition of [direct sum](def-000K), we can now show that
+    every subspace of a finite-dimensional vector space can be paired
     with another subspace to form a direct sum of the whole space.
 }
 \transclude{thm-0008}

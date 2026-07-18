@@ -1,6 +1,6 @@
 \title{Categorical Semantics for Type Theories}
 \taxon{Type Theory}
-\date{2024-3-21}
+\date{2024-03-21}
 \import{macros}
 \p{
     This is a collection of notes on categorical semantics for type theories.
@@ -97,12 +97,12 @@
             as it is often conducted via induction on some syntactic structures. And it also suggest algorithms which can be implemented.
             The disadvantage is that it is limited and hard to proof some properties like normalization.
 
-            The semantic appoaches are more powerful in general. It is based on mathematics models of type systems.
-            In exchange of the strength and generality, it is usually harder to understand and heavyweight, requries
+            The semantic approaches are more powerful in general. They are based on mathematical models of type systems.
+            In exchange of the strength and generality, it is usually harder to understand and heavyweight, requires
             more intuition of the concepts.
         }
         \p{
-            One clasical semantic approach to logic is algebraic logic. A logical system is modeled by some algebraic theory.
+            One classical semantic approach to logic is algebraic logic. A logical system is modeled by some algebraic theory.
             (often related to \strong{lattices} and \strong{semi-lattices}). Famous examples include \strong{Boolean algebras}
             for classic propositional logic and \strong{Heyting algebras} for intuitionistic counterpart. 
             The algebraic logic is a powerful tool to study the properties of logical systems, but has a limitation that 
@@ -112,7 +112,7 @@
     \subtree{
         \title{Computations as Monads}
         \p{
-            An important result from ategorical semantics could be \strong{monads}.
+            An important result from categorical semantics could be \strong{monads}.
             In \strong{Moggi}'s paper, he showed that monads can be used to model computational effects.
         }
         \transclude{def-003T}

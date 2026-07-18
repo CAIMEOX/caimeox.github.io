@@ -61,7 +61,7 @@
     }
     \transclude{def-003M}
     \p{
-        An FA \strong{accpets} a string #{x} and iff starting in #{s_0},
+        An FA \strong{accepts} a string #{x} and iff starting in #{s_0},
         the sequence of chars in  #{x} takes the FA to an accepting state
         when the entire string has been consumed.
     }
@@ -110,7 +110,7 @@
 \subtree{
     \title{Regular Expressions}
     \p{
-        The set of words accpeted by a finite automata #{F} forms a language #{L(F)}.
+        The set of words accepted by a finite automata #{F} forms a language #{L(F)}.
         The transition diagram of #{F} specifies the syntactic structure of #{L(F)}.
         But such representation is complex and non-intuitive.
         Most systems use a notation called \strong{regular expressions} to specify the language.

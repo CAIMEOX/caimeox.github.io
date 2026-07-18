@@ -101,7 +101,7 @@
             join :: m (m a) -> m a
     \stopverb}
     \p{
-        The familar implementation is the Kleisli extension one:
+        The familiar implementation is the Kleisli extension one:
         (Note that one can be obtained from the other by 
         taking \code{unit = return} and \code{join = (>>= id)}, \code{(>>= f) = join . fmap f})
     }

@@ -9,7 +9,7 @@
 \p{
     The idea to generalize the behavior of functions in mathematics and logic led to the development of the lambda calculus.
     The lambda calculus is a formal system for expressing computation based on function abstraction and application using \em{variable binding} and \em{substitution}. 
-    In dealing with functions there are two \strong{construction principles} and one \strong{evalutaion rule}.
+    In dealing with functions there are two \strong{construction principles} and one \strong{evaluation rule}.
     \ul{
         \li{\strong{Construction Principles}: note that expressions do not force to be meaningful.}
         \ul{

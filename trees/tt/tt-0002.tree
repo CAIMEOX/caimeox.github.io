@@ -39,7 +39,7 @@
 \p{
     A key difference between type theory and set theory is the equality.
     The notion of equality in set theory is simply a proposition.
-    Howerver, in type theory, there are two kinds of equality.
+    However, in type theory, there are two kinds of equality.
     \ul{
         \li{The first kind is the \strong{propositional equality} #{a=_Ab}.
         This is a proposition}
@@ -91,12 +91,12 @@
 \transclude{def-0019}
 \p{
     We now ready to present the inference rules for dependent type theory.
-    These rules are known as the \strong{structual rules} of the theory.
+    These rules are known as the \strong{structural rules} of the theory.
     There are 6 sets of rules:
     \ul{
         \li{Formation contexts, types and terms}
         \li{Postulating that judgmental equality is an equivalence relation}
-        \li{Vairable conversion}
+        \li{Variable conversion}
         \li{Substitution}
         \li{Weakening}
         \li{Generic element}
@@ -120,7 +120,7 @@
 }
 \transclude{def-001E}
 \p{
-    Finally, the generic elemets rule ensures that
+    Finally, the generic elements rule ensures that
     the variables declared in a context.
 }
 \transclude{def-001F}
@@ -155,6 +155,6 @@
 
 \transclude{def-001T}
 \p{
-    A degenrated case of dependent function type is the ordinary function type.
+    A degenerate case of dependent function type is the ordinary function type.
 }
 \transclude{def-001U}

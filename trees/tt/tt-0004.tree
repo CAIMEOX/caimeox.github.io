@@ -33,7 +33,7 @@
 }
 \transclude{def-0020}
 \p{
-    A degenrate inductive type is the \strong{empty type}.
+    A degenerate inductive type is the \strong{empty type}.
     It has no constructor, and its induction principle is trivial.
     Empty type is connected to the \strong{exfalso quodlibet principle} in logic.
 }
