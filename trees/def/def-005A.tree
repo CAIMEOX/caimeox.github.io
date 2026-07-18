@@ -1,0 +1,14 @@
+\title{Left and Right Inverses}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{f:A\to B}. A \strong{left inverse} of #{f} is precisely a
+    [retraction of #{f}](def-005H), while a \strong{right inverse} of #{f} is
+    precisely a [section of #{f}](def-005G). Thus
+    ##{
+        \mathsf{hasLeftInverse}(f)
+        \defeq\mathsf{retr}(f),\qquad
+        \mathsf{hasRightInverse}(f)
+        \defeq\mathsf{sec}(f).
+    }
+}

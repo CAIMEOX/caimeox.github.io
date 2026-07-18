@@ -1,0 +1,12 @@
+\title{Decidable Proposition}
+\taxon{Definition}
+\import{macros}
+\p{
+    A type #{P} is \strong{decidable} if there is either a term of #{P} or a
+    function refuting #{P}. The type of decisions for #{P} is
+    ##{
+        \mathsf{isDecidable}(P)\defeq P+(P\to\mathbf{0}).
+    }
+    A term in the left summand supplies evidence for #{P}; a term in the right
+    summand supplies evidence for its negation.
+}

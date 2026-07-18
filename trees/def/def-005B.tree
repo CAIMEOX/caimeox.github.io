@@ -1,0 +1,15 @@
+\title{Bi-invertible Map}
+\taxon{Definition}
+\import{macros}
+\p{
+    A map #{f:A\to B} is \strong{bi-invertible} if it has both a
+    [section](def-005G) and a [retraction](def-005H), or equivalently a separate
+    [right and left inverse](def-005A). Define
+    ##{
+        \mathsf{isBiInv}(f)
+        \defeq
+        \mathsf{sec}(f)\times\mathsf{retr}(f).
+    }
+    The left and right inverse maps are supplied independently; their inverse
+    laws imply that they are homotopic.
+}

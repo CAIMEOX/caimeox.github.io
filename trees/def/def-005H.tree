@@ -1,0 +1,14 @@
+\title{Retraction of a Map}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{f:A\to B}. A \strong{retraction} of #{f} is a map #{h:B\to A}
+    equipped with a [homotopy](def-0059) #{h\circ f\sim\mathsf{id}_A}.
+    The type of retractions of #{f} is
+    ##{
+        \mathsf{retr}(f)
+        \defeq
+        \Sigma_{h:B\to A}\bigl(h\circ f\sim\mathsf{id}_A\bigr).
+    }
+    If #{f} has a retraction, then #{A} is called a retract of #{B}.
+}

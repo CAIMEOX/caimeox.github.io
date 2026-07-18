@@ -1,0 +1,15 @@
+\title{Fiber of a Map}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{f:A\to B} and #{y:B}. The \strong{fiber of #{f} over #{y}} is the
+    type of elements of #{A} equipped with an identification of their image
+    with #{y}:
+    ##{
+        \mathsf{fib}_f(y)
+        \defeq
+        \Sigma_{x:A}\bigl(f(x)=y\bigr).
+    }
+    Thus a term of the fiber is a pair #{(x,p)} with #{x:A} and
+    #{p:f(x)=y}.
+}

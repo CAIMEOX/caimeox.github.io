@@ -1,0 +1,14 @@
+\title{Contractible Type}
+\taxon{Definition}
+\import{macros}
+\p{
+    A type #{A} is \strong{contractible} if it has a center that is identified
+    with every element of #{A}. Define
+    ##{
+        \mathsf{isContr}(A)
+        \defeq
+        \Sigma_{c:A}\Pi_{x:A}(c=x).
+    }
+    A term of #{\mathsf{isContr}(A)} consists of a center #{c:A} and a
+    contraction from #{c} to every #{x:A}.
+}

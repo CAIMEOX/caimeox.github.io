@@ -1,0 +1,12 @@
+\title{Contractible Map}
+\taxon{Definition}
+\import{macros}
+\p{
+    A map #{f:A\to B} is a \strong{contractible map} if each of its
+    [fibers](def-005E) is a [contractible type](def-005D). Define
+    ##{
+        \mathsf{isContrMap}(f)
+        \defeq
+        \Pi_{y:B}\mathsf{isContr}\bigl(\mathsf{fib}_f(y)\bigr).
+    }
+}

@@ -1,0 +1,16 @@
+\title{Equivalence of Types}
+\taxon{Definition}
+\import{macros}
+\p{
+    An \strong{equivalence} from #{A} to #{B} is a map #{f:A\to B} equipped
+    with evidence that it is [bi-invertible](def-005B). The type of equivalences
+    is
+    ##{
+        \mathsf{isEquiv}(f)\defeq\mathsf{isBiInv}(f),\qquad
+        A\simeq B
+        \;\defeq\;
+        \Sigma_{f:A\to B}\mathsf{isEquiv}(f).
+    }
+    We write #{e:A\simeq B} for an equivalence and use its first projection as
+    the underlying map.
+}

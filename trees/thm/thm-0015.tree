@@ -1,0 +1,25 @@
+\title{A Map with an Inverse Is an Equivalence}
+\taxon{Proposition}
+\import{macros}
+\p{
+    For every map #{f:A\to B}, a [map with an inverse](def-005I) determines
+    an [equivalence](def-005C). Explicitly, there is a canonical function
+    ##{
+        \mathsf{hasInverse}(f)\to\mathsf{isEquiv}(f).
+    }
+}
+\proof{
+    Let #{(g,G,H):\mathsf{hasInverse}(f)}. By definition,
+    ##{
+        G:f\circ g\sim\mathsf{id}_B,
+        \qquad
+        H:g\circ f\sim\mathsf{id}_A.
+    }
+    Therefore #{(g,G):\mathsf{sec}(f)} and
+    #{(g,H):\mathsf{retr}(f)}. Pairing them gives
+    ##{
+        \bigl((g,G),(g,H)\bigr)
+        :\mathsf{sec}(f)\times\mathsf{retr}(f)
+        \defeq\mathsf{isEquiv}(f).
+    }
+}

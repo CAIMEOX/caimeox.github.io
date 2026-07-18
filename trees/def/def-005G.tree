@@ -1,0 +1,14 @@
+\title{Section of a Map}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{f:A\to B}. A \strong{section} of #{f} is a map #{g:B\to A}
+    equipped with a [homotopy](def-0059) #{f\circ g\sim\mathsf{id}_B}.
+    The type of sections of #{f} is
+    ##{
+        \mathsf{sec}(f)
+        \defeq
+        \Sigma_{g:B\to A}\bigl(f\circ g\sim\mathsf{id}_B\bigr).
+    }
+    Thus a section of #{f} is a right inverse of #{f} up to homotopy.
+}

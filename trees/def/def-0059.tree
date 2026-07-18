@@ -1,0 +1,11 @@
+\title{Homotopy}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{B:A\to\mathcal{U}} be a type family and let
+    #{f,g:\Pi_{x:A}B(x)} be dependent functions. A \strong{homotopy} from
+    #{f} to #{g} is a pointwise identification between their values. Its type is
+    ##{
+        f\sim g\;\defeq\;\Pi_{x:A}\bigl(f(x)=g(x)\bigr).
+    }
+}

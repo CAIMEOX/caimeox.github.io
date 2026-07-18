@@ -1,0 +1,19 @@
+\title{Map with an Inverse}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{f:A\to B}. We say that #{f} \strong{has an inverse} if there is a
+    single map #{g:B\to A} that is both a right inverse and a left inverse of
+    #{f}, up to homotopy. Define
+    ##{
+        \mathsf{hasInverse}(f)
+        \defeq
+        \Sigma_{g:B\to A}
+        \bigl(f\circ g\sim\mathsf{id}_B\bigr)
+        \times
+        \bigl(g\circ f\sim\mathsf{id}_A\bigr).
+    }
+    Thus an element of #{\mathsf{hasInverse}(f)} is a triple #{(g,G,H)}, where
+    #{G:f\circ g\sim\mathsf{id}_B} and
+    #{H:g\circ f\sim\mathsf{id}_A}.
+}

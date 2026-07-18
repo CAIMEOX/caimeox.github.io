@@ -1,0 +1,49 @@
+\title{An Equivalence Has an Inverse}
+\taxon{Proposition}
+\import{macros}
+\p{
+    For every map #{f:A\to B}, an [equivalence](def-005C) determines a
+    [map with an inverse](def-005I). Explicitly, there is a canonical function
+    ##{
+        \mathsf{isEquiv}(f)\to\mathsf{hasInverse}(f).
+    }
+}
+\proof{
+    Suppose that #{f} is equipped with a section and a retraction,
+    ##{
+        (g,G):\mathsf{sec}(f),
+        \qquad
+        (h,H):\mathsf{retr}(f).
+    }
+    Thus #{g,h:B\to A},
+    #{G:f\circ g\sim\mathsf{id}_B}, and
+    #{H:h\circ f\sim\mathsf{id}_A}. First construct a homotopy
+    #{K:g\sim h}. For each #{y:B}, define
+    ##{
+        K(y)
+        \defeq
+        H(g(y))^{-1}\cdot\mathsf{ap}_h(G(y))
+        :g(y)=h(y).
+    }
+    Indeed, the two factors have types
+    ##{
+        H(g(y))^{-1}:g(y)=h(f(g(y))),
+        \qquad
+        \mathsf{ap}_h(G(y)):h(f(g(y)))=h(y),
+    }
+    so their concatenation is well typed.
+
+    We now make the section #{g} into a left inverse as well. For each #{x:A},
+    define
+    ##{
+        H_g(x)
+        \defeq
+        K(f(x))\cdot H(x)
+        :g(f(x))=x.
+    }
+    Therefore #{H_g:g\circ f\sim\mathsf{id}_A}, while the original homotopy
+    #{G} already gives #{f\circ g\sim\mathsf{id}_B}. Hence
+    ##{
+        (g,G,H_g):\mathsf{hasInverse}(f).
+    }
+}

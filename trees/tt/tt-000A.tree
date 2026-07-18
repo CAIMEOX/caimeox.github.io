@@ -1,0 +1,59 @@
+\title{Equivalences}
+\taxon{Type Theory}
+\date{2026-07-18}
+\import{macros}
+\p{
+    This note follows Chapter 9 of [Introduction to Homotopy Type Theory](hott-2022).
+    Equivalence is the correct notion of sameness between types; its definition must eventually be
+    shown to be a property of a map rather than extra, non-unique structure.
+}
+\subtree{
+    \title{Homotopies}
+    \transclude{def-0059}
+    \p{
+        Homotopies express commutative diagrams in type theory. They have reflexivity, inverse, and
+        concatenation operations inherited pointwise from identity types.
+    }
+}
+\subtree{
+    \title{Bi-invertible maps}
+    \transclude{def-005G}
+    \transclude{def-005H}
+    \transclude{def-005B}
+    \transclude{def-005C}
+    \transclude{def-005I}
+    \p{
+        It is tempting to define an equivalence using a single inverse. The problem is that
+        #{\mathsf{hasInverse}(f)} can contain nontrivial higher information, whereas
+        #{\mathsf{isEquiv}(f)} will be shown, using function extensionality, to be a proposition.
+        For example, a later calculation gives
+        #{\mathsf{hasInverse}(\mathsf{id}_{\mathbb{S}^1})\simeq\mathbb{Z}}.
+    }
+    \p{
+        Consequently, the following two constructions establish logical equivalence, but they do
+        not assert that the witness types #{\mathsf{hasInverse}(f)} and
+        #{\mathsf{isEquiv}(f)} are themselves equivalent. The composites of the two constructions
+        need not be homotopic to the corresponding identity maps.
+    }
+    \transclude{thm-0015}
+    \transclude{thm-0016}
+    \p{
+        Identity maps, composites, and inverse maps are equivalences. Equivalences satisfy
+        two-out-of-three, so in
+        a composite, any two of the three maps being equivalences forces the third to be one.
+    }
+}
+\subtree{
+    \title{Identities of dependent pairs}
+    \p{
+        For #{u=(x,a)} and #{v=(y,b)} in #{\Sigma_{x:A}B(x)}, an identity consists of an
+        identity in the base and a compatible identity in the fiber:
+        ##{
+            (u=v)\simeq
+            \Sigma_{p:x=y}\bigl(\mathsf{transport}_B(p,a)=b\bigr).
+        }
+        This equivalence is the basic tool for calculating equality in structured objects. It also
+        explains why equality of ordinary pairs is componentwise only after accounting for
+        dependency.
+    }
+}
