@@ -1,10 +1,9 @@
 \title{The Rabbit Hole}
 \tag{top}
-\author{CAIMEO}
+\author{caimeo}
 \scope{
     \put\transclude/numbered{false}
     \put\transclude/expanded{false}
-    \transclude{caimeo}
     \put\transclude/expanded{true}
     \transclude{about}
 }

@@ -216,9 +216,6 @@
 }
 \subtree{
     \title{Linear Combinations}
-    \p{
-        
-    }
     \transclude{def-000L}
     \p{
         Given two sets of vectors, we say that they are equal iff their elements can write as linear combinations of each other.
