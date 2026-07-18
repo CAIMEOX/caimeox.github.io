@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/thm-0012/</fr:uri>
     <fr:display-uri>thm-0012</fr:display-uri>
     <fr:route>/thm-0012/</fr:route>
@@ -18,20 +19,20 @@
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:uri>https://caimeo.space/phy-0004/</fr:uri>
             <fr:display-uri>phy-0004</fr:display-uri>
             <fr:route>/phy-0004/</fr:route>
@@ -52,7 +53,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:title text="Center of mass">Center of mass</fr:title>
               </fr:frontmatter>
               <fr:mainmatter>
@@ -60,21 +61,21 @@
         The center of mass of a distribution of mass in space is the unique point 
         at any given time where the weighted relative position of the distributed mass sums to zero.
         <html:ul><html:li><html:strong>System of particles</html:strong>
-                <fr:tex display="block">
+                <fr:tex display="block"><![CDATA[
                     \vec {R} = \frac {\sum  m_i \vec {r}_i}{\sum  m_i}
-                </fr:tex></html:li>
+                ]]></fr:tex></html:li>
             <html:li><html:strong>Continuous volume</html:strong>
                 <html:p>
                     If the mass is distributed continuously, the center of mass is given by the
                     following formula:
-                    <fr:tex display="block">
+                    <fr:tex display="block"><![CDATA[
                         \vec {R} = \frac {\int  \vec {r} dm}{\int  dm}
-                    </fr:tex></html:p></html:li></html:ul></html:p>
+                    ]]></fr:tex></html:p></html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:title text="Work and Energy">Work and Energy</fr:title>
               </fr:frontmatter>
               <fr:mainmatter>
@@ -83,17 +84,17 @@
             <html:li>Negative Work: The force has a component opposite to the direction of the displacement.</html:li></html:ul>
         Both force and displacement are vectors. The work done is given by the dot product of the two vectors,
         where the result is a scalar. The work can be given by line integrals:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             W = \int _C \vec {F} \cdot  d\vec {r}
-        </fr:tex>
-        where <fr:tex display="inline">d\vec {r}</fr:tex> is the tiny displacement vector along the path <fr:tex display="inline">C</fr:tex>.
+        ]]></fr:tex>
+        where <fr:tex display="inline"><![CDATA[d\vec {r}]]></fr:tex> is the tiny displacement vector along the path <fr:tex display="inline"><![CDATA[C]]></fr:tex>.
         For motion along a straight line, we have a degenerated case of the line integral:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             W = \vec {F} \cdot  \vec {r}
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/thm-0012/</fr:uri>
                     <fr:display-uri>thm-0012</fr:display-uri>
                     <fr:route>/thm-0012/</fr:route>
@@ -110,86 +111,86 @@
                 </fr:tree>
                 <html:p>
         Work on a free (no fields), rigid (no internal degrees of freedom) body, is equal to the change
-        in kinetic energy <fr:tex display="inline">E_k</fr:tex> corresponding to the linear velocity and angular velocity of that body.
-        <fr:tex display="block">
+        in kinetic energy <fr:tex display="inline"><![CDATA[E_k]]></fr:tex> corresponding to the linear velocity and angular velocity of that body.
+        <fr:tex display="block"><![CDATA[
             W = \Delta  E_k
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
                 <html:p>
         The work of forces generated by a potential function is known as potential energy 
         and the forces are said to be <html:strong>conservative</html:strong>. 
         Work on an object that is merely displaced in a conservative force field, without 
-        change in velocity or rotation, is equal to minus the change of potential energy <fr:tex display="inline">E_p</fr:tex> of the object
-        <fr:tex display="block">
+        change in velocity or rotation, is equal to minus the change of potential energy <fr:tex display="inline"><![CDATA[E_p]]></fr:tex> of the object
+        <fr:tex display="block"><![CDATA[
             W = -\Delta  E_p
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
                 <html:p>
         The time derivative of the work is called <html:strong>power</html:strong>:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             P = \frac {dW}{dt}
-        </fr:tex>
-        <fr:tex display="inline">dW</fr:tex> can be written as the dot product of the force and the velocity of the object <fr:tex display="inline">dW = \vec {F} \cdot  d\vec {r}</fr:tex>,
+        ]]></fr:tex>
+        <fr:tex display="inline"><![CDATA[dW]]></fr:tex> can be written as the dot product of the force and the velocity of the object <fr:tex display="inline"><![CDATA[dW = \vec {F} \cdot  d\vec {r}]]></fr:tex>,
         hence the power can be written as:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             P = \vec {F} \cdot  \frac {d\vec {r}}{dt} = \vec {F} \cdot  \vec {v}
-        </fr:tex>
+        ]]></fr:tex>
         The work then can be expressed as the integral of the power over time:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             W = \int _{\Delta  t} P dt = \int _{\Delta  t} \vec {F} \cdot  \vec {v} dt 
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:title text="Kinetic Energy">Kinetic Energy</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter><html:p>
             The kinetic energy of a point object, or a non-rotating rigid body depends on the 
             mass of the body as well as its speed.
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 E_k = \frac {1}{2} m v^2 = \frac {p^2}{2m}
-            </fr:tex></html:p>
+            ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors></fr:authors><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             The work done in accelerating a particle with mass m during the infinitesimal time 
-            interval <fr:tex display="inline">dt</fr:tex> is given by the dot product of force <fr:tex display="inline">\vec {F}</fr:tex> and the infinitesimal displacement <fr:tex display="inline">d\vec {x}</fr:tex>
-            <fr:tex display="block">
+            interval <fr:tex display="inline"><![CDATA[dt]]></fr:tex> is given by the dot product of force <fr:tex display="inline"><![CDATA[\vec {F}]]></fr:tex> and the infinitesimal displacement <fr:tex display="inline"><![CDATA[d\vec {x}]]></fr:tex>
+            <fr:tex display="block"><![CDATA[
                 dW = \vec {F} \cdot  d\vec {x} 
                 = \frac {d\vec {p}}{dt} \cdot  \vec {v}dt
                 = \vec {v}\cdot  d\vec {p} = \vec {v} \cdot  d(m\vec {v})
-            </fr:tex>
+            ]]></fr:tex>
             Applying the product rule of differentiation, we get:
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 d(\vec {v}\cdot \vec {v}) = 2\vec {v} \cdot  d\vec {v}
-            </fr:tex>
+            ]]></fr:tex>
             Therefore we have:
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \vec {v} \cdot  d(m\vec {v}) = \frac {m}{2} d(\vec {v} \cdot  \vec {v}) 
-            </fr:tex>
+            ]]></fr:tex>
             Since this is a total differential (that is, it only depends on the final state, 
             not how the particle got there), we can integrate it and call the result kinetic energy:
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 E_k = \int _{v_1}^{v_2} \vec {p} \cdot  d\vec {v} = \frac {1}{2} m (v_2^2-v_1^2)
-            </fr:tex>
+            ]]></fr:tex>
         </fr:mainmatter></fr:tree>
  
 <html:p>
-            If a rigid body <fr:tex display="inline">Q</fr:tex> is rotating about any line through the center of mass then it has <html:strong>rotational kinetic energy</html:strong>
-            (<fr:tex display="inline">E_r</fr:tex>) which is simply the sum of the kinetic energies of its moving parts, and is thus given by:
-            <fr:tex display="block">
+            If a rigid body <fr:tex display="inline"><![CDATA[Q]]></fr:tex> is rotating about any line through the center of mass then it has <html:strong>rotational kinetic energy</html:strong>
+            (<fr:tex display="inline"><![CDATA[E_r]]></fr:tex>) which is simply the sum of the kinetic energies of its moving parts, and is thus given by:
+            <fr:tex display="block"><![CDATA[
                 E_r = \int _Q \frac {v^2dm}{2} = \int _Q \frac {(r\omega )^2dm}{2} = \frac {\omega ^2}{2}\int _Qr^2dm = \frac {1}{2}I\omega ^2
-            </fr:tex>
-            <html:ul><html:li><fr:tex display="inline">I = \int _Qr^2dm</fr:tex> is the moment of inertia of the body.
+            ]]></fr:tex>
+            <html:ul><html:li><fr:tex display="inline"><![CDATA[I = \int _Qr^2dm]]></fr:tex> is the moment of inertia of the body.
                 </html:li>
-                <html:li><fr:tex display="inline">\omega </fr:tex> is the angular velocity of the body.
+                <html:li><fr:tex display="inline"><![CDATA[\omega ]]></fr:tex> is the angular velocity of the body.
                 </html:li>
-                <html:li><fr:tex display="inline">r</fr:tex> is the distance from the axis of rotation.
+                <html:li><fr:tex display="inline"><![CDATA[r]]></fr:tex> is the distance from the axis of rotation.
                 </html:li></html:ul></html:p></fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:title text="Momentum">Momentum</fr:title>
               </fr:frontmatter>
               <fr:mainmatter>
@@ -198,47 +199,47 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:title text="Definition in Classic Mechanics">Definition in Classic Mechanics</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
             For a system with one or more particles, the total momentum is the sum of the momenta of the individual particles.
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \vec {p} = \sum  m_i \vec {v}_i
-            </fr:tex>
+            ]]></fr:tex>
             Or use the center of mass:
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \vec {p} = M \vec {V}
-            </fr:tex>
-            where <fr:tex display="inline">M</fr:tex> is the total mass of the system and <fr:tex display="inline">\vec {V}</fr:tex> is the velocity of the center of mass.
-            This formula is known as the <html:strong>Euler&apos;s first law of motion</html:strong>.
+            ]]></fr:tex>
+            where <fr:tex display="inline"><![CDATA[M]]></fr:tex> is the total mass of the system and <fr:tex display="inline"><![CDATA[\vec {V}]]></fr:tex> is the velocity of the center of mass.
+            This formula is known as the <html:strong>Euler's first law of motion</html:strong>.
         </html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:title text="Relation to force">Relation to force</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-            From Newton&apos;s second law, the rate of change of the momentum of a particle is equal to the 
-            instantaneous force <fr:tex display="inline">F</fr:tex> acting on it
-            <fr:tex display="block">
+            From Newton's second law, the rate of change of the momentum of a particle is equal to the 
+            instantaneous force <fr:tex display="inline"><![CDATA[F]]></fr:tex> acting on it
+            <fr:tex display="block"><![CDATA[
                 \vec {F} = \frac {d\vec {p}}{dt}
-            </fr:tex>
-            Hence the change in momentum in time interval <fr:tex display="inline">(t_1, t_2)</fr:tex> can be written as:
-            <fr:tex display="block">
+            ]]></fr:tex>
+            Hence the change in momentum in time interval <fr:tex display="inline"><![CDATA[(t_1, t_2)]]></fr:tex> can be written as:
+            <fr:tex display="block"><![CDATA[
                 I = \Delta \vec {p} = \int _{t_1}^{t_2} \vec {F} dt = \int _{\vec {p_1}}^{\vec {p_2}} d\vec {p}
-            </fr:tex>
-            We read this as the <html:strong>impulse</html:strong> <fr:tex display="inline">I</fr:tex> is equal to the change in momentum.
+            ]]></fr:tex>
+            We read this as the <html:strong>impulse</html:strong> <fr:tex display="inline"><![CDATA[I]]></fr:tex> is equal to the change in momentum.
         </html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:title text="Law of Conservation of Momentum">Law of Conservation of Momentum</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
@@ -251,21 +252,21 @@
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:title text="Angular Momentum">Angular Momentum</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter><html:p>
             A force applied perpendicularly to a lever multiplied by its distance from the 
-            lever&apos;s fulcrum (the length of the lever arm) is its <html:strong>torque</html:strong>.
-            <fr:tex display="block">
+            lever's fulcrum (the length of the lever arm) is its <html:strong>torque</html:strong>.
+            <fr:tex display="block"><![CDATA[
                 \vec {\tau } = \vec {r} \times  \vec {F}
-            </fr:tex>
-            The magnitude of torque is <fr:tex display="inline">\tau  = rF\sin \theta  </fr:tex> (<fr:tex display="inline">r</fr:tex> is the magnitude of the
-            <html:strong>position vector</html:strong> <fr:tex display="inline">\vec {r}</fr:tex> and <fr:tex display="inline">\theta </fr:tex> is the angle between the force
+            ]]></fr:tex>
+            The magnitude of torque is <fr:tex display="inline"><![CDATA[\tau  = rF\sin \theta  ]]></fr:tex> (<fr:tex display="inline"><![CDATA[r]]></fr:tex> is the magnitude of the
+            <html:strong>position vector</html:strong> <fr:tex display="inline"><![CDATA[\vec {r}]]></fr:tex> and <fr:tex display="inline"><![CDATA[\theta ]]></fr:tex> is the angle between the force
             vector and the lever arm vector).
         </html:p><html:p>
             In three-dimensional Euclidean Space, the torque can be written as the components:
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \vec {\tau } = \begin {pmatrix}
                     \tau _x \\
                     \tau _y \\
@@ -275,33 +276,33 @@
                     zF_x - xF_z \\
                     xF_y - yF_x
                 \end {pmatrix}
-            </fr:tex>
+            ]]></fr:tex>
             The component of torque in the direction of an axis is called the torque to that axis.
         </html:p><html:p>
-            The net torque determines the rate of change of the body&apos;s angular momentum.
-            <fr:tex display="block">
+            The net torque determines the rate of change of the body's angular momentum.
+            <fr:tex display="block"><![CDATA[
                 \vec {\tau } = \frac {d\vec {L}}{dt}
-            </fr:tex>
+            ]]></fr:tex>
             The angular momentum of a particle is defined as:
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \vec {L} = \vec {r} \times  \vec {p}
-            </fr:tex></html:p>
+            ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors></fr:authors><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
             Now we prove the equivalence of definitions.
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \frac {d\vec {L}}{dt} = \vec {r}\times \frac {d\vec {p}}{dt} + \frac {d\vec {r}}{dt}\times \vec {p}
-            </fr:tex>
+            ]]></fr:tex>
             The rate of change of linear momentum is the force and the rate of change of position is velocity.
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \frac {d\vec {L}}{dt} = \vec {r}\times \vec {F} + \vec {v}\times \vec {p}
-            </fr:tex>
-            The cross product of <fr:tex display="inline">\vec {p}</fr:tex> with <fr:tex display="inline">\vec {v}</fr:tex> is <fr:tex display="inline">0</fr:tex> because velocity and momentum are parallel.
+            ]]></fr:tex>
+            The cross product of <fr:tex display="inline"><![CDATA[\vec {p}]]></fr:tex> with <fr:tex display="inline"><![CDATA[\vec {v}]]></fr:tex> is <fr:tex display="inline"><![CDATA[0]]></fr:tex> because velocity and momentum are parallel.
             Hence we have:
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \frac {d\vec {L}}{dt} = \vec {r}\times \vec {F} = \tau 
-            </fr:tex>
+            ]]></fr:tex>
         </fr:mainmatter></fr:tree>
  
 <html:p>
@@ -312,13 +313,13 @@
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:title text="Rigid Body Dynamics">Rigid Body Dynamics</fr:title>
               </fr:frontmatter>
               <fr:mainmatter>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:title text="Moment of Inertia">Moment of Inertia</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
@@ -339,24 +340,24 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

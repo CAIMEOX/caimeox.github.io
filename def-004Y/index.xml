@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-004Y/</fr:uri>
     <fr:display-uri>def-004Y</fr:display-uri>
     <fr:route>/def-004Y/</fr:route>
@@ -10,18 +11,18 @@
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
-    Let <fr:tex display="inline">(C, \otimes , I, \alpha , \lambda , \rho )</fr:tex> be a monoidal category.
-    The <html:strong>free monoid</html:strong> on an object <fr:tex display="inline">X</fr:tex> in <fr:tex display="inline">C</fr:tex> is a monoid 
-    <fr:tex display="inline">(F, m_F, e_F)</fr:tex> together with a morphism <fr:tex display="inline">\text {ins} : X\to  F</fr:tex> 
+    Let <fr:tex display="inline"><![CDATA[(C, \otimes , I, \alpha , \lambda , \rho )]]></fr:tex> be a monoidal category.
+    The <html:strong>free monoid</html:strong> on an object <fr:tex display="inline"><![CDATA[X]]></fr:tex> in <fr:tex display="inline"><![CDATA[C]]></fr:tex> is a monoid 
+    <fr:tex display="inline"><![CDATA[(F, m_F, e_F)]]></fr:tex> together with a morphism <fr:tex display="inline"><![CDATA[\text {ins} : X\to  F]]></fr:tex> 
     (insertion of generators)
-    such that for any monoid <fr:tex display="inline">(G, m_G, e_G)</fr:tex> and any 
-    morphism <fr:tex display="inline">f : X \to  G</fr:tex> there exist a unique 
-    monoid homomorphism <fr:tex display="inline">\text {free}(f) : F \to  G</fr:tex> that makes 
+    such that for any monoid <fr:tex display="inline"><![CDATA[(G, m_G, e_G)]]></fr:tex> and any 
+    morphism <fr:tex display="inline"><![CDATA[f : X \to  G]]></fr:tex> there exist a unique 
+    monoid homomorphism <fr:tex display="inline"><![CDATA[\text {free}(f) : F \to  G]]></fr:tex> that makes 
     the following diagram commute:
     
  
   
-  <html:figure><fr:resource hash="7f4f9f6a3337e07b937c002b6b77945a"><fr:resource-content><html:img src="/7f4f9f6a3337e07b937c002b6b77945a.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="7f4f9f6a3337e07b937c002b6b77945a"><fr:resource-content><html:img src="/7f4f9f6a3337e07b937c002b6b77945a.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -39,7 +40,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -132,7 +133,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -144,7 +145,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -156,7 +157,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -189,10 +190,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -284,12 +285,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -297,41 +298,41 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            X &amp;&amp; F \\
+            X && F \\
             \\
-            &amp;&amp; G
-            \arrow [&quot;{\text {ins}}&quot;, from=1-1, to=1-3]
-            \arrow [&quot;f&quot;&apos;, from=1-1, to=3-3]
-            \arrow [&quot;{\text {free}(f)}&quot;, dashed, from=1-3, to=3-3]
+            && G
+            \arrow ["{\text {ins}}", from=1-1, to=1-3]
+            \arrow ["f"', from=1-1, to=3-3]
+            \arrow ["{\text {free}(f)}", dashed, from=1-3, to=3-3]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure></html:p>
+    ]]></fr:resource-source></fr:resource></html:figure></html:p>
     <html:p>
-    Monoids in a monoidal category <fr:tex display="inline">C</fr:tex> and monoid homomorphisms
-    form a category, denoted by <fr:tex display="inline">\text {Mon}(C)</fr:tex>.
-    When the left-adjoint <fr:tex display="inline">(-)^*</fr:tex> to the forgetful functor 
-    <fr:tex display="inline">U : \text {Mon(C)} \to  C</fr:tex> exists, it maps 
-    an object <fr:tex display="inline">X</fr:tex> to the free monoid on <fr:tex display="inline">X</fr:tex>.
+    Monoids in a monoidal category <fr:tex display="inline"><![CDATA[C]]></fr:tex> and monoid homomorphisms
+    form a category, denoted by <fr:tex display="inline"><![CDATA[\text {Mon}(C)]]></fr:tex>.
+    When the left-adjoint <fr:tex display="inline"><![CDATA[(-)^*]]></fr:tex> to the forgetful functor 
+    <fr:tex display="inline"><![CDATA[U : \text {Mon(C)} \to  C]]></fr:tex> exists, it maps 
+    an object <fr:tex display="inline"><![CDATA[X]]></fr:tex> to the free monoid on <fr:tex display="inline"><![CDATA[X]]></fr:tex>.
 </html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2025</fr:year>
               <fr:month>1</fr:month>
@@ -359,7 +360,7 @@
         or monoids in a monoidal category of endofunctors using the Day convolution as a tensor</html:li></html:ul></html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2025</fr:year>
                   <fr:month>1</fr:month>
@@ -367,40 +368,40 @@
                 </fr:date>
                 <fr:title text="Cayley representation">Cayley representation</fr:title>
               </fr:frontmatter>
-              <fr:mainmatter><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-004U/</fr:uri><fr:display-uri>def-004U</fr:display-uri><fr:route>/def-004U/</fr:route><fr:title text="Cayley representation for Set Monoids">Cayley representation for Set Monoids</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    For every set <fr:tex display="inline">M</fr:tex> we can construct the monoid of 
-    endomorphisms <fr:tex display="inline">(M\to  M, \circ , \text {id})</fr:tex>.
-</html:p><html:p><fr:tex display="inline">M</fr:tex> is a sub-monoid of a monoid <fr:tex display="inline">M&apos;</fr:tex> if 
-    there is an injection <fr:tex display="inline">i : M \hookrightarrow  M&apos;</fr:tex> 
-    such that <fr:tex display="inline">i(e) = e&apos;</fr:tex> and 
-    <fr:tex display="inline">i(a \circ  b) = i(a) \circ &apos; i(b)</fr:tex> for all <fr:tex display="inline">a, b \in  M</fr:tex>.
-    Every <fr:link href="/def-0007/" title="Monoid" uri="https://caimeo.space/def-0007/" display-uri="def-0007" type="local">monoid</fr:link> <fr:tex display="inline">M</fr:tex> is a sub-monoid of the
-    monoid of endomorphisms <fr:tex display="inline">(M\to  M, \circ , \text {id})</fr:tex>.
+              <fr:mainmatter><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-004U/</fr:uri><fr:display-uri>def-004U</fr:display-uri><fr:route>/def-004U/</fr:route><fr:title text="Cayley representation for Set Monoids">Cayley representation for Set Monoids</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    For every set <fr:tex display="inline"><![CDATA[M]]></fr:tex> we can construct the monoid of 
+    endomorphisms <fr:tex display="inline"><![CDATA[(M\to  M, \circ , \text {id})]]></fr:tex>.
+</html:p><html:p><fr:tex display="inline"><![CDATA[M]]></fr:tex> is a sub-monoid of a monoid <fr:tex display="inline"><![CDATA[M']]></fr:tex> if 
+    there is an injection <fr:tex display="inline"><![CDATA[i : M \hookrightarrow  M']]></fr:tex> 
+    such that <fr:tex display="inline"><![CDATA[i(e) = e']]></fr:tex> and 
+    <fr:tex display="inline"><![CDATA[i(a \circ  b) = i(a) \circ ' i(b)]]></fr:tex> for all <fr:tex display="inline"><![CDATA[a, b \in  M]]></fr:tex>.
+    Every <fr:link href="/def-0007/" title="Monoid" uri="https://caimeo.space/def-0007/" display-uri="def-0007" type="local">monoid</fr:link> <fr:tex display="inline"><![CDATA[M]]></fr:tex> is a sub-monoid of the
+    monoid of endomorphisms <fr:tex display="inline"><![CDATA[(M\to  M, \circ , \text {id})]]></fr:tex>.
 </html:p><html:p>
     This can be proved by constructing an injection 
-    map <fr:tex display="inline">\text {rep} : M\to (M\to  M)</fr:tex> by <fr:tex display="inline">\text {rep} : a \mapsto  \lambda  x.a\circ  x</fr:tex>,
-    which is easy to verify that <fr:tex display="inline">\text {rep}</fr:tex> is a monoid homomorphism.
-    Moreover, <fr:tex display="inline">\text {rep}</fr:tex> is an injection,
-    since we have a function <fr:tex display="inline">\text {abs} : (M\to  M) \to  M</fr:tex> given by
-    <fr:tex display="inline">\text {abs} : f \mapsto  f(e)</fr:tex>.
-    and <fr:tex display="inline">\text {abs}\circ \text {rep} = \text {id}_M</fr:tex>. 
+    map <fr:tex display="inline"><![CDATA[\text {rep} : M\to (M\to  M)]]></fr:tex> by <fr:tex display="inline"><![CDATA[\text {rep} : a \mapsto  \lambda  x.a\circ  x]]></fr:tex>,
+    which is easy to verify that <fr:tex display="inline"><![CDATA[\text {rep}]]></fr:tex> is a monoid homomorphism.
+    Moreover, <fr:tex display="inline"><![CDATA[\text {rep}]]></fr:tex> is an injection,
+    since we have a function <fr:tex display="inline"><![CDATA[\text {abs} : (M\to  M) \to  M]]></fr:tex> given by
+    <fr:tex display="inline"><![CDATA[\text {abs} : f \mapsto  f(e)]]></fr:tex>.
+    and <fr:tex display="inline"><![CDATA[\text {abs}\circ \text {rep} = \text {id}_M]]></fr:tex>. 
 </html:p></fr:mainmatter></fr:tree><html:p>
         The Cayley representation can be adapted to
         the List <html:code>([a], ++, [])</html:code> in Haskell, resulting the famous
         Difference Lists.
     </html:p>
-  <html:pre><html:code class="language-haskell">type EList a = [a] -&gt; [a]
+  <html:pre><html:code class="language-haskell"><![CDATA[        type EList a = [a] -> [a]
+        
+        rep :: [a] -> EList a
+        rep xs = (xs ++)
 
-rep :: [a] -&gt; EList a
-rep xs = (xs ++)
-
-abs :: EList a -&gt; [a]
-abs f = f []</html:code></html:pre>
+        abs :: EList a -> [a]
+        abs f = f []]]></html:code></html:pre>
 </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2025</fr:year>
                   <fr:month>1</fr:month>
@@ -420,15 +421,15 @@ abs f = f []</html:code></html:pre>
             <html:li>
                 a type for expressing the unit.
             </html:li></html:ul>
-        We can not directly extend set binary functions <fr:tex display="inline">X \times  X \to  X</fr:tex> 
+        We can not directly extend set binary functions <fr:tex display="inline"><![CDATA[X \times  X \to  X]]></fr:tex> 
         to monoid multiplication in a category, because the category may not have
-        products. Instead, we need to use a bifunctor <fr:tex display="inline">\otimes  : C \times  C \to  C</fr:tex>
+        products. Instead, we need to use a bifunctor <fr:tex display="inline"><![CDATA[\otimes  : C \times  C \to  C]]></fr:tex>
         which abstracts the product operation.
-        The unit object is a special object <fr:tex display="inline">I</fr:tex> in the category.
+        The unit object is a special object <fr:tex display="inline"><![CDATA[I]]></fr:tex> in the category.
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004V/</fr:uri>
                     <fr:display-uri>def-004V</fr:display-uri>
                     <fr:route>/def-004V/</fr:route>
@@ -438,24 +439,24 @@ abs f = f []</html:code></html:pre>
                   <fr:mainmatter>
                     <html:p>
     A <html:strong>monoid category</html:strong> is a tuple 
-    <fr:tex display="inline">(C, \otimes , I, \alpha , \lambda , \rho )</fr:tex> where
-    <html:ul><html:li><fr:tex display="inline">C</fr:tex> is a category
+    <fr:tex display="inline"><![CDATA[(C, \otimes , I, \alpha , \lambda , \rho )]]></fr:tex> where
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[C]]></fr:tex> is a category
         </html:li>
-        <html:li><fr:tex display="inline">\otimes </fr:tex> is a bifunctor <fr:tex display="inline">C \times  C \to  C</fr:tex></html:li>
-        <html:li><fr:tex display="inline">I</fr:tex> is an object in <fr:tex display="inline">C</fr:tex></html:li>
-        <html:li><fr:tex display="inline">\alpha , \lambda , \rho </fr:tex> are natural isomorphism (associator)
-            <fr:tex display="block">
+        <html:li><fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex> is a bifunctor <fr:tex display="inline"><![CDATA[C \times  C \to  C]]></fr:tex></html:li>
+        <html:li><fr:tex display="inline"><![CDATA[I]]></fr:tex> is an object in <fr:tex display="inline"><![CDATA[C]]></fr:tex></html:li>
+        <html:li><fr:tex display="inline"><![CDATA[\alpha , \lambda , \rho ]]></fr:tex> are natural isomorphism (associator)
+            <fr:tex display="block"><![CDATA[
                 \begin {align*}
-                    \alpha _{A, B, C} &amp;: (A \otimes  B) \otimes  C \to  A \otimes  (B \otimes  C) \\
-                    \lambda _A &amp;: I \otimes  A \to  A \\
-                    \rho _A &amp;: A \otimes  I \to  A
+                    \alpha _{A, B, C} &: (A \otimes  B) \otimes  C \to  A \otimes  (B \otimes  C) \\
+                    \lambda _A &: I \otimes  A \to  A \\
+                    \rho _A &: A \otimes  I \to  A
                 \end {align*}
-            </fr:tex>
-            such that <fr:tex display="inline">\lambda _I = \rho _I</fr:tex> and the following diagrams commute:
+            ]]></fr:tex>
+            such that <fr:tex display="inline"><![CDATA[\lambda _I = \rho _I]]></fr:tex> and the following diagrams commute:
             
  
   
-  <html:figure><fr:resource hash="1fa6f06743ae5d65ad1df78fcfb50cae"><fr:resource-content><html:img src="/1fa6f06743ae5d65ad1df78fcfb50cae.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="1fa6f06743ae5d65ad1df78fcfb50cae"><fr:resource-content><html:img src="/1fa6f06743ae5d65ad1df78fcfb50cae.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -473,7 +474,7 @@ abs f = f []</html:code></html:pre>
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -566,7 +567,7 @@ abs f = f []</html:code></html:pre>
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -578,7 +579,7 @@ abs f = f []</html:code></html:pre>
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -590,7 +591,7 @@ abs f = f []</html:code></html:pre>
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -623,10 +624,10 @@ abs f = f []</html:code></html:pre>
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -718,12 +719,12 @@ abs f = f []</html:code></html:pre>
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -731,24 +732,24 @@ abs f = f []</html:code></html:pre>
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
                 \begin {tikzcd}
-                    {A\otimes  (B\otimes  C\otimes  D)} &amp;&amp; {(A\otimes  B)\otimes (C\otimes  D)} &amp;&amp; {((A\otimes  B)\otimes  C)\otimes  D} \\
+                    {A\otimes  (B\otimes  C\otimes  D)} && {(A\otimes  B)\otimes (C\otimes  D)} && {((A\otimes  B)\otimes  C)\otimes  D} \\
                     \\
-                    {A\otimes  ((B\otimes  C)\otimes  D)} &amp;&amp;&amp;&amp; {(A\otimes  (B\otimes  C))\otimes  D}
-                    \arrow [&quot;\alpha &quot;, from=1-1, to=1-3]
-                    \arrow [&quot;{\text {id}\otimes \alpha }&quot;&apos;, from=1-1, to=3-1]
-                    \arrow [&quot;\alpha &quot;, from=1-3, to=1-5]
-                    \arrow [&quot;{\alpha \otimes \text {id}}&quot;, from=1-5, to=3-5]
-                    \arrow [&quot;\alpha &quot;, from=3-1, to=3-5]
+                    {A\otimes  ((B\otimes  C)\otimes  D)} &&&& {(A\otimes  (B\otimes  C))\otimes  D}
+                    \arrow ["\alpha ", from=1-1, to=1-3]
+                    \arrow ["{\text {id}\otimes \alpha }"', from=1-1, to=3-1]
+                    \arrow ["\alpha ", from=1-3, to=1-5]
+                    \arrow ["{\alpha \otimes \text {id}}", from=1-5, to=3-5]
+                    \arrow ["\alpha ", from=3-1, to=3-5]
                 \end {tikzcd}
-            </fr:resource-source></fr:resource></html:figure>
+            ]]></fr:resource-source></fr:resource></html:figure>
  
 
             
  
   
-  <html:figure><fr:resource hash="d3ea25218d9e96b00002d2993be2aa03"><fr:resource-content><html:img src="/d3ea25218d9e96b00002d2993be2aa03.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="d3ea25218d9e96b00002d2993be2aa03"><fr:resource-content><html:img src="/d3ea25218d9e96b00002d2993be2aa03.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -766,7 +767,7 @@ abs f = f []</html:code></html:pre>
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -859,7 +860,7 @@ abs f = f []</html:code></html:pre>
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -871,7 +872,7 @@ abs f = f []</html:code></html:pre>
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -883,7 +884,7 @@ abs f = f []</html:code></html:pre>
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -916,10 +917,10 @@ abs f = f []</html:code></html:pre>
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -1011,12 +1012,12 @@ abs f = f []</html:code></html:pre>
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -1024,19 +1025,19 @@ abs f = f []</html:code></html:pre>
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
                 \begin {tikzcd}
-                    {A\otimes  (I\otimes  B)} &amp;&amp; {(A\otimes  I)\otimes  B} \\
+                    {A\otimes  (I\otimes  B)} && {(A\otimes  I)\otimes  B} \\
                     \\
-                    &amp; {A\otimes  B}
-                    \arrow [&quot;\alpha &quot;, from=1-1, to=1-3]
-                    \arrow [&quot;{\text {id}\otimes  A}&quot;&apos;, from=1-1, to=3-2]
-                    \arrow [&quot;{\rho \otimes \text {id}}&quot;, from=1-3, to=3-2]
+                    & {A\otimes  B}
+                    \arrow ["\alpha ", from=1-1, to=1-3]
+                    \arrow ["{\text {id}\otimes  A}"', from=1-1, to=3-2]
+                    \arrow ["{\rho \otimes \text {id}}", from=1-3, to=3-2]
                 \end {tikzcd}
-            </fr:resource-source></fr:resource></html:figure></html:li></html:ul>
+            ]]></fr:resource-source></fr:resource></html:figure></html:li></html:ul>
     A monoidal category is said to be <html:strong>strict</html:strong> when the 
-    natural isomorphisms <fr:tex display="inline">\alpha , \lambda , \rho </fr:tex> are identities.
-    With additional natural isomorphism <fr:tex display="inline">\gamma _{A,B}:A\otimes  B\to  B\otimes  A</fr:tex> 
+    natural isomorphisms <fr:tex display="inline"><![CDATA[\alpha , \lambda , \rho ]]></fr:tex> are identities.
+    With additional natural isomorphism <fr:tex display="inline"><![CDATA[\gamma _{A,B}:A\otimes  B\to  B\otimes  A]]></fr:tex> 
     and some coherence conditions, we get a <html:strong>symmetric monoidal category</html:strong>.
 </html:p>
                   </fr:mainmatter>
@@ -1047,7 +1048,7 @@ abs f = f []</html:code></html:pre>
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004W/</fr:uri>
                     <fr:display-uri>def-004W</fr:display-uri>
                     <fr:route>/def-004W/</fr:route>
@@ -1056,18 +1057,18 @@ abs f = f []</html:code></html:pre>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    Let <fr:tex display="inline">A</fr:tex> be an object of a monoidal category 
-    <fr:tex display="inline">(C, \otimes , \alpha , \lambda , \rho )</fr:tex>.
-    An exponential <fr:tex display="inline">-^A</fr:tex> is the right adjoint to the functor
-    <fr:tex display="inline">- \otimes  A</fr:tex>, which is characterised by the an isomorphism:
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be an object of a monoidal category 
+    <fr:tex display="inline"><![CDATA[(C, \otimes , \alpha , \lambda , \rho )]]></fr:tex>.
+    An exponential <fr:tex display="inline"><![CDATA[-^A]]></fr:tex> is the right adjoint to the functor
+    <fr:tex display="inline"><![CDATA[- \otimes  A]]></fr:tex>, which is characterised by the an isomorphism:
+    <fr:tex display="block"><![CDATA[
         \lfloor -\rfloor  : \hom (X \otimes  A, B) \cong  \hom (X, B^A) : \lceil  - \rceil 
-    </fr:tex>
-    natural in <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">B</fr:tex>.
+    ]]></fr:tex>
+    natural in <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
     The <html:strong>counit</html:strong> of the adjunction is the evaluation map
-    <fr:tex display="inline">\ev _B : B^A \otimes  A \to  B</fr:tex>.
-    When the exponential to <fr:tex display="inline">A</fr:tex> exists,
-    we say <fr:tex display="inline">A</fr:tex> is an <html:strong>exponent</html:strong>.
+    <fr:tex display="inline"><![CDATA[\ev _B : B^A \otimes  A \to  B]]></fr:tex>.
+    When the exponential to <fr:tex display="inline"><![CDATA[A]]></fr:tex> exists,
+    we say <fr:tex display="inline"><![CDATA[A]]></fr:tex> is an <html:strong>exponent</html:strong>.
     A monoidal category with all exponentials is called a <html:strong>right-closed monoidal category</html:strong>
     or said to <html:strong>have exponentials</html:strong>.
 </html:p>
@@ -1075,7 +1076,7 @@ abs f = f []</html:code></html:pre>
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004X/</fr:uri>
                     <fr:display-uri>def-004X</fr:display-uri>
                     <fr:route>/def-004X/</fr:route>
@@ -1084,16 +1085,16 @@ abs f = f []</html:code></html:pre>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    A monoid in a monoidal category <fr:tex display="inline">(C, \otimes , I, \alpha , \lambda , \rho )</fr:tex> 
-    is a tuple <fr:tex display="inline">(M, m, e)</fr:tex> where <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">e</fr:tex> are morphisms in <fr:tex display="inline">C</fr:tex>.
-    <fr:tex display="block">
+    A monoid in a monoidal category <fr:tex display="inline"><![CDATA[(C, \otimes , I, \alpha , \lambda , \rho )]]></fr:tex> 
+    is a tuple <fr:tex display="inline"><![CDATA[(M, m, e)]]></fr:tex> where <fr:tex display="inline"><![CDATA[m]]></fr:tex> and <fr:tex display="inline"><![CDATA[e]]></fr:tex> are morphisms in <fr:tex display="inline"><![CDATA[C]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         I \xrightarrow {e} M \xleftarrow {m} M \otimes  M
-    </fr:tex>
+    ]]></fr:tex>
     such that the following diagrams commute:
     
  
   
-  <html:figure><fr:resource hash="14da74ea61bee812c8bcd64823963f61"><fr:resource-content><html:img src="/14da74ea61bee812c8bcd64823963f61.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="14da74ea61bee812c8bcd64823963f61"><fr:resource-content><html:img src="/14da74ea61bee812c8bcd64823963f61.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -1111,7 +1112,7 @@ abs f = f []</html:code></html:pre>
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -1204,7 +1205,7 @@ abs f = f []</html:code></html:pre>
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -1216,7 +1217,7 @@ abs f = f []</html:code></html:pre>
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -1228,7 +1229,7 @@ abs f = f []</html:code></html:pre>
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -1261,10 +1262,10 @@ abs f = f []</html:code></html:pre>
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -1356,12 +1357,12 @@ abs f = f []</html:code></html:pre>
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -1369,24 +1370,24 @@ abs f = f []</html:code></html:pre>
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            {(M\otimes  M)\otimes  M} &amp;&amp;&amp;&amp; {M\otimes  M} \\
+            {(M\otimes  M)\otimes  M} &&&& {M\otimes  M} \\
             \\
-            {M\otimes  (M\otimes  M)} &amp;&amp; {M\otimes  M} &amp;&amp; M
-            \arrow [&quot;{m\otimes  \text {id}}&quot;, from=1-1, to=1-5]
-            \arrow [&quot;m&quot;, from=1-5, to=3-5]
-            \arrow [&quot;\alpha &quot;, from=3-1, to=1-1]
-            \arrow [&quot;{\text {id}\otimes  m}&quot;&apos;, from=3-1, to=3-3]
-            \arrow [&quot;m&quot;&apos;, from=3-3, to=3-5]
+            {M\otimes  (M\otimes  M)} && {M\otimes  M} && M
+            \arrow ["{m\otimes  \text {id}}", from=1-1, to=1-5]
+            \arrow ["m", from=1-5, to=3-5]
+            \arrow ["\alpha ", from=3-1, to=1-1]
+            \arrow ["{\text {id}\otimes  m}"', from=3-1, to=3-3]
+            \arrow ["m"', from=3-3, to=3-5]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure>
+    ]]></fr:resource-source></fr:resource></html:figure>
  
 
     
  
   
-  <html:figure><fr:resource hash="99f604a3abdd7c4d173d310ced7b4385"><fr:resource-content><html:img src="/99f604a3abdd7c4d173d310ced7b4385.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="99f604a3abdd7c4d173d310ced7b4385"><fr:resource-content><html:img src="/99f604a3abdd7c4d173d310ced7b4385.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -1404,7 +1405,7 @@ abs f = f []</html:code></html:pre>
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -1497,7 +1498,7 @@ abs f = f []</html:code></html:pre>
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -1509,7 +1510,7 @@ abs f = f []</html:code></html:pre>
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -1521,7 +1522,7 @@ abs f = f []</html:code></html:pre>
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -1554,10 +1555,10 @@ abs f = f []</html:code></html:pre>
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -1649,12 +1650,12 @@ abs f = f []</html:code></html:pre>
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -1662,25 +1663,25 @@ abs f = f []</html:code></html:pre>
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            {M\otimes  M } &amp;&amp; {M \otimes  I} \\
+            {M\otimes  M } && {M \otimes  I} \\
             \\
-            {I\otimes  M} &amp;&amp; M
-            \arrow [&quot;m&quot;, from=1-1, to=3-3]
-            \arrow [&quot;{\text {id}\otimes  e}&quot;&apos;, from=1-3, to=1-1]
-            \arrow [&quot;\rho &quot;, from=1-3, to=3-3]
-            \arrow [&quot;{e\otimes  \text {id}}&quot;, from=3-1, to=1-1]
-            \arrow [&quot;\lambda &quot;&apos;, from=3-1, to=3-3]
+            {I\otimes  M} && M
+            \arrow ["m", from=1-1, to=3-3]
+            \arrow ["{\text {id}\otimes  e}"', from=1-3, to=1-1]
+            \arrow ["\rho ", from=1-3, to=3-3]
+            \arrow ["{e\otimes  \text {id}}", from=3-1, to=1-1]
+            \arrow ["\lambda "', from=3-1, to=3-3]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure></html:p>
+    ]]></fr:resource-source></fr:resource></html:figure></html:p>
                     <html:p>
     A monoid homomorphism is an arrow 
-    <fr:tex display="inline">f: M_1 \to  M_2</fr:tex> in <fr:tex display="inline">C</fr:tex> such that the diagrams
+    <fr:tex display="inline"><![CDATA[f: M_1 \to  M_2]]></fr:tex> in <fr:tex display="inline"><![CDATA[C]]></fr:tex> such that the diagrams
     
  
   
-  <html:figure><fr:resource hash="2a3ca5c9582edb44ec8d7c60ffd8b54b"><fr:resource-content><html:img src="/2a3ca5c9582edb44ec8d7c60ffd8b54b.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="2a3ca5c9582edb44ec8d7c60ffd8b54b"><fr:resource-content><html:img src="/2a3ca5c9582edb44ec8d7c60ffd8b54b.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -1698,7 +1699,7 @@ abs f = f []</html:code></html:pre>
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -1791,7 +1792,7 @@ abs f = f []</html:code></html:pre>
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -1803,7 +1804,7 @@ abs f = f []</html:code></html:pre>
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -1815,7 +1816,7 @@ abs f = f []</html:code></html:pre>
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -1848,10 +1849,10 @@ abs f = f []</html:code></html:pre>
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -1943,12 +1944,12 @@ abs f = f []</html:code></html:pre>
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -1956,29 +1957,29 @@ abs f = f []</html:code></html:pre>
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            &amp; {M_1} &amp;&amp; {M_1\otimes  M_1} \\
+            & {M_1} && {M_1\otimes  M_1} \\
             I \\
-            &amp; {M_2} &amp;&amp; {M_2\otimes  M_2}
-            \arrow [&quot;f&quot;&apos;, from=1-2, to=3-2]
-            \arrow [&quot;{m_1}&quot;&apos;, from=1-4, to=1-2]
-            \arrow [&quot;{f\otimes  f}&quot;, from=1-4, to=3-4]
-            \arrow [&quot;{e_1}&quot;, from=2-1, to=1-2]
-            \arrow [&quot;{e_2}&quot;&apos;, from=2-1, to=3-2]
-            \arrow [&quot;{m_2}&quot;, from=3-4, to=3-2]
+            & {M_2} && {M_2\otimes  M_2}
+            \arrow ["f"', from=1-2, to=3-2]
+            \arrow ["{m_1}"', from=1-4, to=1-2]
+            \arrow ["{f\otimes  f}", from=1-4, to=3-4]
+            \arrow ["{e_1}", from=2-1, to=1-2]
+            \arrow ["{e_2}"', from=2-1, to=3-2]
+            \arrow ["{m_2}", from=3-4, to=3-2]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure></html:p>
+    ]]></fr:resource-source></fr:resource></html:figure></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
-        For a set <fr:tex display="inline">A</fr:tex> we can generate the free monoid <fr:tex display="inline">A^*</fr:tex>.
+        For a set <fr:tex display="inline"><![CDATA[A]]></fr:tex> we can generate the free monoid <fr:tex display="inline"><![CDATA[A^*]]></fr:tex>.
         We can then define the notion of free monoid 
         in terms of monoidal category.
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004Y/</fr:uri>
                     <fr:display-uri>def-004Y</fr:display-uri>
                     <fr:route>/def-004Y/</fr:route>
@@ -1987,18 +1988,18 @@ abs f = f []</html:code></html:pre>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    Let <fr:tex display="inline">(C, \otimes , I, \alpha , \lambda , \rho )</fr:tex> be a monoidal category.
-    The <html:strong>free monoid</html:strong> on an object <fr:tex display="inline">X</fr:tex> in <fr:tex display="inline">C</fr:tex> is a monoid 
-    <fr:tex display="inline">(F, m_F, e_F)</fr:tex> together with a morphism <fr:tex display="inline">\text {ins} : X\to  F</fr:tex> 
+    Let <fr:tex display="inline"><![CDATA[(C, \otimes , I, \alpha , \lambda , \rho )]]></fr:tex> be a monoidal category.
+    The <html:strong>free monoid</html:strong> on an object <fr:tex display="inline"><![CDATA[X]]></fr:tex> in <fr:tex display="inline"><![CDATA[C]]></fr:tex> is a monoid 
+    <fr:tex display="inline"><![CDATA[(F, m_F, e_F)]]></fr:tex> together with a morphism <fr:tex display="inline"><![CDATA[\text {ins} : X\to  F]]></fr:tex> 
     (insertion of generators)
-    such that for any monoid <fr:tex display="inline">(G, m_G, e_G)</fr:tex> and any 
-    morphism <fr:tex display="inline">f : X \to  G</fr:tex> there exist a unique 
-    monoid homomorphism <fr:tex display="inline">\text {free}(f) : F \to  G</fr:tex> that makes 
+    such that for any monoid <fr:tex display="inline"><![CDATA[(G, m_G, e_G)]]></fr:tex> and any 
+    morphism <fr:tex display="inline"><![CDATA[f : X \to  G]]></fr:tex> there exist a unique 
+    monoid homomorphism <fr:tex display="inline"><![CDATA[\text {free}(f) : F \to  G]]></fr:tex> that makes 
     the following diagram commute:
     
  
   
-  <html:figure><fr:resource hash="7f4f9f6a3337e07b937c002b6b77945a"><fr:resource-content><html:img src="/7f4f9f6a3337e07b937c002b6b77945a.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="7f4f9f6a3337e07b937c002b6b77945a"><fr:resource-content><html:img src="/7f4f9f6a3337e07b937c002b6b77945a.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -2016,7 +2017,7 @@ abs f = f []</html:code></html:pre>
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -2109,7 +2110,7 @@ abs f = f []</html:code></html:pre>
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -2121,7 +2122,7 @@ abs f = f []</html:code></html:pre>
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -2133,7 +2134,7 @@ abs f = f []</html:code></html:pre>
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -2166,10 +2167,10 @@ abs f = f []</html:code></html:pre>
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -2261,12 +2262,12 @@ abs f = f []</html:code></html:pre>
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -2274,34 +2275,34 @@ abs f = f []</html:code></html:pre>
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            X &amp;&amp; F \\
+            X && F \\
             \\
-            &amp;&amp; G
-            \arrow [&quot;{\text {ins}}&quot;, from=1-1, to=1-3]
-            \arrow [&quot;f&quot;&apos;, from=1-1, to=3-3]
-            \arrow [&quot;{\text {free}(f)}&quot;, dashed, from=1-3, to=3-3]
+            && G
+            \arrow ["{\text {ins}}", from=1-1, to=1-3]
+            \arrow ["f"', from=1-1, to=3-3]
+            \arrow ["{\text {free}(f)}", dashed, from=1-3, to=3-3]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure></html:p>
+    ]]></fr:resource-source></fr:resource></html:figure></html:p>
                     <html:p>
-    Monoids in a monoidal category <fr:tex display="inline">C</fr:tex> and monoid homomorphisms
-    form a category, denoted by <fr:tex display="inline">\text {Mon}(C)</fr:tex>.
-    When the left-adjoint <fr:tex display="inline">(-)^*</fr:tex> to the forgetful functor 
-    <fr:tex display="inline">U : \text {Mon(C)} \to  C</fr:tex> exists, it maps 
-    an object <fr:tex display="inline">X</fr:tex> to the free monoid on <fr:tex display="inline">X</fr:tex>.
+    Monoids in a monoidal category <fr:tex display="inline"><![CDATA[C]]></fr:tex> and monoid homomorphisms
+    form a category, denoted by <fr:tex display="inline"><![CDATA[\text {Mon}(C)]]></fr:tex>.
+    When the left-adjoint <fr:tex display="inline"><![CDATA[(-)^*]]></fr:tex> to the forgetful functor 
+    <fr:tex display="inline"><![CDATA[U : \text {Mon(C)} \to  C]]></fr:tex> exists, it maps 
+    an object <fr:tex display="inline"><![CDATA[X]]></fr:tex> to the free monoid on <fr:tex display="inline"><![CDATA[X]]></fr:tex>.
 </html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
         It is well known that the free monoid over 
-        a set <fr:tex display="inline">A</fr:tex> is the set of lists of <fr:tex display="inline">A</fr:tex>.
+        a set <fr:tex display="inline"><![CDATA[A]]></fr:tex> is the set of lists of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
         In Haskell this is just the list type <html:code>List a</html:code>.
         
   <html:pre><html:code class="language-haskell">data List a = Nil | Cons a (List a)</html:code></html:pre></html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004Z/</fr:uri>
                     <fr:display-uri>def-004Z</fr:display-uri>
                     <fr:route>/def-004Z/</fr:route>
@@ -2309,14 +2310,14 @@ abs f = f []</html:code></html:pre>
                     <fr:taxon>Definition</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter><html:p>
-    Given a monoid <fr:tex display="inline">(M, e, m)</fr:tex> in <fr:tex display="inline">C</fr:tex>, and a monic 
-    <fr:tex display="inline">i : M&apos; \hookrightarrow  M</fr:tex> in PC
-    such that for some unique maps <fr:tex display="inline">e&apos;</fr:tex> and <fr:tex display="inline">m&apos;</fr:tex>,
+    Given a monoid <fr:tex display="inline"><![CDATA[(M, e, m)]]></fr:tex> in <fr:tex display="inline"><![CDATA[C]]></fr:tex>, and a monic 
+    <fr:tex display="inline"><![CDATA[i : M' \hookrightarrow  M]]></fr:tex> in PC
+    such that for some unique maps <fr:tex display="inline"><![CDATA[e']]></fr:tex> and <fr:tex display="inline"><![CDATA[m']]></fr:tex>,
     the following diagram commutes: 
 </html:p>
  
   
-  <html:figure><fr:resource hash="f7b2510ca63bc90f5f980a5b25b8b8e0"><fr:resource-content><html:img src="/f7b2510ca63bc90f5f980a5b25b8b8e0.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="f7b2510ca63bc90f5f980a5b25b8b8e0"><fr:resource-content><html:img src="/f7b2510ca63bc90f5f980a5b25b8b8e0.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -2334,7 +2335,7 @@ abs f = f []</html:code></html:pre>
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -2427,7 +2428,7 @@ abs f = f []</html:code></html:pre>
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -2439,7 +2440,7 @@ abs f = f []</html:code></html:pre>
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -2451,7 +2452,7 @@ abs f = f []</html:code></html:pre>
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -2484,10 +2485,10 @@ abs f = f []</html:code></html:pre>
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -2579,12 +2580,12 @@ abs f = f []</html:code></html:pre>
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -2592,24 +2593,24 @@ abs f = f []</html:code></html:pre>
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
     \begin {tikzcd}
-        &amp;&amp; { M} &amp;&amp; {M\otimes  M} \\
+        && { M} && {M\otimes  M} \\
         I \\
-        &amp;&amp; {M&apos;} &amp;&amp; {M&apos; \otimes  M&apos;}
-        \arrow [&quot;m&quot;&apos;, from=1-5, to=1-3]
-        \arrow [&quot;e&quot;, from=2-1, to=1-3]
-        \arrow [&quot;{e&apos;}&quot;, from=2-1, to=3-3]
-        \arrow [&quot;i&quot;, from=3-3, to=1-3]
-        \arrow [&quot;{i \otimes  i}&quot;&apos;, from=3-5, to=1-5]
-        \arrow [&quot;{m&apos;}&quot;&apos;, from=3-5, to=3-3]
+        && {M'} && {M' \otimes  M'}
+        \arrow ["m"', from=1-5, to=1-3]
+        \arrow ["e", from=2-1, to=1-3]
+        \arrow ["{e'}", from=2-1, to=3-3]
+        \arrow ["i", from=3-3, to=1-3]
+        \arrow ["{i \otimes  i}"', from=3-5, to=1-5]
+        \arrow ["{m'}"', from=3-5, to=3-3]
     \end {tikzcd}
-</fr:resource-source></fr:resource></html:figure>
+]]></fr:resource-source></fr:resource></html:figure>
  
 <html:p>
-    Then <fr:tex display="inline">(M&apos;, e&apos;, m&apos;)</fr:tex> is a sub-monoid of <fr:tex display="inline">(M, e, m)</fr:tex>,
-    induced by the monic <fr:tex display="inline">i</fr:tex>, which is a monoid monomorphism 
-    from <fr:tex display="inline">M&apos;</fr:tex> to <fr:tex display="inline">M</fr:tex>.
+    Then <fr:tex display="inline"><![CDATA[(M', e', m')]]></fr:tex> is a sub-monoid of <fr:tex display="inline"><![CDATA[(M, e, m)]]></fr:tex>,
+    induced by the monic <fr:tex display="inline"><![CDATA[i]]></fr:tex>, which is a monoid monomorphism 
+    from <fr:tex display="inline"><![CDATA[M']]></fr:tex> to <fr:tex display="inline"><![CDATA[M]]></fr:tex>.
 </html:p></fr:mainmatter>
                 </fr:tree>
                 <html:p>
@@ -2618,7 +2619,7 @@ abs f = f []</html:code></html:pre>
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-0050/</fr:uri>
                     <fr:display-uri>def-0050</fr:display-uri>
                     <fr:route>/def-0050/</fr:route>
@@ -2627,32 +2628,32 @@ abs f = f []</html:code></html:pre>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    Let <fr:tex display="inline">(C, \otimes , I, \alpha , \lambda , \rho )</fr:tex> be a monoidal category.
+    Let <fr:tex display="inline"><![CDATA[(C, \otimes , I, \alpha , \lambda , \rho )]]></fr:tex> be a monoidal category.
     The <html:strong>monoid of endomorphisms</html:strong> on any 
-    exponent <fr:tex display="inline">A \in  C</fr:tex> is given by the diagram:
-    <fr:tex display="block">
+    exponent <fr:tex display="inline"><![CDATA[A \in  C]]></fr:tex> is given by the diagram:
+    <fr:tex display="block"><![CDATA[
         I \xrightarrow {i_A} A^A \xleftarrow {c_A} A^A \otimes  A^A
-    </fr:tex>
-    where <fr:tex display="inline">i_A</fr:tex> and <fr:tex display="inline">c_A</fr:tex> are defined:
-    <fr:tex display="block">
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[i_A]]></fr:tex> and <fr:tex display="inline"><![CDATA[c_A]]></fr:tex> are defined:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            i_A &amp;= \lfloor  I \otimes  A \xrightarrow {\lambda _A} A \rfloor  \\ 
-            c_A &amp;= \lfloor  (A^A \otimes  A^A)\otimes  A \xrightarrow {\alpha ^{-1}} A^A\otimes  (A^A \otimes  A)
+            i_A &= \lfloor  I \otimes  A \xrightarrow {\lambda _A} A \rfloor  \\ 
+            c_A &= \lfloor  (A^A \otimes  A^A)\otimes  A \xrightarrow {\alpha ^{-1}} A^A\otimes  (A^A \otimes  A)
                 \xrightarrow {\text {id}_{A^A} \otimes  \text {ev}_A} A^A\otimes  A \xrightarrow {\text {ev}_A} A \rfloor 
         \end {align*}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
         The <html:strong>Cayley</html:strong> theorem states that every monoid
         in a monoidal category is a sub-monoid of 
-        endomorphisms whenever <fr:tex display="inline">M</fr:tex> is an exponent.
+        endomorphisms whenever <fr:tex display="inline"><![CDATA[M]]></fr:tex> is an exponent.
     </html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2025</fr:year>
                   <fr:month>1</fr:month>
@@ -2660,19 +2661,19 @@ abs f = f []</html:code></html:pre>
                 </fr:date>
                 <fr:title text="Monads as Monoids">Monads as Monoids</fr:title>
               </fr:frontmatter>
-              <fr:mainmatter><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0051/</fr:uri><fr:display-uri>def-0051</fr:display-uri><fr:route>/def-0051/</fr:route><fr:title text="Monad">Monad</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    Let <fr:tex display="inline">\text {End} = ([\text {Set}, \text {Set}], \circ , \text {Id}, \alpha , \lambda , \rho )</fr:tex>
-    be a (strict, i.e. <fr:tex display="inline">\alpha ,\lambda ,\rho </fr:tex> are identities) 
+              <fr:mainmatter><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0051/</fr:uri><fr:display-uri>def-0051</fr:display-uri><fr:route>/def-0051/</fr:route><fr:title text="Monad">Monad</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[\text {End} = ([\text {Set}, \text {Set}], \circ , \text {Id}, \alpha , \lambda , \rho )]]></fr:tex>
+    be a (strict, i.e. <fr:tex display="inline"><![CDATA[\alpha ,\lambda ,\rho ]]></fr:tex> are identities) 
     monoidal category of endofunctors.
     A monoid in this category consists of 
-    <html:ul><html:li>an endofunctor <fr:tex display="inline">M : \text {Set} \to  \text {Set}</fr:tex></html:li>
-        <html:li>a natural transformation <fr:tex display="inline">\mu  : M \circ  M \to  M</fr:tex></html:li>
-        <html:li>a unit <fr:tex display="inline">e : \text {Id} \to  M</fr:tex></html:li></html:ul>
+    <html:ul><html:li>an endofunctor <fr:tex display="inline"><![CDATA[M : \text {Set} \to  \text {Set}]]></fr:tex></html:li>
+        <html:li>a natural transformation <fr:tex display="inline"><![CDATA[\mu  : M \circ  M \to  M]]></fr:tex></html:li>
+        <html:li>a unit <fr:tex display="inline"><![CDATA[e : \text {Id} \to  M]]></fr:tex></html:li></html:ul>
     such that the following diagrams commute:
 </html:p>
  
   
-  <html:figure><fr:resource hash="faf1a5fc188b69747729d7dccc06e54c"><fr:resource-content><html:img src="/faf1a5fc188b69747729d7dccc06e54c.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="faf1a5fc188b69747729d7dccc06e54c"><fr:resource-content><html:img src="/faf1a5fc188b69747729d7dccc06e54c.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -2690,7 +2691,7 @@ abs f = f []</html:code></html:pre>
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -2783,7 +2784,7 @@ abs f = f []</html:code></html:pre>
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -2795,7 +2796,7 @@ abs f = f []</html:code></html:pre>
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -2807,7 +2808,7 @@ abs f = f []</html:code></html:pre>
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -2840,10 +2841,10 @@ abs f = f []</html:code></html:pre>
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -2935,12 +2936,12 @@ abs f = f []</html:code></html:pre>
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -2948,23 +2949,23 @@ abs f = f []</html:code></html:pre>
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
     \begin {tikzcd}
-        {(M \circ  M)\circ  M} &amp;&amp;&amp;&amp; {M\circ  M} \\
+        {(M \circ  M)\circ  M} &&&& {M\circ  M} \\
         \\
-        {M\circ  (M\circ  M)} &amp;&amp; {M\circ  M} &amp;&amp; M
-        \arrow [&quot;mM&quot;&apos;, from=1-1, to=1-5]
+        {M\circ  (M\circ  M)} && {M\circ  M} && M
+        \arrow ["mM"', from=1-1, to=1-5]
         \arrow [equal, from=1-1, to=3-1]
-        \arrow [&quot;m&quot;, from=1-5, to=3-5]
-        \arrow [&quot;Mm&quot;&apos;, from=3-1, to=3-3]
-        \arrow [&quot;m&quot;&apos;, from=3-3, to=3-5]
+        \arrow ["m", from=1-5, to=3-5]
+        \arrow ["Mm"', from=3-1, to=3-3]
+        \arrow ["m"', from=3-3, to=3-5]
     \end {tikzcd}
-</fr:resource-source></fr:resource></html:figure>
+]]></fr:resource-source></fr:resource></html:figure>
  
 
  
   
-  <html:figure><fr:resource hash="a93f102cee1e3cd4f8008054c5d4ea48"><fr:resource-content><html:img src="/a93f102cee1e3cd4f8008054c5d4ea48.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="a93f102cee1e3cd4f8008054c5d4ea48"><fr:resource-content><html:img src="/a93f102cee1e3cd4f8008054c5d4ea48.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -2982,7 +2983,7 @@ abs f = f []</html:code></html:pre>
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -3075,7 +3076,7 @@ abs f = f []</html:code></html:pre>
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -3087,7 +3088,7 @@ abs f = f []</html:code></html:pre>
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -3099,7 +3100,7 @@ abs f = f []</html:code></html:pre>
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -3132,10 +3133,10 @@ abs f = f []</html:code></html:pre>
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -3227,12 +3228,12 @@ abs f = f []</html:code></html:pre>
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -3240,38 +3241,38 @@ abs f = f []</html:code></html:pre>
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
     \begin {tikzcd}
-        {M\circ  M} &amp;&amp; {M\circ  \text {Id}} \\
+        {M\circ  M} && {M\circ  \text {Id}} \\
         \\
-        {\text {Id}\circ  M} &amp;&amp; M
-        \arrow [&quot;m&quot;, from=1-1, to=3-3]
-        \arrow [&quot;Me&quot;, from=1-3, to=1-1]
+        {\text {Id}\circ  M} && M
+        \arrow ["m", from=1-1, to=3-3]
+        \arrow ["Me", from=1-3, to=1-1]
         \arrow [equal, from=1-3, to=3-3]
-        \arrow [&quot;eM&quot;, from=3-1, to=1-1]
+        \arrow ["eM", from=3-1, to=1-1]
         \arrow [equal, from=3-1, to=3-3]
     \end {tikzcd}
-</fr:resource-source></fr:resource></html:figure>
+]]></fr:resource-source></fr:resource></html:figure>
  
 <html:p>
-    A monoid in <fr:tex display="inline">\text {End}</fr:tex> is called a 
+    A monoid in <fr:tex display="inline"><![CDATA[\text {End}]]></fr:tex> is called a 
     <html:strong>monad</html:strong>. That is where the slogan 
-    &quot;a monad is a monoid in the category of endofunctors&quot; comes from.
+    "a monad is a monoid in the category of endofunctors" comes from.
 </html:p></fr:mainmatter></fr:tree><html:p>
         The monad can be implemented as 
         the type class <html:code>Triple</html:code> in Haskell.
     </html:p>
-  <html:pre><html:code class="language-haskell">class Functor m =&gt; Triple m where
-    unit :: a -&gt; m a
-    join :: m (m a) -&gt; m a</html:code></html:pre>
+  <html:pre><html:code class="language-haskell"><![CDATA[        class Functor m => Triple m where
+            unit :: a -> m a
+            join :: m (m a) -> m a]]></html:code></html:pre>
 <html:p>
         The familiar implementation is the Kleisli extension one:
         (Note that one can be obtained from the other by 
         taking <html:code>unit = return</html:code> and <html:code>join = (&gt;&gt;= id)</html:code>, <html:code>(&gt;&gt;= f) = join . fmap f</html:code>)
     </html:p>
-  <html:pre><html:code class="language-haskell">class Monad m where
-    return :: a -&gt; m a
-    (&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b</html:code></html:pre>
+  <html:pre><html:code class="language-haskell"><![CDATA[        class Monad m where
+            return :: a -> m a
+            (>>=) :: m a -> (a -> m b) -> m b]]></html:code></html:pre>
 </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>
@@ -3280,24 +3281,24 @@ abs f = f []</html:code></html:pre>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

@@ -1,63 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-001Z/</fr:uri>
     <fr:display-uri>def-001Z</fr:display-uri>
     <fr:route>/def-001Z/</fr:route>
-    <fr:title text="Addition over \N ">Addition over <fr:tex display="inline">\N </fr:tex></fr:title>
+    <fr:title text="Addition over \N ">Addition over <fr:tex display="inline"><![CDATA[\N ]]></fr:tex></fr:title>
     <fr:taxon>Definition</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter><html:p>
-    We define addition over <fr:tex display="inline">\mathbb {N}</fr:tex> using the type theoretical induction principle of <fr:tex display="inline">\mathbb {N}</fr:tex>.
-    <fr:tex display="block">
+    We define addition over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> using the type theoretical induction principle of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \text {add}_\mathbb {N} : \mathbb {N} \to  (\mathbb {N} \to  \mathbb {N})
-    </fr:tex>
+    ]]></fr:tex>
     which satisfies the following specification:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {add}_\mathbb {N}(n, 0)&amp;:\equiv  n
+            \text {add}_\mathbb {N}(n, 0)&:\equiv  n
             \\
-            \text {add}_\mathbb {N}(m,\text {succ}(n))&amp;:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))
+            \text {add}_\mathbb {N}(m,\text {succ}(n))&:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))
         \end {align*}
-    </fr:tex>
-    abbreviated as <fr:tex display="inline">m + n</fr:tex> for <fr:tex display="inline">\text {add}_\mathbb {N}(m,n)</fr:tex>.
+    ]]></fr:tex>
+    abbreviated as <fr:tex display="inline"><![CDATA[m + n]]></fr:tex> for <fr:tex display="inline"><![CDATA[\text {add}_\mathbb {N}(m,n)]]></fr:tex>.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="Construction"><html:strong>Construction</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="Construction"><html:strong>Construction</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     
         <html:p>
-            We construct the addition by performing induction over the second variable <fr:tex display="inline">n</fr:tex>.
+            We construct the addition by performing induction over the second variable <fr:tex display="inline"><![CDATA[n]]></fr:tex>.
             That is, to construct an element
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 m:\mathbb {N} \vdash  \text {add}_\mathbb {N}(m):\mathbb {N} \to  \mathbb {N}
-            </fr:tex>
-            The context <fr:tex display="inline">\Gamma  \equiv  m:\mathbb {N}</fr:tex> is fixed.
+            ]]></fr:tex>
+            The context <fr:tex display="inline"><![CDATA[\Gamma  \equiv  m:\mathbb {N}]]></fr:tex> is fixed.
         </html:p>
         Therefore we need to construct:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \Gamma &amp;\vdash  \text {add-zero}_\mathbb {N}(m):\mathbb {N}
+                \Gamma &\vdash  \text {add-zero}_\mathbb {N}(m):\mathbb {N}
                 \\
-                \Gamma &amp;\vdash  \text {add-succ}_\mathbb {N}(m):\mathbb {N}\to \mathbb {N}                
+                \Gamma &\vdash  \text {add-succ}_\mathbb {N}(m):\mathbb {N}\to \mathbb {N}                
             \end {align*}   
-        </fr:tex>
-        The <fr:tex display="inline">\text {add-zero}_\mathbb {N}</fr:tex> is defined to be identity function trivially. To see how <fr:tex display="inline">\text {add-succ}_\mathbb {N}</fr:tex> is defined, we need to perform induction:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        The <fr:tex display="inline"><![CDATA[\text {add-zero}_\mathbb {N}]]></fr:tex> is defined to be identity function trivially. To see how <fr:tex display="inline"><![CDATA[\text {add-succ}_\mathbb {N}]]></fr:tex> is defined, we need to perform induction:
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \text {add}_\mathbb {N}(m, \text {succ}(n))&amp;\equiv 
+                \text {add}_\mathbb {N}(m, \text {succ}(n))&\equiv 
                 \text {ind}_\mathbb {N}(\text {add-zero}_\mathbb {N}(m), \text {add-succ}_\mathbb {N}(m), \text {succ}(n))
                 \\
-                &amp;\equiv  \text {add-succ}_\mathbb {N}(m,n, \text {add}_\mathbb {N}(m,n))
+                &\equiv  \text {add-succ}_\mathbb {N}(m,n, \text {add}_\mathbb {N}(m,n))
                 \\
-                &amp;\equiv  \text {succ}(\text {add}_\mathbb {N}(m,n))
+                &\equiv  \text {succ}(\text {add}_\mathbb {N}(m,n))
             \end {align*}
-        </fr:tex>
-        Hence <fr:tex display="inline">\text {add-succ}_\mathbb {N}</fr:tex> is defined as:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        Hence <fr:tex display="inline"><![CDATA[\text {add-succ}_\mathbb {N}]]></fr:tex> is defined as:
+        <fr:tex display="block"><![CDATA[
             \text {add-succ}_\mathbb {N}(m,n,x) \equiv  \text {succ}(x)
-        </fr:tex>
-        A formal construction of <fr:tex display="inline">\text {add-succ}_\mathbb {N}</fr:tex> is as follows:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        A formal construction of <fr:tex display="inline"><![CDATA[\text {add-succ}_\mathbb {N}]]></fr:tex> is as follows:
+        <fr:tex display="block"><![CDATA[
             \dfrac {
                 \dfrac {
                     \dfrac {
@@ -79,9 +80,9 @@
             }{
                 m:\mathbb {N}\vdash  \text {add-succ}_\mathbb {N}(m):\equiv \lambda  m.\text {succ} : \mathbb {N}\to (\mathbb {N}\to \mathbb {N})
             }\text {Block-1}
-        </fr:tex>
+        ]]></fr:tex>
         Finally we combine the derivation together:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \dfrac {
                 \dfrac {
                     \dfrac {
@@ -103,27 +104,27 @@
             }{
                 m:\mathbb {N}\vdash \text {add}_\mathbb {N}(m):\equiv \text {ind}_\mathbb {N} (\text {add-zero}_\mathbb {N}(m), \text {add-succ}_\mathbb {N}(m)):\mathbb {N}\to \mathbb {N}
             }
-        </fr:tex>
+        ]]></fr:tex>
     
 </fr:mainmatter></fr:tree>
 </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>1</fr:month>
@@ -132,26 +133,26 @@
             <fr:uri>https://caimeo.space/tt-0003/</fr:uri>
             <fr:display-uri>tt-0003</fr:display-uri>
             <fr:route>/tt-0003/</fr:route>
-            <fr:title text="Natural Numbers \mathbb {N}">Natural Numbers <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
+            <fr:title text="Natural Numbers \mathbb {N}">Natural Numbers <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex></fr:title>
             <fr:taxon>Type Theory</fr:taxon>
           </fr:frontmatter>
           <fr:mainmatter>
             <html:p>
     In previous post, we have seen the basic inference rules of type theory.
     Now we will see the definition of natural numbers as an inductive type.
-    Refer to <fr:link href="/hott-book-2013/" title="Homotopy Type Theory: Univalent Foundations of Mathematics" uri="https://caimeo.space/hott-book-2013/" display-uri="hott-book-2013" type="local">HoTT Book</fr:link> and <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke&apos;s</fr:link>.
+    Refer to <fr:link href="/hott-book-2013/" title="Homotopy Type Theory: Univalent Foundations of Mathematics" uri="https://caimeo.space/hott-book-2013/" display-uri="hott-book-2013" type="local">HoTT Book</fr:link> and <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke's</fr:link>.
 </html:p>
             <html:p>
     In classical mathematics, the <html:strong>Peano axioms</html:strong> are a set of axioms for the natural numbers,
     an important object in mathematics.
 </html:p>
             <html:p>
-    In type theory, the type <fr:tex display="inline">\mathbb {N}</fr:tex> of natural number is an <fr:link href="/def-001X/" title="Inductive Type" uri="https://caimeo.space/def-001X/" display-uri="def-001X" type="local"><html:strong>inductive type</html:strong></fr:link>.
+    In type theory, the type <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> of natural number is an <fr:link href="/def-001X/" title="Inductive Type" uri="https://caimeo.space/def-001X/" display-uri="def-001X" type="local"><html:strong>inductive type</html:strong></fr:link>.
     Just like in dependent function type, we need four inference rules to define the natural numbers.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-001Y/</fr:uri>
                 <fr:display-uri>def-001Y</fr:display-uri>
                 <fr:route>/def-001Y/</fr:route>
@@ -161,129 +162,129 @@
               <fr:mainmatter>
                 <html:p>
     In type theory, <html:strong>natural number</html:strong> is defined using <html:strong>peano encoding</html:strong>.
-    The type <fr:tex display="inline">\mathbb {N}</fr:tex> is formed by the formation rule:
-    <fr:tex display="block">
+    The type <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> is formed by the formation rule:
+    <fr:tex display="block"><![CDATA[
         \frac {}{\vdash \mathbb {N}\space \text {type}}\mathbb {N}\text {-form}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                 <html:p>
-    Peano&apos;s first axiom postulates the existence of a natural number <fr:tex display="inline">0</fr:tex>.
-    The introduction rule for <fr:tex display="inline">\mathbb {N}</fr:tex> has a <fr:tex display="inline">0</fr:tex> constructor and a <html:strong>successor</html:strong> function.
-    <fr:tex display="block">
+    Peano's first axiom postulates the existence of a natural number <fr:tex display="inline"><![CDATA[0]]></fr:tex>.
+    The introduction rule for <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> has a <fr:tex display="inline"><![CDATA[0]]></fr:tex> constructor and a <html:strong>successor</html:strong> function.
+    <fr:tex display="block"><![CDATA[
         \frac {}{\vdash 0:\mathbb {N}}\mathbb {N}\text {-intro-0}
         \quad 
         \frac {}{\vdash \text {succ}:\mathbb {N}\to \mathbb {N}} \mathbb {N}\text {-intro-succ}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                 <html:p>
-    The <html:strong>elimination rule</html:strong> is actually the type theoretical <html:strong>induction principle</html:strong> of <fr:tex display="inline">\mathbb {N}</fr:tex>:
-    In order to show that <fr:tex display="inline">\forall  n:\mathbb {N}.P(n)</fr:tex> holds, it suffices to show that <fr:tex display="inline">P(0)</fr:tex> holds and that <fr:tex display="inline">\forall  n:\mathbb {N}.P(n)\to  P(\text {succ}(n))</fr:tex> holds.
-    The type theoretical induction principle is therefore formulated using a type family <fr:tex display="inline">P</fr:tex> over <fr:tex display="inline">\mathbb {N}</fr:tex>:
-    <fr:tex display="block">
+    The <html:strong>elimination rule</html:strong> is actually the type theoretical <html:strong>induction principle</html:strong> of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>:
+    In order to show that <fr:tex display="inline"><![CDATA[\forall  n:\mathbb {N}.P(n)]]></fr:tex> holds, it suffices to show that <fr:tex display="inline"><![CDATA[P(0)]]></fr:tex> holds and that <fr:tex display="inline"><![CDATA[\forall  n:\mathbb {N}.P(n)\to  P(\text {succ}(n))]]></fr:tex> holds.
+    The type theoretical induction principle is therefore formulated using a type family <fr:tex display="inline"><![CDATA[P]]></fr:tex> over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         \frac {
             \begin {align*}
-                \Gamma &amp;,\,n:\mathbb {N}\vdash  P(n)\space \text {type}
+                \Gamma &,\,n:\mathbb {N}\vdash  P(n)\space \text {type}
                 \\
-                \Gamma &amp;\vdash  p_0:P(0)
+                \Gamma &\vdash  p_0:P(0)
                 \\
-                \Gamma &amp;\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
+                \Gamma &\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
             \end {align*}
         }{
             \Gamma \vdash \text {ind}_\mathbb {N}(p_0,p_S):\Pi _{(n:\mathbb {N})}P(n)
         }(\mathbb {N} \text {-ind})
-    </fr:tex>
-    The induction principle tells us what we need to do in order to construct a dependent function <fr:tex display="inline">\text {ind}_\mathbb {N}</fr:tex> of type <fr:tex display="inline">\Pi _{(n:\mathbb {N})}P(n)</fr:tex>.
+    ]]></fr:tex>
+    The induction principle tells us what we need to do in order to construct a dependent function <fr:tex display="inline"><![CDATA[\text {ind}_\mathbb {N}]]></fr:tex> of type <fr:tex display="inline"><![CDATA[\Pi _{(n:\mathbb {N})}P(n)]]></fr:tex>.
     We might alternatively write the induction principle as:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma ,n:\mathbb {N}\vdash  P(n)\space \text {type}
         }{
             \Gamma \vdash \text {ind}_\mathbb {N}:\left (P(0)\to \left (\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))\right )\to \Pi _{(n:\mathbb {N})}P(n)\right )
         }(\mathbb {N} \text {-ind})
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                 <html:p>
-    The <html:strong>computation rule</html:strong> asserts that the dependent function <fr:tex display="inline">\text {ind}_\mathbb {N}</fr:tex> behaves as expected:
-    <fr:tex display="block">
+    The <html:strong>computation rule</html:strong> asserts that the dependent function <fr:tex display="inline"><![CDATA[\text {ind}_\mathbb {N}]]></fr:tex> behaves as expected:
+    <fr:tex display="block"><![CDATA[
         \frac {
             \begin {align*}
-                \Gamma &amp;,n:\mathbb {N}\vdash  P(n)\space \text {type}
+                \Gamma &,n:\mathbb {N}\vdash  P(n)\space \text {type}
                 \\
-                \Gamma &amp;\vdash  p_0:P(0)
+                \Gamma &\vdash  p_0:P(0)
                 \\
-                \Gamma &amp;\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
+                \Gamma &\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
             \end {align*}
         }{
             \text {ind}_\mathbb {N}(p_0,p_S,m)\equiv 
             \begin {cases}
-                p_0&amp;\text {if }m=0
+                p_0&\text {if }m=0
                 \\
-                p_S(n,\text {ind}_\mathbb {N}(p_0,p_S,n))&amp;\text {if }m=\text {succ}(n)
+                p_S(n,\text {ind}_\mathbb {N}(p_0,p_S,n))&\text {if }m=\text {succ}(n)
             \end {cases}
         }(\mathbb {N} \text {-comp})
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
-    Now let&apos;s use the type theoretical induction principle of <fr:tex display="inline">\mathbb {N}</fr:tex> to
-    perform some basic construction over <fr:tex display="inline">\mathbb {N}</fr:tex>.
+    Now let's use the type theoretical induction principle of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> to
+    perform some basic construction over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-001Z/</fr:uri>
                 <fr:display-uri>def-001Z</fr:display-uri>
                 <fr:route>/def-001Z/</fr:route>
-                <fr:title text="Addition over \N ">Addition over <fr:tex display="inline">\N </fr:tex></fr:title>
+                <fr:title text="Addition over \N ">Addition over <fr:tex display="inline"><![CDATA[\N ]]></fr:tex></fr:title>
                 <fr:taxon>Definition</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter><html:p>
-    We define addition over <fr:tex display="inline">\mathbb {N}</fr:tex> using the type theoretical induction principle of <fr:tex display="inline">\mathbb {N}</fr:tex>.
-    <fr:tex display="block">
+    We define addition over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> using the type theoretical induction principle of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \text {add}_\mathbb {N} : \mathbb {N} \to  (\mathbb {N} \to  \mathbb {N})
-    </fr:tex>
+    ]]></fr:tex>
     which satisfies the following specification:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {add}_\mathbb {N}(n, 0)&amp;:\equiv  n
+            \text {add}_\mathbb {N}(n, 0)&:\equiv  n
             \\
-            \text {add}_\mathbb {N}(m,\text {succ}(n))&amp;:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))
+            \text {add}_\mathbb {N}(m,\text {succ}(n))&:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))
         \end {align*}
-    </fr:tex>
-    abbreviated as <fr:tex display="inline">m + n</fr:tex> for <fr:tex display="inline">\text {add}_\mathbb {N}(m,n)</fr:tex>.
+    ]]></fr:tex>
+    abbreviated as <fr:tex display="inline"><![CDATA[m + n]]></fr:tex> for <fr:tex display="inline"><![CDATA[\text {add}_\mathbb {N}(m,n)]]></fr:tex>.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="Construction"><html:strong>Construction</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="Construction"><html:strong>Construction</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     
         <html:p>
-            We construct the addition by performing induction over the second variable <fr:tex display="inline">n</fr:tex>.
+            We construct the addition by performing induction over the second variable <fr:tex display="inline"><![CDATA[n]]></fr:tex>.
             That is, to construct an element
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 m:\mathbb {N} \vdash  \text {add}_\mathbb {N}(m):\mathbb {N} \to  \mathbb {N}
-            </fr:tex>
-            The context <fr:tex display="inline">\Gamma  \equiv  m:\mathbb {N}</fr:tex> is fixed.
+            ]]></fr:tex>
+            The context <fr:tex display="inline"><![CDATA[\Gamma  \equiv  m:\mathbb {N}]]></fr:tex> is fixed.
         </html:p>
         Therefore we need to construct:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \Gamma &amp;\vdash  \text {add-zero}_\mathbb {N}(m):\mathbb {N}
+                \Gamma &\vdash  \text {add-zero}_\mathbb {N}(m):\mathbb {N}
                 \\
-                \Gamma &amp;\vdash  \text {add-succ}_\mathbb {N}(m):\mathbb {N}\to \mathbb {N}                
+                \Gamma &\vdash  \text {add-succ}_\mathbb {N}(m):\mathbb {N}\to \mathbb {N}                
             \end {align*}   
-        </fr:tex>
-        The <fr:tex display="inline">\text {add-zero}_\mathbb {N}</fr:tex> is defined to be identity function trivially. To see how <fr:tex display="inline">\text {add-succ}_\mathbb {N}</fr:tex> is defined, we need to perform induction:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        The <fr:tex display="inline"><![CDATA[\text {add-zero}_\mathbb {N}]]></fr:tex> is defined to be identity function trivially. To see how <fr:tex display="inline"><![CDATA[\text {add-succ}_\mathbb {N}]]></fr:tex> is defined, we need to perform induction:
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \text {add}_\mathbb {N}(m, \text {succ}(n))&amp;\equiv 
+                \text {add}_\mathbb {N}(m, \text {succ}(n))&\equiv 
                 \text {ind}_\mathbb {N}(\text {add-zero}_\mathbb {N}(m), \text {add-succ}_\mathbb {N}(m), \text {succ}(n))
                 \\
-                &amp;\equiv  \text {add-succ}_\mathbb {N}(m,n, \text {add}_\mathbb {N}(m,n))
+                &\equiv  \text {add-succ}_\mathbb {N}(m,n, \text {add}_\mathbb {N}(m,n))
                 \\
-                &amp;\equiv  \text {succ}(\text {add}_\mathbb {N}(m,n))
+                &\equiv  \text {succ}(\text {add}_\mathbb {N}(m,n))
             \end {align*}
-        </fr:tex>
-        Hence <fr:tex display="inline">\text {add-succ}_\mathbb {N}</fr:tex> is defined as:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        Hence <fr:tex display="inline"><![CDATA[\text {add-succ}_\mathbb {N}]]></fr:tex> is defined as:
+        <fr:tex display="block"><![CDATA[
             \text {add-succ}_\mathbb {N}(m,n,x) \equiv  \text {succ}(x)
-        </fr:tex>
-        A formal construction of <fr:tex display="inline">\text {add-succ}_\mathbb {N}</fr:tex> is as follows:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        A formal construction of <fr:tex display="inline"><![CDATA[\text {add-succ}_\mathbb {N}]]></fr:tex> is as follows:
+        <fr:tex display="block"><![CDATA[
             \dfrac {
                 \dfrac {
                     \dfrac {
@@ -305,9 +306,9 @@
             }{
                 m:\mathbb {N}\vdash  \text {add-succ}_\mathbb {N}(m):\equiv \lambda  m.\text {succ} : \mathbb {N}\to (\mathbb {N}\to \mathbb {N})
             }\text {Block-1}
-        </fr:tex>
+        ]]></fr:tex>
         Finally we combine the derivation together:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \dfrac {
                 \dfrac {
                     \dfrac {
@@ -329,44 +330,44 @@
             }{
                 m:\mathbb {N}\vdash \text {add}_\mathbb {N}(m):\equiv \text {ind}_\mathbb {N} (\text {add-zero}_\mathbb {N}(m), \text {add-succ}_\mathbb {N}(m)):\mathbb {N}\to \mathbb {N}
             }
-        </fr:tex>
+        ]]></fr:tex>
     
 </fr:mainmatter></fr:tree>
 </fr:mainmatter>
             </fr:tree>
             <html:p>
-    Recall the definition of addition function <fr:tex display="inline">\text {add}: \mathbb {N}\to (\mathbb {N}\to \mathbb {N})</fr:tex> satisfying the specification:
-    <fr:tex display="block">
+    Recall the definition of addition function <fr:tex display="inline"><![CDATA[\text {add}: \mathbb {N}\to (\mathbb {N}\to \mathbb {N})]]></fr:tex> satisfying the specification:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            m + 0 &amp; :\equiv  m
+            m + 0 & :\equiv  m
             \\ 
-            m + \text {succ}(n) &amp; :\equiv  \text {succ}(m + n)
+            m + \text {succ}(n) & :\equiv  \text {succ}(m + n)
         \end {align*}
-    </fr:tex>
+    ]]></fr:tex>
     Such definition is enough to characterize the addition function.
-    Because it postulates te <html:em>behavior</html:em> of <fr:tex display="inline">\text {add}_\mathbb {N}</fr:tex> at the constructor of <fr:tex display="inline">\mathbb {N}</fr:tex></html:p>
+    Because it postulates te <html:em>behavior</html:em> of <fr:tex display="inline"><![CDATA[\text {add}_\mathbb {N}]]></fr:tex> at the constructor of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex></html:p>
             <html:p>
-    More generally, we can define a dependent function <fr:tex display="inline">f:\Pi  n:\mathbb {N}.P(n)</fr:tex> by induction on <fr:tex display="inline">n</fr:tex> using
-    <fr:tex display="block">
+    More generally, we can define a dependent function <fr:tex display="inline"><![CDATA[f:\Pi  n:\mathbb {N}.P(n)]]></fr:tex> by induction on <fr:tex display="inline"><![CDATA[n]]></fr:tex> using
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            p_0 &amp; : P(0)
+            p_0 & : P(0)
             \\
-            p_S &amp; : \Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
+            p_S & : \Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
         \end {align*}
-    </fr:tex>
+    ]]></fr:tex>
     Just present the definition by writing
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            f(0) &amp; :\equiv  p_0
+            f(0) & :\equiv  p_0
             \\
-            f(\text {succ}(n)) &amp; :\equiv  p_S(n,f(n))
+            f(\text {succ}(n)) & :\equiv  p_S(n,f(n))
         \end {align*}
-    </fr:tex>
-    <fr:tex display="inline">f</fr:tex> is said to be defined by <html:strong>pattern matching</html:strong> on the variable <fr:tex display="inline">n</fr:tex>.
+    ]]></fr:tex>
+    <fr:tex display="inline"><![CDATA[f]]></fr:tex> is said to be defined by <html:strong>pattern matching</html:strong> on the variable <fr:tex display="inline"><![CDATA[n]]></fr:tex>.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/eg-0001/</fr:uri>
                 <fr:display-uri>eg-0001</fr:display-uri>
                 <fr:route>/eg-0001/</fr:route>
@@ -376,16 +377,16 @@
               <fr:mainmatter>
                 <html:p>
     The <html:strong>Fibonacci function</html:strong> is a well-known function in mathematics.
-    It is defined by pattern matching on the variable <fr:tex display="inline">n</fr:tex> as follows:
-    <fr:tex display="block">
+    It is defined by pattern matching on the variable <fr:tex display="inline"><![CDATA[n]]></fr:tex> as follows:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {fib}(0) &amp; :\equiv  0
+            \text {fib}(0) & :\equiv  0
             \\
-            \text {fib}(1) &amp; :\equiv  1
+            \text {fib}(1) & :\equiv  1
             \\
-            \text {fib}(n+2) &amp; :\equiv  \text {fib}(n) + \text {fib}(n+1)
+            \text {fib}(n+2) & :\equiv  \text {fib}(n) + \text {fib}(n+1)
         \end {align*}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>
@@ -394,24 +395,24 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

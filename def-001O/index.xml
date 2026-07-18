@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-001O/</fr:uri>
     <fr:display-uri>def-001O</fr:display-uri>
     <fr:route>/def-001O/</fr:route>
@@ -10,36 +11,36 @@
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
-    A square matrix <fr:tex display="inline">A</fr:tex> is antisymmetric if it is equal to the negative of its transpose:
-    <fr:tex display="block">
+    A square matrix <fr:tex display="inline"><![CDATA[A]]></fr:tex> is antisymmetric if it is equal to the negative of its transpose:
+    <fr:tex display="block"><![CDATA[
         A = -A^T
-    </fr:tex>
-    This also implies <fr:tex display="inline">A^{-1} A^T = -I</fr:tex></html:p>
+    ]]></fr:tex>
+    This also implies <fr:tex display="inline"><![CDATA[A^{-1} A^T = -I]]></fr:tex></html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:uri>https://caimeo.space/def-001M/</fr:uri>
             <fr:display-uri>def-001M</fr:display-uri>
             <fr:route>/def-001M/</fr:route>
@@ -48,36 +49,36 @@
           </fr:frontmatter>
           <fr:mainmatter>
             <html:p>
-    Any square matrix <fr:tex display="inline">A</fr:tex> can be written as the sum of a symmetric and antisymmetric matrix:
-    <fr:tex display="block">
+    Any square matrix <fr:tex display="inline"><![CDATA[A]]></fr:tex> can be written as the sum of a symmetric and antisymmetric matrix:
+    <fr:tex display="block"><![CDATA[
         A = A_S + A_A
-    </fr:tex>
-    where <fr:tex display="inline">A_S</fr:tex> is the <html:strong>symmetric part</html:strong> and <fr:tex display="inline">A_A</fr:tex> is the <html:strong>antisymmetric part</html:strong>.
-    <fr:tex display="block">
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[A_S]]></fr:tex> is the <html:strong>symmetric part</html:strong> and <fr:tex display="inline"><![CDATA[A_A]]></fr:tex> is the <html:strong>antisymmetric part</html:strong>.
+    <fr:tex display="block"><![CDATA[
         A_S = \frac {1}{2}(A + A^T)
-    </fr:tex>
-    where <fr:tex display="inline">A_S</fr:tex> is a <fr:link href="/def-001N/" title="Symmetric Matrix" uri="https://caimeo.space/def-001N/" display-uri="def-001N" type="local">symmetric matrix</fr:link>
-    <fr:tex display="block">
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[A_S]]></fr:tex> is a <fr:link href="/def-001N/" title="Symmetric Matrix" uri="https://caimeo.space/def-001N/" display-uri="def-001N" type="local">symmetric matrix</fr:link>
+    <fr:tex display="block"><![CDATA[
         A_A = \frac {1}{2}(A - A^T)
-    </fr:tex>
-    where <fr:tex display="inline">A_A</fr:tex> is an <fr:link href="/def-001O/" title="Antisymmetric Matrix" uri="https://caimeo.space/def-001O/" display-uri="def-001O" type="local">antisymmetric matrix</fr:link></html:p>
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[A_A]]></fr:tex> is an <fr:link href="/def-001O/" title="Antisymmetric Matrix" uri="https://caimeo.space/def-001O/" display-uri="def-001O" type="local">antisymmetric matrix</fr:link></html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

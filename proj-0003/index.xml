@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/proj-0003/</fr:uri>
     <fr:display-uri>proj-0003</fr:display-uri>
     <fr:route>/proj-0003/</fr:route>
@@ -15,30 +16,30 @@
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:uri>https://caimeo.space/projects/</fr:uri>
             <fr:display-uri>projects</fr:display-uri>
             <fr:route>/projects/</fr:route>
             <fr:title text="Projects">Projects</fr:title>
           </fr:frontmatter>
           <fr:mainmatter>
-            <html:p>The programming projects I&apos;ve worked on.</html:p>
+            <html:p>The programming projects I've worked on.</html:p>
             <fr:tree show-metadata="false" expanded="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/proj-0001/</fr:uri>
                 <fr:display-uri>proj-0001</fr:display-uri>
                 <fr:route>/proj-0001/</fr:route>
@@ -52,7 +53,7 @@
             </fr:tree>
             <fr:tree show-metadata="false" expanded="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/proj-0002/</fr:uri>
                 <fr:display-uri>proj-0002</fr:display-uri>
                 <fr:route>/proj-0002/</fr:route>
@@ -66,7 +67,7 @@
             </fr:tree>
             <fr:tree show-metadata="false" expanded="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/proj-0003/</fr:uri>
                 <fr:display-uri>proj-0003</fr:display-uri>
                 <fr:route>/proj-0003/</fr:route>
@@ -80,7 +81,7 @@
             </fr:tree>
             <fr:tree show-metadata="false" expanded="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/proj-0004/</fr:uri>
                 <fr:display-uri>proj-0004</fr:display-uri>
                 <fr:route>/proj-0004/</fr:route>
@@ -96,7 +97,7 @@
             </fr:tree>
             <fr:tree show-metadata="false" expanded="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/proj-0005/</fr:uri>
                 <fr:display-uri>proj-0005</fr:display-uri>
                 <fr:route>/proj-0005/</fr:route>
@@ -114,13 +115,13 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:uri>https://caimeo.space/proj-0002/</fr:uri>
             <fr:display-uri>proj-0002</fr:display-uri>
             <fr:route>/proj-0002/</fr:route>
@@ -136,17 +137,17 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

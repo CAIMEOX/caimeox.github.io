@@ -21,7 +21,8 @@
           </xsl:if>
         </script>
         <script type="module" src="{/f:tree/@base-url}forester.js"></script>
-        <script type="module" src="{/f:tree/@base-url}prism.js"></script>
+        <script defer="defer" src="{/f:tree/@base-url}prism.js"></script>
+        <script defer="defer" src="{/f:tree/@base-url}prism-normalize-whitespace.js"></script>
         <title>
           <xsl:value-of select="/f:tree/f:frontmatter/f:title/@text" />
         </title>

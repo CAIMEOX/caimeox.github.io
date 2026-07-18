@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-003O/</fr:uri>
     <fr:display-uri>def-003O</fr:display-uri>
     <fr:route>/def-003O/</fr:route>
@@ -10,27 +11,27 @@
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
-    If <fr:tex display="inline">\Gamma \vdash  e:\tau </fr:tex> then <fr:tex display="inline">e\to _{\beta }^*e&apos;</fr:tex> for a <html:strong>normal form</html:strong> <fr:tex display="inline">e&apos;</fr:tex>.
-    And we can define <html:strong>subject reduction</html:strong>, if <fr:tex display="inline">\Gamma \vdash  e:\tau </fr:tex> and <fr:tex display="inline">e\to _{\beta }e&apos;</fr:tex> then <fr:tex display="inline">\Gamma \vdash  e&apos;:\tau </fr:tex>.
+    If <fr:tex display="inline"><![CDATA[\Gamma \vdash  e:\tau ]]></fr:tex> then <fr:tex display="inline"><![CDATA[e\to _{\beta }^*e']]></fr:tex> for a <html:strong>normal form</html:strong> <fr:tex display="inline"><![CDATA[e']]></fr:tex>.
+    And we can define <html:strong>subject reduction</html:strong>, if <fr:tex display="inline"><![CDATA[\Gamma \vdash  e:\tau ]]></fr:tex> and <fr:tex display="inline"><![CDATA[e\to _{\beta }e']]></fr:tex> then <fr:tex display="inline"><![CDATA[\Gamma \vdash  e':\tau ]]></fr:tex>.
 </html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>3</fr:month>
@@ -45,29 +46,29 @@
           <fr:mainmatter>
             <html:p>
     We have explored the power of lambda calculus.
-    Church&apos;s original purpose of the pure calculus of functions 
+    Church's original purpose of the pure calculus of functions 
     was a new foundations of mathematics distinct from set theory.
     Unfortunately the original lambda calculus is <html:strong>inconsistent</html:strong> (Every proposition has a proof).
-    Church returned to the ideas by Russell and Whitehead and developed the <html:strong>Church&apos;s Simple Theory of Types</html:strong>.
-    <html:strong>SLTC</html:strong> is a typed interpretation of the lambda calculus with only one type constructor <fr:tex display="inline">\to </fr:tex>
+    Church returned to the ideas by Russell and Whitehead and developed the <html:strong>Church's Simple Theory of Types</html:strong>.
+    <html:strong>SLTC</html:strong> is a typed interpretation of the lambda calculus with only one type constructor <fr:tex display="inline"><![CDATA[\to ]]></fr:tex>
     that builds function types. 
 </html:p>
             <html:p>
-    We follow the converntion that function type constructor <fr:tex display="inline">\to </fr:tex> is right-associative.
-    We write <fr:tex display="inline">e:\tau </fr:tex> if expression <fr:tex display="inline">e</fr:tex> has type <fr:tex display="inline">\tau </fr:tex>.
-    <fr:tex display="block">
+    We follow the converntion that function type constructor <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> is right-associative.
+    We write <fr:tex display="inline"><![CDATA[e:\tau ]]></fr:tex> if expression <fr:tex display="inline"><![CDATA[e]]></fr:tex> has type <fr:tex display="inline"><![CDATA[\tau ]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \lambda  x.x:\tau \to \tau 
-    </fr:tex>
+    ]]></fr:tex>
     But the type is not unique. The booleans can be typed:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {true} &amp;= \lambda  x.\lambda  y.x : \alpha \to (\beta \to \alpha )\\
-            \text {false} &amp;= \lambda  x.\lambda  y.y : \alpha \to (\beta \to \beta )
+            \text {true} &= \lambda  x.\lambda  y.x : \alpha \to (\beta \to \alpha )\\
+            \text {false} &= \lambda  x.\lambda  y.y : \alpha \to (\beta \to \beta )
         \end {align*}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>3</fr:month>
@@ -79,32 +80,32 @@
                 <html:p>
         Wem can formalize judgments about expressions and types using <html:strong>inference rules</html:strong>.
         For instance:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \frac {
                 e_1:\tau _1\quad  e_2:\tau _2
             }{
                 e_1\space  e_2:\tau _2
             }
-        </fr:tex>
-        The application <fr:tex display="inline">e_1\space  e_2</fr:tex> has type <fr:tex display="inline">\tau _2</fr:tex> if <fr:tex display="inline">e_1</fr:tex> has type 
-        <fr:tex display="inline">\tau _1\to \tau _2</fr:tex> and <fr:tex display="inline">e_2</fr:tex> has type <fr:tex display="inline">\tau _1</fr:tex>.
+        ]]></fr:tex>
+        The application <fr:tex display="inline"><![CDATA[e_1\space  e_2]]></fr:tex> has type <fr:tex display="inline"><![CDATA[\tau _2]]></fr:tex> if <fr:tex display="inline"><![CDATA[e_1]]></fr:tex> has type 
+        <fr:tex display="inline"><![CDATA[\tau _1\to \tau _2]]></fr:tex> and <fr:tex display="inline"><![CDATA[e_2]]></fr:tex> has type <fr:tex display="inline"><![CDATA[\tau _1]]></fr:tex>.
     </html:p>
                 <html:p>
         We can record the types of variable in a <html:strong>typing context</html:strong>.
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \Gamma  :\equiv  x_1:\tau _1,\ldots ,x_n:\tau _n
-        </fr:tex>
+        ]]></fr:tex>
         And we always assume that all variables declared in a context are distinct.
         This avoids any ambiguity when we try to determine the type of a variable.
         The typing judgment now becomes
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \Gamma \vdash  e:\tau 
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>3</fr:month>
@@ -115,31 +116,31 @@
               <fr:mainmatter>
                 <html:p>
         Are there expressions that cannot be typed in the simple type system?
-        Yes, for example, <fr:tex display="inline">\Omega =\lambda  x.x\space  x</fr:tex> cannot be typed.
-        But how do we prove that  <fr:tex display="inline">\Omega </fr:tex> cannot be typed?
+        Yes, for example, <fr:tex display="inline"><![CDATA[\Omega =\lambda  x.x\space  x]]></fr:tex> cannot be typed.
+        But how do we prove that  <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex> cannot be typed?
     </html:p>
                 <html:p>
         We can apply the typing rules and get a contradiction.
-        <fr:tex display="inline">\Omega </fr:tex> is a lambda abstraction hence we can assume that it has type <fr:tex display="inline">\tau \to \sigma </fr:tex>.
-        Then <fr:tex display="inline">x</fr:tex> has type <fr:tex display="inline">\tau </fr:tex> and <fr:tex display="inline">x\space  x</fr:tex> has type <fr:tex display="inline">\sigma </fr:tex>.
-        By the application of <fr:tex display="inline">x\space  x</fr:tex> we get that <fr:tex display="inline">\tau =\tau \to \sigma </fr:tex>, 
+        <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex> is a lambda abstraction hence we can assume that it has type <fr:tex display="inline"><![CDATA[\tau \to \sigma ]]></fr:tex>.
+        Then <fr:tex display="inline"><![CDATA[x]]></fr:tex> has type <fr:tex display="inline"><![CDATA[\tau ]]></fr:tex> and <fr:tex display="inline"><![CDATA[x\space  x]]></fr:tex> has type <fr:tex display="inline"><![CDATA[\sigma ]]></fr:tex>.
+        By the application of <fr:tex display="inline"><![CDATA[x\space  x]]></fr:tex> we get that <fr:tex display="inline"><![CDATA[\tau =\tau \to \sigma ]]></fr:tex>, 
         which does not exist.
     </html:p>
                 <html:p>
         To recover from this in full generality we need <html:strong>recursive types</html:strong>.
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \tau  =F\tau 
-        </fr:tex>
-        where <fr:tex display="inline">F=\lambda \alpha .\alpha \to \sigma </fr:tex> and we might have a solution with 
-        <fr:tex display="inline">\tau =Y\space  F</fr:tex>. But such solution is not available to us. We do not have 
-        function from types to types <fr:tex display="inline">F</fr:tex> and a type level Y combinator.
+        ]]></fr:tex>
+        where <fr:tex display="inline"><![CDATA[F=\lambda \alpha .\alpha \to \sigma ]]></fr:tex> and we might have a solution with 
+        <fr:tex display="inline"><![CDATA[\tau =Y\space  F]]></fr:tex>. But such solution is not available to us. We do not have 
+        function from types to types <fr:tex display="inline"><![CDATA[F]]></fr:tex> and a type level Y combinator.
         However it is ok to construct recursive types (we would do later).
     </html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>3</fr:month>
@@ -153,7 +154,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:date>
                       <fr:year>2024</fr:year>
                       <fr:month>3</fr:month>
@@ -163,8 +164,8 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-            If <fr:tex display="inline">\emptyset \vdash  e:\alpha \to (\alpha \to \alpha )</fr:tex> and <fr:tex display="inline">e</fr:tex> is a normal form, 
-            then <fr:tex display="inline">e = \text {true}</fr:tex> or <fr:tex display="inline">e = \text {false}</fr:tex>.
+            If <fr:tex display="inline"><![CDATA[\emptyset \vdash  e:\alpha \to (\alpha \to \alpha )]]></fr:tex> and <fr:tex display="inline"><![CDATA[e]]></fr:tex> is a normal form, 
+            then <fr:tex display="inline"><![CDATA[e = \text {true}]]></fr:tex> or <fr:tex display="inline"><![CDATA[e = \text {false}]]></fr:tex>.
         </html:p>
                   </fr:mainmatter>
                 </fr:tree>
@@ -172,7 +173,7 @@
     correctness of the representation of the booleans.</html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-003O/</fr:uri>
                     <fr:display-uri>def-003O</fr:display-uri>
                     <fr:route>/def-003O/</fr:route>
@@ -181,8 +182,8 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    If <fr:tex display="inline">\Gamma \vdash  e:\tau </fr:tex> then <fr:tex display="inline">e\to _{\beta }^*e&apos;</fr:tex> for a <html:strong>normal form</html:strong> <fr:tex display="inline">e&apos;</fr:tex>.
-    And we can define <html:strong>subject reduction</html:strong>, if <fr:tex display="inline">\Gamma \vdash  e:\tau </fr:tex> and <fr:tex display="inline">e\to _{\beta }e&apos;</fr:tex> then <fr:tex display="inline">\Gamma \vdash  e&apos;:\tau </fr:tex>.
+    If <fr:tex display="inline"><![CDATA[\Gamma \vdash  e:\tau ]]></fr:tex> then <fr:tex display="inline"><![CDATA[e\to _{\beta }^*e']]></fr:tex> for a <html:strong>normal form</html:strong> <fr:tex display="inline"><![CDATA[e']]></fr:tex>.
+    And we can define <html:strong>subject reduction</html:strong>, if <fr:tex display="inline"><![CDATA[\Gamma \vdash  e:\tau ]]></fr:tex> and <fr:tex display="inline"><![CDATA[e\to _{\beta }e']]></fr:tex> then <fr:tex display="inline"><![CDATA[\Gamma \vdash  e':\tau ]]></fr:tex>.
 </html:p>
                   </fr:mainmatter>
                 </fr:tree>
@@ -190,7 +191,7 @@
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>3</fr:month>
@@ -209,20 +210,20 @@
         The property then holds if the judgment can be derived using the rules.
         (This closely related to the <html:strong>inductive deefintion</html:strong>).
         Before defining the normal forms we formally define <html:strong>beta reduction</html:strong>.
-        The judgment here <fr:tex display="inline">e\to  e&apos;</fr:tex> expressing that <fr:tex display="inline">e</fr:tex> reduces to <fr:tex display="inline">e&apos;</fr:tex>.
-        <fr:tex display="block">
+        The judgment here <fr:tex display="inline"><![CDATA[e\to  e']]></fr:tex> expressing that <fr:tex display="inline"><![CDATA[e]]></fr:tex> reduces to <fr:tex display="inline"><![CDATA[e']]></fr:tex>.
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
                 \frac {}{(\lambda  x.e_1)e_2\to  e_1[x:=e_2]} (\text {red/beta}) \\
-                \frac {e\to  e&apos;}{\lambda  x.e \to  \lambda  x.e&apos;} (\text {red/lam}) \\
-                \frac {e_1\to  e_1&apos;}{e_1\space  e_2\to  e_1&apos;\space  e_2} (\text {red/app}_1) \\
-                \frac {e_2\to  e_2&apos;}{e_1\space  e_2\to  e_1\space  e_2&apos;} (\text {red/app}_2)                
+                \frac {e\to  e'}{\lambda  x.e \to  \lambda  x.e'} (\text {red/lam}) \\
+                \frac {e_1\to  e_1'}{e_1\space  e_2\to  e_1'\space  e_2} (\text {red/app}_1) \\
+                \frac {e_2\to  e_2'}{e_1\space  e_2\to  e_1\space  e_2'} (\text {red/app}_2)                
             \end {align*}
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
                 <html:p>
         A <html:strong>normal form</html:strong> is an expression that does not reduce.
         To give a proper formalization,, we need a separate judgment for <html:strong>neutral terms</html:strong>
         which do not create a redex when applied to an argument.
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             
             
             \begin {align*}
@@ -231,12 +232,12 @@
                 \frac {}{x\text { neutral}} (\text {neutral/var}) \\
                 \frac {e_1\text { neutral}\quad  e_2\text { normal}}{e_1\space  e_2\text { neutral}} (\text {neutral/app}) \\
             \end {align*}
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>3</fr:month>
@@ -250,17 +251,17 @@
         but is it really the same as saying that an expression does not reduce?
         We break this down into the following two properties.
         <html:ul><html:li>
-                For all expressions <fr:tex display="inline">e</fr:tex>, either <fr:tex display="inline">e</fr:tex> reduces or <fr:tex display="inline">e</fr:tex> is normal
+                For all expressions <fr:tex display="inline"><![CDATA[e]]></fr:tex>, either <fr:tex display="inline"><![CDATA[e]]></fr:tex> reduces or <fr:tex display="inline"><![CDATA[e]]></fr:tex> is normal
             </html:li>
             <html:li>
-                For all expressions <fr:tex display="inline">e</fr:tex>, it is not that case <fr:tex display="inline">e</fr:tex> reduces and <fr:tex display="inline">e</fr:tex> is normal
+                For all expressions <fr:tex display="inline"><![CDATA[e]]></fr:tex>, it is not that case <fr:tex display="inline"><![CDATA[e]]></fr:tex> reduces and <fr:tex display="inline"><![CDATA[e]]></fr:tex> is normal
             </html:li></html:ul></html:p>
                 <html:p>
         We have theorem that ensures that the first property holds. (Proof is omitted).
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/thm-0010/</fr:uri>
                     <fr:display-uri>thm-0010</fr:display-uri>
                     <fr:route>/thm-0010/</fr:route>
@@ -269,7 +270,7 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    For every expression <fr:tex display="inline">e</fr:tex>, either <fr:tex display="inline">e\to  e&apos;</fr:tex> for some expression <fr:tex display="inline">e&apos;</fr:tex> or <fr:tex display="inline">e</fr:tex> is a normal form.
+    For every expression <fr:tex display="inline"><![CDATA[e]]></fr:tex>, either <fr:tex display="inline"><![CDATA[e\to  e']]></fr:tex> for some expression <fr:tex display="inline"><![CDATA[e']]></fr:tex> or <fr:tex display="inline"><![CDATA[e]]></fr:tex> is a normal form.
 </html:p>
                   </fr:mainmatter>
                 </fr:tree>
@@ -281,24 +282,24 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

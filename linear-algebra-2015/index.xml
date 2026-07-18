@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors>
       <fr:author>
@@ -22,27 +23,27 @@
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>1</fr:month>
@@ -67,7 +68,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-0025/</fr:uri>
                 <fr:display-uri>def-0025</fr:display-uri>
                 <fr:route>/def-0025/</fr:route>
@@ -77,21 +78,21 @@
               <fr:mainmatter>
                 <html:p>
     A <html:strong>linear map</html:strong> is a function between two vector spaces that preserves the operations of addition and scalar multiplication.
-    In other words, a function <fr:tex display="inline">T: V \to  W</fr:tex> where <fr:tex display="inline">V,W</fr:tex> are vector spaces if the following conditions are satisfied:
-    <html:ul><html:li>Additivity: <fr:tex display="inline">T(u+v) = T(u) + T(v)</fr:tex> for all <fr:tex display="inline">u,v \in  V</fr:tex></html:li>
-        <html:li>Homogeneity: <fr:tex display="inline">T(\alpha  v) = \alpha  T(v)</fr:tex> for all <fr:tex display="inline">\alpha  \in  \mathbb {F}</fr:tex> and <fr:tex display="inline">v \in  V</fr:tex></html:li></html:ul>
-    Sometimes we ignore the brackets and write <fr:tex display="inline">T v</fr:tex> instead of <fr:tex display="inline">T(v)</fr:tex>.
+    In other words, a function <fr:tex display="inline"><![CDATA[T: V \to  W]]></fr:tex> where <fr:tex display="inline"><![CDATA[V,W]]></fr:tex> are vector spaces if the following conditions are satisfied:
+    <html:ul><html:li>Additivity: <fr:tex display="inline"><![CDATA[T(u+v) = T(u) + T(v)]]></fr:tex> for all <fr:tex display="inline"><![CDATA[u,v \in  V]]></fr:tex></html:li>
+        <html:li>Homogeneity: <fr:tex display="inline"><![CDATA[T(\alpha  v) = \alpha  T(v)]]></fr:tex> for all <fr:tex display="inline"><![CDATA[\alpha  \in  \mathbb {F}]]></fr:tex> and <fr:tex display="inline"><![CDATA[v \in  V]]></fr:tex></html:li></html:ul>
+    Sometimes we ignore the brackets and write <fr:tex display="inline"><![CDATA[T v]]></fr:tex> instead of <fr:tex display="inline"><![CDATA[T(v)]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
     Now we can talk about the set of all linear maps between two vector spaces.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \mathcal {L}(V,W) = \{  T: V \to  W | T \text { is a linear map} \}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/eg-0002/</fr:uri>
                 <fr:display-uri>eg-0002</fr:display-uri>
                 <fr:route>/eg-0002/</fr:route>
@@ -100,18 +101,18 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Define <fr:tex display="inline">D\in \mathcal {L}(\mathcal {P}(\mathbb {R}),\mathcal {P}(\mathbb {R}))</fr:tex> (recall that <fr:tex display="inline">\mathcal {P}</fr:tex> means <fr:link href="/def-0027/" title="Polynomial" uri="https://caimeo.space/def-0027/" display-uri="def-0027" type="local">set of polynomials</fr:link>) by
-    <fr:tex display="block">
-        D(f) = f&apos;
-    </fr:tex>
-    We can see that <fr:tex display="inline">D</fr:tex> a linear map.
-    <html:ul><html:li>Additivity: <fr:tex display="inline">D(f+g) = (f+g)&apos; = f&apos; + g&apos; = D(f) + D(g)</fr:tex></html:li>
-        <html:li>Homogeneity: <fr:tex display="inline">D(\alpha  f) = (\alpha  f)&apos; = \alpha  f&apos; = \alpha  D(f)</fr:tex></html:li></html:ul></html:p>
+    Define <fr:tex display="inline"><![CDATA[D\in \mathcal {L}(\mathcal {P}(\mathbb {R}),\mathcal {P}(\mathbb {R}))]]></fr:tex> (recall that <fr:tex display="inline"><![CDATA[\mathcal {P}]]></fr:tex> means <fr:link href="/def-0027/" title="Polynomial" uri="https://caimeo.space/def-0027/" display-uri="def-0027" type="local">set of polynomials</fr:link>) by
+    <fr:tex display="block"><![CDATA[
+        D(f) = f'
+    ]]></fr:tex>
+    We can see that <fr:tex display="inline"><![CDATA[D]]></fr:tex> a linear map.
+    <html:ul><html:li>Additivity: <fr:tex display="inline"><![CDATA[D(f+g) = (f+g)' = f' + g' = D(f) + D(g)]]></fr:tex></html:li>
+        <html:li>Homogeneity: <fr:tex display="inline"><![CDATA[D(\alpha  f) = (\alpha  f)' = \alpha  f' = \alpha  D(f)]]></fr:tex></html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/eg-0003/</fr:uri>
                 <fr:display-uri>eg-0003</fr:display-uri>
                 <fr:route>/eg-0003/</fr:route>
@@ -120,17 +121,17 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> be the vector space of all continuous functions on the interval <fr:tex display="inline">[a,b]</fr:tex>.
-    The map <fr:tex display="inline">I: V \to  V</fr:tex> defined by
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> be the vector space of all continuous functions on the interval <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex>.
+    The map <fr:tex display="inline"><![CDATA[I: V \to  V]]></fr:tex> defined by
+    <fr:tex display="block"><![CDATA[
         I(f) = \int _a^x f(t) dt
-    </fr:tex>
+    ]]></fr:tex>
     is a <html:strong>linear map</html:strong>.
-    In other words, <fr:tex display="inline">I</fr:tex> preserves the operations of addition and scalar multiplication:
-    For all <fr:tex display="inline">f,g \in  V</fr:tex> and all <fr:tex display="inline">\alpha  \in  \mathbb {R}</fr:tex>,
-    <fr:tex display="block">
+    In other words, <fr:tex display="inline"><![CDATA[I]]></fr:tex> preserves the operations of addition and scalar multiplication:
+    For all <fr:tex display="inline"><![CDATA[f,g \in  V]]></fr:tex> and all <fr:tex display="inline"><![CDATA[\alpha  \in  \mathbb {R}]]></fr:tex>,
+    <fr:tex display="block"><![CDATA[
         I(f+g) = I(f) + I(g) \quad  \text {and} \quad  I(\alpha  f) = \alpha  I(f)
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
@@ -139,7 +140,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000F/</fr:uri>
                 <fr:display-uri>thm-000F</fr:display-uri>
                 <fr:route>/thm-000F/</fr:route>
@@ -148,44 +149,44 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">v_1, v_2, \ldots , v_n</fr:tex> be a basis of vector space <fr:tex display="inline">V</fr:tex>.
-    Then for any vector space <fr:tex display="inline">W</fr:tex> and any vectors <fr:tex display="inline">w_1, w_2, \ldots , w_n</fr:tex> in <fr:tex display="inline">W</fr:tex>,
-    there exists a unique linear map <fr:tex display="inline">T: V \to  W</fr:tex> such that
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[v_1, v_2, \ldots , v_n]]></fr:tex> be a basis of vector space <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
+    Then for any vector space <fr:tex display="inline"><![CDATA[W]]></fr:tex> and any vectors <fr:tex display="inline"><![CDATA[w_1, w_2, \ldots , w_n]]></fr:tex> in <fr:tex display="inline"><![CDATA[W]]></fr:tex>,
+    there exists a unique linear map <fr:tex display="inline"><![CDATA[T: V \to  W]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         T(v_i) = w_i \quad  \text {for all} \quad  i = 1,2,\ldots ,n
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
-    Now let&apos;s turn to the algebraic operations over the set of linear maps <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex>.
+    Now let's turn to the algebraic operations over the set of linear maps <fr:tex display="inline"><![CDATA[\mathcal {L}(V,W)]]></fr:tex>.
     We begin by defining the addition and scalar multiplication of linear maps.
     This leads to a surprising result: the set of linear maps is actually a vector space.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-0029/</fr:uri>
                 <fr:display-uri>def-0029</fr:display-uri>
                 <fr:route>/def-0029/</fr:route>
-                <fr:title text="Addition and scalar multiplication over \mathcal {L}(V,W)">Addition and scalar multiplication over <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex></fr:title>
+                <fr:title text="Addition and scalar multiplication over \mathcal {L}(V,W)">Addition and scalar multiplication over <fr:tex display="inline"><![CDATA[\mathcal {L}(V,W)]]></fr:tex></fr:title>
                 <fr:taxon>Definition</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">T_1, T_2 \in  \mathcal {L}(V,W)</fr:tex>.
-    We define the <html:strong>addition</html:strong> of <fr:tex display="inline">T_1</fr:tex> and <fr:tex display="inline">T_2</fr:tex> as the linear map <fr:tex display="inline">T_1 + T_2: V \to  W</fr:tex> such that
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[T_1, T_2 \in  \mathcal {L}(V,W)]]></fr:tex>.
+    We define the <html:strong>addition</html:strong> of <fr:tex display="inline"><![CDATA[T_1]]></fr:tex> and <fr:tex display="inline"><![CDATA[T_2]]></fr:tex> as the linear map <fr:tex display="inline"><![CDATA[T_1 + T_2: V \to  W]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         (T_1 + T_2)(v) = T_1(v) + T_2(v) \quad  \text {for all} \quad  v \in  V
-    </fr:tex>
-    The scalar multiplication of a linear map <fr:tex display="inline">T \in  \mathcal {L}(V,W)</fr:tex> by a scalar <fr:tex display="inline">c \in  \mathbb {F}</fr:tex> is the linear map <fr:tex display="inline">cT: V \to  W</fr:tex> such that
-    <fr:tex display="block">
+    ]]></fr:tex>
+    The scalar multiplication of a linear map <fr:tex display="inline"><![CDATA[T \in  \mathcal {L}(V,W)]]></fr:tex> by a scalar <fr:tex display="inline"><![CDATA[c \in  \mathbb {F}]]></fr:tex> is the linear map <fr:tex display="inline"><![CDATA[cT: V \to  W]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         (cT)(v) = cT(v) \quad  \text {for all} \quad  v \in  V
-    </fr:tex>
-    With these operations, <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> is a <fr:link href="/def-000H/" title="Vector Space" uri="https://caimeo.space/def-000H/" display-uri="def-000H" type="local"><html:strong>vector space</html:strong></fr:link> over the field <fr:tex display="inline">\mathbb {F}</fr:tex>.
-    Note that the additive identity of <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> is the <html:strong>zero map</html:strong> <fr:tex display="inline">0: V \to  W</fr:tex> such that
-    <fr:tex display="block">
+    ]]></fr:tex>
+    With these operations, <fr:tex display="inline"><![CDATA[\mathcal {L}(V,W)]]></fr:tex> is a <fr:link href="/def-000H/" title="Vector Space" uri="https://caimeo.space/def-000H/" display-uri="def-000H" type="local"><html:strong>vector space</html:strong></fr:link> over the field <fr:tex display="inline"><![CDATA[\mathbb {F}]]></fr:tex>.
+    Note that the additive identity of <fr:tex display="inline"><![CDATA[\mathcal {L}(V,W)]]></fr:tex> is the <html:strong>zero map</html:strong> <fr:tex display="inline"><![CDATA[0: V \to  W]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         0(v) = 0 \quad  \text {for all} \quad  v \in  V
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
@@ -195,7 +196,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002A/</fr:uri>
                 <fr:display-uri>def-002A</fr:display-uri>
                 <fr:route>/def-002A/</fr:route>
@@ -204,34 +205,34 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">T_1: V \to  W</fr:tex> and <fr:tex display="inline">T_2: W \to  U</fr:tex> be linear maps.
-    We define the <html:strong>product</html:strong> of <fr:tex display="inline">T_1</fr:tex> and <fr:tex display="inline">T_2</fr:tex> as the linear map <fr:tex display="inline">T_2 \circ  T_1: V \to  U</fr:tex> such that
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[T_1: V \to  W]]></fr:tex> and <fr:tex display="inline"><![CDATA[T_2: W \to  U]]></fr:tex> be linear maps.
+    We define the <html:strong>product</html:strong> of <fr:tex display="inline"><![CDATA[T_1]]></fr:tex> and <fr:tex display="inline"><![CDATA[T_2]]></fr:tex> as the linear map <fr:tex display="inline"><![CDATA[T_2 \circ  T_1: V \to  U]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         (T_2 \circ  T_1)(v) = T_2(T_1(v)) \quad  \text {for all} \quad  v \in  V
-    </fr:tex>
-    Note that this is just the composition of the two functions <fr:tex display="inline">T_1</fr:tex> and <fr:tex display="inline">T_2</fr:tex>. 
-    And we usually denote <fr:tex display="inline">T_2 \circ  T_1</fr:tex> by <fr:tex display="inline">T_2T_1</fr:tex>.
+    ]]></fr:tex>
+    Note that this is just the composition of the two functions <fr:tex display="inline"><![CDATA[T_1]]></fr:tex> and <fr:tex display="inline"><![CDATA[T_2]]></fr:tex>. 
+    And we usually denote <fr:tex display="inline"><![CDATA[T_2 \circ  T_1]]></fr:tex> by <fr:tex display="inline"><![CDATA[T_2T_1]]></fr:tex>.
     The product of linear maps is associative, that is,
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         (T_3 \circ  T_2) \circ  T_1 = T_3 \circ  (T_2 \circ  T_1)
-    </fr:tex>
-    for any linear maps <fr:tex display="inline">T_1: V \to  W</fr:tex>, <fr:tex display="inline">T_2: W \to  U</fr:tex>, and <fr:tex display="inline">T_3: U \to  X</fr:tex>.
-    The identity map <fr:tex display="inline">I_V: V \to  V</fr:tex> is the identity element of the set of linear maps <fr:tex display="inline">\mathcal {L}(V,V)</fr:tex> under the product operation.
-    That is, for any linear map <fr:tex display="inline">T: V \to  V</fr:tex>,
-    <fr:tex display="block">
+    ]]></fr:tex>
+    for any linear maps <fr:tex display="inline"><![CDATA[T_1: V \to  W]]></fr:tex>, <fr:tex display="inline"><![CDATA[T_2: W \to  U]]></fr:tex>, and <fr:tex display="inline"><![CDATA[T_3: U \to  X]]></fr:tex>.
+    The identity map <fr:tex display="inline"><![CDATA[I_V: V \to  V]]></fr:tex> is the identity element of the set of linear maps <fr:tex display="inline"><![CDATA[\mathcal {L}(V,V)]]></fr:tex> under the product operation.
+    That is, for any linear map <fr:tex display="inline"><![CDATA[T: V \to  V]]></fr:tex>,
+    <fr:tex display="block"><![CDATA[
         I_V \circ  T = T \circ  I_V = T
-    </fr:tex>
-    where <fr:tex display="inline">I_V</fr:tex> is the identity map on <fr:tex display="inline">V</fr:tex>.
-    The set of all linear maps from a vector space to itself, <fr:tex display="inline">\mathcal {L}(V,V)</fr:tex>, forms a <fr:link href="/def-0007/" title="Monoid" uri="https://caimeo.space/def-0007/" display-uri="def-0007" type="local"><html:strong>monoid</html:strong></fr:link> under the product operation.
-    The set of all invertible linear maps from a vector space to itself, <fr:tex display="inline">\mathcal {L}(V,V)^*</fr:tex>, forms a group under the product operation.
-    The identity map is the identity element of the <fr:link href="/def-0001/" title="Group" uri="https://caimeo.space/def-0001/" display-uri="def-0001" type="local"><html:strong>group</html:strong></fr:link> <fr:tex display="inline">\mathcal {L}(V,V)^*</fr:tex>.
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[I_V]]></fr:tex> is the identity map on <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
+    The set of all linear maps from a vector space to itself, <fr:tex display="inline"><![CDATA[\mathcal {L}(V,V)]]></fr:tex>, forms a <fr:link href="/def-0007/" title="Monoid" uri="https://caimeo.space/def-0007/" display-uri="def-0007" type="local"><html:strong>monoid</html:strong></fr:link> under the product operation.
+    The set of all invertible linear maps from a vector space to itself, <fr:tex display="inline"><![CDATA[\mathcal {L}(V,V)^*]]></fr:tex>, forms a group under the product operation.
+    The identity map is the identity element of the <fr:link href="/def-0001/" title="Group" uri="https://caimeo.space/def-0001/" display-uri="def-0001" type="local"><html:strong>group</html:strong></fr:link> <fr:tex display="inline"><![CDATA[\mathcal {L}(V,V)^*]]></fr:tex>.
 </html:p>
                 <html:p>
     With addition we also have the distributive law for the product of linear maps.
-    That is, for any linear maps <fr:tex display="inline">S,S_1,S_2: V \to  W</fr:tex> and <fr:tex display="inline">T,T_1,T_2: U\to  V</fr:tex>:
-    <fr:tex display="block">
+    That is, for any linear maps <fr:tex display="inline"><![CDATA[S,S_1,S_2: V \to  W]]></fr:tex> and <fr:tex display="inline"><![CDATA[T,T_1,T_2: U\to  V]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         (S_1 + S_2)T = S_1T + S_2T \quad  \text {and} \quad  T(S_1 + S_2) = TS_1 + TS_2
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
@@ -239,7 +240,7 @@
     For linear maps, the kernel is the <html:strong>null space</html:strong></html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002C/</fr:uri>
                 <fr:display-uri>def-002C</fr:display-uri>
                 <fr:route>/def-002C/</fr:route>
@@ -248,11 +249,11 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    For <fr:tex display="inline">T: V \to  W</fr:tex>, the <html:strong>null space</html:strong> of <fr:tex display="inline">T</fr:tex> is the set of all vectors in <fr:tex display="inline">V</fr:tex> that are mapped to <fr:tex display="inline">0</fr:tex> in <fr:tex display="inline">W</fr:tex>.
-    <fr:tex display="block">
+    For <fr:tex display="inline"><![CDATA[T: V \to  W]]></fr:tex>, the <html:strong>null space</html:strong> of <fr:tex display="inline"><![CDATA[T]]></fr:tex> is the set of all vectors in <fr:tex display="inline"><![CDATA[V]]></fr:tex> that are mapped to <fr:tex display="inline"><![CDATA[0]]></fr:tex> in <fr:tex display="inline"><![CDATA[W]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \text {null } T = \{ v \in  V | T(v) = 0 \}
-    </fr:tex>
-    The null space of <fr:tex display="inline">T</fr:tex> is a subspace of <fr:tex display="inline">V</fr:tex>.
+    ]]></fr:tex>
+    The null space of <fr:tex display="inline"><![CDATA[T]]></fr:tex> is a subspace of <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -262,7 +263,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000G/</fr:uri>
                 <fr:display-uri>thm-000G</fr:display-uri>
                 <fr:route>/thm-000G/</fr:route>
@@ -271,7 +272,7 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">T: V \to  W</fr:tex> be a linear map. Then <fr:tex display="inline">T</fr:tex> is injective if and only if <fr:tex display="inline">\text {null } T = \{ 0 \}</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[T: V \to  W]]></fr:tex> be a linear map. Then <fr:tex display="inline"><![CDATA[T]]></fr:tex> is injective if and only if <fr:tex display="inline"><![CDATA[\text {null } T = \{ 0 \}]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -281,7 +282,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000H/</fr:uri>
                 <fr:display-uri>thm-000H</fr:display-uri>
                 <fr:route>/thm-000H/</fr:route>
@@ -290,7 +291,7 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    If <fr:tex display="inline">T: V \to  W</fr:tex> is a linear map, then the range of <fr:tex display="inline">T</fr:tex> is a subspace of <fr:tex display="inline">W</fr:tex>.
+    If <fr:tex display="inline"><![CDATA[T: V \to  W]]></fr:tex> is a linear map, then the range of <fr:tex display="inline"><![CDATA[T]]></fr:tex> is a subspace of <fr:tex display="inline"><![CDATA[W]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -299,7 +300,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000I/</fr:uri>
                 <fr:display-uri>thm-000I</fr:display-uri>
                 <fr:route>/thm-000I/</fr:route>
@@ -308,11 +309,11 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> be finite-dimensional vector space and <fr:tex display="inline">T : V \to  W</fr:tex> be a linear map. 
-    Then <fr:tex display="inline">\text {range } T</fr:tex> is finite-dimensional and 
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> be finite-dimensional vector space and <fr:tex display="inline"><![CDATA[T : V \to  W]]></fr:tex> be a linear map. 
+    Then <fr:tex display="inline"><![CDATA[\text {range } T]]></fr:tex> is finite-dimensional and 
+    <fr:tex display="block"><![CDATA[
         \dim  V = \dim  \text {range } T + \dim  \text {null } T
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
@@ -322,7 +323,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000M/</fr:uri>
                 <fr:display-uri>thm-000M</fr:display-uri>
                 <fr:route>/thm-000M/</fr:route>
@@ -331,9 +332,9 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> and <fr:tex display="inline">W</fr:tex> be finite-dimensional vector spaces, 
-    and <fr:tex display="inline">\dim  V &gt; \dim  W</fr:tex>.
-    Then no linear map <fr:tex display="inline">T:V\to  W</fr:tex> is injective.
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> and <fr:tex display="inline"><![CDATA[W]]></fr:tex> be finite-dimensional vector spaces, 
+    and <fr:tex display="inline"><![CDATA[\dim  V > \dim  W]]></fr:tex>.
+    Then no linear map <fr:tex display="inline"><![CDATA[T:V\to  W]]></fr:tex> is injective.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -343,7 +344,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000N/</fr:uri>
                 <fr:display-uri>thm-000N</fr:display-uri>
                 <fr:route>/thm-000N/</fr:route>
@@ -352,9 +353,9 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> and <fr:tex display="inline">W</fr:tex> be finite-dimensional vector spaces, 
-    and <fr:tex display="inline">\dim  V &lt; \dim  W</fr:tex>.
-    Then no linear map <fr:tex display="inline">T:V\to  W</fr:tex> is surjective.
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> and <fr:tex display="inline"><![CDATA[W]]></fr:tex> be finite-dimensional vector spaces, 
+    and <fr:tex display="inline"><![CDATA[\dim  V < \dim  W]]></fr:tex>.
+    Then no linear map <fr:tex display="inline"><![CDATA[T:V\to  W]]></fr:tex> is surjective.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -364,7 +365,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/eg-0004/</fr:uri>
                 <fr:display-uri>eg-0004</fr:display-uri>
                 <fr:route>/eg-0004/</fr:route>
@@ -374,32 +375,32 @@
               <fr:mainmatter>
                 <html:p>Rephrase in terms of a linear map the question of whether a <fr:link href="/def-002Q/" title="Homogeneous Linear Equations" uri="https://caimeo.space/def-002Q/" display-uri="def-002Q" type="local">homogeneous system linear equations</fr:link> has a nonzero solution.</html:p>
                 <html:p>
-        Let <fr:tex display="inline">A</fr:tex> be the coefficient matrix of a homogeneous linear system.
-        <fr:tex display="block">
+        Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be the coefficient matrix of a homogeneous linear system.
+        <fr:tex display="block"><![CDATA[
             A = \begin {bmatrix}
-                a_{11} &amp; a_{12} &amp; \cdots  &amp; a_{1n} \\
-                a_{21} &amp; a_{22} &amp; \cdots  &amp; a_{2n} \\
-                \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\
-                a_{m1} &amp; a_{m2} &amp; \cdots  &amp; a_{mn}
+                a_{11} & a_{12} & \cdots  & a_{1n} \\
+                a_{21} & a_{22} & \cdots  & a_{2n} \\
+                \vdots  & \vdots  & \ddots  & \vdots  \\
+                a_{m1} & a_{m2} & \cdots  & a_{mn}
             \end {bmatrix}
-        </fr:tex>
-        The equation <fr:tex display="inline">A\vec {x} = \vec {0}</fr:tex> has a trivial solution <fr:tex display="inline">\vec {x} = \vec {0}</fr:tex>.
+        ]]></fr:tex>
+        The equation <fr:tex display="inline"><![CDATA[A\vec {x} = \vec {0}]]></fr:tex> has a trivial solution <fr:tex display="inline"><![CDATA[\vec {x} = \vec {0}]]></fr:tex>.
         The question here is whether there is a nontrivial solution.
     </html:p>
                 <html:p>
-        Define <fr:tex display="inline">T: \mathbb {F}^n \to  \mathbb {F}^m</fr:tex> by
-        <fr:tex display="block">
+        Define <fr:tex display="inline"><![CDATA[T: \mathbb {F}^n \to  \mathbb {F}^m]]></fr:tex> by
+        <fr:tex display="block"><![CDATA[
             T(\vec {x}) = A\vec {x}
-        </fr:tex>
+        ]]></fr:tex>
         Then the question of whether the homogeneous linear system has a nontrivial solution is equivalent to 
-        asking <fr:tex display="inline">\text {null } T</fr:tex> is nontrivial.
-        That is, <fr:tex display="inline">T</fr:tex> is <fr:link href="/thm-000G/" title="Injectivity equivalent to Kernel Triviality" uri="https://caimeo.space/thm-000G/" display-uri="thm-000G" type="local">not injective</fr:link>.
+        asking <fr:tex display="inline"><![CDATA[\text {null } T]]></fr:tex> is nontrivial.
+        That is, <fr:tex display="inline"><![CDATA[T]]></fr:tex> is <fr:link href="/thm-000G/" title="Injectivity equivalent to Kernel Triviality" uri="https://caimeo.space/thm-000G/" display-uri="thm-000G" type="local">not injective</fr:link>.
     </html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000O/</fr:uri>
                 <fr:display-uri>thm-000O</fr:display-uri>
                 <fr:route>/thm-000O/</fr:route>
@@ -416,11 +417,11 @@
             </fr:tree>
             <html:p>
     We have seen that <fr:link href="/thm-000M/" title="Map to smaller dimension is not injective" uri="https://caimeo.space/thm-000M/" display-uri="thm-000M" type="local">map to smaller dimension is not injective</fr:link>.
-    <fr:tex display="inline">T</fr:tex> is not injective if <fr:tex display="inline">n &gt; m</fr:tex>. This results the theorem above.
+    <fr:tex display="inline"><![CDATA[T]]></fr:tex> is not injective if <fr:tex display="inline"><![CDATA[n > m]]></fr:tex>. This results the theorem above.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/eg-0005/</fr:uri>
                 <fr:display-uri>eg-0005</fr:display-uri>
                 <fr:route>/eg-0005/</fr:route>
@@ -433,32 +434,32 @@
         for some choice of constant terms.
     </html:p>
                 <html:p>
-    Let <fr:tex display="inline">A</fr:tex> be the coefficient matrix of a inhomogeneous linear system.
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be the coefficient matrix of a inhomogeneous linear system.
+    <fr:tex display="block"><![CDATA[
         A = \begin {bmatrix}
-            a_{11} &amp; a_{12} &amp; \cdots  &amp; a_{1n} \\
-            a_{21} &amp; a_{22} &amp; \cdots  &amp; a_{2n} \\
-            \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\
-            a_{m1} &amp; a_{m2} &amp; \cdots  &amp; a_{mn}
+            a_{11} & a_{12} & \cdots  & a_{1n} \\
+            a_{21} & a_{22} & \cdots  & a_{2n} \\
+            \vdots  & \vdots  & \ddots  & \vdots  \\
+            a_{m1} & a_{m2} & \cdots  & a_{mn}
         \end {bmatrix}
-    </fr:tex>
-    The equation <fr:tex display="inline">A\vec {x} = \vec {b}</fr:tex> has a solution <fr:tex display="inline">\vec {x} = A^{-1}\vec {b}</fr:tex>.
+    ]]></fr:tex>
+    The equation <fr:tex display="inline"><![CDATA[A\vec {x} = \vec {b}]]></fr:tex> has a solution <fr:tex display="inline"><![CDATA[\vec {x} = A^{-1}\vec {b}]]></fr:tex>.
     </html:p>
                 <html:p>
-        Define <fr:tex display="inline">T: \mathbb {F}^n \to  \mathbb {F}^m</fr:tex> by
-        <fr:tex display="block">
+        Define <fr:tex display="inline"><![CDATA[T: \mathbb {F}^n \to  \mathbb {F}^m]]></fr:tex> by
+        <fr:tex display="block"><![CDATA[
             T(\vec {x}) = A\vec {x}
-        </fr:tex>
+        ]]></fr:tex>
         Then the statement that inhomogeneous linear system has no solutions is equivalent to 
-        <fr:tex display="inline">\vec {b} \not \in  \text {range } T</fr:tex>.
-        Thus the question is rephrased as not having a solution for some choice of <fr:tex display="inline">\vec {b}</fr:tex>.
-        What condition ensures <fr:tex display="inline">T</fr:tex> is not surjective.
+        <fr:tex display="inline"><![CDATA[\vec {b} \not \in  \text {range } T]]></fr:tex>.
+        Thus the question is rephrased as not having a solution for some choice of <fr:tex display="inline"><![CDATA[\vec {b}]]></fr:tex>.
+        What condition ensures <fr:tex display="inline"><![CDATA[T]]></fr:tex> is not surjective.
     </html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000P/</fr:uri>
                 <fr:display-uri>thm-000P</fr:display-uri>
                 <fr:route>/thm-000P/</fr:route>
@@ -474,14 +475,14 @@
               </fr:mainmatter>
             </fr:tree>
             <html:p>
-    Let <fr:tex display="inline">v_1, v_2, \cdots , v_n</fr:tex> be a basis of <fr:tex display="inline">V</fr:tex>.
-    We know that for any value of a linear map <fr:tex display="inline">T:V\to  W</fr:tex>,
-    can be determined by values <fr:tex display="inline">\{ T(v_1), T(v_2), \cdots , T(v_n) \}</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[v_1, v_2, \cdots , v_n]]></fr:tex> be a basis of <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
+    We know that for any value of a linear map <fr:tex display="inline"><![CDATA[T:V\to  W]]></fr:tex>,
+    can be determined by values <fr:tex display="inline"><![CDATA[\{ T(v_1), T(v_2), \cdots , T(v_n) \}]]></fr:tex>.
     This leads to the definition of the matrix representation of a linear map.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002R/</fr:uri>
                 <fr:display-uri>def-002R</fr:display-uri>
                 <fr:route>/def-002R/</fr:route>
@@ -490,18 +491,18 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">m,n\in  \mathbb {Z}^+</fr:tex>.
-    A <fr:tex display="inline">m\times  n</fr:tex> matrix is a rectangular array of elements of a field <fr:tex display="inline">\mathbb {F}</fr:tex>
-    with <fr:tex display="inline">m</fr:tex> <html:strong>rows</html:strong> and <fr:tex display="inline">n</fr:tex> <html:strong>columns</html:strong>.
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[m,n\in  \mathbb {Z}^+]]></fr:tex>.
+    A <fr:tex display="inline"><![CDATA[m\times  n]]></fr:tex> matrix is a rectangular array of elements of a field <fr:tex display="inline"><![CDATA[\mathbb {F}]]></fr:tex>
+    with <fr:tex display="inline"><![CDATA[m]]></fr:tex> <html:strong>rows</html:strong> and <fr:tex display="inline"><![CDATA[n]]></fr:tex> <html:strong>columns</html:strong>.
+    <fr:tex display="block"><![CDATA[
         A = \begin {bmatrix}
-            a_{11} &amp; a_{12} &amp; \cdots  &amp; a_{1n} \\
-            a_{21} &amp; a_{22} &amp; \cdots  &amp; a_{2n} \\
-            \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\
-            a_{m1} &amp; a_{m2} &amp; \cdots  &amp; a_{mn}
+            a_{11} & a_{12} & \cdots  & a_{1n} \\
+            a_{21} & a_{22} & \cdots  & a_{2n} \\
+            \vdots  & \vdots  & \ddots  & \vdots  \\
+            a_{m1} & a_{m2} & \cdots  & a_{mn}
         \end {bmatrix}
-    </fr:tex>
-    The notation <fr:tex display="inline">A_{jk}</fr:tex> refers to the element in the <fr:tex display="inline">j</fr:tex>-th row and <fr:tex display="inline">k</fr:tex>-th column.
+    ]]></fr:tex>
+    The notation <fr:tex display="inline"><![CDATA[A_{jk}]]></fr:tex> refers to the element in the <fr:tex display="inline"><![CDATA[j]]></fr:tex>-th row and <fr:tex display="inline"><![CDATA[k]]></fr:tex>-th column.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -510,7 +511,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002S/</fr:uri>
                 <fr:display-uri>def-002S</fr:display-uri>
                 <fr:route>/def-002S/</fr:route>
@@ -518,92 +519,92 @@
                 <fr:taxon>Definition</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter><html:p>
-    Let <fr:tex display="inline">T\in  \mathcal {L}(V,W)</fr:tex>,
-    <fr:tex display="inline">\{ v_1,\ldots ,v_n \}\subset  V</fr:tex> be a basis of <fr:tex display="inline">V</fr:tex>,
-    and <fr:tex display="inline">\{ w_1,\ldots ,w_m \}\subset  W</fr:tex> be a basis of <fr:tex display="inline">W</fr:tex>.
-    The <html:strong>matrix of <fr:tex display="inline">T</fr:tex></html:strong> with respect to these bases is
-    the <fr:tex display="inline">m\times  n</fr:tex> matrix <fr:tex display="inline">\mathcal {M}(T)</fr:tex> such that
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[T\in  \mathcal {L}(V,W)]]></fr:tex>,
+    <fr:tex display="inline"><![CDATA[\{ v_1,\ldots ,v_n \}\subset  V]]></fr:tex> be a basis of <fr:tex display="inline"><![CDATA[V]]></fr:tex>,
+    and <fr:tex display="inline"><![CDATA[\{ w_1,\ldots ,w_m \}\subset  W]]></fr:tex> be a basis of <fr:tex display="inline"><![CDATA[W]]></fr:tex>.
+    The <html:strong>matrix of <fr:tex display="inline"><![CDATA[T]]></fr:tex></html:strong> with respect to these bases is
+    the <fr:tex display="inline"><![CDATA[m\times  n]]></fr:tex> matrix <fr:tex display="inline"><![CDATA[\mathcal {M}(T)]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         T(v_j) = \sum _{i=1}^m \mathcal {M}(T)_{ij}w_i
-    </fr:tex>
-    Or we denote <fr:tex display="inline">\mathcal {M}(T)</fr:tex> as <fr:tex display="inline">\mathcal {M}(T, (v_1,\ldots ,v_n), (w_1,\ldots ,w_m))</fr:tex>.
+    ]]></fr:tex>
+    Or we denote <fr:tex display="inline"><![CDATA[\mathcal {M}(T)]]></fr:tex> as <fr:tex display="inline"><![CDATA[\mathcal {M}(T, (v_1,\ldots ,v_n), (w_1,\ldots ,w_m))]]></fr:tex>.
 </html:p><html:p>
-    If <fr:tex display="inline">T</fr:tex> maps <fr:tex display="inline">n</fr:tex>-dimensional vector space to <fr:tex display="inline">m</fr:tex>-dimensional vector space,
-    then <fr:tex display="inline">\mathcal {M}(T)</fr:tex> is a <fr:tex display="inline">m\times  n</fr:tex> matrix.
+    If <fr:tex display="inline"><![CDATA[T]]></fr:tex> maps <fr:tex display="inline"><![CDATA[n]]></fr:tex>-dimensional vector space to <fr:tex display="inline"><![CDATA[m]]></fr:tex>-dimensional vector space,
+    then <fr:tex display="inline"><![CDATA[\mathcal {M}(T)]]></fr:tex> is a <fr:tex display="inline"><![CDATA[m\times  n]]></fr:tex> matrix.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Addition
 ">
     <html:strong>Addition</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
-    For two same-size matrix <fr:tex display="inline">A,B</fr:tex>,
-    the sum of <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex> is the matrix <fr:tex display="inline">C</fr:tex> such that
-    <fr:tex display="block">
+    For two same-size matrix <fr:tex display="inline"><![CDATA[A,B]]></fr:tex>,
+    the sum of <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> is the matrix <fr:tex display="inline"><![CDATA[C]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         C_{ij} = A_{ij} + B_{ij}
-    </fr:tex>
-    In the language of linear maps <fr:tex display="inline">S,T\in  \mathcal {L}(V,W)</fr:tex>,
-    <fr:tex display="block">
+    ]]></fr:tex>
+    In the language of linear maps <fr:tex display="inline"><![CDATA[S,T\in  \mathcal {L}(V,W)]]></fr:tex>,
+    <fr:tex display="block"><![CDATA[
         \mathcal {M}(T+S) = \mathcal {M}(T) + \mathcal {M}(S)
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Scalar Multiplication
 ">
     <html:strong>Scalar Multiplication</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
-    For a scalar <fr:tex display="inline">c</fr:tex> and a matrix <fr:tex display="inline">A</fr:tex>,
-    the product of <fr:tex display="inline">c</fr:tex> and <fr:tex display="inline">A</fr:tex> is the matrix <fr:tex display="inline">B</fr:tex> such that
-    <fr:tex display="block">
+    For a scalar <fr:tex display="inline"><![CDATA[c]]></fr:tex> and a matrix <fr:tex display="inline"><![CDATA[A]]></fr:tex>,
+    the product of <fr:tex display="inline"><![CDATA[c]]></fr:tex> and <fr:tex display="inline"><![CDATA[A]]></fr:tex> is the matrix <fr:tex display="inline"><![CDATA[B]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         B_{ij} = cA_{ij}
-    </fr:tex>
-    In the language of linear maps <fr:tex display="inline">T\in  \mathcal {L}(V,W)</fr:tex>,
-    <fr:tex display="block">
+    ]]></fr:tex>
+    In the language of linear maps <fr:tex display="inline"><![CDATA[T\in  \mathcal {L}(V,W)]]></fr:tex>,
+    <fr:tex display="block"><![CDATA[
         \mathcal {M}(cT) = c\mathcal {M}(T)
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Set of Matrices
 ">
     <html:strong>Set of Matrices</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
-    The set of all <fr:tex display="inline">m\times  n</fr:tex> matrices with elements in <fr:tex display="inline">\mathbb {F}</fr:tex> is denoted as <fr:tex display="inline">\mathcal {M}_{m\times  n}(\mathbb {F})</fr:tex>
-    or <fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex>.
+    The set of all <fr:tex display="inline"><![CDATA[m\times  n]]></fr:tex> matrices with elements in <fr:tex display="inline"><![CDATA[\mathbb {F}]]></fr:tex> is denoted as <fr:tex display="inline"><![CDATA[\mathcal {M}_{m\times  n}(\mathbb {F})]]></fr:tex>
+    or <fr:tex display="inline"><![CDATA[\mathbb {F}^{m\times  n}]]></fr:tex>.
 </fr:mainmatter></fr:tree>
 </fr:mainmatter>
             </fr:tree>
             <html:p>
-    We can see that <fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex> is itself a vector space.
+    We can see that <fr:tex display="inline"><![CDATA[\mathbb {F}^{m\times  n}]]></fr:tex> is itself a vector space.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000Q/</fr:uri>
                 <fr:display-uri>thm-000Q</fr:display-uri>
                 <fr:route>/thm-000Q/</fr:route>
                 <fr:title text="\dim \mathbb {F}^{m\times  n} = mn">
-                  <fr:tex display="inline">\dim \mathbb {F}^{m\times  n} = mn</fr:tex>
+                  <fr:tex display="inline"><![CDATA[\dim \mathbb {F}^{m\times  n} = mn]]></fr:tex>
                 </fr:title>
                 <fr:taxon>Theorem</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
-                <html:p><fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex> is a vector space with dimension <fr:tex display="inline">mn</fr:tex>.
+                <html:p><fr:tex display="inline"><![CDATA[\mathbb {F}^{m\times  n}]]></fr:tex> is a vector space with dimension <fr:tex display="inline"><![CDATA[mn]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
-    Consider linear maps <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex>.
-    The composition of linear maps is <fr:tex display="inline">ST</fr:tex>.
+    Consider linear maps <fr:tex display="inline"><![CDATA[T:U\to  V]]></fr:tex> and <fr:tex display="inline"><![CDATA[S:V\to  W]]></fr:tex>.
+    The composition of linear maps is <fr:tex display="inline"><![CDATA[ST]]></fr:tex>.
     Does the composition of linear maps have a matrix representation?
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \mathcal {M}(ST) = \mathcal {M}(S)\mathcal {M}(T)
-    </fr:tex>
+    ]]></fr:tex>
     This makes no sense now but indicates the definition of <html:strong>matrix multiplication</html:strong>.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002T/</fr:uri>
                 <fr:display-uri>def-002T</fr:display-uri>
                 <fr:route>/def-002T/</fr:route>
@@ -611,31 +612,31 @@
                 <fr:taxon>Definition</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter><html:p>
-    Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> be a <fr:tex display="inline">n\times  p</fr:tex> matrix.
-    Then <fr:tex display="inline">AC</fr:tex> is defined as the <fr:tex display="inline">m\times  p</fr:tex> matrix <fr:tex display="inline">C</fr:tex> such that
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be a <fr:tex display="inline"><![CDATA[m\times  n]]></fr:tex> matrix and <fr:tex display="inline"><![CDATA[B]]></fr:tex> be a <fr:tex display="inline"><![CDATA[n\times  p]]></fr:tex> matrix.
+    Then <fr:tex display="inline"><![CDATA[AC]]></fr:tex> is defined as the <fr:tex display="inline"><![CDATA[m\times  p]]></fr:tex> matrix <fr:tex display="inline"><![CDATA[C]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         C_{ij} = \sum _{k=1}^n A_{ik}B_{kj}
-    </fr:tex></html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    ]]></fr:tex></html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Derivation
 ">
     <html:strong>Derivation</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
-    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
-    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
-    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[T:U\to  V]]></fr:tex> and <fr:tex display="inline"><![CDATA[S:V\to  W]]></fr:tex> be linear maps.
+    Denote <fr:tex display="inline"><![CDATA[A = \mathcal {M}(S)]]></fr:tex> and <fr:tex display="inline"><![CDATA[C = \mathcal {M}(T)]]></fr:tex>.
+    Then the composition of linear maps <fr:tex display="inline"><![CDATA[ST]]></fr:tex> is computed
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\
-            &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\
-            &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\
-            &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\
+            (ST)(u)_k &= S(\sum _{r=1}^n C_{rk}v_r) \\
+            &= \sum _{r=1}^n C_{rk}S(v_r) \\
+            &= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\
+            &= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\
         \end {align*}
-    </fr:tex>
-    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
-    <fr:tex display="block">
+    ]]></fr:tex>
+    Thus <fr:tex display="inline"><![CDATA[\mathcal {M}(ST)]]></fr:tex> is the <fr:tex display="inline"><![CDATA[m\times  p]]></fr:tex> whose entries are
+    <fr:tex display="block"><![CDATA[
         \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 </fr:mainmatter>
             </fr:tree>
@@ -646,23 +647,23 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002Y/</fr:uri>
                 <fr:display-uri>def-002Y</fr:display-uri>
                 <fr:route>/def-002Y/</fr:route>
-                <fr:title text="A_{j\cdot } and A_{\cdot  j}"><fr:tex display="inline">A_{j\cdot }</fr:tex> and <fr:tex display="inline">A_{\cdot  j}</fr:tex></fr:title>
+                <fr:title text="A_{j\cdot } and A_{\cdot  j}"><fr:tex display="inline"><![CDATA[A_{j\cdot }]]></fr:tex> and <fr:tex display="inline"><![CDATA[A_{\cdot  j}]]></fr:tex></fr:title>
                 <fr:taxon>Definition</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix.
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be a <fr:tex display="inline"><![CDATA[m\times  n]]></fr:tex> matrix.
     <html:ul><html:li>
-            If <fr:tex display="inline">1\leq  j\leq  m</fr:tex> then <fr:tex display="inline">A_{j\cdot }</fr:tex> is the <fr:tex display="inline">j</fr:tex>-th row of <fr:tex display="inline">A</fr:tex>,
-            defined as a <fr:tex display="inline">1\times  n</fr:tex> matrix. (A row vector)
+            If <fr:tex display="inline"><![CDATA[1\leq  j\leq  m]]></fr:tex> then <fr:tex display="inline"><![CDATA[A_{j\cdot }]]></fr:tex> is the <fr:tex display="inline"><![CDATA[j]]></fr:tex>-th row of <fr:tex display="inline"><![CDATA[A]]></fr:tex>,
+            defined as a <fr:tex display="inline"><![CDATA[1\times  n]]></fr:tex> matrix. (A row vector)
         </html:li>
         <html:li>
-            If <fr:tex display="inline">1\leq  j\leq  n</fr:tex> then <fr:tex display="inline">A_{\cdot  j}</fr:tex> is the <fr:tex display="inline">j</fr:tex>-th column of <fr:tex display="inline">A</fr:tex>,
-            defined as a <fr:tex display="inline">m\times  1</fr:tex> matrix. (A column vector)
+            If <fr:tex display="inline"><![CDATA[1\leq  j\leq  n]]></fr:tex> then <fr:tex display="inline"><![CDATA[A_{\cdot  j}]]></fr:tex> is the <fr:tex display="inline"><![CDATA[j]]></fr:tex>-th column of <fr:tex display="inline"><![CDATA[A]]></fr:tex>,
+            defined as a <fr:tex display="inline"><![CDATA[m\times  1]]></fr:tex> matrix. (A column vector)
         </html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -671,7 +672,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000R/</fr:uri>
                 <fr:display-uri>thm-000R</fr:display-uri>
                 <fr:route>/thm-000R/</fr:route>
@@ -680,12 +681,12 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Suppose <fr:tex display="inline">A</fr:tex> is an <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> is an <fr:tex display="inline">n\times  p</fr:tex> matrix.
-    Then the entry of the product <fr:tex display="inline">AB</fr:tex> is:
-    <fr:tex display="block">
+    Suppose <fr:tex display="inline"><![CDATA[A]]></fr:tex> is an <fr:tex display="inline"><![CDATA[m\times  n]]></fr:tex> matrix and <fr:tex display="inline"><![CDATA[B]]></fr:tex> is an <fr:tex display="inline"><![CDATA[n\times  p]]></fr:tex> matrix.
+    Then the entry of the product <fr:tex display="inline"><![CDATA[AB]]></fr:tex> is:
+    <fr:tex display="block"><![CDATA[
         (AB)_{ij} = A_{i\cdot }B_{\cdot  j}
-    </fr:tex>
-    for <fr:tex display="inline">1\leq  i\leq  m</fr:tex> and <fr:tex display="inline">1\leq  j\leq  p</fr:tex>.
+    ]]></fr:tex>
+    for <fr:tex display="inline"><![CDATA[1\leq  i\leq  m]]></fr:tex> and <fr:tex display="inline"><![CDATA[1\leq  j\leq  p]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -694,7 +695,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000S/</fr:uri>
                 <fr:display-uri>thm-000S</fr:display-uri>
                 <fr:route>/thm-000S/</fr:route>
@@ -703,14 +704,14 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">A</fr:tex> be an <fr:tex display="inline">m\times  n</fr:tex> matrix,
-    and <fr:tex display="inline">c</fr:tex> is a <fr:tex display="inline">1\times  1</fr:tex> matrix.
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be an <fr:tex display="inline"><![CDATA[m\times  n]]></fr:tex> matrix,
+    and <fr:tex display="inline"><![CDATA[c]]></fr:tex> is a <fr:tex display="inline"><![CDATA[1\times  1]]></fr:tex> matrix.
+    <fr:tex display="block"><![CDATA[
         c = \begin {pmatrix} c_1 \\ c_2 \\ \vdots  \\ c_n \end {pmatrix}
-    </fr:tex>
-    Then <fr:tex display="inline">Ac = c_1A_{\cdot  1} + c_2A_{\cdot  2} + \cdots  + c_nA_{\cdot  n}</fr:tex>.
-    In other words, <fr:tex display="inline">Ac</fr:tex> is a linear Combination of the columns of <fr:tex display="inline">A</fr:tex>,
-    with the scalars that multiply the columns coming from <fr:tex display="inline">c</fr:tex>.
+    ]]></fr:tex>
+    Then <fr:tex display="inline"><![CDATA[Ac = c_1A_{\cdot  1} + c_2A_{\cdot  2} + \cdots  + c_nA_{\cdot  n}]]></fr:tex>.
+    In other words, <fr:tex display="inline"><![CDATA[Ac]]></fr:tex> is a linear Combination of the columns of <fr:tex display="inline"><![CDATA[A]]></fr:tex>,
+    with the scalars that multiply the columns coming from <fr:tex display="inline"><![CDATA[c]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -719,7 +720,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002Z/</fr:uri>
                 <fr:display-uri>def-002Z</fr:display-uri>
                 <fr:route>/def-002Z/</fr:route>
@@ -728,17 +729,17 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A linear map <fr:tex display="inline">T\in \mathcal {L}(V,W)</fr:tex> is said to be <fr:tex display="inline">invertible</fr:tex> if 
-    there exists a linear map <fr:tex display="inline">S\in \mathcal {L}(W,V)</fr:tex> such that:
-    <fr:tex display="block">
+    A linear map <fr:tex display="inline"><![CDATA[T\in \mathcal {L}(V,W)]]></fr:tex> is said to be <fr:tex display="inline"><![CDATA[invertible]]></fr:tex> if 
+    there exists a linear map <fr:tex display="inline"><![CDATA[S\in \mathcal {L}(W,V)]]></fr:tex> such that:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            T\cdot  S &amp;= \text {id}_V \\
-            S\cdot  T &amp;= \text {id}_W
+            T\cdot  S &= \text {id}_V \\
+            S\cdot  T &= \text {id}_W
         \end {align*}
-    </fr:tex>
-    where <fr:tex display="inline">\text {id}</fr:tex> is the identity map.
-    If a linear map <fr:tex display="inline">T</fr:tex> is invertible, 
-    then the map <fr:tex display="inline">S</fr:tex> is <html:strong>unique</html:strong> and is called the <html:strong>inverse</html:strong> of <fr:tex display="inline">T</fr:tex>, denoted <fr:tex display="inline">T^{-1}</fr:tex>.
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[\text {id}]]></fr:tex> is the identity map.
+    If a linear map <fr:tex display="inline"><![CDATA[T]]></fr:tex> is invertible, 
+    then the map <fr:tex display="inline"><![CDATA[S]]></fr:tex> is <html:strong>unique</html:strong> and is called the <html:strong>inverse</html:strong> of <fr:tex display="inline"><![CDATA[T]]></fr:tex>, denoted <fr:tex display="inline"><![CDATA[T^{-1}]]></fr:tex>.
 </html:p>
                 <html:p>
     An <html:strong>isomorphism</html:strong> is a linear map that is invertible.
@@ -752,7 +753,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000T/</fr:uri>
                 <fr:display-uri>thm-000T</fr:display-uri>
                 <fr:route>/thm-000T/</fr:route>
@@ -761,25 +762,25 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Two finite-dimensional vector spaces over <fr:tex display="inline">\mathbb {F}</fr:tex>
+    Two finite-dimensional vector spaces over <fr:tex display="inline"><![CDATA[\mathbb {F}]]></fr:tex>
     are isomorphic iff they have the same <fr:link href="/def-001V/" title="Dimension" uri="https://caimeo.space/def-001V/" display-uri="def-001V" type="local">dimension</fr:link>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000U/</fr:uri>
                 <fr:display-uri>thm-000U</fr:display-uri>
                 <fr:route>/thm-000U/</fr:route>
-                <fr:title text="\mathcal {L}(V,W) is isomorphic to \mathbb {F}^{m\times  n}"><fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> is isomorphic to <fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex></fr:title>
+                <fr:title text="\mathcal {L}(V,W) is isomorphic to \mathbb {F}^{m\times  n}"><fr:tex display="inline"><![CDATA[\mathcal {L}(V,W)]]></fr:tex> is isomorphic to <fr:tex display="inline"><![CDATA[\mathbb {F}^{m\times  n}]]></fr:tex></fr:title>
                 <fr:taxon>Theorem</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">v_1, v_2, \ldots , v_n</fr:tex> be a basis for <fr:tex display="inline">V</fr:tex>,
-    and <fr:tex display="inline">w_1, w_2, \ldots , w_m</fr:tex> be a basis for <fr:tex display="inline">W</fr:tex>.
-    Then <fr:tex display="inline">\mathcal {M}</fr:tex> is an isomorphism between <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> and <fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[v_1, v_2, \ldots , v_n]]></fr:tex> be a basis for <fr:tex display="inline"><![CDATA[V]]></fr:tex>,
+    and <fr:tex display="inline"><![CDATA[w_1, w_2, \ldots , w_m]]></fr:tex> be a basis for <fr:tex display="inline"><![CDATA[W]]></fr:tex>.
+    Then <fr:tex display="inline"><![CDATA[\mathcal {M}]]></fr:tex> is an isomorphism between <fr:tex display="inline"><![CDATA[\mathcal {L}(V,W)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathbb {F}^{m\times  n}]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -788,7 +789,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000V/</fr:uri>
                 <fr:display-uri>thm-000V</fr:display-uri>
                 <fr:route>/thm-000V/</fr:route>
@@ -797,18 +798,18 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> and <fr:tex display="inline">W</fr:tex> be finite-dimensional vector spaces.
-    Then <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> is finite-dimensional and
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> and <fr:tex display="inline"><![CDATA[W]]></fr:tex> be finite-dimensional vector spaces.
+    Then <fr:tex display="inline"><![CDATA[\mathcal {L}(V,W)]]></fr:tex> is finite-dimensional and
+    <fr:tex display="block"><![CDATA[
         \dim (\mathcal {L}(V,W)) = \dim (V)\dim (W).
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>
         </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>1</fr:month>
@@ -830,7 +831,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000L/</fr:uri>
                 <fr:display-uri>def-000L</fr:display-uri>
                 <fr:route>/def-000L/</fr:route>
@@ -839,13 +840,13 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> be a <fr:link href="/def-000H/" title="Vector Space" uri="https://caimeo.space/def-000H/" display-uri="def-000H" type="local">vector space</fr:link> over a field <fr:tex display="inline">F</fr:tex>.
-    Let <fr:tex display="inline">v_1, \dots , v_n</fr:tex> be vectors in <fr:tex display="inline">V</fr:tex>.
-    A <html:strong>linear combination</html:strong> of <fr:tex display="inline">v_1, \dots , v_n</fr:tex> is an expression of the form
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> be a <fr:link href="/def-000H/" title="Vector Space" uri="https://caimeo.space/def-000H/" display-uri="def-000H" type="local">vector space</fr:link> over a field <fr:tex display="inline"><![CDATA[F]]></fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> be vectors in <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
+    A <html:strong>linear combination</html:strong> of <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> is an expression of the form
+    <fr:tex display="block"><![CDATA[
         a_1 v_1 + \dots  + a_n v_n
-    </fr:tex>
-    where <fr:tex display="inline">a_1, \dots , a_n \in  F</fr:tex>.
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[a_1, \dots , a_n \in  F]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -855,7 +856,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000M/</fr:uri>
                 <fr:display-uri>def-000M</fr:display-uri>
                 <fr:route>/def-000M/</fr:route>
@@ -864,32 +865,32 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> be a vector space over a field <fr:tex display="inline">F</fr:tex>.
-    Let <fr:tex display="inline">v_1, \dots , v_n</fr:tex> be vectors in <fr:tex display="inline">V</fr:tex>.
-    The <html:strong>span</html:strong> of <fr:tex display="inline">v_1, \dots , v_n</fr:tex> is defined as
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> be a vector space over a field <fr:tex display="inline"><![CDATA[F]]></fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> be vectors in <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
+    The <html:strong>span</html:strong> of <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> is defined as
+    <fr:tex display="block"><![CDATA[
         \text {span}(v_1, \dots , v_n) = \{a_1 v_1 + \dots  + a_n v_n \mid  a_i \in  F\}
-    </fr:tex>
-    The span of empty set is defined to be <fr:tex display="inline">\{0\}</fr:tex>.    
+    ]]></fr:tex>
+    The span of empty set is defined to be <fr:tex display="inline"><![CDATA[\{0\}]]></fr:tex>.    
 </html:p>
                 <html:p>
-    If <fr:tex display="inline">\text {span}(v_1, \dots , v_n) = V</fr:tex>, we say that <fr:tex display="inline">v_1, \dots , v_n</fr:tex> <html:strong>spans</html:strong> <fr:tex display="inline">V</fr:tex>.
+    If <fr:tex display="inline"><![CDATA[\text {span}(v_1, \dots , v_n) = V]]></fr:tex>, we say that <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> <html:strong>spans</html:strong> <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
-    Suppose we have span <fr:tex display="inline">S=\text {span}(v_1, \dots , v_n)</fr:tex>. (Span is trivially a subspace.)
-    Obviously for all <fr:tex display="inline">v_j (1 \leq  j \leq  n)</fr:tex>, <fr:tex display="inline">v_j \in  S</fr:tex>.
+    Suppose we have span <fr:tex display="inline"><![CDATA[S=\text {span}(v_1, \dots , v_n)]]></fr:tex>. (Span is trivially a subspace.)
+    Obviously for all <fr:tex display="inline"><![CDATA[v_j (1 \leq  j \leq  n)]]></fr:tex>, <fr:tex display="inline"><![CDATA[v_j \in  S]]></fr:tex>.
     Because subspaces are closed under scalar multiplication and addition, every
-    subspace of <fr:tex display="inline">V</fr:tex> containing <fr:tex display="inline">v_1, \dots , v_n</fr:tex> must contain <fr:tex display="inline">S</fr:tex>.
-    Thus we conclude that <fr:tex display="inline">S</fr:tex> is the smallest subspace containing <fr:tex display="inline">v_1, \dots , v_n</fr:tex>.
+    subspace of <fr:tex display="inline"><![CDATA[V]]></fr:tex> containing <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> must contain <fr:tex display="inline"><![CDATA[S]]></fr:tex>.
+    Thus we conclude that <fr:tex display="inline"><![CDATA[S]]></fr:tex> is the smallest subspace containing <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex>.
 </html:p>
             <html:p>
     The discussion about <html:strong>spans</html:strong> leads to a key definition in linear algebra.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000N/</fr:uri>
                 <fr:display-uri>def-000N</fr:display-uri>
                 <fr:route>/def-000N/</fr:route>
@@ -898,7 +899,7 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A <fr:link href="/def-000H/" title="Vector Space" uri="https://caimeo.space/def-000H/" display-uri="def-000H" type="local">vector space</fr:link> <fr:tex display="inline">V</fr:tex> is called <html:strong>finite-dimensional</html:strong> if some <fr:link href="/def-000G/" title="List" uri="https://caimeo.space/def-000G/" display-uri="def-000G" type="local">list</fr:link> of vectors <fr:tex display="inline">v_1, \dots , v_n</fr:tex> <fr:link href="/def-000M/" title="Linear Span" uri="https://caimeo.space/def-000M/" display-uri="def-000M" type="local">spans</fr:link> <fr:tex display="inline">V</fr:tex>.
+    A <fr:link href="/def-000H/" title="Vector Space" uri="https://caimeo.space/def-000H/" display-uri="def-000H" type="local">vector space</fr:link> <fr:tex display="inline"><![CDATA[V]]></fr:tex> is called <html:strong>finite-dimensional</html:strong> if some <fr:link href="/def-000G/" title="List" uri="https://caimeo.space/def-000G/" display-uri="def-000G" type="local">list</fr:link> of vectors <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> <fr:link href="/def-000M/" title="Linear Span" uri="https://caimeo.space/def-000M/" display-uri="def-000M" type="local">spans</fr:link> <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -907,7 +908,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000O/</fr:uri>
                 <fr:display-uri>def-000O</fr:display-uri>
                 <fr:route>/def-000O/</fr:route>
@@ -916,19 +917,19 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A vector space <fr:tex display="inline">V</fr:tex> is called <html:strong>infinite-dimensional</html:strong> if it is not <fr:link href="/def-000N/" title="Finite-Dimensional Vector Space" uri="https://caimeo.space/def-000N/" display-uri="def-000N" type="local">finite-dimensional</fr:link>.
+    A vector space <fr:tex display="inline"><![CDATA[V]]></fr:tex> is called <html:strong>infinite-dimensional</html:strong> if it is not <fr:link href="/def-000N/" title="Finite-Dimensional Vector Space" uri="https://caimeo.space/def-000N/" display-uri="def-000N" type="local">finite-dimensional</fr:link>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
     Consider the situation that there is only one way to
-    express a vector <fr:tex display="inline">v</fr:tex> as a linear combination of vectors in a list <fr:tex display="inline">v_1, \dots , v_n</fr:tex>.
-    What property of the list <fr:tex display="inline">v_1, \dots , v_n</fr:tex> does this situation imply? The answer is
+    express a vector <fr:tex display="inline"><![CDATA[v]]></fr:tex> as a linear combination of vectors in a list <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex>.
+    What property of the list <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> does this situation imply? The answer is
     linear independence.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000P/</fr:uri>
                 <fr:display-uri>def-000P</fr:display-uri>
                 <fr:route>/def-000P/</fr:route>
@@ -937,10 +938,10 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A set of vectors <fr:tex display="inline">\{v_1, \dots , v_n\}</fr:tex> is called <html:strong>linearly independent</html:strong> if
-    <fr:tex display="block">a_1 v_1 + \dots  + a_n v_n = 0</fr:tex>
-    implies that <fr:tex display="inline">a_1 = \dots  = a_n = 0</fr:tex>.
-    The trivial case of <fr:tex display="inline">\{0\}</fr:tex> is also considered linearly independent.
+    A set of vectors <fr:tex display="inline"><![CDATA[\{v_1, \dots , v_n\}]]></fr:tex> is called <html:strong>linearly independent</html:strong> if
+    <fr:tex display="block"><![CDATA[a_1 v_1 + \dots  + a_n v_n = 0]]></fr:tex>
+    implies that <fr:tex display="inline"><![CDATA[a_1 = \dots  = a_n = 0]]></fr:tex>.
+    The trivial case of <fr:tex display="inline"><![CDATA[\{0\}]]></fr:tex> is also considered linearly independent.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -951,7 +952,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000Q/</fr:uri>
                 <fr:display-uri>def-000Q</fr:display-uri>
                 <fr:route>/def-000Q/</fr:route>
@@ -960,9 +961,9 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A set of vectors <fr:tex display="inline">\{v_1, \dots , v_n\}</fr:tex> is called <html:strong>linearly dependent</html:strong> if
-    <fr:tex display="block">a_1 v_1 + \dots  + a_n v_n = 0</fr:tex>
-    for some <fr:tex display="inline">a_1, \dots , a_n \in  \mathbb {F}</fr:tex> with at least one <fr:tex display="inline">a_i \neq  0</fr:tex> (not all <fr:tex display="inline">0</fr:tex>).
+    A set of vectors <fr:tex display="inline"><![CDATA[\{v_1, \dots , v_n\}]]></fr:tex> is called <html:strong>linearly dependent</html:strong> if
+    <fr:tex display="block"><![CDATA[a_1 v_1 + \dots  + a_n v_n = 0]]></fr:tex>
+    for some <fr:tex display="inline"><![CDATA[a_1, \dots , a_n \in  \mathbb {F}]]></fr:tex> with at least one <fr:tex display="inline"><![CDATA[a_i \neq  0]]></fr:tex> (not all <fr:tex display="inline"><![CDATA[0]]></fr:tex>).
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -973,7 +974,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-0001/</fr:uri>
                 <fr:display-uri>thm-0001</fr:display-uri>
                 <fr:route>/thm-0001/</fr:route>
@@ -982,19 +983,19 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">v_1, \dots , v_n</fr:tex> be vectors in a vector space <fr:tex display="inline">V</fr:tex> over a field <fr:tex display="inline">\mathbb {F}</fr:tex>.
-    If <fr:tex display="inline">v_1, \dots , v_n</fr:tex> are linearly dependent, then there exists <fr:tex display="inline">1 \leq  i \leq  n</fr:tex> such that
-    <html:ul><html:li><fr:tex display="inline">v_i \in  \text {span}(v_1, \dots , v_{i-1})</fr:tex></html:li>
-        <html:li>Remove <fr:tex display="inline">v_i</fr:tex> from the list <fr:tex display="inline">v_1, \dots , v_n</fr:tex> and the span does not change</html:li></html:ul></html:p>
+    Let <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> be vectors in a vector space <fr:tex display="inline"><![CDATA[V]]></fr:tex> over a field <fr:tex display="inline"><![CDATA[\mathbb {F}]]></fr:tex>.
+    If <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> are linearly dependent, then there exists <fr:tex display="inline"><![CDATA[1 \leq  i \leq  n]]></fr:tex> such that
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[v_i \in  \text {span}(v_1, \dots , v_{i-1})]]></fr:tex></html:li>
+        <html:li>Remove <fr:tex display="inline"><![CDATA[v_i]]></fr:tex> from the list <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex> and the span does not change</html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-0002/</fr:uri>
                 <fr:display-uri>thm-0002</fr:display-uri>
                 <fr:route>/thm-0002/</fr:route>
-                <fr:title text="Length of linearly independent list \leq  length of spanning list">Length of linearly independent list <fr:tex display="inline">\leq </fr:tex> length of spanning list</fr:title>
+                <fr:title text="Length of linearly independent list \leq  length of spanning list">Length of linearly independent list <fr:tex display="inline"><![CDATA[\leq ]]></fr:tex> length of spanning list</fr:title>
                 <fr:taxon>Lemma</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
@@ -1009,7 +1010,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000R/</fr:uri>
                 <fr:display-uri>def-000R</fr:display-uri>
                 <fr:route>/def-000R/</fr:route>
@@ -1018,22 +1019,22 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A basis of <fr:tex display="inline">V</fr:tex> is a list of vectors in <fr:tex display="inline">V</fr:tex>
-    that is linearly independent and spans <fr:tex display="inline">V</fr:tex>. 
+    A basis of <fr:tex display="inline"><![CDATA[V]]></fr:tex> is a list of vectors in <fr:tex display="inline"><![CDATA[V]]></fr:tex>
+    that is linearly independent and spans <fr:tex display="inline"><![CDATA[V]]></fr:tex>. 
 </html:p>
                 <html:p><html:strong>Criterion for basis</html:strong>
-    A list of vectors <fr:tex display="inline">\{v_1, \dots , v_n\}</fr:tex> is a basis of <fr:tex display="inline">V</fr:tex> if and only if
-    every <fr:tex display="inline">v \in  V</fr:tex> can be written <html:strong>uniquely</html:strong> as a linear combination of <fr:tex display="inline">v_1, \dots , v_n</fr:tex>.
+    A list of vectors <fr:tex display="inline"><![CDATA[\{v_1, \dots , v_n\}]]></fr:tex> is a basis of <fr:tex display="inline"><![CDATA[V]]></fr:tex> if and only if
+    every <fr:tex display="inline"><![CDATA[v \in  V]]></fr:tex> can be written <html:strong>uniquely</html:strong> as a linear combination of <fr:tex display="inline"><![CDATA[v_1, \dots , v_n]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
-    For instance, we have standard basis <fr:tex display="inline">\{e_1, \dots , e_n\}</fr:tex> for <fr:tex display="inline">\mathbb {F}^n</fr:tex>,
-    where <fr:tex display="inline">e_i</fr:tex> is the vector with <fr:tex display="inline">1</fr:tex> at <fr:tex display="inline">i</fr:tex>-th position and <fr:tex display="inline">0</fr:tex> elsewhere.
+    For instance, we have standard basis <fr:tex display="inline"><![CDATA[\{e_1, \dots , e_n\}]]></fr:tex> for <fr:tex display="inline"><![CDATA[\mathbb {F}^n]]></fr:tex>,
+    where <fr:tex display="inline"><![CDATA[e_i]]></fr:tex> is the vector with <fr:tex display="inline"><![CDATA[1]]></fr:tex> at <fr:tex display="inline"><![CDATA[i]]></fr:tex>-th position and <fr:tex display="inline"><![CDATA[0]]></fr:tex> elsewhere.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-0005/</fr:uri>
                 <fr:display-uri>thm-0005</fr:display-uri>
                 <fr:route>/thm-0005/</fr:route>
@@ -1051,7 +1052,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-0006/</fr:uri>
                 <fr:display-uri>thm-0006</fr:display-uri>
                 <fr:route>/thm-0006/</fr:route>
@@ -1070,7 +1071,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-0007/</fr:uri>
                 <fr:display-uri>thm-0007</fr:display-uri>
                 <fr:route>/thm-0007/</fr:route>
@@ -1090,19 +1091,19 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-0008/</fr:uri>
                 <fr:display-uri>thm-0008</fr:display-uri>
                 <fr:route>/thm-0008/</fr:route>
-                <fr:title text="Direct Sum of Subspaces of V">Direct Sum of Subspaces of <fr:tex display="inline">V</fr:tex></fr:title>
+                <fr:title text="Direct Sum of Subspaces of V">Direct Sum of Subspaces of <fr:tex display="inline"><![CDATA[V]]></fr:tex></fr:title>
                 <fr:taxon>Theorem</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Suppose <fr:tex display="inline">V</fr:tex> is a finite dimensional vector space,
-    and <fr:tex display="inline">U</fr:tex> is a subspace of <fr:tex display="inline">V</fr:tex>.
-    Then there exists a subspace <fr:tex display="inline">W</fr:tex> of <fr:tex display="inline">V</fr:tex> such that
-    <fr:tex display="inline">V = U \oplus  W</fr:tex>.
+    Suppose <fr:tex display="inline"><![CDATA[V]]></fr:tex> is a finite dimensional vector space,
+    and <fr:tex display="inline"><![CDATA[U]]></fr:tex> is a subspace of <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
+    Then there exists a subspace <fr:tex display="inline"><![CDATA[W]]></fr:tex> of <fr:tex display="inline"><![CDATA[V]]></fr:tex> such that
+    <fr:tex display="inline"><![CDATA[V = U \oplus  W]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -1115,7 +1116,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-0009/</fr:uri>
                 <fr:display-uri>thm-0009</fr:display-uri>
                 <fr:route>/thm-0009/</fr:route>
@@ -1124,8 +1125,8 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> be a finite-dimensional vector space.
-    Then every basis of <fr:tex display="inline">V</fr:tex> has the same length.
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> be a finite-dimensional vector space.
+    Then every basis of <fr:tex display="inline"><![CDATA[V]]></fr:tex> has the same length.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -1135,7 +1136,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-001V/</fr:uri>
                 <fr:display-uri>def-001V</fr:display-uri>
                 <fr:route>/def-001V/</fr:route>
@@ -1144,8 +1145,8 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    The <html:strong>dimension</html:strong> of a finite-dimensional vector space <fr:tex display="inline">V</fr:tex> is the length of any basis of the vector space.
-    Denoted by <fr:tex display="inline">\dim  V</fr:tex>.
+    The <html:strong>dimension</html:strong> of a finite-dimensional vector space <fr:tex display="inline"><![CDATA[V]]></fr:tex> is the length of any basis of the vector space.
+    Denoted by <fr:tex display="inline"><![CDATA[\dim  V]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -1155,7 +1156,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000A/</fr:uri>
                 <fr:display-uri>thm-000A</fr:display-uri>
                 <fr:route>/thm-000A/</fr:route>
@@ -1164,9 +1165,9 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> be a finite-dimensional vector space,
-    and <fr:tex display="inline">U</fr:tex> be a subspace of <fr:tex display="inline">V</fr:tex>.
-    Then <fr:tex display="inline">\dim  U \leq  \dim  V</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> be a finite-dimensional vector space,
+    and <fr:tex display="inline"><![CDATA[U]]></fr:tex> be a subspace of <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
+    Then <fr:tex display="inline"><![CDATA[\dim  U \leq  \dim  V]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -1178,7 +1179,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000B/</fr:uri>
                 <fr:display-uri>thm-000B</fr:display-uri>
                 <fr:route>/thm-000B/</fr:route>
@@ -1187,14 +1188,14 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> be a finite-dimensional vector space.
-    Then every <fr:link href="/def-000P/" title="Linearly independent" uri="https://caimeo.space/def-000P/" display-uri="def-000P" type="local">linearly independent</fr:link> list of vectors in <fr:tex display="inline">V</fr:tex> with length equal to <fr:tex display="inline">\dim  V</fr:tex> is a basis of <fr:tex display="inline">V</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> be a finite-dimensional vector space.
+    Then every <fr:link href="/def-000P/" title="Linearly independent" uri="https://caimeo.space/def-000P/" display-uri="def-000P" type="local">linearly independent</fr:link> list of vectors in <fr:tex display="inline"><![CDATA[V]]></fr:tex> with length equal to <fr:tex display="inline"><![CDATA[\dim  V]]></fr:tex> is a basis of <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000C/</fr:uri>
                 <fr:display-uri>thm-000C</fr:display-uri>
                 <fr:route>/thm-000C/</fr:route>
@@ -1203,8 +1204,8 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> be a finite-dimensional vector space.
-    Then every <fr:link href="/def-000M/" title="Linear Span" uri="https://caimeo.space/def-000M/" display-uri="def-000M" type="local">spanning</fr:link> list of vectors in <fr:tex display="inline">V</fr:tex> with length equal to <fr:tex display="inline">\dim  V</fr:tex> is a basis of <fr:tex display="inline">V</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> be a finite-dimensional vector space.
+    Then every <fr:link href="/def-000M/" title="Linear Span" uri="https://caimeo.space/def-000M/" display-uri="def-000M" type="local">spanning</fr:link> list of vectors in <fr:tex display="inline"><![CDATA[V]]></fr:tex> with length equal to <fr:tex display="inline"><![CDATA[\dim  V]]></fr:tex> is a basis of <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -1214,7 +1215,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000D/</fr:uri>
                 <fr:display-uri>thm-000D</fr:display-uri>
                 <fr:route>/thm-000D/</fr:route>
@@ -1223,19 +1224,19 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">V</fr:tex> be a finite-dimensional vector space,
-    and <fr:tex display="inline">U</fr:tex> and <fr:tex display="inline">W</fr:tex> be subspaces of <fr:tex display="inline">V</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[V]]></fr:tex> be a finite-dimensional vector space,
+    and <fr:tex display="inline"><![CDATA[U]]></fr:tex> and <fr:tex display="inline"><![CDATA[W]]></fr:tex> be subspaces of <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
     Then
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \dim (U + W) = \dim  U + \dim  W - \dim (U \cap  W).
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>
         </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>1</fr:month>
@@ -1254,12 +1255,12 @@
 </html:p>
             <html:p>
     The motivation for the definition of a vector space comes from the properties
-    of vectors in Euclidean space <fr:tex display="inline">\mathbb {R}^n</fr:tex> and <fr:tex display="inline">\mathbb {C}^n</fr:tex>.
+    of vectors in Euclidean space <fr:tex display="inline"><![CDATA[\mathbb {R}^n]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathbb {C}^n]]></fr:tex>.
     The definition abstracts and generalizes these properties.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000H/</fr:uri>
                 <fr:display-uri>def-000H</fr:display-uri>
                 <fr:route>/def-000H/</fr:route>
@@ -1268,26 +1269,26 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A vector space over a <fr:link href="/def-0006/" title="Field" uri="https://caimeo.space/def-0006/" display-uri="def-0006" type="local">field</fr:link> <fr:tex display="inline">F</fr:tex> is a non-empty set <fr:tex display="inline">V</fr:tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
-    In this context, the elements of <fr:tex display="inline">V</fr:tex> are commonly called <html:strong>vectors</html:strong>, and the elements of <fr:tex display="inline">F</fr:tex> are called <html:strong>scalars</html:strong>.
-    <html:ul><html:li>Commutativity: <fr:tex display="inline">
+    A vector space over a <fr:link href="/def-0006/" title="Field" uri="https://caimeo.space/def-0006/" display-uri="def-0006" type="local">field</fr:link> <fr:tex display="inline"><![CDATA[F]]></fr:tex> is a non-empty set <fr:tex display="inline"><![CDATA[V]]></fr:tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
+    In this context, the elements of <fr:tex display="inline"><![CDATA[V]]></fr:tex> are commonly called <html:strong>vectors</html:strong>, and the elements of <fr:tex display="inline"><![CDATA[F]]></fr:tex> are called <html:strong>scalars</html:strong>.
+    <html:ul><html:li>Commutativity: <fr:tex display="inline"><![CDATA[
             \forall  x, y \in  V, x + y = y + x
-        </fr:tex></html:li>
-        <html:li>Associativity: <fr:tex display="inline">
+        ]]></fr:tex></html:li>
+        <html:li>Associativity: <fr:tex display="inline"><![CDATA[
             \forall  x, y, z \in  V, (x + y) + z = x + (y + z)
-        </fr:tex></html:li>
-        <html:li>Additive Identity: <fr:tex display="inline">
+        ]]></fr:tex></html:li>
+        <html:li>Additive Identity: <fr:tex display="inline"><![CDATA[
             \exists  0 \in  V \text { such that } \forall  x \in  V, x + 0 = x
-        </fr:tex></html:li>
-        <html:li>Multiplicative Identity: <fr:tex display="inline">
+        ]]></fr:tex></html:li>
+        <html:li>Multiplicative Identity: <fr:tex display="inline"><![CDATA[
             \forall  x \in  V, 1x = x
-        </fr:tex></html:li>
-        <html:li>Additive Inverse: <fr:tex display="inline">
+        ]]></fr:tex></html:li>
+        <html:li>Additive Inverse: <fr:tex display="inline"><![CDATA[
             \forall  x \in  V, \exists  y \in  V \text { such that } x + y = 0
-        </fr:tex></html:li>
-        <html:li>Distributivity: <fr:tex display="inline">
+        ]]></fr:tex></html:li>
+        <html:li>Distributivity: <fr:tex display="inline"><![CDATA[
             \forall  x, y \in  V, \forall  c, d \in  F, c(x + y) = cx + cy, (c + d)x = cx + dx
-        </fr:tex></html:li></html:ul></html:p>
+        ]]></fr:tex></html:li></html:ul></html:p>
                 <html:p>
     Elements of a vector space are called <html:strong>vectors</html:strong> or <html:strong>points</html:strong>.
 </html:p>
@@ -1300,7 +1301,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000I/</fr:uri>
                 <fr:display-uri>def-000I</fr:display-uri>
                 <fr:route>/def-000I/</fr:route>
@@ -1309,11 +1310,11 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A subset <fr:tex display="inline">U</fr:tex> of a vector space <fr:tex display="inline">V</fr:tex> over a field <fr:tex display="inline">F</fr:tex> is called a <html:strong>subspace</html:strong> of <fr:tex display="inline">V</fr:tex> if <fr:tex display="inline">U</fr:tex> is itself a <html:strong>vector space</html:strong> over <fr:tex display="inline">F</fr:tex> with the operations of addition and scalar multiplication on <fr:tex display="inline">V</fr:tex>.
+    A subset <fr:tex display="inline"><![CDATA[U]]></fr:tex> of a vector space <fr:tex display="inline"><![CDATA[V]]></fr:tex> over a field <fr:tex display="inline"><![CDATA[F]]></fr:tex> is called a <html:strong>subspace</html:strong> of <fr:tex display="inline"><![CDATA[V]]></fr:tex> if <fr:tex display="inline"><![CDATA[U]]></fr:tex> is itself a <html:strong>vector space</html:strong> over <fr:tex display="inline"><![CDATA[F]]></fr:tex> with the operations of addition and scalar multiplication on <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
     The subset also satisfies the following axioms (vice versa):
-    <html:ul><html:li>Additive identity: <fr:tex display="inline">0\in  U</fr:tex></html:li>
-        <html:li>Closure: <fr:tex display="inline">\forall  u,v\in  U, u+v\in  U</fr:tex></html:li>
-        <html:li>Closed Scalar multiplication: <fr:tex display="inline">\forall  u\in  U, \forall  c\in  F, cu\in  U</fr:tex></html:li></html:ul></html:p>
+    <html:ul><html:li>Additive identity: <fr:tex display="inline"><![CDATA[0\in  U]]></fr:tex></html:li>
+        <html:li>Closure: <fr:tex display="inline"><![CDATA[\forall  u,v\in  U, u+v\in  U]]></fr:tex></html:li>
+        <html:li>Closed Scalar multiplication: <fr:tex display="inline"><![CDATA[\forall  u\in  U, \forall  c\in  F, cu\in  U]]></fr:tex></html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
@@ -1321,7 +1322,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000J/</fr:uri>
                 <fr:display-uri>def-000J</fr:display-uri>
                 <fr:route>/def-000J/</fr:route>
@@ -1330,9 +1331,9 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">U_1, \dots , U_n</fr:tex> be subsets of a vector space <fr:tex display="inline">V</fr:tex>.
-    The <html:strong>sum</html:strong> of <fr:tex display="inline">U_1, \dots , U_n</fr:tex> is defined as
-    <fr:tex display="block">U_1 + \dots  + U_n = \{u_1 + \dots  + u_n \mid  u_i \in  U_i\}</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[U_1, \dots , U_n]]></fr:tex> be subsets of a vector space <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
+    The <html:strong>sum</html:strong> of <fr:tex display="inline"><![CDATA[U_1, \dots , U_n]]></fr:tex> is defined as
+    <fr:tex display="block"><![CDATA[U_1 + \dots  + U_n = \{u_1 + \dots  + u_n \mid  u_i \in  U_i\}]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -1340,16 +1341,16 @@
     The sum of subspaces is the smallest subspace that contains all the subspaces.
 </html:p>
             <html:p>
-    Every element in <fr:tex display="inline">U_1 + \dots  + U_n</fr:tex> can be written as a sum of elements <fr:tex display="inline">u_i</fr:tex> in <fr:tex display="inline">U_i</fr:tex>:
-    <fr:tex display="block">
+    Every element in <fr:tex display="inline"><![CDATA[U_1 + \dots  + U_n]]></fr:tex> can be written as a sum of elements <fr:tex display="inline"><![CDATA[u_i]]></fr:tex> in <fr:tex display="inline"><![CDATA[U_i]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         u_1+\cdots +u_n
-    </fr:tex>
-    We will interested in cases where each vector in <fr:tex display="inline">U_1 + \dots  + U_n</fr:tex> can be represented in the form above
+    ]]></fr:tex>
+    We will interested in cases where each vector in <fr:tex display="inline"><![CDATA[U_1 + \dots  + U_n]]></fr:tex> can be represented in the form above
     in only one way. This leads to the definition of direct sum.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000K/</fr:uri>
                 <fr:display-uri>def-000K</fr:display-uri>
                 <fr:route>/def-000K/</fr:route>
@@ -1358,12 +1359,12 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">U_1, \dots , U_n</fr:tex> be subspaces of a vector space <fr:tex display="inline">V</fr:tex>.
-    The <html:strong>direct sum</html:strong> of <fr:tex display="inline">U_1, \dots , U_n</fr:tex> is defined as
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[U_1, \dots , U_n]]></fr:tex> be subspaces of a vector space <fr:tex display="inline"><![CDATA[V]]></fr:tex>.
+    The <html:strong>direct sum</html:strong> of <fr:tex display="inline"><![CDATA[U_1, \dots , U_n]]></fr:tex> is defined as
+    <fr:tex display="block"><![CDATA[
         U_1 \oplus  \dots  \oplus  U_n = \{u_1 + \dots  + u_n \mid  u_i \in  U_i\}
-    </fr:tex>
-    if every element in <fr:tex display="inline">U_1 \oplus  \dots  \oplus  U_n</fr:tex> can be written as <fr:tex display="inline">u_1 + \dots  + u_n </fr:tex> in only one way.
+    ]]></fr:tex>
+    if every element in <fr:tex display="inline"><![CDATA[U_1 \oplus  \dots  \oplus  U_n]]></fr:tex> can be written as <fr:tex display="inline"><![CDATA[u_1 + \dots  + u_n ]]></fr:tex> in only one way.
     This definition requires every vector in the sum have a unique representation.
 </html:p>
               </fr:mainmatter>
@@ -1374,17 +1375,17 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

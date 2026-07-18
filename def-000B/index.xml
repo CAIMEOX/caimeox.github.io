@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-000B/</fr:uri>
     <fr:display-uri>def-000B</fr:display-uri>
     <fr:route>/def-000B/</fr:route>
@@ -10,48 +11,48 @@
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
-A subset <fr:tex display="inline">S</fr:tex> of <fr:tex display="inline">\mathbb {R}</fr:tex> is said to be open in the <html:strong>euclidean topology</html:strong> on <fr:tex display="inline">\mathbb {R}</fr:tex> if <fr:tex display="inline">\forall  x\in  S</fr:tex> there exists <fr:tex display="inline">a,b\in \mathbb {R}</fr:tex> with <fr:tex display="inline">a&lt;b</fr:tex> st <fr:tex display="inline">x\in (a,b)\in  S</fr:tex>.
+A subset <fr:tex display="inline"><![CDATA[S]]></fr:tex> of <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> is said to be open in the <html:strong>euclidean topology</html:strong> on <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> if <fr:tex display="inline"><![CDATA[\forall  x\in  S]]></fr:tex> there exists <fr:tex display="inline"><![CDATA[a,b\in \mathbb {R}]]></fr:tex> with <fr:tex display="inline"><![CDATA[a<b]]></fr:tex> st <fr:tex display="inline"><![CDATA[x\in (a,b)\in  S]]></fr:tex>.
 </html:p>
     <html:p>The dual definition (using closed sets) is also valid.</html:p>
     <html:p>
-For each <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex> in <fr:tex display="inline">\mathbb {R}</fr:tex> with <fr:tex display="inline">a&lt;b</fr:tex> the closed intervcal <fr:tex display="inline">[a,b]</fr:tex> is a closed set in the euclidean topology in <fr:tex display="inline">\mathbb {R}</fr:tex>.
+For each <fr:tex display="inline"><![CDATA[a]]></fr:tex> and <fr:tex display="inline"><![CDATA[b]]></fr:tex> in <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> with <fr:tex display="inline"><![CDATA[a<b]]></fr:tex> the closed intervcal <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex> is a closed set in the euclidean topology in <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex>.
 </html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

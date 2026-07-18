@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-0030/</fr:uri>
     <fr:display-uri>def-0030</fr:display-uri>
     <fr:route>/def-0030/</fr:route>
-    <fr:title text="Schrodinger&apos;s equation">Schrodinger&apos;s equation</fr:title>
+    <fr:title text="Schrodinger's equation">Schrodinger's equation</fr:title>
     <fr:taxon>Definition</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
     The <html:strong>Schrodinger equation</html:strong> is a linear partial differential equation that describes the wave function of a quantum system.
     It is given by (the general form):
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         i\hbar \frac {\partial }{\partial  t}\Psi (\vec {r},t) = \hat {H}\Psi (\vec {r},t)
-    </fr:tex>
+    ]]></fr:tex>
     where:
-    <html:ul><html:li><fr:tex display="inline">\Psi (\vec {r},t)</fr:tex> is the wave function of the quantum system.
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[\Psi (\vec {r},t)]]></fr:tex> is the wave function of the quantum system.
         </html:li>
-        <html:li><fr:tex display="inline">\hat {H}</fr:tex> is the <html:strong>Hamiltonian operator</html:strong>.
+        <html:li><fr:tex display="inline"><![CDATA[\hat {H}]]></fr:tex> is the <html:strong>Hamiltonian operator</html:strong>.
         </html:li>
-        <html:li><fr:tex display="inline">\hbar  = 1.054573\times 10^{-34}\text {Js} </fr:tex> is the reduced <html:strong>Planck constant</html:strong>.
+        <html:li><fr:tex display="inline"><![CDATA[\hbar  = 1.054573\times 10^{-34}\text {Js} ]]></fr:tex> is the reduced <html:strong>Planck constant</html:strong>.
         </html:li></html:ul></html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>2</fr:month>
@@ -55,65 +56,65 @@
     This post introduces the concept of the wave function in quantum mechanics.
     Refer to <fr:link href="/quantum-2018/" title="Introduction to Quantum Mechanics" uri="https://caimeo.space/quantum-2018/" display-uri="quantum-2018" type="local">Introduction to Quantum Mechanics</fr:link>.
 </html:p><html:p>
-    Consider a particle of mass <fr:tex display="inline">m</fr:tex> moving along <fr:tex display="inline">x</fr:tex>-axis
-    subject to force <fr:tex display="inline">F(x, t)</fr:tex>.
-    With Newton&apos;s second law, we have:
-    <fr:tex display="block">
+    Consider a particle of mass <fr:tex display="inline"><![CDATA[m]]></fr:tex> moving along <fr:tex display="inline"><![CDATA[x]]></fr:tex>-axis
+    subject to force <fr:tex display="inline"><![CDATA[F(x, t)]]></fr:tex>.
+    With Newton's second law, we have:
+    <fr:tex display="block"><![CDATA[
         F = ma
-    </fr:tex>
+    ]]></fr:tex>
     For <html:strong>conservative systems</html:strong>, the force
     can be expressed as the derivative of a <html:strong>potential energy</html:strong>.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         F = -\frac {\partial  V}{\partial  x}
-    </fr:tex>
+    ]]></fr:tex>
     Now the equation of motion becomes:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         m \frac {d^2x}{dt^2} = -\frac {\partial  V}{\partial  x}
-    </fr:tex>
-    With appropriate initial conditions we can determine the <fr:tex display="inline">x(t)</fr:tex>,
+    ]]></fr:tex>
+    With appropriate initial conditions we can determine the <fr:tex display="inline"><![CDATA[x(t)]]></fr:tex>,
     this is what we normally do in classic mechanics.
 </html:p><html:p>
     For <html:strong>Quantum Mechanics</html:strong>, we have a different perspective.
-    We would like to look for the <html:strong>wave function</html:strong>, <fr:tex display="inline">\Psi (x, t)</fr:tex>.
+    We would like to look for the <html:strong>wave function</html:strong>, <fr:tex display="inline"><![CDATA[\Psi (x, t)]]></fr:tex>.
     To determine it we need to solve the <html:strong>Schrodinger equation</html:strong>.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         i\hbar \frac {\partial }{\partial  t}\Psi (x,t) = -\frac {\hbar ^2}{2m}\frac {\partial ^2\Psi (x,t)}{\partial  x^2} + V(x,t)\Psi (x,t)
-    </fr:tex></html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0030/</fr:uri><fr:display-uri>def-0030</fr:display-uri><fr:route>/def-0030/</fr:route><fr:title text="Schrodinger&apos;s equation">Schrodinger&apos;s equation</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    ]]></fr:tex></html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0030/</fr:uri><fr:display-uri>def-0030</fr:display-uri><fr:route>/def-0030/</fr:route><fr:title text="Schrodinger's equation">Schrodinger's equation</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The <html:strong>Schrodinger equation</html:strong> is a linear partial differential equation that describes the wave function of a quantum system.
     It is given by (the general form):
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         i\hbar \frac {\partial }{\partial  t}\Psi (\vec {r},t) = \hat {H}\Psi (\vec {r},t)
-    </fr:tex>
+    ]]></fr:tex>
     where:
-    <html:ul><html:li><fr:tex display="inline">\Psi (\vec {r},t)</fr:tex> is the wave function of the quantum system.
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[\Psi (\vec {r},t)]]></fr:tex> is the wave function of the quantum system.
         </html:li>
-        <html:li><fr:tex display="inline">\hat {H}</fr:tex> is the <html:strong>Hamiltonian operator</html:strong>.
+        <html:li><fr:tex display="inline"><![CDATA[\hat {H}]]></fr:tex> is the <html:strong>Hamiltonian operator</html:strong>.
         </html:li>
-        <html:li><fr:tex display="inline">\hbar  = 1.054573\times 10^{-34}\text {Js} </fr:tex> is the reduced <html:strong>Planck constant</html:strong>.
+        <html:li><fr:tex display="inline"><![CDATA[\hbar  = 1.054573\times 10^{-34}\text {Js} ]]></fr:tex> is the reduced <html:strong>Planck constant</html:strong>.
         </html:li></html:ul></html:p></fr:mainmatter></fr:tree><html:p>
-    The role of Schrodinger equation is similar to the role of Newton&apos;s second law in classic mechanics.
+    The role of Schrodinger equation is similar to the role of Newton's second law in classic mechanics.
     Given proper initial conditions,
-    we can determine <fr:tex display="inline">\Psi (x, t)</fr:tex> for all the future time.
+    we can determine <fr:tex display="inline"><![CDATA[\Psi (x, t)]]></fr:tex> for all the future time.
 </html:p><html:p>
     The wave function is quite odd, what information does it carry?
     The wave function is <html:em>spread out</html:em> in space.
     How can this be related to the <html:strong>state</html:strong> of a particle.
-</html:p><html:p><html:strong>Born&apos;s statistical interpretation</html:strong> of the wave function provides an answer.
-    For a fixed time <fr:tex display="inline">t</fr:tex>, the probability of finding the particle in the interval <fr:tex display="inline">[a, b]</fr:tex> is given by:
-    <fr:tex display="block">
+</html:p><html:p><html:strong>Born's statistical interpretation</html:strong> of the wave function provides an answer.
+    For a fixed time <fr:tex display="inline"><![CDATA[t]]></fr:tex>, the probability of finding the particle in the interval <fr:tex display="inline"><![CDATA[[a, b]]]></fr:tex> is given by:
+    <fr:tex display="block"><![CDATA[
         P(a, b) = \int _a^b |{\Psi (x, t)}|^2 dx
-    </fr:tex></html:p><html:p>
+    ]]></fr:tex></html:p><html:p>
     Here is where the quantum mechanics differs from classic mechanics and behaves weirdly.
     The wave function is not a deterministic function, but a <html:em>statistical</html:em> function, which 
     is an <html:strong>indeterministic</html:strong> interpretation.
 </html:p><html:p>
     Suppose I do <html:strong>measure</html:strong> the position of the particle,
-    and find it at <fr:tex display="inline">\vec {r}_0</fr:tex>.
+    and find it at <fr:tex display="inline"><![CDATA[\vec {r}_0]]></fr:tex>.
     Then where it was before the measurement?
     There are many interpretations of this question,
     and I will explain three of them.
-</html:p><html:p><html:ul><html:li><html:strong>Realist interpretation</html:strong>: The particle has a definite position before the measurement, just at <fr:tex display="inline">\vec {r}_0</fr:tex> but we just don&apos;t know it.</html:li>
-        <html:li><html:strong>Orthodox interpretation</html:strong>: The particle doesn&apos;t have a <html:em>definite</html:em> position before the measurement, it is in a <html:strong>superposition</html:strong> of all possible positions.
+</html:p><html:p><html:ul><html:li><html:strong>Realist interpretation</html:strong>: The particle has a definite position before the measurement, just at <fr:tex display="inline"><![CDATA[\vec {r}_0]]></fr:tex> but we just don't know it.</html:li>
+        <html:li><html:strong>Orthodox interpretation</html:strong>: The particle doesn't have a <html:em>definite</html:em> position before the measurement, it is in a <html:strong>superposition</html:strong> of all possible positions.
         This is also called the <html:strong>Copenhagen interpretation</html:strong>.</html:li>
         <html:li><html:strong>Agnostic interpretation</html:strong>: The question is meaningless, refuse to answer.</html:li></html:ul></html:p><html:p>
     Nowadays, the Copenhagen interpretation is the most widely accepted interpretation.
@@ -122,39 +123,39 @@
 </html:p><html:p>
     Probability is the key concept in quantum mechanics.
     Now I will introduce some terimnologies related to continuous probability.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0031/</fr:uri><fr:display-uri>def-0031</fr:display-uri><fr:route>/def-0031/</fr:route><fr:title text="Probability Density">Probability Density</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    A <html:strong>probability density</html:strong> is a function <fr:tex display="inline">p(x)</fr:tex> such that:
-    <html:ul><html:li><fr:tex display="inline">p(x)\geq  0</fr:tex> for all <fr:tex display="inline">x</fr:tex>.
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0031/</fr:uri><fr:display-uri>def-0031</fr:display-uri><fr:route>/def-0031/</fr:route><fr:title text="Probability Density">Probability Density</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    A <html:strong>probability density</html:strong> is a function <fr:tex display="inline"><![CDATA[p(x)]]></fr:tex> such that:
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[p(x)\geq  0]]></fr:tex> for all <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
         </html:li>
-        <html:li><fr:tex display="inline">\int _{-\infty }^{\infty } p(x)dx = 1</fr:tex>.
+        <html:li><fr:tex display="inline"><![CDATA[\int _{-\infty }^{\infty } p(x)dx = 1]]></fr:tex>.
         </html:li></html:ul>
-    With this we can define the <html:strong>probability function</html:strong> in an interval <fr:tex display="inline">[a,b]</fr:tex> as:
-    <fr:tex display="block">
+    With this we can define the <html:strong>probability function</html:strong> in an interval <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex> as:
+    <fr:tex display="block"><![CDATA[
         P(a, b) = \int _a^b p(x)dx
-    </fr:tex></html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="Expectation Value">Expectation Value</fr:title></fr:frontmatter><fr:mainmatter>
-    The <html:strong>expectation value</html:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
-    <fr:tex display="block">
+    ]]></fr:tex></html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="Expectation Value">Expectation Value</fr:title></fr:frontmatter><fr:mainmatter>
+    The <html:strong>expectation value</html:strong> of a function <fr:tex display="inline"><![CDATA[f(x)]]></fr:tex> with respect to the probability density <fr:tex display="inline"><![CDATA[p(x)]]></fr:tex> is defined:
+    <fr:tex display="block"><![CDATA[
         \langle  f(x) \rangle  = \int _{-\infty }^{\infty } f(x)p(x)dx
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="Variance">Variance</fr:title></fr:frontmatter><fr:mainmatter>
-    The <html:strong>variance</html:strong> of a function <fr:tex display="inline">f(x)</fr:tex> with respect to the probability density <fr:tex display="inline">p(x)</fr:tex> is defined:
-    <fr:tex display="block">
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="Variance">Variance</fr:title></fr:frontmatter><fr:mainmatter>
+    The <html:strong>variance</html:strong> of a function <fr:tex display="inline"><![CDATA[f(x)]]></fr:tex> with respect to the probability density <fr:tex display="inline"><![CDATA[p(x)]]></fr:tex> is defined:
+    <fr:tex display="block"><![CDATA[
         \sigma ^2 :\equiv  \langle  x^2 \rangle  - \langle  x \rangle ^2
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 </fr:mainmatter></fr:tree><html:p>
     Now go back to quantum mechanics.
-    We have seen that the squared wave function <fr:tex display="inline">|\Psi (x,t)|^2</fr:tex> is a probability density.
+    We have seen that the squared wave function <fr:tex display="inline"><![CDATA[|\Psi (x,t)|^2]]></fr:tex> is a probability density.
     So it satisfies
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \int _{-\infty }^{\infty } |\Psi (x,t)|^2 dx = 1
-    </fr:tex></html:p><html:p>
+    ]]></fr:tex></html:p><html:p>
     Solve the equations we will get a set of solutions.
     We should pick a proper factor to make the wave function <html:strong>normalized</html:strong>.
-    But if I have normalized the wave function at time <fr:tex display="inline">t_0</fr:tex>,
+    But if I have normalized the wave function at time <fr:tex display="inline"><![CDATA[t_0]]></fr:tex>,
     will it stay normalized at all future time?
     Fortunately the Schrodinger equation guarantees the normalization of 
     the wave function.
@@ -162,60 +163,60 @@
 </html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
         Differentiate the normalization condition with respect to time:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \frac {d}{dt}\int _{-\infty }^{\infty } |\Psi (x,t)|^2 dx = 
             \int _{-\infty }^{\infty } \frac {\partial }{\partial  t}|\Psi (x,t)|^2 dx
-        </fr:tex>
+        ]]></fr:tex>
         With the product rule:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \frac {\partial }{\partial  t}|\Psi (x,t)|^2 = 
             \frac {\partial }{\partial  t}\Psi (x,t)\Psi ^*(x,t) + \Psi (x,t)\frac {\partial }{\partial  t}\Psi ^*(x,t)
-        </fr:tex>
-        where <fr:tex display="inline">\Psi ^*(x,t)</fr:tex> is the <html:strong>complex conjugate</html:strong> of <fr:tex display="inline">\Psi (x,t)</fr:tex>.
+        ]]></fr:tex>
+        where <fr:tex display="inline"><![CDATA[\Psi ^*(x,t)]]></fr:tex> is the <html:strong>complex conjugate</html:strong> of <fr:tex display="inline"><![CDATA[\Psi (x,t)]]></fr:tex>.
         The Schrodinger equation gives
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \frac {\partial \Psi }{\partial  t} = \frac {i\hbar }{2m}\frac {\partial ^2\Psi }{\partial  x^2} + \frac {iV}{\hbar }\Psi 
-        </fr:tex>
+        ]]></fr:tex>
         and also the complex conjugate
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \frac {\partial \Psi ^*}{\partial  t} = -\frac {i\hbar }{2m}\frac {\partial ^2\Psi ^*}{\partial  x^2} + \frac {iV}{\hbar }\Psi ^*
-        </fr:tex>
+        ]]></fr:tex>
         so
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \frac {\partial }{\partial  t}|\Psi (x,t)|^2 &amp;= 
+                \frac {\partial }{\partial  t}|\Psi (x,t)|^2 &= 
                 \frac {i\hbar }{2m}\left ( \frac {\partial ^2\Psi }{\partial  x^2}\Psi ^* - \frac {\partial ^2\Psi ^*}{\partial  x^2}\Psi  \right )\\
-                &amp;= \frac {i\hbar }{2m}\frac {\partial }{\partial  x}\left ( \frac {\partial \Psi }{\partial  x}\Psi ^* - \frac {\partial \Psi ^*}{\partial  x}\Psi  \right )
+                &= \frac {i\hbar }{2m}\frac {\partial }{\partial  x}\left ( \frac {\partial \Psi }{\partial  x}\Psi ^* - \frac {\partial \Psi ^*}{\partial  x}\Psi  \right )
             \end {align*}
-        </fr:tex>
+        ]]></fr:tex>
         Now the integral becomes:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \frac {d}{dt}\int _{-\infty }^{\infty } |\Psi (x,t)|^2 dx = 
             \frac {i\hbar }{2m}\left ( \Psi \frac {\partial \Psi ^*}{\partial  x} - \Psi ^*\frac {\partial \Psi }{\partial  x} \right )\Big |_{-\infty }^{\infty }
-        </fr:tex>
+        ]]></fr:tex>
         Because the <html:strong>normalization condition</html:strong>
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \int _{-\infty }^{\infty } |\Psi (x,t)|^2 dx = 1
-        </fr:tex>
+        ]]></fr:tex>
         implies that the wave function vanishes at infinity,
         that is, converges to zero at infinity. Hence we have
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \lim _{|x|\to \infty }|\Psi (x,t)| = 0
-        </fr:tex>
+        ]]></fr:tex>
         this indicates that the integral is zero.
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \frac {d}{dt}\int _{-\infty }^{\infty } |\Psi (x,t)|^2 dx = 0
-        </fr:tex>
+        ]]></fr:tex>
         Now we can conclude that the wave function stays normalized at all future time.
     </fr:mainmatter></fr:tree>
  
 <html:p>
-    For a particle in state <fr:tex display="inline">\Psi </fr:tex>, we have defined its <html:strong>expectation value</html:strong>:
-    <fr:tex display="block">
+    For a particle in state <fr:tex display="inline"><![CDATA[\Psi ]]></fr:tex>, we have defined its <html:strong>expectation value</html:strong>:
+    <fr:tex display="block"><![CDATA[
         \langle  x \rangle  = \int _{-\infty }^{\infty } x|\Psi (x,t)|^2 dx
-    </fr:tex>
+    ]]></fr:tex>
     Can we give a meaning to it? Is it the <html:strong>average</html:strong> position of the particle? 
     No, the first measurement of the position of the particle will give a definite position,
     and the subsequent measurements will give the same result.
@@ -224,85 +225,85 @@
     repeated measurements on an ensemble of identical prepared systems,
     not the average of repeated measurements on a <html:em>single</html:em> system.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:title text="Construction."><html:strong>Construction.</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>3</fr:day></fr:date><fr:title text="Construction."><html:strong>Construction.</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     As times goes on, the expectation values varies.
     We naturally ask how fast it moves?
     Use simple calculus we can get the answer.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \frac {d}{dt}\langle  x \rangle  &amp;= \int _{-\infty }^{\infty } x\frac {\partial }{\partial  t}|\Psi (x,t)|^2 dx \\
-            &amp;= \frac {i\hbar }{2m}\int _{-\infty }^{\infty } x\frac {\partial }{\partial  x} (\frac {\partial \Psi }{\partial  x}\Psi ^* + \Psi \frac {\partial \Psi ^*}{\partial  x}) dx
+            \frac {d}{dt}\langle  x \rangle  &= \int _{-\infty }^{\infty } x\frac {\partial }{\partial  t}|\Psi (x,t)|^2 dx \\
+            &= \frac {i\hbar }{2m}\int _{-\infty }^{\infty } x\frac {\partial }{\partial  x} (\frac {\partial \Psi }{\partial  x}\Psi ^* + \Psi \frac {\partial \Psi ^*}{\partial  x}) dx
         \end {align*}
-    </fr:tex>
+    ]]></fr:tex>
     Simplify using integration by parts, we get
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {d}{dt}\langle  x \rangle  = -\frac {i\hbar }{2m}\int _{-\infty }^{\infty } \left ( \Psi ^*\frac {\partial \Psi }{\partial  x} - \Psi \frac {\partial \Psi ^*}{\partial  x} \right ) dx
-    </fr:tex>
+    ]]></fr:tex>
     Note that the boundary term was eliminated because the wave function vanishes at infinity.
     Perform integration by parts again on the second term
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \langle  v \rangle  :\equiv \frac {d}{dt}\langle  x \rangle  = -\frac {i\hbar }{m}\int _{-\infty }^{\infty } \Psi ^*\frac {\partial \Psi }{\partial  x} dx
-    </fr:tex>
-    Note that we give a name to the integral, <fr:tex display="inline">v</fr:tex>, indicating the <html:strong>velocity</html:strong> of the expectation value.
+    ]]></fr:tex>
+    Note that we give a name to the integral, <fr:tex display="inline"><![CDATA[v]]></fr:tex>, indicating the <html:strong>velocity</html:strong> of the expectation value.
 </fr:mainmatter></fr:tree>
 <html:p>
     To work with <html:strong>momentum</html:strong>, we can define:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \langle  p \rangle  = m \langle  v \rangle  = -i\hbar \int _{-\infty }^{\infty } \Psi ^*\frac {\partial \Psi }{\partial  x} dx
-    </fr:tex>
+    ]]></fr:tex>
     Rewrite as an <html:strong>operator</html:strong> form:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \langle  p \rangle  = \int _{-\infty }^{\infty } \Psi ^*\left ( \frac {\hbar }{i}\frac {\partial }{\partial  x} \right )\Psi  dx
-    </fr:tex>
+    ]]></fr:tex>
     Compare with 
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \langle  x \rangle  = \int _{-\infty }^{\infty } \Psi ^*(x)\Psi  dx
-    </fr:tex></html:p><html:p>
-    That&apos;s interesting, an operator that acts on the wave function and gives position and momentum.
+    ]]></fr:tex></html:p><html:p>
+    That's interesting, an operator that acts on the wave function and gives position and momentum.
     We can generalize this to any function of position and momentum.
     Just simply do substitution:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \langle  Q(x,p) \rangle  = 
         \int _{-\infty }^{\infty } \Psi ^*(x)Q\left ( x, -i\hbar \frac {\partial }{\partial  x} \right )\Psi  dx
-    </fr:tex>
+    ]]></fr:tex>
     Momentum and position are just special cases of this general formula.
     We will give a firmer theoretical foundation to this equation later.
     Now we just use it as an <html:em>axiom</html:em>.
 </html:p><html:p>
     Now we discuss about the <html:strong>uncertainty principle</html:strong>.
-    The more precise a wave&apos;s position is, the less precise its momentum (or the wavelength) is, and vice versa.
+    The more precise a wave's position is, the less precise its momentum (or the wavelength) is, and vice versa.
     A theorem in Fourier Analysis gives a precise statement of this principle (explain later).
     For this moment we only concerned with the qualitative argument.
 </html:p><html:p>
-    The wavelength of a wave function <fr:tex display="inline">\Psi </fr:tex> is related to the momentum of the particle.
+    The wavelength of a wave function <fr:tex display="inline"><![CDATA[\Psi ]]></fr:tex> is related to the momentum of the particle.
     This result from the <html:strong>de Broglie formula</html:strong>.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         p = \frac {h}{\lambda } = \frac {2\pi \hbar }{\lambda }
-    </fr:tex>
+    ]]></fr:tex>
     Now we can give a qualitative argument for the uncertainty principle.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0033/</fr:uri><fr:display-uri>def-0033</fr:display-uri><fr:route>/def-0033/</fr:route><fr:title text="Heisenberg Uncertainty Principle">Heisenberg Uncertainty Principle</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0033/</fr:uri><fr:display-uri>def-0033</fr:display-uri><fr:route>/def-0033/</fr:route><fr:title text="Heisenberg Uncertainty Principle">Heisenberg Uncertainty Principle</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The <html:strong>Heisenberg Uncertainty Principle</html:strong> states that
     it is impossible to measure simultaneously the position and the momentum of a particle
     with arbitrary precision.
     The product of the uncertainties in position and momentum is bounded by:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \Delta  x \Delta  p \geq  \frac {\hbar }{2}
-    </fr:tex>
-    where <fr:tex display="inline">\Delta  x</fr:tex> and <fr:tex display="inline">\Delta  p</fr:tex> are the uncertainties in position and momentum, respectively.
-    The constant <fr:tex display="inline">\hbar </fr:tex> is the reduced Planck constant.
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[\Delta  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[\Delta  p]]></fr:tex> are the uncertainties in position and momentum, respectively.
+    The constant <fr:tex display="inline"><![CDATA[\hbar ]]></fr:tex> is the reduced Planck constant.
 </html:p></fr:mainmatter></fr:tree></fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>2</fr:month>
@@ -316,131 +317,131 @@
           </fr:frontmatter>
           <fr:mainmatter><html:p>
     Refer to chapter 2 in <fr:link href="/quantum-2018/" title="Introduction to Quantum Mechanics" uri="https://caimeo.space/quantum-2018/" display-uri="quantum-2018" type="local">Introduction to Quantum Mechanics</fr:link></html:p><html:p>
-    In previous section we use the <fr:link href="/def-0030/" title="Schrodinger&apos;s equation" uri="https://caimeo.space/def-0030/" display-uri="def-0030" type="local">Schrodinger equation</fr:link> to compute things.
-    The variable <fr:tex display="inline">t</fr:tex> is annoying which makes things complicated, and we would like to get rid of it.
-    In this section we shall assume that the potential energy <fr:tex display="inline">V</fr:tex> is independent of time.
+    In previous section we use the <fr:link href="/def-0030/" title="Schrodinger's equation" uri="https://caimeo.space/def-0030/" display-uri="def-0030" type="local">Schrodinger equation</fr:link> to compute things.
+    The variable <fr:tex display="inline"><![CDATA[t]]></fr:tex> is annoying which makes things complicated, and we would like to get rid of it.
+    In this section we shall assume that the potential energy <fr:tex display="inline"><![CDATA[V]]></fr:tex> is independent of time.
     In that case the Schrodinger equation becomes:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         i\hbar \frac {\partial }{\partial  t}\psi (x,t) = -\frac {\hbar ^2}{2m}\frac {\partial ^2\psi (x,t)}{\partial  x^2} + V(x)\psi (x,t)
-    </fr:tex>
+    ]]></fr:tex>
     This equation can be solved by <html:strong>separation of variables</html:strong>.
     We assume the spatial and time dependencies of the solution can be separated.
     In other words we look for solutions of the <html:em>product form</html:em>:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \Psi (x,t) = \psi (x)\phi (t)
-    </fr:tex>
+    ]]></fr:tex>
     This is an absurd restriction, but it works and we can get interesting results.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:title text="Solve the equation"><html:strong>Solve the equation</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:title text="Solve the equation"><html:strong>Solve the equation</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
         Now substitute the product form into the Schrodinger equation:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             i\hbar  \psi (x) \frac {\partial }{\partial  t}(\phi (t)) = -\frac {\hbar ^2}{2m}\phi (t)\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)\psi (x)\phi (t)
-        </fr:tex>
-        Divide both sides by <fr:tex display="inline">\psi (x)\phi (t)</fr:tex>:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        Divide both sides by <fr:tex display="inline"><![CDATA[\psi (x)\phi (t)]]></fr:tex>:
+        <fr:tex display="block"><![CDATA[
             i\hbar  \frac {1}{\phi (t)} \frac {\partial }{\partial  t}(\phi (t)) = -\frac {\hbar ^2}{2m\psi (x)}\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)
-        </fr:tex>
-        Notice that the left side depends only on <fr:tex display="inline">t</fr:tex> and the right side depends only on <fr:tex display="inline">x</fr:tex>.
+        ]]></fr:tex>
+        Notice that the left side depends only on <fr:tex display="inline"><![CDATA[t]]></fr:tex> and the right side depends only on <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
         They are equal if and only if they are both equal to a <html:em>constant</html:em>.
         Otherwise if I change the left side and level the right side unchanged, I get a contradiction.
-        The constant is the energy of the system, and we denote it by <fr:tex display="inline">E</fr:tex>.
-        <fr:tex display="block">
+        The constant is the energy of the system, and we denote it by <fr:tex display="inline"><![CDATA[E]]></fr:tex>.
+        <fr:tex display="block"><![CDATA[
             E:\equiv  i\hbar  \frac {1}{\phi (t)} \frac {\partial }{\partial  t}(\phi (t)) 
-        </fr:tex>
+        ]]></fr:tex>
         and 
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             E:\equiv  -\frac {\hbar ^2}{2m\psi (x)}\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)
-        </fr:tex>
+        ]]></fr:tex>
         We have two equations:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \frac {d\phi }{dt} &amp;= -\frac {iE}{\hbar }\phi \\
-                -\frac {\hbar ^2}{2m}\frac {d^2\psi }{dx^2} + V\psi  &amp;= E\psi 
+                \frac {d\phi }{dt} &= -\frac {iE}{\hbar }\phi \\
+                -\frac {\hbar ^2}{2m}\frac {d^2\psi }{dx^2} + V\psi  &= E\psi 
             \end {align*}
-        </fr:tex>
+        ]]></fr:tex>
         Now the partial differential equation has been reduced to two <html:strong>ordinary differential equations</html:strong>.
         The first one is easy to solve:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \phi (t) = \phi (0)e^{-iEt/\hbar }
-        </fr:tex>
-        Thus the complete solution is (note that the constant <fr:tex display="inline">\phi (0)</fr:tex> was absorbed into <fr:tex display="inline">\psi (x)</fr:tex>):
-        <fr:tex display="block">
+        ]]></fr:tex>
+        Thus the complete solution is (note that the constant <fr:tex display="inline"><![CDATA[\phi (0)]]></fr:tex> was absorbed into <fr:tex display="inline"><![CDATA[\psi (x)]]></fr:tex>):
+        <fr:tex display="block"><![CDATA[
             \Psi (x,t) = \psi (x)e^{-iEt/\hbar }
-        </fr:tex>
+        ]]></fr:tex>
         The second one is the <html:strong>time-independent Schrodinger equation</html:strong>,
-        we can&apos;t go further unless we know the potential energy <fr:tex display="inline">V(x)</fr:tex>.
+        we can't go further unless we know the potential energy <fr:tex display="inline"><![CDATA[V(x)]]></fr:tex>.
     </html:p>
 </fr:mainmatter></fr:tree>
 <html:p>
     Now we give a name to the time-independent Schrodinger equation.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0034/</fr:uri><fr:display-uri>def-0034</fr:display-uri><fr:route>/def-0034/</fr:route><fr:title text="Stationary State">Stationary State</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0034/</fr:uri><fr:display-uri>def-0034</fr:display-uri><fr:route>/def-0034/</fr:route><fr:title text="Stationary State">Stationary State</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     A <html:strong>stationary state</html:strong> is a quantum state with all observables independent of time.
 </html:p></fr:mainmatter></fr:tree><html:p>
     Thought the wave function is time-dependent,
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \Psi (x,t) = \psi (x)e^{-iEt/\hbar }
-    </fr:tex>
+    ]]></fr:tex>
     But if we compute the probability density, it is time-independent:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         |\Psi (x,t)|^2 = \psi ^*(x)e^{+iEt/\hbar }\psi (x)e^{-iEt/\hbar } = |\psi (x)|^2 
-    </fr:tex>
+    ]]></fr:tex>
     Hence the expectation value is constant in time. 
-    Then <fr:tex display="inline">\langle  p \rangle  = 0</fr:tex> all the time.
+    Then <fr:tex display="inline"><![CDATA[\langle  p \rangle  = 0]]></fr:tex> all the time.
     Nothing happens in the stationary state.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:title text="
     Conservation of energy
 ">
     <html:strong>Conservation of energy</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     This also means that the energy of the system is conserved.
     In classical mechanics, the <html:strong>total energy</html:strong> (kinetic + potential) of a system is called the <html:strong>Hamiltonian</html:strong>.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         H(x,p) = \frac {p^2}{2m} + V(x)
-    </fr:tex>
+    ]]></fr:tex>
     In quantum mechanics, the Hamiltonian is an operator,
-    obtained by substituting <fr:tex display="inline">p\to  -i\hbar \frac {\partial }{\partial  x}</fr:tex>:
-    <fr:tex display="block">
+    obtained by substituting <fr:tex display="inline"><![CDATA[p\to  -i\hbar \frac {\partial }{\partial  x}]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         \hat {H} = -\frac {\hbar ^2}{2m}\frac {\partial ^2}{\partial  x^2} + V(x)
-    </fr:tex>
+    ]]></fr:tex>
     Thus the time-independent Schrodinger equation can be written as:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \hat {H}\psi (x) = E\psi (x)
-    </fr:tex>
+    ]]></fr:tex>
     The expectation value of the total energy gives the energy of the system:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \langle  H \rangle  &amp;= \int  \psi ^*(x)\hat {H}\psi (x)dx 
+            \langle  H \rangle  &= \int  \psi ^*(x)\hat {H}\psi (x)dx 
             \\
-            &amp;= \int  \psi ^*(x)E\psi (x)dx
+            &= \int  \psi ^*(x)E\psi (x)dx
             \\
-            &amp;= E\int  |\psi (x)|^2dx
+            &= E\int  |\psi (x)|^2dx
             \\
-            &amp;= E\int  |\Psi (x)|^2dx
+            &= E\int  |\Psi (x)|^2dx
             \\
-            &amp;= E           
+            &= E           
         \end {align*}
-    </fr:tex>
+    ]]></fr:tex>
     and
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \langle  H^2 \rangle  &amp;= 
+            \langle  H^2 \rangle  &= 
             \int  \psi ^*(x)\hat {H}^2\psi (x)dx
             \\
-            &amp;= E^2\int  |\psi (x)|^2 dx      
+            &= E^2\int  |\psi (x)|^2 dx      
             \\
-            &amp;= E^2      
+            &= E^2      
         \end {align*}
-    </fr:tex>
+    ]]></fr:tex>
     where 
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \hat {H}^2\psi  = \hat {H}(\hat {H}\psi ) = \hat {H}(E\psi ) = E(\hat {H}\psi ) = E^2\psi 
-    </fr:tex>
+    ]]></fr:tex>
     Hence the variance of the energy is zero given by
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \Delta  H = \sqrt {\langle  H^2 \rangle  - \langle  H \rangle ^2} = 0
-    </fr:tex>
+    ]]></fr:tex>
     This implies that the energy of the system is conserved.
 </fr:mainmatter></fr:tree>
 </fr:mainmatter>
@@ -449,17 +450,17 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

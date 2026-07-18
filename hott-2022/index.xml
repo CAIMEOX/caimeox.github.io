@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors>
       <fr:author>
@@ -22,27 +23,27 @@
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>6</fr:month>
@@ -57,25 +58,25 @@
           <fr:mainmatter>
             <html:p>
     This post discuss the universe in type theory,
-    based on Egbert Rijke&apos;s <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link> and <fr:link href="/ncatlab/" title="nLab" uri="https://caimeo.space/ncatlab/" display-uri="ncatlab" type="local">NLab</fr:link>.
+    based on Egbert Rijke's <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link> and <fr:link href="/ncatlab/" title="nLab" uri="https://caimeo.space/ncatlab/" display-uri="ncatlab" type="local">NLab</fr:link>.
     In this post, we regard universe as the representation of types in an internal model 
     of the type theory (<html:strong>Tarski universe</html:strong> or <html:strong>universe à la Tarski</html:strong>).
 </html:p>
             <html:p>
-    A universe consist of a type <fr:tex display="inline">\mathcal {U}</fr:tex> with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> over <fr:tex display="inline">\mathcal {U}</fr:tex>.
-    Forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> we think of <fr:tex display="inline">X</fr:tex> as an <html:strong>encoding</html:strong> (representation) of the actual type <fr:tex display="inline">\mathcal {T}(X)</fr:tex>.
-    The type family <fr:tex display="inline">\mathcal {T}</fr:tex> is therefore called a <html:strong>unversal type family</html:strong>.
+    A universe consist of a type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> with a type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> over <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>.
+    Forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> we think of <fr:tex display="inline"><![CDATA[X]]></fr:tex> as an <html:strong>encoding</html:strong> (representation) of the actual type <fr:tex display="inline"><![CDATA[\mathcal {T}(X)]]></fr:tex>.
+    The type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> is therefore called a <html:strong>unversal type family</html:strong>.
 </html:p>
             <html:p>
     There several reasons to equip type theory with universes.
     It enables us to define new type families over inductive types, using induction principle.
-    For instance, we can define <html:strong>relations</html:strong> over <fr:tex display="inline">\mathbb {N}</fr:tex>, such as ordering relations <fr:tex display="inline">\leq </fr:tex>.
+    For instance, we can define <html:strong>relations</html:strong> over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>, such as ordering relations <fr:tex display="inline"><![CDATA[\leq ]]></fr:tex>.
     We will soon meet the idea of <html:strong>observational equality</html:strong> for a particular type, different from identity types.
     Another reason is that it allows us to define types equipped with structure such as group.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>6</fr:month>
@@ -86,7 +87,7 @@
               <fr:mainmatter>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004E/</fr:uri>
                     <fr:display-uri>def-004E</fr:display-uri>
                     <fr:route>/def-004E/</fr:route>
@@ -95,63 +96,63 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    A <html:strong>universe</html:strong> consists of a type <fr:tex display="inline">\mathcal {U}</fr:tex> of which the elements are representations of types.
-    It is equipped with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> indexed by <fr:tex display="inline">\mathcal {U}</fr:tex> called <html:strong>universal type family</html:strong>.
+    A <html:strong>universe</html:strong> consists of a type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> of which the elements are representations of types.
+    It is equipped with a type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> indexed by <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> called <html:strong>universal type family</html:strong>.
     The universe is closed under all the type constructors in the sense that it comes equipped with the following structure:
-    <html:ul><html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Pi </fr:tex>, equipped with a function
-            <fr:tex display="block">
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under <fr:tex display="inline"><![CDATA[\Pi ]]></fr:tex>, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {\Pi }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}
-            </fr:tex>
+            ]]></fr:tex>
             for which the judgemental equality
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {\Pi }(X,P))\equiv \Pi _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))
-            </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.
+            ]]></fr:tex>
+            holds forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[P:\mathcal {T}(X)\to \mathcal {U}]]></fr:tex>.
         </html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Sigma </fr:tex>, equipped with a function
-            <fr:tex display="block">
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex>, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {\Sigma }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}
-            </fr:tex>
+            ]]></fr:tex>
             for which the judgemental equality
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {\Sigma }(X,P))\equiv \Sigma _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))
-            </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.
+            ]]></fr:tex>
+            holds forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[P:\mathcal {T}(X)\to \mathcal {U}]]></fr:tex>.
         </html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under identity types, equipped with a function
-            <fr:tex display="block">
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under identity types, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {I}:\Pi _{(X:\mathcal {U})}\mathcal {T}(X)\to \mathcal {T}(X)\to \mathcal {U}
-            </fr:tex>
+            ]]></fr:tex>
             for which the judgemental equality
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {I}(X,x,y))\equiv  (x=y)
-            </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">x,y:\mathcal {T}(X)</fr:tex>.
+            ]]></fr:tex>
+            holds forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[x,y:\mathcal {T}(X)]]></fr:tex>.
         </html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under coproducts, equipped with a function
-            <fr:tex display="block">
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under coproducts, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {+}:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}
-            </fr:tex>
-            that satisfies the judgemental equality <fr:tex display="inline">\mathcal {T}(X\check {+}P)\equiv \mathcal {T}(X)+\mathcal {T}(P)</fr:tex></html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> contains elements <fr:tex display="inline">\check {\textbf {1}}, \check {\textbf {0}}, \check {\mathbb {N}} : \mathcal {U}</fr:tex> that satisfies the judgemental equality
-            <fr:tex display="block">
+            ]]></fr:tex>
+            that satisfies the judgemental equality <fr:tex display="inline"><![CDATA[\mathcal {T}(X\check {+}P)\equiv \mathcal {T}(X)+\mathcal {T}(P)]]></fr:tex></html:li>
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> contains elements <fr:tex display="inline"><![CDATA[\check {\textbf {1}}, \check {\textbf {0}}, \check {\mathbb {N}} : \mathcal {U}]]></fr:tex> that satisfies the judgemental equality
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {\textbf {0}})\equiv  \textbf {0},
                 \\ \mathcal {T}(\check {\textbf {1}})\equiv  \textbf {1},
                 \\ \mathcal {T}(\check {\mathbb {N}})\equiv \mathbb {N}
-            </fr:tex></html:li></html:ul>
-    Consider a universe <fr:tex display="inline">\mathcal {U}</fr:tex> and a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
-    We say that <fr:tex display="inline">A</fr:tex> is a type in <fr:tex display="inline">\mathcal {U}</fr:tex> or that <fr:tex display="inline">\mathcal {U}</fr:tex> contains <fr:tex display="inline">A</fr:tex>,
-    if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.
+            ]]></fr:tex></html:li></html:ul>
+    Consider a universe <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> and a type <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>.
+    We say that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is a type in <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> or that <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> contains <fr:tex display="inline"><![CDATA[A]]></fr:tex>,
+    if there is an element <fr:tex display="inline"><![CDATA[\check {A}:\mathcal {U}]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}]]></fr:tex> holds.
 </html:p>
                     <fr:tree show-metadata="false">
                       <fr:frontmatter>
-                        <fr:authors></fr:authors>
+                        <fr:authors />
                         <fr:title text="Enough Universe">Enough Universe</fr:title>
                       </fr:frontmatter>
                       <fr:mainmatter>
                         <html:p>
-        Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
-        If we have only one <fr:tex display="inline">\mathcal {U}</fr:tex>, the <html:strong>Russell Paradox</html:strong> may arise.
+        Sometimes we may consider the universe <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> itself to be a type in some universes.
+        If we have only one <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>, the <html:strong>Russell Paradox</html:strong> may arise.
         Therefore we assume that there are <html:strong>enough universes</html:strong></html:p>
                       </fr:mainmatter>
                     </fr:tree>
@@ -159,7 +160,7 @@
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/thm-0013/</fr:uri>
                     <fr:display-uri>thm-0013</fr:display-uri>
                     <fr:route>/thm-0013/</fr:route>
@@ -168,19 +169,19 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    We assume that there&apos;re <html:strong>enough universe</html:strong>, i.e.,
+    We assume that there're <html:strong>enough universe</html:strong>, i.e.,
     for every finite list of types in context 
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \Gamma _1\vdash  A_1\space \space \text {type},\cdots ,\Gamma _n\vdash  A_n\space \space \text {type}
-    </fr:tex>
-    there is a universe <fr:tex display="inline">\mathcal {U}</fr:tex> that contains each <fr:tex display="inline">A_i</fr:tex> in the sense that <fr:tex display="inline">\mathcal {U}</fr:tex> comes equipped with
-    <fr:tex display="block">
+    ]]></fr:tex>
+    there is a universe <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> that contains each <fr:tex display="inline"><![CDATA[A_i]]></fr:tex> in the sense that <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> comes equipped with
+    <fr:tex display="block"><![CDATA[
         \Gamma _i\vdash \check {A_i}:\mathcal {U}
-    </fr:tex>
+    ]]></fr:tex>
     for which the following judgement holds:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \Gamma _i \vdash \mathcal {T}(\check {A_i})\equiv  A_i\space \space \text {type}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
@@ -188,7 +189,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004F/</fr:uri>
                     <fr:display-uri>def-004F</fr:display-uri>
                     <fr:route>/def-004F/</fr:route>
@@ -197,14 +198,14 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    The <html:strong>base universee</html:strong> <fr:tex display="inline">\mathcal {U}_0</fr:tex> is defined using <fr:link href="/thm-0013/" title="Enough Universe" uri="https://caimeo.space/thm-0013/" display-uri="thm-0013" type="local">universe postulate</fr:link>
+    The <html:strong>base universee</html:strong> <fr:tex display="inline"><![CDATA[\mathcal {U}_0]]></fr:tex> is defined using <fr:link href="/thm-0013/" title="Enough Universe" uri="https://caimeo.space/thm-0013/" display-uri="thm-0013" type="local">universe postulate</fr:link>
     with empty context.
 </html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004G/</fr:uri>
                     <fr:display-uri>def-004G</fr:display-uri>
                     <fr:route>/def-004G/</fr:route>
@@ -213,20 +214,20 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    The <html:strong>successor universee</html:strong> <fr:tex display="inline">\mathcal {U}^+</fr:tex> of a universe <fr:tex display="inline">\mathcal {U}</fr:tex> is defined using <fr:link href="/thm-0013/" title="Enough Universe" uri="https://caimeo.space/thm-0013/" display-uri="thm-0013" type="local">universe postulate</fr:link>
+    The <html:strong>successor universee</html:strong> <fr:tex display="inline"><![CDATA[\mathcal {U}^+]]></fr:tex> of a universe <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is defined using <fr:link href="/thm-0013/" title="Enough Universe" uri="https://caimeo.space/thm-0013/" display-uri="thm-0013" type="local">universe postulate</fr:link>
     with the following contexts:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \vdash \mathcal {U}\space \space \text {type}\quad  X:\mathcal {U}\vdash \mathcal {T}(X)\space \space \text {type}
-    </fr:tex>
-    It therefore contains the type <fr:tex display="inline">\mathcal {U}</fr:tex> as well as type in <fr:tex display="inline">\mathcal {U}</fr:tex>, in the following sense
-    <fr:tex display="block">
+    ]]></fr:tex>
+    It therefore contains the type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> as well as type in <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>, in the following sense
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            &amp;\vdash \check {\mathcal {U}}:\mathcal {U}^+\\ 
-            &amp;\vdash \mathcal {T}^+(\check {\mathcal {U}})\equiv \mathcal {U}\space \text {type}\\
-            &amp;X:\mathcal {U}\vdash \check {\mathcal {T}}(X):\mathcal {U}^+\\ 
-            &amp;X:\mathcal {U}\vdash \mathcal {T}^+(\check {\mathcal {T}}(X))\equiv \mathcal {T}(X)\space \text {type} 
+            &\vdash \check {\mathcal {U}}:\mathcal {U}^+\\ 
+            &\vdash \mathcal {T}^+(\check {\mathcal {U}})\equiv \mathcal {U}\space \text {type}\\
+            &X:\mathcal {U}\vdash \check {\mathcal {T}}(X):\mathcal {U}^+\\ 
+            &X:\mathcal {U}\vdash \mathcal {T}^+(\check {\mathcal {T}}(X))\equiv \mathcal {T}(X)\space \text {type} 
         \end {align*}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
@@ -236,7 +237,7 @@
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>6</fr:month>
@@ -246,103 +247,103 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-        Now we give the example of <html:strong>observational equality</html:strong> of <fr:tex display="inline">\mathbb {N}</fr:tex>.
+        Now we give the example of <html:strong>observational equality</html:strong> of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>.
         The key idea is to define a recursive function that reduce the arguments.
         Observational equality an inductively defined relation, which gives us an algorithm for checking
-        equality on  <fr:tex display="inline">\mathbb {N}</fr:tex>. It can be used to show that equality of natural numbers is <html:strong>decidable</html:strong>.
+        equality on  <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. It can be used to show that equality of natural numbers is <html:strong>decidable</html:strong>.
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004H/</fr:uri>
                     <fr:display-uri>def-004H</fr:display-uri>
                     <fr:route>/def-004H/</fr:route>
-                    <fr:title text="Observational Equality of \mathbb {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
+                    <fr:title text="Observational Equality of \mathbb {N}">Observational Equality of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex></fr:title>
                     <fr:taxon>Definition</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    The observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a binary relation <fr:tex display="inline">\text {Eq}_\mathbb {N}:\mathbb {N}\to (\mathbb {N}\to \mathcal {U}_0)</fr:tex> satisfies
-    <fr:tex display="block">
+    The observational equality of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> is a binary relation <fr:tex display="inline"><![CDATA[\text {Eq}_\mathbb {N}:\mathbb {N}\to (\mathbb {N}\to \mathcal {U}_0)]]></fr:tex> satisfies
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {Eq}_\mathbb {N}(0)(0) &amp;\equiv  \textbf {1} \\
-            \text {Eq}_\mathbb {N}(0)(\text {succ}(n)) &amp;\equiv  \textbf {0} \\
-            \text {Eq}_\mathbb {N}(\text {succ}(m))(0) &amp;\equiv  \textbf {0} \\
-            \text {Eq}_\mathbb {N}(\text {succ}(m))(\text {succ}(n)) &amp;\equiv  \text {Eq}_\mathbb {N}(m)(n)
+            \text {Eq}_\mathbb {N}(0)(0) &\equiv  \textbf {1} \\
+            \text {Eq}_\mathbb {N}(0)(\text {succ}(n)) &\equiv  \textbf {0} \\
+            \text {Eq}_\mathbb {N}(\text {succ}(m))(0) &\equiv  \textbf {0} \\
+            \text {Eq}_\mathbb {N}(\text {succ}(m))(\text {succ}(n)) &\equiv  \text {Eq}_\mathbb {N}(m)(n)
         \end {align*}
-    </fr:tex>
+    ]]></fr:tex>
     
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors></fr:authors><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
-        We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+        We define <fr:tex display="inline"><![CDATA[\text {Eq}]]></fr:tex> by double induction on <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. By the first application of induction
         it suffices to provide
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\ 
-                &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))
+                &E_0:\mathbb {N}\to \mathcal {U}_0 \\ 
+                &E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))
             \end {align*}
-        </fr:tex>
-        we define <fr:tex display="inline">E_0</fr:tex> by induction:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        we define <fr:tex display="inline"><![CDATA[E_0]]></fr:tex> by induction:
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                &amp;E_0(0) \equiv \textbf {1}\\ 
-                &amp;E_0(\text {succ}(n)) \equiv \textbf {0}
+                &E_0(0) \equiv \textbf {1}\\ 
+                &E_0(\text {succ}(n)) \equiv \textbf {0}
             \end {align*}
-        </fr:tex>
-        and also define <fr:tex display="inline">E_S</fr:tex> by induction:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        and also define <fr:tex display="inline"><![CDATA[E_S]]></fr:tex> by induction:
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                &amp;E_S(n,X,0)\equiv \textbf {0}\\ 
-                &amp;E_S(n,X,\text {succ}(m))\equiv  X(m)
+                &E_S(n,X,0)\equiv \textbf {0}\\ 
+                &E_S(n,X,\text {succ}(m))\equiv  X(m)
             \end {align*}
-        </fr:tex>
+        ]]></fr:tex>
         Therefore we have by the computation rule for the first induction that 
         the following judgemental equality holds.
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \text {Eq}(0,m) &amp;\equiv  E_0(m) \\
-                \text {Eq}(\text {succ}(n),m) &amp;\equiv  E_S(n,\text {Eq}(n),m)
+                \text {Eq}(0,m) &\equiv  E_0(m) \\
+                \text {Eq}(\text {succ}(n),m) &\equiv  E_S(n,\text {Eq}(n),m)
             \end {align*}
-        </fr:tex>
+        ]]></fr:tex>
     </fr:mainmatter></fr:tree></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
-        Observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a reflexive relation, i.e. we have
-        <fr:tex display="block">
+        Observational equality of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> is a reflexive relation, i.e. we have
+        <fr:tex display="block"><![CDATA[
             \text {refl-Eq}_\mathbb {N}:\Pi _{(n:\mathbb {N})}\text {Eq}_\mathbb {N}(n,n)
-        </fr:tex>
-        which is witnessed by induction on <fr:tex display="inline">n</fr:tex>.
-        <fr:tex display="block">
+        ]]></fr:tex>
+        which is witnessed by induction on <fr:tex display="inline"><![CDATA[n]]></fr:tex>.
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \text {refl-Eq}_\mathbb {N}(0) &amp;\equiv \star  \\ 
-                \text {refl-Eq}_\mathbb {N}(\text {succ}(n)) &amp;\equiv \text {refl-Eq}_\mathbb {N}(n)
+                \text {refl-Eq}_\mathbb {N}(0) &\equiv \star  \\ 
+                \text {refl-Eq}_\mathbb {N}(\text {succ}(n)) &\equiv \text {refl-Eq}_\mathbb {N}(n)
             \end {align*}
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
                 <html:p>
         This leads to an interesting dual perspective on equality. 
-        For any two natural numbers <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> we have
-        <fr:tex display="block">
+        For any two natural numbers <fr:tex display="inline"><![CDATA[m]]></fr:tex> and <fr:tex display="inline"><![CDATA[n]]></fr:tex> we have
+        <fr:tex display="block"><![CDATA[
             (m=n)\leftrightarrow \text {Eq}_\mathbb {N}(m,n)
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
                 <html:p>
-        Using the observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> we can prove Peano&apos;s seventh and eighth
+        Using the observational equality of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> we can prove Peano's seventh and eighth
         axioms.
         <html:ul><html:li>
-                For any two natural numbers <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> we have 
-                <fr:tex display="block">
+                For any two natural numbers <fr:tex display="inline"><![CDATA[m]]></fr:tex> and <fr:tex display="inline"><![CDATA[n]]></fr:tex> we have 
+                <fr:tex display="block"><![CDATA[
                     (m = n)\leftrightarrow (\text {succ}(m) = \text {succ}(n))
-                </fr:tex></html:li>
+                ]]></fr:tex></html:li>
             <html:li>
-                For any natural number <fr:tex display="inline">n</fr:tex> we have <fr:tex display="inline">0 \not = \text {succ}(n)</fr:tex></html:li></html:ul></html:p>
+                For any natural number <fr:tex display="inline"><![CDATA[n]]></fr:tex> we have <fr:tex display="inline"><![CDATA[0 \not = \text {succ}(n)]]></fr:tex></html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>
         </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>1</fr:month>
@@ -361,16 +362,16 @@
 </html:p>
             <html:p>
     How can we think of <html:strong>equality</html:strong> in type theory?
-    Mentioned before, given a type <fr:tex display="inline">A</fr:tex> and two its elements <fr:tex display="inline">a,b:A</fr:tex>
-    we can define a new type <fr:tex display="inline">a=_Ab</fr:tex> which is called the <html:strong>identity type</html:strong>.
-    In this case, a term of <fr:tex display="inline">a=_Ab</fr:tex> is said to be a <html:em>witness</html:em> of the equality of <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex>.
+    Mentioned before, given a type <fr:tex display="inline"><![CDATA[A]]></fr:tex> and two its elements <fr:tex display="inline"><![CDATA[a,b:A]]></fr:tex>
+    we can define a new type <fr:tex display="inline"><![CDATA[a=_Ab]]></fr:tex> which is called the <html:strong>identity type</html:strong>.
+    In this case, a term of <fr:tex display="inline"><![CDATA[a=_Ab]]></fr:tex> is said to be a <html:em>witness</html:em> of the equality of <fr:tex display="inline"><![CDATA[a]]></fr:tex> and <fr:tex display="inline"><![CDATA[b]]></fr:tex>.
     And this witness is itself a type.
     We can then define their equality.
     This gives every type a <html:strong>groupoid structure</html:strong>.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002N/</fr:uri>
                 <fr:display-uri>def-002N</fr:display-uri>
                 <fr:route>/def-002N/</fr:route>
@@ -382,76 +383,76 @@
     generated by just a <html:strong>reflexivity</html:strong> <html:em>identification</html:em>
     that providing an equality of a term with itself.
 </html:p><html:p>
-    Consider a type <fr:tex display="inline">A</fr:tex> and let <fr:tex display="inline">a:A</fr:tex> be an element.
-    The identity type of <fr:tex display="inline">A</fr:tex> at <fr:tex display="inline">a</fr:tex> is an inductive family of types <fr:tex display="inline">a=_Ax</fr:tex> 
-    indexed by <fr:tex display="inline">x:A</fr:tex>.
-    <fr:tex display="block">
+    Consider a type <fr:tex display="inline"><![CDATA[A]]></fr:tex> and let <fr:tex display="inline"><![CDATA[a:A]]></fr:tex> be an element.
+    The identity type of <fr:tex display="inline"><![CDATA[A]]></fr:tex> at <fr:tex display="inline"><![CDATA[a]]></fr:tex> is an inductive family of types <fr:tex display="inline"><![CDATA[a=_Ax]]></fr:tex> 
+    indexed by <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  a:A
         }{
             \Gamma ,x:A\vdash  a=_Ax\space \text {type}
         }
-    </fr:tex>
+    ]]></fr:tex>
     The only constructor is the refl:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  a:A
         }{
             \Gamma \vdash  \text {refl}_a:a=_Ax
         }
-    </fr:tex></html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    ]]></fr:tex></html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Path Induction / Identification Elimination
 "><html:strong>
     Path Induction / Identification Elimination
 </html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     The induction principle of the identity type states that
-    for any type family <fr:tex display="inline">P(x,p)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> and <fr:tex display="inline">p:a=_Ax</fr:tex>,
-    <fr:tex display="block">
+    for any type family <fr:tex display="inline"><![CDATA[P(x,p)]]></fr:tex> indexed by <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> and <fr:tex display="inline"><![CDATA[p:a=_Ax]]></fr:tex>,
+    <fr:tex display="block"><![CDATA[
         \text {ind-eq}_{a}:P(a, \text {refl}_a)\to  (x:A)\to  (p:a=_Ax)\to  P(x,p)
-    </fr:tex>
-    satisfies <fr:tex display="inline">\text {ind-eq}_{a}(u,a,\text {refl}_a)\equiv  u</fr:tex> where <fr:tex display="inline">u:P(a,\text {refl}_a)</fr:tex>.
+    ]]></fr:tex>
+    satisfies <fr:tex display="inline"><![CDATA[\text {ind-eq}_{a}(u,a,\text {refl}_a)\equiv  u]]></fr:tex> where <fr:tex display="inline"><![CDATA[u:P(a,\text {refl}_a)]]></fr:tex>.
     Formally we can write:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  a:A,\quad  \Gamma ,x:A,p:a=_Ax\vdash  P(x,p)\space \text {type}
         }{
             \Gamma \vdash  \text {ind-eq}_{a}(a,\text {refl}_a): P(a,\text {refl}_a) \to  (x:A)\to  (p:a=_Ax)\to  P(x,p)
         }\text {eq-elim}
-    </fr:tex>
-    <fr:tex display="block">
+    ]]></fr:tex>
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  a:A,\quad  \Gamma ,x:A,p:a=_Ax\vdash  P(x,p)\space \text {type}
         }{
             \Gamma ,u:P(a,\text {refl}_a)\vdash  \text {ind-eq}_{a}(u,a,\text {refl}_a)\equiv  u:P(a,\text {refl}_a)
         }\text {eq-comp}
-    </fr:tex>
+    ]]></fr:tex>
 
 </fr:mainmatter></fr:tree>
 <html:p>
-    A term of <fr:tex display="inline">a=_Ax</fr:tex> is called a <html:strong>identification</html:strong> of <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">x</fr:tex>,
-    or the <html:strong>path</html:strong> from <fr:tex display="inline">a</fr:tex> to <fr:tex display="inline">x</fr:tex>.
+    A term of <fr:tex display="inline"><![CDATA[a=_Ax]]></fr:tex> is called a <html:strong>identification</html:strong> of <fr:tex display="inline"><![CDATA[a]]></fr:tex> and <fr:tex display="inline"><![CDATA[x]]></fr:tex>,
+    or the <html:strong>path</html:strong> from <fr:tex display="inline"><![CDATA[a]]></fr:tex> to <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="Variable Version"><html:strong>Variable Version</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
-    We can form an identity type with variables of <fr:tex display="inline">A</fr:tex>.
-    <fr:tex display="block">
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="Variable Version"><html:strong>Variable Version</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    We can form an identity type with variables of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \Gamma ,x:A,y:A\vdash  x=_Ay\space \text {type}
-    </fr:tex>
+    ]]></fr:tex>
     with the following introduction rule:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma ,x:A\vdash  x:A
         }{
             \Gamma ,x:A\vdash  \text {refl}_x:x=_Ax
         }
-    </fr:tex>
+    ]]></fr:tex>
     and similarly the elimination rule and computation rule.
 </fr:mainmatter></fr:tree>
 </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>1</fr:month>
@@ -466,7 +467,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-002O/</fr:uri>
                     <fr:display-uri>def-002O</fr:display-uri>
                     <fr:route>/def-002O/</fr:route>
@@ -475,43 +476,43 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    Let <fr:tex display="inline">A</fr:tex> be a type.
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be a type.
     The <html:strong>Concatenation</html:strong> operation is defined:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {concat}: (x:A)\to  (y:A)\to  (z:A)\to  (x=_Ay)\to  (y=_Az)\to  (x=_Az)
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                     <fr:tree show-metadata="false">
                       <fr:frontmatter>
-                        <fr:authors></fr:authors>
+                        <fr:authors />
                         <fr:title text="Construction of Concatenation">Construction of Concatenation</fr:title>
                       </fr:frontmatter>
                       <fr:mainmatter>
                         <html:p>
         We can first construct:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             f(x):(y:A)\to  (x=_Ay)\to (z:A)\to  (y=_Az)\to (x=_Az)
-        </fr:tex>
-        For any <fr:tex display="inline">x:A</fr:tex>, it suffices to construct
-        <fr:tex display="block">
+        ]]></fr:tex>
+        For any <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>, it suffices to construct
+        <fr:tex display="block"><![CDATA[
             f(x,x,\text {refl}_x) : (z:A) \to  (x=_Az)\to (x=_Az)
-        </fr:tex>
-        That is the identity function <fr:tex display="inline">\lambda  z. \text {id}_{x=_Az}</fr:tex>.
+        ]]></fr:tex>
+        That is the identity function <fr:tex display="inline"><![CDATA[\lambda  z. \text {id}_{x=_Az}]]></fr:tex>.
         Then we can define by induction:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             f(x) :\equiv  \text {ind-eq}_{x}(\lambda  z.\text {id})
-        </fr:tex>
+        ]]></fr:tex>
         Finally:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \text {concat}_{x,y,z}(p,q) :\equiv  f(x,y,p,z,q)
-        </fr:tex>
-        Or simply we denote <fr:tex display="inline">\text {concat}(p,q)</fr:tex> as <fr:tex display="inline">p \cdot  q</fr:tex></html:p>
+        ]]></fr:tex>
+        Or simply we denote <fr:tex display="inline"><![CDATA[\text {concat}(p,q)]]></fr:tex> as <fr:tex display="inline"><![CDATA[p \cdot  q]]></fr:tex></html:p>
                       </fr:mainmatter>
                     </fr:tree>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-002P/</fr:uri>
                     <fr:display-uri>def-002P</fr:display-uri>
                     <fr:route>/def-002P/</fr:route>
@@ -520,24 +521,24 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    Let <fr:tex display="inline">A</fr:tex> be a type. The <html:strong>inverse operation</html:strong> is defined:
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be a type. The <html:strong>inverse operation</html:strong> is defined:
+    <fr:tex display="block"><![CDATA[
         \text {inv}: (x:A)\to  (y:A)\to  (x=_Ay)\to  (y=_Ax)
-    </fr:tex>
-    Most of the time we write <fr:tex display="inline">p^{-1}</fr:tex> for <fr:tex display="inline">\text {inv}(p)</fr:tex>.
+    ]]></fr:tex>
+    Most of the time we write <fr:tex display="inline"><![CDATA[p^{-1}]]></fr:tex> for <fr:tex display="inline"><![CDATA[\text {inv}(p)]]></fr:tex>.
 </html:p>
                     <fr:tree show-metadata="false">
                       <fr:frontmatter>
-                        <fr:authors></fr:authors>
+                        <fr:authors />
                         <fr:title text="Construction of Inverse">Construction of Inverse</fr:title>
                       </fr:frontmatter>
                       <fr:mainmatter>
                         <html:p>
         By induction, it suffices to construct:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \text {inv}(x,x,\text {refl}_x) : (x=_Ax)
-        </fr:tex>
-        for any <fr:tex display="inline">x:A</fr:tex>. And trivially we have <fr:tex display="inline">\text {inv}(x,x,\text {refl}_x)\equiv \text {refl}_x</fr:tex>.
+        ]]></fr:tex>
+        for any <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>. And trivially we have <fr:tex display="inline"><![CDATA[\text {inv}(x,x,\text {refl}_x)\equiv \text {refl}_x]]></fr:tex>.
     </html:p>
                       </fr:mainmatter>
                     </fr:tree>
@@ -546,18 +547,18 @@
                 <html:p>
         It is natural to ask whether the identity type is <html:em>reflexive</html:em>.
         In the case of associativity we should ask to compare the identifications:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             (p\cdot  q)\cdot  r \quad \text {and}\quad  p\cdot (q\cdot  r)
-        </fr:tex>
-        for any <fr:tex display="inline">p:x=y</fr:tex>, <fr:tex display="inline">q:y=z</fr:tex> and <fr:tex display="inline">r:z=w</fr:tex> in a type <fr:tex display="inline">A</fr:tex>. Both <fr:tex display="inline"> (p\cdot  q)\cdot  r</fr:tex> and 
-        <fr:tex display="inline">p\cdot (q\cdot  r)</fr:tex> are elements of type <fr:tex display="inline">x=w</fr:tex>. We can ask whether there is an
+        ]]></fr:tex>
+        for any <fr:tex display="inline"><![CDATA[p:x=y]]></fr:tex>, <fr:tex display="inline"><![CDATA[q:y=z]]></fr:tex> and <fr:tex display="inline"><![CDATA[r:z=w]]></fr:tex> in a type <fr:tex display="inline"><![CDATA[A]]></fr:tex>. Both <fr:tex display="inline"><![CDATA[ (p\cdot  q)\cdot  r]]></fr:tex> and 
+        <fr:tex display="inline"><![CDATA[p\cdot (q\cdot  r)]]></fr:tex> are elements of type <fr:tex display="inline"><![CDATA[x=w]]></fr:tex>. We can ask whether there is an
         identification
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             (p\cdot  q)\cdot  r = p\cdot (q\cdot  r)
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-002W/</fr:uri>
                     <fr:display-uri>def-002W</fr:display-uri>
                     <fr:route>/def-002W/</fr:route>
@@ -565,50 +566,50 @@
                     <fr:taxon>Definition</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter><html:p>
-    Let <fr:tex display="inline">A</fr:tex> be a type.
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be a type.
     These are 3 consecutive identifications
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         p:x=_Ay,q:y=_Az, r:z=_Aw
-    </fr:tex>
+    ]]></fr:tex>
     we define the <html:strong>associator</html:strong>:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {assoc}: (p,q,r): (p\cdot  q)\cdot  r = p\cdot  (q\cdot  r)
-    </fr:tex></html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    ]]></fr:tex></html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Construction of Associator
 ">
     <html:strong>Construction of Associator</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     By definition it suffices to show that
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \Pi _{(z:A)}\Pi _{(q:x=_Az)}
         \Pi _{(w:A)}\Pi _{(r:z=_Aw)}
         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)
-    </fr:tex>
-    Let <fr:tex display="inline">q:x=_Az</fr:tex> and <fr:tex display="inline">r:z=_Aw</fr:tex>. By computation rule of identity types
-    <fr:tex display="block">
+    ]]></fr:tex>
+    Let <fr:tex display="inline"><![CDATA[q:x=_Az]]></fr:tex> and <fr:tex display="inline"><![CDATA[r:z=_Aw]]></fr:tex>. By computation rule of identity types
+    <fr:tex display="block"><![CDATA[
         \text {refl}_x\cdot  q \equiv  q
-    </fr:tex>
+    ]]></fr:tex>
     Then we can conclude that
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         (\text {refl}_x\cdot  q)\cdot  r \equiv  q\cdot  r
-    </fr:tex>
-    similarly <fr:tex display="inline">\text {refl}_x\cdot  (q\cdot  r) \equiv  q\cdot  r</fr:tex>.
+    ]]></fr:tex>
+    similarly <fr:tex display="inline"><![CDATA[\text {refl}_x\cdot  (q\cdot  r) \equiv  q\cdot  r]]></fr:tex>.
     Hence we have the left and right side
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         (\text {refl}_x\cdot  q)\cdot  r = \text {refl}_x\cdot  (q\cdot  r)
-    </fr:tex>
+    ]]></fr:tex>
     are judgementally equal, 
     so we can simply define the associator as
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {assoc}(\text {refl}_x,q,r) :\equiv  \text {refl}_{q\cdot  r}
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-002X/</fr:uri>
                     <fr:display-uri>def-002X</fr:display-uri>
                     <fr:route>/def-002X/</fr:route>
@@ -616,27 +617,27 @@
                     <fr:taxon>Definition</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter><html:p>
-    Let <fr:tex display="inline">A</fr:tex> be a type.
-    We defined the <html:strong>unit law</html:strong> operations for <fr:tex display="inline">x=_Ay</fr:tex>:
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be a type.
+    We defined the <html:strong>unit law</html:strong> operations for <fr:tex display="inline"><![CDATA[x=_Ay]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {left-unit} &amp; : (x=_Ay)\to  (\text {refl}_x\cdot  x = x) \\
-            \text {right-unit} &amp; : (x=_Ay)\to  (x\cdot \text {refl}_y = x)
+            \text {left-unit} & : (x=_Ay)\to  (\text {refl}_x\cdot  x = x) \\
+            \text {right-unit} & : (x=_Ay)\to  (x\cdot \text {refl}_y = x)
         \end {align*}
-    </fr:tex></html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    ]]></fr:tex></html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Construction of Unit Law
 ">
     <html:strong>Construction of Unit Law</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     By elimination it suffices to construct:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {left-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\
-            \text {right-unit}(\text {refl}_x) &amp;: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x
+            \text {left-unit}(\text {refl}_x) &: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x \\
+            \text {right-unit}(\text {refl}_x) &: \text {refl}_x \cdot  \text {refl}_x = \text {refl}_x
         \end {align*}
-    </fr:tex>
-    In both cases we need only to construct <fr:tex display="inline">\text {refl}_{\text {refl}_x}</fr:tex>.
+    ]]></fr:tex>
+    In both cases we need only to construct <fr:tex display="inline"><![CDATA[\text {refl}_{\text {refl}_x}]]></fr:tex>.
 </fr:mainmatter></fr:tree>
 </fr:mainmatter>
                 </fr:tree>
@@ -644,7 +645,7 @@
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>1</fr:month>
@@ -658,7 +659,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004C/</fr:uri>
                     <fr:display-uri>def-004C</fr:display-uri>
                     <fr:route>/def-004C/</fr:route>
@@ -667,65 +668,65 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    Let <fr:tex display="inline">f:A\to  B</fr:tex> be a map. We define the <html:strong>action on paths</html:strong> of <fr:tex display="inline">f</fr:tex> as an operation:
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> be a map. We define the <html:strong>action on paths</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> as an operation:
+    <fr:tex display="block"><![CDATA[
         \text {ap}_f : \prod _{x,y:A} (x=y) \to  (f(x)=f(y))
-    </fr:tex>
+    ]]></fr:tex>
     This can be defined by induction principle of identity types:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {ap}_f(\text {refl}_x) \equiv  \text {refl}_{f(x)}
-    </fr:tex>
+    ]]></fr:tex>
     And there are operations:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {ap-id}_A:       \prod _{(x,y:A)}\prod _{(p:x=y)} p = \text {ap}_{\text {id}_A}(p)
-    </fr:tex>
+    ]]></fr:tex>
     Taking
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {ap-id}_A(\text {refl}_x) \equiv  \text {refl}_{\text {refl}_x}
-    </fr:tex>
+    ]]></fr:tex>
     Finally we can construct
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {ap-comp}(f, g): \prod _{(x,y:A)}\prod _{(p:x=y)} \text {ap}_{f\circ  g}(p) = \text {ap}_f(\text {ap}_g(p))
-    </fr:tex>
+    ]]></fr:tex>
     by taking
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {ap-comp}(f,g,\text {refl}_x) \equiv  \text {refl}_{\text {refl}_{g(f(x))}}
-    </fr:tex>
+    ]]></fr:tex>
     There are identifications:
     <html:ul><html:li>
-            Notice that we have <fr:tex display="inline">\text {ap-id}_A(\text {refl}_x) \equiv  \text {refl}_{\text {refl}_x}</fr:tex> so
-            <fr:tex display="block">
+            Notice that we have <fr:tex display="inline"><![CDATA[\text {ap-id}_A(\text {refl}_x) \equiv  \text {refl}_{\text {refl}_x}]]></fr:tex> so
+            <fr:tex display="block"><![CDATA[
                 \begin {align*}
-                    \text {ap-refl}(f,x) &amp;:\text {ap}_f(\text {refl}_x) = \text {refl}_{f(x)} \\
-                    \text {ap-refl}(f,x) &amp;\equiv  \text {refl}_{\text {refl}_{f(x)}}
+                    \text {ap-refl}(f,x) &:\text {ap}_f(\text {refl}_x) = \text {refl}_{f(x)} \\
+                    \text {ap-refl}(f,x) &\equiv  \text {refl}_{\text {refl}_{f(x)}}
                 \end {align*}
-            </fr:tex></html:li>
+            ]]></fr:tex></html:li>
         <html:li>
-            The <fr:tex display="inline">\text {ap-inv}</fr:tex> can be constructed by identification elimination on <fr:tex display="inline">p</fr:tex>.
-            <fr:tex display="block">
+            The <fr:tex display="inline"><![CDATA[\text {ap-inv}]]></fr:tex> can be constructed by identification elimination on <fr:tex display="inline"><![CDATA[p]]></fr:tex>.
+            <fr:tex display="block"><![CDATA[
                 \begin {align*}
-                    &amp;\text {ap-inv}(f,p):\text {ap}_f(p^{-1}) = \text {ap}_f(p)^{-1}\\
-                    &amp;\text {ap-inv}(f,\text {refl}_x)\equiv  \text {refl}_{\text {ap}_f(\text {refl}_x)}
+                    &\text {ap-inv}(f,p):\text {ap}_f(p^{-1}) = \text {ap}_f(p)^{-1}\\
+                    &\text {ap-inv}(f,\text {refl}_x)\equiv  \text {refl}_{\text {ap}_f(\text {refl}_x)}
                 \end {align*}
-            </fr:tex></html:li>
+            ]]></fr:tex></html:li>
         <html:li>
-            Similarly, the <fr:tex display="inline">\text {ap-concat}</fr:tex> can be constructed by identification elimination on <fr:tex display="inline">p</fr:tex>.
-            <fr:tex display="block">
+            Similarly, the <fr:tex display="inline"><![CDATA[\text {ap-concat}]]></fr:tex> can be constructed by identification elimination on <fr:tex display="inline"><![CDATA[p]]></fr:tex>.
+            <fr:tex display="block"><![CDATA[
                 \begin {align*}
-                    &amp;\text {ap-concat}(f,p,q):\text {ap}_f(p\cdot  q) = \text {ap}_f(p)\cdot  \text {ap}_f(q) \\
-                    &amp;\text {ap-concat}(f,\text {refl}_x,q)\equiv  \text {refl}_{\text {ap}_f(q)}
+                    &\text {ap-concat}(f,p,q):\text {ap}_f(p\cdot  q) = \text {ap}_f(p)\cdot  \text {ap}_f(q) \\
+                    &\text {ap-concat}(f,\text {refl}_x,q)\equiv  \text {refl}_{\text {ap}_f(q)}
                 \end {align*}
-            </fr:tex></html:li></html:ul></html:p>
+            ]]></fr:tex></html:li></html:ul></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
-        To construct dependent action on paths if a dependent function <fr:tex display="inline">f:\Pi _{(x:A)}B(x)</fr:tex>.
+        To construct dependent action on paths if a dependent function <fr:tex display="inline"><![CDATA[f:\Pi _{(x:A)}B(x)]]></fr:tex>.
         We need a <html:strong>transport</html:strong> because type theory can not distinguish between identified 
         elements from different types.
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004D/</fr:uri>
                     <fr:display-uri>def-004D</fr:display-uri>
                     <fr:route>/def-004D/</fr:route>
@@ -734,34 +735,34 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    Let <fr:tex display="inline">A</fr:tex> be a type and let <fr:tex display="inline">B</fr:tex> be a type family over <fr:tex display="inline">A</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be a type and let <fr:tex display="inline"><![CDATA[B]]></fr:tex> be a type family over <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
     The <html:strong>transport</html:strong> operation is defined:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {tr}_B:\Pi _{(x,y:A)}(x=y)\to  B(x)\to  B(y)
-    </fr:tex>
-    Simply induction on <fr:tex display="inline">p:x=y</fr:tex> we can construct:
-    <fr:tex display="block">
+    ]]></fr:tex>
+    Simply induction on <fr:tex display="inline"><![CDATA[p:x=y]]></fr:tex> we can construct:
+    <fr:tex display="block"><![CDATA[
         \text {tr}_B(\text {refl}_x) \equiv  \text {id}_{B(x)}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                     <html:p>
-    Now for a given dependent function <fr:tex display="inline">f:\Pi _{(a:A)}B(a)</fr:tex> and an identification
-    <fr:tex display="inline">p:x=y</fr:tex> in <fr:tex display="inline">A</fr:tex> we can construct
-    <fr:tex display="block">
+    Now for a given dependent function <fr:tex display="inline"><![CDATA[f:\Pi _{(a:A)}B(a)]]></fr:tex> and an identification
+    <fr:tex display="inline"><![CDATA[p:x=y]]></fr:tex> in <fr:tex display="inline"><![CDATA[A]]></fr:tex> we can construct
+    <fr:tex display="block"><![CDATA[
         \text {apd}_f(p) : \text {tr}_B(p,f(x)) = f(y)
-    </fr:tex>
+    ]]></fr:tex>
     this can be constructed by the induction principle for identity types,
     it suffices to construct an identification:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {apd}_f(\text {refl}_x) : \text {tr}_B(\text {refl}_x,f(x)) = f(x)
-    </fr:tex>
-    which is simply done by taking <fr:tex display="inline">\text {apd}_f(\text {refl}_x)\equiv \text {refl}_{f(x)}</fr:tex></html:p>
+    ]]></fr:tex>
+    which is simply done by taking <fr:tex display="inline"><![CDATA[\text {apd}_f(\text {refl}_x)\equiv \text {refl}_{f(x)}]]></fr:tex></html:p>
                   </fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>1</fr:month>
@@ -771,30 +772,30 @@
               </fr:frontmatter>
               <fr:mainmatter><html:p>
         The identity type is an inductive family of types.
-        For instance, while the type <fr:tex display="inline">a=x</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> is inductively generated by <fr:tex display="inline">\text {refl}_a</fr:tex>,
-        the type <fr:tex display="inline">a=a</fr:tex> is <html:strong>not</html:strong>, because the endpoint of <fr:tex display="inline">p:a=a</fr:tex> is not free. 
-        We want to show that <fr:tex display="inline">p=\text {refl}_a</fr:tex> for all <fr:tex display="inline">p:a=a</fr:tex>. 
+        For instance, while the type <fr:tex display="inline"><![CDATA[a=x]]></fr:tex> indexed by <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> is inductively generated by <fr:tex display="inline"><![CDATA[\text {refl}_a]]></fr:tex>,
+        the type <fr:tex display="inline"><![CDATA[a=a]]></fr:tex> is <html:strong>not</html:strong>, because the endpoint of <fr:tex display="inline"><![CDATA[p:a=a]]></fr:tex> is not free. 
+        We want to show that <fr:tex display="inline"><![CDATA[p=\text {refl}_a]]></fr:tex> for all <fr:tex display="inline"><![CDATA[p:a=a]]></fr:tex>. 
     </html:p><html:p>
-        Nevertheless the identity type <fr:tex display="inline">a=x</fr:tex> is generated by a single element <fr:tex display="inline">\text {refl}_a:a=a</fr:tex>,
+        Nevertheless the identity type <fr:tex display="inline"><![CDATA[a=x]]></fr:tex> is generated by a single element <fr:tex display="inline"><![CDATA[\text {refl}_a:a=a]]></fr:tex>,
         so it is natural to wonder in <html:em>what sense</html:em> the reflexivity identification is unique.
-        We prove that only one pair <fr:tex display="inline">(a,\text {refl}_a)</fr:tex> is unique in the type of all pairs:
-        <fr:tex display="block">
+        We prove that only one pair <fr:tex display="inline"><![CDATA[(a,\text {refl}_a)]]></fr:tex> is unique in the type of all pairs:
+        <fr:tex display="block"><![CDATA[
             (x,p):\Sigma _(x:A) a = x 
-        </fr:tex>
-        We restate this as a proposition: Consider an element <fr:tex display="inline">a:A</fr:tex>. Then there is an identification
-        <fr:tex display="inline">(a, \text {refl}_a = y)</fr:tex> in the type <fr:tex display="inline">\Sigma _(x:A) a = x</fr:tex> for any <fr:tex display="inline">y:\Sigma _(x:A) a = x </fr:tex></html:p>
+        ]]></fr:tex>
+        We restate this as a proposition: Consider an element <fr:tex display="inline"><![CDATA[a:A]]></fr:tex>. Then there is an identification
+        <fr:tex display="inline"><![CDATA[(a, \text {refl}_a = y)]]></fr:tex> in the type <fr:tex display="inline"><![CDATA[\Sigma _(x:A) a = x]]></fr:tex> for any <fr:tex display="inline"><![CDATA[y:\Sigma _(x:A) a = x ]]></fr:tex></html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
-        By <fr:tex display="inline">\Sigma </fr:tex> induction it suffices to show that there is an identification
-        <fr:tex display="block">
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>31</fr:day></fr:date><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+        By <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex> induction it suffices to show that there is an identification
+        <fr:tex display="block"><![CDATA[
             (a, \text {refl}_a) = (x, p)
-        </fr:tex>
-        forall <fr:tex display="inline">x:A</fr:tex> and <fr:tex display="inline">p:a=x</fr:tex>. Then perform the induction principle of identity types.
+        ]]></fr:tex>
+        forall <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> and <fr:tex display="inline"><![CDATA[p:a=x]]></fr:tex>. Then perform the induction principle of identity types.
         It suffices to show that
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             (a,\text {refl}_a) = (a, \text {refl}_a)
-        </fr:tex>
+        ]]></fr:tex>
         which can be obtained by reflexivity.
     </fr:mainmatter></fr:tree>
  
@@ -804,7 +805,7 @@
         </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>1</fr:month>
@@ -820,15 +821,15 @@
     In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
-    Refer to <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke&apos;s Book</fr:link>.
+    Refer to <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke's Book</fr:link>.
 </html:p><html:p>
     This section is much more informal than the previous one.
     Without displaying the inference rules, we will just present the <html:strong>constructor</html:strong>
     and <html:strong>induction principle</html:strong> of each inductive type.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="General Inductive Type"><html:strong>General Inductive Type</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="General Inductive Type"><html:strong>General Inductive Type</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
-    Just like <fr:tex display="inline">\mathbb {N}</fr:tex>, other inductive types can be defined by 
+    Just like <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>, other inductive types can be defined by 
     their constructors and induction principles (and computation rules).
     </html:p>
     <html:ul><html:li>
@@ -842,103 +843,103 @@
             The computation rules specify the behavior of the constructors.
         </html:li></html:ul>
 </fr:mainmatter></fr:tree>
-<fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0020/</fr:uri><fr:display-uri>def-0020</fr:display-uri><fr:route>/def-0020/</fr:route><fr:title text="Unit Type">Unit Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+<fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0020/</fr:uri><fr:display-uri>def-0020</fr:display-uri><fr:route>/def-0020/</fr:route><fr:title text="Unit Type">Unit Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
         
         The <html:strong>unit type</html:strong> is the simplest inductive type.
-        It has only one constructor, denoted by <fr:tex display="inline">\star :\textbf {1}</fr:tex>.
+        It has only one constructor, denoted by <fr:tex display="inline"><![CDATA[\star :\textbf {1}]]></fr:tex>.
     </html:p><html:p>
         The induction principle of the unit type is trivial.
-        It says that to define a dependent function <fr:tex display="inline">f:\Pi  _{(x:\textbf {1})} P(x)</fr:tex>, 
-        it suffices to give a value <fr:tex display="inline">p:P(\star )</fr:tex>.
-        <fr:tex display="block">
+        It says that to define a dependent function <fr:tex display="inline"><![CDATA[f:\Pi  _{(x:\textbf {1})} P(x)]]></fr:tex>, 
+        it suffices to give a value <fr:tex display="inline"><![CDATA[p:P(\star )]]></fr:tex>.
+        <fr:tex display="block"><![CDATA[
             f (\star ) :\equiv  p
-        </fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
+        ]]></fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
     A degenerate inductive type is the <html:strong>empty type</html:strong>.
     It has no constructor, and its induction principle is trivial.
     Empty type is connected to the <html:strong>exfalso quodlibet principle</html:strong> in logic.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0021/</fr:uri><fr:display-uri>def-0021</fr:display-uri><fr:route>/def-0021/</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    The <html:strong>empty type</html:strong> is a degenerate inductive type <fr:tex display="inline">\emptyset </fr:tex> satisfying 
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0021/</fr:uri><fr:display-uri>def-0021</fr:display-uri><fr:route>/def-0021/</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    The <html:strong>empty type</html:strong> is a degenerate inductive type <fr:tex display="inline"><![CDATA[\emptyset ]]></fr:tex> satisfying 
     the following induction principle:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {ind}_\emptyset  : \Pi _{(x:\emptyset )}P(x)
-    </fr:tex>
+    ]]></fr:tex>
     And a special case is <html:strong>exfalso</html:strong>:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {exfalso} :\equiv  \text {ind}_\emptyset  : \empty  \to  A 
-    </fr:tex>
+    ]]></fr:tex>
     which can draw any conclusion.
 </html:p></fr:mainmatter></fr:tree><html:p>
     With the empty type we can define the <html:strong>negation</html:strong> of a type
     and the <html:strong>proof of negation</html:strong>.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0022/</fr:uri><fr:display-uri>def-0022</fr:display-uri><fr:route>/def-0022/</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    The <html:strong>negation</html:strong> of type <fr:tex display="inline">A</fr:tex> is defined as
-    <fr:tex display="block">
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0022/</fr:uri><fr:display-uri>def-0022</fr:display-uri><fr:route>/def-0022/</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    The <html:strong>negation</html:strong> of type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is defined as
+    <fr:tex display="block"><![CDATA[
         \neg  A :\equiv  A \to  \emptyset 
-    </fr:tex>
-    A type <fr:tex display="inline">A</fr:tex> is said to be <html:strong>empty</html:strong> if and only if <fr:tex display="inline">\neg  A</fr:tex> is inhabited.
-    <fr:tex display="block">
+    ]]></fr:tex>
+    A type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is said to be <html:strong>empty</html:strong> if and only if <fr:tex display="inline"><![CDATA[\neg  A]]></fr:tex> is inhabited.
+    <fr:tex display="block"><![CDATA[
         \text {empty}(A) :\equiv  \neg  A
-    </fr:tex></html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="Proof of negation"><html:strong>Proof of negation</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    ]]></fr:tex></html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="Proof of negation"><html:strong>Proof of negation</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
         <html:p>
-            To prove <fr:tex display="inline">\neg  A</fr:tex>, we need to show that <fr:tex display="inline">A</fr:tex> implies a contradiction.
-            In other words, constructing a function of type <fr:tex display="inline">A \to  \emptyset </fr:tex>.
+            To prove <fr:tex display="inline"><![CDATA[\neg  A]]></fr:tex>, we need to show that <fr:tex display="inline"><![CDATA[A]]></fr:tex> implies a contradiction.
+            In other words, constructing a function of type <fr:tex display="inline"><![CDATA[A \to  \emptyset ]]></fr:tex>.
         </html:p>
     </fr:mainmatter></fr:tree>
-</fr:mainmatter></fr:tree><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0023/</fr:uri><fr:display-uri>def-0023</fr:display-uri><fr:route>/def-0023/</fr:route><fr:title text="Coproduct Type">Coproduct Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    Let <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex> be types. The <html:strong>coproduct (disjoint sum)</html:strong> <fr:tex display="inline">A+B</fr:tex> is a typed defined by the following constructors:
-    <html:ul><html:li><fr:tex display="inline">\text {inl}:A\to  A+B</fr:tex></html:li>
-        <html:li><fr:tex display="inline">\text {inr}:B\to  A+B</fr:tex></html:li></html:ul>
-    For any type family indexed by <fr:tex display="inline">x:A+B</fr:tex>, satisfies the following induction principle:
-    <fr:tex display="block">
+</fr:mainmatter></fr:tree><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0023/</fr:uri><fr:display-uri>def-0023</fr:display-uri><fr:route>/def-0023/</fr:route><fr:title text="Coproduct Type">Coproduct Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> be types. The <html:strong>coproduct (disjoint sum)</html:strong> <fr:tex display="inline"><![CDATA[A+B]]></fr:tex> is a typed defined by the following constructors:
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[\text {inl}:A\to  A+B]]></fr:tex></html:li>
+        <html:li><fr:tex display="inline"><![CDATA[\text {inr}:B\to  A+B]]></fr:tex></html:li></html:ul>
+    For any type family indexed by <fr:tex display="inline"><![CDATA[x:A+B]]></fr:tex>, satisfies the following induction principle:
+    <fr:tex display="block"><![CDATA[
         \text {ind}_+: (\Pi _{(x:A)}P(\text {inl}(x)))\to (\Pi _{(y:B)}P(\text {inr}(y)))\to \Pi _{(z:A+B)}P(z)
-    </fr:tex>
-    (Note that sometimes we denoted <fr:tex display="inline">\text {ind}_+(f,g)</fr:tex> as <fr:tex display="inline">[f,g]</fr:tex>) And the computation rule:
-    <fr:tex display="block">
+    ]]></fr:tex>
+    (Note that sometimes we denoted <fr:tex display="inline"><![CDATA[\text {ind}_+(f,g)]]></fr:tex> as <fr:tex display="inline"><![CDATA[[f,g]]]></fr:tex>) And the computation rule:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {ind}_+(f,g,\text {inl}(x))&amp;\equiv  f(x)\\
-            \text {ind}_+(f,g,\text {inr}(y))&amp;\equiv  g(y)
+            \text {ind}_+(f,g,\text {inl}(x))&\equiv  f(x)\\
+            \text {ind}_+(f,g,\text {inr}(y))&\equiv  g(y)
         \end {align*}
-    </fr:tex>
-    where <fr:tex display="inline">f</fr:tex> and <fr:tex display="inline">g</fr:tex> are defined:
-    <fr:tex display="block">
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[f]]></fr:tex> and <fr:tex display="inline"><![CDATA[g]]></fr:tex> are defined:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            f&amp;:\Pi _{(x:A)}P(\text {inl}(x))\\
-            g&amp;:\Pi _{(y:B)}P(\text {inr}(y))
+            f&:\Pi _{(x:A)}P(\text {inl}(x))\\
+            g&:\Pi _{(y:B)}P(\text {inr}(y))
         \end {align*}
-    </fr:tex>
-    This can be presented by pattern matching to define a function <fr:tex display="inline">h:\Pi  _{(z:A+B)}.P(z)</fr:tex>:
-    <fr:tex display="block">
+    ]]></fr:tex>
+    This can be presented by pattern matching to define a function <fr:tex display="inline"><![CDATA[h:\Pi  _{(z:A+B)}.P(z)]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            h(\text {inl}(x))&amp;:\equiv  f(x)\\
-            h(\text {inr}(y))&amp;:\equiv  g(y)
+            h(\text {inl}(x))&:\equiv  f(x)\\
+            h(\text {inr}(y))&:\equiv  g(y)
         \end {align*}
-    </fr:tex></html:p></fr:mainmatter></fr:tree>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="Special Case of Coproduct"><html:strong>Special Case of Coproduct</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    ]]></fr:tex></html:p></fr:mainmatter></fr:tree>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="Special Case of Coproduct"><html:strong>Special Case of Coproduct</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     The special case of coproduct type is also called the <html:strong>sum type</html:strong>.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {ind}_+: (A \to  X) \to  (B \to  X) \to  (A+B \to  X)
-    </fr:tex>
+    ]]></fr:tex>
     which is very similar to the <html:strong>elimination rule</html:strong> of disjunction in logic.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         (P\to  Q) \to  (R\to  Q) \to  (P\vee  R\to  Q)
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 <html:p>
     The dependent version of sum type is called the <html:strong>dependent sum type (dependent coproduct)</html:strong> traditionally.
     Its terms are ordered pairs.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0024/</fr:uri><fr:display-uri>def-0024</fr:display-uri><fr:route>/def-0024/</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    The <html:strong>dependent pair type</html:strong> is a inductive type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex> (<fr:tex display="inline">(x:A) \times  B(x)</fr:tex>)
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0024/</fr:uri><fr:display-uri>def-0024</fr:display-uri><fr:route>/def-0024/</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    The <html:strong>dependent pair type</html:strong> is a inductive type <fr:tex display="inline"><![CDATA[\Sigma _{(x:A)}B(x)]]></fr:tex> (<fr:tex display="inline"><![CDATA[(x:A) \times  B(x)]]></fr:tex>)
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Formation Rule
 ">
     <html:strong>Formation Rule</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
-        Given a type family <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex>, we can form the dependent pair type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex>.
+        Given a type family <fr:tex display="inline"><![CDATA[B]]></fr:tex> over <fr:tex display="inline"><![CDATA[A]]></fr:tex>, we can form the dependent pair type <fr:tex display="inline"><![CDATA[\Sigma _{(x:A)}B(x)]]></fr:tex>.
     </html:p>
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  A\space \text {type}
             \quad 
@@ -946,18 +947,18 @@
         }{
             \Gamma \vdash  (x:A) \times  B(x)\space \text {type}
         }
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Introduction Rule
 ">
     <html:strong>Introduction Rule</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
-        Given a term <fr:tex display="inline">a:A</fr:tex> and a term <fr:tex display="inline">b(a):B(a)</fr:tex>, we can form a term <fr:tex display="inline">\text {pair}(a,b):(x:A)\times  B(x)</fr:tex>.
+        Given a term <fr:tex display="inline"><![CDATA[a:A]]></fr:tex> and a term <fr:tex display="inline"><![CDATA[b(a):B(a)]]></fr:tex>, we can form a term <fr:tex display="inline"><![CDATA[\text {pair}(a,b):(x:A)\times  B(x)]]></fr:tex>.
     </html:p>
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  a:A
             \quad 
@@ -965,58 +966,58 @@
         }{
             \Gamma \vdash  (a,b):(x:A)\times  B(x)
         }
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Elimination Rule
 ">
     <html:strong>Elimination Rule</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
         The elimination rule is formed with two projections.
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \frac {
                 \Gamma \vdash  p:(x:A)\times  B(x)
             }{
                 \begin {align*}
-                    \Gamma &amp;\vdash  \text {pr}_A(p):A\\
-                    \Gamma &amp;\vdash  \text {pr}_B(p):B(\text {pr}_A(p))
+                    \Gamma &\vdash  \text {pr}_A(p):A\\
+                    \Gamma &\vdash  \text {pr}_B(p):B(\text {pr}_A(p))
                 \end {align*}
             }
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Computation Rule
 ">
     <html:strong>Computation Rule</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
-    <html:p><fr:tex display="block">
+    <html:p><fr:tex display="block"><![CDATA[
             \frac {
                 \Gamma \vdash  x:A 
                 \quad  
                 \Gamma \vdash  y:B(x)
             }{
                 \begin {align*}
-                    \Gamma &amp;\vdash  \text {pr}_A((x,y))=x:A\\
-                    \Gamma &amp;\vdash  \text {pr}_B((x,y))=y:B(x)
+                    \Gamma &\vdash  \text {pr}_A((x,y))=x:A\\
+                    \Gamma &\vdash  \text {pr}_B((x,y))=y:B(x)
                 \end {align*}
             }
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Special Case
 ">
     <html:strong>Special Case</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     <html:ul><html:li>
-            In the special case that <fr:tex display="inline">B(x) = B</fr:tex> is independent of <fr:tex display="inline">A</fr:tex>,
-            this reduces to the <html:strong>product type</html:strong> <fr:tex display="inline">A\times  B</fr:tex>.
+            In the special case that <fr:tex display="inline"><![CDATA[B(x) = B]]></fr:tex> is independent of <fr:tex display="inline"><![CDATA[A]]></fr:tex>,
+            this reduces to the <html:strong>product type</html:strong> <fr:tex display="inline"><![CDATA[A\times  B]]></fr:tex>.
         </html:li>
         <html:li>
-            In the special case that <fr:tex display="inline">D \equiv  \text {Boolean}</fr:tex>,
+            In the special case that <fr:tex display="inline"><![CDATA[D \equiv  \text {Boolean}]]></fr:tex>,
             this reduces to a <fr:link href="/def-0023/" title="Coproduct Type" uri="https://caimeo.space/def-0023/" display-uri="def-0023" type="local">coproduct type</fr:link>.
         </html:li></html:ul>
 </fr:mainmatter></fr:tree>
@@ -1024,7 +1025,7 @@
         </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>1</fr:month>
@@ -1033,26 +1034,26 @@
             <fr:uri>https://caimeo.space/tt-0003/</fr:uri>
             <fr:display-uri>tt-0003</fr:display-uri>
             <fr:route>/tt-0003/</fr:route>
-            <fr:title text="Natural Numbers \mathbb {N}">Natural Numbers <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
+            <fr:title text="Natural Numbers \mathbb {N}">Natural Numbers <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex></fr:title>
             <fr:taxon>Type Theory</fr:taxon>
           </fr:frontmatter>
           <fr:mainmatter>
             <html:p>
     In previous post, we have seen the basic inference rules of type theory.
     Now we will see the definition of natural numbers as an inductive type.
-    Refer to <fr:link href="/hott-book-2013/" title="Homotopy Type Theory: Univalent Foundations of Mathematics" uri="https://caimeo.space/hott-book-2013/" display-uri="hott-book-2013" type="local">HoTT Book</fr:link> and <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke&apos;s</fr:link>.
+    Refer to <fr:link href="/hott-book-2013/" title="Homotopy Type Theory: Univalent Foundations of Mathematics" uri="https://caimeo.space/hott-book-2013/" display-uri="hott-book-2013" type="local">HoTT Book</fr:link> and <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke's</fr:link>.
 </html:p>
             <html:p>
     In classical mathematics, the <html:strong>Peano axioms</html:strong> are a set of axioms for the natural numbers,
     an important object in mathematics.
 </html:p>
             <html:p>
-    In type theory, the type <fr:tex display="inline">\mathbb {N}</fr:tex> of natural number is an <fr:link href="/def-001X/" title="Inductive Type" uri="https://caimeo.space/def-001X/" display-uri="def-001X" type="local"><html:strong>inductive type</html:strong></fr:link>.
+    In type theory, the type <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> of natural number is an <fr:link href="/def-001X/" title="Inductive Type" uri="https://caimeo.space/def-001X/" display-uri="def-001X" type="local"><html:strong>inductive type</html:strong></fr:link>.
     Just like in dependent function type, we need four inference rules to define the natural numbers.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-001Y/</fr:uri>
                 <fr:display-uri>def-001Y</fr:display-uri>
                 <fr:route>/def-001Y/</fr:route>
@@ -1062,129 +1063,129 @@
               <fr:mainmatter>
                 <html:p>
     In type theory, <html:strong>natural number</html:strong> is defined using <html:strong>peano encoding</html:strong>.
-    The type <fr:tex display="inline">\mathbb {N}</fr:tex> is formed by the formation rule:
-    <fr:tex display="block">
+    The type <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> is formed by the formation rule:
+    <fr:tex display="block"><![CDATA[
         \frac {}{\vdash \mathbb {N}\space \text {type}}\mathbb {N}\text {-form}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                 <html:p>
-    Peano&apos;s first axiom postulates the existence of a natural number <fr:tex display="inline">0</fr:tex>.
-    The introduction rule for <fr:tex display="inline">\mathbb {N}</fr:tex> has a <fr:tex display="inline">0</fr:tex> constructor and a <html:strong>successor</html:strong> function.
-    <fr:tex display="block">
+    Peano's first axiom postulates the existence of a natural number <fr:tex display="inline"><![CDATA[0]]></fr:tex>.
+    The introduction rule for <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> has a <fr:tex display="inline"><![CDATA[0]]></fr:tex> constructor and a <html:strong>successor</html:strong> function.
+    <fr:tex display="block"><![CDATA[
         \frac {}{\vdash 0:\mathbb {N}}\mathbb {N}\text {-intro-0}
         \quad 
         \frac {}{\vdash \text {succ}:\mathbb {N}\to \mathbb {N}} \mathbb {N}\text {-intro-succ}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                 <html:p>
-    The <html:strong>elimination rule</html:strong> is actually the type theoretical <html:strong>induction principle</html:strong> of <fr:tex display="inline">\mathbb {N}</fr:tex>:
-    In order to show that <fr:tex display="inline">\forall  n:\mathbb {N}.P(n)</fr:tex> holds, it suffices to show that <fr:tex display="inline">P(0)</fr:tex> holds and that <fr:tex display="inline">\forall  n:\mathbb {N}.P(n)\to  P(\text {succ}(n))</fr:tex> holds.
-    The type theoretical induction principle is therefore formulated using a type family <fr:tex display="inline">P</fr:tex> over <fr:tex display="inline">\mathbb {N}</fr:tex>:
-    <fr:tex display="block">
+    The <html:strong>elimination rule</html:strong> is actually the type theoretical <html:strong>induction principle</html:strong> of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>:
+    In order to show that <fr:tex display="inline"><![CDATA[\forall  n:\mathbb {N}.P(n)]]></fr:tex> holds, it suffices to show that <fr:tex display="inline"><![CDATA[P(0)]]></fr:tex> holds and that <fr:tex display="inline"><![CDATA[\forall  n:\mathbb {N}.P(n)\to  P(\text {succ}(n))]]></fr:tex> holds.
+    The type theoretical induction principle is therefore formulated using a type family <fr:tex display="inline"><![CDATA[P]]></fr:tex> over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         \frac {
             \begin {align*}
-                \Gamma &amp;,\,n:\mathbb {N}\vdash  P(n)\space \text {type}
+                \Gamma &,\,n:\mathbb {N}\vdash  P(n)\space \text {type}
                 \\
-                \Gamma &amp;\vdash  p_0:P(0)
+                \Gamma &\vdash  p_0:P(0)
                 \\
-                \Gamma &amp;\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
+                \Gamma &\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
             \end {align*}
         }{
             \Gamma \vdash \text {ind}_\mathbb {N}(p_0,p_S):\Pi _{(n:\mathbb {N})}P(n)
         }(\mathbb {N} \text {-ind})
-    </fr:tex>
-    The induction principle tells us what we need to do in order to construct a dependent function <fr:tex display="inline">\text {ind}_\mathbb {N}</fr:tex> of type <fr:tex display="inline">\Pi _{(n:\mathbb {N})}P(n)</fr:tex>.
+    ]]></fr:tex>
+    The induction principle tells us what we need to do in order to construct a dependent function <fr:tex display="inline"><![CDATA[\text {ind}_\mathbb {N}]]></fr:tex> of type <fr:tex display="inline"><![CDATA[\Pi _{(n:\mathbb {N})}P(n)]]></fr:tex>.
     We might alternatively write the induction principle as:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma ,n:\mathbb {N}\vdash  P(n)\space \text {type}
         }{
             \Gamma \vdash \text {ind}_\mathbb {N}:\left (P(0)\to \left (\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))\right )\to \Pi _{(n:\mathbb {N})}P(n)\right )
         }(\mathbb {N} \text {-ind})
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                 <html:p>
-    The <html:strong>computation rule</html:strong> asserts that the dependent function <fr:tex display="inline">\text {ind}_\mathbb {N}</fr:tex> behaves as expected:
-    <fr:tex display="block">
+    The <html:strong>computation rule</html:strong> asserts that the dependent function <fr:tex display="inline"><![CDATA[\text {ind}_\mathbb {N}]]></fr:tex> behaves as expected:
+    <fr:tex display="block"><![CDATA[
         \frac {
             \begin {align*}
-                \Gamma &amp;,n:\mathbb {N}\vdash  P(n)\space \text {type}
+                \Gamma &,n:\mathbb {N}\vdash  P(n)\space \text {type}
                 \\
-                \Gamma &amp;\vdash  p_0:P(0)
+                \Gamma &\vdash  p_0:P(0)
                 \\
-                \Gamma &amp;\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
+                \Gamma &\vdash  p_S:\Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
             \end {align*}
         }{
             \text {ind}_\mathbb {N}(p_0,p_S,m)\equiv 
             \begin {cases}
-                p_0&amp;\text {if }m=0
+                p_0&\text {if }m=0
                 \\
-                p_S(n,\text {ind}_\mathbb {N}(p_0,p_S,n))&amp;\text {if }m=\text {succ}(n)
+                p_S(n,\text {ind}_\mathbb {N}(p_0,p_S,n))&\text {if }m=\text {succ}(n)
             \end {cases}
         }(\mathbb {N} \text {-comp})
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
-    Now let&apos;s use the type theoretical induction principle of <fr:tex display="inline">\mathbb {N}</fr:tex> to
-    perform some basic construction over <fr:tex display="inline">\mathbb {N}</fr:tex>.
+    Now let's use the type theoretical induction principle of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> to
+    perform some basic construction over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-001Z/</fr:uri>
                 <fr:display-uri>def-001Z</fr:display-uri>
                 <fr:route>/def-001Z/</fr:route>
-                <fr:title text="Addition over \N ">Addition over <fr:tex display="inline">\N </fr:tex></fr:title>
+                <fr:title text="Addition over \N ">Addition over <fr:tex display="inline"><![CDATA[\N ]]></fr:tex></fr:title>
                 <fr:taxon>Definition</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter><html:p>
-    We define addition over <fr:tex display="inline">\mathbb {N}</fr:tex> using the type theoretical induction principle of <fr:tex display="inline">\mathbb {N}</fr:tex>.
-    <fr:tex display="block">
+    We define addition over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> using the type theoretical induction principle of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \text {add}_\mathbb {N} : \mathbb {N} \to  (\mathbb {N} \to  \mathbb {N})
-    </fr:tex>
+    ]]></fr:tex>
     which satisfies the following specification:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {add}_\mathbb {N}(n, 0)&amp;:\equiv  n
+            \text {add}_\mathbb {N}(n, 0)&:\equiv  n
             \\
-            \text {add}_\mathbb {N}(m,\text {succ}(n))&amp;:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))
+            \text {add}_\mathbb {N}(m,\text {succ}(n))&:\equiv \text {succ}(\text {add}_\mathbb {N}(m,n))
         \end {align*}
-    </fr:tex>
-    abbreviated as <fr:tex display="inline">m + n</fr:tex> for <fr:tex display="inline">\text {add}_\mathbb {N}(m,n)</fr:tex>.
+    ]]></fr:tex>
+    abbreviated as <fr:tex display="inline"><![CDATA[m + n]]></fr:tex> for <fr:tex display="inline"><![CDATA[\text {add}_\mathbb {N}(m,n)]]></fr:tex>.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="Construction"><html:strong>Construction</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="Construction"><html:strong>Construction</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     
         <html:p>
-            We construct the addition by performing induction over the second variable <fr:tex display="inline">n</fr:tex>.
+            We construct the addition by performing induction over the second variable <fr:tex display="inline"><![CDATA[n]]></fr:tex>.
             That is, to construct an element
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 m:\mathbb {N} \vdash  \text {add}_\mathbb {N}(m):\mathbb {N} \to  \mathbb {N}
-            </fr:tex>
-            The context <fr:tex display="inline">\Gamma  \equiv  m:\mathbb {N}</fr:tex> is fixed.
+            ]]></fr:tex>
+            The context <fr:tex display="inline"><![CDATA[\Gamma  \equiv  m:\mathbb {N}]]></fr:tex> is fixed.
         </html:p>
         Therefore we need to construct:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \Gamma &amp;\vdash  \text {add-zero}_\mathbb {N}(m):\mathbb {N}
+                \Gamma &\vdash  \text {add-zero}_\mathbb {N}(m):\mathbb {N}
                 \\
-                \Gamma &amp;\vdash  \text {add-succ}_\mathbb {N}(m):\mathbb {N}\to \mathbb {N}                
+                \Gamma &\vdash  \text {add-succ}_\mathbb {N}(m):\mathbb {N}\to \mathbb {N}                
             \end {align*}   
-        </fr:tex>
-        The <fr:tex display="inline">\text {add-zero}_\mathbb {N}</fr:tex> is defined to be identity function trivially. To see how <fr:tex display="inline">\text {add-succ}_\mathbb {N}</fr:tex> is defined, we need to perform induction:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        The <fr:tex display="inline"><![CDATA[\text {add-zero}_\mathbb {N}]]></fr:tex> is defined to be identity function trivially. To see how <fr:tex display="inline"><![CDATA[\text {add-succ}_\mathbb {N}]]></fr:tex> is defined, we need to perform induction:
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \text {add}_\mathbb {N}(m, \text {succ}(n))&amp;\equiv 
+                \text {add}_\mathbb {N}(m, \text {succ}(n))&\equiv 
                 \text {ind}_\mathbb {N}(\text {add-zero}_\mathbb {N}(m), \text {add-succ}_\mathbb {N}(m), \text {succ}(n))
                 \\
-                &amp;\equiv  \text {add-succ}_\mathbb {N}(m,n, \text {add}_\mathbb {N}(m,n))
+                &\equiv  \text {add-succ}_\mathbb {N}(m,n, \text {add}_\mathbb {N}(m,n))
                 \\
-                &amp;\equiv  \text {succ}(\text {add}_\mathbb {N}(m,n))
+                &\equiv  \text {succ}(\text {add}_\mathbb {N}(m,n))
             \end {align*}
-        </fr:tex>
-        Hence <fr:tex display="inline">\text {add-succ}_\mathbb {N}</fr:tex> is defined as:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        Hence <fr:tex display="inline"><![CDATA[\text {add-succ}_\mathbb {N}]]></fr:tex> is defined as:
+        <fr:tex display="block"><![CDATA[
             \text {add-succ}_\mathbb {N}(m,n,x) \equiv  \text {succ}(x)
-        </fr:tex>
-        A formal construction of <fr:tex display="inline">\text {add-succ}_\mathbb {N}</fr:tex> is as follows:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        A formal construction of <fr:tex display="inline"><![CDATA[\text {add-succ}_\mathbb {N}]]></fr:tex> is as follows:
+        <fr:tex display="block"><![CDATA[
             \dfrac {
                 \dfrac {
                     \dfrac {
@@ -1206,9 +1207,9 @@
             }{
                 m:\mathbb {N}\vdash  \text {add-succ}_\mathbb {N}(m):\equiv \lambda  m.\text {succ} : \mathbb {N}\to (\mathbb {N}\to \mathbb {N})
             }\text {Block-1}
-        </fr:tex>
+        ]]></fr:tex>
         Finally we combine the derivation together:
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \dfrac {
                 \dfrac {
                     \dfrac {
@@ -1230,44 +1231,44 @@
             }{
                 m:\mathbb {N}\vdash \text {add}_\mathbb {N}(m):\equiv \text {ind}_\mathbb {N} (\text {add-zero}_\mathbb {N}(m), \text {add-succ}_\mathbb {N}(m)):\mathbb {N}\to \mathbb {N}
             }
-        </fr:tex>
+        ]]></fr:tex>
     
 </fr:mainmatter></fr:tree>
 </fr:mainmatter>
             </fr:tree>
             <html:p>
-    Recall the definition of addition function <fr:tex display="inline">\text {add}: \mathbb {N}\to (\mathbb {N}\to \mathbb {N})</fr:tex> satisfying the specification:
-    <fr:tex display="block">
+    Recall the definition of addition function <fr:tex display="inline"><![CDATA[\text {add}: \mathbb {N}\to (\mathbb {N}\to \mathbb {N})]]></fr:tex> satisfying the specification:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            m + 0 &amp; :\equiv  m
+            m + 0 & :\equiv  m
             \\ 
-            m + \text {succ}(n) &amp; :\equiv  \text {succ}(m + n)
+            m + \text {succ}(n) & :\equiv  \text {succ}(m + n)
         \end {align*}
-    </fr:tex>
+    ]]></fr:tex>
     Such definition is enough to characterize the addition function.
-    Because it postulates te <html:em>behavior</html:em> of <fr:tex display="inline">\text {add}_\mathbb {N}</fr:tex> at the constructor of <fr:tex display="inline">\mathbb {N}</fr:tex></html:p>
+    Because it postulates te <html:em>behavior</html:em> of <fr:tex display="inline"><![CDATA[\text {add}_\mathbb {N}]]></fr:tex> at the constructor of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex></html:p>
             <html:p>
-    More generally, we can define a dependent function <fr:tex display="inline">f:\Pi  n:\mathbb {N}.P(n)</fr:tex> by induction on <fr:tex display="inline">n</fr:tex> using
-    <fr:tex display="block">
+    More generally, we can define a dependent function <fr:tex display="inline"><![CDATA[f:\Pi  n:\mathbb {N}.P(n)]]></fr:tex> by induction on <fr:tex display="inline"><![CDATA[n]]></fr:tex> using
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            p_0 &amp; : P(0)
+            p_0 & : P(0)
             \\
-            p_S &amp; : \Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
+            p_S & : \Pi _{(n:\mathbb {N})}P(n)\to  P(\text {succ}(n))
         \end {align*}
-    </fr:tex>
+    ]]></fr:tex>
     Just present the definition by writing
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            f(0) &amp; :\equiv  p_0
+            f(0) & :\equiv  p_0
             \\
-            f(\text {succ}(n)) &amp; :\equiv  p_S(n,f(n))
+            f(\text {succ}(n)) & :\equiv  p_S(n,f(n))
         \end {align*}
-    </fr:tex>
-    <fr:tex display="inline">f</fr:tex> is said to be defined by <html:strong>pattern matching</html:strong> on the variable <fr:tex display="inline">n</fr:tex>.
+    ]]></fr:tex>
+    <fr:tex display="inline"><![CDATA[f]]></fr:tex> is said to be defined by <html:strong>pattern matching</html:strong> on the variable <fr:tex display="inline"><![CDATA[n]]></fr:tex>.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/eg-0001/</fr:uri>
                 <fr:display-uri>eg-0001</fr:display-uri>
                 <fr:route>/eg-0001/</fr:route>
@@ -1277,23 +1278,23 @@
               <fr:mainmatter>
                 <html:p>
     The <html:strong>Fibonacci function</html:strong> is a well-known function in mathematics.
-    It is defined by pattern matching on the variable <fr:tex display="inline">n</fr:tex> as follows:
-    <fr:tex display="block">
+    It is defined by pattern matching on the variable <fr:tex display="inline"><![CDATA[n]]></fr:tex> as follows:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {fib}(0) &amp; :\equiv  0
+            \text {fib}(0) & :\equiv  0
             \\
-            \text {fib}(1) &amp; :\equiv  1
+            \text {fib}(1) & :\equiv  1
             \\
-            \text {fib}(n+2) &amp; :\equiv  \text {fib}(n) + \text {fib}(n+1)
+            \text {fib}(n+2) & :\equiv  \text {fib}(n) + \text {fib}(n+1)
         \end {align*}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>
         </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>1</fr:month>
@@ -1305,7 +1306,7 @@
             <fr:title text="Introduction to Type Theory">Introduction to Type Theory</fr:title>
             <fr:taxon>Type Theory</fr:taxon>
           </fr:frontmatter>
-          <fr:mainmatter><html:p>This is a note on dependent type theory. Refer to <fr:link href="/hott-book-2013/" title="Homotopy Type Theory: Univalent Foundations of Mathematics" uri="https://caimeo.space/hott-book-2013/" display-uri="hott-book-2013" type="local">HoTT Book</fr:link> and <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke&apos;s</fr:link>.</html:p><html:p><html:strong>Homotopy type theory</html:strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
+          <fr:mainmatter><html:p>This is a note on dependent type theory. Refer to <fr:link href="/hott-book-2013/" title="Homotopy Type Theory: Univalent Foundations of Mathematics" uri="https://caimeo.space/hott-book-2013/" display-uri="hott-book-2013" type="local">HoTT Book</fr:link> and <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke's</fr:link>.</html:p><html:p><html:strong>Homotopy type theory</html:strong> is a foundational language for mathematics, an alternative to Zermelo-Fraenkel set theory.
     The set-theoretic foundation has two two layers:
     <html:ul><html:li>the deductive system of first-order logic</html:li>
         <html:li>the theory of a particular theory, such as ZFC</html:li></html:ul> 
@@ -1319,74 +1320,74 @@
     The judgment is considered to be the external of the theory, living in the <html:strong>metatheory</html:strong>.
 </html:p><html:p>
     In first order logic, there is only one kind of judgment: a proposition has a proof.
-    A proposition <fr:tex display="inline">P</fr:tex> gives rise to a judgment &quot;<fr:tex display="inline">P</fr:tex> has a proof&quot;.
-    The proposition <fr:tex display="inline">P</fr:tex> lives inside the theory, while the judgment &quot;<fr:tex display="inline">P</fr:tex> has a proof&quot; lives in the metatheory. 
+    A proposition <fr:tex display="inline"><![CDATA[P]]></fr:tex> gives rise to a judgment "<fr:tex display="inline"><![CDATA[P]]></fr:tex> has a proof".
+    The proposition <fr:tex display="inline"><![CDATA[P]]></fr:tex> lives inside the theory, while the judgment "<fr:tex display="inline"><![CDATA[P]]></fr:tex> has a proof" lives in the metatheory. 
 </html:p><html:p>
     In type theory, analogous to first order logic,
-    &quot;<fr:tex display="inline">P</fr:tex> has a proof&quot; is written as &quot;<fr:tex display="inline">p:P</fr:tex>&quot; (Type <fr:tex display="inline">P</fr:tex> has a term <fr:tex display="inline">p</fr:tex>).
-    <html:ul><html:li>If <fr:tex display="inline">P</fr:tex> is a proposition, then <fr:tex display="inline">p</fr:tex> is a <html:strong>witness</html:strong> to the provability of <fr:tex display="inline">P</fr:tex>, 
-        or <html:strong>evidence</html:strong> of the truth of <fr:tex display="inline">P</fr:tex>.</html:li>
-        <html:li><fr:tex display="inline">p:P</fr:tex> can also be interpreted as <fr:tex display="inline">p\in  P</fr:tex>,
-        but <fr:tex display="inline">p:P</fr:tex> is a judgment while <fr:tex display="inline">p\in  P</fr:tex> is a proposition.</html:li></html:ul>
-    Working inside type theory we can&apos;t write down statements like
-    &quot;if <fr:tex display="inline">p:P</fr:tex> then ...&quot; nor can we disprove the judgment &quot;<fr:tex display="inline">p:P</fr:tex>&quot;.
+    "<fr:tex display="inline"><![CDATA[P]]></fr:tex> has a proof" is written as "<fr:tex display="inline"><![CDATA[p:P]]></fr:tex>" (Type <fr:tex display="inline"><![CDATA[P]]></fr:tex> has a term <fr:tex display="inline"><![CDATA[p]]></fr:tex>).
+    <html:ul><html:li>If <fr:tex display="inline"><![CDATA[P]]></fr:tex> is a proposition, then <fr:tex display="inline"><![CDATA[p]]></fr:tex> is a <html:strong>witness</html:strong> to the provability of <fr:tex display="inline"><![CDATA[P]]></fr:tex>, 
+        or <html:strong>evidence</html:strong> of the truth of <fr:tex display="inline"><![CDATA[P]]></fr:tex>.</html:li>
+        <html:li><fr:tex display="inline"><![CDATA[p:P]]></fr:tex> can also be interpreted as <fr:tex display="inline"><![CDATA[p\in  P]]></fr:tex>,
+        but <fr:tex display="inline"><![CDATA[p:P]]></fr:tex> is a judgment while <fr:tex display="inline"><![CDATA[p\in  P]]></fr:tex> is a proposition.</html:li></html:ul>
+    Working inside type theory we can't write down statements like
+    "if <fr:tex display="inline"><![CDATA[p:P]]></fr:tex> then ..." nor can we disprove the judgment "<fr:tex display="inline"><![CDATA[p:P]]></fr:tex>".
 </html:p><html:p>
     A key difference between type theory and set theory is the equality.
     The notion of equality in set theory is simply a proposition.
     However, in type theory, there are two kinds of equality.
-    <html:ul><html:li>The first kind is the <html:strong>propositional equality</html:strong> <fr:tex display="inline">a=_Ab</fr:tex>.
+    <html:ul><html:li>The first kind is the <html:strong>propositional equality</html:strong> <fr:tex display="inline"><![CDATA[a=_Ab]]></fr:tex>.
         This is a proposition</html:li>
-        <html:li>The second kind is the <html:strong>judgmental equality</html:strong> <fr:tex display="inline">a\equiv  b:A</fr:tex>.
+        <html:li>The second kind is the <html:strong>judgmental equality</html:strong> <fr:tex display="inline"><![CDATA[a\equiv  b:A]]></fr:tex>.
         This is a judgment</html:li></html:ul>
-    Two terms <fr:tex display="inline">a:A</fr:tex> and <fr:tex display="inline">b:A</fr:tex> are propositionally equal if you can prove <fr:tex display="inline">a =_A b</fr:tex> , 
-    or equivalently if you can construct a term <fr:tex display="inline">h : a =_A b</fr:tex>.
+    Two terms <fr:tex display="inline"><![CDATA[a:A]]></fr:tex> and <fr:tex display="inline"><![CDATA[b:A]]></fr:tex> are propositionally equal if you can prove <fr:tex display="inline"><![CDATA[a =_A b]]></fr:tex> , 
+    or equivalently if you can construct a term <fr:tex display="inline"><![CDATA[h : a =_A b]]></fr:tex>.
 </html:p>
     <html:p>
         In type theory there is also a requirement for a judgment-level equality.
-        This is called <html:strong>judgmental equality</html:strong>, meaning &quot;equal by definition&quot;.
+        This is called <html:strong>judgmental equality</html:strong>, meaning "equal by definition".
     </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0015/</fr:uri><fr:display-uri>def-0015</fr:display-uri><fr:route>/def-0015/</fr:route><fr:title text="Judgemental Equality">Judgemental Equality</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p><html:strong>Judgemental equality</html:strong> of terms is given by the following judgement:
-    <fr:tex display="block">
-        \Gamma \vdash  a\equiv  a&apos;:A
-    </fr:tex>
-    <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">a&apos;</fr:tex> are judgementally equal terms of type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0015/</fr:uri><fr:display-uri>def-0015</fr:display-uri><fr:route>/def-0015/</fr:route><fr:title text="Judgemental Equality">Judgemental Equality</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p><html:strong>Judgemental equality</html:strong> of terms is given by the following judgement:
+    <fr:tex display="block"><![CDATA[
+        \Gamma \vdash  a\equiv  a':A
+    ]]></fr:tex>
+    <fr:tex display="inline"><![CDATA[a]]></fr:tex> and <fr:tex display="inline"><![CDATA[a']]></fr:tex> are judgementally equal terms of type <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>.
 </html:p><html:p>
-    Note that the notation <fr:tex display="inline">\equiv </fr:tex> binds more loosely than anything else.
+    Note that the notation <fr:tex display="inline"><![CDATA[\equiv ]]></fr:tex> binds more loosely than anything else.
 </html:p></fr:mainmatter></fr:tree>
     <html:p>
-        judgments may depend on <html:em>assumptions</html:em> of the form <fr:tex display="inline">x:A</fr:tex> where <fr:tex display="inline">x</fr:tex> is a
-        variable and <fr:tex display="inline">A</fr:tex> is a type. And the collection (actually ordered list) of such assumptions is called 
-        the <html:strong>context</html:strong>, denoted <fr:tex display="inline">\Gamma </fr:tex>. (from a topological point of view it 
+        judgments may depend on <html:em>assumptions</html:em> of the form <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> where <fr:tex display="inline"><![CDATA[x]]></fr:tex> is a
+        variable and <fr:tex display="inline"><![CDATA[A]]></fr:tex> is a type. And the collection (actually ordered list) of such assumptions is called 
+        the <html:strong>context</html:strong>, denoted <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>. (from a topological point of view it 
         may be thought of as a <html:strong>parameters space</html:strong>).
         The role of a context is to declare what <html:strong>hypothetical terms</html:strong> are assumed, 
         along with their types.
-        The notation <fr:tex display="inline">\vdash </fr:tex> means making conclusion from assumptions.
+        The notation <fr:tex display="inline"><![CDATA[\vdash ]]></fr:tex> means making conclusion from assumptions.
     </html:p>
 <html:p>
     Remember the difference between axiom and (inference) rules.
     <html:ul><html:li>Rules allow us to conclude one judgment from a collection of other judgments.</html:li>
         <html:li>Axioms are judgments that are assumed to be true without proof.</html:li></html:ul></html:p><html:p>
-    We start by introduction to Matrin Lof&apos;s dependent type theory. 
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0017/</fr:uri><fr:display-uri>def-0017</fr:display-uri><fr:route>/def-0017/</fr:route><fr:title text="Dependent type theory: Judgments">Dependent type theory: Judgments</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter>
+    We start by introduction to Matrin Lof's dependent type theory. 
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0017/</fr:uri><fr:display-uri>def-0017</fr:display-uri><fr:route>/def-0017/</fr:route><fr:title text="Dependent type theory: Judgments">Dependent type theory: Judgments</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter>
     <html:p>
-        There are four kinds of judgments in Martin Lof&apos;s dependent type theory:
+        There are four kinds of judgments in Martin Lof's dependent type theory:
     </html:p>
-    <html:ul><html:li><fr:tex display="inline">A</fr:tex> is a well-formed type in context <fr:tex display="inline">\Gamma </fr:tex>
-            <fr:tex display="block">
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[A]]></fr:tex> is a well-formed type in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>
+            <fr:tex display="block"><![CDATA[
                 \Gamma  \vdash  A \space \text {type}
-            </fr:tex></html:li>
-        <html:li><fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex> are judgmentally equal types in context <fr:tex display="inline">\Gamma </fr:tex>
-            <fr:tex display="block">
+            ]]></fr:tex></html:li>
+        <html:li><fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are judgmentally equal types in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>
+            <fr:tex display="block"><![CDATA[
                 \Gamma  \vdash  A \equiv  B \space \text {type}
-            </fr:tex></html:li>
-        <html:li><fr:tex display="inline">a</fr:tex> is a term of type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>
-            <fr:tex display="block">
+            ]]></fr:tex></html:li>
+        <html:li><fr:tex display="inline"><![CDATA[a]]></fr:tex> is a term of type <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>
+            <fr:tex display="block"><![CDATA[
                 \Gamma  \vdash  a : A
-            </fr:tex></html:li>
-        <html:li><fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex> are judgmentally equal terms of type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>
-            <fr:tex display="block">
+            ]]></fr:tex></html:li>
+        <html:li><fr:tex display="inline"><![CDATA[a]]></fr:tex> and <fr:tex display="inline"><![CDATA[b]]></fr:tex> are judgmentally equal terms of type <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>
+            <fr:tex display="block"><![CDATA[
                 \Gamma  \vdash  a \equiv  b : A
-            </fr:tex></html:li></html:ul>
+            ]]></fr:tex></html:li></html:ul>
 </fr:mainmatter></fr:tree><html:p>
     All judgments are context dependent, 
     and indeed that even the types of the variables in a context
@@ -1394,24 +1395,24 @@
 
     To introduce types dependent on terms, 
     we need the notation of type families.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0018/</fr:uri><fr:display-uri>def-0018</fr:display-uri><fr:route>/def-0018/</fr:route><fr:title text="Type Family">Type Family</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    Consider a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
-    A <html:strong>family</html:strong> of types over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>
-    is a type <fr:tex display="inline">B(x)</fr:tex> in context <fr:tex display="inline">\Gamma , x:A</fr:tex>.
-    <fr:tex display="block">
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0018/</fr:uri><fr:display-uri>def-0018</fr:display-uri><fr:route>/def-0018/</fr:route><fr:title text="Type Family">Type Family</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    Consider a type <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>.
+    A <html:strong>family</html:strong> of types over <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>
+    is a type <fr:tex display="inline"><![CDATA[B(x)]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma , x:A]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \Gamma , x:A \vdash  B(x) \space \text {type}
-    </fr:tex>
-    <fr:tex display="inline">B</fr:tex> is a family of types over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
-    Alternatively, we say that <fr:tex display="inline">B(x)</fr:tex> is a type <html:strong>indexed</html:strong> by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
+    ]]></fr:tex>
+    <fr:tex display="inline"><![CDATA[B]]></fr:tex> is a family of types over <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>.
+    Alternatively, we say that <fr:tex display="inline"><![CDATA[B(x)]]></fr:tex> is a type <html:strong>indexed</html:strong> by <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>.
 </html:p></fr:mainmatter></fr:tree><html:p>
     Now we can define a term of a type family, that is, a section of a type family.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0019/</fr:uri><fr:display-uri>def-0019</fr:display-uri><fr:route>/def-0019/</fr:route><fr:title text="Section of Type Family">Section of Type Family</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    Let <fr:tex display="inline">B</fr:tex> be a <fr:link href="/def-0018/" title="Type Family" uri="https://caimeo.space/def-0018/" display-uri="def-0018" type="local">type family</fr:link> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
-    A <html:strong>section</html:strong> of <fr:tex display="inline">B</fr:tex> is a term <fr:tex display="inline">b</fr:tex> of type <fr:tex display="inline">B(x)</fr:tex> in context <fr:tex display="inline">\Gamma ,x:A</fr:tex>.
-    <fr:tex display="block">
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0019/</fr:uri><fr:display-uri>def-0019</fr:display-uri><fr:route>/def-0019/</fr:route><fr:title text="Section of Type Family">Section of Type Family</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[B]]></fr:tex> be a <fr:link href="/def-0018/" title="Type Family" uri="https://caimeo.space/def-0018/" display-uri="def-0018" type="local">type family</fr:link> over <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>.
+    A <html:strong>section</html:strong> of <fr:tex display="inline"><![CDATA[B]]></fr:tex> is a term <fr:tex display="inline"><![CDATA[b]]></fr:tex> of type <fr:tex display="inline"><![CDATA[B(x)]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ,x:A]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \Gamma , x:A \vdash  b : B(x)
-    </fr:tex>
-    Alternatively, we say that <fr:tex display="inline">b</fr:tex> is a term of <fr:tex display="inline">B(x)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
+    ]]></fr:tex>
+    Alternatively, we say that <fr:tex display="inline"><![CDATA[b]]></fr:tex> is a term of <fr:tex display="inline"><![CDATA[B(x)]]></fr:tex> indexed by <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>.
 </html:p></fr:mainmatter></fr:tree><html:p>
     We now ready to present the inference rules for dependent type theory.
     These rules are known as the <html:strong>structural rules</html:strong> of the theory.
@@ -1421,21 +1422,21 @@
         <html:li>Variable conversion</html:li>
         <html:li>Substitution</html:li>
         <html:li>Weakening</html:li>
-        <html:li>Generic element</html:li></html:ul></html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-001A/</fr:uri><fr:display-uri>def-001A</fr:display-uri><fr:route>/def-001A/</fr:route><fr:title text="
+        <html:li>Generic element</html:li></html:ul></html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-001A/</fr:uri><fr:display-uri>def-001A</fr:display-uri><fr:route>/def-001A/</fr:route><fr:title text="
     Formation of contexts, types and terms
 ">
     Formation of contexts, types and terms
 </fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The following rules follow from the presupposition
     about contexts, types and terms, can be used freely.
-</html:p><html:ul><html:li><fr:tex display="block">
+</html:p><html:ul><html:li><fr:tex display="block"><![CDATA[
             \frac {
                 \Gamma ,x:A\vdash  B(x)\space \text {type}
             }{
                 \Gamma \vdash  A\space \text {type}
             }
-        </fr:tex></html:li>
-    <html:li><fr:tex display="block">
+        ]]></fr:tex></html:li>
+    <html:li><fr:tex display="block"><![CDATA[
             \frac {
                 \Gamma \vdash  A\equiv  B\space \text {type}
             }{
@@ -1447,15 +1448,15 @@
             }{
                 \Gamma \vdash  B\space \text {type}
             }
-        </fr:tex></html:li>
-    <html:li><fr:tex display="block">
+        ]]></fr:tex></html:li>
+    <html:li><fr:tex display="block"><![CDATA[
             \frac {
                 \Gamma \vdash  a:A
             }{
                 \Gamma \vdash  A\space \text {type}
             }
-        </fr:tex></html:li>
-    <html:li><fr:tex display="block">
+        ]]></fr:tex></html:li>
+    <html:li><fr:tex display="block"><![CDATA[
             \frac {
                 \Gamma \vdash  a\equiv  b:A
             }{
@@ -1467,14 +1468,14 @@
             }{
                 \Gamma \vdash  b:A
             }
-        </fr:tex></html:li></html:ul></fr:mainmatter></fr:tree><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-001B/</fr:uri><fr:display-uri>def-001B</fr:display-uri><fr:route>/def-001B/</fr:route><fr:title text="
+        ]]></fr:tex></html:li></html:ul></fr:mainmatter></fr:tree><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-001B/</fr:uri><fr:display-uri>def-001B</fr:display-uri><fr:route>/def-001B/</fr:route><fr:title text="
     Judgmental equality is equivalence relation
 ">
     Judgmental equality is equivalence relation
 </fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     Judgmental equality on types and on elements is an <fr:link href="/def-000X/" title="Equivalence Relation" uri="https://caimeo.space/def-000X/" display-uri="def-000X" type="local">equivalence relation</fr:link> 
     simply postulate that these relations are reflexive, symmetric, and transitive:
-</html:p><html:ul><html:li><fr:tex display="block">
+</html:p><html:ul><html:li><fr:tex display="block"><![CDATA[
             \frac {
                 \Gamma \vdash  a:A
             }{
@@ -1494,8 +1495,8 @@
             }{
                 \Gamma \vdash  a\equiv  c:A
             }
-        </fr:tex></html:li>
-    <html:li><fr:tex display="block">
+        ]]></fr:tex></html:li>
+    <html:li><fr:tex display="block"><![CDATA[
             \frac {
                 \Gamma \vdash  A\space \text {type}
             }{
@@ -1515,36 +1516,36 @@
             }{
                 \Gamma \vdash  A\equiv  C\space \text {type}
             }
-        </fr:tex></html:li></html:ul></fr:mainmatter></fr:tree><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-001C/</fr:uri><fr:display-uri>def-001C</fr:display-uri><fr:route>/def-001C/</fr:route><fr:title text="Variable Conversion">Variable Conversion</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+        ]]></fr:tex></html:li></html:ul></fr:mainmatter></fr:tree><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-001C/</fr:uri><fr:display-uri>def-001C</fr:display-uri><fr:route>/def-001C/</fr:route><fr:title text="Variable Conversion">Variable Conversion</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     This rule postulates that we can
     convert the type of a variable to a judgmentally equal type.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
-            \Gamma \vdash  A\equiv  A&apos;\space \text {type}
+            \Gamma \vdash  A\equiv  A'\space \text {type}
             \quad 
             \Gamma ,x:A,\Delta \vdash  B(x)\space \text {type}
         }{
-            \Gamma ,x:A&apos;,\Delta \vdash  B(x)\space \text {type}
+            \Gamma ,x:A',\Delta \vdash  B(x)\space \text {type}
         }
-    </fr:tex>
+    ]]></fr:tex>
     Similarly, we can convert judgmental equality of types and terms.
-    We state all of them at once using a <html:em>generic judgment thesis</html:em> <fr:tex display="inline">\mathcal {J}</fr:tex>.
-    <fr:tex display="block">
+    We state all of them at once using a <html:em>generic judgment thesis</html:em> <fr:tex display="inline"><![CDATA[\mathcal {J}]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \frac {
-            \Gamma \vdash  A\equiv  A&apos;\space \text {type}
+            \Gamma \vdash  A\equiv  A'\space \text {type}
             \quad 
             \Gamma ,x:A,\Delta \vdash  \mathcal {J}
         }{
-            \Gamma ,x:A&apos;,\Delta \vdash  \mathcal {J}
+            \Gamma ,x:A',\Delta \vdash  \mathcal {J}
         }VC
-    </fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
-    Consider a term <fr:tex display="inline">f:B(x)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
-    and we also have a term <fr:tex display="inline">a:A</fr:tex>.
-    We can simultaneously substitute <fr:tex display="inline">a</fr:tex> for all occurrences of <fr:tex display="inline">x</fr:tex> in <fr:tex display="inline">f</fr:tex>
-    to obtain a new term <fr:tex display="inline">f[x:=a]:B(a)</fr:tex>.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-001D/</fr:uri><fr:display-uri>def-001D</fr:display-uri><fr:route>/def-001D/</fr:route><fr:title text="Substitution">Substitution</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    ]]></fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
+    Consider a term <fr:tex display="inline"><![CDATA[f:B(x)]]></fr:tex> indexed by <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>,
+    and we also have a term <fr:tex display="inline"><![CDATA[a:A]]></fr:tex>.
+    We can simultaneously substitute <fr:tex display="inline"><![CDATA[a]]></fr:tex> for all occurrences of <fr:tex display="inline"><![CDATA[x]]></fr:tex> in <fr:tex display="inline"><![CDATA[f]]></fr:tex>
+    to obtain a new term <fr:tex display="inline"><![CDATA[f[x:=a]:B(a)]]></fr:tex>.
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-001D/</fr:uri><fr:display-uri>def-001D</fr:display-uri><fr:route>/def-001D/</fr:route><fr:title text="Substitution">Substitution</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The substitution rule postulates that we can substitute a term for a variable.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  a:A
             \quad 
@@ -1552,44 +1553,44 @@
         }{
             \Gamma ,\Delta [x:=a]\vdash  \mathcal {J}[x:=a]
         }S
-    </fr:tex>
-    The notation <fr:tex display="inline">\Gamma ,\Delta [x:=a]</fr:tex> means that we substitute <fr:tex display="inline">a</fr:tex> for <fr:tex display="inline">x</fr:tex> in <fr:tex display="inline">\Delta </fr:tex>.
+    ]]></fr:tex>
+    The notation <fr:tex display="inline"><![CDATA[\Gamma ,\Delta [x:=a]]]></fr:tex> means that we substitute <fr:tex display="inline"><![CDATA[a]]></fr:tex> for <fr:tex display="inline"><![CDATA[x]]></fr:tex> in <fr:tex display="inline"><![CDATA[\Delta ]]></fr:tex>.
 </html:p><html:p>
     With the substitution rule, we need two more <html:em>congruence rules</html:em> to
     convert judgmental equality of terms and types.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
-            \Gamma \vdash  a\equiv  a&apos;:A
+            \Gamma \vdash  a\equiv  a':A
             \quad 
             \Gamma ,x:A,\Delta \vdash  B \space \text {type}
         }{
-            \Gamma ,\Delta [x:=a]\vdash  B[x:=a]\equiv  B[x:=a&apos;] \space \text {type}
+            \Gamma ,\Delta [x:=a]\vdash  B[x:=a]\equiv  B[x:=a'] \space \text {type}
         }
-    </fr:tex>
+    ]]></fr:tex>
 
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
-            \Gamma \vdash  A\equiv  A&apos;\space \text {type}
+            \Gamma \vdash  A\equiv  A'\space \text {type}
             \quad 
             \Gamma ,x:A,\Delta \vdash  b:A
         }{
-            \Gamma ,\Delta [x:=a]\vdash  b[x:=a]\equiv  b[x:=a&apos;]:A&apos;[x:=a] \space \text {type}
+            \Gamma ,\Delta [x:=a]\vdash  b[x:=a]\equiv  b[x:=a']:A'[x:=a] \space \text {type}
         }
-    </fr:tex></html:p></fr:mainmatter></fr:tree><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-001G/</fr:uri><fr:display-uri>def-001G</fr:display-uri><fr:route>/def-001G/</fr:route><fr:title text="Fiber and Value">Fiber and Value</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    Let <fr:tex display="inline">B</fr:tex> be a <fr:link href="/def-0018/" title="Type Family" uri="https://caimeo.space/def-0018/" display-uri="def-0018" type="local">type family</fr:link> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
-    an a well-formed term <fr:tex display="inline">a:A</fr:tex>,
-    then we say that <fr:tex display="inline">B[x:=a]</fr:tex> is the <html:strong>fiber</html:strong> of <fr:tex display="inline">B</fr:tex> at <fr:tex display="inline">a</fr:tex>, denoted <fr:tex display="inline">B(a)</fr:tex>.
+    ]]></fr:tex></html:p></fr:mainmatter></fr:tree><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-001G/</fr:uri><fr:display-uri>def-001G</fr:display-uri><fr:route>/def-001G/</fr:route><fr:title text="Fiber and Value">Fiber and Value</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[B]]></fr:tex> be a <fr:link href="/def-0018/" title="Type Family" uri="https://caimeo.space/def-0018/" display-uri="def-0018" type="local">type family</fr:link> over <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>,
+    an a well-formed term <fr:tex display="inline"><![CDATA[a:A]]></fr:tex>,
+    then we say that <fr:tex display="inline"><![CDATA[B[x:=a]]]></fr:tex> is the <html:strong>fiber</html:strong> of <fr:tex display="inline"><![CDATA[B]]></fr:tex> at <fr:tex display="inline"><![CDATA[a]]></fr:tex>, denoted <fr:tex display="inline"><![CDATA[B(a)]]></fr:tex>.
 </html:p><html:p>
-    Let <fr:tex display="inline">b</fr:tex> a <fr:link href="/def-0019/" title="Section of Type Family" uri="https://caimeo.space/def-0019/" display-uri="def-0019" type="local">section</fr:link> of <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>,
-    then we say that <fr:tex display="inline">b(a):\equiv  b[x:=a]</fr:tex> is the <html:strong>value</html:strong> of <fr:tex display="inline">b</fr:tex> at <fr:tex display="inline">a</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[b]]></fr:tex> a <fr:link href="/def-0019/" title="Section of Type Family" uri="https://caimeo.space/def-0019/" display-uri="def-0019" type="local">section</fr:link> of <fr:tex display="inline"><![CDATA[B]]></fr:tex> over <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>,
+    then we say that <fr:tex display="inline"><![CDATA[b(a):\equiv  b[x:=a]]]></fr:tex> is the <html:strong>value</html:strong> of <fr:tex display="inline"><![CDATA[b]]></fr:tex> at <fr:tex display="inline"><![CDATA[a]]></fr:tex>.
 
 </html:p></fr:mainmatter></fr:tree><html:p>
-    The process of expanding the context by a fresh variable of type <fr:tex display="inline">A</fr:tex> is called weakening (by <fr:tex display="inline">A</fr:tex>).
+    The process of expanding the context by a fresh variable of type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is called weakening (by <fr:tex display="inline"><![CDATA[A]]></fr:tex>).
     Intuitively, weakening is the process of adding a new hypothesis to the context.
     And the hypothesis will weaken the conclusion.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-001E/</fr:uri><fr:display-uri>def-001E</fr:display-uri><fr:route>/def-001E/</fr:route><fr:title text="Weakening">Weakening</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-001E/</fr:uri><fr:display-uri>def-001E</fr:display-uri><fr:route>/def-001E/</fr:route><fr:title text="Weakening">Weakening</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     Weakening rule asserts that we can add a variable to the context.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  A\space \text {type}
             \quad  
@@ -1597,116 +1598,116 @@
         }{
             \Gamma ,x:A,\Delta \vdash  \mathcal {J}
         }W 
-    </fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
+    ]]></fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
     Finally, the generic elements rule ensures that
     the variables declared in a context.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-001F/</fr:uri><fr:display-uri>def-001F</fr:display-uri><fr:route>/def-001F/</fr:route><fr:title text="Generic Elements">Generic Elements</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-001F/</fr:uri><fr:display-uri>def-001F</fr:display-uri><fr:route>/def-001F/</fr:route><fr:title text="Generic Elements">Generic Elements</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
     The rule for the generic element asserts that 
-    any hypothetical element <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma ,x:A</fr:tex>
-    is also an element of <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma ,x:A</fr:tex>.
-    <fr:tex display="block">
+    any hypothetical element <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ,x:A]]></fr:tex>
+    is also an element of <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ,x:A]]></fr:tex>.
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  A\space \text {type}
         }{
             \Gamma ,x:A\vdash  x:A
         }\delta 
-    </fr:tex>
+    ]]></fr:tex>
     This rule is also called the <html:strong>variable rule</html:strong>.   
 </html:p></fr:mainmatter></fr:tree><html:p>
     The next topic is the dependent function type, a fundamental concept of dependent type theory.
     Simply put, a dependent function type is a function whose type of output may depend on the input.
 </html:p><html:p>
-    Consider a section <fr:tex display="inline">b</fr:tex> of a family <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>:
-    <fr:tex display="block">
+    Consider a section <fr:tex display="inline"><![CDATA[b]]></fr:tex> of a family <fr:tex display="inline"><![CDATA[B]]></fr:tex> over <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         \Gamma ,x:A\vdash  b(x):B(x)
-    </fr:tex>
-    Such a section <fr:tex display="inline">b</fr:tex> is an operation or assignment <fr:tex display="inline">x\mapsto  b(x)</fr:tex> that assigns to each element <fr:tex display="inline">x:A</fr:tex>
-    to a term <fr:tex display="inline">b(x):B(x)</fr:tex>.
-    We may see <fr:tex display="inline">b</fr:tex> as a function takes <fr:tex display="inline">x:A</fr:tex> to <fr:tex display="inline">b(x):B(x)</fr:tex>.
-    The function <fr:tex display="inline">x\mapsto  b(x)</fr:tex> is called a <html:strong>dependent function</html:strong>.
-    The type of all dependent functions from <fr:tex display="inline">A</fr:tex> to <fr:tex display="inline">B</fr:tex> is called the <html:strong>dependent function type</html:strong>.
-    <fr:tex display="block">
+    ]]></fr:tex>
+    Such a section <fr:tex display="inline"><![CDATA[b]]></fr:tex> is an operation or assignment <fr:tex display="inline"><![CDATA[x\mapsto  b(x)]]></fr:tex> that assigns to each element <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>
+    to a term <fr:tex display="inline"><![CDATA[b(x):B(x)]]></fr:tex>.
+    We may see <fr:tex display="inline"><![CDATA[b]]></fr:tex> as a function takes <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> to <fr:tex display="inline"><![CDATA[b(x):B(x)]]></fr:tex>.
+    The function <fr:tex display="inline"><![CDATA[x\mapsto  b(x)]]></fr:tex> is called a <html:strong>dependent function</html:strong>.
+    The type of all dependent functions from <fr:tex display="inline"><![CDATA[A]]></fr:tex> to <fr:tex display="inline"><![CDATA[B]]></fr:tex> is called the <html:strong>dependent function type</html:strong>.
+    <fr:tex display="block"><![CDATA[
         \Pi _{(x:A)}B(x) \text { or } (x:A)\to  B(x)
-    </fr:tex></html:p><html:p>
+    ]]></fr:tex></html:p><html:p>
     To introduce a type we need the following four rules:
     <html:ul><html:li>Formation rule</html:li>
         <html:li>Introduction rule</html:li>
         <html:li>Elimination rule</html:li>
         <html:li>Computation rule</html:li></html:ul>
     Besides these we also need the <html:strong>congruence rule</html:strong> for judgmental equality.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-001T/</fr:uri><fr:display-uri>def-001T</fr:display-uri><fr:route>/def-001T/</fr:route><fr:title text="Dependent Function Type">Dependent Function Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p><html:strong>Formation Rule</html:strong>
-    For any type family <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>:
-    <fr:tex display="block">
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-001T/</fr:uri><fr:display-uri>def-001T</fr:display-uri><fr:route>/def-001T/</fr:route><fr:title text="Dependent Function Type">Dependent Function Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p><html:strong>Formation Rule</html:strong>
+    For any type family <fr:tex display="inline"><![CDATA[B]]></fr:tex> over <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma ,x:A\vdash  B(x)\space \text {type}
         }{
             \Gamma \vdash  \Pi _{(x:A)}B(x)\space \text {type}
         }\Pi 
-    </fr:tex>
+    ]]></fr:tex>
     We also require that the operation of forming dependent function types
     respects judgmental equality.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
-            \Gamma \vdash  A\equiv  A&apos;\space \text {type}
+            \Gamma \vdash  A\equiv  A'\space \text {type}
             \quad 
-            \Gamma ,x:A\vdash  B(x)\equiv  B&apos;(x)\space \text {type}
+            \Gamma ,x:A\vdash  B(x)\equiv  B'(x)\space \text {type}
         }{
-            \Gamma \vdash  \Pi _{(x:A)}B(x)\equiv  \Pi _{(x:A&apos;)}B&apos;(x)\space \text {type}
+            \Gamma \vdash  \Pi _{(x:A)}B(x)\equiv  \Pi _{(x:A')}B'(x)\space \text {type}
         }\Pi \text {-eq}
-    </fr:tex></html:p><html:p><html:strong>Introduction Rule (<fr:tex display="inline">\lambda </fr:tex>-abstraction)</html:strong>
+    ]]></fr:tex></html:p><html:p><html:strong>Introduction Rule (<fr:tex display="inline"><![CDATA[\lambda ]]></fr:tex>-abstraction)</html:strong>
     In order to construct a dependent function we have to
-    construct a term <fr:tex display="inline">f(x):B(x)</fr:tex> indexed by <fr:tex display="inline">x:A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>:
-    <fr:tex display="block">
+    construct a term <fr:tex display="inline"><![CDATA[f(x):B(x)]]></fr:tex> indexed by <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma ,x:A\vdash  b(x):B(x)
         }{
             \Gamma \vdash  \lambda  x.b(x):\Pi _{(x:A)}B(x)
         }\lambda 
-    </fr:tex>
+    ]]></fr:tex>
     And the congruence rule:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
-            \Gamma ,x:A\vdash  b(x)\equiv  b&apos;(x):B(x)
+            \Gamma ,x:A\vdash  b(x)\equiv  b'(x):B(x)
         }{
-            \Gamma \vdash  \lambda  x.b(x)\equiv  \lambda  x.b&apos;(x):\Pi _{(x:A)}B(x)
+            \Gamma \vdash  \lambda  x.b(x)\equiv  \lambda  x.b'(x):\Pi _{(x:A)}B(x)
         }\lambda \text {-eq}
-    </fr:tex></html:p><html:p><html:strong>Elimination Rule (Evaluation Rule)</html:strong>
+    ]]></fr:tex></html:p><html:p><html:strong>Elimination Rule (Evaluation Rule)</html:strong>
     In order to use dependent function we need to provide an argument of the domain type.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  f:\Pi _{(x:A)}B(x)
         }{
             \Gamma ,x:A\vdash  f(x):B(x)
         }ev
-    </fr:tex>
+    ]]></fr:tex>
     Again we require the judgmental equality to be respected:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
-            \Gamma \vdash  f\equiv  f&apos;:\Pi _{(x:A)}B(x)
+            \Gamma \vdash  f\equiv  f':\Pi _{(x:A)}B(x)
         }{
-            \Gamma ,x:A\vdash  f(x)\equiv  f&apos;(x):B(x)
+            \Gamma ,x:A\vdash  f(x)\equiv  f'(x):B(x)
         }ev\text {-eq}
-    </fr:tex></html:p><html:p><html:strong>Computation Rule (<fr:tex display="inline">\beta </fr:tex>-reduction)</html:strong>
-    <fr:tex display="block">
+    ]]></fr:tex></html:p><html:p><html:strong>Computation Rule (<fr:tex display="inline"><![CDATA[\beta ]]></fr:tex>-reduction)</html:strong>
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma ,x:A\vdash  b(x):B(x)
         }{
             \Gamma ,x:A\vdash  (\lambda  y.b(y))(x)\equiv  b(x):B(x)
         }\beta 
-    </fr:tex>
+    ]]></fr:tex>
     We postulate that all elements of a dependent function type are dependent functions.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  f:\Pi _{(x:A)}B(x)
         }{
             \Gamma \vdash  f\equiv  \lambda  x.f(x):\Pi _{(x:A)}B(x)
         }\eta 
-    </fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
+    ]]></fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
     A degenerate case of dependent function type is the ordinary function type.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-001U/</fr:uri><fr:display-uri>def-001U</fr:display-uri><fr:route>/def-001U/</fr:route><fr:title text="Ordinary Function Type">Ordinary Function Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    A special case of <fr:link href="/def-001T/" title="Dependent Function Type" uri="https://caimeo.space/def-001T/" display-uri="def-001T" type="local"><fr:tex display="inline">\Pi </fr:tex>-type</fr:link> is the <html:strong>ordinary function type</html:strong>.
-    Using weakening rule we can obtain thee type <fr:tex display="inline">A\to  B</fr:tex> of ordinary function from <fr:tex display="inline">A</fr:tex> to <fr:tex display="inline">B</fr:tex>
-    <fr:tex display="block">
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-001U/</fr:uri><fr:display-uri>def-001U</fr:display-uri><fr:route>/def-001U/</fr:route><fr:title text="Ordinary Function Type">Ordinary Function Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    A special case of <fr:link href="/def-001T/" title="Dependent Function Type" uri="https://caimeo.space/def-001T/" display-uri="def-001T" type="local"><fr:tex display="inline"><![CDATA[\Pi ]]></fr:tex>-type</fr:link> is the <html:strong>ordinary function type</html:strong>.
+    Using weakening rule we can obtain thee type <fr:tex display="inline"><![CDATA[A\to  B]]></fr:tex> of ordinary function from <fr:tex display="inline"><![CDATA[A]]></fr:tex> to <fr:tex display="inline"><![CDATA[B]]></fr:tex>
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  A\space \text {type}
             \quad 
@@ -1716,31 +1717,31 @@
         }{
             \Gamma \vdash  \Pi _{(x:A)}B\space \text {type}
         }\Pi }W
-    </fr:tex>
-    A term <fr:tex display="inline">f: \Pi _{(x:A)}B</fr:tex> is an ordinary function. The type <fr:tex display="inline">A \to  B</fr:tex> is defined:
-    <fr:tex display="block">
+    ]]></fr:tex>
+    A term <fr:tex display="inline"><![CDATA[f: \Pi _{(x:A)}B]]></fr:tex> is an ordinary function. The type <fr:tex display="inline"><![CDATA[A \to  B]]></fr:tex> is defined:
+    <fr:tex display="block"><![CDATA[
         A\to  B := \Pi _{(x:A)}B
-    </fr:tex>
-    The type <fr:tex display="inline">A</fr:tex> is called <html:strong>domain</html:strong> of <fr:tex display="inline">f</fr:tex>,
-    and type <fr:tex display="inline">B</fr:tex> is called <html:strong>codomain</html:strong> of <fr:tex display="inline">f</fr:tex>.
-    The notation <fr:tex display="inline">:=</fr:tex> here means to make a definition.
+    ]]></fr:tex>
+    The type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is called <html:strong>domain</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex>,
+    and type <fr:tex display="inline"><![CDATA[B]]></fr:tex> is called <html:strong>codomain</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex>.
+    The notation <fr:tex display="inline"><![CDATA[:=]]></fr:tex> here means to make a definition.
 </html:p></fr:mainmatter></fr:tree></fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

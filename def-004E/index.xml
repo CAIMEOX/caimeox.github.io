@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-004E/</fr:uri>
     <fr:display-uri>def-004E</fr:display-uri>
     <fr:route>/def-004E/</fr:route>
@@ -10,63 +11,63 @@
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
-    A <html:strong>universe</html:strong> consists of a type <fr:tex display="inline">\mathcal {U}</fr:tex> of which the elements are representations of types.
-    It is equipped with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> indexed by <fr:tex display="inline">\mathcal {U}</fr:tex> called <html:strong>universal type family</html:strong>.
+    A <html:strong>universe</html:strong> consists of a type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> of which the elements are representations of types.
+    It is equipped with a type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> indexed by <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> called <html:strong>universal type family</html:strong>.
     The universe is closed under all the type constructors in the sense that it comes equipped with the following structure:
-    <html:ul><html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Pi </fr:tex>, equipped with a function
-            <fr:tex display="block">
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under <fr:tex display="inline"><![CDATA[\Pi ]]></fr:tex>, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {\Pi }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}
-            </fr:tex>
+            ]]></fr:tex>
             for which the judgemental equality
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {\Pi }(X,P))\equiv \Pi _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))
-            </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.
+            ]]></fr:tex>
+            holds forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[P:\mathcal {T}(X)\to \mathcal {U}]]></fr:tex>.
         </html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Sigma </fr:tex>, equipped with a function
-            <fr:tex display="block">
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex>, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {\Sigma }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}
-            </fr:tex>
+            ]]></fr:tex>
             for which the judgemental equality
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {\Sigma }(X,P))\equiv \Sigma _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))
-            </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.
+            ]]></fr:tex>
+            holds forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[P:\mathcal {T}(X)\to \mathcal {U}]]></fr:tex>.
         </html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under identity types, equipped with a function
-            <fr:tex display="block">
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under identity types, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {I}:\Pi _{(X:\mathcal {U})}\mathcal {T}(X)\to \mathcal {T}(X)\to \mathcal {U}
-            </fr:tex>
+            ]]></fr:tex>
             for which the judgemental equality
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {I}(X,x,y))\equiv  (x=y)
-            </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">x,y:\mathcal {T}(X)</fr:tex>.
+            ]]></fr:tex>
+            holds forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[x,y:\mathcal {T}(X)]]></fr:tex>.
         </html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under coproducts, equipped with a function
-            <fr:tex display="block">
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under coproducts, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {+}:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}
-            </fr:tex>
-            that satisfies the judgemental equality <fr:tex display="inline">\mathcal {T}(X\check {+}P)\equiv \mathcal {T}(X)+\mathcal {T}(P)</fr:tex></html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> contains elements <fr:tex display="inline">\check {\textbf {1}}, \check {\textbf {0}}, \check {\mathbb {N}} : \mathcal {U}</fr:tex> that satisfies the judgemental equality
-            <fr:tex display="block">
+            ]]></fr:tex>
+            that satisfies the judgemental equality <fr:tex display="inline"><![CDATA[\mathcal {T}(X\check {+}P)\equiv \mathcal {T}(X)+\mathcal {T}(P)]]></fr:tex></html:li>
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> contains elements <fr:tex display="inline"><![CDATA[\check {\textbf {1}}, \check {\textbf {0}}, \check {\mathbb {N}} : \mathcal {U}]]></fr:tex> that satisfies the judgemental equality
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {\textbf {0}})\equiv  \textbf {0},
                 \\ \mathcal {T}(\check {\textbf {1}})\equiv  \textbf {1},
                 \\ \mathcal {T}(\check {\mathbb {N}})\equiv \mathbb {N}
-            </fr:tex></html:li></html:ul>
-    Consider a universe <fr:tex display="inline">\mathcal {U}</fr:tex> and a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
-    We say that <fr:tex display="inline">A</fr:tex> is a type in <fr:tex display="inline">\mathcal {U}</fr:tex> or that <fr:tex display="inline">\mathcal {U}</fr:tex> contains <fr:tex display="inline">A</fr:tex>,
-    if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.
+            ]]></fr:tex></html:li></html:ul>
+    Consider a universe <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> and a type <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>.
+    We say that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is a type in <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> or that <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> contains <fr:tex display="inline"><![CDATA[A]]></fr:tex>,
+    if there is an element <fr:tex display="inline"><![CDATA[\check {A}:\mathcal {U}]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}]]></fr:tex> holds.
 </html:p>
     <fr:tree show-metadata="false">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Enough Universe">Enough Universe</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <html:p>
-        Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
-        If we have only one <fr:tex display="inline">\mathcal {U}</fr:tex>, the <html:strong>Russell Paradox</html:strong> may arise.
+        Sometimes we may consider the universe <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> itself to be a type in some universes.
+        If we have only one <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>, the <html:strong>Russell Paradox</html:strong> may arise.
         Therefore we assume that there are <html:strong>enough universes</html:strong></html:p>
       </fr:mainmatter>
     </fr:tree>
@@ -74,20 +75,20 @@
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>6</fr:month>
@@ -102,25 +103,25 @@
           <fr:mainmatter>
             <html:p>
     This post discuss the universe in type theory,
-    based on Egbert Rijke&apos;s <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link> and <fr:link href="/ncatlab/" title="nLab" uri="https://caimeo.space/ncatlab/" display-uri="ncatlab" type="local">NLab</fr:link>.
+    based on Egbert Rijke's <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link> and <fr:link href="/ncatlab/" title="nLab" uri="https://caimeo.space/ncatlab/" display-uri="ncatlab" type="local">NLab</fr:link>.
     In this post, we regard universe as the representation of types in an internal model 
     of the type theory (<html:strong>Tarski universe</html:strong> or <html:strong>universe à la Tarski</html:strong>).
 </html:p>
             <html:p>
-    A universe consist of a type <fr:tex display="inline">\mathcal {U}</fr:tex> with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> over <fr:tex display="inline">\mathcal {U}</fr:tex>.
-    Forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> we think of <fr:tex display="inline">X</fr:tex> as an <html:strong>encoding</html:strong> (representation) of the actual type <fr:tex display="inline">\mathcal {T}(X)</fr:tex>.
-    The type family <fr:tex display="inline">\mathcal {T}</fr:tex> is therefore called a <html:strong>unversal type family</html:strong>.
+    A universe consist of a type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> with a type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> over <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>.
+    Forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> we think of <fr:tex display="inline"><![CDATA[X]]></fr:tex> as an <html:strong>encoding</html:strong> (representation) of the actual type <fr:tex display="inline"><![CDATA[\mathcal {T}(X)]]></fr:tex>.
+    The type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> is therefore called a <html:strong>unversal type family</html:strong>.
 </html:p>
             <html:p>
     There several reasons to equip type theory with universes.
     It enables us to define new type families over inductive types, using induction principle.
-    For instance, we can define <html:strong>relations</html:strong> over <fr:tex display="inline">\mathbb {N}</fr:tex>, such as ordering relations <fr:tex display="inline">\leq </fr:tex>.
+    For instance, we can define <html:strong>relations</html:strong> over <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>, such as ordering relations <fr:tex display="inline"><![CDATA[\leq ]]></fr:tex>.
     We will soon meet the idea of <html:strong>observational equality</html:strong> for a particular type, different from identity types.
     Another reason is that it allows us to define types equipped with structure such as group.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>6</fr:month>
@@ -131,7 +132,7 @@
               <fr:mainmatter>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004E/</fr:uri>
                     <fr:display-uri>def-004E</fr:display-uri>
                     <fr:route>/def-004E/</fr:route>
@@ -140,63 +141,63 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    A <html:strong>universe</html:strong> consists of a type <fr:tex display="inline">\mathcal {U}</fr:tex> of which the elements are representations of types.
-    It is equipped with a type family <fr:tex display="inline">\mathcal {T}</fr:tex> indexed by <fr:tex display="inline">\mathcal {U}</fr:tex> called <html:strong>universal type family</html:strong>.
+    A <html:strong>universe</html:strong> consists of a type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> of which the elements are representations of types.
+    It is equipped with a type family <fr:tex display="inline"><![CDATA[\mathcal {T}]]></fr:tex> indexed by <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> called <html:strong>universal type family</html:strong>.
     The universe is closed under all the type constructors in the sense that it comes equipped with the following structure:
-    <html:ul><html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Pi </fr:tex>, equipped with a function
-            <fr:tex display="block">
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under <fr:tex display="inline"><![CDATA[\Pi ]]></fr:tex>, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {\Pi }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}
-            </fr:tex>
+            ]]></fr:tex>
             for which the judgemental equality
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {\Pi }(X,P))\equiv \Pi _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))
-            </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.
+            ]]></fr:tex>
+            holds forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[P:\mathcal {T}(X)\to \mathcal {U}]]></fr:tex>.
         </html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under <fr:tex display="inline">\Sigma </fr:tex>, equipped with a function
-            <fr:tex display="block">
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex>, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {\Sigma }:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}
-            </fr:tex>
+            ]]></fr:tex>
             for which the judgemental equality
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {\Sigma }(X,P))\equiv \Sigma _{(x:\mathcal {T}(X))}\mathcal {T}(P(x))
-            </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">P:\mathcal {T}(X)\to \mathcal {U}</fr:tex>.
+            ]]></fr:tex>
+            holds forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[P:\mathcal {T}(X)\to \mathcal {U}]]></fr:tex>.
         </html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under identity types, equipped with a function
-            <fr:tex display="block">
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under identity types, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {I}:\Pi _{(X:\mathcal {U})}\mathcal {T}(X)\to \mathcal {T}(X)\to \mathcal {U}
-            </fr:tex>
+            ]]></fr:tex>
             for which the judgemental equality
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {I}(X,x,y))\equiv  (x=y)
-            </fr:tex>
-            holds forall <fr:tex display="inline">X:\mathcal {U}</fr:tex> and <fr:tex display="inline">x,y:\mathcal {T}(X)</fr:tex>.
+            ]]></fr:tex>
+            holds forall <fr:tex display="inline"><![CDATA[X:\mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[x,y:\mathcal {T}(X)]]></fr:tex>.
         </html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> is closed under coproducts, equipped with a function
-            <fr:tex display="block">
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is closed under coproducts, equipped with a function
+            <fr:tex display="block"><![CDATA[
                 \check {+}:\Pi _{(X:\mathcal {U})}(\mathcal {T}(X)\to \mathcal {U})\to \mathcal {U}
-            </fr:tex>
-            that satisfies the judgemental equality <fr:tex display="inline">\mathcal {T}(X\check {+}P)\equiv \mathcal {T}(X)+\mathcal {T}(P)</fr:tex></html:li>
-        <html:li><fr:tex display="inline">\mathcal {U}</fr:tex> contains elements <fr:tex display="inline">\check {\textbf {1}}, \check {\textbf {0}}, \check {\mathbb {N}} : \mathcal {U}</fr:tex> that satisfies the judgemental equality
-            <fr:tex display="block">
+            ]]></fr:tex>
+            that satisfies the judgemental equality <fr:tex display="inline"><![CDATA[\mathcal {T}(X\check {+}P)\equiv \mathcal {T}(X)+\mathcal {T}(P)]]></fr:tex></html:li>
+        <html:li><fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> contains elements <fr:tex display="inline"><![CDATA[\check {\textbf {1}}, \check {\textbf {0}}, \check {\mathbb {N}} : \mathcal {U}]]></fr:tex> that satisfies the judgemental equality
+            <fr:tex display="block"><![CDATA[
                 \mathcal {T}(\check {\textbf {0}})\equiv  \textbf {0},
                 \\ \mathcal {T}(\check {\textbf {1}})\equiv  \textbf {1},
                 \\ \mathcal {T}(\check {\mathbb {N}})\equiv \mathbb {N}
-            </fr:tex></html:li></html:ul>
-    Consider a universe <fr:tex display="inline">\mathcal {U}</fr:tex> and a type <fr:tex display="inline">A</fr:tex> in context <fr:tex display="inline">\Gamma </fr:tex>.
-    We say that <fr:tex display="inline">A</fr:tex> is a type in <fr:tex display="inline">\mathcal {U}</fr:tex> or that <fr:tex display="inline">\mathcal {U}</fr:tex> contains <fr:tex display="inline">A</fr:tex>,
-    if there is an element <fr:tex display="inline">\check {A}:\mathcal {U}</fr:tex> such that <fr:tex display="inline">\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}</fr:tex> holds.
+            ]]></fr:tex></html:li></html:ul>
+    Consider a universe <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> and a type <fr:tex display="inline"><![CDATA[A]]></fr:tex> in context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>.
+    We say that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is a type in <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> or that <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> contains <fr:tex display="inline"><![CDATA[A]]></fr:tex>,
+    if there is an element <fr:tex display="inline"><![CDATA[\check {A}:\mathcal {U}]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\Gamma \vdash \mathcal {T}(\check {A})\equiv  A\space \space \text {type}]]></fr:tex> holds.
 </html:p>
                     <fr:tree show-metadata="false">
                       <fr:frontmatter>
-                        <fr:authors></fr:authors>
+                        <fr:authors />
                         <fr:title text="Enough Universe">Enough Universe</fr:title>
                       </fr:frontmatter>
                       <fr:mainmatter>
                         <html:p>
-        Sometimes we may consider the universe <fr:tex display="inline">\mathcal {U}</fr:tex> itself to be a type in some universes.
-        If we have only one <fr:tex display="inline">\mathcal {U}</fr:tex>, the <html:strong>Russell Paradox</html:strong> may arise.
+        Sometimes we may consider the universe <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> itself to be a type in some universes.
+        If we have only one <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>, the <html:strong>Russell Paradox</html:strong> may arise.
         Therefore we assume that there are <html:strong>enough universes</html:strong></html:p>
                       </fr:mainmatter>
                     </fr:tree>
@@ -204,7 +205,7 @@
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/thm-0013/</fr:uri>
                     <fr:display-uri>thm-0013</fr:display-uri>
                     <fr:route>/thm-0013/</fr:route>
@@ -213,19 +214,19 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    We assume that there&apos;re <html:strong>enough universe</html:strong>, i.e.,
+    We assume that there're <html:strong>enough universe</html:strong>, i.e.,
     for every finite list of types in context 
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \Gamma _1\vdash  A_1\space \space \text {type},\cdots ,\Gamma _n\vdash  A_n\space \space \text {type}
-    </fr:tex>
-    there is a universe <fr:tex display="inline">\mathcal {U}</fr:tex> that contains each <fr:tex display="inline">A_i</fr:tex> in the sense that <fr:tex display="inline">\mathcal {U}</fr:tex> comes equipped with
-    <fr:tex display="block">
+    ]]></fr:tex>
+    there is a universe <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> that contains each <fr:tex display="inline"><![CDATA[A_i]]></fr:tex> in the sense that <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> comes equipped with
+    <fr:tex display="block"><![CDATA[
         \Gamma _i\vdash \check {A_i}:\mathcal {U}
-    </fr:tex>
+    ]]></fr:tex>
     for which the following judgement holds:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \Gamma _i \vdash \mathcal {T}(\check {A_i})\equiv  A_i\space \space \text {type}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
@@ -233,7 +234,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004F/</fr:uri>
                     <fr:display-uri>def-004F</fr:display-uri>
                     <fr:route>/def-004F/</fr:route>
@@ -242,14 +243,14 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    The <html:strong>base universee</html:strong> <fr:tex display="inline">\mathcal {U}_0</fr:tex> is defined using <fr:link href="/thm-0013/" title="Enough Universe" uri="https://caimeo.space/thm-0013/" display-uri="thm-0013" type="local">universe postulate</fr:link>
+    The <html:strong>base universee</html:strong> <fr:tex display="inline"><![CDATA[\mathcal {U}_0]]></fr:tex> is defined using <fr:link href="/thm-0013/" title="Enough Universe" uri="https://caimeo.space/thm-0013/" display-uri="thm-0013" type="local">universe postulate</fr:link>
     with empty context.
 </html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004G/</fr:uri>
                     <fr:display-uri>def-004G</fr:display-uri>
                     <fr:route>/def-004G/</fr:route>
@@ -258,20 +259,20 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    The <html:strong>successor universee</html:strong> <fr:tex display="inline">\mathcal {U}^+</fr:tex> of a universe <fr:tex display="inline">\mathcal {U}</fr:tex> is defined using <fr:link href="/thm-0013/" title="Enough Universe" uri="https://caimeo.space/thm-0013/" display-uri="thm-0013" type="local">universe postulate</fr:link>
+    The <html:strong>successor universee</html:strong> <fr:tex display="inline"><![CDATA[\mathcal {U}^+]]></fr:tex> of a universe <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> is defined using <fr:link href="/thm-0013/" title="Enough Universe" uri="https://caimeo.space/thm-0013/" display-uri="thm-0013" type="local">universe postulate</fr:link>
     with the following contexts:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \vdash \mathcal {U}\space \space \text {type}\quad  X:\mathcal {U}\vdash \mathcal {T}(X)\space \space \text {type}
-    </fr:tex>
-    It therefore contains the type <fr:tex display="inline">\mathcal {U}</fr:tex> as well as type in <fr:tex display="inline">\mathcal {U}</fr:tex>, in the following sense
-    <fr:tex display="block">
+    ]]></fr:tex>
+    It therefore contains the type <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> as well as type in <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>, in the following sense
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            &amp;\vdash \check {\mathcal {U}}:\mathcal {U}^+\\ 
-            &amp;\vdash \mathcal {T}^+(\check {\mathcal {U}})\equiv \mathcal {U}\space \text {type}\\
-            &amp;X:\mathcal {U}\vdash \check {\mathcal {T}}(X):\mathcal {U}^+\\ 
-            &amp;X:\mathcal {U}\vdash \mathcal {T}^+(\check {\mathcal {T}}(X))\equiv \mathcal {T}(X)\space \text {type} 
+            &\vdash \check {\mathcal {U}}:\mathcal {U}^+\\ 
+            &\vdash \mathcal {T}^+(\check {\mathcal {U}})\equiv \mathcal {U}\space \text {type}\\
+            &X:\mathcal {U}\vdash \check {\mathcal {T}}(X):\mathcal {U}^+\\ 
+            &X:\mathcal {U}\vdash \mathcal {T}^+(\check {\mathcal {T}}(X))\equiv \mathcal {T}(X)\space \text {type} 
         \end {align*}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
@@ -281,7 +282,7 @@
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>6</fr:month>
@@ -291,96 +292,96 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-        Now we give the example of <html:strong>observational equality</html:strong> of <fr:tex display="inline">\mathbb {N}</fr:tex>.
+        Now we give the example of <html:strong>observational equality</html:strong> of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>.
         The key idea is to define a recursive function that reduce the arguments.
         Observational equality an inductively defined relation, which gives us an algorithm for checking
-        equality on  <fr:tex display="inline">\mathbb {N}</fr:tex>. It can be used to show that equality of natural numbers is <html:strong>decidable</html:strong>.
+        equality on  <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. It can be used to show that equality of natural numbers is <html:strong>decidable</html:strong>.
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-004H/</fr:uri>
                     <fr:display-uri>def-004H</fr:display-uri>
                     <fr:route>/def-004H/</fr:route>
-                    <fr:title text="Observational Equality of \mathbb {N}">Observational Equality of <fr:tex display="inline">\mathbb {N}</fr:tex></fr:title>
+                    <fr:title text="Observational Equality of \mathbb {N}">Observational Equality of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex></fr:title>
                     <fr:taxon>Definition</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    The observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a binary relation <fr:tex display="inline">\text {Eq}_\mathbb {N}:\mathbb {N}\to (\mathbb {N}\to \mathcal {U}_0)</fr:tex> satisfies
-    <fr:tex display="block">
+    The observational equality of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> is a binary relation <fr:tex display="inline"><![CDATA[\text {Eq}_\mathbb {N}:\mathbb {N}\to (\mathbb {N}\to \mathcal {U}_0)]]></fr:tex> satisfies
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {Eq}_\mathbb {N}(0)(0) &amp;\equiv  \textbf {1} \\
-            \text {Eq}_\mathbb {N}(0)(\text {succ}(n)) &amp;\equiv  \textbf {0} \\
-            \text {Eq}_\mathbb {N}(\text {succ}(m))(0) &amp;\equiv  \textbf {0} \\
-            \text {Eq}_\mathbb {N}(\text {succ}(m))(\text {succ}(n)) &amp;\equiv  \text {Eq}_\mathbb {N}(m)(n)
+            \text {Eq}_\mathbb {N}(0)(0) &\equiv  \textbf {1} \\
+            \text {Eq}_\mathbb {N}(0)(\text {succ}(n)) &\equiv  \textbf {0} \\
+            \text {Eq}_\mathbb {N}(\text {succ}(m))(0) &\equiv  \textbf {0} \\
+            \text {Eq}_\mathbb {N}(\text {succ}(m))(\text {succ}(n)) &\equiv  \text {Eq}_\mathbb {N}(m)(n)
         \end {align*}
-    </fr:tex>
+    ]]></fr:tex>
     
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors></fr:authors><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
-        We define <fr:tex display="inline">\text {Eq}</fr:tex> by double induction on <fr:tex display="inline">\mathbb {N}</fr:tex>. By the first application of induction
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+        We define <fr:tex display="inline"><![CDATA[\text {Eq}]]></fr:tex> by double induction on <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. By the first application of induction
         it suffices to provide
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                &amp;E_0:\mathbb {N}\to \mathcal {U}_0 \\ 
-                &amp;E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))
+                &E_0:\mathbb {N}\to \mathcal {U}_0 \\ 
+                &E_S:\mathbb {N}\to ((\mathbb {N}\to \mathcal {U}_0)\to (\mathbb {N}\to \mathcal {U}_0))
             \end {align*}
-        </fr:tex>
-        we define <fr:tex display="inline">E_0</fr:tex> by induction:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        we define <fr:tex display="inline"><![CDATA[E_0]]></fr:tex> by induction:
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                &amp;E_0(0) \equiv \textbf {1}\\ 
-                &amp;E_0(\text {succ}(n)) \equiv \textbf {0}
+                &E_0(0) \equiv \textbf {1}\\ 
+                &E_0(\text {succ}(n)) \equiv \textbf {0}
             \end {align*}
-        </fr:tex>
-        and also define <fr:tex display="inline">E_S</fr:tex> by induction:
-        <fr:tex display="block">
+        ]]></fr:tex>
+        and also define <fr:tex display="inline"><![CDATA[E_S]]></fr:tex> by induction:
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                &amp;E_S(n,X,0)\equiv \textbf {0}\\ 
-                &amp;E_S(n,X,\text {succ}(m))\equiv  X(m)
+                &E_S(n,X,0)\equiv \textbf {0}\\ 
+                &E_S(n,X,\text {succ}(m))\equiv  X(m)
             \end {align*}
-        </fr:tex>
+        ]]></fr:tex>
         Therefore we have by the computation rule for the first induction that 
         the following judgemental equality holds.
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \text {Eq}(0,m) &amp;\equiv  E_0(m) \\
-                \text {Eq}(\text {succ}(n),m) &amp;\equiv  E_S(n,\text {Eq}(n),m)
+                \text {Eq}(0,m) &\equiv  E_0(m) \\
+                \text {Eq}(\text {succ}(n),m) &\equiv  E_S(n,\text {Eq}(n),m)
             \end {align*}
-        </fr:tex>
+        ]]></fr:tex>
     </fr:mainmatter></fr:tree></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
-        Observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> is a reflexive relation, i.e. we have
-        <fr:tex display="block">
+        Observational equality of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> is a reflexive relation, i.e. we have
+        <fr:tex display="block"><![CDATA[
             \text {refl-Eq}_\mathbb {N}:\Pi _{(n:\mathbb {N})}\text {Eq}_\mathbb {N}(n,n)
-        </fr:tex>
-        which is witnessed by induction on <fr:tex display="inline">n</fr:tex>.
-        <fr:tex display="block">
+        ]]></fr:tex>
+        which is witnessed by induction on <fr:tex display="inline"><![CDATA[n]]></fr:tex>.
+        <fr:tex display="block"><![CDATA[
             \begin {align*}
-                \text {refl-Eq}_\mathbb {N}(0) &amp;\equiv \star  \\ 
-                \text {refl-Eq}_\mathbb {N}(\text {succ}(n)) &amp;\equiv \text {refl-Eq}_\mathbb {N}(n)
+                \text {refl-Eq}_\mathbb {N}(0) &\equiv \star  \\ 
+                \text {refl-Eq}_\mathbb {N}(\text {succ}(n)) &\equiv \text {refl-Eq}_\mathbb {N}(n)
             \end {align*}
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
                 <html:p>
         This leads to an interesting dual perspective on equality. 
-        For any two natural numbers <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> we have
-        <fr:tex display="block">
+        For any two natural numbers <fr:tex display="inline"><![CDATA[m]]></fr:tex> and <fr:tex display="inline"><![CDATA[n]]></fr:tex> we have
+        <fr:tex display="block"><![CDATA[
             (m=n)\leftrightarrow \text {Eq}_\mathbb {N}(m,n)
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
                 <html:p>
-        Using the observational equality of <fr:tex display="inline">\mathbb {N}</fr:tex> we can prove Peano&apos;s seventh and eighth
+        Using the observational equality of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> we can prove Peano's seventh and eighth
         axioms.
         <html:ul><html:li>
-                For any two natural numbers <fr:tex display="inline">m</fr:tex> and <fr:tex display="inline">n</fr:tex> we have 
-                <fr:tex display="block">
+                For any two natural numbers <fr:tex display="inline"><![CDATA[m]]></fr:tex> and <fr:tex display="inline"><![CDATA[n]]></fr:tex> we have 
+                <fr:tex display="block"><![CDATA[
                     (m = n)\leftrightarrow (\text {succ}(m) = \text {succ}(n))
-                </fr:tex></html:li>
+                ]]></fr:tex></html:li>
             <html:li>
-                For any natural number <fr:tex display="inline">n</fr:tex> we have <fr:tex display="inline">0 \not = \text {succ}(n)</fr:tex></html:li></html:ul></html:p>
+                For any natural number <fr:tex display="inline"><![CDATA[n]]></fr:tex> we have <fr:tex display="inline"><![CDATA[0 \not = \text {succ}(n)]]></fr:tex></html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>
@@ -389,24 +390,24 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

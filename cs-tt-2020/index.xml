@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors>
       <fr:author>
@@ -12,31 +13,31 @@
     <fr:title text="Categorical Semantics for Type Theories">Categorical Semantics for Type Theories</fr:title>
     <fr:taxon>reference</fr:taxon>
   </fr:frontmatter>
-  <fr:mainmatter></fr:mainmatter>
+  <fr:mainmatter />
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>3</fr:month>
@@ -55,7 +56,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>3</fr:month>
@@ -78,7 +79,7 @@
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>3</fr:month>
@@ -92,7 +93,7 @@
         The most basic definition is the <html:strong>category</html:strong></html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-003E/</fr:uri>
                     <fr:display-uri>def-003E</fr:display-uri>
                     <fr:route>/def-003E/</fr:route>
@@ -100,57 +101,57 @@
                     <fr:taxon>Definition</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="With one collection"><html:strong>With one collection</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
-    A <html:strong>category</html:strong> <fr:tex display="inline">C</fr:tex> consists
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="With one collection"><html:strong>With one collection</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    A <html:strong>category</html:strong> <fr:tex display="inline"><![CDATA[C]]></fr:tex> consists
     <html:ul><html:li>
-            A collection of <html:strong>objects</html:strong> <fr:tex display="inline">C_0</fr:tex> (<fr:tex display="inline">\text {Ob}(C)</fr:tex>).
+            A collection of <html:strong>objects</html:strong> <fr:tex display="inline"><![CDATA[C_0]]></fr:tex> (<fr:tex display="inline"><![CDATA[\text {Ob}(C)]]></fr:tex>).
         </html:li>
         <html:li>
-            A collection <fr:tex display="inline">C_1</fr:tex> (<fr:tex display="inline">\text {Mor}(C)</fr:tex>) of <html:strong>morphisms</html:strong> (arrows).
+            A collection <fr:tex display="inline"><![CDATA[C_1]]></fr:tex> (<fr:tex display="inline"><![CDATA[\text {Mor}(C)]]></fr:tex>) of <html:strong>morphisms</html:strong> (arrows).
         </html:li>
         <html:li>
-            For every morphism <fr:tex display="inline">f</fr:tex> there are an object <fr:tex display="inline">s(f)</fr:tex> (<html:strong>source</html:strong>, domain) and an object <fr:tex display="inline">t(f)</fr:tex> (<html:strong>target</html:strong>, codomain).
+            For every morphism <fr:tex display="inline"><![CDATA[f]]></fr:tex> there are an object <fr:tex display="inline"><![CDATA[s(f)]]></fr:tex> (<html:strong>source</html:strong>, domain) and an object <fr:tex display="inline"><![CDATA[t(f)]]></fr:tex> (<html:strong>target</html:strong>, codomain).
         </html:li>
         <html:li>
-            For every pair of morphisms <fr:tex display="inline">f, g</fr:tex> such that <fr:tex display="inline">t(f) = s(g)</fr:tex>, there is a morphism <fr:tex display="inline">g \circ  f</fr:tex> (<html:strong>composition</html:strong>) (Also written <fr:tex display="inline">gf</fr:tex> or <fr:tex display="inline">f;g</fr:tex>).
+            For every pair of morphisms <fr:tex display="inline"><![CDATA[f, g]]></fr:tex> such that <fr:tex display="inline"><![CDATA[t(f) = s(g)]]></fr:tex>, there is a morphism <fr:tex display="inline"><![CDATA[g \circ  f]]></fr:tex> (<html:strong>composition</html:strong>) (Also written <fr:tex display="inline"><![CDATA[gf]]></fr:tex> or <fr:tex display="inline"><![CDATA[f;g]]></fr:tex>).
         </html:li>
         <html:li>
-            For every object <fr:tex display="inline">x</fr:tex>, there is a morphism <fr:tex display="inline">\text {id}_x</fr:tex> (or <fr:tex display="inline">1_x</fr:tex>) called <html:strong>identity</html:strong>.
+            For every object <fr:tex display="inline"><![CDATA[x]]></fr:tex>, there is a morphism <fr:tex display="inline"><![CDATA[\text {id}_x]]></fr:tex> (or <fr:tex display="inline"><![CDATA[1_x]]></fr:tex>) called <html:strong>identity</html:strong>.
         </html:li>
         <html:li>
             The following properties hold:
-            <html:ul><html:li><fr:tex display="inline">s(g \circ  f) = s(f)</fr:tex> and <fr:tex display="inline">t(g \circ  f) = t(g)</fr:tex>.
+            <html:ul><html:li><fr:tex display="inline"><![CDATA[s(g \circ  f) = s(f)]]></fr:tex> and <fr:tex display="inline"><![CDATA[t(g \circ  f) = t(g)]]></fr:tex>.
                 </html:li>
-                <html:li><fr:tex display="inline">s(1_x) = x</fr:tex> and <fr:tex display="inline">t(1_x) = x</fr:tex>.
-                </html:li>
-                <html:li>
-                    Composition is <html:strong>associative</html:strong>: <fr:tex display="inline">h \circ  (g \circ  f) = (h \circ  g) \circ  f</fr:tex> when <fr:tex display="inline">t(f) = s(g)</fr:tex>, and <fr:tex display="inline">t(g) = s(h)</fr:tex>.
+                <html:li><fr:tex display="inline"><![CDATA[s(1_x) = x]]></fr:tex> and <fr:tex display="inline"><![CDATA[t(1_x) = x]]></fr:tex>.
                 </html:li>
                 <html:li>
-                    Composition satisfies the <html:strong>identity laws</html:strong>: <fr:tex display="inline">f \circ  \text {id}_x = f</fr:tex> and <fr:tex display="inline">\text {id}_y \circ  f = f</fr:tex></html:li></html:ul></html:li></html:ul>
+                    Composition is <html:strong>associative</html:strong>: <fr:tex display="inline"><![CDATA[h \circ  (g \circ  f) = (h \circ  g) \circ  f]]></fr:tex> when <fr:tex display="inline"><![CDATA[t(f) = s(g)]]></fr:tex>, and <fr:tex display="inline"><![CDATA[t(g) = s(h)]]></fr:tex>.
+                </html:li>
+                <html:li>
+                    Composition satisfies the <html:strong>identity laws</html:strong>: <fr:tex display="inline"><![CDATA[f \circ  \text {id}_x = f]]></fr:tex> and <fr:tex display="inline"><![CDATA[\text {id}_y \circ  f = f]]></fr:tex></html:li></html:ul></html:li></html:ul>
     If the identity map and its axioms are omitted then one speaks of a <html:strong>semicategory</html:strong>.
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="With a family of collections of morphisms"><html:strong>With a family of collections of morphisms</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
-    A <html:strong>category</html:strong> <fr:tex display="inline">C</fr:tex> consists
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="With a family of collections of morphisms"><html:strong>With a family of collections of morphisms</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    A <html:strong>category</html:strong> <fr:tex display="inline"><![CDATA[C]]></fr:tex> consists
     <html:ul><html:li>
-            A collection of <html:strong>objects</html:strong> <fr:tex display="inline">C_0</fr:tex> (<fr:tex display="inline">\text {Ob}(C)</fr:tex>).
+            A collection of <html:strong>objects</html:strong> <fr:tex display="inline"><![CDATA[C_0]]></fr:tex> (<fr:tex display="inline"><![CDATA[\text {Ob}(C)]]></fr:tex>).
         </html:li>
         <html:li>
-            For every pair of objects <fr:tex display="inline">x, y</fr:tex>, a collection <fr:tex display="inline">C_1(x, y)</fr:tex> (<fr:tex display="inline">\hom _C(x,y)</fr:tex>) of <html:strong>morphisms</html:strong> from <fr:tex display="inline">x</fr:tex> to <fr:tex display="inline">y</fr:tex>.
+            For every pair of objects <fr:tex display="inline"><![CDATA[x, y]]></fr:tex>, a collection <fr:tex display="inline"><![CDATA[C_1(x, y)]]></fr:tex> (<fr:tex display="inline"><![CDATA[\hom _C(x,y)]]></fr:tex>) of <html:strong>morphisms</html:strong> from <fr:tex display="inline"><![CDATA[x]]></fr:tex> to <fr:tex display="inline"><![CDATA[y]]></fr:tex>.
         </html:li>
         <html:li>
-            For each pair of morphisms <fr:tex display="inline">f</fr:tex> in <fr:tex display="inline">C_1(x,y)</fr:tex> and <fr:tex display="inline">g</fr:tex> in <fr:tex display="inline">C_1(y,z)</fr:tex>, a morphism <fr:tex display="inline">g \circ  f</fr:tex> in <fr:tex display="inline">C_1(x,z)</fr:tex>.
+            For each pair of morphisms <fr:tex display="inline"><![CDATA[f]]></fr:tex> in <fr:tex display="inline"><![CDATA[C_1(x,y)]]></fr:tex> and <fr:tex display="inline"><![CDATA[g]]></fr:tex> in <fr:tex display="inline"><![CDATA[C_1(y,z)]]></fr:tex>, a morphism <fr:tex display="inline"><![CDATA[g \circ  f]]></fr:tex> in <fr:tex display="inline"><![CDATA[C_1(x,z)]]></fr:tex>.
             called their <html:strong>composition</html:strong>.
         </html:li>
         <html:li>
-            For each object <fr:tex display="inline">x</fr:tex>, a morphism <fr:tex display="inline">\text {id}_x</fr:tex> in <fr:tex display="inline">C_1(x,x)</fr:tex> called the <html:strong>identity</html:strong> on <fr:tex display="inline">x</fr:tex>.
+            For each object <fr:tex display="inline"><![CDATA[x]]></fr:tex>, a morphism <fr:tex display="inline"><![CDATA[\text {id}_x]]></fr:tex> in <fr:tex display="inline"><![CDATA[C_1(x,x)]]></fr:tex> called the <html:strong>identity</html:strong> on <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
         </html:li>
         <html:li>
             The following properties hold:
-            <html:ul><html:li>Composition is <html:strong>associative</html:strong>: <fr:tex display="inline">h \circ  (g \circ  f) = (h \circ  g) \circ  f</fr:tex> for all <fr:tex display="inline">f</fr:tex> in <fr:tex display="inline">C_1(x,y)</fr:tex>, <fr:tex display="inline">g</fr:tex> in <fr:tex display="inline">C_1(y,z)</fr:tex>, and <fr:tex display="inline">h</fr:tex> in <fr:tex display="inline">C_1(z,w)</fr:tex>.</html:li>
-                <html:li>Composition satisfies the <html:strong>identity laws</html:strong>: <fr:tex display="inline">f \circ  \text {id}_x = f</fr:tex> and <fr:tex display="inline">\text {id}_y \circ  f = f</fr:tex> for all <fr:tex display="inline">f</fr:tex> in <fr:tex display="inline">C_1(x,y)</fr:tex>.</html:li></html:ul></html:li></html:ul>
-    Usually we write <fr:tex display="inline">\text {Mor}(C)</fr:tex> for the disjoint union <fr:tex display="inline">\bigsqcup _{x,y \in  C_0} C_1(x,y)</fr:tex>.
+            <html:ul><html:li>Composition is <html:strong>associative</html:strong>: <fr:tex display="inline"><![CDATA[h \circ  (g \circ  f) = (h \circ  g) \circ  f]]></fr:tex> for all <fr:tex display="inline"><![CDATA[f]]></fr:tex> in <fr:tex display="inline"><![CDATA[C_1(x,y)]]></fr:tex>, <fr:tex display="inline"><![CDATA[g]]></fr:tex> in <fr:tex display="inline"><![CDATA[C_1(y,z)]]></fr:tex>, and <fr:tex display="inline"><![CDATA[h]]></fr:tex> in <fr:tex display="inline"><![CDATA[C_1(z,w)]]></fr:tex>.</html:li>
+                <html:li>Composition satisfies the <html:strong>identity laws</html:strong>: <fr:tex display="inline"><![CDATA[f \circ  \text {id}_x = f]]></fr:tex> and <fr:tex display="inline"><![CDATA[\text {id}_y \circ  f = f]]></fr:tex> for all <fr:tex display="inline"><![CDATA[f]]></fr:tex> in <fr:tex display="inline"><![CDATA[C_1(x,y)]]></fr:tex>.</html:li></html:ul></html:li></html:ul>
+    Usually we write <fr:tex display="inline"><![CDATA[\text {Mor}(C)]]></fr:tex> for the disjoint union <fr:tex display="inline"><![CDATA[\bigsqcup _{x,y \in  C_0} C_1(x,y)]]></fr:tex>.
 </fr:mainmatter></fr:tree>
 </fr:mainmatter>
                 </fr:tree>
@@ -163,12 +164,12 @@
     </html:p>
                 <html:p>
         Since category theory is constructed to study structures and a category is actually a structure,
-        we can talk about the category of all small categories <fr:tex display="inline">\mathbf {Cat}</fr:tex>. Similar to morphisms, we can 
+        we can talk about the category of all small categories <fr:tex display="inline"><![CDATA[\mathbf {Cat}]]></fr:tex>. Similar to morphisms, we can 
         define <html:strong>functor</html:strong> between categories.
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-003G/</fr:uri>
                     <fr:display-uri>def-003G</fr:display-uri>
                     <fr:route>/def-003G/</fr:route>
@@ -177,14 +178,14 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    A <html:strong>functor</html:strong> <fr:tex display="inline">F</fr:tex> from a category <fr:tex display="inline">C</fr:tex> to a category <fr:tex display="inline">D</fr:tex> is a map
-    sending each <fr:tex display="inline">x\in  C</fr:tex> to an object <fr:tex display="inline">F(x)\in  D</fr:tex> and each morphism
-    <fr:tex display="inline">f:x\to  y</fr:tex> in <fr:tex display="inline">C</fr:tex> to morphism <fr:tex display="inline">F(f):F(x)\to  F(y)</fr:tex> in <fr:tex display="inline">D</fr:tex>, such that 
+    A <html:strong>functor</html:strong> <fr:tex display="inline"><![CDATA[F]]></fr:tex> from a category <fr:tex display="inline"><![CDATA[C]]></fr:tex> to a category <fr:tex display="inline"><![CDATA[D]]></fr:tex> is a map
+    sending each <fr:tex display="inline"><![CDATA[x\in  C]]></fr:tex> to an object <fr:tex display="inline"><![CDATA[F(x)\in  D]]></fr:tex> and each morphism
+    <fr:tex display="inline"><![CDATA[f:x\to  y]]></fr:tex> in <fr:tex display="inline"><![CDATA[C]]></fr:tex> to morphism <fr:tex display="inline"><![CDATA[F(f):F(x)\to  F(y)]]></fr:tex> in <fr:tex display="inline"><![CDATA[D]]></fr:tex>, such that 
     <html:ul><html:li>
-            Composition is preserved: <fr:tex display="inline">F(g\circ  f) = F(g)\circ  F(f)</fr:tex>.
+            Composition is preserved: <fr:tex display="inline"><![CDATA[F(g\circ  f) = F(g)\circ  F(f)]]></fr:tex>.
         </html:li>
         <html:li>
-            Identity is preserved: <fr:tex display="inline">F(\text {id}_x) = \text {id}_{F(x)}</fr:tex>.
+            Identity is preserved: <fr:tex display="inline"><![CDATA[F(\text {id}_x) = \text {id}_{F(x)}]]></fr:tex>.
         </html:li></html:ul></html:p>
                   </fr:mainmatter>
                 </fr:tree>
@@ -193,7 +194,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-003I/</fr:uri>
                     <fr:display-uri>def-003I</fr:display-uri>
                     <fr:route>/def-003I/</fr:route>
@@ -202,10 +203,10 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    Let <fr:tex display="inline">C</fr:tex> and <fr:tex display="inline">D</fr:tex> be categories, the functor category <fr:tex display="inline">D^C</fr:tex> 
-    (or <fr:tex display="inline">[C,D]</fr:tex>) is the category whose
+    Let <fr:tex display="inline"><![CDATA[C]]></fr:tex> and <fr:tex display="inline"><![CDATA[D]]></fr:tex> be categories, the functor category <fr:tex display="inline"><![CDATA[D^C]]></fr:tex> 
+    (or <fr:tex display="inline"><![CDATA[[C,D]]]></fr:tex>) is the category whose
     <html:ul><html:li>
-            objects are functors from <fr:tex display="inline">C</fr:tex> to <fr:tex display="inline">D</fr:tex>.
+            objects are functors from <fr:tex display="inline"><![CDATA[C]]></fr:tex> to <fr:tex display="inline"><![CDATA[D]]></fr:tex>.
         </html:li>
         <html:li>
             morphisms are <html:strong>natural transformations</html:strong> between functors.
@@ -215,11 +216,11 @@
                 <html:p>
         Here we use a <html:strong>commutative diagram</html:strong> to represent a natural transformation.
         When a diagram commutes, morphisms composed by different paths with the same end points
-        are equal. The following diagram represents the equality that <fr:tex display="inline">G(f)\circ \alpha _x = \alpha _y\circ  F(f)</fr:tex>.
+        are equal. The following diagram represents the equality that <fr:tex display="inline"><![CDATA[G(f)\circ \alpha _x = \alpha _y\circ  F(f)]]></fr:tex>.
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-003J/</fr:uri>
                     <fr:display-uri>def-003J</fr:display-uri>
                     <fr:route>/def-003J/</fr:route>
@@ -228,15 +229,15 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    Let <fr:tex display="inline">C</fr:tex> and <fr:tex display="inline">D</fr:tex> be categories and <fr:tex display="inline">F,G:C\to  D</fr:tex> be functors.
-    A <html:strong>natural transformation</html:strong> <fr:tex display="inline">\alpha :F\Rightarrow   G</fr:tex> is 
-    an assignment to every object <fr:tex display="inline">x\in  C</fr:tex> of a morphism <fr:tex display="inline">\alpha _x:F(x)\to  G(x)</fr:tex> in <fr:tex display="inline">D</fr:tex>,
-    (called the <html:strong>component</html:strong> of <fr:tex display="inline">\alpha </fr:tex> at <fr:tex display="inline">x</fr:tex>)
-    the following diagram commutes in <fr:tex display="inline">D</fr:tex>:
+    Let <fr:tex display="inline"><![CDATA[C]]></fr:tex> and <fr:tex display="inline"><![CDATA[D]]></fr:tex> be categories and <fr:tex display="inline"><![CDATA[F,G:C\to  D]]></fr:tex> be functors.
+    A <html:strong>natural transformation</html:strong> <fr:tex display="inline"><![CDATA[\alpha :F\Rightarrow   G]]></fr:tex> is 
+    an assignment to every object <fr:tex display="inline"><![CDATA[x\in  C]]></fr:tex> of a morphism <fr:tex display="inline"><![CDATA[\alpha _x:F(x)\to  G(x)]]></fr:tex> in <fr:tex display="inline"><![CDATA[D]]></fr:tex>,
+    (called the <html:strong>component</html:strong> of <fr:tex display="inline"><![CDATA[\alpha ]]></fr:tex> at <fr:tex display="inline"><![CDATA[x]]></fr:tex>)
+    the following diagram commutes in <fr:tex display="inline"><![CDATA[D]]></fr:tex>:
     
  
   
-  <html:figure><fr:resource hash="b5e91e181820d504fc4e45a8daad99b3"><fr:resource-content><html:img src="/b5e91e181820d504fc4e45a8daad99b3.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="b5e91e181820d504fc4e45a8daad99b3"><fr:resource-content><html:img src="/b5e91e181820d504fc4e45a8daad99b3.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -254,7 +255,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -347,7 +348,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -359,7 +360,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -371,7 +372,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -404,10 +405,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -499,12 +500,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -512,24 +513,24 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            {F(x)} &amp;&amp; {F(y)} \\
+            {F(x)} && {F(y)} \\
             \\
-            {G(x)} &amp;&amp; {G(y)}
-            \arrow [&quot;{F(f)}&quot;, from=1-1, to=1-3]
-            \arrow [&quot;{G(f)}&quot;, from=3-1, to=3-3]
-            \arrow [&quot;{\alpha _x}&quot;, from=1-1, to=3-1]
-            \arrow [&quot;{\alpha _y}&quot;, from=1-3, to=3-3]
+            {G(x)} && {G(y)}
+            \arrow ["{F(f)}", from=1-1, to=1-3]
+            \arrow ["{G(f)}", from=3-1, to=3-3]
+            \arrow ["{\alpha _x}", from=1-1, to=3-1]
+            \arrow ["{\alpha _y}", from=1-3, to=3-3]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure></html:p>
+    ]]></fr:resource-source></fr:resource></html:figure></html:p>
                   </fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>3</fr:month>
@@ -546,7 +547,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-003P/</fr:uri>
                     <fr:display-uri>def-003P</fr:display-uri>
                     <fr:route>/def-003P/</fr:route>
@@ -555,29 +556,29 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    Given any category <fr:tex display="inline">\mathcal {C}</fr:tex>, and any set <fr:tex display="inline">\{X_i\}_{i\in  I}</fr:tex> of
+    Given any category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>, and any set <fr:tex display="inline"><![CDATA[\{X_i\}_{i\in  I}]]></fr:tex> of
     its objects, the product of all these objects is, if it exists, an object
-    <fr:tex display="inline">
+    <fr:tex display="inline"><![CDATA[
         \prod _{i\in  I} X_i \in  \mathcal {C}
-    </fr:tex>
+    ]]></fr:tex>
     equipped with morphisms (projections)
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         p_i : \left (\prod _{i\in  I} X_i\right ) \to  X_i
-    </fr:tex>
-    for each <fr:tex display="inline">i\in  I</fr:tex>, such that it is <html:strong>universal with this property</html:strong>, i.e.
-    such that given any other object <fr:tex display="inline">Q\in  C</fr:tex> with morphisms
-    <fr:tex display="inline">
+    ]]></fr:tex>
+    for each <fr:tex display="inline"><![CDATA[i\in  I]]></fr:tex>, such that it is <html:strong>universal with this property</html:strong>, i.e.
+    such that given any other object <fr:tex display="inline"><![CDATA[Q\in  C]]></fr:tex> with morphisms
+    <fr:tex display="inline"><![CDATA[
         Q \xrightarrow {f_i} X_i 
-    </fr:tex>
+    ]]></fr:tex>
     there is a <html:strong>unique</html:strong> morphism
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         (f_i)_{i\in  I} : Q \to  \prod _{i\in  I} X_i
-    </fr:tex>
+    ]]></fr:tex>
     where the following diagram commutes:
     
  
   
-  <html:figure><fr:resource hash="d048e45614c73265beb2fc1d1f8d51d6"><fr:resource-content><html:img src="/d048e45614c73265beb2fc1d1f8d51d6.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="d048e45614c73265beb2fc1d1f8d51d6"><fr:resource-content><html:img src="/d048e45614c73265beb2fc1d1f8d51d6.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -595,7 +596,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -688,7 +689,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -700,7 +701,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -712,7 +713,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -745,10 +746,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -840,12 +841,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -853,16 +854,16 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
             Q \\
             \\
-            {\prod _{i\in  I} X_i} &amp;&amp; {X_i}
-            \arrow [&quot;{p_i}&quot;, from=3-1, to=3-3]
-            \arrow [&quot;{f_i}&quot;, from=1-1, to=3-3]
-            \arrow [&quot;{(f_i)_{i\in  I}}&quot;&apos;, from=1-1, to=3-1]
+            {\prod _{i\in  I} X_i} && {X_i}
+            \arrow ["{p_i}", from=3-1, to=3-3]
+            \arrow ["{f_i}", from=1-1, to=3-3]
+            \arrow ["{(f_i)_{i\in  I}}"', from=1-1, to=3-1]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure></html:p>
+    ]]></fr:resource-source></fr:resource></html:figure></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>
@@ -871,7 +872,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-003Q/</fr:uri>
                     <fr:display-uri>def-003Q</fr:display-uri>
                     <fr:route>/def-003Q/</fr:route>
@@ -880,9 +881,9 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    A <html:strong>terminal object</html:strong> in a category <fr:tex display="inline">\mathcal {C}</fr:tex> is an object <fr:tex display="inline">\top </fr:tex> of <fr:tex display="inline">\mathcal {C}</fr:tex> 
-    satisfying the following universal property: for any object <fr:tex display="inline">X</fr:tex> in <fr:tex display="inline">\mathcal {C}</fr:tex>,
-    there exists a unique morphism <fr:tex display="inline">!:X\to  \top </fr:tex>.
+    A <html:strong>terminal object</html:strong> in a category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> is an object <fr:tex display="inline"><![CDATA[\top ]]></fr:tex> of <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> 
+    satisfying the following universal property: for any object <fr:tex display="inline"><![CDATA[X]]></fr:tex> in <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>,
+    there exists a unique morphism <fr:tex display="inline"><![CDATA[!:X\to  \top ]]></fr:tex>.
 </html:p>
                   </fr:mainmatter>
                 </fr:tree>
@@ -893,7 +894,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-003R/</fr:uri>
                     <fr:display-uri>def-003R</fr:display-uri>
                     <fr:route>/def-003R/</fr:route>
@@ -902,8 +903,8 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    For a category <fr:tex display="inline">\mathcal {C}</fr:tex>, the <html:strong>opposite category</html:strong> <fr:tex display="inline">\mathcal {C}^{op}</fr:tex> 
-    has the same objects as <fr:tex display="inline">\mathcal {C}</fr:tex>, but the morphisms are reversed.
+    For a category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>, the <html:strong>opposite category</html:strong> <fr:tex display="inline"><![CDATA[\mathcal {C}^{op}]]></fr:tex> 
+    has the same objects as <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>, but the morphisms are reversed.
 </html:p>
                   </fr:mainmatter>
                 </fr:tree>
@@ -913,7 +914,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:uri>https://caimeo.space/def-003S/</fr:uri>
                     <fr:display-uri>def-003S</fr:display-uri>
                     <fr:route>/def-003S/</fr:route>
@@ -922,16 +923,16 @@
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-    For <fr:tex display="inline">\mathcal {C}</fr:tex> a category and <fr:tex display="inline">X, Y \in \text {Ob}{\mathcal {C}}</fr:tex>,
-    the <html:strong>coproduct</html:strong> is an object <fr:tex display="inline">X\sqcup   Y</fr:tex> equipped with 
-    two morphisms <fr:tex display="inline">i_X:X\to  X\sqcup   Y</fr:tex> and <fr:tex display="inline">i_Y:Y\to  X\sqcup   Y</fr:tex> such that
-    it is universal with this property. That is, for any object <fr:tex display="inline">Z</fr:tex> and morphisms
-    <fr:tex display="inline">f:X\to  Z</fr:tex> and <fr:tex display="inline">g:Y\to  Z</fr:tex>, there exists a unique morphism <fr:tex display="inline">\langle  f, g\rangle :X\sqcup   Y\to  Z</fr:tex>
+    For <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> a category and <fr:tex display="inline"><![CDATA[X, Y \in \text {Ob}{\mathcal {C}}]]></fr:tex>,
+    the <html:strong>coproduct</html:strong> is an object <fr:tex display="inline"><![CDATA[X\sqcup   Y]]></fr:tex> equipped with 
+    two morphisms <fr:tex display="inline"><![CDATA[i_X:X\to  X\sqcup   Y]]></fr:tex> and <fr:tex display="inline"><![CDATA[i_Y:Y\to  X\sqcup   Y]]></fr:tex> such that
+    it is universal with this property. That is, for any object <fr:tex display="inline"><![CDATA[Z]]></fr:tex> and morphisms
+    <fr:tex display="inline"><![CDATA[f:X\to  Z]]></fr:tex> and <fr:tex display="inline"><![CDATA[g:Y\to  Z]]></fr:tex>, there exists a unique morphism <fr:tex display="inline"><![CDATA[\langle  f, g\rangle :X\sqcup   Y\to  Z]]></fr:tex>
     such that the following diagram commutes:
     
  
   
-  <html:figure><fr:resource hash="201c2fae0554c137f88cc7a14c567ddc"><fr:resource-content><html:img src="/201c2fae0554c137f88cc7a14c567ddc.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="201c2fae0554c137f88cc7a14c567ddc"><fr:resource-content><html:img src="/201c2fae0554c137f88cc7a14c567ddc.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -949,7 +950,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -1042,7 +1043,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -1054,7 +1055,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -1066,7 +1067,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -1099,10 +1100,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -1194,12 +1195,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -1207,25 +1208,25 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            X &amp;&amp; {X\sqcup  Y} &amp;&amp; Y \\
+            X && {X\sqcup  Y} && Y \\
             \\
-            &amp;&amp; Z
-            \arrow [&quot;{[f,g]}&quot;&apos;, dashed, from=1-3, to=3-3]
-            \arrow [&quot;f&quot;&apos;, from=1-1, to=3-3]
-            \arrow [&quot;{i_Y}&quot;&apos;, from=1-5, to=1-3]
-            \arrow [&quot;{i_X}&quot;, from=1-1, to=1-3]
-            \arrow [&quot;g&quot;, from=1-5, to=3-3]
+            && Z
+            \arrow ["{[f,g]}"', dashed, from=1-3, to=3-3]
+            \arrow ["f"', from=1-1, to=3-3]
+            \arrow ["{i_Y}"', from=1-5, to=1-3]
+            \arrow ["{i_X}", from=1-1, to=1-3]
+            \arrow ["g", from=1-5, to=3-3]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure></html:p>
+    ]]></fr:resource-source></fr:resource></html:figure></html:p>
                   </fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:date>
                   <fr:year>2024</fr:year>
                   <fr:month>3</fr:month>
@@ -1244,7 +1245,7 @@
     </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:date>
                       <fr:year>2024</fr:year>
                       <fr:month>3</fr:month>
@@ -1277,7 +1278,7 @@
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:date>
                       <fr:year>2024</fr:year>
                       <fr:month>3</fr:month>
@@ -1288,11 +1289,11 @@
                   <fr:mainmatter>
                     <html:p>
             An important result from categorical semantics could be <html:strong>monads</html:strong>.
-            In <html:strong>Moggi</html:strong>&apos;s paper, he showed that monads can be used to model computational effects.
+            In <html:strong>Moggi</html:strong>'s paper, he showed that monads can be used to model computational effects.
         </html:p>
                     <fr:tree show-metadata="false">
                       <fr:frontmatter>
-                        <fr:authors></fr:authors>
+                        <fr:authors />
                         <fr:uri>https://caimeo.space/def-003T/</fr:uri>
                         <fr:display-uri>def-003T</fr:display-uri>
                         <fr:route>/def-003T/</fr:route>
@@ -1302,12 +1303,12 @@
                       <fr:mainmatter>
                         <html:p>
     
-    A <html:strong>monad</html:strong> of a category <fr:tex display="inline">\mathcal {C}</fr:tex> is an endofunctor <fr:tex display="inline">M:\mathcal {C}\to \mathcal {C}</fr:tex> with two natural
-    transformations <fr:tex display="inline">\eta :\text {id}_{\mathcal {C}}\Rightarrow  M</fr:tex> and <fr:tex display="inline">\mu :M^2\Rightarrow  M</fr:tex> satisfying the following conditions:
+    A <html:strong>monad</html:strong> of a category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> is an endofunctor <fr:tex display="inline"><![CDATA[M:\mathcal {C}\to \mathcal {C}]]></fr:tex> with two natural
+    transformations <fr:tex display="inline"><![CDATA[\eta :\text {id}_{\mathcal {C}}\Rightarrow  M]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mu :M^2\Rightarrow  M]]></fr:tex> satisfying the following conditions:
     
  
   
-  <html:figure><fr:resource hash="65b705e596b5ade3ad3981d38dbae97a"><fr:resource-content><html:img src="/65b705e596b5ade3ad3981d38dbae97a.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="65b705e596b5ade3ad3981d38dbae97a"><fr:resource-content><html:img src="/65b705e596b5ade3ad3981d38dbae97a.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -1325,7 +1326,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -1418,7 +1419,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -1430,7 +1431,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -1442,7 +1443,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -1475,10 +1476,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -1570,12 +1571,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -1583,31 +1584,31 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            {M^2(X)} &amp;&amp; {M(X)} &amp;&amp; {M^2(X)} \\
-            &amp;&amp; {M(X)} \\
+            {M^2(X)} && {M(X)} && {M^2(X)} \\
+            && {M(X)} \\
             \\
-            &amp; {M^3(X)} &amp;&amp; {M^2(X)} \\
-            &amp; {M^2(X)} &amp;&amp; {M(X)}
-            \arrow [&quot;{\mu _{M(X)}}&quot;&apos;, from=4-2, to=5-2]
-            \arrow [&quot;{\mu _X}&quot;, from=5-2, to=5-4]
-            \arrow [&quot;{1_{M(X)}}&quot;, from=1-3, to=2-3]
-            \arrow [&quot;{\mu _X}&quot;&apos;, from=1-1, to=2-3]
-            \arrow [&quot;{M(\eta _X)}&quot;&apos;, from=1-3, to=1-1]
-            \arrow [&quot;{\eta _{ M(X)}}&quot;, from=1-3, to=1-5]
-            \arrow [&quot;{\mu _X}&quot;, from=1-5, to=2-3]
-            \arrow [&quot;{\mu _X}&quot;, from=4-4, to=5-4]
-            \arrow [&quot;{M(\mu _X)}&quot;, from=4-2, to=4-4]
+            & {M^3(X)} && {M^2(X)} \\
+            & {M^2(X)} && {M(X)}
+            \arrow ["{\mu _{M(X)}}"', from=4-2, to=5-2]
+            \arrow ["{\mu _X}", from=5-2, to=5-4]
+            \arrow ["{1_{M(X)}}", from=1-3, to=2-3]
+            \arrow ["{\mu _X}"', from=1-1, to=2-3]
+            \arrow ["{M(\eta _X)}"', from=1-3, to=1-1]
+            \arrow ["{\eta _{ M(X)}}", from=1-3, to=1-5]
+            \arrow ["{\mu _X}", from=1-5, to=2-3]
+            \arrow ["{\mu _X}", from=4-4, to=5-4]
+            \arrow ["{M(\mu _X)}", from=4-2, to=4-4]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure></html:p>
+    ]]></fr:resource-source></fr:resource></html:figure></html:p>
                       </fr:mainmatter>
                     </fr:tree>
                     <html:p>
             It requires an operation over functors named <html:strong>whiskering</html:strong></html:p>
                     <fr:tree show-metadata="false">
                       <fr:frontmatter>
-                        <fr:authors></fr:authors>
+                        <fr:authors />
                         <fr:uri>https://caimeo.space/def-003U/</fr:uri>
                         <fr:display-uri>def-003U</fr:display-uri>
                         <fr:route>/def-003U/</fr:route>
@@ -1616,10 +1617,10 @@
                       </fr:frontmatter>
                       <fr:mainmatter>
                         <html:p>
-    Let <fr:tex display="inline">F,G:C\to  D</fr:tex> and <fr:tex display="inline">H,D\to  E</fr:tex> be functors and <fr:tex display="inline">\eta :F\to  G</fr:tex> be a natural 
-    transformation whose coordinate at any object <fr:tex display="inline">A</fr:tex> of <fr:tex display="inline">C</fr:tex> is <fr:tex display="inline">\eta _A</fr:tex>, then 
-    <html:strong>whiskering</html:strong> <fr:tex display="inline">H</fr:tex> and <fr:tex display="inline">\eta </fr:tex> yields the natural transformation 
-    <fr:tex display="inline">H\circ \eta :H\circ  F\to  H\circ  G</fr:tex> whose coordinate at <fr:tex display="inline">A</fr:tex> is <fr:tex display="inline">H(\eta _A)</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[F,G:C\to  D]]></fr:tex> and <fr:tex display="inline"><![CDATA[H,D\to  E]]></fr:tex> be functors and <fr:tex display="inline"><![CDATA[\eta :F\to  G]]></fr:tex> be a natural 
+    transformation whose coordinate at any object <fr:tex display="inline"><![CDATA[A]]></fr:tex> of <fr:tex display="inline"><![CDATA[C]]></fr:tex> is <fr:tex display="inline"><![CDATA[\eta _A]]></fr:tex>, then 
+    <html:strong>whiskering</html:strong> <fr:tex display="inline"><![CDATA[H]]></fr:tex> and <fr:tex display="inline"><![CDATA[\eta ]]></fr:tex> yields the natural transformation 
+    <fr:tex display="inline"><![CDATA[H\circ \eta :H\circ  F\to  H\circ  G]]></fr:tex> whose coordinate at <fr:tex display="inline"><![CDATA[A]]></fr:tex> is <fr:tex display="inline"><![CDATA[H(\eta _A)]]></fr:tex>.
 </html:p>
                       </fr:mainmatter>
                     </fr:tree>
@@ -1627,7 +1628,7 @@
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:date>
                       <fr:year>2024</fr:year>
                       <fr:month>3</fr:month>
@@ -1644,7 +1645,7 @@
         </html:p>
                     <fr:tree show-metadata="false">
                       <fr:frontmatter>
-                        <fr:authors></fr:authors>
+                        <fr:authors />
                         <fr:uri>https://caimeo.space/def-003V/</fr:uri>
                         <fr:display-uri>def-003V</fr:display-uri>
                         <fr:route>/def-003V/</fr:route>
@@ -1653,23 +1654,23 @@
                       </fr:frontmatter>
                       <fr:mainmatter>
                         <html:p>
-    Let <fr:tex display="inline">\mathcal {C}</fr:tex> and <fr:tex display="inline">\mathcal {D}</fr:tex> be categories and a pair of functors 
-    <fr:tex display="inline">F:\mathcal {C}\to \mathcal {D}</fr:tex> and <fr:tex display="inline">G:\mathcal {D}\to \mathcal {C}</fr:tex>. This is called 
-    pair of <html:strong>adjoint functors</html:strong> (or <html:strong>adjunction</html:strong>) with <fr:tex display="inline">F</fr:tex> the left adjoint
-    and <fr:tex display="inline">G</fr:tex> the right adjoint denoted 
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathcal {D}]]></fr:tex> be categories and a pair of functors 
+    <fr:tex display="inline"><![CDATA[F:\mathcal {C}\to \mathcal {D}]]></fr:tex> and <fr:tex display="inline"><![CDATA[G:\mathcal {D}\to \mathcal {C}]]></fr:tex>. This is called 
+    pair of <html:strong>adjoint functors</html:strong> (or <html:strong>adjunction</html:strong>) with <fr:tex display="inline"><![CDATA[F]]></fr:tex> the left adjoint
+    and <fr:tex display="inline"><![CDATA[G]]></fr:tex> the right adjoint denoted 
+    <fr:tex display="block"><![CDATA[
         F\dashv  G
-    </fr:tex>
+    ]]></fr:tex>
     if there is a natural isomorphism between the hom-functors:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \hom _{\mathcal {D}}(F(-),-)\cong \hom _{\mathcal {C}}(-,G(-))
-    </fr:tex>
-    which means forall objects <fr:tex display="inline">C\in \mathcal {C}</fr:tex> and <fr:tex display="inline">D\in \mathcal {D}</fr:tex>, there is a bijection
-    <fr:tex display="block">
+    ]]></fr:tex>
+    which means forall objects <fr:tex display="inline"><![CDATA[C\in \mathcal {C}]]></fr:tex> and <fr:tex display="inline"><![CDATA[D\in \mathcal {D}]]></fr:tex>, there is a bijection
+    <fr:tex display="block"><![CDATA[
         \hom _{\mathcal {D}}(F(C),D)\cong \hom _{\mathcal {C}}(C,G(D)) \\ 
         (F(C)\xrightarrow {f}D) \mapsto  (C\xrightarrow {G(f)}G(D))
-    </fr:tex>
-    which is natural in both <fr:tex display="inline">C</fr:tex> and <fr:tex display="inline">D</fr:tex>.                                                                     
+    ]]></fr:tex>
+    which is natural in both <fr:tex display="inline"><![CDATA[C]]></fr:tex> and <fr:tex display="inline"><![CDATA[D]]></fr:tex>.                                                                     
 </html:p>
                       </fr:mainmatter>
                     </fr:tree>
@@ -1683,17 +1684,17 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-000U/</fr:uri>
     <fr:display-uri>def-000U</fr:display-uri>
     <fr:route>/def-000U/</fr:route>
@@ -10,27 +11,27 @@
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
-    Given a set <fr:tex display="inline">A</fr:tex> and a property <fr:tex display="inline">P(x)</fr:tex>, there exists a set <fr:tex display="inline">B</fr:tex> such that
-    <fr:tex display="inline">x\in  B \iff  x\in  A \land  P(x)</fr:tex>.
+    Given a set <fr:tex display="inline"><![CDATA[A]]></fr:tex> and a property <fr:tex display="inline"><![CDATA[P(x)]]></fr:tex>, there exists a set <fr:tex display="inline"><![CDATA[B]]></fr:tex> such that
+    <fr:tex display="inline"><![CDATA[x\in  B \iff  x\in  A \land  P(x)]]></fr:tex>.
 </html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>1</fr:month>
@@ -58,7 +59,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000S/</fr:uri>
                 <fr:display-uri>def-000S</fr:display-uri>
                 <fr:route>/def-000S/</fr:route>
@@ -72,41 +73,41 @@
             Two sets are equal if and only if they have the same elements.
         </html:li>
         <html:li><html:strong>Axiom of Pairing</html:strong>:
-            For any two sets <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex>,
-            there exists a set <fr:tex display="inline">\{ a,b \}</fr:tex> whose elements are exactly <fr:tex display="inline">a</fr:tex> and <fr:tex display="inline">b</fr:tex>.
+            For any two sets <fr:tex display="inline"><![CDATA[a]]></fr:tex> and <fr:tex display="inline"><![CDATA[b]]></fr:tex>,
+            there exists a set <fr:tex display="inline"><![CDATA[\{ a,b \}]]></fr:tex> whose elements are exactly <fr:tex display="inline"><![CDATA[a]]></fr:tex> and <fr:tex display="inline"><![CDATA[b]]></fr:tex>.
         </html:li>
         <html:li><html:strong>Axiom schema of Separation</html:strong>:
-            Let <fr:tex display="inline">P</fr:tex> is a property of sets.
-            <fr:tex display="inline">P(u)</fr:tex> means <fr:tex display="inline">u</fr:tex> satisfies the property <fr:tex display="inline">P</fr:tex>.
-            then for any set <fr:tex display="inline">X</fr:tex> exists <fr:tex display="inline">Y = \{ u \in  X | P(u) \}</fr:tex>.
+            Let <fr:tex display="inline"><![CDATA[P]]></fr:tex> is a property of sets.
+            <fr:tex display="inline"><![CDATA[P(u)]]></fr:tex> means <fr:tex display="inline"><![CDATA[u]]></fr:tex> satisfies the property <fr:tex display="inline"><![CDATA[P]]></fr:tex>.
+            then for any set <fr:tex display="inline"><![CDATA[X]]></fr:tex> exists <fr:tex display="inline"><![CDATA[Y = \{ u \in  X | P(u) \}]]></fr:tex>.
         </html:li>
         <html:li><html:strong>Axiom of Union</html:strong>:
-            For any set <fr:tex display="inline">X</fr:tex> (a family of sets), exists union set <fr:tex display="inline">\bigcup  X :\equiv  \{ 
+            For any set <fr:tex display="inline"><![CDATA[X]]></fr:tex> (a family of sets), exists union set <fr:tex display="inline"><![CDATA[\bigcup  X :\equiv  \{ 
                 u:\exists  v\in  X \text { such that } u\in  v
-             \}</fr:tex>.
+             \}]]></fr:tex>.
         </html:li>
         <html:li><html:strong>Axiom of Power Set</html:strong>:
-            For any set <fr:tex display="inline">X</fr:tex>, exists the power <fr:tex display="inline">P(X) :\equiv  \{ Y:Y\subseteq  X \}</fr:tex>.
+            For any set <fr:tex display="inline"><![CDATA[X]]></fr:tex>, exists the power <fr:tex display="inline"><![CDATA[P(X) :\equiv  \{ Y:Y\subseteq  X \}]]></fr:tex>.
         </html:li>
         <html:li><html:strong>Axiom of Infinity</html:strong>:
-            There exists a set <fr:tex display="inline">\omega </fr:tex> such that <fr:tex display="inline">\emptyset \in \omega </fr:tex> and for any <fr:tex display="inline">x\in \omega </fr:tex>, <fr:tex display="inline">x\cup \{ x \}\in \omega </fr:tex>.
+            There exists a set <fr:tex display="inline"><![CDATA[\omega ]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\emptyset \in \omega ]]></fr:tex> and for any <fr:tex display="inline"><![CDATA[x\in \omega ]]></fr:tex>, <fr:tex display="inline"><![CDATA[x\cup \{ x \}\in \omega ]]></fr:tex>.
         </html:li>
         <html:li><html:strong>Axiom of Regularity</html:strong>:
             For any non-empty set there is a minimal element with respect to the membership relation.
         </html:li>
         <html:li><html:strong>Axiom schema of Replacement</html:strong>:
-            Let <fr:tex display="inline">F</fr:tex> be a function where <fr:tex display="inline">\text {dom } f = X</fr:tex>, then for any set <fr:tex display="inline">X</fr:tex> exists a set <fr:tex display="inline">Y = \{ F(x):x\in  X \}</fr:tex>.
+            Let <fr:tex display="inline"><![CDATA[F]]></fr:tex> be a function where <fr:tex display="inline"><![CDATA[\text {dom } f = X]]></fr:tex>, then for any set <fr:tex display="inline"><![CDATA[X]]></fr:tex> exists a set <fr:tex display="inline"><![CDATA[Y = \{ F(x):x\in  X \}]]></fr:tex>.
             <html:p>
                 This function is not the normal function but some logical stuff.
             </html:p></html:li>
         <html:li><html:strong>Axiom of Choice</html:strong>:
-            For any family of non-empty sets <fr:tex display="inline">X</fr:tex>, there exists a function <fr:tex display="inline">f:X\to \bigcup  X</fr:tex> such that for any <fr:tex display="inline">x\in  X</fr:tex>, <fr:tex display="inline">f(x)\in  x</fr:tex>.
+            For any family of non-empty sets <fr:tex display="inline"><![CDATA[X]]></fr:tex>, there exists a function <fr:tex display="inline"><![CDATA[f:X\to \bigcup  X]]></fr:tex> such that for any <fr:tex display="inline"><![CDATA[x\in  X]]></fr:tex>, <fr:tex display="inline"><![CDATA[f(x)\in  x]]></fr:tex>.
         </html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002V/</fr:uri>
                 <fr:display-uri>def-002V</fr:display-uri>
                 <fr:route>/def-002V/</fr:route>
@@ -115,57 +116,57 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">(X_i)_{i\in  I}</fr:tex> be a family of sets.
+    Let <fr:tex display="inline"><![CDATA[(X_i)_{i\in  I}]]></fr:tex> be a family of sets.
 </html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:title text="Union">Union</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-                      <fr:tex display="block">
+                      <fr:tex display="block"><![CDATA[
         \bigcup _{i\in  I}X_i = \set {x:\exists  i\in  I \text { such that } x\in  X_i}
-    </fr:tex>
+    ]]></fr:tex>
                     </html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:title text="Intersection">Intersection</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p><fr:tex display="block">
+                    <html:p><fr:tex display="block"><![CDATA[
         \bigcap _{i\in  I}X_i = \set {x:\forall  i\in  I, x\in  X_i}
-    </fr:tex>
-    Note that <fr:tex display="inline">I \neq  \emptyset </fr:tex> here.
+    ]]></fr:tex>
+    Note that <fr:tex display="inline"><![CDATA[I \neq  \emptyset ]]></fr:tex> here.
 </html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:title text="Disjoint Union">Disjoint Union</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-                      <fr:tex display="block">
+                      <fr:tex display="block"><![CDATA[
         \bigsqcup _{i\in  I}X_i = \set {(x,i):x\in  X_i, i\in  I}
-    </fr:tex>
+    ]]></fr:tex>
                     </html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
-                    <fr:authors></fr:authors>
+                    <fr:authors />
                     <fr:title text="Product">Product</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>
-                      <fr:tex display="block">
+                      <fr:tex display="block"><![CDATA[
         \prod _{i\in  I}X_i = \set {(x_i)_{i\in  I}:\forall  i\in  I, x_i\in  X_i}
-    </fr:tex>
+    ]]></fr:tex>
                     </html:p>
                   </fr:mainmatter>
                 </fr:tree>
@@ -176,7 +177,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000T/</fr:uri>
                 <fr:display-uri>def-000T</fr:display-uri>
                 <fr:route>/def-000T/</fr:route>
@@ -191,7 +192,7 @@
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000U/</fr:uri>
                 <fr:display-uri>def-000U</fr:display-uri>
                 <fr:route>/def-000U/</fr:route>
@@ -200,8 +201,8 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Given a set <fr:tex display="inline">A</fr:tex> and a property <fr:tex display="inline">P(x)</fr:tex>, there exists a set <fr:tex display="inline">B</fr:tex> such that
-    <fr:tex display="inline">x\in  B \iff  x\in  A \land  P(x)</fr:tex>.
+    Given a set <fr:tex display="inline"><![CDATA[A]]></fr:tex> and a property <fr:tex display="inline"><![CDATA[P(x)]]></fr:tex>, there exists a set <fr:tex display="inline"><![CDATA[B]]></fr:tex> such that
+    <fr:tex display="inline"><![CDATA[x\in  B \iff  x\in  A \land  P(x)]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -210,7 +211,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000V/</fr:uri>
                 <fr:display-uri>def-000V</fr:display-uri>
                 <fr:route>/def-000V/</fr:route>
@@ -219,8 +220,8 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Given two sets <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex>, the Cartesian product <fr:tex display="inline">A\times  B</fr:tex> is the set
-    of all ordered pairs <fr:tex display="inline">(a,b)</fr:tex> where <fr:tex display="inline">a\in  A</fr:tex> and <fr:tex display="inline">b\in  B</fr:tex>.
+    Given two sets <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex>, the Cartesian product <fr:tex display="inline"><![CDATA[A\times  B]]></fr:tex> is the set
+    of all ordered pairs <fr:tex display="inline"><![CDATA[(a,b)]]></fr:tex> where <fr:tex display="inline"><![CDATA[a\in  A]]></fr:tex> and <fr:tex display="inline"><![CDATA[b\in  B]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -229,7 +230,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000W/</fr:uri>
                 <fr:display-uri>def-000W</fr:display-uri>
                 <fr:route>/def-000W/</fr:route>
@@ -238,17 +239,17 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A <html:strong>relation</html:strong> <fr:tex display="inline">R</fr:tex> is a subset of the Cartesian product of two sets <fr:tex display="inline">A</fr:tex> and
-    <fr:tex display="inline">B</fr:tex>, i.e. <fr:tex display="inline">R\subseteq  A\times  B</fr:tex>.
-    If <fr:tex display="inline">(a,b)\in  R</fr:tex>, we write <fr:tex display="inline">aRb</fr:tex>.
+    A <html:strong>relation</html:strong> <fr:tex display="inline"><![CDATA[R]]></fr:tex> is a subset of the Cartesian product of two sets <fr:tex display="inline"><![CDATA[A]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[B]]></fr:tex>, i.e. <fr:tex display="inline"><![CDATA[R\subseteq  A\times  B]]></fr:tex>.
+    If <fr:tex display="inline"><![CDATA[(a,b)\in  R]]></fr:tex>, we write <fr:tex display="inline"><![CDATA[aRb]]></fr:tex>.
 
-    A relation that between <fr:tex display="inline">X</fr:tex> and itself is called <html:strong>homogeneous relation</html:strong>.
+    A relation that between <fr:tex display="inline"><![CDATA[X]]></fr:tex> and itself is called <html:strong>homogeneous relation</html:strong>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000X/</fr:uri>
                 <fr:display-uri>def-000X</fr:display-uri>
                 <fr:route>/def-000X/</fr:route>
@@ -257,21 +258,21 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    An equivalence relation <fr:tex display="inline">R</fr:tex> on a set <fr:tex display="inline">A</fr:tex> is a <fr:link href="/def-000W/" title="Relation" uri="https://caimeo.space/def-000W/" display-uri="def-000W" type="local">relation</fr:link> that is reflexive,
+    An equivalence relation <fr:tex display="inline"><![CDATA[R]]></fr:tex> on a set <fr:tex display="inline"><![CDATA[A]]></fr:tex> is a <fr:link href="/def-000W/" title="Relation" uri="https://caimeo.space/def-000W/" display-uri="def-000W" type="local">relation</fr:link> that is reflexive,
     symmetric, and transitive.
     <html:ul><html:li>Reflexive:
-            <fr:tex display="inline">\forall  x\in  A, xRx</fr:tex></html:li>
+            <fr:tex display="inline"><![CDATA[\forall  x\in  A, xRx]]></fr:tex></html:li>
         <html:li>Symmetric:
-            <fr:tex display="inline">\forall  x,y\in  A, xRy\implies  yRx</fr:tex></html:li>
+            <fr:tex display="inline"><![CDATA[\forall  x,y\in  A, xRy\implies  yRx]]></fr:tex></html:li>
         <html:li>Transitive:
-            <fr:tex display="inline">\forall  x,y,z\in  A, xRy\land  yRz\implies  xRz</fr:tex></html:li></html:ul>
-    We often denote the equivalence relation by <fr:tex display="inline">\sim </fr:tex>.
+            <fr:tex display="inline"><![CDATA[\forall  x,y,z\in  A, xRy\land  yRz\implies  xRz]]></fr:tex></html:li></html:ul>
+    We often denote the equivalence relation by <fr:tex display="inline"><![CDATA[\sim ]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002U/</fr:uri>
                 <fr:display-uri>def-002U</fr:display-uri>
                 <fr:route>/def-002U/</fr:route>
@@ -280,13 +281,13 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">\sim </fr:tex> be an <fr:link href="/def-000X/" title="Equivalence Relation" uri="https://caimeo.space/def-000X/" display-uri="def-000X" type="local">equivalence relation</fr:link> on a set <fr:tex display="inline">A</fr:tex>.
-    For any element <fr:tex display="inline">a\in  A</fr:tex>, the <html:strong>equivalence class</html:strong> of <fr:tex display="inline">a</fr:tex> is the set
-    <fr:tex display="inline">[a] = \set {b\in  A:b\sim  a}</fr:tex>.
-    The set of all equivalence classes is denoted by <fr:tex display="inline">A/\sim </fr:tex>,
-    which is called the <html:strong>quotient set</html:strong> of <fr:tex display="inline">A</fr:tex> by <fr:tex display="inline">\sim </fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[\sim ]]></fr:tex> be an <fr:link href="/def-000X/" title="Equivalence Relation" uri="https://caimeo.space/def-000X/" display-uri="def-000X" type="local">equivalence relation</fr:link> on a set <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
+    For any element <fr:tex display="inline"><![CDATA[a\in  A]]></fr:tex>, the <html:strong>equivalence class</html:strong> of <fr:tex display="inline"><![CDATA[a]]></fr:tex> is the set
+    <fr:tex display="inline"><![CDATA[[a] = \set {b\in  A:b\sim  a}]]></fr:tex>.
+    The set of all equivalence classes is denoted by <fr:tex display="inline"><![CDATA[A/\sim ]]></fr:tex>,
+    which is called the <html:strong>quotient set</html:strong> of <fr:tex display="inline"><![CDATA[A]]></fr:tex> by <fr:tex display="inline"><![CDATA[\sim ]]></fr:tex>.
     <html:p>
-        The equivalence class of <fr:tex display="inline">a</fr:tex> is also denoted by <fr:tex display="inline">\overline {a}</fr:tex>.
+        The equivalence class of <fr:tex display="inline"><![CDATA[a]]></fr:tex> is also denoted by <fr:tex display="inline"><![CDATA[\overline {a}]]></fr:tex>.
     </html:p></html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -296,7 +297,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000Z/</fr:uri>
                 <fr:display-uri>def-000Z</fr:display-uri>
                 <fr:route>/def-000Z/</fr:route>
@@ -305,14 +306,14 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A <html:strong>preorder</html:strong> is a relation <fr:tex display="inline">\leq </fr:tex> that is reflexive and transitive.
-    <html:ul><html:li>Reflexive: <fr:tex display="inline">a\leq  a</fr:tex></html:li>
-        <html:li>Transitive: <fr:tex display="inline">a\leq  b</fr:tex> and <fr:tex display="inline">b\leq  c</fr:tex> implies <fr:tex display="inline">a\leq  c</fr:tex></html:li></html:ul></html:p>
+    A <html:strong>preorder</html:strong> is a relation <fr:tex display="inline"><![CDATA[\leq ]]></fr:tex> that is reflexive and transitive.
+    <html:ul><html:li>Reflexive: <fr:tex display="inline"><![CDATA[a\leq  a]]></fr:tex></html:li>
+        <html:li>Transitive: <fr:tex display="inline"><![CDATA[a\leq  b]]></fr:tex> and <fr:tex display="inline"><![CDATA[b\leq  c]]></fr:tex> implies <fr:tex display="inline"><![CDATA[a\leq  c]]></fr:tex></html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-000Y/</fr:uri>
                 <fr:display-uri>def-000Y</fr:display-uri>
                 <fr:route>/def-000Y/</fr:route>
@@ -321,10 +322,10 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A <html:strong>(non-strict) partial order</html:strong> is a relation <fr:tex display="inline">\leq </fr:tex> that is reflexive, antisymmetric and transitive.
-    <html:ul><html:li>Reflexive: <fr:tex display="inline">a\leq  a</fr:tex></html:li>
-        <html:li>Antisymmetric: <fr:tex display="inline">a\leq  b</fr:tex> and <fr:tex display="inline">b\leq  a</fr:tex> implies <fr:tex display="inline">a=b</fr:tex></html:li>
-        <html:li>Transitive: <fr:tex display="inline">a\leq  b</fr:tex> and <fr:tex display="inline">b\leq  c</fr:tex> implies <fr:tex display="inline">a\leq  c</fr:tex></html:li></html:ul>
+    A <html:strong>(non-strict) partial order</html:strong> is a relation <fr:tex display="inline"><![CDATA[\leq ]]></fr:tex> that is reflexive, antisymmetric and transitive.
+    <html:ul><html:li>Reflexive: <fr:tex display="inline"><![CDATA[a\leq  a]]></fr:tex></html:li>
+        <html:li>Antisymmetric: <fr:tex display="inline"><![CDATA[a\leq  b]]></fr:tex> and <fr:tex display="inline"><![CDATA[b\leq  a]]></fr:tex> implies <fr:tex display="inline"><![CDATA[a=b]]></fr:tex></html:li>
+        <html:li>Transitive: <fr:tex display="inline"><![CDATA[a\leq  b]]></fr:tex> and <fr:tex display="inline"><![CDATA[b\leq  c]]></fr:tex> implies <fr:tex display="inline"><![CDATA[a\leq  c]]></fr:tex></html:li></html:ul>
     A non-strict partial order is also known as an antisymmetric <fr:link href="/def-000Z/" title="Preorder" uri="https://caimeo.space/def-000Z/" display-uri="def-000Z" type="local">preorder</fr:link>.
 </html:p>
               </fr:mainmatter>
@@ -334,7 +335,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-0010/</fr:uri>
                 <fr:display-uri>def-0010</fr:display-uri>
                 <fr:route>/def-0010/</fr:route>
@@ -343,10 +344,10 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    A strict partial order is a relation <fr:tex display="inline">&lt;</fr:tex> that is irreflexive, asymmetric and transitive.
-    <html:ul><html:li>Irreflexive: <fr:tex display="inline">\neg (a&lt;a)</fr:tex></html:li>
-        <html:li>Asymmetric: <fr:tex display="inline">a&lt;b</fr:tex> implies <fr:tex display="inline">\neg (b&lt;a)</fr:tex></html:li>
-        <html:li>Transitive: <fr:tex display="inline">a&lt;b</fr:tex> and <fr:tex display="inline">b&lt;c</fr:tex> implies <fr:tex display="inline">a&lt;c</fr:tex></html:li></html:ul></html:p>
+    A strict partial order is a relation <fr:tex display="inline"><![CDATA[<]]></fr:tex> that is irreflexive, asymmetric and transitive.
+    <html:ul><html:li>Irreflexive: <fr:tex display="inline"><![CDATA[\neg (a<a)]]></fr:tex></html:li>
+        <html:li>Asymmetric: <fr:tex display="inline"><![CDATA[a<b]]></fr:tex> implies <fr:tex display="inline"><![CDATA[\neg (b<a)]]></fr:tex></html:li>
+        <html:li>Transitive: <fr:tex display="inline"><![CDATA[a<b]]></fr:tex> and <fr:tex display="inline"><![CDATA[b<c]]></fr:tex> implies <fr:tex display="inline"><![CDATA[a<c]]></fr:tex></html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
@@ -354,7 +355,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-0011/</fr:uri>
                 <fr:display-uri>def-0011</fr:display-uri>
                 <fr:route>/def-0011/</fr:route>
@@ -362,27 +363,27 @@
                 <fr:taxon>Definition</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter><html:p>
-    Let a subset <fr:tex display="inline">S</fr:tex> of a <fr:link href="/def-000Y/" title="Partial Order" uri="https://caimeo.space/def-000Y/" display-uri="def-000Y" type="local">partially ordered</fr:link> set <fr:tex display="inline">(P, \leq )</fr:tex>,
-    <fr:tex display="inline">S</fr:tex> is bounded above if there exists <fr:tex display="inline">x \in  P</fr:tex> such that <fr:tex display="inline">\forall  y \in  S, y \leq  x</fr:tex>. And <fr:tex display="inline">x</fr:tex> is called an <html:strong>upper bound</html:strong> of <fr:tex display="inline">S</fr:tex>.
-    Dually, <fr:tex display="inline">S</fr:tex> is bounded below if there exists <fr:tex display="inline">x \in  P</fr:tex> such that <fr:tex display="inline">\forall  y \in  S, x \leq  y</fr:tex>. And <fr:tex display="inline">x</fr:tex> is called a <html:strong>lower bound</html:strong> of <fr:tex display="inline">S</fr:tex>.
+    Let a subset <fr:tex display="inline"><![CDATA[S]]></fr:tex> of a <fr:link href="/def-000Y/" title="Partial Order" uri="https://caimeo.space/def-000Y/" display-uri="def-000Y" type="local">partially ordered</fr:link> set <fr:tex display="inline"><![CDATA[(P, \leq )]]></fr:tex>,
+    <fr:tex display="inline"><![CDATA[S]]></fr:tex> is bounded above if there exists <fr:tex display="inline"><![CDATA[x \in  P]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\forall  y \in  S, y \leq  x]]></fr:tex>. And <fr:tex display="inline"><![CDATA[x]]></fr:tex> is called an <html:strong>upper bound</html:strong> of <fr:tex display="inline"><![CDATA[S]]></fr:tex>.
+    Dually, <fr:tex display="inline"><![CDATA[S]]></fr:tex> is bounded below if there exists <fr:tex display="inline"><![CDATA[x \in  P]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\forall  y \in  S, x \leq  y]]></fr:tex>. And <fr:tex display="inline"><![CDATA[x]]></fr:tex> is called a <html:strong>lower bound</html:strong> of <fr:tex display="inline"><![CDATA[S]]></fr:tex>.
 </html:p>
     <html:p><html:strong>Supremum (least upper bound)</html:strong></html:p>
     <html:p>
-    An element <fr:tex display="inline">x\in  P</fr:tex> is a supremum of <fr:tex display="inline">S</fr:tex>,
-    if for all upper bounds <fr:tex display="inline">z \in  P</fr:tex> of <fr:tex display="inline">S</fr:tex>, <fr:tex display="inline">x \leq  z</fr:tex>.
-    Denoted as <fr:tex display="inline">x = \sup  S</fr:tex>.
+    An element <fr:tex display="inline"><![CDATA[x\in  P]]></fr:tex> is a supremum of <fr:tex display="inline"><![CDATA[S]]></fr:tex>,
+    if for all upper bounds <fr:tex display="inline"><![CDATA[z \in  P]]></fr:tex> of <fr:tex display="inline"><![CDATA[S]]></fr:tex>, <fr:tex display="inline"><![CDATA[x \leq  z]]></fr:tex>.
+    Denoted as <fr:tex display="inline"><![CDATA[x = \sup  S]]></fr:tex>.
     </html:p>
     <html:p><html:strong>Infimum (greatest lower bound)</html:strong></html:p>
     <html:p>
-    An element <fr:tex display="inline">x\in  P</fr:tex> is a infimum of <fr:tex display="inline">S</fr:tex>,
-    if for all lower bounds <fr:tex display="inline">z \in  P</fr:tex> of <fr:tex display="inline">S</fr:tex>, <fr:tex display="inline">z \leq  x</fr:tex>.
-    Denoted as <fr:tex display="inline">x = \inf  S</fr:tex>.
+    An element <fr:tex display="inline"><![CDATA[x\in  P]]></fr:tex> is a infimum of <fr:tex display="inline"><![CDATA[S]]></fr:tex>,
+    if for all lower bounds <fr:tex display="inline"><![CDATA[z \in  P]]></fr:tex> of <fr:tex display="inline"><![CDATA[S]]></fr:tex>, <fr:tex display="inline"><![CDATA[z \leq  x]]></fr:tex>.
+    Denoted as <fr:tex display="inline"><![CDATA[x = \inf  S]]></fr:tex>.
     </html:p>
 </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002G/</fr:uri>
                 <fr:display-uri>def-002G</fr:display-uri>
                 <fr:route>/def-002G/</fr:route>
@@ -391,24 +392,24 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets then a <html:strong>function</html:strong> <fr:tex display="inline">f:X \to  Y</fr:tex>
-    is a mapping that sends each element of <fr:tex display="inline">X</fr:tex> to a unique element of <fr:tex display="inline">Y</fr:tex>,
-    denoted by <fr:tex display="inline">f(x) = y</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> be sets then a <html:strong>function</html:strong> <fr:tex display="inline"><![CDATA[f:X \to  Y]]></fr:tex>
+    is a mapping that sends each element of <fr:tex display="inline"><![CDATA[X]]></fr:tex> to a unique element of <fr:tex display="inline"><![CDATA[Y]]></fr:tex>,
+    denoted by <fr:tex display="inline"><![CDATA[f(x) = y]]></fr:tex>.
     Function is a special case of <fr:link href="/def-000W/" title="Relation" uri="https://caimeo.space/def-000W/" display-uri="def-000W" type="local">relation</fr:link>, and it is a relation that is left-total and right-unique.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         f \in  X \times  Y \text { and } \forall  x \in  X, \exists ! y \in  Y, (x,y) \in  f
-    </fr:tex>
-    <fr:tex display="inline">X</fr:tex> is said to be the <html:strong>domain</html:strong> of <fr:tex display="inline">f</fr:tex> and <fr:tex display="inline">Y</fr:tex> is said to be the <html:strong>codomain</html:strong> of <fr:tex display="inline">f</fr:tex>,
-    where we denote <fr:tex display="inline">X = \text {dom } f</fr:tex> and <fr:tex display="inline">Y = \text {cod } f</fr:tex>.
+    ]]></fr:tex>
+    <fr:tex display="inline"><![CDATA[X]]></fr:tex> is said to be the <html:strong>domain</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> is said to be the <html:strong>codomain</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex>,
+    where we denote <fr:tex display="inline"><![CDATA[X = \text {dom } f]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y = \text {cod } f]]></fr:tex>.
 </html:p>
                 <html:p>
-    Two functions <fr:tex display="inline">f:X\to  Y</fr:tex> and <fr:tex display="inline">g:Y\to  Z</fr:tex> can be <html:strong>composed</html:strong> to form a new function <fr:tex display="inline">g \circ  f : X \to  Z</fr:tex>,
+    Two functions <fr:tex display="inline"><![CDATA[f:X\to  Y]]></fr:tex> and <fr:tex display="inline"><![CDATA[g:Y\to  Z]]></fr:tex> can be <html:strong>composed</html:strong> to form a new function <fr:tex display="inline"><![CDATA[g \circ  f : X \to  Z]]></fr:tex>,
     where the composition is defined by
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         (g \circ  f)(x) = g(f(x)) 
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
                 <html:p>
-    The set of all functions from <fr:tex display="inline">X</fr:tex> to <fr:tex display="inline">Y</fr:tex> is denoted by <fr:tex display="inline">\hom _\text {set}(X, Y)</fr:tex>.
+    The set of all functions from <fr:tex display="inline"><![CDATA[X]]></fr:tex> to <fr:tex display="inline"><![CDATA[Y]]></fr:tex> is denoted by <fr:tex display="inline"><![CDATA[\hom _\text {set}(X, Y)]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -417,7 +418,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002H/</fr:uri>
                 <fr:display-uri>def-002H</fr:display-uri>
                 <fr:route>/def-002H/</fr:route>
@@ -426,16 +427,16 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets and <fr:tex display="inline">f: X \to  Y</fr:tex> be a function.
-    The function <fr:tex display="inline">f</fr:tex> is called an <html:strong>isomorphism</html:strong> if it is both <fr:link href="/def-002D/" title="Injective" uri="https://caimeo.space/def-002D/" display-uri="def-002D" type="local">injective</fr:link> and <fr:link href="/def-002F/" title="Surjective" uri="https://caimeo.space/def-002F/" display-uri="def-002F" type="local">surjective</fr:link>.
-    In other words, there exists a function <fr:tex display="inline">g: Y \to  X</fr:tex> such that
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> be sets and <fr:tex display="inline"><![CDATA[f: X \to  Y]]></fr:tex> be a function.
+    The function <fr:tex display="inline"><![CDATA[f]]></fr:tex> is called an <html:strong>isomorphism</html:strong> if it is both <fr:link href="/def-002D/" title="Injective" uri="https://caimeo.space/def-002D/" display-uri="def-002D" type="local">injective</fr:link> and <fr:link href="/def-002F/" title="Surjective" uri="https://caimeo.space/def-002F/" display-uri="def-002F" type="local">surjective</fr:link>.
+    In other words, there exists a function <fr:tex display="inline"><![CDATA[g: Y \to  X]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         g \circ  f = \text {id}_X \text { and } f \circ  g = \text {id}_Y
-    </fr:tex>
-    where <fr:tex display="inline">\text {id}_X</fr:tex> and <fr:tex display="inline">\text {id}_Y</fr:tex> are the <html:strong>identity functions</html:strong> on <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> respectively.
-    And we say <fr:tex display="inline">f</fr:tex> is <html:strong>invertible</html:strong> and <fr:tex display="inline">g</fr:tex> is the <html:strong>inverse</html:strong> of <fr:tex display="inline">f</fr:tex>.
-    If there is a isomorphism between <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex>, we say <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> are <html:strong>isomorphic</html:strong>,
-    denoted by <fr:tex display="inline">X \cong  Y</fr:tex>.
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[\text {id}_X]]></fr:tex> and <fr:tex display="inline"><![CDATA[\text {id}_Y]]></fr:tex> are the <html:strong>identity functions</html:strong> on <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> respectively.
+    And we say <fr:tex display="inline"><![CDATA[f]]></fr:tex> is <html:strong>invertible</html:strong> and <fr:tex display="inline"><![CDATA[g]]></fr:tex> is the <html:strong>inverse</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex>.
+    If there is a isomorphism between <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex>, we say <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> are <html:strong>isomorphic</html:strong>,
+    denoted by <fr:tex display="inline"><![CDATA[X \cong  Y]]></fr:tex>.
     Isomorphism is an <fr:link href="/def-000X/" title="Equivalence Relation" uri="https://caimeo.space/def-000X/" display-uri="def-000X" type="local">equivalence relation</fr:link>.
 </html:p>
               </fr:mainmatter>
@@ -446,7 +447,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002I/</fr:uri>
                 <fr:display-uri>def-002I</fr:display-uri>
                 <fr:route>/def-002I/</fr:route>
@@ -455,11 +456,11 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">X</fr:tex> be a set and <fr:tex display="inline">n \in  \mathbb {N}</fr:tex>. 
-    <fr:tex display="inline">A</fr:tex> si said to have <html:strong>cardinality</html:strong> <fr:tex display="inline">n</fr:tex>, denoted by <fr:tex display="inline"> |A|= n</fr:tex>,
-    if there exists an isomorphism between <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">S_n = \{ 1,2,\cdots ,n \}</fr:tex>.
-    If <fr:tex display="inline">A</fr:tex> has finite cardinality, we say <fr:tex display="inline">A</fr:tex> is <html:strong>finite</html:strong>, otherwise
-    we say <fr:tex display="inline">A</fr:tex> is <html:strong>infinite</html:strong>, denoted by <fr:tex display="inline">|A| \geq  \infty </fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> be a set and <fr:tex display="inline"><![CDATA[n \in  \mathbb {N}]]></fr:tex>. 
+    <fr:tex display="inline"><![CDATA[A]]></fr:tex> si said to have <html:strong>cardinality</html:strong> <fr:tex display="inline"><![CDATA[n]]></fr:tex>, denoted by <fr:tex display="inline"><![CDATA[ |A|= n]]></fr:tex>,
+    if there exists an isomorphism between <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[S_n = \{ 1,2,\cdots ,n \}]]></fr:tex>.
+    If <fr:tex display="inline"><![CDATA[A]]></fr:tex> has finite cardinality, we say <fr:tex display="inline"><![CDATA[A]]></fr:tex> is <html:strong>finite</html:strong>, otherwise
+    we say <fr:tex display="inline"><![CDATA[A]]></fr:tex> is <html:strong>infinite</html:strong>, denoted by <fr:tex display="inline"><![CDATA[|A| \geq  \infty ]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -468,7 +469,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002J/</fr:uri>
                 <fr:display-uri>def-002J</fr:display-uri>
                 <fr:route>/def-002J/</fr:route>
@@ -477,14 +478,14 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets, then the <html:strong>Cartesian product</html:strong> of <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> is the set
-    <fr:tex display="block">
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> be sets, then the <html:strong>Cartesian product</html:strong> of <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> is the set
+    <fr:tex display="block"><![CDATA[
         X \times  Y = \set {(x,y) \mid  x \in  X \text { and } y \in  Y}
-    </fr:tex>
+    ]]></fr:tex>
     There are two natural projections from the Cartesian product to the original sets, namely
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \pi _1 : X \times  Y \to  X \text { and } \pi _2 : X \times  Y \to  Y
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
@@ -492,7 +493,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000J/</fr:uri>
                 <fr:display-uri>thm-000J</fr:display-uri>
                 <fr:route>/thm-000J/</fr:route>
@@ -501,15 +502,15 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets.
-    For any set <fr:tex display="inline">A</fr:tex> and function
-    <fr:tex display="inline">f: A \to  X</fr:tex> and <fr:tex display="inline">g: A \to  Y</fr:tex>,
-    there exists a <html:em>unique</html:em> function <fr:tex display="inline">h: A \to  X \times  Y</fr:tex> such that
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> be sets.
+    For any set <fr:tex display="inline"><![CDATA[A]]></fr:tex> and function
+    <fr:tex display="inline"><![CDATA[f: A \to  X]]></fr:tex> and <fr:tex display="inline"><![CDATA[g: A \to  Y]]></fr:tex>,
+    there exists a <html:em>unique</html:em> function <fr:tex display="inline"><![CDATA[h: A \to  X \times  Y]]></fr:tex> such that
     the following diagram commutes:
     
  
   
-  <html:figure><fr:resource hash="92f681daf98951ac5bde9b0833c22328"><fr:resource-content><html:img src="/92f681daf98951ac5bde9b0833c22328.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="92f681daf98951ac5bde9b0833c22328"><fr:resource-content><html:img src="/92f681daf98951ac5bde9b0833c22328.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -527,7 +528,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -620,7 +621,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -632,7 +633,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -644,7 +645,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -677,10 +678,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -772,12 +773,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -785,22 +786,22 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            &amp; {X\times  Y} \\
-            X &amp;&amp; Y \\
-            &amp; A
-            \arrow [&quot;{\pi _1}&quot;&apos;, from=1-2, to=2-1]
-            \arrow [&quot;{\pi _2}&quot;, from=1-2, to=2-3]
-            \arrow [&quot;f&quot;, from=3-2, to=2-1]
-            \arrow [&quot;g&quot;&apos;, from=3-2, to=2-3]
-            \arrow [&quot;{\exists !}&quot;, dashed, from=3-2, to=1-2]
+            & {X\times  Y} \\
+            X && Y \\
+            & A
+            \arrow ["{\pi _1}"', from=1-2, to=2-1]
+            \arrow ["{\pi _2}", from=1-2, to=2-3]
+            \arrow ["f", from=3-2, to=2-1]
+            \arrow ["g"', from=3-2, to=2-3]
+            \arrow ["{\exists !}", dashed, from=3-2, to=1-2]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure>
+    ]]></fr:resource-source></fr:resource></html:figure>
  
 
-    We might denote the unique function by <fr:tex display="inline">\langle  f,g \rangle : A \to  X \times  Y</fr:tex>.
-    It is sufficient to define <fr:tex display="inline">\langle  f,g \rangle (a) = (f(a),g(a))</fr:tex> for all <fr:tex display="inline">a\in  A</fr:tex> as the unique function.
+    We might denote the unique function by <fr:tex display="inline"><![CDATA[\langle  f,g \rangle : A \to  X \times  Y]]></fr:tex>.
+    It is sufficient to define <fr:tex display="inline"><![CDATA[\langle  f,g \rangle (a) = (f(a),g(a))]]></fr:tex> for all <fr:tex display="inline"><![CDATA[a\in  A]]></fr:tex> as the unique function.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -809,7 +810,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002K/</fr:uri>
                 <fr:display-uri>def-002K</fr:display-uri>
                 <fr:route>/def-002K/</fr:route>
@@ -818,17 +819,17 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets, then the <html:strong>coproduct</html:strong> of <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> is 
-    defined as the <html:strong>disjoint union</html:strong> of <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex>, denoted by <fr:tex display="inline">X \sqcup  Y</fr:tex>.
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> be sets, then the <html:strong>coproduct</html:strong> of <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> is 
+    defined as the <html:strong>disjoint union</html:strong> of <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex>, denoted by <fr:tex display="inline"><![CDATA[X \sqcup  Y]]></fr:tex>.
     There are two natural injections from the original sets to the coproduct, namely
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         i_1 : X \to  X \sqcup  Y \text { and } i_2 : Y \to  X \sqcup  Y
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000K/</fr:uri>
                 <fr:display-uri>thm-000K</fr:display-uri>
                 <fr:route>/thm-000K/</fr:route>
@@ -837,13 +838,13 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Let <fr:tex display="inline">X</fr:tex> and <fr:tex display="inline">Y</fr:tex> be sets. For any set <fr:tex display="inline">A</fr:tex> and function
-    <fr:tex display="inline">f : X \to  A</fr:tex> and <fr:tex display="inline">g : Y \to  A</fr:tex>, there exists a <html:em>unique</html:em> function
-    <fr:tex display="inline">h : X \sqcup  Y \to  A</fr:tex> such that the following diagram commutes:
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> be sets. For any set <fr:tex display="inline"><![CDATA[A]]></fr:tex> and function
+    <fr:tex display="inline"><![CDATA[f : X \to  A]]></fr:tex> and <fr:tex display="inline"><![CDATA[g : Y \to  A]]></fr:tex>, there exists a <html:em>unique</html:em> function
+    <fr:tex display="inline"><![CDATA[h : X \sqcup  Y \to  A]]></fr:tex> such that the following diagram commutes:
     
  
   
-  <html:figure><fr:resource hash="ff3277e11704ef081135052cfcbb1ac5"><fr:resource-content><html:img src="/ff3277e11704ef081135052cfcbb1ac5.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="ff3277e11704ef081135052cfcbb1ac5"><fr:resource-content><html:img src="/ff3277e11704ef081135052cfcbb1ac5.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -861,7 +862,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -954,7 +955,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -966,7 +967,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -978,7 +979,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -1011,10 +1012,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -1106,12 +1107,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -1119,21 +1120,21 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            &amp; A \\
-            X &amp;&amp; Y \\
-            &amp; {X\sqcup  Y}
-            \arrow [&quot;{i_1}&quot;&apos;, from=2-1, to=3-2]
-            \arrow [&quot;{i_2}&quot;, from=2-3, to=3-2]
-            \arrow [&quot;f&quot;, from=2-1, to=1-2]
-            \arrow [&quot;g&quot;&apos;, from=2-3, to=1-2]
-            \arrow [&quot;{\exists !}&quot;, dashed, from=3-2, to=1-2]
+            & A \\
+            X && Y \\
+            & {X\sqcup  Y}
+            \arrow ["{i_1}"', from=2-1, to=3-2]
+            \arrow ["{i_2}", from=2-3, to=3-2]
+            \arrow ["f", from=2-1, to=1-2]
+            \arrow ["g"', from=2-3, to=1-2]
+            \arrow ["{\exists !}", dashed, from=3-2, to=1-2]
         \end {tikzcd}   
-    </fr:resource-source></fr:resource></html:figure>
+    ]]></fr:resource-source></fr:resource></html:figure>
  
 
-    We might denote the unique as <fr:tex display="inline">f\sqcup  g: X \sqcup  Y \to  A</fr:tex>.
+    We might denote the unique as <fr:tex display="inline"><![CDATA[f\sqcup  g: X \sqcup  Y \to  A]]></fr:tex>.
 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -1142,7 +1143,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/def-002L/</fr:uri>
                 <fr:display-uri>def-002L</fr:display-uri>
                 <fr:route>/def-002L/</fr:route>
@@ -1151,12 +1152,12 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-    Suppose we have sets <fr:tex display="inline">X</fr:tex>, <fr:tex display="inline">Y</fr:tex>, and <fr:tex display="inline">Z</fr:tex> and functions
-    <fr:tex display="inline">f : X \to  Z</fr:tex> and <fr:tex display="inline">g : Y \to  Z</fr:tex>.
+    Suppose we have sets <fr:tex display="inline"><![CDATA[X]]></fr:tex>, <fr:tex display="inline"><![CDATA[Y]]></fr:tex>, and <fr:tex display="inline"><![CDATA[Z]]></fr:tex> and functions
+    <fr:tex display="inline"><![CDATA[f : X \to  Z]]></fr:tex> and <fr:tex display="inline"><![CDATA[g : Y \to  Z]]></fr:tex>.
     
  
   
-  <html:figure><fr:resource hash="97aeab91001df32bef920b3982fb7fb0"><fr:resource-content><html:img src="/97aeab91001df32bef920b3982fb7fb0.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="97aeab91001df32bef920b3982fb7fb0"><fr:resource-content><html:img src="/97aeab91001df32bef920b3982fb7fb0.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -1174,7 +1175,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -1267,7 +1268,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -1279,7 +1280,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -1291,7 +1292,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -1324,10 +1325,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -1419,12 +1420,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -1432,29 +1433,29 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            &amp; Y \\
-            X &amp; Z
-            \arrow [&quot;f&quot;&apos;, from=2-1, to=2-2]
-            \arrow [&quot;g&quot;, from=1-2, to=2-2]
+            & Y \\
+            X & Z
+            \arrow ["f"', from=2-1, to=2-2]
+            \arrow ["g", from=1-2, to=2-2]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure>
+    ]]></fr:resource-source></fr:resource></html:figure>
  
 
     Its <html:strong>fiber product</html:strong> is the set
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         X \times _Z Y = \{ (x,w,y) \mid  f(x) = w = g(y) \}
-    </fr:tex>
+    ]]></fr:tex>
     There are obvious projections 
-    <fr:tex display="inline">
+    <fr:tex display="inline"><![CDATA[
         \pi _1 : X \times _Z Y \to  X \text { and } \pi _2 : X \times _Z Y \to  Y
-    </fr:tex>
-    such that the following diagram commutes (<fr:tex display="inline">W = X \times _Z Y</fr:tex>):
+    ]]></fr:tex>
+    such that the following diagram commutes (<fr:tex display="inline"><![CDATA[W = X \times _Z Y]]></fr:tex>):
     
  
   
-  <html:figure><fr:resource hash="546b6a73a9b55f631584614d7b8db8f6"><fr:resource-content><html:img src="/546b6a73a9b55f631584614d7b8db8f6.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="546b6a73a9b55f631584614d7b8db8f6"><fr:resource-content><html:img src="/546b6a73a9b55f631584614d7b8db8f6.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -1472,7 +1473,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -1565,7 +1566,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -1577,7 +1578,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -1589,7 +1590,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -1622,10 +1623,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -1717,12 +1718,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -1730,21 +1731,21 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            W &amp; Y \\
-            X &amp; Z
-            \arrow [&quot;f&quot;&apos;, from=2-1, to=2-2]
-            \arrow [&quot;g&quot;, from=1-2, to=2-2]
-            \arrow [&quot;{\pi _2}&quot;, from=1-1, to=1-2]
-            \arrow [&quot;{\pi _1}&quot;&apos;, from=1-1, to=2-1]
-            \arrow [&quot;\lrcorner &quot;{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+            W & Y \\
+            X & Z
+            \arrow ["f"', from=2-1, to=2-2]
+            \arrow ["g", from=1-2, to=2-2]
+            \arrow ["{\pi _2}", from=1-1, to=1-2]
+            \arrow ["{\pi _1}"', from=1-1, to=2-1]
+            \arrow ["\lrcorner "{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure>
+    ]]></fr:resource-source></fr:resource></html:figure>
  
 
-    The <html:strong>pullback</html:strong> is defined to be any set <fr:tex display="inline">W \cong  X\times _Z Y</fr:tex>
-    The corner symbol indicates <fr:tex display="inline">W</fr:tex> is a <html:em>pullback</html:em></html:p>
+    The <html:strong>pullback</html:strong> is defined to be any set <fr:tex display="inline"><![CDATA[W \cong  X\times _Z Y]]></fr:tex>
+    The corner symbol indicates <fr:tex display="inline"><![CDATA[W]]></fr:tex> is a <html:em>pullback</html:em></html:p>
               </fr:mainmatter>
             </fr:tree>
             <html:p>
@@ -1752,7 +1753,7 @@
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
-                <fr:authors></fr:authors>
+                <fr:authors />
                 <fr:uri>https://caimeo.space/thm-000L/</fr:uri>
                 <fr:display-uri>thm-000L</fr:display-uri>
                 <fr:route>/thm-000L/</fr:route>
@@ -1765,7 +1766,7 @@
     
  
   
-  <html:figure><fr:resource hash="8ff9a605435ec667aaf6cdcc4b549baa"><fr:resource-content><html:img src="/8ff9a605435ec667aaf6cdcc4b549baa.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="8ff9a605435ec667aaf6cdcc4b549baa"><fr:resource-content><html:img src="/8ff9a605435ec667aaf6cdcc4b549baa.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -1783,7 +1784,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -1876,7 +1877,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -1888,7 +1889,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -1900,7 +1901,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -1933,10 +1934,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -2028,12 +2029,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -2041,22 +2042,22 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \begin {tikzcd}
-            &amp; Y \\
-            X &amp; Z
-            \arrow [&quot;t&quot;&apos;, from=2-1, to=2-2]
-            \arrow [&quot;u&quot;, from=1-2, to=2-2]
+            & Y \\
+            X & Z
+            \arrow ["t"', from=2-1, to=2-2]
+            \arrow ["u", from=1-2, to=2-2]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure>
+    ]]></fr:resource-source></fr:resource></html:figure>
  
 
-    For any set <fr:tex display="inline">A</fr:tex> and commutative solid arrow diagram as below
-    (functions <fr:tex display="inline">f:A\to  X</fr:tex> and <fr:tex display="inline">g:A\to  Y</fr:tex> such that <fr:tex display="inline">t\circ  f = u\circ  g</fr:tex>):
+    For any set <fr:tex display="inline"><![CDATA[A]]></fr:tex> and commutative solid arrow diagram as below
+    (functions <fr:tex display="inline"><![CDATA[f:A\to  X]]></fr:tex> and <fr:tex display="inline"><![CDATA[g:A\to  Y]]></fr:tex> such that <fr:tex display="inline"><![CDATA[t\circ  f = u\circ  g]]></fr:tex>):
     
  
   
-  <html:figure><fr:resource hash="d17ac9129059285e63101f6ea3eb3012"><fr:resource-content><html:img src="/d17ac9129059285e63101f6ea3eb3012.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+  <html:figure><fr:resource hash="d17ac9129059285e63101f6ea3eb3012"><fr:resource-content><html:img src="/d17ac9129059285e63101f6ea3eb3012.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
   \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -2074,7 +2075,7 @@
  \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
  \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
 
- \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
      coordinate (#1nw)
      ++(#2,-#3) coordinate (#1se)
@@ -2167,7 +2168,7 @@
      -{Triangle[open]}
    },
    etale cover/.style= {
-     &gt;={Triangle[open]},-&gt;.&gt;
+     >={Triangle[open]},->.>
    },
    opfibration/.style = {
      -{Triangle}
@@ -2179,7 +2180,7 @@
      |-{Triangle}
    },
    embedding/.style = {
-     {right hook}-&gt;
+     {right hook}->
    },
    open immersion/.style = {
      {right hook}-{Triangle[open]}
@@ -2191,7 +2192,7 @@
      {left hook}-{Triangle}
    },
    embedding*/.style = {
-     {left hook}-&gt;
+     {left hook}->
    },
    open immersion*/.style = {
      {left hook}-{Triangle[open]}
@@ -2224,10 +2225,10 @@
    square/ne/.style = {},
    square/se/.style = {},
    square/sw/.style = {},
-   square/north/.style = {-&gt;},
-   square/south/.style = {-&gt;},
-   square/west/.style = {-&gt;},
-   square/east/.style = {-&gt;},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
    square/north/node/.style = {above},
    square/south/node/.style = {below},
    square/west/node/.style = {left},
@@ -2319,12 +2320,12 @@
    \group_end:
  }
 
- \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
    \__jon_tikz_render_square:nn {#1} {#2}
  }
 
 
- \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
    \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
      \__jon_tikz_render_square:nn {#1} {#3}
    \end{tikzpicture}
@@ -2332,29 +2333,29 @@
 
  \ExplSyntaxOff
 
-  </fr:resource-source><fr:resource-source type="latex" part="body">
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
         \usetikzlibrary {arrows}
         \begin {tikzcd}
-            &amp; {X\times _ZY} \\
+            & {X\times _ZY} \\
             \\
-            &amp; A \\
-            X &amp;&amp; Y \\
-            &amp; Z
-            \arrow [&quot;f&quot;&apos;, from=3-2, to=4-1]
-            \arrow [&quot;g&quot;, from=3-2, to=4-3]
-            \arrow [&quot;t&quot;&apos;, from=4-1, to=5-2]
-            \arrow [&quot;u&quot;, from=4-3, to=5-2]
-            \arrow [&quot;{\exists !}&quot;, dashed, from=3-2, to=1-2]
-            \arrow [&quot;{\pi _1}&quot;&apos;, bend right, from=1-2, to=4-1]
-	        \arrow [&quot;{\pi _2}&quot;, bend left, from=1-2, to=4-3]
+            & A \\
+            X && Y \\
+            & Z
+            \arrow ["f"', from=3-2, to=4-1]
+            \arrow ["g", from=3-2, to=4-3]
+            \arrow ["t"', from=4-1, to=5-2]
+            \arrow ["u", from=4-3, to=5-2]
+            \arrow ["{\exists !}", dashed, from=3-2, to=1-2]
+            \arrow ["{\pi _1}"', bend right, from=1-2, to=4-1]
+	        \arrow ["{\pi _2}", bend left, from=1-2, to=4-3]
         \end {tikzcd}
-    </fr:resource-source></fr:resource></html:figure>
+    ]]></fr:resource-source></fr:resource></html:figure>
  
 
-    there exists a <html:em>unique</html:em> arrow <fr:tex display="inline">\langle  f,g \rangle _Z: A\to  X\times _Z Y</fr:tex> such that
-    <fr:tex display="block">
+    there exists a <html:em>unique</html:em> arrow <fr:tex display="inline"><![CDATA[\langle  f,g \rangle _Z: A\to  X\times _Z Y]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
         \pi _1\circ \langle  f,g \rangle _Z = f \text { and } \pi _2\circ \langle  f,g \rangle _Z = g
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
               </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>
@@ -2363,24 +2364,24 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

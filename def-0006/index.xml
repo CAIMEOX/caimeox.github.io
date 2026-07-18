@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-0006/</fr:uri>
     <fr:display-uri>def-0006</fr:display-uri>
     <fr:route>/def-0006/</fr:route>
@@ -10,33 +11,33 @@
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
-A field is a set <fr:tex display="inline">F</fr:tex> together with two binary operations <fr:tex display="inline">+</fr:tex> and <fr:tex display="inline">\times </fr:tex> on <fr:tex display="inline">F</fr:tex> st <fr:tex display="inline">(F,+)</fr:tex> is an <fr:link href="/def-0002/" title="Abel Group" uri="https://caimeo.space/def-0002/" display-uri="def-0002" type="local">abelian group</fr:link> (identity is <fr:tex display="inline">0</fr:tex>) and <fr:tex display="inline">(F-\{0\},\times )</fr:tex> is also an abelian group such that
-<fr:tex display="inline">a\times (b+c)=a\times  b+a\times  c,\forall  a,b,c\in  F</fr:tex></html:p>
+A field is a set <fr:tex display="inline"><![CDATA[F]]></fr:tex> together with two binary operations <fr:tex display="inline"><![CDATA[+]]></fr:tex> and <fr:tex display="inline"><![CDATA[\times ]]></fr:tex> on <fr:tex display="inline"><![CDATA[F]]></fr:tex> st <fr:tex display="inline"><![CDATA[(F,+)]]></fr:tex> is an <fr:link href="/def-0002/" title="Abel Group" uri="https://caimeo.space/def-0002/" display-uri="def-0002" type="local">abelian group</fr:link> (identity is <fr:tex display="inline"><![CDATA[0]]></fr:tex>) and <fr:tex display="inline"><![CDATA[(F-\{0\},\times )]]></fr:tex> is also an abelian group such that
+<fr:tex display="inline"><![CDATA[a\times (b+c)=a\times  b+a\times  c,\forall  a,b,c\in  F]]></fr:tex></html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:uri>https://caimeo.space/def-000H/</fr:uri>
             <fr:display-uri>def-000H</fr:display-uri>
             <fr:route>/def-000H/</fr:route>
@@ -45,26 +46,26 @@ A field is a set <fr:tex display="inline">F</fr:tex> together with two binary op
           </fr:frontmatter>
           <fr:mainmatter>
             <html:p>
-    A vector space over a <fr:link href="/def-0006/" title="Field" uri="https://caimeo.space/def-0006/" display-uri="def-0006" type="local">field</fr:link> <fr:tex display="inline">F</fr:tex> is a non-empty set <fr:tex display="inline">V</fr:tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
-    In this context, the elements of <fr:tex display="inline">V</fr:tex> are commonly called <html:strong>vectors</html:strong>, and the elements of <fr:tex display="inline">F</fr:tex> are called <html:strong>scalars</html:strong>.
-    <html:ul><html:li>Commutativity: <fr:tex display="inline">
+    A vector space over a <fr:link href="/def-0006/" title="Field" uri="https://caimeo.space/def-0006/" display-uri="def-0006" type="local">field</fr:link> <fr:tex display="inline"><![CDATA[F]]></fr:tex> is a non-empty set <fr:tex display="inline"><![CDATA[V]]></fr:tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
+    In this context, the elements of <fr:tex display="inline"><![CDATA[V]]></fr:tex> are commonly called <html:strong>vectors</html:strong>, and the elements of <fr:tex display="inline"><![CDATA[F]]></fr:tex> are called <html:strong>scalars</html:strong>.
+    <html:ul><html:li>Commutativity: <fr:tex display="inline"><![CDATA[
             \forall  x, y \in  V, x + y = y + x
-        </fr:tex></html:li>
-        <html:li>Associativity: <fr:tex display="inline">
+        ]]></fr:tex></html:li>
+        <html:li>Associativity: <fr:tex display="inline"><![CDATA[
             \forall  x, y, z \in  V, (x + y) + z = x + (y + z)
-        </fr:tex></html:li>
-        <html:li>Additive Identity: <fr:tex display="inline">
+        ]]></fr:tex></html:li>
+        <html:li>Additive Identity: <fr:tex display="inline"><![CDATA[
             \exists  0 \in  V \text { such that } \forall  x \in  V, x + 0 = x
-        </fr:tex></html:li>
-        <html:li>Multiplicative Identity: <fr:tex display="inline">
+        ]]></fr:tex></html:li>
+        <html:li>Multiplicative Identity: <fr:tex display="inline"><![CDATA[
             \forall  x \in  V, 1x = x
-        </fr:tex></html:li>
-        <html:li>Additive Inverse: <fr:tex display="inline">
+        ]]></fr:tex></html:li>
+        <html:li>Additive Inverse: <fr:tex display="inline"><![CDATA[
             \forall  x \in  V, \exists  y \in  V \text { such that } x + y = 0
-        </fr:tex></html:li>
-        <html:li>Distributivity: <fr:tex display="inline">
+        ]]></fr:tex></html:li>
+        <html:li>Distributivity: <fr:tex display="inline"><![CDATA[
             \forall  x, y \in  V, \forall  c, d \in  F, c(x + y) = cx + cy, (c + d)x = cx + dx
-        </fr:tex></html:li></html:ul></html:p>
+        ]]></fr:tex></html:li></html:ul></html:p>
             <html:p>
     Elements of a vector space are called <html:strong>vectors</html:strong> or <html:strong>points</html:strong>.
 </html:p>
@@ -74,13 +75,13 @@ A field is a set <fr:tex display="inline">F</fr:tex> together with two binary op
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:uri>https://caimeo.space/def-0002/</fr:uri>
             <fr:display-uri>def-0002</fr:display-uri>
             <fr:route>/def-0002/</fr:route>
@@ -89,7 +90,7 @@ A field is a set <fr:tex display="inline">F</fr:tex> together with two binary op
           </fr:frontmatter>
           <fr:mainmatter>
             <html:p>
-If in a <fr:link href="/def-0001/" title="Group" uri="https://caimeo.space/def-0001/" display-uri="def-0001" type="local">group</fr:link> <fr:tex display="inline">G</fr:tex>, <fr:tex display="inline">\forall  a,b\in  G, a\circ  b=b\circ  a</fr:tex> then <fr:tex display="inline">G</fr:tex> is called an <html:strong>abelian (commutative) group</html:strong>.
+If in a <fr:link href="/def-0001/" title="Group" uri="https://caimeo.space/def-0001/" display-uri="def-0001" type="local">group</fr:link> <fr:tex display="inline"><![CDATA[G]]></fr:tex>, <fr:tex display="inline"><![CDATA[\forall  a,b\in  G, a\circ  b=b\circ  a]]></fr:tex> then <fr:tex display="inline"><![CDATA[G]]></fr:tex> is called an <html:strong>abelian (commutative) group</html:strong>.
 </html:p>
           </fr:mainmatter>
         </fr:tree>
@@ -97,10 +98,10 @@ If in a <fr:link href="/def-0001/" title="Group" uri="https://caimeo.space/def-0
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

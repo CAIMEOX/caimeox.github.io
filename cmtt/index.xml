@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors>
       <fr:author>
@@ -20,31 +21,31 @@
     <fr:meta name="doi">https://doi.org/10.1145/1352582.1352591</fr:meta>
     <fr:meta name="venue">Modal Logic, Formal Languages</fr:meta>
   </fr:frontmatter>
-  <fr:mainmatter></fr:mainmatter>
+  <fr:mainmatter />
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>8</fr:month>
@@ -63,7 +64,7 @@
     holes can have types and are surrounded by contexts, just as metavariables in CMTT are 
     associated with types and contexts. This note is a brief summary of the paper <fr:link href="/cmtt/" title="Contextual Modal Type Theory" uri="https://caimeo.space/cmtt/" display-uri="cmtt" type="local">Contextual Modal Type Theory</fr:link>.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Introduction and Motivation">Introduction and Motivation</fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Introduction and Motivation">Introduction and Motivation</fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
         Contextual modal type theory provides an elegant and uniform foundation for understanding metavariables and explicit
         substitutions. Context is common in logic because the truth of a proposition can depend on the context we consider it in
@@ -76,70 +77,70 @@
             <html:li><html:strong>Structural</html:strong>: Identifies the context with propositions it contains. In this article we
             carry this idea further which allows arbitrary contexts to be captured within  a proposition.</html:li></html:ul></html:p>
 </fr:mainmatter></fr:tree>
-<fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Modal Logic">Contextual Modal Logic</fr:title></fr:frontmatter><fr:mainmatter><html:p>
+<fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Modal Logic">Contextual Modal Logic</fr:title></fr:frontmatter><fr:mainmatter><html:p>
         The philosophical foundation of our development is MLTT approaches of separating 
         judgments and propositions. The most basic judgment is the truth of a proposition,
-        <fr:tex display="inline">A\space \text {true}</fr:tex>. We explain the <html:em>meaning</html:em> of a proposition by 
+        <fr:tex display="inline"><![CDATA[A\space \text {true}]]></fr:tex>. We explain the <html:em>meaning</html:em> of a proposition by 
         presenting the means of inferring its truth via introduction rules, and exploiting
         the knowledge of its truth via elimination rules. In this section we assume there are
-        some atomic proposition <fr:tex display="inline">P</fr:tex> and we define implication <fr:tex display="inline">A\to  B</fr:tex> and a contextual
-        modal operator <fr:tex display="inline">[\Psi ]A</fr:tex> where <fr:tex display="inline">\Psi </fr:tex> is a context.
+        some atomic proposition <fr:tex display="inline"><![CDATA[P]]></fr:tex> and we define implication <fr:tex display="inline"><![CDATA[A\to  B]]></fr:tex> and a contextual
+        modal operator <fr:tex display="inline"><![CDATA[[\Psi ]A]]></fr:tex> where <fr:tex display="inline"><![CDATA[\Psi ]]></fr:tex> is a context.
     </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Hypothesis judgments">Hypothesis judgments</fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Hypothesis judgments">Hypothesis judgments</fr:title></fr:frontmatter><fr:mainmatter>
         <html:p>
             We write 
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 x_1:A_1\space \text {true}, \ldots , x_n:A_n\space \text {true}\vdash  A\space \text {true}
-            </fr:tex>
-            to express that <fr:tex display="inline">A</fr:tex> is true if all hypotheses <fr:tex display="inline">x_1:A_1,\ldots ,x_n:A_n</fr:tex> are true.
+            ]]></fr:tex>
+            to express that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true if all hypotheses <fr:tex display="inline"><![CDATA[x_1:A_1,\ldots ,x_n:A_n]]></fr:tex> are true.
             At this moment we can view contexts as unordered, later contexts are reified in 
             modal operators and may even be <html:strong>internally dependent</html:strong>, at which point the
             order is important.
         </html:p>
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Hypothesis Rule">Hypothesis Rule</fr:title></fr:frontmatter><fr:mainmatter>
-            <html:p><fr:tex display="block">
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Hypothesis Rule">Hypothesis Rule</fr:title></fr:frontmatter><fr:mainmatter>
+            <html:p><fr:tex display="block"><![CDATA[
                     \frac {}{
-                        \Gamma , x:A\space \text {true}, \Gamma &apos; \vdash  A\space \text {true}
+                        \Gamma , x:A\space \text {true}, \Gamma ' \vdash  A\space \text {true}
                     }(\text {hyp}_x)
-                </fr:tex>
+                ]]></fr:tex>
                 The distinct labels for assumptions are necessary (?)
             </html:p>
         </fr:mainmatter></fr:tree>
 
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Substitution Rule">Substitution Rule</fr:title></fr:frontmatter><fr:mainmatter>
-            If <fr:tex display="inline">\Gamma \vdash  A\space \text {true}</fr:tex> and <fr:tex display="inline">\Gamma ,x:A\space \text {true},\Gamma &apos;\vdash  C\space \space \text {true}</fr:tex>
-            then <fr:tex display="inline">\Gamma ,\Gamma &apos;\vdash  C\space \text {true}</fr:tex>. (Note that this rule is <html:em>admissible</html:em>)
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Substitution Rule">Substitution Rule</fr:title></fr:frontmatter><fr:mainmatter>
+            If <fr:tex display="inline"><![CDATA[\Gamma \vdash  A\space \text {true}]]></fr:tex> and <fr:tex display="inline"><![CDATA[\Gamma ,x:A\space \text {true},\Gamma '\vdash  C\space \space \text {true}]]></fr:tex>
+            then <fr:tex display="inline"><![CDATA[\Gamma ,\Gamma '\vdash  C\space \text {true}]]></fr:tex>. (Note that this rule is <html:em>admissible</html:em>)
         </fr:mainmatter></fr:tree>
 
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Implication Introduction">Implication Introduction</fr:title></fr:frontmatter><fr:mainmatter>
-            <fr:tex display="block">
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Implication Introduction">Implication Introduction</fr:title></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block"><![CDATA[
                 \frac {
                     \Gamma , x:A\space \text {true}\vdash  B\space \text {true}
                 }{
                     \Gamma \vdash  A\to  B\space \text {true}
                 }(\to \text {I}^x)
-            </fr:tex>
+            ]]></fr:tex>
         </fr:mainmatter></fr:tree>
 
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Implication Elimination">Implication Elimination</fr:title></fr:frontmatter><fr:mainmatter>
-            <fr:tex display="block">
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Implication Elimination">Implication Elimination</fr:title></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block"><![CDATA[
                 \frac {
                     \Gamma \vdash  A\to  B\space \text {true}\quad \Gamma \vdash  A\space \text {true}
                 }{
                     \Gamma \vdash  B\space \text {true}
                 }(\to \text {E})
-            </fr:tex>
+            ]]></fr:tex>
             It implies that elimination rule cannot extract more knowledge from 
             a proposition than contributed by its proof (Soundness). 
         </fr:mainmatter></fr:tree>
 
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Local Reduction for Implication (Computational Rule)">Local Reduction for Implication (Computational Rule)</fr:title></fr:frontmatter><fr:mainmatter>
-            <fr:tex display="block">
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Local Reduction for Implication (Computational Rule)">Local Reduction for Implication (Computational Rule)</fr:title></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block"><![CDATA[
                 \frac {
                     \dfrac {
                         \Gamma , x:A\space \text {true}\vdash  B\space \text {true}
@@ -152,147 +153,147 @@
                     \Gamma \vdash  B\space \text {true}
                 }(\to \text {E})
                 \mapsto  _R \Gamma \vdash  B\space \text {true}
-            </fr:tex>
+            ]]></fr:tex>
         </fr:mainmatter></fr:tree>
 
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Local Expansion for Implication">Local Expansion for Implication</fr:title></fr:frontmatter><fr:mainmatter>
-            <fr:tex display="block">
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Local Expansion for Implication">Local Expansion for Implication</fr:title></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block"><![CDATA[
                 \Gamma \vdash  A\to  B\space \text {true} \mapsto _E
                 \frac {
                     \Gamma ,x:A\space \text {true}\vdash  A\to  B\space \text {true}\quad  \dfrac {}{\Gamma ,x:A\space \text {true}\vdash  A\space \text {true}}(\text {hyp}_x)
                 }{
                     \dfrac {\Gamma ,x:A\space \text {true}\vdash  B\space \text {true}}{\Gamma \vdash  A\to  B\space \text {true}}(\to \text {I}^x)
                 }
-            </fr:tex>
+            ]]></fr:tex>
         </fr:mainmatter></fr:tree>
 
     </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Categorical judgments">Categorical judgments</fr:title></fr:frontmatter><fr:mainmatter>
-        <html:p><fr:tex display="inline">A</fr:tex> is <html:strong>categorically true</html:strong> or valid if its truth does not depend on any hypotheses
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Categorical judgments">Categorical judgments</fr:title></fr:frontmatter><fr:mainmatter>
+        <html:p><fr:tex display="inline"><![CDATA[A]]></fr:tex> is <html:strong>categorically true</html:strong> or valid if its truth does not depend on any hypotheses
             about the truth of other propositions. Instead it may depend on the validity of other proposition,
             because their validity may not depend on truth assumptions.
         </html:p>
         <html:p>
-            We weite <fr:tex display="inline">\Delta </fr:tex> for a labeled list <fr:tex display="inline">u_1 :: A_1\space \text {valid},\ldots ,u_n :: A_n\space \text {valid}</fr:tex> of assumptions
+            We weite <fr:tex display="inline"><![CDATA[\Delta ]]></fr:tex> for a labeled list <fr:tex display="inline"><![CDATA[u_1 :: A_1\space \text {valid},\ldots ,u_n :: A_n\space \text {valid}]]></fr:tex> of assumptions
             about the validity of propositions. We separate validity and truth:
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \Delta ;\Gamma \vdash  \mathcal {J}
-            </fr:tex>
-            where <fr:tex display="inline">\mathcal {J}</fr:tex> is a judgment <fr:tex display="inline">A\space \text {true}</fr:tex> or <fr:tex display="inline">A\space \text {valid}</fr:tex>.
+            ]]></fr:tex>
+            where <fr:tex display="inline"><![CDATA[\mathcal {J}]]></fr:tex> is a judgment <fr:tex display="inline"><![CDATA[A\space \text {true}]]></fr:tex> or <fr:tex display="inline"><![CDATA[A\space \text {valid}]]></fr:tex>.
         </html:p>
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Validity">Validity</fr:title></fr:frontmatter><fr:mainmatter>
-            <html:p><fr:tex display="block">
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Validity">Validity</fr:title></fr:frontmatter><fr:mainmatter>
+            <html:p><fr:tex display="block"><![CDATA[
                     \frac {\Delta ;\cdot \vdash  A\space \text {true}}{\Delta ;\Gamma \vdash  A\space \text {valid}}
-                </fr:tex></html:p>
+                ]]></fr:tex></html:p>
             
-            <html:p>Conversely if <fr:tex display="inline">A</fr:tex> is valid we can conclude that it is true</html:p>
-            <fr:tex display="block">
+            <html:p>Conversely if <fr:tex display="inline"><![CDATA[A]]></fr:tex> is valid we can conclude that it is true</html:p>
+            <fr:tex display="block"><![CDATA[
                 \frac {}{
-                    (\Delta ,u::A\space \text {valid},\Delta &apos;);\Gamma \vdash  A\space \text {true}
+                    (\Delta ,u::A\space \text {valid},\Delta ');\Gamma \vdash  A\space \text {true}
                 }(\text {vldhyp}_u)
-            </fr:tex>
+            ]]></fr:tex>
             <html:p>
-                In terms of a multiple world semantics, we say that <fr:tex display="inline">A</fr:tex> is valid if <fr:tex display="inline">A</fr:tex> is
-                true in <html:strong>every</html:strong> possible world. We require that <fr:tex display="inline">A</fr:tex> must be true in a 
-                world about which we assume nothing (<fr:tex display="inline">\Gamma  = \cdot </fr:tex>), except the constant-true
-                propositions <fr:tex display="inline">\Delta </fr:tex>.
+                In terms of a multiple world semantics, we say that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is valid if <fr:tex display="inline"><![CDATA[A]]></fr:tex> is
+                true in <html:strong>every</html:strong> possible world. We require that <fr:tex display="inline"><![CDATA[A]]></fr:tex> must be true in a 
+                world about which we assume nothing (<fr:tex display="inline"><![CDATA[\Gamma  = \cdot ]]></fr:tex>), except the constant-true
+                propositions <fr:tex display="inline"><![CDATA[\Delta ]]></fr:tex>.
             </html:p>
         </fr:mainmatter></fr:tree>
 
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Substitution Principle for Validity">Substitution Principle for Validity</fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Substitution Principle for Validity">Substitution Principle for Validity</fr:title></fr:frontmatter><fr:mainmatter>
             <html:p>
                 Note that by the definition of validity we can immediately reduce the goal
-                of proving <fr:tex display="inline">A\space \text {valid}</fr:tex> into proving <fr:tex display="inline">A\space \text {true}</fr:tex>, which is captured by the principle
+                of proving <fr:tex display="inline"><![CDATA[A\space \text {valid}]]></fr:tex> into proving <fr:tex display="inline"><![CDATA[A\space \text {true}]]></fr:tex>, which is captured by the principle
                 of substitution.
             </html:p>
             <html:p>
-                If <fr:tex display="inline">\Delta ;\cdot \vdash  A\space \text {true}</fr:tex> and <fr:tex display="inline">(\Delta ,u::A\space \text {valid},\Delta &apos;);\Gamma \vdash  C\space \text {true}</fr:tex>,
-                then <fr:tex display="inline">(\Delta ,\Delta &apos;);\Gamma \vdash  C\space \text {true}</fr:tex>.
+                If <fr:tex display="inline"><![CDATA[\Delta ;\cdot \vdash  A\space \text {true}]]></fr:tex> and <fr:tex display="inline"><![CDATA[(\Delta ,u::A\space \text {valid},\Delta ');\Gamma \vdash  C\space \text {true}]]></fr:tex>,
+                then <fr:tex display="inline"><![CDATA[(\Delta ,\Delta ');\Gamma \vdash  C\space \text {true}]]></fr:tex>.
             </html:p>
         </fr:mainmatter></fr:tree>
 
         <html:p>
             With the categorical judgment we can introduce the <html:strong>modal operator</html:strong> for necessary
-            truth <fr:tex display="inline">\square  A</fr:tex>.
+            truth <fr:tex display="inline"><![CDATA[\square  A]]></fr:tex>.
         </html:p>
     </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Validity">Contextual Validity</fr:title></fr:frontmatter><fr:mainmatter>
-        <html:p><fr:tex display="inline">A\space \text {valid}</fr:tex> expresses that <fr:tex display="inline">A</fr:tex> is true in <html:strong>any</html:strong> world.
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Validity">Contextual Validity</fr:title></fr:frontmatter><fr:mainmatter>
+        <html:p><fr:tex display="inline"><![CDATA[A\space \text {valid}]]></fr:tex> expresses that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true in <html:strong>any</html:strong> world.
             In this section we <html:strong>relativize</html:strong> this judgment:
-            let <fr:tex display="inline">\Psi  = y_1:B_1\space \text {true}, \cdots , y_n:B_n\space \text {true}</fr:tex> be a list of assumptions.
-            We say that <fr:tex display="inline">A</fr:tex> is <html:strong>valid relative</html:strong> <fr:tex display="inline">\Psi </fr:tex> (denoted <fr:tex display="inline">A\space \text {valid}[\Psi ]</fr:tex>) if <fr:tex display="inline">A</fr:tex> is true in every
-            world in which <fr:tex display="inline">B_1,\cdots ,B_n</fr:tex> are true.
-            Similarly we generalized assumptions about validity so that <fr:tex display="inline">\Delta </fr:tex> 
-            now has the form <fr:tex display="inline">u_1::A_1\space \text {valid}[\Psi _1], \cdots , u_n::A_n\space \text {valid}[\Psi _n]</fr:tex>.
+            let <fr:tex display="inline"><![CDATA[\Psi  = y_1:B_1\space \text {true}, \cdots , y_n:B_n\space \text {true}]]></fr:tex> be a list of assumptions.
+            We say that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is <html:strong>valid relative</html:strong> <fr:tex display="inline"><![CDATA[\Psi ]]></fr:tex> (denoted <fr:tex display="inline"><![CDATA[A\space \text {valid}[\Psi ]]]></fr:tex>) if <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true in every
+            world in which <fr:tex display="inline"><![CDATA[B_1,\cdots ,B_n]]></fr:tex> are true.
+            Similarly we generalized assumptions about validity so that <fr:tex display="inline"><![CDATA[\Delta ]]></fr:tex> 
+            now has the form <fr:tex display="inline"><![CDATA[u_1::A_1\space \text {valid}[\Psi _1], \cdots , u_n::A_n\space \text {valid}[\Psi _n]]]></fr:tex>.
         </html:p>
         <html:p>
-            As common in PL, we refer to <fr:tex display="inline">\Psi </fr:tex> as a context and to the judgment 
-            <fr:tex display="inline">A\space \text {valid}[\Psi ]</fr:tex> as <html:strong>contextual validity</html:strong>.
+            As common in PL, we refer to <fr:tex display="inline"><![CDATA[\Psi ]]></fr:tex> as a context and to the judgment 
+            <fr:tex display="inline"><![CDATA[A\space \text {valid}[\Psi ]]]></fr:tex> as <html:strong>contextual validity</html:strong>.
         </html:p>
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Validity">Contextual Validity</fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Validity">Contextual Validity</fr:title></fr:frontmatter><fr:mainmatter>
             <html:p>
-                To prove <fr:tex display="inline">A\space \text {valid}[\Psi ]</fr:tex> we only required to prove <fr:tex display="inline">A</fr:tex> using only <fr:tex display="inline">\Psi </fr:tex>
+                To prove <fr:tex display="inline"><![CDATA[A\space \text {valid}[\Psi ]]]></fr:tex> we only required to prove <fr:tex display="inline"><![CDATA[A]]></fr:tex> using only <fr:tex display="inline"><![CDATA[\Psi ]]></fr:tex>
                 without any hypotheses about the truth:
             </html:p>
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \frac {
                     \Delta ;\Psi \vdash  A\space \text {true}
                 }{
                     \Delta ;\Gamma \vdash  A\space \text {valid}[\Psi ]
                 }
-            </fr:tex>
+            ]]></fr:tex>
         </fr:mainmatter></fr:tree>
 
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Entailment">Contextual Entailment</fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Entailment">Contextual Entailment</fr:title></fr:frontmatter><fr:mainmatter>
             We write
-            <fr:tex display="block">
+            <fr:tex display="block"><![CDATA[
                 \Delta ;\Gamma \vdash \Psi 
-            </fr:tex>
-            to express that all the propositions in <fr:tex display="inline">\Psi </fr:tex> are true using the assumptions from <fr:tex display="inline">\Gamma </fr:tex>.
-            <fr:tex display="block">
+            ]]></fr:tex>
+            to express that all the propositions in <fr:tex display="inline"><![CDATA[\Psi ]]></fr:tex> are true using the assumptions from <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>.
+            <fr:tex display="block"><![CDATA[
                 \frac {
                     \Delta ;\Gamma \vdash  B_1\space \text {true} \quad \cdot \quad  \Delta ;\Gamma \vdash  B_n\space \text {true}
                 }{
                     \Delta ;\Gamma \vdash  y_1:B_1\space \text {true},\ldots ,y_n:B_n\space \text {true}
                 }(\text {ctx})
-            </fr:tex>
+            ]]></fr:tex>
         </fr:mainmatter></fr:tree>
 
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Hypothesis Rule">Contextual Hypothesis Rule</fr:title></fr:frontmatter><fr:mainmatter>
-            <fr:tex display="block">
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Hypothesis Rule">Contextual Hypothesis Rule</fr:title></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block"><![CDATA[
                 \frac {
-                    (\Delta ,u::A\space \text {valid}[\Psi ],\Delta &apos;);\Gamma \vdash \Psi 
+                    (\Delta ,u::A\space \text {valid}[\Psi ],\Delta ');\Gamma \vdash \Psi 
                 }{
-                    (\Delta ,u::A\space \text {valid}[\Psi ],\Delta &apos;);\Gamma \vdash  A\space \text {true}
+                    (\Delta ,u::A\space \text {valid}[\Psi ],\Delta ');\Gamma \vdash  A\space \text {true}
                 }(\text {ctxhyp}_u)
-            </fr:tex>
+            ]]></fr:tex>
         </fr:mainmatter></fr:tree>
 
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Substitution Principle">Contextual Substitution Principle</fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Substitution Principle">Contextual Substitution Principle</fr:title></fr:frontmatter><fr:mainmatter>
             <html:p>
-                If <fr:tex display="inline">\Delta ;\Psi \vdash  A\space \text {true}</fr:tex> and <fr:tex display="inline">(\Delta ,u::A\space \text {valid}[\Psi ],\Delta &apos;);\Gamma \vdash  C\space \text {true}</fr:tex>
-                then <fr:tex display="inline">(\Delta ,\Delta &apos;);\Gamma \vdash  C\space \text {true}</fr:tex>.
+                If <fr:tex display="inline"><![CDATA[\Delta ;\Psi \vdash  A\space \text {true}]]></fr:tex> and <fr:tex display="inline"><![CDATA[(\Delta ,u::A\space \text {valid}[\Psi ],\Delta ');\Gamma \vdash  C\space \text {true}]]></fr:tex>
+                then <fr:tex display="inline"><![CDATA[(\Delta ,\Delta ');\Gamma \vdash  C\space \text {true}]]></fr:tex>.
             </html:p>
             <html:p>
-                The precondition implies <fr:tex display="inline">\Delta ;\Gamma \vdash  A\space \text {valid}[\Psi ]</fr:tex> and by the substitution principle
+                The precondition implies <fr:tex display="inline"><![CDATA[\Delta ;\Gamma \vdash  A\space \text {valid}[\Psi ]]]></fr:tex> and by the substitution principle
                 of hypotheses judgments we can justify this rule.
             </html:p>
         </fr:mainmatter></fr:tree>
 
         
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Identity Principle">Contextual Identity Principle</fr:title></fr:frontmatter><fr:mainmatter>
-            <fr:tex display="block">
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>27</fr:day></fr:date><fr:title text="Contextual Identity Principle">Contextual Identity Principle</fr:title></fr:frontmatter><fr:mainmatter>
+            <fr:tex display="block"><![CDATA[
                 \Delta ;\Psi \vdash \Psi 
-            </fr:tex>
+            ]]></fr:tex>
         </fr:mainmatter></fr:tree>
 
     </fr:mainmatter></fr:tree>
@@ -302,17 +303,17 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

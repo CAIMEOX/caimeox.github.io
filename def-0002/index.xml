@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-0002/</fr:uri>
     <fr:display-uri>def-0002</fr:display-uri>
     <fr:route>/def-0002/</fr:route>
@@ -10,33 +11,33 @@
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
-If in a <fr:link href="/def-0001/" title="Group" uri="https://caimeo.space/def-0001/" display-uri="def-0001" type="local">group</fr:link> <fr:tex display="inline">G</fr:tex>, <fr:tex display="inline">\forall  a,b\in  G, a\circ  b=b\circ  a</fr:tex> then <fr:tex display="inline">G</fr:tex> is called an <html:strong>abelian (commutative) group</html:strong>.
+If in a <fr:link href="/def-0001/" title="Group" uri="https://caimeo.space/def-0001/" display-uri="def-0001" type="local">group</fr:link> <fr:tex display="inline"><![CDATA[G]]></fr:tex>, <fr:tex display="inline"><![CDATA[\forall  a,b\in  G, a\circ  b=b\circ  a]]></fr:tex> then <fr:tex display="inline"><![CDATA[G]]></fr:tex> is called an <html:strong>abelian (commutative) group</html:strong>.
 </html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:uri>https://caimeo.space/def-0006/</fr:uri>
             <fr:display-uri>def-0006</fr:display-uri>
             <fr:route>/def-0006/</fr:route>
@@ -45,21 +46,21 @@ If in a <fr:link href="/def-0001/" title="Group" uri="https://caimeo.space/def-0
           </fr:frontmatter>
           <fr:mainmatter>
             <html:p>
-A field is a set <fr:tex display="inline">F</fr:tex> together with two binary operations <fr:tex display="inline">+</fr:tex> and <fr:tex display="inline">\times </fr:tex> on <fr:tex display="inline">F</fr:tex> st <fr:tex display="inline">(F,+)</fr:tex> is an <fr:link href="/def-0002/" title="Abel Group" uri="https://caimeo.space/def-0002/" display-uri="def-0002" type="local">abelian group</fr:link> (identity is <fr:tex display="inline">0</fr:tex>) and <fr:tex display="inline">(F-\{0\},\times )</fr:tex> is also an abelian group such that
-<fr:tex display="inline">a\times (b+c)=a\times  b+a\times  c,\forall  a,b,c\in  F</fr:tex></html:p>
+A field is a set <fr:tex display="inline"><![CDATA[F]]></fr:tex> together with two binary operations <fr:tex display="inline"><![CDATA[+]]></fr:tex> and <fr:tex display="inline"><![CDATA[\times ]]></fr:tex> on <fr:tex display="inline"><![CDATA[F]]></fr:tex> st <fr:tex display="inline"><![CDATA[(F,+)]]></fr:tex> is an <fr:link href="/def-0002/" title="Abel Group" uri="https://caimeo.space/def-0002/" display-uri="def-0002" type="local">abelian group</fr:link> (identity is <fr:tex display="inline"><![CDATA[0]]></fr:tex>) and <fr:tex display="inline"><![CDATA[(F-\{0\},\times )]]></fr:tex> is also an abelian group such that
+<fr:tex display="inline"><![CDATA[a\times (b+c)=a\times  b+a\times  c,\forall  a,b,c\in  F]]></fr:tex></html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:uri>https://caimeo.space/def-0001/</fr:uri>
             <fr:display-uri>def-0001</fr:display-uri>
             <fr:route>/def-0001/</fr:route>
@@ -68,21 +69,21 @@ A field is a set <fr:tex display="inline">F</fr:tex> together with two binary op
           </fr:frontmatter>
           <fr:mainmatter>
             <html:p>
-A <html:strong>group</html:strong> is a set <fr:tex display="inline">G</fr:tex> with a binary operation <fr:tex display="inline">\circ </fr:tex> satisfies the following properties:
-<html:ul><html:li>Closure: <fr:tex display="inline">\forall  a,b\in  G,a \circ  b\in  G</fr:tex></html:li>
-<html:li>Associativity: <fr:tex display="inline">\forall  a,b,c\in  G, (a\circ  b) \circ  c= a \circ  (b \circ  c)</fr:tex></html:li>
-<html:li>Identity: <fr:tex display="inline">\exists  e\in  G</fr:tex> such that <fr:tex display="inline">\forall  g\in  G, g\circ  e=e\circ  g = g</fr:tex></html:li>
-<html:li>Inverse: <fr:tex display="inline">\forall  g\in  G,\exists  g^{-1}\in  G</fr:tex> such that <fr:tex display="inline">g\circ  g^{-1}=e</fr:tex></html:li></html:ul></html:p>
+A <html:strong>group</html:strong> is a set <fr:tex display="inline"><![CDATA[G]]></fr:tex> with a binary operation <fr:tex display="inline"><![CDATA[\circ ]]></fr:tex> satisfies the following properties:
+<html:ul><html:li>Closure: <fr:tex display="inline"><![CDATA[\forall  a,b\in  G,a \circ  b\in  G]]></fr:tex></html:li>
+<html:li>Associativity: <fr:tex display="inline"><![CDATA[\forall  a,b,c\in  G, (a\circ  b) \circ  c= a \circ  (b \circ  c)]]></fr:tex></html:li>
+<html:li>Identity: <fr:tex display="inline"><![CDATA[\exists  e\in  G]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\forall  g\in  G, g\circ  e=e\circ  g = g]]></fr:tex></html:li>
+<html:li>Inverse: <fr:tex display="inline"><![CDATA[\forall  g\in  G,\exists  g^{-1}\in  G]]></fr:tex> such that <fr:tex display="inline"><![CDATA[g\circ  g^{-1}=e]]></fr:tex></html:li></html:ul></html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

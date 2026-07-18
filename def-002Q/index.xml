@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-002Q/</fr:uri>
     <fr:display-uri>def-002Q</fr:display-uri>
     <fr:route>/def-002Q/</fr:route>
@@ -11,57 +12,57 @@
   <fr:mainmatter>
     <html:p>
     A linear equation is called <html:strong>homogeneous</html:strong> if it can be written in the form
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         a_1x_1 + a_2x_2 + \cdots  + a_nx_n = 0
-    </fr:tex>
-    where <fr:tex display="inline">a_1, a_2, \ldots , a_n</fr:tex> are constants and <fr:tex display="inline">x_1, x_2, \ldots , x_n</fr:tex> are variables.
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[a_1, a_2, \ldots , a_n]]></fr:tex> are constants and <fr:tex display="inline"><![CDATA[x_1, x_2, \ldots , x_n]]></fr:tex> are variables.
     With a set of homogeneous linear equations, we can form a <html:strong>homogeneous linear system</html:strong>.    
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \begin {aligned}
-            a_{11}x_1 + a_{12}x_2 + \cdots  + a_{1n}x_n &amp;= 0 \\
-            a_{21}x_1 + a_{22}x_2 + \cdots  + a_{2n}x_n &amp;= 0 \\
-            &amp;\vdots  \\
-            a_{m1}x_1 + a_{m2}x_2 + \cdots  + a_{mn}x_n &amp;= 0
+            a_{11}x_1 + a_{12}x_2 + \cdots  + a_{1n}x_n &= 0 \\
+            a_{21}x_1 + a_{22}x_2 + \cdots  + a_{2n}x_n &= 0 \\
+            &\vdots  \\
+            a_{m1}x_1 + a_{m2}x_2 + \cdots  + a_{mn}x_n &= 0
         \end {aligned}
-    </fr:tex>
+    ]]></fr:tex>
     This can be written in matrix form as
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         A\vec {x} = \vec {0}
-    </fr:tex>
-    where <fr:tex display="inline">A</fr:tex> is the <html:strong>coefficient matrix</html:strong>, <fr:tex display="inline">\vec {x}</fr:tex> is the vector of variables, and <fr:tex display="inline">\vec {0}</fr:tex> is the zero vector.
-    <fr:tex display="block">
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[A]]></fr:tex> is the <html:strong>coefficient matrix</html:strong>, <fr:tex display="inline"><![CDATA[\vec {x}]]></fr:tex> is the vector of variables, and <fr:tex display="inline"><![CDATA[\vec {0}]]></fr:tex> is the zero vector.
+    <fr:tex display="block"><![CDATA[
         A = \begin {bmatrix}
-            a_{11} &amp; a_{12} &amp; \cdots  &amp; a_{1n} \\
-            a_{21} &amp; a_{22} &amp; \cdots  &amp; a_{2n} \\
-            \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\
-            a_{m1} &amp; a_{m2} &amp; \cdots  &amp; a_{mn}
+            a_{11} & a_{12} & \cdots  & a_{1n} \\
+            a_{21} & a_{22} & \cdots  & a_{2n} \\
+            \vdots  & \vdots  & \ddots  & \vdots  \\
+            a_{m1} & a_{m2} & \cdots  & a_{mn}
         \end {bmatrix}
-    </fr:tex></html:p>
+    ]]></fr:tex></html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:uri>https://caimeo.space/eg-0004/</fr:uri>
             <fr:display-uri>eg-0004</fr:display-uri>
             <fr:route>/eg-0004/</fr:route>
@@ -71,26 +72,26 @@
           <fr:mainmatter>
             <html:p>Rephrase in terms of a linear map the question of whether a <fr:link href="/def-002Q/" title="Homogeneous Linear Equations" uri="https://caimeo.space/def-002Q/" display-uri="def-002Q" type="local">homogeneous system linear equations</fr:link> has a nonzero solution.</html:p>
             <html:p>
-        Let <fr:tex display="inline">A</fr:tex> be the coefficient matrix of a homogeneous linear system.
-        <fr:tex display="block">
+        Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be the coefficient matrix of a homogeneous linear system.
+        <fr:tex display="block"><![CDATA[
             A = \begin {bmatrix}
-                a_{11} &amp; a_{12} &amp; \cdots  &amp; a_{1n} \\
-                a_{21} &amp; a_{22} &amp; \cdots  &amp; a_{2n} \\
-                \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\
-                a_{m1} &amp; a_{m2} &amp; \cdots  &amp; a_{mn}
+                a_{11} & a_{12} & \cdots  & a_{1n} \\
+                a_{21} & a_{22} & \cdots  & a_{2n} \\
+                \vdots  & \vdots  & \ddots  & \vdots  \\
+                a_{m1} & a_{m2} & \cdots  & a_{mn}
             \end {bmatrix}
-        </fr:tex>
-        The equation <fr:tex display="inline">A\vec {x} = \vec {0}</fr:tex> has a trivial solution <fr:tex display="inline">\vec {x} = \vec {0}</fr:tex>.
+        ]]></fr:tex>
+        The equation <fr:tex display="inline"><![CDATA[A\vec {x} = \vec {0}]]></fr:tex> has a trivial solution <fr:tex display="inline"><![CDATA[\vec {x} = \vec {0}]]></fr:tex>.
         The question here is whether there is a nontrivial solution.
     </html:p>
             <html:p>
-        Define <fr:tex display="inline">T: \mathbb {F}^n \to  \mathbb {F}^m</fr:tex> by
-        <fr:tex display="block">
+        Define <fr:tex display="inline"><![CDATA[T: \mathbb {F}^n \to  \mathbb {F}^m]]></fr:tex> by
+        <fr:tex display="block"><![CDATA[
             T(\vec {x}) = A\vec {x}
-        </fr:tex>
+        ]]></fr:tex>
         Then the question of whether the homogeneous linear system has a nontrivial solution is equivalent to 
-        asking <fr:tex display="inline">\text {null } T</fr:tex> is nontrivial.
-        That is, <fr:tex display="inline">T</fr:tex> is <fr:link href="/thm-000G/" title="Injectivity equivalent to Kernel Triviality" uri="https://caimeo.space/thm-000G/" display-uri="thm-000G" type="local">not injective</fr:link>.
+        asking <fr:tex display="inline"><![CDATA[\text {null } T]]></fr:tex> is nontrivial.
+        That is, <fr:tex display="inline"><![CDATA[T]]></fr:tex> is <fr:link href="/thm-000G/" title="Injectivity equivalent to Kernel Triviality" uri="https://caimeo.space/thm-000G/" display-uri="thm-000G" type="local">not injective</fr:link>.
     </html:p>
           </fr:mainmatter>
         </fr:tree>
@@ -98,17 +99,17 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
-    <fr:authors></fr:authors>
+    <fr:authors />
     <fr:uri>https://caimeo.space/def-0020/</fr:uri>
     <fr:display-uri>def-0020</fr:display-uri>
     <fr:route>/def-0020/</fr:route>
@@ -12,33 +13,33 @@
     <html:p>
         
         The <html:strong>unit type</html:strong> is the simplest inductive type.
-        It has only one constructor, denoted by <fr:tex display="inline">\star :\textbf {1}</fr:tex>.
+        It has only one constructor, denoted by <fr:tex display="inline"><![CDATA[\star :\textbf {1}]]></fr:tex>.
     </html:p>
     <html:p>
         The induction principle of the unit type is trivial.
-        It says that to define a dependent function <fr:tex display="inline">f:\Pi  _{(x:\textbf {1})} P(x)</fr:tex>, 
-        it suffices to give a value <fr:tex display="inline">p:P(\star )</fr:tex>.
-        <fr:tex display="block">
+        It says that to define a dependent function <fr:tex display="inline"><![CDATA[f:\Pi  _{(x:\textbf {1})} P(x)]]></fr:tex>, 
+        it suffices to give a value <fr:tex display="inline"><![CDATA[p:P(\star )]]></fr:tex>.
+        <fr:tex display="block"><![CDATA[
             f (\star ) :\equiv  p
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
-            <fr:authors></fr:authors>
+            <fr:authors />
             <fr:date>
               <fr:year>2024</fr:year>
               <fr:month>1</fr:month>
@@ -54,15 +55,15 @@
     In previous post, we have seen the definition of natural numbers as an inductive type.
     In this post, we will see more examples of inductive types, such as 
     unit type, empty type, product type, sum type and etc.
-    Refer to <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke&apos;s Book</fr:link>.
+    Refer to <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Egbert Rijke's Book</fr:link>.
 </html:p><html:p>
     This section is much more informal than the previous one.
     Without displaying the inference rules, we will just present the <html:strong>constructor</html:strong>
     and <html:strong>induction principle</html:strong> of each inductive type.
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="General Inductive Type"><html:strong>General Inductive Type</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="General Inductive Type"><html:strong>General Inductive Type</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
-    Just like <fr:tex display="inline">\mathbb {N}</fr:tex>, other inductive types can be defined by 
+    Just like <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>, other inductive types can be defined by 
     their constructors and induction principles (and computation rules).
     </html:p>
     <html:ul><html:li>
@@ -76,103 +77,103 @@
             The computation rules specify the behavior of the constructors.
         </html:li></html:ul>
 </fr:mainmatter></fr:tree>
-<fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0020/</fr:uri><fr:display-uri>def-0020</fr:display-uri><fr:route>/def-0020/</fr:route><fr:title text="Unit Type">Unit Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+<fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0020/</fr:uri><fr:display-uri>def-0020</fr:display-uri><fr:route>/def-0020/</fr:route><fr:title text="Unit Type">Unit Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
         
         The <html:strong>unit type</html:strong> is the simplest inductive type.
-        It has only one constructor, denoted by <fr:tex display="inline">\star :\textbf {1}</fr:tex>.
+        It has only one constructor, denoted by <fr:tex display="inline"><![CDATA[\star :\textbf {1}]]></fr:tex>.
     </html:p><html:p>
         The induction principle of the unit type is trivial.
-        It says that to define a dependent function <fr:tex display="inline">f:\Pi  _{(x:\textbf {1})} P(x)</fr:tex>, 
-        it suffices to give a value <fr:tex display="inline">p:P(\star )</fr:tex>.
-        <fr:tex display="block">
+        It says that to define a dependent function <fr:tex display="inline"><![CDATA[f:\Pi  _{(x:\textbf {1})} P(x)]]></fr:tex>, 
+        it suffices to give a value <fr:tex display="inline"><![CDATA[p:P(\star )]]></fr:tex>.
+        <fr:tex display="block"><![CDATA[
             f (\star ) :\equiv  p
-        </fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
+        ]]></fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
     A degenerate inductive type is the <html:strong>empty type</html:strong>.
     It has no constructor, and its induction principle is trivial.
     Empty type is connected to the <html:strong>exfalso quodlibet principle</html:strong> in logic.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0021/</fr:uri><fr:display-uri>def-0021</fr:display-uri><fr:route>/def-0021/</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    The <html:strong>empty type</html:strong> is a degenerate inductive type <fr:tex display="inline">\emptyset </fr:tex> satisfying 
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0021/</fr:uri><fr:display-uri>def-0021</fr:display-uri><fr:route>/def-0021/</fr:route><fr:title text="Empty Type">Empty Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    The <html:strong>empty type</html:strong> is a degenerate inductive type <fr:tex display="inline"><![CDATA[\emptyset ]]></fr:tex> satisfying 
     the following induction principle:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {ind}_\emptyset  : \Pi _{(x:\emptyset )}P(x)
-    </fr:tex>
+    ]]></fr:tex>
     And a special case is <html:strong>exfalso</html:strong>:
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {exfalso} :\equiv  \text {ind}_\emptyset  : \empty  \to  A 
-    </fr:tex>
+    ]]></fr:tex>
     which can draw any conclusion.
 </html:p></fr:mainmatter></fr:tree><html:p>
     With the empty type we can define the <html:strong>negation</html:strong> of a type
     and the <html:strong>proof of negation</html:strong>.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0022/</fr:uri><fr:display-uri>def-0022</fr:display-uri><fr:route>/def-0022/</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    The <html:strong>negation</html:strong> of type <fr:tex display="inline">A</fr:tex> is defined as
-    <fr:tex display="block">
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0022/</fr:uri><fr:display-uri>def-0022</fr:display-uri><fr:route>/def-0022/</fr:route><fr:title text="Type Negation">Type Negation</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    The <html:strong>negation</html:strong> of type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is defined as
+    <fr:tex display="block"><![CDATA[
         \neg  A :\equiv  A \to  \emptyset 
-    </fr:tex>
-    A type <fr:tex display="inline">A</fr:tex> is said to be <html:strong>empty</html:strong> if and only if <fr:tex display="inline">\neg  A</fr:tex> is inhabited.
-    <fr:tex display="block">
+    ]]></fr:tex>
+    A type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is said to be <html:strong>empty</html:strong> if and only if <fr:tex display="inline"><![CDATA[\neg  A]]></fr:tex> is inhabited.
+    <fr:tex display="block"><![CDATA[
         \text {empty}(A) :\equiv  \neg  A
-    </fr:tex></html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="Proof of negation"><html:strong>Proof of negation</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    ]]></fr:tex></html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="Proof of negation"><html:strong>Proof of negation</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
         <html:p>
-            To prove <fr:tex display="inline">\neg  A</fr:tex>, we need to show that <fr:tex display="inline">A</fr:tex> implies a contradiction.
-            In other words, constructing a function of type <fr:tex display="inline">A \to  \emptyset </fr:tex>.
+            To prove <fr:tex display="inline"><![CDATA[\neg  A]]></fr:tex>, we need to show that <fr:tex display="inline"><![CDATA[A]]></fr:tex> implies a contradiction.
+            In other words, constructing a function of type <fr:tex display="inline"><![CDATA[A \to  \emptyset ]]></fr:tex>.
         </html:p>
     </fr:mainmatter></fr:tree>
-</fr:mainmatter></fr:tree><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0023/</fr:uri><fr:display-uri>def-0023</fr:display-uri><fr:route>/def-0023/</fr:route><fr:title text="Coproduct Type">Coproduct Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    Let <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex> be types. The <html:strong>coproduct (disjoint sum)</html:strong> <fr:tex display="inline">A+B</fr:tex> is a typed defined by the following constructors:
-    <html:ul><html:li><fr:tex display="inline">\text {inl}:A\to  A+B</fr:tex></html:li>
-        <html:li><fr:tex display="inline">\text {inr}:B\to  A+B</fr:tex></html:li></html:ul>
-    For any type family indexed by <fr:tex display="inline">x:A+B</fr:tex>, satisfies the following induction principle:
-    <fr:tex display="block">
+</fr:mainmatter></fr:tree><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0023/</fr:uri><fr:display-uri>def-0023</fr:display-uri><fr:route>/def-0023/</fr:route><fr:title text="Coproduct Type">Coproduct Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> be types. The <html:strong>coproduct (disjoint sum)</html:strong> <fr:tex display="inline"><![CDATA[A+B]]></fr:tex> is a typed defined by the following constructors:
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[\text {inl}:A\to  A+B]]></fr:tex></html:li>
+        <html:li><fr:tex display="inline"><![CDATA[\text {inr}:B\to  A+B]]></fr:tex></html:li></html:ul>
+    For any type family indexed by <fr:tex display="inline"><![CDATA[x:A+B]]></fr:tex>, satisfies the following induction principle:
+    <fr:tex display="block"><![CDATA[
         \text {ind}_+: (\Pi _{(x:A)}P(\text {inl}(x)))\to (\Pi _{(y:B)}P(\text {inr}(y)))\to \Pi _{(z:A+B)}P(z)
-    </fr:tex>
-    (Note that sometimes we denoted <fr:tex display="inline">\text {ind}_+(f,g)</fr:tex> as <fr:tex display="inline">[f,g]</fr:tex>) And the computation rule:
-    <fr:tex display="block">
+    ]]></fr:tex>
+    (Note that sometimes we denoted <fr:tex display="inline"><![CDATA[\text {ind}_+(f,g)]]></fr:tex> as <fr:tex display="inline"><![CDATA[[f,g]]]></fr:tex>) And the computation rule:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            \text {ind}_+(f,g,\text {inl}(x))&amp;\equiv  f(x)\\
-            \text {ind}_+(f,g,\text {inr}(y))&amp;\equiv  g(y)
+            \text {ind}_+(f,g,\text {inl}(x))&\equiv  f(x)\\
+            \text {ind}_+(f,g,\text {inr}(y))&\equiv  g(y)
         \end {align*}
-    </fr:tex>
-    where <fr:tex display="inline">f</fr:tex> and <fr:tex display="inline">g</fr:tex> are defined:
-    <fr:tex display="block">
+    ]]></fr:tex>
+    where <fr:tex display="inline"><![CDATA[f]]></fr:tex> and <fr:tex display="inline"><![CDATA[g]]></fr:tex> are defined:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            f&amp;:\Pi _{(x:A)}P(\text {inl}(x))\\
-            g&amp;:\Pi _{(y:B)}P(\text {inr}(y))
+            f&:\Pi _{(x:A)}P(\text {inl}(x))\\
+            g&:\Pi _{(y:B)}P(\text {inr}(y))
         \end {align*}
-    </fr:tex>
-    This can be presented by pattern matching to define a function <fr:tex display="inline">h:\Pi  _{(z:A+B)}.P(z)</fr:tex>:
-    <fr:tex display="block">
+    ]]></fr:tex>
+    This can be presented by pattern matching to define a function <fr:tex display="inline"><![CDATA[h:\Pi  _{(z:A+B)}.P(z)]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
         \begin {align*}
-            h(\text {inl}(x))&amp;:\equiv  f(x)\\
-            h(\text {inr}(y))&amp;:\equiv  g(y)
+            h(\text {inl}(x))&:\equiv  f(x)\\
+            h(\text {inr}(y))&:\equiv  g(y)
         \end {align*}
-    </fr:tex></html:p></fr:mainmatter></fr:tree>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="Special Case of Coproduct"><html:strong>Special Case of Coproduct</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    ]]></fr:tex></html:p></fr:mainmatter></fr:tree>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>30</fr:day></fr:date><fr:title text="Special Case of Coproduct"><html:strong>Special Case of Coproduct</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
     The special case of coproduct type is also called the <html:strong>sum type</html:strong>.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \text {ind}_+: (A \to  X) \to  (B \to  X) \to  (A+B \to  X)
-    </fr:tex>
+    ]]></fr:tex>
     which is very similar to the <html:strong>elimination rule</html:strong> of disjunction in logic.
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         (P\to  Q) \to  (R\to  Q) \to  (P\vee  R\to  Q)
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 <html:p>
     The dependent version of sum type is called the <html:strong>dependent sum type (dependent coproduct)</html:strong> traditionally.
     Its terms are ordered pairs.
-</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0024/</fr:uri><fr:display-uri>def-0024</fr:display-uri><fr:route>/def-0024/</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
-    The <html:strong>dependent pair type</html:strong> is a inductive type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex> (<fr:tex display="inline">(x:A) \times  B(x)</fr:tex>)
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.space/def-0024/</fr:uri><fr:display-uri>def-0024</fr:display-uri><fr:route>/def-0024/</fr:route><fr:title text="Dependent Pair Type">Dependent Pair Type</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    The <html:strong>dependent pair type</html:strong> is a inductive type <fr:tex display="inline"><![CDATA[\Sigma _{(x:A)}B(x)]]></fr:tex> (<fr:tex display="inline"><![CDATA[(x:A) \times  B(x)]]></fr:tex>)
 </html:p>
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Formation Rule
 ">
     <html:strong>Formation Rule</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
-        Given a type family <fr:tex display="inline">B</fr:tex> over <fr:tex display="inline">A</fr:tex>, we can form the dependent pair type <fr:tex display="inline">\Sigma _{(x:A)}B(x)</fr:tex>.
+        Given a type family <fr:tex display="inline"><![CDATA[B]]></fr:tex> over <fr:tex display="inline"><![CDATA[A]]></fr:tex>, we can form the dependent pair type <fr:tex display="inline"><![CDATA[\Sigma _{(x:A)}B(x)]]></fr:tex>.
     </html:p>
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  A\space \text {type}
             \quad 
@@ -180,18 +181,18 @@
         }{
             \Gamma \vdash  (x:A) \times  B(x)\space \text {type}
         }
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Introduction Rule
 ">
     <html:strong>Introduction Rule</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
-        Given a term <fr:tex display="inline">a:A</fr:tex> and a term <fr:tex display="inline">b(a):B(a)</fr:tex>, we can form a term <fr:tex display="inline">\text {pair}(a,b):(x:A)\times  B(x)</fr:tex>.
+        Given a term <fr:tex display="inline"><![CDATA[a:A]]></fr:tex> and a term <fr:tex display="inline"><![CDATA[b(a):B(a)]]></fr:tex>, we can form a term <fr:tex display="inline"><![CDATA[\text {pair}(a,b):(x:A)\times  B(x)]]></fr:tex>.
     </html:p>
-    <fr:tex display="block">
+    <fr:tex display="block"><![CDATA[
         \frac {
             \Gamma \vdash  a:A
             \quad 
@@ -199,58 +200,58 @@
         }{
             \Gamma \vdash  (a,b):(x:A)\times  B(x)
         }
-    </fr:tex>
+    ]]></fr:tex>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Elimination Rule
 ">
     <html:strong>Elimination Rule</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     <html:p>
         The elimination rule is formed with two projections.
-        <fr:tex display="block">
+        <fr:tex display="block"><![CDATA[
             \frac {
                 \Gamma \vdash  p:(x:A)\times  B(x)
             }{
                 \begin {align*}
-                    \Gamma &amp;\vdash  \text {pr}_A(p):A\\
-                    \Gamma &amp;\vdash  \text {pr}_B(p):B(\text {pr}_A(p))
+                    \Gamma &\vdash  \text {pr}_A(p):A\\
+                    \Gamma &\vdash  \text {pr}_B(p):B(\text {pr}_A(p))
                 \end {align*}
             }
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Computation Rule
 ">
     <html:strong>Computation Rule</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
-    <html:p><fr:tex display="block">
+    <html:p><fr:tex display="block"><![CDATA[
             \frac {
                 \Gamma \vdash  x:A 
                 \quad  
                 \Gamma \vdash  y:B(x)
             }{
                 \begin {align*}
-                    \Gamma &amp;\vdash  \text {pr}_A((x,y))=x:A\\
-                    \Gamma &amp;\vdash  \text {pr}_B((x,y))=y:B(x)
+                    \Gamma &\vdash  \text {pr}_A((x,y))=x:A\\
+                    \Gamma &\vdash  \text {pr}_B((x,y))=y:B(x)
                 \end {align*}
             }
-        </fr:tex></html:p>
+        ]]></fr:tex></html:p>
 </fr:mainmatter></fr:tree>
 
-    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="
     Special Case
 ">
     <html:strong>Special Case</html:strong>
 </fr:title></fr:frontmatter><fr:mainmatter>
     <html:ul><html:li>
-            In the special case that <fr:tex display="inline">B(x) = B</fr:tex> is independent of <fr:tex display="inline">A</fr:tex>,
-            this reduces to the <html:strong>product type</html:strong> <fr:tex display="inline">A\times  B</fr:tex>.
+            In the special case that <fr:tex display="inline"><![CDATA[B(x) = B]]></fr:tex> is independent of <fr:tex display="inline"><![CDATA[A]]></fr:tex>,
+            this reduces to the <html:strong>product type</html:strong> <fr:tex display="inline"><![CDATA[A\times  B]]></fr:tex>.
         </html:li>
         <html:li>
-            In the special case that <fr:tex display="inline">D \equiv  \text {Boolean}</fr:tex>,
+            In the special case that <fr:tex display="inline"><![CDATA[D \equiv  \text {Boolean}]]></fr:tex>,
             this reduces to a <fr:link href="/def-0023/" title="Coproduct Type" uri="https://caimeo.space/def-0023/" display-uri="def-0023" type="local">coproduct type</fr:link>.
         </html:li></html:ul>
 </fr:mainmatter></fr:tree>
@@ -260,24 +261,24 @@
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:authors></fr:authors>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter></fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
   </fr:backmatter>
 </fr:tree>
