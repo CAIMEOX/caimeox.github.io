@@ -18,9 +18,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-          node-version: [19.x]
     steps:
       - uses: actions/checkout@v3
         with:
@@ -28,18 +25,20 @@ jobs:
           fetch-depth: 1
 
       - name: "Set-up OCaml"
-        uses: ocaml/setup-ocaml@v2
+        uses: ocaml/setup-ocaml@v3
         with:
           ocaml-compiler: "5.3.0"
 
-      - name: Install Forester
+      - name: Install Forester system dependencies
+        run: sudo apt-get install -y libev-dev
+
+      - name: Install Forester when not restored from the opam cache
         run: |
-          sudo apt install libev-dev
-          git clone https://git.sr.ht/~jonsterling/ocaml-forester
-          cd ocaml-forester
-          git checkout 5.0
-          opam pin add -y .
-          # opam install -y forester=5.0
+          if ! opam exec -- forester --help >/dev/null 2>&1; then
+            git clone --branch 5.0 --depth 1 \
+              https://git.sr.ht/~jonsterling/ocaml-forester
+            opam pin add -y ./ocaml-forester
+          fi
 
       - name: "Setup TeX Live"
         uses: TeX-Live/setup-texlive-action@v3
@@ -72,17 +71,13 @@ jobs:
       - name: "Build forest"
         run: make release
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          registry-url: https://registry.npmjs.org
+          node-version: 22
 
-      - name: "Normalize generated XML"
-        run: | 
-          npm ci --prefix theme
-          python3 -m unittest tests/test_convert.py
-          node ./theme/javascript-source/convert.js
+      - name: "Test code block rendering"
+        run: node --test tests/code-blocks.test.cjs
 
       - name: "Deploy"
         uses: peaceiris/actions-gh-pages@v3
