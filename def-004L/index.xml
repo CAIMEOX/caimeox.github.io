@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors></fr:authors>
+    <fr:uri>https://caimeo.space/def-004L/</fr:uri>
+    <fr:display-uri>def-004L</fr:display-uri>
+    <fr:route>/def-004L/</fr:route>
+    <fr:title text="Typal Binary Relation">Typal Binary Relation</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    Consider a type <fr:tex display="inline">A</fr:tex>. A <html:strong>typal binary relation</html:strong> on <fr:tex display="inline">A</fr:tex> is defined
+    to be a family of types <fr:tex display="inline">R(x,y)</fr:tex> indexed by <fr:tex display="inline">x,y:A</fr:tex>.
+    <html:ul><html:li><html:strong>Reflexive</html:strong>: <fr:tex display="inline">R</fr:tex> is reflexive if it comes equipped with
+            <fr:tex display="block">
+                \rho :\Pi _{(x:A)}R(x,x)
+            </fr:tex></html:li>
+        <html:li><html:strong>Symmetric</html:strong>: <fr:tex display="inline">R</fr:tex> is symmetric if it comes equipped with
+            <fr:tex display="block">
+                \sigma :\Pi _{(x,y:A)}R(x,y)\to  R(y,x)
+            </fr:tex></html:li>
+        <html:li><html:strong>Transitive</html:strong>: <fr:tex display="inline">R</fr:tex> is transitive if it comes equipped with
+            <fr:tex display="block">
+                \tau :\Pi _{(x,y,z:A)}R(x,y)\to  R(y,z)\to  R(x,z)
+            </fr:tex></html:li></html:ul>
+    A <html:strong>typal equivalence relation</html:strong> on <fr:tex display="inline">A</fr:tex> is a reflexive, symmetric and transitive
+    binary relation on <fr:tex display="inline">A</fr:tex>.
+</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors></fr:authors>
+    <fr:uri>https://caimeo.space/def-001V/</fr:uri>
+    <fr:display-uri>def-001V</fr:display-uri>
+    <fr:route>/def-001V/</fr:route>
+    <fr:title text="Dimension">Dimension</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    The <html:strong>dimension</html:strong> of a finite-dimensional vector space <fr:tex display="inline">V</fr:tex> is the length of any basis of the vector space.
+    Denoted by <fr:tex display="inline">\dim  V</fr:tex>.
+</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors></fr:authors>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>26</fr:day>
+            </fr:date>
+            <fr:uri>https://caimeo.space/math-0002/</fr:uri>
+            <fr:display-uri>math-0002</fr:display-uri>
+            <fr:route>/math-0002/</fr:route>
+            <fr:title text="Finite Dimensional Vector Space">Finite Dimensional Vector Space</fr:title>
+            <fr:taxon>Linear Algebra</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    This note introduces the concept of finite-dimensional vector space.
+    Refer to <fr:link href="/linear-algebra-2015/" title="Linear Algebra Done Right" uri="https://caimeo.space/linear-algebra-2015/" display-uri="linear-algebra-2015" type="local">Linear Algebra Done Right</fr:link>.
+</html:p>
+            <html:p>
+    Adding up scalar multiples of vectors in a list gives a linear combination.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000L/</fr:uri>
+                <fr:display-uri>def-000L</fr:display-uri>
+                <fr:route>/def-000L/</fr:route>
+                <fr:title text="Linear Combination">Linear Combination</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> be a <fr:link href="/def-000H/" title="Vector Space" uri="https://caimeo.space/def-000H/" display-uri="def-000H" type="local">vector space</fr:link> over a field <fr:tex display="inline">F</fr:tex>.
+    Let <fr:tex display="inline">v_1, \dots , v_n</fr:tex> be vectors in <fr:tex display="inline">V</fr:tex>.
+    A <html:strong>linear combination</html:strong> of <fr:tex display="inline">v_1, \dots , v_n</fr:tex> is an expression of the form
+    <fr:tex display="block">
+        a_1 v_1 + \dots  + a_n v_n
+    </fr:tex>
+    where <fr:tex display="inline">a_1, \dots , a_n \in  F</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    To talk about a structure, we usually define a collection of this structure.
+    Hence we have span for linear combinations.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000M/</fr:uri>
+                <fr:display-uri>def-000M</fr:display-uri>
+                <fr:route>/def-000M/</fr:route>
+                <fr:title text="Linear Span">Linear Span</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> be a vector space over a field <fr:tex display="inline">F</fr:tex>.
+    Let <fr:tex display="inline">v_1, \dots , v_n</fr:tex> be vectors in <fr:tex display="inline">V</fr:tex>.
+    The <html:strong>span</html:strong> of <fr:tex display="inline">v_1, \dots , v_n</fr:tex> is defined as
+    <fr:tex display="block">
+        \text {span}(v_1, \dots , v_n) = \{a_1 v_1 + \dots  + a_n v_n \mid  a_i \in  F\}
+    </fr:tex>
+    The span of empty set is defined to be <fr:tex display="inline">\{0\}</fr:tex>.    
+</html:p>
+                <html:p>
+    If <fr:tex display="inline">\text {span}(v_1, \dots , v_n) = V</fr:tex>, we say that <fr:tex display="inline">v_1, \dots , v_n</fr:tex> <html:strong>spans</html:strong> <fr:tex display="inline">V</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Suppose we have span <fr:tex display="inline">S=\text {span}(v_1, \dots , v_n)</fr:tex>. (Span is trivially a subspace.)
+    Obviously for all <fr:tex display="inline">v_j (1 \leq  j \leq  n)</fr:tex>, <fr:tex display="inline">v_j \in  S</fr:tex>.
+    Because subspaces are closed under scalar multiplication and addition, every
+    subspace of <fr:tex display="inline">V</fr:tex> containing <fr:tex display="inline">v_1, \dots , v_n</fr:tex> must contain <fr:tex display="inline">S</fr:tex>.
+    Thus we conclude that <fr:tex display="inline">S</fr:tex> is the smallest subspace containing <fr:tex display="inline">v_1, \dots , v_n</fr:tex>.
+</html:p>
+            <html:p>
+    The discussion about <html:strong>spans</html:strong> leads to a key definition in linear algebra.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000N/</fr:uri>
+                <fr:display-uri>def-000N</fr:display-uri>
+                <fr:route>/def-000N/</fr:route>
+                <fr:title text="Finite-Dimensional Vector Space">Finite-Dimensional Vector Space</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A <fr:link href="/def-000H/" title="Vector Space" uri="https://caimeo.space/def-000H/" display-uri="def-000H" type="local">vector space</fr:link> <fr:tex display="inline">V</fr:tex> is called <html:strong>finite-dimensional</html:strong> if some <fr:link href="/def-000G/" title="List" uri="https://caimeo.space/def-000G/" display-uri="def-000G" type="local">list</fr:link> of vectors <fr:tex display="inline">v_1, \dots , v_n</fr:tex> <fr:link href="/def-000M/" title="Linear Span" uri="https://caimeo.space/def-000M/" display-uri="def-000M" type="local">spans</fr:link> <fr:tex display="inline">V</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    The opposite of finite-dimensional is infinite-dimensional.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000O/</fr:uri>
+                <fr:display-uri>def-000O</fr:display-uri>
+                <fr:route>/def-000O/</fr:route>
+                <fr:title text="Infinite-dimensional vector space">Infinite-dimensional vector space</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A vector space <fr:tex display="inline">V</fr:tex> is called <html:strong>infinite-dimensional</html:strong> if it is not <fr:link href="/def-000N/" title="Finite-Dimensional Vector Space" uri="https://caimeo.space/def-000N/" display-uri="def-000N" type="local">finite-dimensional</fr:link>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Consider the situation that there is only one way to
+    express a vector <fr:tex display="inline">v</fr:tex> as a linear combination of vectors in a list <fr:tex display="inline">v_1, \dots , v_n</fr:tex>.
+    What property of the list <fr:tex display="inline">v_1, \dots , v_n</fr:tex> does this situation imply? The answer is
+    linear independence.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000P/</fr:uri>
+                <fr:display-uri>def-000P</fr:display-uri>
+                <fr:route>/def-000P/</fr:route>
+                <fr:title text="Linearly independent">Linearly independent</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A set of vectors <fr:tex display="inline">\{v_1, \dots , v_n\}</fr:tex> is called <html:strong>linearly independent</html:strong> if
+    <fr:tex display="block">a_1 v_1 + \dots  + a_n v_n = 0</fr:tex>
+    implies that <fr:tex display="inline">a_1 = \dots  = a_n = 0</fr:tex>.
+    The trivial case of <fr:tex display="inline">\{0\}</fr:tex> is also considered linearly independent.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    If some vectors are not linearly independent, then there are more than one way to
+    express a vector as a linear combination of vectors in the list. This leads to 
+    the following definition.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000Q/</fr:uri>
+                <fr:display-uri>def-000Q</fr:display-uri>
+                <fr:route>/def-000Q/</fr:route>
+                <fr:title text="Linearly dependent">Linearly dependent</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A set of vectors <fr:tex display="inline">\{v_1, \dots , v_n\}</fr:tex> is called <html:strong>linearly dependent</html:strong> if
+    <fr:tex display="block">a_1 v_1 + \dots  + a_n v_n = 0</fr:tex>
+    for some <fr:tex display="inline">a_1, \dots , a_n \in  \mathbb {F}</fr:tex> with at least one <fr:tex display="inline">a_i \neq  0</fr:tex> (not all <fr:tex display="inline">0</fr:tex>).
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    The following lemma is a direct consequence of the definition of linear independence.
+    It states that for a given linearly dependent list, we can always remove a vector
+    without changing the span.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-0001/</fr:uri>
+                <fr:display-uri>thm-0001</fr:display-uri>
+                <fr:route>/thm-0001/</fr:route>
+                <fr:title text="Linear Dependence Lemma">Linear Dependence Lemma</fr:title>
+                <fr:taxon>Lemma</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">v_1, \dots , v_n</fr:tex> be vectors in a vector space <fr:tex display="inline">V</fr:tex> over a field <fr:tex display="inline">\mathbb {F}</fr:tex>.
+    If <fr:tex display="inline">v_1, \dots , v_n</fr:tex> are linearly dependent, then there exists <fr:tex display="inline">1 \leq  i \leq  n</fr:tex> such that
+    <html:ul><html:li><fr:tex display="inline">v_i \in  \text {span}(v_1, \dots , v_{i-1})</fr:tex></html:li>
+        <html:li>Remove <fr:tex display="inline">v_i</fr:tex> from the list <fr:tex display="inline">v_1, \dots , v_n</fr:tex> and the span does not change</html:li></html:ul></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-0002/</fr:uri>
+                <fr:display-uri>thm-0002</fr:display-uri>
+                <fr:route>/thm-0002/</fr:route>
+                <fr:title text="Length of linearly independent list \leq  length of spanning list">Length of linearly independent list <fr:tex display="inline">\leq </fr:tex> length of spanning list</fr:title>
+                <fr:taxon>Lemma</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    In a finite dimensional vector space, the length of a linearly independent list is less than or equal to the length of a spanning list.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    We have discussed linear independent lists and spanning lists.
+    Now we are ready to define a basis.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000R/</fr:uri>
+                <fr:display-uri>def-000R</fr:display-uri>
+                <fr:route>/def-000R/</fr:route>
+                <fr:title text="Basis">Basis</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A basis of <fr:tex display="inline">V</fr:tex> is a list of vectors in <fr:tex display="inline">V</fr:tex>
+    that is linearly independent and spans <fr:tex display="inline">V</fr:tex>. 
+</html:p>
+                <html:p><html:strong>Criterion for basis</html:strong>
+    A list of vectors <fr:tex display="inline">\{v_1, \dots , v_n\}</fr:tex> is a basis of <fr:tex display="inline">V</fr:tex> if and only if
+    every <fr:tex display="inline">v \in  V</fr:tex> can be written <html:strong>uniquely</html:strong> as a linear combination of <fr:tex display="inline">v_1, \dots , v_n</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    For instance, we have standard basis <fr:tex display="inline">\{e_1, \dots , e_n\}</fr:tex> for <fr:tex display="inline">\mathbb {F}^n</fr:tex>,
+    where <fr:tex display="inline">e_i</fr:tex> is the vector with <fr:tex display="inline">1</fr:tex> at <fr:tex display="inline">i</fr:tex>-th position and <fr:tex display="inline">0</fr:tex> elsewhere.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-0005/</fr:uri>
+                <fr:display-uri>thm-0005</fr:display-uri>
+                <fr:route>/thm-0005/</fr:route>
+                <fr:title text="Spanning List contains a basis">Spanning List contains a basis</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Every spanning list in a vector space can be reduced to a basis.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    From the <fr:link href="/thm-0005/" title="Spanning List contains a basis" uri="https://caimeo.space/thm-0005/" display-uri="thm-0005" type="local">theorem</fr:link> we can infer a corollary.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-0006/</fr:uri>
+                <fr:display-uri>thm-0006</fr:display-uri>
+                <fr:route>/thm-0006/</fr:route>
+                <fr:title text="Basis of finite-dimensional vector space">Basis of finite-dimensional vector space</fr:title>
+                <fr:taxon>Corollary</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Every finite-dimensional vector space has a basis.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    The next result states for a spanning list can be reduced to a basis.
+    We can adjoin one or more vectors to a linearly independent list to form a basis.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-0007/</fr:uri>
+                <fr:display-uri>thm-0007</fr:display-uri>
+                <fr:route>/thm-0007/</fr:route>
+                <fr:title text="Linearly dependent list extends to a basis">Linearly dependent list extends to a basis</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Every linearly independent list of vectors in  a finite-dimensional vector space can be extended to a basis.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Recall the definition of <fr:link href="/def-000K/" title="Direct Sum" uri="https://caimeo.space/def-000K/" display-uri="def-000K" type="local">direct sum</fr:link>, we can now show that
+    every subspace of a finite-dimensional vector space can be paired
+    with another subspace to form a direct sum of the whole space.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-0008/</fr:uri>
+                <fr:display-uri>thm-0008</fr:display-uri>
+                <fr:route>/thm-0008/</fr:route>
+                <fr:title text="Direct Sum of Subspaces of V">Direct Sum of Subspaces of <fr:tex display="inline">V</fr:tex></fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Suppose <fr:tex display="inline">V</fr:tex> is a finite dimensional vector space,
+    and <fr:tex display="inline">U</fr:tex> is a subspace of <fr:tex display="inline">V</fr:tex>.
+    Then there exists a subspace <fr:tex display="inline">W</fr:tex> of <fr:tex display="inline">V</fr:tex> such that
+    <fr:tex display="inline">V = U \oplus  W</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    This post discusses about <html:em>finite-dimensional vector space</html:em>.
+    But we have not yet defined what is dimension.
+    We tempted to define the dimension as the length of basis intuitively.
+    With this definition we should prove its well-definedness.
+    That is, every basis has the same length.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-0009/</fr:uri>
+                <fr:display-uri>thm-0009</fr:display-uri>
+                <fr:route>/thm-0009/</fr:route>
+                <fr:title text="Basis length is invariant">Basis length is invariant</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> be a finite-dimensional vector space.
+    Then every basis of <fr:tex display="inline">V</fr:tex> has the same length.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    This can be proved by <fr:link href="/thm-0002/" title="Length of linearly independent list \leq  length of spanning list" uri="https://caimeo.space/thm-0002/" display-uri="thm-0002" type="local">Lemma 8</fr:link>.
+    Now we can formally define the dimension of such spaces.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-001V/</fr:uri>
+                <fr:display-uri>def-001V</fr:display-uri>
+                <fr:route>/def-001V/</fr:route>
+                <fr:title text="Dimension">Dimension</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    The <html:strong>dimension</html:strong> of a finite-dimensional vector space <fr:tex display="inline">V</fr:tex> is the length of any basis of the vector space.
+    Denoted by <fr:tex display="inline">\dim  V</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Every subspace of a finite-dimensional vector space is also finite-dimensional.
+    Hence we can talk about the dimension of a subspace.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000A/</fr:uri>
+                <fr:display-uri>thm-000A</fr:display-uri>
+                <fr:route>/thm-000A/</fr:route>
+                <fr:title text="Dimension of a subspace">Dimension of a subspace</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> be a finite-dimensional vector space,
+    and <fr:tex display="inline">U</fr:tex> be a subspace of <fr:tex display="inline">V</fr:tex>.
+    Then <fr:tex display="inline">\dim  U \leq  \dim  V</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    According to the definition of <fr:link href="/def-000P/" title="Linearly independent" uri="https://caimeo.space/def-000P/" display-uri="def-000P" type="local">linearly independent</fr:link>,
+    to show a list of vectors is a basis, we only need to show it is linearly independent,
+    and it spans the whole space.
+    The next theorems simplifies the task:
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000B/</fr:uri>
+                <fr:display-uri>thm-000B</fr:display-uri>
+                <fr:route>/thm-000B/</fr:route>
+                <fr:title text="Linearly independent list of the right length is a basis">Linearly independent list of the right length is a basis</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> be a finite-dimensional vector space.
+    Then every <fr:link href="/def-000P/" title="Linearly independent" uri="https://caimeo.space/def-000P/" display-uri="def-000P" type="local">linearly independent</fr:link> list of vectors in <fr:tex display="inline">V</fr:tex> with length equal to <fr:tex display="inline">\dim  V</fr:tex> is a basis of <fr:tex display="inline">V</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000C/</fr:uri>
+                <fr:display-uri>thm-000C</fr:display-uri>
+                <fr:route>/thm-000C/</fr:route>
+                <fr:title text="Spanning list of the right length is a basis">Spanning list of the right length is a basis</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> be a finite-dimensional vector space.
+    Then every <fr:link href="/def-000M/" title="Linear Span" uri="https://caimeo.space/def-000M/" display-uri="def-000M" type="local">spanning</fr:link> list of vectors in <fr:tex display="inline">V</fr:tex> with length equal to <fr:tex display="inline">\dim  V</fr:tex> is a basis of <fr:tex display="inline">V</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Now we move to the discussion of the dimension of the sum of two subspaces.
+    This is analogous to the <fr:link href="/thm-000E/" title="Inclusion-Exclusion Principle" uri="https://caimeo.space/thm-000E/" display-uri="thm-000E" type="local">inclusion-exclusion principle</fr:link>.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000D/</fr:uri>
+                <fr:display-uri>thm-000D</fr:display-uri>
+                <fr:route>/thm-000D/</fr:route>
+                <fr:title text="Dimension of a sum">Dimension of a sum</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> be a finite-dimensional vector space,
+    and <fr:tex display="inline">U</fr:tex> and <fr:tex display="inline">W</fr:tex> be subspaces of <fr:tex display="inline">V</fr:tex>.
+    Then
+    <fr:tex display="block">
+        \dim (U + W) = \dim  U + \dim  W - \dim (U \cap  W).
+    </fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors></fr:authors>
+            <fr:uri>https://caimeo.space/thm-000T/</fr:uri>
+            <fr:display-uri>thm-000T</fr:display-uri>
+            <fr:route>/thm-000T/</fr:route>
+            <fr:title text="Isomorphism of equal dimensions">Isomorphism of equal dimensions</fr:title>
+            <fr:taxon>Theorem</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    Two finite-dimensional vector spaces over <fr:tex display="inline">\mathbb {F}</fr:tex>
+    are isomorphic iff they have the same <fr:link href="/def-001V/" title="Dimension" uri="https://caimeo.space/def-001V/" display-uri="def-001V" type="local">dimension</fr:link>.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

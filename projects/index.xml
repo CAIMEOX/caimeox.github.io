@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors></fr:authors>
+    <fr:uri>https://caimeo.space/projects/</fr:uri>
+    <fr:display-uri>projects</fr:display-uri>
+    <fr:route>/projects/</fr:route>
+    <fr:title text="Projects">Projects</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>The programming projects I&apos;ve worked on.</html:p>
+    <fr:tree show-metadata="false" expanded="false">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:uri>https://caimeo.space/proj-0001/</fr:uri>
+        <fr:display-uri>proj-0001</fr:display-uri>
+        <fr:route>/proj-0001/</fr:route>
+        <fr:title text="Command Lisp">Command Lisp</fr:title>
+        <fr:taxon>Project</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p><fr:link href="https://github.com/CAIMEOX/CommandLisp" type="external">Command Lisp</fr:link> is a simplified language designed for Minecraft Bedrock Command System, characterized by a very high level of abstraction, which is also a dialect of Lisp.
+</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" expanded="false">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:uri>https://caimeo.space/proj-0002/</fr:uri>
+        <fr:display-uri>proj-0002</fr:display-uri>
+        <fr:route>/proj-0002/</fr:route>
+        <fr:title text="Pure Eval">Pure Eval</fr:title>
+        <fr:taxon>Project</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p><fr:link href="https://github.com/PureEval/PureEval" type="external">Pure Eval</fr:link> was created for the <fr:link href="/proj-0003/" title="Voxel Geometry" uri="https://caimeo.space/proj-0003/" display-uri="proj-0003" type="local">VoxelGeometry</fr:link> project, aiming to build a compact yet powerful JavaScript functional utility toolkit.
+</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" expanded="false">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:uri>https://caimeo.space/proj-0003/</fr:uri>
+        <fr:display-uri>proj-0003</fr:display-uri>
+        <fr:route>/proj-0003/</fr:route>
+        <fr:title text="Voxel Geometry">Voxel Geometry</fr:title>
+        <fr:taxon>Project</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p><fr:link href="https://github.com/CAIMEOX/VoxelGeometry" type="external">Voxel Geometry</fr:link> is voxel geometry library which is used to construct Space (A collection of 3-dimension Vectors) and perform transformation between Spaces.
+</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" expanded="false">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:uri>https://caimeo.space/proj-0004/</fr:uri>
+        <fr:display-uri>proj-0004</fr:display-uri>
+        <fr:route>/proj-0004/</fr:route>
+        <fr:title text="Minecraft ScriptAPI wrapper">Minecraft ScriptAPI wrapper</fr:title>
+        <fr:taxon>Project</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.</html:p>
+        <html:ul><html:li><fr:link href="https://github.com/CAIMEOX/rescript-bedrock" type="external">ReScript</fr:link></html:li>
+    <html:li><fr:link href="https://github.com/CAIMEOX/pure_bedrock" type="external">PureScript</fr:link></html:li>
+    <html:li><fr:link href="https://github.com/CAIMEOX/BedrockFP" type="external">Idris2</fr:link></html:li></html:ul>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" expanded="false">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:uri>https://caimeo.space/proj-0005/</fr:uri>
+        <fr:display-uri>proj-0005</fr:display-uri>
+        <fr:route>/proj-0005/</fr:route>
+        <fr:title text="MoonBit Core">MoonBit Core</fr:title>
+        <fr:taxon>Project</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p><fr:link href="https://github.com/moonbitlang/core" type="external">MoonBit Core</fr:link> is the standard library of the MoonBit language.
+</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/caimeo/" title="CAIMEO" uri="https://caimeo.space/caimeo/" display-uri="caimeo" type="local">CAIMEO</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:uri>https://caimeo.space/index/</fr:uri>
+            <fr:display-uri>index</fr:display-uri>
+            <fr:route>/index/</fr:route>
+            <fr:title text="The Rabbit Hole">The Rabbit Hole</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+    
+    
+    
+    <fr:tree show-metadata="false" expanded="true" numbered="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/about/</fr:uri><fr:display-uri>about</fr:display-uri><fr:route>/about/</fr:route><fr:title text="Rabbit Hole">Rabbit Hole</fr:title><fr:taxon>About</fr:taxon></fr:frontmatter><fr:mainmatter><html:p><fr:tex display="block">
+        i\hbar  \frac {\partial }{\partial  t} \Psi (x, t) = \hat {H} \Psi (x, t)
+    </fr:tex></html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    What is this website about?
+">
+    <html:strong>What is this website about?</html:strong>
+</fr:title></fr:frontmatter><fr:mainmatter>
+    <html:p>
+        This website is a collection of my notes and posts on various topics in 
+        <html:strong>computer science, mathematics, physics, and programming language theory</html:strong>.
+        It is a place where I can organize my thoughts and share my understanding of these topics.
+        I hope it can be helpful to others who are interested in these subjects.
+    </html:p>
+</fr:mainmatter></fr:tree>
+
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    What is the meaning of &quot;Rabbit Hole&quot;?
+">
+    <html:strong>What is the meaning of &quot;Rabbit Hole&quot;?</html:strong>
+</fr:title></fr:frontmatter><fr:mainmatter>
+    The name of this website &quot;<html:strong>Rabbit Hole</html:strong>&quot; carries a metaphorical significance inspired by Lewis Carroll&apos;s 
+    <html:em>Alice&apos;s Adventures in Wonderland</html:em>, 
+    meaning to delve into a topic or pursue a line of thought that leads to unexpected or complex places.
+    It can refer to getting deeply involved in researching a subject, exploring a particular interest, or going through 
+    a series of trees in the forest that leads to a chain of related topics.
+</fr:mainmatter></fr:tree>
+
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    How to navigate?
+">
+    <html:strong>How to navigate?</html:strong>
+</fr:title></fr:frontmatter><fr:mainmatter>    <html:p>
+        This website is a “<html:em>forest</html:em>” created using the <html:strong>Forester</html:strong> tool.
+        To navigate my forest, press <html:code>Ctrl-K</html:code> to search for specific topics or definitions.
+        Or click the nodes to expand the trees of various subjects.
+    </html:p>
+    <html:p>
+        A tree in Forester is associated with a unique address of the form <html:code>xxx-NNNN</html:code>,
+        where <html:code>xxx</html:code> is the <html:strong>namespace</html:strong> and <html:code>NNNN</html:code> is the <html:strong>ID</html:strong> (A base-36 number of 4 digits) of the tree.
+        The namespace implies the category of the tree node, for instance,
+        <html:code>tt</html:code> for Type Theory and <html:code>math</html:code> for Mathematics.
+        </html:p>
+</fr:mainmatter></fr:tree>
+</fr:mainmatter></fr:tree>
+
+    
+    <fr:tree show-metadata="false" numbered="true"><fr:frontmatter><fr:authors><fr:author><fr:link href="/caimeo/" title="CAIMEO" uri="https://caimeo.space/caimeo/" display-uri="caimeo" type="local">CAIMEO</fr:link></fr:author></fr:authors><fr:title text="Posts">Posts</fr:title></fr:frontmatter><fr:mainmatter><html:p>Click to navigate my <fr:link href="/posts/" title="Blog posts" uri="https://caimeo.space/posts/" display-uri="posts" type="local">blog posts</fr:link>.</html:p></fr:mainmatter></fr:tree>
+    <fr:tree show-metadata="false" numbered="true"><fr:frontmatter><fr:authors><fr:author><fr:link href="/caimeo/" title="CAIMEO" uri="https://caimeo.space/caimeo/" display-uri="caimeo" type="local">CAIMEO</fr:link></fr:author></fr:authors><fr:title text="Notes">Notes</fr:title></fr:frontmatter><fr:mainmatter><html:p><fr:link href="/notes/" title="Notes" uri="https://caimeo.space/notes/" display-uri="notes" type="local">Notes</fr:link> are usually excerpts from some books/papers I read.
+            I try to make it as self-contained as possible.
+        </html:p></fr:mainmatter></fr:tree>
+    <fr:tree show-metadata="false" numbered="true"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/projects/</fr:uri><fr:display-uri>projects</fr:display-uri><fr:route>/projects/</fr:route><fr:title text="Projects">Projects</fr:title></fr:frontmatter><fr:mainmatter><html:p>The programming projects I&apos;ve worked on.</html:p><fr:tree show-metadata="false" expanded="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/proj-0001/</fr:uri><fr:display-uri>proj-0001</fr:display-uri><fr:route>/proj-0001/</fr:route><fr:title text="Command Lisp">Command Lisp</fr:title><fr:taxon>Project</fr:taxon></fr:frontmatter><fr:mainmatter><html:p><fr:link href="https://github.com/CAIMEOX/CommandLisp" type="external">Command Lisp</fr:link> is a simplified language designed for Minecraft Bedrock Command System, characterized by a very high level of abstraction, which is also a dialect of Lisp.
+</html:p></fr:mainmatter></fr:tree><fr:tree show-metadata="false" expanded="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/proj-0002/</fr:uri><fr:display-uri>proj-0002</fr:display-uri><fr:route>/proj-0002/</fr:route><fr:title text="Pure Eval">Pure Eval</fr:title><fr:taxon>Project</fr:taxon></fr:frontmatter><fr:mainmatter><html:p><fr:link href="https://github.com/PureEval/PureEval" type="external">Pure Eval</fr:link> was created for the <fr:link href="/proj-0003/" title="Voxel Geometry" uri="https://caimeo.space/proj-0003/" display-uri="proj-0003" type="local">VoxelGeometry</fr:link> project, aiming to build a compact yet powerful JavaScript functional utility toolkit.
+</html:p></fr:mainmatter></fr:tree><fr:tree show-metadata="false" expanded="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/proj-0003/</fr:uri><fr:display-uri>proj-0003</fr:display-uri><fr:route>/proj-0003/</fr:route><fr:title text="Voxel Geometry">Voxel Geometry</fr:title><fr:taxon>Project</fr:taxon></fr:frontmatter><fr:mainmatter><html:p><fr:link href="https://github.com/CAIMEOX/VoxelGeometry" type="external">Voxel Geometry</fr:link> is voxel geometry library which is used to construct Space (A collection of 3-dimension Vectors) and perform transformation between Spaces.
+</html:p></fr:mainmatter></fr:tree><fr:tree show-metadata="false" expanded="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/proj-0004/</fr:uri><fr:display-uri>proj-0004</fr:display-uri><fr:route>/proj-0004/</fr:route><fr:title text="Minecraft ScriptAPI wrapper">Minecraft ScriptAPI wrapper</fr:title><fr:taxon>Project</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>These projects create Minecraft Script API wrapper for foreign language that compiles to JavaScript.</html:p><html:ul><html:li><fr:link href="https://github.com/CAIMEOX/rescript-bedrock" type="external">ReScript</fr:link></html:li>
+    <html:li><fr:link href="https://github.com/CAIMEOX/pure_bedrock" type="external">PureScript</fr:link></html:li>
+    <html:li><fr:link href="https://github.com/CAIMEOX/BedrockFP" type="external">Idris2</fr:link></html:li></html:ul></fr:mainmatter></fr:tree><fr:tree show-metadata="false" expanded="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/proj-0005/</fr:uri><fr:display-uri>proj-0005</fr:display-uri><fr:route>/proj-0005/</fr:route><fr:title text="MoonBit Core">MoonBit Core</fr:title><fr:taxon>Project</fr:taxon></fr:frontmatter><fr:mainmatter><html:p><fr:link href="https://github.com/moonbitlang/core" type="external">MoonBit Core</fr:link> is the standard library of the MoonBit language.
+</html:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree>
+</fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

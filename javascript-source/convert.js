@@ -41,14 +41,32 @@ async function convert(name) {
   await fs.writeFile(name, result);
 }
 
-async function start() {
-  const files = await fs.readdir("output");
-  for (const file of files) {
-    if (file.endsWith("xml")) {
-      console.log("Converting", file);
-      await convert(path.join("output", file));
+async function find_xml_files(directory) {
+  const files = [];
+  const entries = await fs.readdir(directory, { withFileTypes: true });
+  entries.sort((left, right) => left.name.localeCompare(right.name));
+
+  for (const entry of entries) {
+    const name = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...await find_xml_files(name));
+    } else if (entry.isFile() && path.extname(entry.name) === ".xml") {
+      files.push(name);
     }
+  }
+
+  return files;
+}
+
+async function start() {
+  const files = await find_xml_files("output");
+  for (const file of files) {
+    console.log("Converting", path.relative("output", file));
+    await convert(file);
   }
 }
 
-start();
+start().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors></fr:authors>
+    <fr:uri>https://caimeo.space/def-004Q/</fr:uri>
+    <fr:display-uri>def-004Q</fr:display-uri>
+    <fr:route>/def-004Q/</fr:route>
+    <fr:title text="Model Homomorphism">Model Homomorphism</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    Let <fr:tex display="inline">M</fr:tex> and <fr:tex display="inline">N</fr:tex> be models of an algebraic theory <fr:tex display="inline">T</fr:tex>.
+    A <html:strong>T-homomorphism</html:strong> from <fr:tex display="inline">M</fr:tex> to <fr:tex display="inline">N</fr:tex> is a function <fr:tex display="inline">f:|M|\to |N|</fr:tex> that preserves the interpretation of the operations of <fr:tex display="inline">T</fr:tex>.
+    That is, for each operation symbol <fr:tex display="inline">f\in \Sigma _T</fr:tex>, we have:
+    <fr:tex display="block">
+        f_N \circ  (f, \cdots , f) = f \circ  f_M
+    </fr:tex>
+    where <fr:tex display="inline">f_M</fr:tex> and <fr:tex display="inline">f_N</fr:tex> are the interpretations of <fr:tex display="inline">f</fr:tex> in <fr:tex display="inline">M</fr:tex> and <fr:tex display="inline">N</fr:tex> respectively.
+    We say that <fr:tex display="inline">f</fr:tex> is a <html:strong>model isomorphism</html:strong> if it is bijective.
+    We say that <fr:tex display="inline">M</fr:tex> and <fr:tex display="inline">N</fr:tex> are <html:strong>isomorphic</html:strong> if there exists a model isomorphism between them.
+</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors></fr:authors>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>28</fr:day>
+            </fr:date>
+            <fr:uri>https://caimeo.space/cs-0009/</fr:uri>
+            <fr:display-uri>cs-0009</fr:display-uri>
+            <fr:route>/cs-0009/</fr:route>
+            <fr:title text="Algebraic Effects">Algebraic Effects</fr:title>
+            <fr:taxon>Algebra</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    Notes about algebraic effects and handlers.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:date>
+                  <fr:year>2024</fr:year>
+                  <fr:month>1</fr:month>
+                  <fr:day>28</fr:day>
+                </fr:date>
+                <fr:title text="Algebraic Theories">Algebraic Theories</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        In algebra we study mathematical structures that are equipped with operations
+        satisfying equational laws.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors></fr:authors>
+                    <fr:uri>https://caimeo.space/def-004M/</fr:uri>
+                    <fr:display-uri>def-004M</fr:display-uri>
+                    <fr:route>/def-004M/</fr:route>
+                    <fr:title text="Signatures, terms and equations">Signatures, terms and equations</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    A signature <fr:tex display="inline">\Sigma </fr:tex> is a collection of operation symbols with arities <fr:tex display="inline">\{(\text {op}_i, \text {ar}_i)\}_i</fr:tex>. The operation 
+    symbols opi may be any anything, but are usually thought of as syntactic entities, while arities <fr:tex display="inline">\text {ar}_i</fr:tex> are 
+    non-negative integers. An operation symbol whose arity is 0 is called a constant or a nullary symbol. 
+    Operation symbols with arities <fr:tex display="inline">1</fr:tex>, <fr:tex display="inline">2</fr:tex> and <fr:tex display="inline">3</fr:tex> are referred to as unary, binary, and ternary, respectively.
+</html:p>
+                    <html:p>
+    A list of distinct variables <fr:tex display="inline">x_1, \cdots , c_k</fr:tex> is called a <html:strong>context</html:strong>. 
+    The <fr:tex display="inline">\Sigma \text {-terms}</fr:tex> in this context are built inductively using the following rules:
+    <html:ul><html:li>Each variable <fr:tex display="inline">x_i</fr:tex> is a <fr:tex display="inline">\Sigma \text {-term}</fr:tex> in this context</html:li>
+        <html:li>If <fr:tex display="inline">t_1, \cdots , t_{\text {ar}_i}</fr:tex> are <fr:tex display="inline">\Sigma \text {-terms}</fr:tex> in this context, then <fr:tex display="inline">\text {op}_i(t_1, \cdots , t_{\text {ar}_i})</fr:tex> is a <fr:tex display="inline">\Sigma \text {-term}</fr:tex> in this context</html:li></html:ul>
+    We write 
+    <fr:tex display="block">
+        x_1, \cdots , x_k \mid  t
+    </fr:tex>
+    to indicate that <fr:tex display="inline">t</fr:tex> is a <fr:tex display="inline">\Sigma \text {-term}</fr:tex> in the context <fr:tex display="inline">x_1, \cdots , x_k</fr:tex>.
+    A <html:strong>closed</html:strong> <fr:tex display="inline">\Sigma \text {-term}</fr:tex> is a term in the empty context.
+</html:p>
+                    <html:p>
+    A <fr:tex display="inline">\Sigma \text {-equation}</fr:tex> is a pair of <fr:tex display="inline">\Sigma \text {-terms}</fr:tex> <fr:tex display="inline">l</fr:tex> and <fr:tex display="inline">r</fr:tex> in the context <fr:tex display="inline">x_1, \cdots , x_k</fr:tex>:
+    <fr:tex display="block">
+        x_1, \cdots , x_k \mid  l = r
+    </fr:tex>
+    We shall often elide the context and write simply <fr:tex display="inline">l = r</fr:tex>.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors></fr:authors>
+                    <fr:uri>https://caimeo.space/def-004N/</fr:uri>
+                    <fr:display-uri>def-004N</fr:display-uri>
+                    <fr:route>/def-004N/</fr:route>
+                    <fr:title text="Algebraic Theories">Algebraic Theories</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    An <html:strong>algebraic (equational) theory</html:strong> <fr:tex display="inline">T = (\Sigma _T, E_T)</fr:tex> is given by 
+    a signature <fr:tex display="inline">\Sigma _T</fr:tex> and a collection <fr:tex display="inline">\Epsilon _T</fr:tex> of equations over the terms of this signature.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors></fr:authors>
+                    <fr:uri>https://caimeo.space/def-004O/</fr:uri>
+                    <fr:display-uri>def-004O</fr:display-uri>
+                    <fr:route>/def-004O/</fr:route>
+                    <fr:title text="Interpretation of Signatures">Interpretation of Signatures</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline">\Sigma </fr:tex> be a signature, 
+    an <html:strong>interpretation</html:strong> <fr:tex display="inline">I</fr:tex> of <fr:tex display="inline">\Sigma </fr:tex> is given by the following data:
+    <html:ul><html:li>
+            A set <fr:tex display="inline">|I|</fr:tex> called the <html:strong>carrier</html:strong> of the interpretation
+        </html:li>
+        <html:li>
+            For each operation symbol <fr:tex display="inline">\text {op}_i</fr:tex>, a map
+            <fr:tex display="block">
+                [\text {op}_i]_I : |I|^i \to  |I|
+            </fr:tex></html:li></html:ul>
+    The bracket <fr:tex display="inline">[]_I</fr:tex> here is called the <html:strong>semantic bracket</html:strong> and is typically used when 
+    syntactic entities (operation symbols, terms, equations) are mapped to their mathematical counterparts.
+</html:p>
+                    <html:p>
+    The interpretation can be extended to terms and equations.
+    A <fr:tex display="inline">\Sigma \text {-term}</fr:tex> <fr:tex display="inline">t</fr:tex> in the context <fr:tex display="inline">x_1, \cdots , x_k</fr:tex> is interpreted as a function
+    <fr:tex display="block">
+        [x_1, \cdots , x_k \mid  t]_I : |I|^k \to  |I|
+    </fr:tex>
+    as follows:
+    <html:ul><html:li>The variable <fr:tex display="inline">x_i</fr:tex> is interpreted as the i-th projection
+            <fr:tex display="block">
+                [x_1, \cdots , x_k \mid  x_i]_I : |I|^k \to  |I|, \quad  (a_1, \cdots , a_k) \mapsto  a_i
+            </fr:tex></html:li>
+        <html:li>
+            A compound term in context <fr:tex display="inline">x_1, \cdots , x_k</fr:tex> is interpreted as the composition of the 
+            semantic brackets of the operation symbols and the terms:
+            <fr:tex display="block">
+                |I|^k \xrightarrow {[t_1]_I, \cdots , [t_{\text {ar}_i}]_I} |I|^{\text {ar}_i} \xrightarrow {[\text {op}_i]_I} |I|
+            </fr:tex></html:li></html:ul></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors></fr:authors>
+                    <fr:uri>https://caimeo.space/def-004P/</fr:uri>
+                    <fr:display-uri>def-004P</fr:display-uri>
+                    <fr:route>/def-004P/</fr:route>
+                    <fr:title text="Models of algebraic theories">Models of algebraic theories</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    A <html:strong>model</html:strong> <fr:tex display="inline">M</fr:tex> of an algebraic theory <fr:tex display="inline">T</fr:tex> is an interpretation of the signature <fr:tex display="inline">\Sigma _T</fr:tex> 
+    which validates all the equations <fr:tex display="inline">E_T</fr:tex>.
+    That is, for each equations <fr:tex display="inline">x_1, \cdots , x_k \mid  l = r</fr:tex> in <fr:tex display="inline">E_T</fr:tex>, we have:
+    <fr:tex display="block">
+        [x_1, \cdots , x_k \mid  l]_M = [x_1, \cdots , x_k \mid  r]_M
+    </fr:tex>
+    We refer to a model of <fr:tex display="inline">T</fr:tex> as a <fr:tex display="inline">T\text {-algebra}</fr:tex> or <fr:tex display="inline">T\text {-model}</fr:tex>.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors></fr:authors>
+                    <fr:uri>https://caimeo.space/def-004Q/</fr:uri>
+                    <fr:display-uri>def-004Q</fr:display-uri>
+                    <fr:route>/def-004Q/</fr:route>
+                    <fr:title text="Model Homomorphism">Model Homomorphism</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline">M</fr:tex> and <fr:tex display="inline">N</fr:tex> be models of an algebraic theory <fr:tex display="inline">T</fr:tex>.
+    A <html:strong>T-homomorphism</html:strong> from <fr:tex display="inline">M</fr:tex> to <fr:tex display="inline">N</fr:tex> is a function <fr:tex display="inline">f:|M|\to |N|</fr:tex> that preserves the interpretation of the operations of <fr:tex display="inline">T</fr:tex>.
+    That is, for each operation symbol <fr:tex display="inline">f\in \Sigma _T</fr:tex>, we have:
+    <fr:tex display="block">
+        f_N \circ  (f, \cdots , f) = f \circ  f_M
+    </fr:tex>
+    where <fr:tex display="inline">f_M</fr:tex> and <fr:tex display="inline">f_N</fr:tex> are the interpretations of <fr:tex display="inline">f</fr:tex> in <fr:tex display="inline">M</fr:tex> and <fr:tex display="inline">N</fr:tex> respectively.
+    We say that <fr:tex display="inline">f</fr:tex> is a <html:strong>model isomorphism</html:strong> if it is bijective.
+    We say that <fr:tex display="inline">M</fr:tex> and <fr:tex display="inline">N</fr:tex> are <html:strong>isomorphic</html:strong> if there exists a model isomorphism between them.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        We may organize the models of an algebraic theory <fr:tex display="inline">T</fr:tex> into a category <fr:tex display="inline">\mathbf {Mod}(T)</fr:tex>
+        whose objects are the models of the theory and the morphisms are the model homomorphisms.
+    </html:p>
+                <html:p>
+        So far we have considered the models of an algebraic theory as sets with operations.
+        More generally we can consider models in any category <fr:tex display="inline">C</fr:tex> with finite products.
+        Hence the definition of an interpretation and a model may be directly transcribed.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors></fr:authors>
+                    <fr:uri>https://caimeo.space/def-004R/</fr:uri>
+                    <fr:display-uri>def-004R</fr:display-uri>
+                    <fr:route>/def-004R/</fr:route>
+                    <fr:title text="Interpretation over Category">Interpretation over Category</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    An interpretation <fr:tex display="inline">I</fr:tex> in <fr:tex display="inline">C</fr:tex> is given by
+    <html:ul><html:li>An object <fr:tex display="inline">|I|</fr:tex> in <fr:tex display="inline">C</fr:tex>, called the <html:strong>carrier</html:strong></html:li>
+        <html:li>For each operation symbol <fr:tex display="inline">\text {op}_i</fr:tex>, a morphism in <fr:tex display="inline">C</fr:tex>
+            <fr:tex display="block">
+                [\text {op}_i]_I : |I|^i \to  |I|
+            </fr:tex></html:li></html:ul>
+    Notice that a nullary symbol is interpreted as a morphism <fr:tex display="inline">|I|^0 \to  |I|</fr:tex>,
+    which is a morphism form the terminal object <fr:tex display="inline">1\to |I|</fr:tex> in <fr:tex display="inline">C</fr:tex>.
+</html:p>
+                    <html:p>
+    Similarly, the interpretation can be extended to terms and equations in the same way.
+    A model of an algebraic theory <fr:tex display="inline">T</fr:tex> in <fr:tex display="inline">C</fr:tex> is an interpretation <fr:tex display="inline">M</fr:tex> of its signature <fr:tex display="inline">\Sigma _T</fr:tex> 
+    which validates all the equations <fr:tex display="inline">E_T</fr:tex>.
+    The definition of a homomorphism is now the morphism in the category <fr:tex display="inline">C</fr:tex>.
+    The <fr:tex display="inline">T\text {-models}</fr:tex> and <fr:tex display="inline">T\text {-homomorphisms}</fr:tex> in <fr:tex display="inline">C</fr:tex> form another category, denoted by <fr:tex display="inline">\mathbf {Mod}_C(T)</fr:tex>.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        Of special interest are the free models of an algebraic theory.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors></fr:authors>
+                    <fr:uri>https://caimeo.space/def-004S/</fr:uri>
+                    <fr:display-uri>def-004S</fr:display-uri>
+                    <fr:route>/def-004S/</fr:route>
+                    <fr:title text="Free Models">Free Models</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    Let <fr:tex display="inline">T</fr:tex> be an algebraic theory and <fr:tex display="inline">X</fr:tex> be a set,
+    the <html:strong>free T-model</html:strong>, also called the <html:strong>free T-algebra</html:strong>,
+    generated by <fr:tex display="inline">X</fr:tex> is a model <fr:tex display="inline">M</fr:tex> together with a map 
+    <fr:tex display="inline">\eta :X\to  |M|</fr:tex> such that for any T-model <fr:tex display="inline">L</fr:tex> and every map <fr:tex display="inline">f:X\to  |L|</fr:tex>,
+    there is a unique T-homomorphism <fr:tex display="inline">\bar {f}:|M|\to  |L|</fr:tex> such that the following diagram commutes:
+</html:p>
+ 
+  
+  <html:figure><fr:resource hash="d427212bc19168e8ea1de56926b81991"><fr:resource-content><html:img src="/d427212bc19168e8ea1de56926b81991.svg"></html:img></fr:resource-content><fr:resource-source type="latex" part="preamble">
+   
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
+
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
+
+
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
+
+ \NewDocumentCommand\CreateRect{D&lt;&gt;{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
+
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
+
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     &gt;={Triangle[open]},-&gt;.&gt;
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}-&gt;
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}-&gt;
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {-&gt;},
+   square/south/.style = {-&gt;},
+   square/west/.style = {-&gt;},
+   square/east/.style = {-&gt;},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D&lt;&gt;{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D&lt;&gt;{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  </fr:resource-source><fr:resource-source type="latex" part="body">
+    \begin {tikzcd}
+        X &amp;&amp; {|M|} \\
+        \\
+        &amp;&amp; {|L|}
+        \arrow [&quot;\eta &quot;, from=1-1, to=1-3]
+        \arrow [&quot;f&quot;&apos;, from=1-1, to=3-3]
+        \arrow [&quot;{\bar {f}}&quot;&apos;, from=1-3, to=3-3]
+    \end {tikzcd}
+</fr:resource-source></fr:resource></html:figure>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        This can be understood as follows: the free T-model 
+        generated by <fr:tex display="inline">X</fr:tex> is the most economical way of making a 
+        T-model out of the set <fr:tex display="inline">X</fr:tex>. 
+        (&quot;Free&quot; essentially means with as few assumptions as possible.)
+    </html:p>
+                <html:p>
+        For instance, the free group generated by the singleton set <fr:tex display="inline">\{a\}</fr:tex> is the 
+        infinite cyclic group, which is isomorphic to <fr:tex display="inline">\mathbb {Z}</fr:tex>. If you have an element <fr:tex display="inline">a</fr:tex>,
+        then you automatically have all its powers of <fr:tex display="inline">a</fr:tex> in the group.
+        We can not make any further assumptions because we need to send this free group 
+        to any other group that satisfies the group axioms, the powers of <fr:tex display="inline">a</fr:tex> are going 
+        to be &quot;interpreted&quot;.
+    </html:p>
+                <html:p>
+        Every algebraic theory <fr:tex display="inline">T</fr:tex> has a free model.
+        Given a signature <fr:tex display="inline">\Sigma </fr:tex> and a set <fr:tex display="inline">X</fr:tex>,
+        define <fr:tex display="inline">\text {Tree}_\Sigma (X)</fr:tex> to be the set of well-founded 
+        trees built inductively as follows:
+        <html:ul><html:li><fr:tex display="inline">\forall  x \in  X</fr:tex>, there is a tree <fr:tex display="inline">\text {return}(x) \in  \text {Tree}_\Sigma (X)</fr:tex>
+                (the choice of the label is immaterial in fact)
+            </html:li>
+            <html:li>
+                For each operation symbol <fr:tex display="inline">\text {op}_i</fr:tex> and trees 
+                <fr:tex display="inline">t_1, \cdots , t_{\text {ar}_i} \in  \text {Tree}_\Sigma (X)</fr:tex>,
+                there is a tree, denoted by <fr:tex display="inline">\text {op}_i(t_1, \cdots , t_{\text {ar}_i}) \in  \text {Tree}_\Sigma (X)</fr:tex>,
+                whose root is labeled by <fr:tex display="inline">\text {op}_i</fr:tex> and 
+                whose children are subtrees <fr:tex display="inline">t_1, \cdots , t_{\text {ar}_i}</fr:tex>.
+            </html:li></html:ul>
+        In this setting, the <fr:tex display="inline">\Sigma \text {-terms}</fr:tex> in the context <fr:tex display="inline">x_1, \cdots , x_k</fr:tex> are
+        the trees in <fr:tex display="inline">\text {Tree}_\Sigma (\{x_1, \cdots , x_k\})</fr:tex>.
+        A variable <fr:tex display="inline">x_i</fr:tex> is labeled as <fr:tex display="inline">\text {return}(x_i)</fr:tex> when construed as a tree.
+        Suppose <fr:tex display="inline">x_1, \cdots , x_n \mid  t</fr:tex> is a term in context and we are given 
+        an assignment <fr:tex display="inline">\sigma  : \{x_1, \cdots , x_n\} \to  \text {Tree}_\Sigma (X)</fr:tex>.
+        We can build the tree <fr:tex display="inline">\sigma (t)</fr:tex> inductively as follows:
+        <html:ul><html:li><fr:tex display="inline">\sigma (t) = \sigma (x_i)</fr:tex> if <fr:tex display="inline">t = x_i</fr:tex></html:li>
+            <html:li><fr:tex display="inline">\sigma (t) = \text {op}_i(\sigma (t_1), \cdots , \sigma (t_{\text {ar}_i}))</fr:tex> if <fr:tex display="inline">t = \text {op}_i(t_1, \cdots , t_{\text {ar}_i})</fr:tex></html:li></html:ul>
+        Briefly, the tree <fr:tex display="inline">\sigma (t)</fr:tex> is obtained by replacing each 
+        variable <fr:tex display="inline">x_i</fr:tex> in <fr:tex display="inline">t</fr:tex> with the corresponding tree <fr:tex display="inline">\sigma (x_i)</fr:tex>.
+    </html:p>
+                <html:p>
+        Let <fr:tex display="inline">\sim _T</fr:tex> be the least equivalence relation on <fr:tex display="inline">\text {Tree}_{\Sigma _T}(X)</fr:tex>
+        such that:
+        <html:ul><html:li>
+                For every equation <fr:tex display="inline">x_1, \cdots , x_n \mid  l = r</fr:tex> in <fr:tex display="inline">E_T</fr:tex> and 
+                for every assignment <fr:tex display="inline">\sigma </fr:tex> we have: <fr:tex display="inline">
+                    \sigma (l) \sim _T \sigma (r)
+                </fr:tex></html:li>
+            <html:li><fr:tex display="inline">\sim _T</fr:tex> is a congruence: for every operation symbol <fr:tex display="inline">\text {op}_i</fr:tex> 
+                in <fr:tex display="inline">\sigma _T</fr:tex> and forall trees <fr:tex display="inline">s_1,\cdot ,s_{\text {ar}_i}</fr:tex>
+                and <fr:tex display="inline">t_1, \cdots , t_{\text {ar}_i}</fr:tex> in <fr:tex display="inline">\text {Tree}_\Sigma (X)</fr:tex>, if
+                <fr:tex display="block">
+                    s_1 \sim _T t_1 \quad  \cdots  \quad  s_{\text {ar}_i} \sim _T t_{\text {ar}_i}
+                </fr:tex>
+                then the following holds:
+                <fr:tex display="block">
+                    \text {op}_i(s_1, \cdots , s_{\text {ar}_i}) \sim _T \text {op}_i(t_1, \cdots , t_{\text {ar}_i})
+                </fr:tex></html:li></html:ul></html:p>
+                <html:p>
+        Now we define the carrier the free model <fr:tex display="inline">F_T(X)</fr:tex> to be the quotient set 
+        <fr:tex display="block">
+            |F_T(X)| = \text {Tree}_{\Sigma _T}(X)/\sim _T
+        </fr:tex>
+        Let <fr:tex display="inline">\langle  t \rangle </fr:tex> be the <fr:tex display="inline">\sim _T</fr:tex> equivalence class of <fr:tex display="inline">t \in  \text {Tree}_{\Sigma _T}(X)</fr:tex>,
+        the interpretation of the operation symbol <fr:tex display="inline">\text {op}_i</fr:tex> in the free model is defined by:
+        <fr:tex display="block">
+            [\text {op}_i]_{F_T(X)}(\langle  t_1 \rangle , \cdots , \langle  t_{\text {ar}_i} \rangle ) = \langle  \text {op}_i(t_1, \cdots , t_{\text {ar}_i}) \rangle 
+        </fr:tex>
+        and the map <fr:tex display="inline">\eta _X : X \to  F_T(X)</fr:tex> is defined by
+        <fr:tex display="block">
+            \eta _X(x) = \langle  \text {return}(x) \rangle 
+        </fr:tex>
+        Note that if theory <fr:tex display="inline">T</fr:tex> has no equations,
+        the free models generated by <fr:tex display="inline">T</fr:tex> is the set of all trees in <fr:tex display="inline">\text {Tree}_{\Sigma _T}(X)</fr:tex>
+        because the equivalence relation <fr:tex display="inline">\sim _T</fr:tex> is the identity relation <fr:tex display="inline">=</fr:tex>.
+    </html:p>
+                <html:p>
+        So far we have developed the algebraic theories,
+        to get a better fit with computational effects,
+        we need to generalize operations in two ways:
+        arities and parameters.
+    </html:p>
+                <html:p><html:strong>Generalizing arities</html:strong>:
+        One might expect that the generalization of 
+        arities is to allow them to be ordinal or cardinal
+        numbers, hence they can fit the infinity.
+        However, that would be a <html:strong>non-computational</html:strong> idea.
+        Instead, we can generalize the arities to be functions.
+        Notice that the n-ary cartesian product of <fr:tex display="inline">X</fr:tex> is isomorphic
+        to the exponential <fr:tex display="inline">X^{[n]}</fr:tex>, where <fr:tex display="inline">[n] = \{1, \cdots , n\}</fr:tex>.
+        Now we replace <fr:tex display="inline">[n]</fr:tex> with arbitrary set <fr:tex display="inline">A</fr:tex>,
+        then we can think of a map <fr:tex display="inline">X^A \to  X</fr:tex> as arguments of arity <fr:tex display="inline">A</fr:tex>.
+        We need a reasonable notation for writing down
+        an operation symbol to <fr:tex display="inline">A\text {-many}</fr:tex> arguments,
+        where <fr:tex display="inline">A</fr:tex> is an arbitrary set. 
+        To achieve this, we introduce the map <fr:tex display="inline">\kappa :A\to  X</fr:tex>,
+        and thus we simply write <fr:tex display="inline">\text {op}_i(\kappa )</fr:tex> for the operation symbol.
+    </html:p>
+                <html:p><html:strong>Generalizing parameters</html:strong>:
+        We can generalize operations to take parameters from a set <fr:tex display="inline">P</fr:tex>,
+        this naturally models algebraic operations that 
+        arise as computational effects.
+    </html:p>
+                <html:p><html:strong>Compose them together</html:strong>:
+        Now we can restate the definitions of signatures and  
+        algebraic operations with the generalizations incorporated.
+        <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-004T/</fr:uri><fr:display-uri>def-004T</fr:display-uri><fr:route>/def-004T/</fr:route><fr:title text="Parameterized Operations and General Arities">Parameterized Operations and General Arities</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    A signature <fr:tex display="inline">\Sigma </fr:tex> is given by a collection of operation 
+    symbols <fr:tex display="inline">\text {op}_i</fr:tex> with associated parameters sets <fr:tex display="inline">P_i</fr:tex> and 
+    arity <fr:tex display="inline">A_i</fr:tex>, denoted <fr:tex display="inline">\text {op}_i: P_i \rightsquigarrow  A_i</fr:tex>.
+</html:p><html:p>
+    The terms in context are generalized to well-founded trees
+    over <fr:tex display="inline">\Sigma </fr:tex> generated by a set <fr:tex display="inline">X</fr:tex>.
+    These form a set <fr:tex display="inline">\text {Tree}_\Sigma (X)</fr:tex> whose elements
+    are inductively generated:
+    <html:ul><html:li>
+            for every <fr:tex display="inline">x \in  X</fr:tex>, there is a tree <fr:tex display="inline">\text {return}(x) \in  \text {Tree}_\Sigma (X)</fr:tex></html:li>
+        <html:li>
+            If <fr:tex display="inline">p \in  P_i</fr:tex> and <fr:tex display="inline">\kappa  : A_i \to  \text {Tree}_\Sigma (X)</fr:tex>,
+            then there is a tree <fr:tex display="inline">\text {op}_i(p, \kappa ) \in  \text {Tree}_\Sigma (X)</fr:tex>,
+            whose root is labeled by <fr:tex display="inline">\text {op}_i</fr:tex> and subtrees are
+            given by the trees in the image of <fr:tex display="inline">\kappa </fr:tex>.
+        </html:li></html:ul>
+    The elements of <fr:tex display="inline">\text {Tree}_\Sigma (X)</fr:tex> may be thought of 
+    as <fr:tex display="inline">\Sigma \text {-terms}</fr:tex> with variables <fr:tex display="inline">X</fr:tex>.
+</html:p><html:p>
+    An interpretation <fr:tex display="inline">I</fr:tex> of a signature <fr:tex display="inline">\Sigma </fr:tex> is given by
+    (here we assume that the category is a category of sets,
+    the more general cases are omitted for brevity):
+    <html:ul><html:li>
+            A set <fr:tex display="inline">|I|</fr:tex> called the <html:strong>carrier</html:strong> of the interpretation
+        </html:li>
+        <html:li>
+            For each operation symbol <fr:tex display="inline">\text {op}_i: P_i \rightsquigarrow  A_i</fr:tex>, a map
+            <fr:tex display="block">
+                [\text {op}_i]_I : P_i \times  |I|^{A_i} \to  |I|
+            </fr:tex></html:li></html:ul>
+    The interpretation can be extended to terms (trees).
+    A tree <fr:tex display="inline">t \in  \text {Tree}_\Sigma (X)</fr:tex> is interpreted as a map 
+    <fr:tex display="inline">
+        [t]_I : |I| ^ X \to  |I| 
+    </fr:tex>
+    as follows:
+    <html:ul><html:li>
+            The tree <fr:tex display="inline">\text {return}(x)</fr:tex> is interpreted as the projection map:
+            <fr:tex display="block">
+                [\text {return}(x)]_I : \eta  \mapsto  \eta (x)
+            </fr:tex></html:li>
+        <html:li>
+            A compound tree is interpreted as the composition of the 
+            semantic brackets of the operation symbols and the subtrees:
+            <fr:tex display="block">
+                [\text {op}_i(p, \kappa )]_I : \eta  \to  [\text {op}_i]_I(p, \lambda  a. [\kappa (a)]_I(\eta ))
+            </fr:tex></html:li></html:ul></html:p><html:p>
+    A <fr:tex display="inline">\Sigma \text {-equation}</fr:tex> is a set <fr:tex display="inline">X</fr:tex> and 
+    a pair of trees <fr:tex display="inline">l, r \in  \text {Tree}_\Sigma (X)</fr:tex>:
+    <fr:tex display="block">
+        X\mid  l = r 
+    </fr:tex>
+    Given an interpretation <fr:tex display="inline">I</fr:tex> of signature <fr:tex display="inline">\Sigma </fr:tex>,
+    we say that such an equation is <html:strong>valid</html:strong> 
+    for <fr:tex display="inline">I</fr:tex> if <fr:tex display="inline">l</fr:tex> and <fr:tex display="inline">r</fr:tex> are interpreted as the same map.
+    The algebraic theory, models and categories are generalized
+    similarly, we do not repeat here.
+</html:p></fr:mainmatter></fr:tree></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

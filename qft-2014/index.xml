@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/tom-lancaster/" title="Tom Lancaster" uri="https://caimeo.space/tom-lancaster/" display-uri="tom-lancaster" type="local">Tom Lancaster</fr:link>
+      </fr:author>
+      <fr:author>
+        <fr:link href="/stephen-blundell/" title="Stephen J. Blundell" uri="https://caimeo.space/stephen-blundell/" display-uri="stephen-blundell" type="local">Stephen J. Blundell</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:uri>https://caimeo.space/qft-2014/</fr:uri>
+    <fr:display-uri>qft-2014</fr:display-uri>
+    <fr:route>/qft-2014/</fr:route>
+    <fr:title text="Quantum Field Theory for the Gifted Amateur">Quantum Field Theory for the Gifted Amateur</fr:title>
+    <fr:taxon>reference</fr:taxon>
+    <fr:meta name="doi">10.1093/acprof:oso/9780199699322.001.0001</fr:meta>
+    <fr:meta name="venue">Quantum Field Theory</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    This book on quantum field theory is designed to be different. It is written by experimental physicists and aimed to provide the interested amateur with a bridge from undergraduate physics to quantum field theory. 
+</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

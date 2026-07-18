@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors></fr:authors>
+    <fr:uri>https://caimeo.space/def-000J/</fr:uri>
+    <fr:display-uri>def-000J</fr:display-uri>
+    <fr:route>/def-000J/</fr:route>
+    <fr:title text="Sum of subsets">Sum of subsets</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    Let <fr:tex display="inline">U_1, \dots , U_n</fr:tex> be subsets of a vector space <fr:tex display="inline">V</fr:tex>.
+    The <html:strong>sum</html:strong> of <fr:tex display="inline">U_1, \dots , U_n</fr:tex> is defined as
+    <fr:tex display="block">U_1 + \dots  + U_n = \{u_1 + \dots  + u_n \mid  u_i \in  U_i\}</fr:tex>.
+</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors></fr:authors>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>26</fr:day>
+            </fr:date>
+            <fr:uri>https://caimeo.space/math-0001/</fr:uri>
+            <fr:display-uri>math-0001</fr:display-uri>
+            <fr:route>/math-0001/</fr:route>
+            <fr:title text="Introduction to Vector Space">Introduction to Vector Space</fr:title>
+            <fr:taxon>Linear Algebra</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    This note introduces the concept of vector space.
+    Refer to <fr:link href="/linear-algebra-2015/" title="Linear Algebra Done Right" uri="https://caimeo.space/linear-algebra-2015/" display-uri="linear-algebra-2015" type="local">Linear Algebra Done Right</fr:link>.
+</html:p>
+            <html:p>
+    The motivation for the definition of a vector space comes from the properties
+    of vectors in Euclidean space <fr:tex display="inline">\mathbb {R}^n</fr:tex> and <fr:tex display="inline">\mathbb {C}^n</fr:tex>.
+    The definition abstracts and generalizes these properties.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000H/</fr:uri>
+                <fr:display-uri>def-000H</fr:display-uri>
+                <fr:route>/def-000H/</fr:route>
+                <fr:title text="Vector Space">Vector Space</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A vector space over a <fr:link href="/def-0006/" title="Field" uri="https://caimeo.space/def-0006/" display-uri="def-0006" type="local">field</fr:link> <fr:tex display="inline">F</fr:tex> is a non-empty set <fr:tex display="inline">V</fr:tex> together with a binary operation and a binary function that satisfy the axioms listed below. 
+    In this context, the elements of <fr:tex display="inline">V</fr:tex> are commonly called <html:strong>vectors</html:strong>, and the elements of <fr:tex display="inline">F</fr:tex> are called <html:strong>scalars</html:strong>.
+    <html:ul><html:li>Commutativity: <fr:tex display="inline">
+            \forall  x, y \in  V, x + y = y + x
+        </fr:tex></html:li>
+        <html:li>Associativity: <fr:tex display="inline">
+            \forall  x, y, z \in  V, (x + y) + z = x + (y + z)
+        </fr:tex></html:li>
+        <html:li>Additive Identity: <fr:tex display="inline">
+            \exists  0 \in  V \text { such that } \forall  x \in  V, x + 0 = x
+        </fr:tex></html:li>
+        <html:li>Multiplicative Identity: <fr:tex display="inline">
+            \forall  x \in  V, 1x = x
+        </fr:tex></html:li>
+        <html:li>Additive Inverse: <fr:tex display="inline">
+            \forall  x \in  V, \exists  y \in  V \text { such that } x + y = 0
+        </fr:tex></html:li>
+        <html:li>Distributivity: <fr:tex display="inline">
+            \forall  x, y \in  V, \forall  c, d \in  F, c(x + y) = cx + cy, (c + d)x = cx + dx
+        </fr:tex></html:li></html:ul></html:p>
+                <html:p>
+    Elements of a vector space are called <html:strong>vectors</html:strong> or <html:strong>points</html:strong>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    When dealing with vector spaces, we usually interested only in subspaces.
+    And the union of subspaces is rarely a subspace, thus
+    we are more interested with sums of subspaces.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000I/</fr:uri>
+                <fr:display-uri>def-000I</fr:display-uri>
+                <fr:route>/def-000I/</fr:route>
+                <fr:title text="Linear Subspace">Linear Subspace</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A subset <fr:tex display="inline">U</fr:tex> of a vector space <fr:tex display="inline">V</fr:tex> over a field <fr:tex display="inline">F</fr:tex> is called a <html:strong>subspace</html:strong> of <fr:tex display="inline">V</fr:tex> if <fr:tex display="inline">U</fr:tex> is itself a <html:strong>vector space</html:strong> over <fr:tex display="inline">F</fr:tex> with the operations of addition and scalar multiplication on <fr:tex display="inline">V</fr:tex>.
+    The subset also satisfies the following axioms (vice versa):
+    <html:ul><html:li>Additive identity: <fr:tex display="inline">0\in  U</fr:tex></html:li>
+        <html:li>Closure: <fr:tex display="inline">\forall  u,v\in  U, u+v\in  U</fr:tex></html:li>
+        <html:li>Closed Scalar multiplication: <fr:tex display="inline">\forall  u\in  U, \forall  c\in  F, cu\in  U</fr:tex></html:li></html:ul></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    After that we can define the sum of subsets.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000J/</fr:uri>
+                <fr:display-uri>def-000J</fr:display-uri>
+                <fr:route>/def-000J/</fr:route>
+                <fr:title text="Sum of subsets">Sum of subsets</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">U_1, \dots , U_n</fr:tex> be subsets of a vector space <fr:tex display="inline">V</fr:tex>.
+    The <html:strong>sum</html:strong> of <fr:tex display="inline">U_1, \dots , U_n</fr:tex> is defined as
+    <fr:tex display="block">U_1 + \dots  + U_n = \{u_1 + \dots  + u_n \mid  u_i \in  U_i\}</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    The sum of subspaces is the smallest subspace that contains all the subspaces.
+</html:p>
+            <html:p>
+    Every element in <fr:tex display="inline">U_1 + \dots  + U_n</fr:tex> can be written as a sum of elements <fr:tex display="inline">u_i</fr:tex> in <fr:tex display="inline">U_i</fr:tex>:
+    <fr:tex display="block">
+        u_1+\cdots +u_n
+    </fr:tex>
+    We will interested in cases where each vector in <fr:tex display="inline">U_1 + \dots  + U_n</fr:tex> can be represented in the form above
+    in only one way. This leads to the definition of direct sum.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-000K/</fr:uri>
+                <fr:display-uri>def-000K</fr:display-uri>
+                <fr:route>/def-000K/</fr:route>
+                <fr:title text="Direct Sum">Direct Sum</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">U_1, \dots , U_n</fr:tex> be subspaces of a vector space <fr:tex display="inline">V</fr:tex>.
+    The <html:strong>direct sum</html:strong> of <fr:tex display="inline">U_1, \dots , U_n</fr:tex> is defined as
+    <fr:tex display="block">
+        U_1 \oplus  \dots  \oplus  U_n = \{u_1 + \dots  + u_n \mid  u_i \in  U_i\}
+    </fr:tex>
+    if every element in <fr:tex display="inline">U_1 \oplus  \dots  \oplus  U_n</fr:tex> can be written as <fr:tex display="inline">u_1 + \dots  + u_n </fr:tex> in only one way.
+    This definition requires every vector in the sum have a unique representation.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

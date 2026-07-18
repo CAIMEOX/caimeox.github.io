@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/jon-fortney/" title="Jon Pierre Fortney" uri="https://caimeo.space/jon-fortney/" display-uri="jon-fortney" type="local">Jon Pierre Fortney</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:uri>https://caimeo.space/df-cm-2018/</fr:uri>
+    <fr:display-uri>df-cm-2018</fr:display-uri>
+    <fr:route>/df-cm-2018/</fr:route>
+    <fr:title text="A Visual Introduction to Differential Forms and Calculus on Manifolds">A Visual Introduction to Differential Forms and Calculus on Manifolds</fr:title>
+    <fr:taxon>reference</fr:taxon>
+    <fr:meta name="doi">10.1007/978-3-319-96992-3</fr:meta>
+    <fr:meta name="venue">Differential Geometry, Manifolds and Cell Complexes, Global Analysis and Analysis on Manifolds</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>This book explains and helps readers to develop geometric intuition as it relates to differential forms.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

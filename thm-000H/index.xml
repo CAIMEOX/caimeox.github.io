@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors></fr:authors>
+    <fr:uri>https://caimeo.space/thm-000H/</fr:uri>
+    <fr:display-uri>thm-000H</fr:display-uri>
+    <fr:route>/thm-000H/</fr:route>
+    <fr:title text="Range is a subspace">Range is a subspace</fr:title>
+    <fr:taxon>Theorem</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    If <fr:tex display="inline">T: V \to  W</fr:tex> is a linear map, then the range of <fr:tex display="inline">T</fr:tex> is a subspace of <fr:tex display="inline">W</fr:tex>.
+</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors></fr:authors>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>31</fr:day>
+            </fr:date>
+            <fr:uri>https://caimeo.space/math-0005/</fr:uri>
+            <fr:display-uri>math-0005</fr:display-uri>
+            <fr:route>/math-0005/</fr:route>
+            <fr:title text="Linear Maps">Linear Maps</fr:title>
+            <fr:taxon>Linear Algebra</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    This note introduces the concept of linear maps.
+    Refer to <fr:link href="/linear-algebra-2015/" title="Linear Algebra Done Right" uri="https://caimeo.space/linear-algebra-2015/" display-uri="linear-algebra-2015" type="local">Linear Algebra Done Right</fr:link>.
+</html:p>
+            <html:p>
+    Now we arrive at the main topic of this chapter: linear maps. 
+    In classic mathematics, to understand the properties of the structure or space,
+    we often study the maps between them.
+    For vector spaces we study the <html:strong>linear maps</html:strong>.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-0025/</fr:uri>
+                <fr:display-uri>def-0025</fr:display-uri>
+                <fr:route>/def-0025/</fr:route>
+                <fr:title text="Linear Map">Linear Map</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A <html:strong>linear map</html:strong> is a function between two vector spaces that preserves the operations of addition and scalar multiplication.
+    In other words, a function <fr:tex display="inline">T: V \to  W</fr:tex> where <fr:tex display="inline">V,W</fr:tex> are vector spaces if the following conditions are satisfied:
+    <html:ul><html:li>Additivity: <fr:tex display="inline">T(u+v) = T(u) + T(v)</fr:tex> for all <fr:tex display="inline">u,v \in  V</fr:tex></html:li>
+        <html:li>Homogeneity: <fr:tex display="inline">T(\alpha  v) = \alpha  T(v)</fr:tex> for all <fr:tex display="inline">\alpha  \in  \mathbb {F}</fr:tex> and <fr:tex display="inline">v \in  V</fr:tex></html:li></html:ul>
+    Sometimes we ignore the brackets and write <fr:tex display="inline">T v</fr:tex> instead of <fr:tex display="inline">T(v)</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Now we can talk about the set of all linear maps between two vector spaces.
+    <fr:tex display="block">
+        \mathcal {L}(V,W) = \{  T: V \to  W | T \text { is a linear map} \}
+    </fr:tex></html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/eg-0002/</fr:uri>
+                <fr:display-uri>eg-0002</fr:display-uri>
+                <fr:route>/eg-0002/</fr:route>
+                <fr:title text="Differentiation is linear map">Differentiation is linear map</fr:title>
+                <fr:taxon>Example</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Define <fr:tex display="inline">D\in \mathcal {L}(\mathcal {P}(\mathbb {R}),\mathcal {P}(\mathbb {R}))</fr:tex> (recall that <fr:tex display="inline">\mathcal {P}</fr:tex> means <fr:link href="/def-0027/" title="Polynomial" uri="https://caimeo.space/def-0027/" display-uri="def-0027" type="local">set of polynomials</fr:link>) by
+    <fr:tex display="block">
+        D(f) = f&apos;
+    </fr:tex>
+    We can see that <fr:tex display="inline">D</fr:tex> a linear map.
+    <html:ul><html:li>Additivity: <fr:tex display="inline">D(f+g) = (f+g)&apos; = f&apos; + g&apos; = D(f) + D(g)</fr:tex></html:li>
+        <html:li>Homogeneity: <fr:tex display="inline">D(\alpha  f) = (\alpha  f)&apos; = \alpha  f&apos; = \alpha  D(f)</fr:tex></html:li></html:ul></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/eg-0003/</fr:uri>
+                <fr:display-uri>eg-0003</fr:display-uri>
+                <fr:route>/eg-0003/</fr:route>
+                <fr:title text="Integration is linear map">Integration is linear map</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> be the vector space of all continuous functions on the interval <fr:tex display="inline">[a,b]</fr:tex>.
+    The map <fr:tex display="inline">I: V \to  V</fr:tex> defined by
+    <fr:tex display="block">
+        I(f) = \int _a^x f(t) dt
+    </fr:tex>
+    is a <html:strong>linear map</html:strong>.
+    In other words, <fr:tex display="inline">I</fr:tex> preserves the operations of addition and scalar multiplication:
+    For all <fr:tex display="inline">f,g \in  V</fr:tex> and all <fr:tex display="inline">\alpha  \in  \mathbb {R}</fr:tex>,
+    <fr:tex display="block">
+        I(f+g) = I(f) + I(g) \quad  \text {and} \quad  I(\alpha  f) = \alpha  I(f)
+    </fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    We can find a linear map that takes on <html:em>whatever values we wish</html:em> on the 
+    vectors in a basis by the following theorem.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000F/</fr:uri>
+                <fr:display-uri>thm-000F</fr:display-uri>
+                <fr:route>/thm-000F/</fr:route>
+                <fr:title text="Linear maps and basis of domain">Linear maps and basis of domain</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">v_1, v_2, \ldots , v_n</fr:tex> be a basis of vector space <fr:tex display="inline">V</fr:tex>.
+    Then for any vector space <fr:tex display="inline">W</fr:tex> and any vectors <fr:tex display="inline">w_1, w_2, \ldots , w_n</fr:tex> in <fr:tex display="inline">W</fr:tex>,
+    there exists a unique linear map <fr:tex display="inline">T: V \to  W</fr:tex> such that
+    <fr:tex display="block">
+        T(v_i) = w_i \quad  \text {for all} \quad  i = 1,2,\ldots ,n
+    </fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Now let&apos;s turn to the algebraic operations over the set of linear maps <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex>.
+    We begin by defining the addition and scalar multiplication of linear maps.
+    This leads to a surprising result: the set of linear maps is actually a vector space.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-0029/</fr:uri>
+                <fr:display-uri>def-0029</fr:display-uri>
+                <fr:route>/def-0029/</fr:route>
+                <fr:title text="Addition and scalar multiplication over \mathcal {L}(V,W)">Addition and scalar multiplication over <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex></fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">T_1, T_2 \in  \mathcal {L}(V,W)</fr:tex>.
+    We define the <html:strong>addition</html:strong> of <fr:tex display="inline">T_1</fr:tex> and <fr:tex display="inline">T_2</fr:tex> as the linear map <fr:tex display="inline">T_1 + T_2: V \to  W</fr:tex> such that
+    <fr:tex display="block">
+        (T_1 + T_2)(v) = T_1(v) + T_2(v) \quad  \text {for all} \quad  v \in  V
+    </fr:tex>
+    The scalar multiplication of a linear map <fr:tex display="inline">T \in  \mathcal {L}(V,W)</fr:tex> by a scalar <fr:tex display="inline">c \in  \mathbb {F}</fr:tex> is the linear map <fr:tex display="inline">cT: V \to  W</fr:tex> such that
+    <fr:tex display="block">
+        (cT)(v) = cT(v) \quad  \text {for all} \quad  v \in  V
+    </fr:tex>
+    With these operations, <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> is a <fr:link href="/def-000H/" title="Vector Space" uri="https://caimeo.space/def-000H/" display-uri="def-000H" type="local"><html:strong>vector space</html:strong></fr:link> over the field <fr:tex display="inline">\mathbb {F}</fr:tex>.
+    Note that the additive identity of <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> is the <html:strong>zero map</html:strong> <fr:tex display="inline">0: V \to  W</fr:tex> such that
+    <fr:tex display="block">
+        0(v) = 0 \quad  \text {for all} \quad  v \in  V
+    </fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Usually it makes no sense to multiply two linear maps. But we can define
+    an operation called the <html:strong>product</html:strong> of linear maps, which is just the composition of the two functions.
+    This can form a <html:strong>monoid</html:strong> or even a <html:strong>group</html:strong> under certain conditions.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-002A/</fr:uri>
+                <fr:display-uri>def-002A</fr:display-uri>
+                <fr:route>/def-002A/</fr:route>
+                <fr:title text="Product of Linear Maps">Product of Linear Maps</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">T_1: V \to  W</fr:tex> and <fr:tex display="inline">T_2: W \to  U</fr:tex> be linear maps.
+    We define the <html:strong>product</html:strong> of <fr:tex display="inline">T_1</fr:tex> and <fr:tex display="inline">T_2</fr:tex> as the linear map <fr:tex display="inline">T_2 \circ  T_1: V \to  U</fr:tex> such that
+    <fr:tex display="block">
+        (T_2 \circ  T_1)(v) = T_2(T_1(v)) \quad  \text {for all} \quad  v \in  V
+    </fr:tex>
+    Note that this is just the composition of the two functions <fr:tex display="inline">T_1</fr:tex> and <fr:tex display="inline">T_2</fr:tex>. 
+    And we usually denote <fr:tex display="inline">T_2 \circ  T_1</fr:tex> by <fr:tex display="inline">T_2T_1</fr:tex>.
+    The product of linear maps is associative, that is,
+    <fr:tex display="block">
+        (T_3 \circ  T_2) \circ  T_1 = T_3 \circ  (T_2 \circ  T_1)
+    </fr:tex>
+    for any linear maps <fr:tex display="inline">T_1: V \to  W</fr:tex>, <fr:tex display="inline">T_2: W \to  U</fr:tex>, and <fr:tex display="inline">T_3: U \to  X</fr:tex>.
+    The identity map <fr:tex display="inline">I_V: V \to  V</fr:tex> is the identity element of the set of linear maps <fr:tex display="inline">\mathcal {L}(V,V)</fr:tex> under the product operation.
+    That is, for any linear map <fr:tex display="inline">T: V \to  V</fr:tex>,
+    <fr:tex display="block">
+        I_V \circ  T = T \circ  I_V = T
+    </fr:tex>
+    where <fr:tex display="inline">I_V</fr:tex> is the identity map on <fr:tex display="inline">V</fr:tex>.
+    The set of all linear maps from a vector space to itself, <fr:tex display="inline">\mathcal {L}(V,V)</fr:tex>, forms a <fr:link href="/def-0007/" title="Monoid" uri="https://caimeo.space/def-0007/" display-uri="def-0007" type="local"><html:strong>monoid</html:strong></fr:link> under the product operation.
+    The set of all invertible linear maps from a vector space to itself, <fr:tex display="inline">\mathcal {L}(V,V)^*</fr:tex>, forms a group under the product operation.
+    The identity map is the identity element of the <fr:link href="/def-0001/" title="Group" uri="https://caimeo.space/def-0001/" display-uri="def-0001" type="local"><html:strong>group</html:strong></fr:link> <fr:tex display="inline">\mathcal {L}(V,V)^*</fr:tex>.
+</html:p>
+                <html:p>
+    With addition we also have the distributive law for the product of linear maps.
+    That is, for any linear maps <fr:tex display="inline">S,S_1,S_2: V \to  W</fr:tex> and <fr:tex display="inline">T,T_1,T_2: U\to  V</fr:tex>:
+    <fr:tex display="block">
+        (S_1 + S_2)T = S_1T + S_2T \quad  \text {and} \quad  T(S_1 + S_2) = TS_1 + TS_2
+    </fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    In algebra, we have a structure named <html:strong>kernel</html:strong>, which is the set of all elements that are mapped to the zero element.
+    For linear maps, the kernel is the <html:strong>null space</html:strong></html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-002C/</fr:uri>
+                <fr:display-uri>def-002C</fr:display-uri>
+                <fr:route>/def-002C/</fr:route>
+                <fr:title text="Null Space">Null Space</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    For <fr:tex display="inline">T: V \to  W</fr:tex>, the <html:strong>null space</html:strong> of <fr:tex display="inline">T</fr:tex> is the set of all vectors in <fr:tex display="inline">V</fr:tex> that are mapped to <fr:tex display="inline">0</fr:tex> in <fr:tex display="inline">W</fr:tex>.
+    <fr:tex display="block">
+        \text {null } T = \{ v \in  V | T(v) = 0 \}
+    </fr:tex>
+    The null space of <fr:tex display="inline">T</fr:tex> is a subspace of <fr:tex display="inline">V</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    The injective linear map is defined like normal <fr:link href="/def-002D/" title="Injective" uri="https://caimeo.space/def-002D/" display-uri="def-002D" type="local">injective</fr:link> functions.
+    To check whether a linear map is injective, we can just check whether the null space is trivial.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000G/</fr:uri>
+                <fr:display-uri>thm-000G</fr:display-uri>
+                <fr:route>/thm-000G/</fr:route>
+                <fr:title text="Injectivity equivalent to Kernel Triviality">Injectivity equivalent to Kernel Triviality</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">T: V \to  W</fr:tex> be a linear map. Then <fr:tex display="inline">T</fr:tex> is injective if and only if <fr:tex display="inline">\text {null } T = \{ 0 \}</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    The image of a linear map is the set of all elements that are mapped to by some element in the domain.
+    This is called the <html:strong>range</html:strong> of the linear map, just like <fr:link href="/def-002E/" title="Range" uri="https://caimeo.space/def-002E/" display-uri="def-002E" type="local">range</fr:link> of normal function.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000H/</fr:uri>
+                <fr:display-uri>thm-000H</fr:display-uri>
+                <fr:route>/thm-000H/</fr:route>
+                <fr:title text="Range is a subspace">Range is a subspace</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    If <fr:tex display="inline">T: V \to  W</fr:tex> is a linear map, then the range of <fr:tex display="inline">T</fr:tex> is a subspace of <fr:tex display="inline">W</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    The next theorem plays a crucial role in the study of linear maps.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000I/</fr:uri>
+                <fr:display-uri>thm-000I</fr:display-uri>
+                <fr:route>/thm-000I/</fr:route>
+                <fr:title text="Fundamental Theorems of Linear Maps">Fundamental Theorems of Linear Maps</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> be finite-dimensional vector space and <fr:tex display="inline">T : V \to  W</fr:tex> be a linear map. 
+    Then <fr:tex display="inline">\text {range } T</fr:tex> is finite-dimensional and 
+    <fr:tex display="block">
+        \dim  V = \dim  \text {range } T + \dim  \text {null } T
+    </fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Now we can show that no linear map from a finite-dimensional vector space
+    to a <html:em>smaller</html:em> (In dimension) vector space can be <fr:link href="/def-002D/" title="Injective" uri="https://caimeo.space/def-002D/" display-uri="def-002D" type="local">injective</fr:link>.
+    This can be easily proved by the fundamental theorem of linear maps.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000M/</fr:uri>
+                <fr:display-uri>thm-000M</fr:display-uri>
+                <fr:route>/thm-000M/</fr:route>
+                <fr:title text="Map to smaller dimension is not injective">Map to smaller dimension is not injective</fr:title>
+                <fr:taxon>Lemma</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> and <fr:tex display="inline">W</fr:tex> be finite-dimensional vector spaces, 
+    and <fr:tex display="inline">\dim  V &gt; \dim  W</fr:tex>.
+    Then no linear map <fr:tex display="inline">T:V\to  W</fr:tex> is injective.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Similarly, we can show that no linear map from a finite-dimensional vector space
+    to a <html:em>larger</html:em> (In dimension) vector space can be <fr:link href="/def-002F/" title="Surjective" uri="https://caimeo.space/def-002F/" display-uri="def-002F" type="local">surjective</fr:link>.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000N/</fr:uri>
+                <fr:display-uri>thm-000N</fr:display-uri>
+                <fr:route>/thm-000N/</fr:route>
+                <fr:title text="Map to bigger dimension is not surjective">Map to bigger dimension is not surjective</fr:title>
+                <fr:taxon>Lemma</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> and <fr:tex display="inline">W</fr:tex> be finite-dimensional vector spaces, 
+    and <fr:tex display="inline">\dim  V &lt; \dim  W</fr:tex>.
+    Then no linear map <fr:tex display="inline">T:V\to  W</fr:tex> is surjective.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    These two lemmas are very important in the study of linear equations.
+    The idea here is to express linear equations system in terms of linear maps.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/eg-0004/</fr:uri>
+                <fr:display-uri>eg-0004</fr:display-uri>
+                <fr:route>/eg-0004/</fr:route>
+                <fr:title text="Homogeneous Linear Equations System">Homogeneous Linear Equations System</fr:title>
+                <fr:taxon>Example</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Rephrase in terms of a linear map the question of whether a <fr:link href="/def-002Q/" title="Homogeneous Linear Equations" uri="https://caimeo.space/def-002Q/" display-uri="def-002Q" type="local">homogeneous system linear equations</fr:link> has a nonzero solution.</html:p>
+                <html:p>
+        Let <fr:tex display="inline">A</fr:tex> be the coefficient matrix of a homogeneous linear system.
+        <fr:tex display="block">
+            A = \begin {bmatrix}
+                a_{11} &amp; a_{12} &amp; \cdots  &amp; a_{1n} \\
+                a_{21} &amp; a_{22} &amp; \cdots  &amp; a_{2n} \\
+                \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\
+                a_{m1} &amp; a_{m2} &amp; \cdots  &amp; a_{mn}
+            \end {bmatrix}
+        </fr:tex>
+        The equation <fr:tex display="inline">A\vec {x} = \vec {0}</fr:tex> has a trivial solution <fr:tex display="inline">\vec {x} = \vec {0}</fr:tex>.
+        The question here is whether there is a nontrivial solution.
+    </html:p>
+                <html:p>
+        Define <fr:tex display="inline">T: \mathbb {F}^n \to  \mathbb {F}^m</fr:tex> by
+        <fr:tex display="block">
+            T(\vec {x}) = A\vec {x}
+        </fr:tex>
+        Then the question of whether the homogeneous linear system has a nontrivial solution is equivalent to 
+        asking <fr:tex display="inline">\text {null } T</fr:tex> is nontrivial.
+        That is, <fr:tex display="inline">T</fr:tex> is <fr:link href="/thm-000G/" title="Injectivity equivalent to Kernel Triviality" uri="https://caimeo.space/thm-000G/" display-uri="thm-000G" type="local">not injective</fr:link>.
+    </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000O/</fr:uri>
+                <fr:display-uri>thm-000O</fr:display-uri>
+                <fr:route>/thm-000O/</fr:route>
+                <fr:title text="Homogeneous system of linear equations">Homogeneous system of linear equations</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p> 
+    A homogeneous system of linear equations
+    with more variables than equations has 
+    a nontrivial solution.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    We have seen that <fr:link href="/thm-000M/" title="Map to smaller dimension is not injective" uri="https://caimeo.space/thm-000M/" display-uri="thm-000M" type="local">map to smaller dimension is not injective</fr:link>.
+    <fr:tex display="inline">T</fr:tex> is not injective if <fr:tex display="inline">n &gt; m</fr:tex>. This results the theorem above.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/eg-0005/</fr:uri>
+                <fr:display-uri>eg-0005</fr:display-uri>
+                <fr:route>/eg-0005/</fr:route>
+                <fr:title text="Inhomogeneous Linear Equations System">Inhomogeneous Linear Equations System</fr:title>
+                <fr:taxon>Example</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        Rephrase in terms of a linear map the question of whether a inhomogeneous system linear equations has no solutions
+        for some choice of constant terms.
+    </html:p>
+                <html:p>
+    Let <fr:tex display="inline">A</fr:tex> be the coefficient matrix of a inhomogeneous linear system.
+    <fr:tex display="block">
+        A = \begin {bmatrix}
+            a_{11} &amp; a_{12} &amp; \cdots  &amp; a_{1n} \\
+            a_{21} &amp; a_{22} &amp; \cdots  &amp; a_{2n} \\
+            \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\
+            a_{m1} &amp; a_{m2} &amp; \cdots  &amp; a_{mn}
+        \end {bmatrix}
+    </fr:tex>
+    The equation <fr:tex display="inline">A\vec {x} = \vec {b}</fr:tex> has a solution <fr:tex display="inline">\vec {x} = A^{-1}\vec {b}</fr:tex>.
+    </html:p>
+                <html:p>
+        Define <fr:tex display="inline">T: \mathbb {F}^n \to  \mathbb {F}^m</fr:tex> by
+        <fr:tex display="block">
+            T(\vec {x}) = A\vec {x}
+        </fr:tex>
+        Then the statement that inhomogeneous linear system has no solutions is equivalent to 
+        <fr:tex display="inline">\vec {b} \not \in  \text {range } T</fr:tex>.
+        Thus the question is rephrased as not having a solution for some choice of <fr:tex display="inline">\vec {b}</fr:tex>.
+        What condition ensures <fr:tex display="inline">T</fr:tex> is not surjective.
+    </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000P/</fr:uri>
+                <fr:display-uri>thm-000P</fr:display-uri>
+                <fr:route>/thm-000P/</fr:route>
+                <fr:title text="Inhomogeneous system of linear equations">Inhomogeneous system of linear equations</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    An inhomogeneous system of linear equations
+    with more equations than variables has 
+    no solution for some choice of the constant term.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Let <fr:tex display="inline">v_1, v_2, \cdots , v_n</fr:tex> be a basis of <fr:tex display="inline">V</fr:tex>.
+    We know that for any value of a linear map <fr:tex display="inline">T:V\to  W</fr:tex>,
+    can be determined by values <fr:tex display="inline">\{ T(v_1), T(v_2), \cdots , T(v_n) \}</fr:tex>.
+    This leads to the definition of the matrix representation of a linear map.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-002R/</fr:uri>
+                <fr:display-uri>def-002R</fr:display-uri>
+                <fr:route>/def-002R/</fr:route>
+                <fr:title text="Matrix">Matrix</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">m,n\in  \mathbb {Z}^+</fr:tex>.
+    A <fr:tex display="inline">m\times  n</fr:tex> matrix is a rectangular array of elements of a field <fr:tex display="inline">\mathbb {F}</fr:tex>
+    with <fr:tex display="inline">m</fr:tex> <html:strong>rows</html:strong> and <fr:tex display="inline">n</fr:tex> <html:strong>columns</html:strong>.
+    <fr:tex display="block">
+        A = \begin {bmatrix}
+            a_{11} &amp; a_{12} &amp; \cdots  &amp; a_{1n} \\
+            a_{21} &amp; a_{22} &amp; \cdots  &amp; a_{2n} \\
+            \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots  \\
+            a_{m1} &amp; a_{m2} &amp; \cdots  &amp; a_{mn}
+        \end {bmatrix}
+    </fr:tex>
+    The notation <fr:tex display="inline">A_{jk}</fr:tex> refers to the element in the <fr:tex display="inline">j</fr:tex>-th row and <fr:tex display="inline">k</fr:tex>-th column.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Now we can define the matrix representation of a linear map.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-002S/</fr:uri>
+                <fr:display-uri>def-002S</fr:display-uri>
+                <fr:route>/def-002S/</fr:route>
+                <fr:title text="Matrix of Linear Maps">Matrix of Linear Maps</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter><html:p>
+    Let <fr:tex display="inline">T\in  \mathcal {L}(V,W)</fr:tex>,
+    <fr:tex display="inline">\{ v_1,\ldots ,v_n \}\subset  V</fr:tex> be a basis of <fr:tex display="inline">V</fr:tex>,
+    and <fr:tex display="inline">\{ w_1,\ldots ,w_m \}\subset  W</fr:tex> be a basis of <fr:tex display="inline">W</fr:tex>.
+    The <html:strong>matrix of <fr:tex display="inline">T</fr:tex></html:strong> with respect to these bases is
+    the <fr:tex display="inline">m\times  n</fr:tex> matrix <fr:tex display="inline">\mathcal {M}(T)</fr:tex> such that
+    <fr:tex display="block">
+        T(v_j) = \sum _{i=1}^m \mathcal {M}(T)_{ij}w_i
+    </fr:tex>
+    Or we denote <fr:tex display="inline">\mathcal {M}(T)</fr:tex> as <fr:tex display="inline">\mathcal {M}(T, (v_1,\ldots ,v_n), (w_1,\ldots ,w_m))</fr:tex>.
+</html:p><html:p>
+    If <fr:tex display="inline">T</fr:tex> maps <fr:tex display="inline">n</fr:tex>-dimensional vector space to <fr:tex display="inline">m</fr:tex>-dimensional vector space,
+    then <fr:tex display="inline">\mathcal {M}(T)</fr:tex> is a <fr:tex display="inline">m\times  n</fr:tex> matrix.
+</html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    Addition
+">
+    <html:strong>Addition</html:strong>
+</fr:title></fr:frontmatter><fr:mainmatter>
+    For two same-size matrix <fr:tex display="inline">A,B</fr:tex>,
+    the sum of <fr:tex display="inline">A</fr:tex> and <fr:tex display="inline">B</fr:tex> is the matrix <fr:tex display="inline">C</fr:tex> such that
+    <fr:tex display="block">
+        C_{ij} = A_{ij} + B_{ij}
+    </fr:tex>
+    In the language of linear maps <fr:tex display="inline">S,T\in  \mathcal {L}(V,W)</fr:tex>,
+    <fr:tex display="block">
+        \mathcal {M}(T+S) = \mathcal {M}(T) + \mathcal {M}(S)
+    </fr:tex>
+</fr:mainmatter></fr:tree>
+
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    Scalar Multiplication
+">
+    <html:strong>Scalar Multiplication</html:strong>
+</fr:title></fr:frontmatter><fr:mainmatter>
+    For a scalar <fr:tex display="inline">c</fr:tex> and a matrix <fr:tex display="inline">A</fr:tex>,
+    the product of <fr:tex display="inline">c</fr:tex> and <fr:tex display="inline">A</fr:tex> is the matrix <fr:tex display="inline">B</fr:tex> such that
+    <fr:tex display="block">
+        B_{ij} = cA_{ij}
+    </fr:tex>
+    In the language of linear maps <fr:tex display="inline">T\in  \mathcal {L}(V,W)</fr:tex>,
+    <fr:tex display="block">
+        \mathcal {M}(cT) = c\mathcal {M}(T)
+    </fr:tex>
+</fr:mainmatter></fr:tree>
+
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    Set of Matrices
+">
+    <html:strong>Set of Matrices</html:strong>
+</fr:title></fr:frontmatter><fr:mainmatter>
+    The set of all <fr:tex display="inline">m\times  n</fr:tex> matrices with elements in <fr:tex display="inline">\mathbb {F}</fr:tex> is denoted as <fr:tex display="inline">\mathcal {M}_{m\times  n}(\mathbb {F})</fr:tex>
+    or <fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex>.
+</fr:mainmatter></fr:tree>
+</fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    We can see that <fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex> is itself a vector space.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000Q/</fr:uri>
+                <fr:display-uri>thm-000Q</fr:display-uri>
+                <fr:route>/thm-000Q/</fr:route>
+                <fr:title text="\dim \mathbb {F}^{m\times  n} = mn">
+                  <fr:tex display="inline">\dim \mathbb {F}^{m\times  n} = mn</fr:tex>
+                </fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p><fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex> is a vector space with dimension <fr:tex display="inline">mn</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Consider linear maps <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex>.
+    The composition of linear maps is <fr:tex display="inline">ST</fr:tex>.
+    Does the composition of linear maps have a matrix representation?
+    <fr:tex display="block">
+        \mathcal {M}(ST) = \mathcal {M}(S)\mathcal {M}(T)
+    </fr:tex>
+    This makes no sense now but indicates the definition of <html:strong>matrix multiplication</html:strong>.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-002T/</fr:uri>
+                <fr:display-uri>def-002T</fr:display-uri>
+                <fr:route>/def-002T/</fr:route>
+                <fr:title text="Matrix Multiplication">Matrix Multiplication</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter><html:p>
+    Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> be a <fr:tex display="inline">n\times  p</fr:tex> matrix.
+    Then <fr:tex display="inline">AC</fr:tex> is defined as the <fr:tex display="inline">m\times  p</fr:tex> matrix <fr:tex display="inline">C</fr:tex> such that
+    <fr:tex display="block">
+        C_{ij} = \sum _{k=1}^n A_{ik}B_{kj}
+    </fr:tex></html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:title text="
+    Derivation
+">
+    <html:strong>Derivation</html:strong>
+</fr:title></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline">T:U\to  V</fr:tex> and <fr:tex display="inline">S:V\to  W</fr:tex> be linear maps.
+    Denote <fr:tex display="inline">A = \mathcal {M}(S)</fr:tex> and <fr:tex display="inline">C = \mathcal {M}(T)</fr:tex>.
+    Then the composition of linear maps <fr:tex display="inline">ST</fr:tex> is computed
+    <fr:tex display="block">
+        \begin {align*}
+            (ST)(u)_k &amp;= S(\sum _{r=1}^n C_{rk}v_r) \\
+            &amp;= \sum _{r=1}^n C_{rk}S(v_r) \\
+            &amp;= \sum _{r=1}^n C_{rk}\sum _{s=1}^m A _{sr}w_s \\
+            &amp;= \sum _{s=1}^m\left (\sum _{r=1}^n C_{rk}A_{sr}\right )w_s \\
+        \end {align*}
+    </fr:tex>
+    Thus <fr:tex display="inline">\mathcal {M}(ST)</fr:tex> is the <fr:tex display="inline">m\times  p</fr:tex> whose entries are
+    <fr:tex display="block">
+        \mathcal {M}(ST)_{sk} = \sum _{r=1}^n A_{sr}C_{rk}
+    </fr:tex>
+</fr:mainmatter></fr:tree>
+</fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Now we see that the desired matrix multiplication holds.
+    Matrix multiplication is not commutative in general.
+    However, it satisfies the associative law and the distributive law.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-002Y/</fr:uri>
+                <fr:display-uri>def-002Y</fr:display-uri>
+                <fr:route>/def-002Y/</fr:route>
+                <fr:title text="A_{j\cdot } and A_{\cdot  j}"><fr:tex display="inline">A_{j\cdot }</fr:tex> and <fr:tex display="inline">A_{\cdot  j}</fr:tex></fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">A</fr:tex> be a <fr:tex display="inline">m\times  n</fr:tex> matrix.
+    <html:ul><html:li>
+            If <fr:tex display="inline">1\leq  j\leq  m</fr:tex> then <fr:tex display="inline">A_{j\cdot }</fr:tex> is the <fr:tex display="inline">j</fr:tex>-th row of <fr:tex display="inline">A</fr:tex>,
+            defined as a <fr:tex display="inline">1\times  n</fr:tex> matrix. (A row vector)
+        </html:li>
+        <html:li>
+            If <fr:tex display="inline">1\leq  j\leq  n</fr:tex> then <fr:tex display="inline">A_{\cdot  j}</fr:tex> is the <fr:tex display="inline">j</fr:tex>-th column of <fr:tex display="inline">A</fr:tex>,
+            defined as a <fr:tex display="inline">m\times  1</fr:tex> matrix. (A column vector)
+        </html:li></html:ul></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    With the notation we can think of matrix multiplication in another perspective.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000R/</fr:uri>
+                <fr:display-uri>thm-000R</fr:display-uri>
+                <fr:route>/thm-000R/</fr:route>
+                <fr:title text="Entry pf matrix product">Entry pf matrix product</fr:title>
+                <fr:taxon>Lemma</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Suppose <fr:tex display="inline">A</fr:tex> is an <fr:tex display="inline">m\times  n</fr:tex> matrix and <fr:tex display="inline">B</fr:tex> is an <fr:tex display="inline">n\times  p</fr:tex> matrix.
+    Then the entry of the product <fr:tex display="inline">AB</fr:tex> is:
+    <fr:tex display="block">
+        (AB)_{ij} = A_{i\cdot }B_{\cdot  j}
+    </fr:tex>
+    for <fr:tex display="inline">1\leq  i\leq  m</fr:tex> and <fr:tex display="inline">1\leq  j\leq  p</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    We have an interesting observation.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000S/</fr:uri>
+                <fr:display-uri>thm-000S</fr:display-uri>
+                <fr:route>/thm-000S/</fr:route>
+                <fr:title text="Linear Combination of columns">Linear Combination of columns</fr:title>
+                <fr:taxon>Lemma</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">A</fr:tex> be an <fr:tex display="inline">m\times  n</fr:tex> matrix,
+    and <fr:tex display="inline">c</fr:tex> is a <fr:tex display="inline">1\times  1</fr:tex> matrix.
+    <fr:tex display="block">
+        c = \begin {pmatrix} c_1 \\ c_2 \\ \vdots  \\ c_n \end {pmatrix}
+    </fr:tex>
+    Then <fr:tex display="inline">Ac = c_1A_{\cdot  1} + c_2A_{\cdot  2} + \cdots  + c_nA_{\cdot  n}</fr:tex>.
+    In other words, <fr:tex display="inline">Ac</fr:tex> is a linear Combination of the columns of <fr:tex display="inline">A</fr:tex>,
+    with the scalars that multiply the columns coming from <fr:tex display="inline">c</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    Now we begin the study the invertibility of linear maps.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/def-002Z/</fr:uri>
+                <fr:display-uri>def-002Z</fr:display-uri>
+                <fr:route>/def-002Z/</fr:route>
+                <fr:title text="Inverse">Inverse</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A linear map <fr:tex display="inline">T\in \mathcal {L}(V,W)</fr:tex> is said to be <fr:tex display="inline">invertible</fr:tex> if 
+    there exists a linear map <fr:tex display="inline">S\in \mathcal {L}(W,V)</fr:tex> such that:
+    <fr:tex display="block">
+        \begin {align*}
+            T\cdot  S &amp;= \text {id}_V \\
+            S\cdot  T &amp;= \text {id}_W
+        \end {align*}
+    </fr:tex>
+    where <fr:tex display="inline">\text {id}</fr:tex> is the identity map.
+    If a linear map <fr:tex display="inline">T</fr:tex> is invertible, 
+    then the map <fr:tex display="inline">S</fr:tex> is <html:strong>unique</html:strong> and is called the <html:strong>inverse</html:strong> of <fr:tex display="inline">T</fr:tex>, denoted <fr:tex display="inline">T^{-1}</fr:tex>.
+</html:p>
+                <html:p>
+    An <html:strong>isomorphism</html:strong> is a linear map that is invertible.
+    Two vector spaces are said to be <html:strong>isomorphic</html:strong> if there exists an isomorphism between them.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    A linear map is invertible if and only if
+    it is <html:strong>bijective</html:strong>.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000T/</fr:uri>
+                <fr:display-uri>thm-000T</fr:display-uri>
+                <fr:route>/thm-000T/</fr:route>
+                <fr:title text="Isomorphism of equal dimensions">Isomorphism of equal dimensions</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Two finite-dimensional vector spaces over <fr:tex display="inline">\mathbb {F}</fr:tex>
+    are isomorphic iff they have the same <fr:link href="/def-001V/" title="Dimension" uri="https://caimeo.space/def-001V/" display-uri="def-001V" type="local">dimension</fr:link>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000U/</fr:uri>
+                <fr:display-uri>thm-000U</fr:display-uri>
+                <fr:route>/thm-000U/</fr:route>
+                <fr:title text="\mathcal {L}(V,W) is isomorphic to \mathbb {F}^{m\times  n}"><fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> is isomorphic to <fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex></fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">v_1, v_2, \ldots , v_n</fr:tex> be a basis for <fr:tex display="inline">V</fr:tex>,
+    and <fr:tex display="inline">w_1, w_2, \ldots , w_m</fr:tex> be a basis for <fr:tex display="inline">W</fr:tex>.
+    Then <fr:tex display="inline">\mathcal {M}</fr:tex> is an isomorphism between <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> and <fr:tex display="inline">\mathbb {F}^{m\times  n}</fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    This has a trivial corollary.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors></fr:authors>
+                <fr:uri>https://caimeo.space/thm-000V/</fr:uri>
+                <fr:display-uri>thm-000V</fr:display-uri>
+                <fr:route>/thm-000V/</fr:route>
+                <fr:title text="Dimension product">Dimension product</fr:title>
+                <fr:taxon>Corollary</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline">V</fr:tex> and <fr:tex display="inline">W</fr:tex> be finite-dimensional vector spaces.
+    Then <fr:tex display="inline">\mathcal {L}(V,W)</fr:tex> is finite-dimensional and
+    <fr:tex display="block">
+        \dim (\mathcal {L}(V,W)) = \dim (V)\dim (W).
+    </fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

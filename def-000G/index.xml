@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors></fr:authors>
+    <fr:uri>https://caimeo.space/def-000G/</fr:uri>
+    <fr:display-uri>def-000G</fr:display-uri>
+    <fr:route>/def-000G/</fr:route>
+    <fr:title text="List">List</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    Let <fr:tex display="inline">n</fr:tex> be a natural number. A <html:strong>list</html:strong> of length <fr:tex display="inline">n</fr:tex> is an ordered collection of <fr:tex display="inline">n</fr:tex> elements.
+    <fr:tex display="block">
+        (x_1, x_2, \dots , x_n)
+    </fr:tex>
+    Two lists are equal if and only if they have the same length and the same elements in the same order.
+</html:p>
+    <html:strong>Addition in Lists</html:strong>
+    <html:p>
+    Let <fr:tex display="inline">n</fr:tex> be a natural number. Let <fr:tex display="inline">(x_1, x_2, \dots , x_n)</fr:tex> and <fr:tex display="inline">(y_1, y_2, \dots , y_n)</fr:tex> be lists of length <fr:tex display="inline">n</fr:tex>. The <html:strong>sum</html:strong> of these lists is the list <fr:tex display="inline">(x_1 + y_1, x_2 + y_2, \dots , x_n + y_n)</fr:tex>.
+</html:p>
+    <html:strong>Additive Inverse in Lists</html:strong>
+    <html:p>
+    Let <fr:tex display="inline">n</fr:tex> be a natural number. Let <fr:tex display="inline">x=(x_1, x_2, \dots , x_n)</fr:tex> be a list of length <fr:tex display="inline">n</fr:tex>. The <html:strong>additive inverse</html:strong> of this list is the list <fr:tex display="inline">-x=(-x_1, -x_2, \dots , -x_n)</fr:tex>.
+</html:p>
+    <html:strong>Scalar Multiplication in Lists</html:strong>
+    <html:p>
+    Let <fr:tex display="inline">n</fr:tex> be a natural number. Let <fr:tex display="inline">x=(x_1, x_2, \dots , x_n)</fr:tex> be a list of length <fr:tex display="inline">n</fr:tex>. Let <fr:tex display="inline">c</fr:tex> be a real number. The <html:strong>scalar multiplication</html:strong> of <fr:tex display="inline">c</fr:tex> and <fr:tex display="inline">x</fr:tex> is the list <fr:tex display="inline">cx=(cx_1, cx_2, \dots , cx_n)</fr:tex>.
+</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors></fr:authors>
+            <fr:uri>https://caimeo.space/def-000N/</fr:uri>
+            <fr:display-uri>def-000N</fr:display-uri>
+            <fr:route>/def-000N/</fr:route>
+            <fr:title text="Finite-Dimensional Vector Space">Finite-Dimensional Vector Space</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    A <fr:link href="/def-000H/" title="Vector Space" uri="https://caimeo.space/def-000H/" display-uri="def-000H" type="local">vector space</fr:link> <fr:tex display="inline">V</fr:tex> is called <html:strong>finite-dimensional</html:strong> if some <fr:link href="/def-000G/" title="List" uri="https://caimeo.space/def-000G/" display-uri="def-000G" type="local">list</fr:link> of vectors <fr:tex display="inline">v_1, \dots , v_n</fr:tex> <fr:link href="/def-000M/" title="Linear Span" uri="https://caimeo.space/def-000M/" display-uri="def-000M" type="local">spans</fr:link> <fr:tex display="inline">V</fr:tex>.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors></fr:authors>
+    <fr:uri>https://caimeo.space/def-0034/</fr:uri>
+    <fr:display-uri>def-0034</fr:display-uri>
+    <fr:route>/def-0034/</fr:route>
+    <fr:title text="Stationary State">Stationary State</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    A <html:strong>stationary state</html:strong> is a quantum state with all observables independent of time.
+</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors></fr:authors>
+            <fr:date>
+              <fr:year>2024</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>4</fr:day>
+            </fr:date>
+            <fr:uri>https://caimeo.space/phy-0003/</fr:uri>
+            <fr:display-uri>phy-0003</fr:display-uri>
+            <fr:route>/phy-0003/</fr:route>
+            <fr:title text="Time-independent Schrodinger Equation">Time-independent Schrodinger Equation</fr:title>
+            <fr:taxon>Quantum Mechanics</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter><html:p>
+    Refer to chapter 2 in <fr:link href="/quantum-2018/" title="Introduction to Quantum Mechanics" uri="https://caimeo.space/quantum-2018/" display-uri="quantum-2018" type="local">Introduction to Quantum Mechanics</fr:link></html:p><html:p>
+    In previous section we use the <fr:link href="/def-0030/" title="Schrodinger&apos;s equation" uri="https://caimeo.space/def-0030/" display-uri="def-0030" type="local">Schrodinger equation</fr:link> to compute things.
+    The variable <fr:tex display="inline">t</fr:tex> is annoying which makes things complicated, and we would like to get rid of it.
+    In this section we shall assume that the potential energy <fr:tex display="inline">V</fr:tex> is independent of time.
+    In that case the Schrodinger equation becomes:
+    <fr:tex display="block">
+        i\hbar \frac {\partial }{\partial  t}\psi (x,t) = -\frac {\hbar ^2}{2m}\frac {\partial ^2\psi (x,t)}{\partial  x^2} + V(x)\psi (x,t)
+    </fr:tex>
+    This equation can be solved by <html:strong>separation of variables</html:strong>.
+    We assume the spatial and time dependencies of the solution can be separated.
+    In other words we look for solutions of the <html:em>product form</html:em>:
+    <fr:tex display="block">
+        \Psi (x,t) = \psi (x)\phi (t)
+    </fr:tex>
+    This is an absurd restriction, but it works and we can get interesting results.
+</html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:title text="Solve the equation"><html:strong>Solve the equation</html:strong></fr:title></fr:frontmatter><fr:mainmatter>
+    <html:p>
+        Now substitute the product form into the Schrodinger equation:
+        <fr:tex display="block">
+            i\hbar  \psi (x) \frac {\partial }{\partial  t}(\phi (t)) = -\frac {\hbar ^2}{2m}\phi (t)\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)\psi (x)\phi (t)
+        </fr:tex>
+        Divide both sides by <fr:tex display="inline">\psi (x)\phi (t)</fr:tex>:
+        <fr:tex display="block">
+            i\hbar  \frac {1}{\phi (t)} \frac {\partial }{\partial  t}(\phi (t)) = -\frac {\hbar ^2}{2m\psi (x)}\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)
+        </fr:tex>
+        Notice that the left side depends only on <fr:tex display="inline">t</fr:tex> and the right side depends only on <fr:tex display="inline">x</fr:tex>.
+        They are equal if and only if they are both equal to a <html:em>constant</html:em>.
+        Otherwise if I change the left side and level the right side unchanged, I get a contradiction.
+        The constant is the energy of the system, and we denote it by <fr:tex display="inline">E</fr:tex>.
+        <fr:tex display="block">
+            E:\equiv  i\hbar  \frac {1}{\phi (t)} \frac {\partial }{\partial  t}(\phi (t)) 
+        </fr:tex>
+        and 
+        <fr:tex display="block">
+            E:\equiv  -\frac {\hbar ^2}{2m\psi (x)}\frac {\partial ^2(\psi (x))}{\partial  x^2} + V(x)
+        </fr:tex>
+        We have two equations:
+        <fr:tex display="block">
+            \begin {align*}
+                \frac {d\phi }{dt} &amp;= -\frac {iE}{\hbar }\phi \\
+                -\frac {\hbar ^2}{2m}\frac {d^2\psi }{dx^2} + V\psi  &amp;= E\psi 
+            \end {align*}
+        </fr:tex>
+        Now the partial differential equation has been reduced to two <html:strong>ordinary differential equations</html:strong>.
+        The first one is easy to solve:
+        <fr:tex display="block">
+            \phi (t) = \phi (0)e^{-iEt/\hbar }
+        </fr:tex>
+        Thus the complete solution is (note that the constant <fr:tex display="inline">\phi (0)</fr:tex> was absorbed into <fr:tex display="inline">\psi (x)</fr:tex>):
+        <fr:tex display="block">
+            \Psi (x,t) = \psi (x)e^{-iEt/\hbar }
+        </fr:tex>
+        The second one is the <html:strong>time-independent Schrodinger equation</html:strong>,
+        we can&apos;t go further unless we know the potential energy <fr:tex display="inline">V(x)</fr:tex>.
+    </html:p>
+</fr:mainmatter></fr:tree>
+<html:p>
+    Now we give a name to the time-independent Schrodinger equation.
+</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:uri>https://caimeo.space/def-0034/</fr:uri><fr:display-uri>def-0034</fr:display-uri><fr:route>/def-0034/</fr:route><fr:title text="Stationary State">Stationary State</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    A <html:strong>stationary state</html:strong> is a quantum state with all observables independent of time.
+</html:p></fr:mainmatter></fr:tree><html:p>
+    Thought the wave function is time-dependent,
+    <fr:tex display="block">
+        \Psi (x,t) = \psi (x)e^{-iEt/\hbar }
+    </fr:tex>
+    But if we compute the probability density, it is time-independent:
+    <fr:tex display="block">
+        |\Psi (x,t)|^2 = \psi ^*(x)e^{+iEt/\hbar }\psi (x)e^{-iEt/\hbar } = |\psi (x)|^2 
+    </fr:tex>
+    Hence the expectation value is constant in time. 
+    Then <fr:tex display="inline">\langle  p \rangle  = 0</fr:tex> all the time.
+    Nothing happens in the stationary state.
+</html:p>
+    <fr:tree show-metadata="false"><fr:frontmatter><fr:authors></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>2</fr:month><fr:day>4</fr:day></fr:date><fr:title text="
+    Conservation of energy
+">
+    <html:strong>Conservation of energy</html:strong>
+</fr:title></fr:frontmatter><fr:mainmatter>
+    This also means that the energy of the system is conserved.
+    In classical mechanics, the <html:strong>total energy</html:strong> (kinetic + potential) of a system is called the <html:strong>Hamiltonian</html:strong>.
+    <fr:tex display="block">
+        H(x,p) = \frac {p^2}{2m} + V(x)
+    </fr:tex>
+    In quantum mechanics, the Hamiltonian is an operator,
+    obtained by substituting <fr:tex display="inline">p\to  -i\hbar \frac {\partial }{\partial  x}</fr:tex>:
+    <fr:tex display="block">
+        \hat {H} = -\frac {\hbar ^2}{2m}\frac {\partial ^2}{\partial  x^2} + V(x)
+    </fr:tex>
+    Thus the time-independent Schrodinger equation can be written as:
+    <fr:tex display="block">
+        \hat {H}\psi (x) = E\psi (x)
+    </fr:tex>
+    The expectation value of the total energy gives the energy of the system:
+    <fr:tex display="block">
+        \begin {align*}
+            \langle  H \rangle  &amp;= \int  \psi ^*(x)\hat {H}\psi (x)dx 
+            \\
+            &amp;= \int  \psi ^*(x)E\psi (x)dx
+            \\
+            &amp;= E\int  |\psi (x)|^2dx
+            \\
+            &amp;= E\int  |\Psi (x)|^2dx
+            \\
+            &amp;= E           
+        \end {align*}
+    </fr:tex>
+    and
+    <fr:tex display="block">
+        \begin {align*}
+            \langle  H^2 \rangle  &amp;= 
+            \int  \psi ^*(x)\hat {H}^2\psi (x)dx
+            \\
+            &amp;= E^2\int  |\psi (x)|^2 dx      
+            \\
+            &amp;= E^2      
+        \end {align*}
+    </fr:tex>
+    where 
+    <fr:tex display="block">
+        \hat {H}^2\psi  = \hat {H}(\hat {H}\psi ) = \hat {H}(E\psi ) = E(\hat {H}\psi ) = E^2\psi 
+    </fr:tex>
+    Hence the variance of the energy is zero given by
+    <fr:tex display="block">
+        \Delta  H = \sqrt {\langle  H^2 \rangle  - \langle  H \rangle ^2} = 0
+    </fr:tex>
+    This implies that the energy of the system is conserved.
+</fr:mainmatter></fr:tree>
+</fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

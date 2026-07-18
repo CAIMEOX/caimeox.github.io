@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?><fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors></fr:authors>
+    <fr:uri>https://caimeo.space/def-002M/</fr:uri>
+    <fr:display-uri>def-002M</fr:display-uri>
+    <fr:route>/def-002M/</fr:route>
+    <fr:title text="Preimage">Preimage</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+    Let <fr:tex display="inline">f:X\to  Y</fr:tex> be a function and <fr:tex display="inline">y\in  Y</fr:tex>.
+    The <html:strong>preimage</html:strong> of <fr:tex display="inline">y</fr:tex> under <fr:tex display="inline">f</fr:tex>, denoted by <fr:tex display="inline">f^{-1}(y)</fr:tex>, is the subset
+    of <fr:tex display="inline">X</fr:tex> defined by
+    <fr:tex display="block">
+        f^{-1}(y) = \set {x \in  X \mid  f(x) = y}
+    </fr:tex>
+    For a subset <fr:tex display="inline">B \subseteq  Y</fr:tex>, the <html:strong>preimage</html:strong> of <fr:tex display="inline">B</fr:tex> under <fr:tex display="inline">f</fr:tex> is the subset
+    of <fr:tex display="inline">X</fr:tex> defined by
+    <fr:tex display="block">
+        f^{-1}(B) = \set {x \in  X \mid  f(x) \in  B}
+    </fr:tex></html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors></fr:authors>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter></fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
