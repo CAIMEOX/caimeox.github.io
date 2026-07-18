@@ -3,22 +3,22 @@
 \date{2024-06-14}
 \import{macros}
 \p{
-    This post discuss the universe in type theory,
+    This note discusses universes in type theory,
     based on Egbert Rijke's [Introduction to Homotopy Type Theory](hott-2022) and [NLab](ncatlab).
-    In this post, we regard universe as the representation of types in an internal model 
+    We regard a universe as a representation of types in an internal model
     of the type theory (\strong{Tarski universe} or \strong{universe à la Tarski}).
 }
 \p{
-    A universe consist of a type #{\mathcal{U}} with a type family #{\T} over #{\U}.
-    Forall #{X:\U} we think of #{X} as an \strong{encoding} (representation) of the actual type #{\T(X)}.
-    The type family #{\T} is therefore called a \strong{unversal type family}.
+    A universe consists of a type #{\mathcal{U}} with a type family #{\T} over #{\U}.
+    For every #{X:\U}, we think of #{X} as an \strong{encoding} of the actual type #{\T(X)}.
+    The type family #{\T} is therefore called a \strong{universal type family}.
 }
 \p{
-    There several reasons to equip type theory with universes.
-    It enables us to define new type families over inductive types, using induction principle.
+    There are several reasons to equip type theory with universes.
+    They enable us to define new type families over inductive types using their induction principles.
     For instance, we can define \strong{relations} over #{\N}, such as ordering relations #{\leq}.
     We will soon meet the idea of \strong{observational equality} for a particular type, different from identity types.
-    Another reason is that it allows us to define types equipped with structure such as group.
+    They also allow us to collect types equipped with structure, such as groups.
 }
 \subtree{
     \title{Specification}
@@ -37,9 +37,9 @@
     \title{Observational Equality}
     \p{
         Now we give the example of \strong{observational equality} of #{\N}.
-        The key idea is to define a recursive function that reduce the arguments.
-        Observational equality an inductively defined relation, which gives us an algorithm for checking
-        equality on  #{\N}. It can be used to show that equality of natural numbers is \strong{decidable}.
+        The key idea is to define a recursive family that reduces both arguments.
+        Observational equality is an inductively defined relation that gives an algorithm for checking
+        equality on #{\N}. It can be used to show that equality of natural numbers is \strong{decidable}.
     }
     \transclude{def-004H}
     \p{
