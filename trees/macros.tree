@@ -56,6 +56,10 @@
   \pre{\<html:code>[class]{\lang}{\body}}
 }
 
+\def\codeblock/raw[lang][body]{
+  \pre{\<html:code>[class]{\lang no-whitespace-normalization}{\body}}
+}
+
 % Math fundamentals
 \def\N{\mathbb{N}}
 \def\Z{\mathbb{Z}}

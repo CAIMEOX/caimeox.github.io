@@ -30,7 +30,7 @@
         Consider we want to recognize the word \code{new}.
         We can write down the following code.
     }
-    \pre{\startverb
+    \codeblock{language-clike}{\startverb
     c <- nextChar();
     if (c == 'n') {
         c <- nextChar();
@@ -88,7 +88,7 @@
     \p{
         And the code implementation can be:
     }
-    \pre{\startverb
+    \codeblock{language-clike}{\startverb
     state <- s0;
     char <-nextChar();
     while (state != se and char != eof) {

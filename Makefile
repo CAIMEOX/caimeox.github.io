@@ -1,4 +1,5 @@
 OPAM ?= $(if $(wildcard /usr/local/bin/opam),/usr/local/bin/opam,opam)
+NODE ?= node
 
 all: dev
 .PHONY: all
@@ -21,6 +22,10 @@ preview: dev
 test-search: dev
 	@python3 -m unittest tests/test_search.py
 .PHONY: test-search
+
+test-code-blocks:
+	@$(NODE) --test tests/code-blocks.test.cjs
+.PHONY: test-code-blocks
 
 typos:
 	@typos trees
