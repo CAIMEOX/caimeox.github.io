@@ -3,9 +3,9 @@
 \taxon{Type Theory}
 \import{macros}
 \p{
-    In previous post, we have seen the definition of natural numbers as an inductive type.
-    In this post, we will see more examples of inductive types, such as 
-    unit type, empty type, product type, sum type and etc.
+    In the previous note, we saw the definition of natural numbers as an inductive type.
+    Here we study more examples, including the unit type, empty type, coproducts,
+    integers, and dependent pairs.
     Refer to [Egbert Rijke's Book](hott-2022).
 }
 \p{
@@ -15,16 +15,16 @@
 }
 \block{\strong{General Inductive Type}}{
     \p{
-    Just like #{\N}, other inductive types can be defined by 
+    Just like #{\N}, other inductive types can be defined by
     their constructors and induction principles (and computation rules).
     }
     \ul{
         \li{
-            The constructors specify the structure of the type equipped.
+            The constructors specify how canonical terms of the type are formed.
         }
         \li{
             The induction principle specifies the data required to construct 
-            a section of an arbitrary type family over the inductive type.
+                a section of an arbitrary type family over the inductive type.
         }
         \li{
             The computation rules specify the behavior of the constructors.
@@ -35,12 +35,12 @@
 \p{
     A degenerate inductive type is the \strong{empty type}.
     It has no constructor, and its induction principle is trivial.
-    Empty type is connected to the \strong{exfalso quodlibet principle} in logic.
+    The empty type corresponds to the \strong{ex falso quodlibet} principle in logic.
 }
 \transclude{def-0021}
 \p{
     With the empty type we can define the \strong{negation} of a type
-    and the \strong{proof of negation}.
+    and the evidence for a negation.
 }
 \transclude{def-0022}
 \transclude{def-0023}
@@ -54,8 +54,33 @@
         (P\to Q) \to (R\to Q) \to (P\vee R\to Q)
     }
 }
+\subtree{
+    \title{The integers}
+    \p{
+        Before quotient types are available, the integers can be built directly from coproducts:
+        ##{
+            \mathbb{Z} \defeq \mathbb{N} + (\mathbf{1}+\mathbb{N}).
+        }
+        The left summand represents the negative integers, while the two pieces of the right
+        summand represent zero and the positive integers. In particular,
+        ##{
+            -1 \defeq \mathsf{inl}(0),\qquad
+            0 \defeq \mathsf{inr}(\mathsf{inl}(\star)),\qquad
+            1 \defeq \mathsf{inr}(\mathsf{inr}(0)).
+        }
+        Thus every integer has a unique canonical form: #{-(n+1)}, #{0}, or #{n+1}.
+    }
+    \p{
+        Coproduct and natural-number induction give an induction principle for #{\mathbb{Z}}.
+        It is enough to provide a value at #{0}, a value at #{1}, a value at #{-1}, and compatible
+        successor steps in the positive and negative directions. This principle defines the
+        successor and predecessor maps without first constructing a quotient of
+        #{\mathbb{N}\times\mathbb{N}}.
+    }
+}
 \p{
-    The dependent version of sum type is called the \strong{dependent sum type (dependent coproduct)} traditionally.
+    The dependent version of a product is traditionally called the
+    \strong{dependent sum type} or \strong{dependent pair type}.
     Its terms are ordered pairs.
 }
 \transclude{def-0024}
