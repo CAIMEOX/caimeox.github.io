@@ -1,0 +1,32 @@
+\title{Singleton Induction}
+\taxon{Definition}
+\import{macros}
+\p{
+    Let #{A} be a type equipped with a point #{a:A}. We say that #{A}
+    satisfies \strong{singleton induction at #{a}} if, for every type family
+    #{B:A\to\mathcal{U}}, the evaluation map
+    ##{
+        \mathsf{ev}_a:
+        \left(\Pi_{x:A}B(x)\right)\to B(a),
+        \qquad
+        \mathsf{ev}_a(s)\defeq s(a),
+    }
+    has a [section](def-005G). In symbols,
+    ##{
+        \mathsf{isSingletonInd}(A,a)
+        \defeq
+        \Pi_{B:A\to\mathcal{U}}\mathsf{sec}(\mathsf{ev}_a^B).
+    }
+    Equivalently, for every #{B} there are
+    ##{
+        \mathsf{indSing}_a:B(a)\to\Pi_{x:A}B(x)
+    }
+    and a homotopy
+    ##{
+        \mathsf{compSing}_a:
+        \mathsf{ev}_a\circ\mathsf{indSing}_a\sim\mathsf{id}_{B(a)}.
+    }
+    The computation rule is propositional: it identifies
+    #{\mathsf{indSing}_a(b,a)} with #{b}, rather than requiring judgmental
+    equality.
+}

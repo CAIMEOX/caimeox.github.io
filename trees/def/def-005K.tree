@@ -1,0 +1,28 @@
+\title{Coherently Invertible Map}
+\taxon{Definition}
+\import{macros}
+\p{
+    A map #{f:A\to B} is \strong{coherently invertible} if it comes equipped
+    with a map #{g:B\to A}, homotopies
+    ##{
+        G:f\circ g\sim\mathsf{id}_B,
+        \qquad
+        H:g\circ f\sim\mathsf{id}_A,
+    }
+    and a coherence homotopy
+    ##{
+        K:\Pi_{x:A}\bigl(G(f(x))=\mathsf{ap}_f(H(x))\bigr).
+    }
+    The type of such data is
+    ##{
+        \mathsf{isCohInv}(f)
+        \defeq
+        \Sigma_{g:B\to A}
+        \Sigma_{G:f\circ g\sim\mathsf{id}_B}
+        \Sigma_{H:g\circ f\sim\mathsf{id}_A}
+        \Pi_{x:A}\bigl(G(f(x))=\mathsf{ap}_f(H(x))\bigr).
+    }
+    Thus the right inverse law at #{f(x)} agrees with the image under #{f} of
+    the left inverse law at #{x}. This is the pointwise, unit-normalized form of
+    the usual coherence #{G\mathbin{\cdot}f\sim f\mathbin{\cdot}H}.
+}

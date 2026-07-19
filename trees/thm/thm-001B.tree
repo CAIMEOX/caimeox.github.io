@@ -1,0 +1,51 @@
+\title{Any Contractible Map Is an Equivalence}
+\taxon{Theorem}
+\import{macros}
+\p{
+    For every map #{f:A\to B}, there is a function
+    ##{
+        \mathsf{isContrMap}(f)\to\mathsf{isEquiv}(f).
+    }
+}
+\proof{
+    Suppose every fiber of #{f} is contractible. For each #{y:B}, write the
+    center and contraction as
+    ##{
+        (g(y),G(y)): \mathsf{fib}_f(y),
+        \qquad
+        C_y:\Pi_{z:\mathsf{fib}_f(y)}\bigl((g(y),G(y))=z\bigr).
+    }
+    The first components define #{g:B\to A}; the second components have type
+    ##{
+        G(y):f(g(y))=y.
+    }
+    Hence #{G:f\circ g\sim\mathsf{id}_B}, so #{(g,G)} is a section of #{f}.
+
+    It remains to construct a retraction. Fix #{x:A}. The fiber over #{f(x)}
+    contains both its chosen center and the canonical point
+    ##{
+        (g(f(x)),G(f(x))),
+        \qquad
+        (x,\refl_{f(x)}):\mathsf{fib}_f(f(x)).
+    }
+    Applying the contraction to the canonical point gives
+    ##{
+        q_x
+        \defeq
+        C_{f(x)}(x,\refl_{f(x)}):
+        (g(f(x)),G(f(x)))=(x,\refl_{f(x)}).
+    }
+    Apply the first projection to this identity:
+    ##{
+        H(x)
+        \defeq
+        \mathsf{ap}_{\mathsf{pr}_1}(q_x):g(f(x))=x.
+    }
+    Therefore #{H:g\circ f\sim\mathsf{id}_A}, so #{(g,H)} is a retraction of
+    #{f}. Pairing the section and retraction yields
+    ##{
+        \bigl((g,G),(g,H)\bigr):
+        \mathsf{sec}(f)\times\mathsf{retr}(f)
+        \defeq\mathsf{isEquiv}(f).
+    }
+}

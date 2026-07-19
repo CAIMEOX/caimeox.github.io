@@ -1,0 +1,69 @@
+\title{A Coherently Invertible Map Is Contractible}
+\taxon{Proposition}
+\import{macros}
+\p{
+    Every [coherently invertible map](def-005K) is a
+    [contractible map](def-005F). Explicitly, there is a function
+    ##{
+        \mathsf{isCohInv}(f)\to\mathsf{isContrMap}(f).
+    }
+}
+\proof{
+    Let #{f:A\to B} have coherent inverse data #{(g,G,H,K)}, and fix
+    #{y:B}. We contract the fiber #{\mathsf{fib}_f(y)} around
+    ##{
+        c_y\defeq(g(y),G(y)).
+    }
+    Consider an arbitrary #{(x,p):\mathsf{fib}_f(y)}. An identity in the fiber
+    from #{(g(y),G(y))} to #{(x,p)} is equivalently a pair consisting of
+    ##{
+        \alpha:g(y)=x
+    }
+    and a path asserting that the following triangle commutes:
+    \graph{
+        \begin{tikzcd}[column sep=large, row sep=large]
+            {f(g(y))}
+                \arrow[rr, "{\mathsf{ap}_f(\alpha)}"]
+                \arrow[dr, "{G(y)}"']
+            && {f(x)}
+                \arrow[dl, "p"] \\
+            & y
+        \end{tikzcd}
+    }
+    In formulas, the compatibility type is
+    ##{
+        G(y)=\mathsf{ap}_f(\alpha)\cdot p.
+    }
+
+    By path induction on #{p:f(x)=y}, it suffices to treat
+    #{y\equiv f(x)} and #{p\equiv\refl_{f(x)}}. The triangle becomes
+    \graph{
+        \begin{tikzcd}[column sep=large, row sep=large]
+            {f(g(f(x)))}
+                \arrow[rr, "{\mathsf{ap}_f(H(x))}"]
+                \arrow[dr, "{G(f(x))}"']
+            && {f(x)}
+                \arrow[dl, "{\refl_{f(x)}}"] \\
+            & {f(x)}
+        \end{tikzcd}
+    }
+    We choose #{\alpha\defeq H(x):g(f(x))=x}. Its compatibility follows from
+    the path calculation
+    ##{
+        \begin{aligned}
+        G(f(x))
+        &=\mathsf{ap}_f(H(x))
+          &&\text{by the coherence }K(x) \\
+        &=\mathsf{ap}_f(H(x))\cdot\refl_{f(x)}
+          &&\text{by the right unit law.}
+        \end{aligned}
+    }
+    Thus #{(H(x),K'(x))} gives an identity
+    ##{
+        (g(f(x)),G(f(x)))=(x,\refl_{f(x)})
+    }
+    in the fiber over #{f(x)}. Path induction transports this identity back to
+    the original #{p:f(x)=y}, producing #{c_y=(x,p)}. Since #{(x,p)} was
+    arbitrary, #{c_y} is a center of contraction. Since #{y} was arbitrary,
+    every fiber of #{f} is contractible.
+}

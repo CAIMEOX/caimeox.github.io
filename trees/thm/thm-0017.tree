@@ -1,0 +1,37 @@
+\title{Contractibility Is Equivalent to Singleton Induction}
+\taxon{Theorem}
+\import{macros}
+\p{
+    A type #{A} is contractible if and only if it has a point #{a:A} at which
+    it satisfies [singleton induction](def-005J).
+}
+\proof{
+    Suppose first that #{A} has center #{a:A} and contraction
+    #{C:\Pi_{x:A}(a=x)}. Normalize the contraction by defining
+    ##{
+        C'(x)\defeq C(a)^{-1}\cdot C(x).
+    }
+    The left inverse law gives #{q:C'(a)=\refl_a}. For a family
+    #{B:A\to\mathcal{U}} and #{b:B(a)}, define
+    ##{
+        \mathsf{indSing}_a(b,x)
+        \defeq
+        \mathsf{transport}_B(C'(x),b):B(x).
+    }
+    At #{x=a}, applying transport to #{q:C'(a)=\refl_a}, followed by the
+    computation rule for transport along reflexivity, gives
+    ##{
+        \mathsf{indSing}_a(b,a)
+        =\mathsf{transport}_B(\refl_a,b)
+        =b.
+    }
+    This supplies the required section of evaluation.
+
+    Conversely, suppose #{A} has a point #{a} and satisfies singleton
+    induction. Apply it to the family #{B(x)\defeq(a=x)} and the element
+    #{\refl_a:B(a)}. The resulting section is
+    ##{
+        \mathsf{indSing}_a(\refl_a):\Pi_{x:A}(a=x),
+    }
+    which is a contraction of #{A} with center #{a}.
+}

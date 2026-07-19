@@ -1,0 +1,16 @@
+\title{Any Equivalence Is a Contractible Map}
+\taxon{Theorem}
+\import{macros}
+\p{
+    For every map #{f:A\to B}, there is a function
+    ##{
+        \mathsf{isEquiv}(f)\to\mathsf{isContrMap}(f).
+    }
+}
+\proof{
+    An equivalence has an inverse by [An Equivalence Has an
+    Inverse](thm-0016). That inverse can be made coherent by [An Inverse Can Be
+    Made Coherent](thm-0018), and a coherently invertible map is contractible by
+    [A Coherently Invertible Map Is Contractible](thm-0019). Composing these
+    three constructions gives the asserted function.
+}

@@ -1,0 +1,78 @@
+\title{Contractible Types and Contractible Maps}
+\taxon{Type Theory}
+\date{2026-07-18}
+\import{macros}
+\p{
+    This note follows Chapter 10 of [Introduction to Homotopy Type Theory](hott-2022).
+    Contractibility packages existence and coherent uniqueness in a form stable under equivalence.
+}
+\p{
+    Saying that a type has an element only expresses existence. Saying that it has exactly one
+    element in a set-theoretic sense is also too rigid for homotopy type theory, because equality
+    itself may contain structure. A contractible type instead chooses a center and continuously
+    identifies every point with that center. It is therefore a singleton \em{up to homotopy}.
+}
+\p{
+    The same idea applies fiberwise. A fiber records an input together with a path showing that it
+    maps to the chosen output. Contractibility of that fiber says not only that a preimage exists,
+    but that the complete preimage data are coherently unique. This is the homotopical replacement
+    for the conjunction of surjectivity and injectivity.
+}
+\subtree{
+    \title{Contractible types}
+    \transclude{def-005D}
+    \p{
+        The unit type is contractible, and every contractible type is equivalent to the unit type.
+        Contractibility is stronger than mere inhabitation because it also controls all identity
+        information.
+    }
+    \p{
+        For any #{a:A}, the singleton type #{\Sigma_{x:A}(a=x)} is contractible with center
+        #{(a,\refl_a)}. Its contraction is exactly path induction: every pair #{(x,p:a=x)} is
+        identified with #{(a,\refl_a)}. This observation is the prototype for the fundamental
+        theorem of identity types.
+    }
+}
+\subtree{
+    \title{Singleton induction}
+    \transclude{def-005J}
+    \p{
+        The principle resembles induction for the unit type, but its computation rule is a path
+        rather than a judgmental equality. Contractibility supplies enough paths to transport a
+        value at the center to every other point; conversely, singleton induction applied to the
+        family #{x\mapsto(a=x)} constructs a contraction.
+    }
+    \transclude{thm-0017}
+}
+\subtree{
+    \title{Fibers and contractible maps}
+    \transclude{def-005E}
+    \transclude{def-005F}
+    \p{
+        The forward implication needs no coherence improvement: the contraction already compares
+        the chosen center of each fiber with every other point of that fiber. The following proof
+        extracts the section and retraction explicitly.
+    }
+    \transclude{thm-001B}
+}
+\subtree{
+    \title{Equivalences are contractible maps}
+    \p{
+        The converse requires more care. An inverse chooses a plausible center
+        #{(g(y),G(y))} for each fiber, but the two inverse homotopies need not initially satisfy the
+        compatibility required for equality of dependent pairs. Coherent invertibility records
+        precisely this missing triangle identity.
+    }
+    \transclude{def-005K}
+    \transclude{thm-0018}
+    \transclude{thm-0019}
+    \transclude{thm-001A}
+}
+\subtree{
+    \title{Why this formulation matters}
+    \p{
+        Fiberwise contractibility makes uniqueness explicit and behaves well under pullback and
+        composition. It also prepares the later proof that #{\mathsf{isEquiv}(f)} is a proposition:
+        once a fiber is contractible, there is no meaningful choice left in its center or contraction.
+    }
+}

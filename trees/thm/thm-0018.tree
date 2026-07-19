@@ -1,0 +1,98 @@
+\title{An Inverse Can Be Made Coherent}
+\taxon{Lemma}
+\import{macros}
+\p{
+    Every [map with an inverse](def-005I) can be equipped with the structure of
+    a [coherently invertible map](def-005K). That is, there is a function
+    ##{
+        \mathsf{hasInverse}(f)\to\mathsf{isCohInv}(f).
+    }
+}
+\proof{
+    Let #{g:B\to A}, #{G:f\circ g\sim\mathsf{id}_B}, and
+    #{H:g\circ f\sim\mathsf{id}_A}. Keep #{g} and #{H}, but replace #{G} by
+    ##{
+        G'(y)
+        \defeq
+        G(f(g(y)))^{-1}
+        \cdot\mathsf{ap}_f(H(g(y)))
+        \cdot G(y).
+    }
+    This is a path from #{f(g(y))} to #{y}, so
+    #{G':f\circ g\sim\mathsf{id}_B}.
+
+    It remains to construct
+    ##{
+        K(x):G'(f(x))=\mathsf{ap}_f(H(x)).
+    }
+    We use two naturality squares. First apply naturality of
+    #{H:g\circ f\sim\mathsf{id}_A} to its own component
+    #{H(x):g(f(x))=x}:
+    \graph{
+        \begin{tikzcd}[column sep=large, row sep=large]
+            {g(f(g(f(x))))}
+                \arrow[r, "{H(g(f(x)))}"]
+                \arrow[d, "{\mathsf{ap}_{g\circ f}(H(x))}"']
+            & {g(f(x))}
+                \arrow[d, "{H(x)}"] \\
+            {g(f(x))}
+                \arrow[r, "{H(x)}"']
+            & x
+        \end{tikzcd}
+    }
+    Commutativity says
+    ##{
+        H(g(f(x)))\cdot H(x)
+        =\mathsf{ap}_{g\circ f}(H(x))\cdot H(x).
+    }
+    Cancelling the common terminal path #{H(x)} gives
+    ##{
+        H(g(f(x)))=\mathsf{ap}_{g\circ f}(H(x)).
+    }
+
+    Next apply naturality of the whiskered homotopy
+    #{G\mathbin{\cdot}f:f\circ g\circ f\sim f} to #{H(x)}:
+    \graph{
+        \begin{tikzcd}[column sep=huge, row sep=large]
+            {f(g(f(g(f(x)))))}
+                \arrow[r, "{G(f(g(f(x))))}"]
+                \arrow[d, "{\mathsf{ap}_{f\circ g\circ f}(H(x))}"']
+            & {f(g(f(x)))}
+                \arrow[d, "{\mathsf{ap}_f(H(x))}"] \\
+            {f(g(f(x)))}
+                \arrow[r, "{G(f(x))}"']
+            & {f(x)}
+        \end{tikzcd}
+    }
+    Hence
+    ##{
+        G(f(g(f(x))))\cdot\mathsf{ap}_f(H(x))
+        =\mathsf{ap}_{f\circ g\circ f}(H(x))\cdot G(f(x)).
+    }
+
+    Now calculate the required component by a single chain of paths:
+    ##{
+        \begin{aligned}
+        G'(f(x))
+        &\defeq
+          G(f(g(f(x))))^{-1}
+          \cdot\mathsf{ap}_f(H(g(f(x))))
+          \cdot G(f(x)) \\
+        &=G(f(g(f(x))))^{-1}
+          \cdot\mathsf{ap}_f\left(\mathsf{ap}_{g\circ f}(H(x))\right)
+          \cdot G(f(x))
+          &&\text{naturality of }H \\
+        &=G(f(g(f(x))))^{-1}
+          \cdot\mathsf{ap}_{f\circ g\circ f}(H(x))
+          \cdot G(f(x))
+          &&\text{functoriality of }\mathsf{ap} \\
+        &=G(f(g(f(x))))^{-1}
+          \cdot G(f(g(f(x))))
+          \cdot\mathsf{ap}_f(H(x))
+          &&\text{naturality of }G\mathbin{\cdot}f \\
+        &=\mathsf{ap}_f(H(x))
+          &&\text{inverse and unit laws.}
+        \end{aligned}
+    }
+    This chain is #{K(x)}. Therefore #{(g,G',H,K)} is coherently invertible.
+}

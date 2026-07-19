@@ -1,0 +1,56 @@
+\title{Decidability in Elementary Number Theory}
+\taxon{Type Theory}
+\date{2026-07-18}
+\import{macros}
+\p{
+    This note follows Chapter 8 of [Introduction to Homotopy Type Theory](hott-2022).
+    It separates constructive truth from algorithmic decidability and records the information
+    carried by each decision.
+}
+\subtree{
+    \title{Decidable propositions and equality}
+    \transclude{def-0058}
+    \p{
+        A type #{A} has decidable equality when
+        #{\Pi_{x,y:A}\mathsf{isDecidable}(x=y)} is inhabited. This is data: applying the
+        decision procedure to two values performs a finite computation and returns evidence.
+    }
+    \p{
+        Decidability is closed under negation, products, coproducts, and implication when the
+        inputs are decidable. Finite dependent products and sums preserve it as well. These closure
+        rules turn small decision procedures into larger ones without invoking excluded middle.
+    }
+}
+\subtree{
+    \title{Natural numbers}
+    \p{
+        Observational equality from the universe chapter yields decidable equality on
+        #{\mathbb{N}}. Recursive comparison similarly decides #{m<n} and #{m\leq n}.
+        Case analysis on a decision allows a construction to branch while retaining a proof of the
+        chosen branch.
+    }
+    \p{
+        The well-ordering principle says that an inhabited decidable subtype of #{\mathbb{N}}
+        has a least element. One searches upward from zero; the existence witness guarantees that
+        the search cannot continue forever. This is the constructive engine behind least divisors
+        and greatest common divisors.
+    }
+}
+\subtree{
+    \title{GCD, primes, and Boolean reflection}
+    \p{
+        Since divisibility of natural numbers is decidable, bounded search constructs
+        #{\gcd(m,n)} together with proofs that it divides both inputs and that every common divisor
+        divides it. Searching for the least divisor greater than one supplies prime factors.
+    }
+    \p{
+        Euclid's argument can then be read computationally: from any finite list of primes, form
+        one plus their product and extract a prime divisor; it cannot occur in the original list.
+        Thus the type expressing that there are arbitrarily large primes is inhabited.
+    }
+    \p{
+        A decidable proposition can be reflected into a Boolean #{b} with
+        #{P\leftrightarrow(b=\mathsf{true})}. Booleans are convenient for computation, while the
+        reflected equivalence reconnects the result to proof-relevant reasoning.
+    }
+}
