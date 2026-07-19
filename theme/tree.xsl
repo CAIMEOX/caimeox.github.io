@@ -7,9 +7,12 @@
   <xsl:key name="tree-with-uri" match="/f:tree/f:mainmatter//f:tree" use="f:frontmatter/f:uri/text()" />
 
   <xsl:template match="/">
+    <xsl:variable name="has-toc" select="f:tree/f:mainmatter/f:tree[not(@toc='false')] and not(/f:tree/f:frontmatter/f:meta[@name = 'toc']/.='false')" />
     <html xmlns="http://www.w3.org/1999/xhtml" data-base-url="{/f:tree/@base-url}">
       <head>
         <meta name="viewport" content="width=device-width" />
+        <meta name="color-scheme" content="light dark" />
+        <script type="text/javascript" src="{/f:tree/@base-url}theme.js"></script>
         <link rel="stylesheet" href="{/f:tree/@base-url}style.css" />
         <link rel="stylesheet" href="{/f:tree/@base-url}katex.min.css" />
         <link rel="stylesheet" href="{/f:tree/@base-url}prism.css" />
@@ -28,31 +31,69 @@
         </title>
       </head>
       <body>
+        <xsl:if test="$has-toc">
+          <xsl:attribute name="class">has-toc-page</xsl:attribute>
+        </xsl:if>
         <ninja-keys placeholder="Start typing a note title or ID"></ninja-keys>
-        <xsl:if test="not(/f:tree[@root = 'true'])">
-          <header class="header">
-            <nav class="nav">
+        <header class="header">
+          <nav class="nav" aria-label="Page controls">
+            <xsl:if test="not(/f:tree[@root = 'true'])">
               <div class="logo">
                 <a href="{/f:tree/@base-url}index.html" title="Home">
                   <xsl:text>« Home</xsl:text>
                 </a>
               </div>
-            </nav>
-          </header>
-        </xsl:if>
+            </xsl:if>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: Auto">
+              <span class="theme-toggle__icon" aria-hidden="true"></span>
+              <span>Theme · <span class="theme-toggle__mode">Auto</span></span>
+            </button>
+          </nav>
+        </header>
         <div id="grid-wrapper">
+          <xsl:if test="$has-toc">
+            <xsl:attribute name="class">has-toc</xsl:attribute>
+          </xsl:if>
           <article>
             <xsl:apply-templates select="f:tree" />
           </article>
-          <xsl:if test="f:tree/f:mainmatter/f:tree[not(@toc='false')] and not(/f:tree/f:frontmatter/f:meta[@name = 'toc']/.='false')">
-            <nav id="toc">
-              <div class="block">
-                <h1>Table of Contents</h1>
-                <xsl:apply-templates select="f:tree/f:mainmatter" mode="toc" />
-              </div>
+          <xsl:if test="$has-toc">
+            <nav id="toc" aria-label="Table of Contents">
+              <details class="toc-disclosure" open="open">
+                <summary>On this page</summary>
+                <div class="toc-content">
+                  <xsl:apply-templates select="f:tree/f:mainmatter" mode="toc" />
+                </div>
+              </details>
             </nav>
           </xsl:if>
         </div>
+        <xsl:if test="$has-toc">
+          <script type="text/javascript">
+            (function () {
+              var disclosure = document.querySelector("#toc .toc-disclosure");
+              var toc = document.querySelector("#toc");
+              var desktop = window.matchMedia("(min-width: 1100px)");
+              var sync = function (query) {
+                disclosure.open = query.matches;
+              };
+
+              sync(desktop);
+              if (desktop.addEventListener) {
+                desktop.addEventListener("change", sync);
+              } else {
+                desktop.addListener(sync);
+              }
+
+              toc.addEventListener("click", function (event) {
+                var target = event.target.closest("a, [data-target]");
+                if (target &amp;&amp; !desktop.matches) {
+                  disclosure.open = false;
+                }
+              });
+            })();
+          </script>
+        </xsl:if>
       </body>
     </html>
   </xsl:template>
@@ -202,6 +243,12 @@
 
   <xsl:template match="f:resource">
     <xsl:apply-templates select="f:resource-content" />
+  </xsl:template>
+
+  <xsl:template match="f:resource[f:resource-source[@type='latex']]">
+    <span class="latex-resource">
+      <xsl:apply-templates select="f:resource-content" />
+    </span>
   </xsl:template>
 
   <xsl:template match="f:resource-content">
