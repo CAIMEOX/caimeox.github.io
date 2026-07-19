@@ -33,7 +33,127 @@
         <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter />
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:uri>https://caimeo.space/tt-0009/</fr:uri>
+            <fr:display-uri>tt-0009</fr:display-uri>
+            <fr:route>/tt-0009/</fr:route>
+            <fr:title text="Decidability in Elementary Number Theory">Decidability in Elementary Number Theory</fr:title>
+            <fr:taxon>Type Theory</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    This note follows Chapter 8 of <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link>.
+    It separates constructive truth from algorithmic decidability and records the information
+    carried by each decision.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>18</fr:day>
+                </fr:date>
+                <fr:title text="Decidable propositions and equality">Decidable propositions and equality</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-0058/</fr:uri>
+                    <fr:display-uri>def-0058</fr:display-uri>
+                    <fr:route>/def-0058/</fr:route>
+                    <fr:title text="Decidable Proposition">Decidable Proposition</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    A type <fr:tex display="inline"><![CDATA[P]]></fr:tex> is <html:strong>decidable</html:strong> if there is either a term of <fr:tex display="inline"><![CDATA[P]]></fr:tex> or a
+    function refuting <fr:tex display="inline"><![CDATA[P]]></fr:tex>. The type of decisions for <fr:tex display="inline"><![CDATA[P]]></fr:tex> is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isDecidable}(P):\equiv  P+(P\to \mathbf {0}).
+    ]]></fr:tex>
+    A term in the left summand supplies evidence for <fr:tex display="inline"><![CDATA[P]]></fr:tex>; a term in the right
+    summand supplies evidence for its negation.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        A type <fr:tex display="inline"><![CDATA[A]]></fr:tex> has decidable equality when
+        <fr:tex display="inline"><![CDATA[\Pi _{x,y:A}\mathsf {isDecidable}(x=y)]]></fr:tex> is inhabited. This is data: applying the
+        decision procedure to two values performs a finite computation and returns evidence.
+    </html:p>
+                <html:p>
+        Decidability is closed under negation, products, coproducts, and implication when the
+        inputs are decidable. Finite dependent products and sums preserve it as well. These closure
+        rules turn small decision procedures into larger ones without invoking excluded middle.
+    </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>18</fr:day>
+                </fr:date>
+                <fr:title text="Natural numbers">Natural numbers</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        Observational equality from the universe chapter yields decidable equality on
+        <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. Recursive comparison similarly decides <fr:tex display="inline"><![CDATA[m<n]]></fr:tex> and <fr:tex display="inline"><![CDATA[m\leq  n]]></fr:tex>.
+        Case analysis on a decision allows a construction to branch while retaining a proof of the
+        chosen branch.
+    </html:p>
+                <html:p>
+        The well-ordering principle says that an inhabited decidable subtype of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>
+        has a least element. One searches upward from zero; the existence witness guarantees that
+        the search cannot continue forever. This is the constructive engine behind least divisors
+        and greatest common divisors.
+    </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>18</fr:day>
+                </fr:date>
+                <fr:title text="GCD, primes, and Boolean reflection">GCD, primes, and Boolean reflection</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        Since divisibility of natural numbers is decidable, bounded search constructs
+        <fr:tex display="inline"><![CDATA[\gcd (m,n)]]></fr:tex> together with proofs that it divides both inputs and that every common divisor
+        divides it. Searching for the least divisor greater than one supplies prime factors.
+    </html:p>
+                <html:p>
+        Euclid's argument can then be read computationally: from any finite list of primes, form
+        one plus their product and extract a prime divisor; it cannot occur in the original list.
+        Thus the type expressing that there are arbitrarily large primes is inhabited.
+    </html:p>
+                <html:p>
+        A decidable proposition can be reflected into a Boolean <fr:tex display="inline"><![CDATA[b]]></fr:tex> with
+        <fr:tex display="inline"><![CDATA[P\leftrightarrow (b=\mathsf {true})]]></fr:tex>. Booleans are convenient for computation, while the
+        reflected equivalence reconnects the result to proof-relevant reasoning.
+    </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>

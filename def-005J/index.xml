@@ -3,23 +3,41 @@
 <fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors />
-    <fr:uri>https://caimeo.space/def-005D/</fr:uri>
-    <fr:display-uri>def-005D</fr:display-uri>
-    <fr:route>/def-005D/</fr:route>
-    <fr:title text="Contractible Type">Contractible Type</fr:title>
+    <fr:uri>https://caimeo.space/def-005J/</fr:uri>
+    <fr:display-uri>def-005J</fr:display-uri>
+    <fr:route>/def-005J/</fr:route>
+    <fr:title text="Singleton Induction">Singleton Induction</fr:title>
     <fr:taxon>Definition</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
-    A type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is <html:strong>contractible</html:strong> if it has a center that is identified
-    with every element of <fr:tex display="inline"><![CDATA[A]]></fr:tex>. Define
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be a type equipped with a point <fr:tex display="inline"><![CDATA[a:A]]></fr:tex>. We say that <fr:tex display="inline"><![CDATA[A]]></fr:tex>
+    satisfies <html:strong>singleton induction at <fr:tex display="inline"><![CDATA[a]]></fr:tex></html:strong> if, for every type family
+    <fr:tex display="inline"><![CDATA[B:A\to \mathcal {U}]]></fr:tex>, the evaluation map
     <fr:tex display="block"><![CDATA[
-        \mathsf {isContr}(A)
-        :\equiv 
-        \Sigma _{c:A}\Pi _{x:A}(c=x).
+        \mathsf {ev}_a:
+        \left (\Pi _{x:A}B(x)\right )\to  B(a),
+        \qquad 
+        \mathsf {ev}_a(s):\equiv  s(a),
     ]]></fr:tex>
-    A term of <fr:tex display="inline"><![CDATA[\mathsf {isContr}(A)]]></fr:tex> consists of a center <fr:tex display="inline"><![CDATA[c:A]]></fr:tex> and a
-    contraction from <fr:tex display="inline"><![CDATA[c]]></fr:tex> to every <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>.
+    has a <fr:link href="/def-005G/" title="Section of a Map" uri="https://caimeo.space/def-005G/" display-uri="def-005G" type="local">section</fr:link>. In symbols,
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isSingletonInd}(A,a)
+        :\equiv 
+        \Pi _{B:A\to \mathcal {U}}\mathsf {sec}(\mathsf {ev}_a^B).
+    ]]></fr:tex>
+    Equivalently, for every <fr:tex display="inline"><![CDATA[B]]></fr:tex> there are
+    <fr:tex display="block"><![CDATA[
+        \mathsf {indSing}_a:B(a)\to \Pi _{x:A}B(x)
+    ]]></fr:tex>
+    and a homotopy
+    <fr:tex display="block"><![CDATA[
+        \mathsf {compSing}_a:
+        \mathsf {ev}_a\circ \mathsf {indSing}_a\sim \mathsf {id}_{B(a)}.
+    ]]></fr:tex>
+    The computation rule is propositional: it identifies
+    <fr:tex display="inline"><![CDATA[\mathsf {indSing}_a(b,a)]]></fr:tex> with <fr:tex display="inline"><![CDATA[b]]></fr:tex>, rather than requiring judgmental
+    equality.
 </html:p>
   </fr:mainmatter>
   <fr:backmatter>
@@ -1769,22 +1787,50 @@
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors />
-            <fr:uri>https://caimeo.space/def-005F/</fr:uri>
-            <fr:display-uri>def-005F</fr:display-uri>
-            <fr:route>/def-005F/</fr:route>
-            <fr:title text="Contractible Map">Contractible Map</fr:title>
-            <fr:taxon>Definition</fr:taxon>
+            <fr:uri>https://caimeo.space/thm-0017/</fr:uri>
+            <fr:display-uri>thm-0017</fr:display-uri>
+            <fr:route>/thm-0017/</fr:route>
+            <fr:title text="Contractibility Is Equivalent to Singleton Induction">Contractibility Is Equivalent to Singleton Induction</fr:title>
+            <fr:taxon>Theorem</fr:taxon>
           </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p>
-    A map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> is a <html:strong>contractible map</html:strong> if each of its
-    <fr:link href="/def-005E/" title="Fiber of a Map" uri="https://caimeo.space/def-005E/" display-uri="def-005E" type="local">fibers</fr:link> is a <fr:link href="/def-005D/" title="Contractible Type" uri="https://caimeo.space/def-005D/" display-uri="def-005D" type="local">contractible type</fr:link>. Define
+          <fr:mainmatter><html:p>
+    A type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is contractible if and only if it has a point <fr:tex display="inline"><![CDATA[a:A]]></fr:tex> at which
+    it satisfies <fr:link href="/def-005J/" title="Singleton Induction" uri="https://caimeo.space/def-005J/" display-uri="def-005J" type="local">singleton induction</fr:link>.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Suppose first that <fr:tex display="inline"><![CDATA[A]]></fr:tex> has center <fr:tex display="inline"><![CDATA[a:A]]></fr:tex> and contraction
+    <fr:tex display="inline"><![CDATA[C:\Pi _{x:A}(a=x)]]></fr:tex>. Normalize the contraction by defining
     <fr:tex display="block"><![CDATA[
-        \mathsf {isContrMap}(f)
+        C'(x):\equiv  C(a)^{-1}\cdot  C(x).
+    ]]></fr:tex>
+    The left inverse law gives <fr:tex display="inline"><![CDATA[q:C'(a)=\text {refl}_a]]></fr:tex>. For a family
+    <fr:tex display="inline"><![CDATA[B:A\to \mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[b:B(a)]]></fr:tex>, define
+    <fr:tex display="block"><![CDATA[
+        \mathsf {indSing}_a(b,x)
         :\equiv 
-        \Pi _{y:B}\mathsf {isContr}\bigl (\mathsf {fib}_f(y)\bigr ).
-    ]]></fr:tex></html:p>
-          </fr:mainmatter>
+        \mathsf {transport}_B(C'(x),b):B(x).
+    ]]></fr:tex>
+    At <fr:tex display="inline"><![CDATA[x=a]]></fr:tex>, applying transport to <fr:tex display="inline"><![CDATA[q:C'(a)=\text {refl}_a]]></fr:tex>, followed by the
+    computation rule for transport along reflexivity, gives
+    <fr:tex display="block"><![CDATA[
+        \mathsf {indSing}_a(b,a)
+        =\mathsf {transport}_B(\text {refl}_a,b)
+        =b.
+    ]]></fr:tex>
+    This supplies the required section of evaluation.
+
+    Conversely, suppose <fr:tex display="inline"><![CDATA[A]]></fr:tex> has a point <fr:tex display="inline"><![CDATA[a]]></fr:tex> and satisfies singleton
+    induction. Apply it to the family <fr:tex display="inline"><![CDATA[B(x):\equiv (a=x)]]></fr:tex> and the element
+    <fr:tex display="inline"><![CDATA[\text {refl}_a:B(a)]]></fr:tex>. The resulting section is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {indSing}_a(\text {refl}_a):\Pi _{x:A}(a=x),
+    ]]></fr:tex>
+    which is a contraction of <fr:tex display="inline"><![CDATA[A]]></fr:tex> with center <fr:tex display="inline"><![CDATA[a]]></fr:tex>.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
     </fr:tree>
@@ -1793,7 +1839,31 @@
         <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter />
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:uri>https://caimeo.space/def-005G/</fr:uri>
+            <fr:display-uri>def-005G</fr:display-uri>
+            <fr:route>/def-005G/</fr:route>
+            <fr:title text="Section of a Map">Section of a Map</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>. A <html:strong>section</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a map <fr:tex display="inline"><![CDATA[g:B\to  A]]></fr:tex>
+    equipped with a <fr:link href="/def-0059/" title="Homotopy" uri="https://caimeo.space/def-0059/" display-uri="def-0059" type="local">homotopy</fr:link> <fr:tex display="inline"><![CDATA[f\circ  g\sim \mathsf {id}_B]]></fr:tex>.
+    The type of sections of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {sec}(f)
+        :\equiv 
+        \Sigma _{g:B\to  A}\bigl (f\circ  g\sim \mathsf {id}_B\bigr ).
+    ]]></fr:tex>
+    Thus a section of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a right inverse of <fr:tex display="inline"><![CDATA[f]]></fr:tex> up to homotopy.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>

@@ -420,6 +420,47 @@
     ]]></fr:tex></html:p>
           </fr:mainmatter>
         </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:uri>https://caimeo.space/def-005J/</fr:uri>
+            <fr:display-uri>def-005J</fr:display-uri>
+            <fr:route>/def-005J/</fr:route>
+            <fr:title text="Singleton Induction">Singleton Induction</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be a type equipped with a point <fr:tex display="inline"><![CDATA[a:A]]></fr:tex>. We say that <fr:tex display="inline"><![CDATA[A]]></fr:tex>
+    satisfies <html:strong>singleton induction at <fr:tex display="inline"><![CDATA[a]]></fr:tex></html:strong> if, for every type family
+    <fr:tex display="inline"><![CDATA[B:A\to \mathcal {U}]]></fr:tex>, the evaluation map
+    <fr:tex display="block"><![CDATA[
+        \mathsf {ev}_a:
+        \left (\Pi _{x:A}B(x)\right )\to  B(a),
+        \qquad 
+        \mathsf {ev}_a(s):\equiv  s(a),
+    ]]></fr:tex>
+    has a <fr:link href="/def-005G/" title="Section of a Map" uri="https://caimeo.space/def-005G/" display-uri="def-005G" type="local">section</fr:link>. In symbols,
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isSingletonInd}(A,a)
+        :\equiv 
+        \Pi _{B:A\to \mathcal {U}}\mathsf {sec}(\mathsf {ev}_a^B).
+    ]]></fr:tex>
+    Equivalently, for every <fr:tex display="inline"><![CDATA[B]]></fr:tex> there are
+    <fr:tex display="block"><![CDATA[
+        \mathsf {indSing}_a:B(a)\to \Pi _{x:A}B(x)
+    ]]></fr:tex>
+    and a homotopy
+    <fr:tex display="block"><![CDATA[
+        \mathsf {compSing}_a:
+        \mathsf {ev}_a\circ \mathsf {indSing}_a\sim \mathsf {id}_{B(a)}.
+    ]]></fr:tex>
+    The computation rule is propositional: it identifies
+    <fr:tex display="inline"><![CDATA[\mathsf {indSing}_a(b,a)]]></fr:tex> with <fr:tex display="inline"><![CDATA[b]]></fr:tex>, rather than requiring judgmental
+    equality.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">

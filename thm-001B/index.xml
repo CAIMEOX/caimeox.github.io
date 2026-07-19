@@ -3,25 +3,63 @@
 <fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors />
-    <fr:uri>https://caimeo.space/def-005D/</fr:uri>
-    <fr:display-uri>def-005D</fr:display-uri>
-    <fr:route>/def-005D/</fr:route>
-    <fr:title text="Contractible Type">Contractible Type</fr:title>
-    <fr:taxon>Definition</fr:taxon>
+    <fr:uri>https://caimeo.space/thm-001B/</fr:uri>
+    <fr:display-uri>thm-001B</fr:display-uri>
+    <fr:route>/thm-001B/</fr:route>
+    <fr:title text="Any Contractible Map Is an Equivalence">Any Contractible Map Is an Equivalence</fr:title>
+    <fr:taxon>Theorem</fr:taxon>
   </fr:frontmatter>
-  <fr:mainmatter>
-    <html:p>
-    A type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is <html:strong>contractible</html:strong> if it has a center that is identified
-    with every element of <fr:tex display="inline"><![CDATA[A]]></fr:tex>. Define
+  <fr:mainmatter><html:p>
+    For every map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>, there is a function
     <fr:tex display="block"><![CDATA[
-        \mathsf {isContr}(A)
-        :\equiv 
-        \Sigma _{c:A}\Pi _{x:A}(c=x).
+        \mathsf {isContrMap}(f)\to \mathsf {isEquiv}(f).
+    ]]></fr:tex></html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Suppose every fiber of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is contractible. For each <fr:tex display="inline"><![CDATA[y:B]]></fr:tex>, write the
+    center and contraction as
+    <fr:tex display="block"><![CDATA[
+        (g(y),G(y)): \mathsf {fib}_f(y),
+        \qquad 
+        C_y:\Pi _{z:\mathsf {fib}_f(y)}\bigl ((g(y),G(y))=z\bigr ).
     ]]></fr:tex>
-    A term of <fr:tex display="inline"><![CDATA[\mathsf {isContr}(A)]]></fr:tex> consists of a center <fr:tex display="inline"><![CDATA[c:A]]></fr:tex> and a
-    contraction from <fr:tex display="inline"><![CDATA[c]]></fr:tex> to every <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>.
-</html:p>
-  </fr:mainmatter>
+    The first components define <fr:tex display="inline"><![CDATA[g:B\to  A]]></fr:tex>; the second components have type
+    <fr:tex display="block"><![CDATA[
+        G(y):f(g(y))=y.
+    ]]></fr:tex>
+    Hence <fr:tex display="inline"><![CDATA[G:f\circ  g\sim \mathsf {id}_B]]></fr:tex>, so <fr:tex display="inline"><![CDATA[(g,G)]]></fr:tex> is a section of <fr:tex display="inline"><![CDATA[f]]></fr:tex>.
+
+    It remains to construct a retraction. Fix <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>. The fiber over <fr:tex display="inline"><![CDATA[f(x)]]></fr:tex>
+    contains both its chosen center and the canonical point
+    <fr:tex display="block"><![CDATA[
+        (g(f(x)),G(f(x))),
+        \qquad 
+        (x,\text {refl}_{f(x)}):\mathsf {fib}_f(f(x)).
+    ]]></fr:tex>
+    Applying the contraction to the canonical point gives
+    <fr:tex display="block"><![CDATA[
+        q_x
+        :\equiv 
+        C_{f(x)}(x,\text {refl}_{f(x)}):
+        (g(f(x)),G(f(x)))=(x,\text {refl}_{f(x)}).
+    ]]></fr:tex>
+    Apply the first projection to this identity:
+    <fr:tex display="block"><![CDATA[
+        H(x)
+        :\equiv 
+        \mathsf {ap}_{\mathsf {pr}_1}(q_x):g(f(x))=x.
+    ]]></fr:tex>
+    Therefore <fr:tex display="inline"><![CDATA[H:g\circ  f\sim \mathsf {id}_A]]></fr:tex>, so <fr:tex display="inline"><![CDATA[(g,H)]]></fr:tex> is a retraction of
+    <fr:tex display="inline"><![CDATA[f]]></fr:tex>. Pairing the section and retraction yields
+    <fr:tex display="block"><![CDATA[
+        \bigl ((g,G),(g,H)\bigr ):
+        \mathsf {sec}(f)\times \mathsf {retr}(f)
+        :\equiv \mathsf {isEquiv}(f).
+    ]]></fr:tex>
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
@@ -1765,28 +1803,7 @@
         <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors />
-            <fr:uri>https://caimeo.space/def-005F/</fr:uri>
-            <fr:display-uri>def-005F</fr:display-uri>
-            <fr:route>/def-005F/</fr:route>
-            <fr:title text="Contractible Map">Contractible Map</fr:title>
-            <fr:taxon>Definition</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p>
-    A map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> is a <html:strong>contractible map</html:strong> if each of its
-    <fr:link href="/def-005E/" title="Fiber of a Map" uri="https://caimeo.space/def-005E/" display-uri="def-005E" type="local">fibers</fr:link> is a <fr:link href="/def-005D/" title="Contractible Type" uri="https://caimeo.space/def-005D/" display-uri="def-005D" type="local">contractible type</fr:link>. Define
-    <fr:tex display="block"><![CDATA[
-        \mathsf {isContrMap}(f)
-        :\equiv 
-        \Pi _{y:B}\mathsf {isContr}\bigl (\mathsf {fib}_f(y)\bigr ).
-    ]]></fr:tex></html:p>
-          </fr:mainmatter>
-        </fr:tree>
-      </fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>

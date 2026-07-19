@@ -1757,6 +1757,2292 @@
       <fr:frontmatter>
         <fr:authors />
         <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>18</fr:day>
+        </fr:date>
+        <fr:uri>https://caimeo.space/tt-0008/</fr:uri>
+        <fr:display-uri>tt-0008</fr:display-uri>
+        <fr:route>/tt-0008/</fr:route>
+        <fr:title text="Modular Arithmetic via Curry-Howard">Modular Arithmetic via Curry-Howard</fr:title>
+        <fr:taxon>Type Theory</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+    This note follows Chapter 7 of <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link>.
+    It develops elementary arithmetic inside type theory, where a proposition is represented by
+    the type of its witnesses and a proof is a term of that type.
+</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Logical operations as type formers">Logical operations as type formers</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+        Conjunction is interpreted by product or dependent-pair types, disjunction by coproducts,
+        implication by function types, and quantifiers by dependent types:
+        <fr:tex display="block"><![CDATA[
+            P\land  Q\rightsquigarrow  P\times  Q,\quad 
+            P\lor  Q\rightsquigarrow  P+Q,\quad 
+            (P\Rightarrow  Q)\rightsquigarrow (P\to  Q),
+        ]]></fr:tex>
+        <fr:tex display="block"><![CDATA[
+            (\forall _{x:A}P(x))\rightsquigarrow \Pi _{x:A}P(x),\qquad 
+            (\exists _{x:A}P(x))\rightsquigarrow \Sigma _{x:A}P(x).
+        ]]></fr:tex>
+        This is evidence-relevant: an existential proof retains both its witness and the evidence.
+    </html:p>
+            <html:p>
+        For example, divisibility is the type
+        <fr:tex display="block"><![CDATA[
+            d\mid  n\;:\equiv \;\Sigma _{k:\mathbb {N}}(d\cdot  k=n).
+        ]]></fr:tex>
+        To prove <fr:tex display="inline"><![CDATA[d\mid  n]]></fr:tex> we construct <fr:tex display="inline"><![CDATA[(k,p)]]></fr:tex>; to use such a proof, we eliminate the
+        dependent pair and obtain the multiplier and its equation.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Congruence and finite residues">Congruence and finite residues</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+        Congruence modulo <fr:tex display="inline"><![CDATA[k]]></fr:tex> is expressed without quotienting:
+        <fr:tex display="block"><![CDATA[
+            x\equiv _k y\;:\equiv \;\Sigma _{a,b:\mathbb {N}}(x+k\cdot  a=y+k\cdot  b).
+        ]]></fr:tex>
+        Reflexivity, symmetry, and transitivity follow by arithmetic on the witnesses, so this is
+        a typal equivalence relation.
+    </html:p>
+            <html:p>
+        The standard finite types are defined recursively by
+        <fr:tex display="block"><![CDATA[
+            \mathsf {Fin}(0):\equiv \mathbf {0},\qquad 
+            \mathsf {Fin}(k+1):\equiv \mathbf {1}+\mathsf {Fin}(k).
+        ]]></fr:tex>
+        Their constructors give canonical representatives <fr:tex display="inline"><![CDATA[0,\ldots ,k]]></fr:tex>; an inclusion
+        <fr:tex display="inline"><![CDATA[\iota _k:\mathsf {Fin}(k)\to \mathbb {N}]]></fr:tex> records the represented natural number.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Reduction modulo k+1">Reduction modulo <fr:tex display="inline"><![CDATA[k+1]]></fr:tex></fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+        Recursion defines a residue map
+        <fr:tex display="block"><![CDATA[
+            [-]_{k+1}:\mathbb {N}\to \mathsf {Fin}(k+1)
+        ]]></fr:tex>
+        that cycles after <fr:tex display="inline"><![CDATA[k+1]]></fr:tex> steps. It is split surjective: every residue has its canonical
+        representative, and reducing that representative returns the original residue.
+    </html:p>
+            <html:p>
+        Transporting addition through this reduction defines
+        <fr:tex display="inline"><![CDATA[x+_{k+1}y:\equiv [\iota (x)+\iota (y)]_{k+1}]]></fr:tex>. The residue laws imply the unit,
+        associativity, inverse, and commutativity laws. Hence
+        <fr:tex display="inline"><![CDATA[\mathbb {Z}/(k+1):\equiv \mathsf {Fin}(k+1)]]></fr:tex> is a cyclic abelian group, generated by <fr:tex display="inline"><![CDATA[1]]></fr:tex>.
+        The construction supplies concrete data, not merely an assertion that a quotient exists.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" expanded="false">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>18</fr:day>
+        </fr:date>
+        <fr:uri>https://caimeo.space/tt-0009/</fr:uri>
+        <fr:display-uri>tt-0009</fr:display-uri>
+        <fr:route>/tt-0009/</fr:route>
+        <fr:title text="Decidability in Elementary Number Theory">Decidability in Elementary Number Theory</fr:title>
+        <fr:taxon>Type Theory</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+    This note follows Chapter 8 of <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link>.
+    It separates constructive truth from algorithmic decidability and records the information
+    carried by each decision.
+</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Decidable propositions and equality">Decidable propositions and equality</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-0058/</fr:uri>
+                <fr:display-uri>def-0058</fr:display-uri>
+                <fr:route>/def-0058/</fr:route>
+                <fr:title text="Decidable Proposition">Decidable Proposition</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A type <fr:tex display="inline"><![CDATA[P]]></fr:tex> is <html:strong>decidable</html:strong> if there is either a term of <fr:tex display="inline"><![CDATA[P]]></fr:tex> or a
+    function refuting <fr:tex display="inline"><![CDATA[P]]></fr:tex>. The type of decisions for <fr:tex display="inline"><![CDATA[P]]></fr:tex> is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isDecidable}(P):\equiv  P+(P\to \mathbf {0}).
+    ]]></fr:tex>
+    A term in the left summand supplies evidence for <fr:tex display="inline"><![CDATA[P]]></fr:tex>; a term in the right
+    summand supplies evidence for its negation.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+        A type <fr:tex display="inline"><![CDATA[A]]></fr:tex> has decidable equality when
+        <fr:tex display="inline"><![CDATA[\Pi _{x,y:A}\mathsf {isDecidable}(x=y)]]></fr:tex> is inhabited. This is data: applying the
+        decision procedure to two values performs a finite computation and returns evidence.
+    </html:p>
+            <html:p>
+        Decidability is closed under negation, products, coproducts, and implication when the
+        inputs are decidable. Finite dependent products and sums preserve it as well. These closure
+        rules turn small decision procedures into larger ones without invoking excluded middle.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Natural numbers">Natural numbers</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+        Observational equality from the universe chapter yields decidable equality on
+        <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>. Recursive comparison similarly decides <fr:tex display="inline"><![CDATA[m<n]]></fr:tex> and <fr:tex display="inline"><![CDATA[m\leq  n]]></fr:tex>.
+        Case analysis on a decision allows a construction to branch while retaining a proof of the
+        chosen branch.
+    </html:p>
+            <html:p>
+        The well-ordering principle says that an inhabited decidable subtype of <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex>
+        has a least element. One searches upward from zero; the existence witness guarantees that
+        the search cannot continue forever. This is the constructive engine behind least divisors
+        and greatest common divisors.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="GCD, primes, and Boolean reflection">GCD, primes, and Boolean reflection</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+        Since divisibility of natural numbers is decidable, bounded search constructs
+        <fr:tex display="inline"><![CDATA[\gcd (m,n)]]></fr:tex> together with proofs that it divides both inputs and that every common divisor
+        divides it. Searching for the least divisor greater than one supplies prime factors.
+    </html:p>
+            <html:p>
+        Euclid's argument can then be read computationally: from any finite list of primes, form
+        one plus their product and extract a prime divisor; it cannot occur in the original list.
+        Thus the type expressing that there are arbitrarily large primes is inhabited.
+    </html:p>
+            <html:p>
+        A decidable proposition can be reflected into a Boolean <fr:tex display="inline"><![CDATA[b]]></fr:tex> with
+        <fr:tex display="inline"><![CDATA[P\leftrightarrow (b=\mathsf {true})]]></fr:tex>. Booleans are convenient for computation, while the
+        reflected equivalence reconnects the result to proof-relevant reasoning.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" expanded="false">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>18</fr:day>
+        </fr:date>
+        <fr:uri>https://caimeo.space/tt-000A/</fr:uri>
+        <fr:display-uri>tt-000A</fr:display-uri>
+        <fr:route>/tt-000A/</fr:route>
+        <fr:title text="Equivalences">Equivalences</fr:title>
+        <fr:taxon>Type Theory</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+    This note follows Chapter 9 of <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link>.
+    Equivalence is the correct notion of sameness between types; its definition must eventually be
+    shown to be a property of a map rather than extra, non-unique structure.
+</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Homotopies">Homotopies</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-0059/</fr:uri>
+                <fr:display-uri>def-0059</fr:display-uri>
+                <fr:route>/def-0059/</fr:route>
+                <fr:title text="Homotopy">Homotopy</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline"><![CDATA[B:A\to \mathcal {U}]]></fr:tex> be a type family and let
+    <fr:tex display="inline"><![CDATA[f,g:\Pi _{x:A}B(x)]]></fr:tex> be dependent functions. A <html:strong>homotopy</html:strong> from
+    <fr:tex display="inline"><![CDATA[f]]></fr:tex> to <fr:tex display="inline"><![CDATA[g]]></fr:tex> is a pointwise identification between their values. Its type is
+    <fr:tex display="block"><![CDATA[
+        f\sim  g\;:\equiv \;\Pi _{x:A}\bigl (f(x)=g(x)\bigr ).
+    ]]></fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+        Homotopies express commutative diagrams in type theory. They have reflexivity, inverse, and
+        concatenation operations inherited pointwise from identity types.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Bi-invertible maps">Bi-invertible maps</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-005G/</fr:uri>
+                <fr:display-uri>def-005G</fr:display-uri>
+                <fr:route>/def-005G/</fr:route>
+                <fr:title text="Section of a Map">Section of a Map</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>. A <html:strong>section</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a map <fr:tex display="inline"><![CDATA[g:B\to  A]]></fr:tex>
+    equipped with a <fr:link href="/def-0059/" title="Homotopy" uri="https://caimeo.space/def-0059/" display-uri="def-0059" type="local">homotopy</fr:link> <fr:tex display="inline"><![CDATA[f\circ  g\sim \mathsf {id}_B]]></fr:tex>.
+    The type of sections of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {sec}(f)
+        :\equiv 
+        \Sigma _{g:B\to  A}\bigl (f\circ  g\sim \mathsf {id}_B\bigr ).
+    ]]></fr:tex>
+    Thus a section of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a right inverse of <fr:tex display="inline"><![CDATA[f]]></fr:tex> up to homotopy.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-005H/</fr:uri>
+                <fr:display-uri>def-005H</fr:display-uri>
+                <fr:route>/def-005H/</fr:route>
+                <fr:title text="Retraction of a Map">Retraction of a Map</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>. A <html:strong>retraction</html:strong> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a map <fr:tex display="inline"><![CDATA[h:B\to  A]]></fr:tex>
+    equipped with a <fr:link href="/def-0059/" title="Homotopy" uri="https://caimeo.space/def-0059/" display-uri="def-0059" type="local">homotopy</fr:link> <fr:tex display="inline"><![CDATA[h\circ  f\sim \mathsf {id}_A]]></fr:tex>.
+    The type of retractions of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {retr}(f)
+        :\equiv 
+        \Sigma _{h:B\to  A}\bigl (h\circ  f\sim \mathsf {id}_A\bigr ).
+    ]]></fr:tex>
+    If <fr:tex display="inline"><![CDATA[f]]></fr:tex> has a retraction, then <fr:tex display="inline"><![CDATA[A]]></fr:tex> is called a retract of <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-005B/</fr:uri>
+                <fr:display-uri>def-005B</fr:display-uri>
+                <fr:route>/def-005B/</fr:route>
+                <fr:title text="Bi-invertible Map">Bi-invertible Map</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> is <html:strong>bi-invertible</html:strong> if it has both a
+    <fr:link href="/def-005G/" title="Section of a Map" uri="https://caimeo.space/def-005G/" display-uri="def-005G" type="local">section</fr:link> and a <fr:link href="/def-005H/" title="Retraction of a Map" uri="https://caimeo.space/def-005H/" display-uri="def-005H" type="local">retraction</fr:link>, or equivalently a separate
+    <fr:link href="/def-005A/" title="Left and Right Inverses" uri="https://caimeo.space/def-005A/" display-uri="def-005A" type="local">right and left inverse</fr:link>. Define
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isBiInv}(f)
+        :\equiv 
+        \mathsf {sec}(f)\times \mathsf {retr}(f).
+    ]]></fr:tex>
+    The left and right inverse maps are supplied independently; their inverse
+    laws imply that they are homotopic.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-005C/</fr:uri>
+                <fr:display-uri>def-005C</fr:display-uri>
+                <fr:route>/def-005C/</fr:route>
+                <fr:title text="Equivalence of Types">Equivalence of Types</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    An <html:strong>equivalence</html:strong> from <fr:tex display="inline"><![CDATA[A]]></fr:tex> to <fr:tex display="inline"><![CDATA[B]]></fr:tex> is a map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> equipped
+    with evidence that it is <fr:link href="/def-005B/" title="Bi-invertible Map" uri="https://caimeo.space/def-005B/" display-uri="def-005B" type="local">bi-invertible</fr:link>. The type of equivalences
+    is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isEquiv}(f):\equiv \mathsf {isBiInv}(f),\qquad 
+        A\simeq  B
+        \;:\equiv \;
+        \Sigma _{f:A\to  B}\mathsf {isEquiv}(f).
+    ]]></fr:tex>
+    We write <fr:tex display="inline"><![CDATA[e:A\simeq  B]]></fr:tex> for an equivalence and use its first projection as
+    the underlying map.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-005I/</fr:uri>
+                <fr:display-uri>def-005I</fr:display-uri>
+                <fr:route>/def-005I/</fr:route>
+                <fr:title text="Map with an Inverse">Map with an Inverse</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>. We say that <fr:tex display="inline"><![CDATA[f]]></fr:tex> <html:strong>has an inverse</html:strong> if there is a
+    single map <fr:tex display="inline"><![CDATA[g:B\to  A]]></fr:tex> that is both a right inverse and a left inverse of
+    <fr:tex display="inline"><![CDATA[f]]></fr:tex>, up to homotopy. Define
+    <fr:tex display="block"><![CDATA[
+        \mathsf {hasInverse}(f)
+        :\equiv 
+        \Sigma _{g:B\to  A}
+        \bigl (f\circ  g\sim \mathsf {id}_B\bigr )
+        \times 
+        \bigl (g\circ  f\sim \mathsf {id}_A\bigr ).
+    ]]></fr:tex>
+    Thus an element of <fr:tex display="inline"><![CDATA[\mathsf {hasInverse}(f)]]></fr:tex> is a triple <fr:tex display="inline"><![CDATA[(g,G,H)]]></fr:tex>, where
+    <fr:tex display="inline"><![CDATA[G:f\circ  g\sim \mathsf {id}_B]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[H:g\circ  f\sim \mathsf {id}_A]]></fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+        It is tempting to define an equivalence using a single inverse. The problem is that
+        <fr:tex display="inline"><![CDATA[\mathsf {hasInverse}(f)]]></fr:tex> can contain nontrivial higher information, whereas
+        <fr:tex display="inline"><![CDATA[\mathsf {isEquiv}(f)]]></fr:tex> will be shown, using function extensionality, to be a proposition.
+        For example, a later calculation gives
+        <fr:tex display="inline"><![CDATA[\mathsf {hasInverse}(\mathsf {id}_{\mathbb {S}^1})\simeq \mathbb {Z}]]></fr:tex>.
+    </html:p>
+            <html:p>
+        Consequently, the following two constructions establish logical equivalence, but they do
+        not assert that the witness types <fr:tex display="inline"><![CDATA[\mathsf {hasInverse}(f)]]></fr:tex> and
+        <fr:tex display="inline"><![CDATA[\mathsf {isEquiv}(f)]]></fr:tex> are themselves equivalent. The composites of the two constructions
+        need not be homotopic to the corresponding identity maps.
+    </html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/thm-0015/</fr:uri>
+                <fr:display-uri>thm-0015</fr:display-uri>
+                <fr:route>/thm-0015/</fr:route>
+                <fr:title text="A Map with an Inverse Is an Equivalence">A Map with an Inverse Is an Equivalence</fr:title>
+                <fr:taxon>Proposition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter><html:p>
+    For every map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>, a <fr:link href="/def-005I/" title="Map with an Inverse" uri="https://caimeo.space/def-005I/" display-uri="def-005I" type="local">map with an inverse</fr:link> determines
+    an <fr:link href="/def-005C/" title="Equivalence of Types" uri="https://caimeo.space/def-005C/" display-uri="def-005C" type="local">equivalence</fr:link>. Explicitly, there is a canonical function
+    <fr:tex display="block"><![CDATA[
+        \mathsf {hasInverse}(f)\to \mathsf {isEquiv}(f).
+    ]]></fr:tex></html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline"><![CDATA[(g,G,H):\mathsf {hasInverse}(f)]]></fr:tex>. By definition,
+    <fr:tex display="block"><![CDATA[
+        G:f\circ  g\sim \mathsf {id}_B,
+        \qquad 
+        H:g\circ  f\sim \mathsf {id}_A.
+    ]]></fr:tex>
+    Therefore <fr:tex display="inline"><![CDATA[(g,G):\mathsf {sec}(f)]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[(g,H):\mathsf {retr}(f)]]></fr:tex>. Pairing them gives
+    <fr:tex display="block"><![CDATA[
+        \bigl ((g,G),(g,H)\bigr )
+        :\mathsf {sec}(f)\times \mathsf {retr}(f)
+        :\equiv \mathsf {isEquiv}(f).
+    ]]></fr:tex>
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/thm-0016/</fr:uri>
+                <fr:display-uri>thm-0016</fr:display-uri>
+                <fr:route>/thm-0016/</fr:route>
+                <fr:title text="An Equivalence Has an Inverse">An Equivalence Has an Inverse</fr:title>
+                <fr:taxon>Proposition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter><html:p>
+    For every map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>, an <fr:link href="/def-005C/" title="Equivalence of Types" uri="https://caimeo.space/def-005C/" display-uri="def-005C" type="local">equivalence</fr:link> determines a
+    <fr:link href="/def-005I/" title="Map with an Inverse" uri="https://caimeo.space/def-005I/" display-uri="def-005I" type="local">map with an inverse</fr:link>. Explicitly, there is a canonical function
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isEquiv}(f)\to \mathsf {hasInverse}(f).
+    ]]></fr:tex></html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Suppose that <fr:tex display="inline"><![CDATA[f]]></fr:tex> is equipped with a section and a retraction,
+    <fr:tex display="block"><![CDATA[
+        (g,G):\mathsf {sec}(f),
+        \qquad 
+        (h,H):\mathsf {retr}(f).
+    ]]></fr:tex>
+    Thus <fr:tex display="inline"><![CDATA[g,h:B\to  A]]></fr:tex>,
+    <fr:tex display="inline"><![CDATA[G:f\circ  g\sim \mathsf {id}_B]]></fr:tex>, and
+    <fr:tex display="inline"><![CDATA[H:h\circ  f\sim \mathsf {id}_A]]></fr:tex>. First construct a homotopy
+    <fr:tex display="inline"><![CDATA[K:g\sim  h]]></fr:tex>. For each <fr:tex display="inline"><![CDATA[y:B]]></fr:tex>, define
+    <fr:tex display="block"><![CDATA[
+        K(y)
+        :\equiv 
+        H(g(y))^{-1}\cdot \mathsf {ap}_h(G(y))
+        :g(y)=h(y).
+    ]]></fr:tex>
+    Indeed, the two factors have types
+    <fr:tex display="block"><![CDATA[
+        H(g(y))^{-1}:g(y)=h(f(g(y))),
+        \qquad 
+        \mathsf {ap}_h(G(y)):h(f(g(y)))=h(y),
+    ]]></fr:tex>
+    so their concatenation is well typed.
+
+    We now make the section <fr:tex display="inline"><![CDATA[g]]></fr:tex> into a left inverse as well. For each <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>,
+    define
+    <fr:tex display="block"><![CDATA[
+        H_g(x)
+        :\equiv 
+        K(f(x))\cdot  H(x)
+        :g(f(x))=x.
+    ]]></fr:tex>
+    Therefore <fr:tex display="inline"><![CDATA[H_g:g\circ  f\sim \mathsf {id}_A]]></fr:tex>, while the original homotopy
+    <fr:tex display="inline"><![CDATA[G]]></fr:tex> already gives <fr:tex display="inline"><![CDATA[f\circ  g\sim \mathsf {id}_B]]></fr:tex>. Hence
+    <fr:tex display="block"><![CDATA[
+        (g,G,H_g):\mathsf {hasInverse}(f).
+    ]]></fr:tex>
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+            </fr:tree>
+            <html:p>
+        Identity maps, composites, and inverse maps are equivalences. Equivalences satisfy
+        two-out-of-three, so in
+        a composite, any two of the three maps being equivalences forces the third to be one.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Identities of dependent pairs">Identities of dependent pairs</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+        For <fr:tex display="inline"><![CDATA[u=(x,a)]]></fr:tex> and <fr:tex display="inline"><![CDATA[v=(y,b)]]></fr:tex> in <fr:tex display="inline"><![CDATA[\Sigma _{x:A}B(x)]]></fr:tex>, an identity consists of an
+        identity in the base and a compatible identity in the fiber:
+        <fr:tex display="block"><![CDATA[
+            (u=v)\simeq 
+            \Sigma _{p:x=y}\bigl (\mathsf {transport}_B(p,a)=b\bigr ).
+        ]]></fr:tex>
+        This equivalence is the basic tool for calculating equality in structured objects. It also
+        explains why equality of ordinary pairs is componentwise only after accounting for
+        dependency.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" expanded="false">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>18</fr:day>
+        </fr:date>
+        <fr:uri>https://caimeo.space/tt-000B/</fr:uri>
+        <fr:display-uri>tt-000B</fr:display-uri>
+        <fr:route>/tt-000B/</fr:route>
+        <fr:title text="Contractible Types and Contractible Maps">Contractible Types and Contractible Maps</fr:title>
+        <fr:taxon>Type Theory</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+    This note follows Chapter 10 of <fr:link href="/hott-2022/" title="Introduction to Homotopy Type Theory" uri="https://caimeo.space/hott-2022/" display-uri="hott-2022" type="local">Introduction to Homotopy Type Theory</fr:link>.
+    Contractibility packages existence and coherent uniqueness in a form stable under equivalence.
+</html:p>
+        <html:p>
+    Saying that a type has an element only expresses existence. Saying that it has exactly one
+    element in a set-theoretic sense is also too rigid for homotopy type theory, because equality
+    itself may contain structure. A contractible type instead chooses a center and continuously
+    identifies every point with that center. It is therefore a singleton <html:em>up to homotopy</html:em>.
+</html:p>
+        <html:p>
+    The same idea applies fiberwise. A fiber records an input together with a path showing that it
+    maps to the chosen output. Contractibility of that fiber says not only that a preimage exists,
+    but that the complete preimage data are coherently unique. This is the homotopical replacement
+    for the conjunction of surjectivity and injectivity.
+</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Contractible types">Contractible types</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-005D/</fr:uri>
+                <fr:display-uri>def-005D</fr:display-uri>
+                <fr:route>/def-005D/</fr:route>
+                <fr:title text="Contractible Type">Contractible Type</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is <html:strong>contractible</html:strong> if it has a center that is identified
+    with every element of <fr:tex display="inline"><![CDATA[A]]></fr:tex>. Define
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isContr}(A)
+        :\equiv 
+        \Sigma _{c:A}\Pi _{x:A}(c=x).
+    ]]></fr:tex>
+    A term of <fr:tex display="inline"><![CDATA[\mathsf {isContr}(A)]]></fr:tex> consists of a center <fr:tex display="inline"><![CDATA[c:A]]></fr:tex> and a
+    contraction from <fr:tex display="inline"><![CDATA[c]]></fr:tex> to every <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+        The unit type is contractible, and every contractible type is equivalent to the unit type.
+        Contractibility is stronger than mere inhabitation because it also controls all identity
+        information.
+    </html:p>
+            <html:p>
+        For any <fr:tex display="inline"><![CDATA[a:A]]></fr:tex>, the singleton type <fr:tex display="inline"><![CDATA[\Sigma _{x:A}(a=x)]]></fr:tex> is contractible with center
+        <fr:tex display="inline"><![CDATA[(a,\text {refl}_a)]]></fr:tex>. Its contraction is exactly path induction: every pair <fr:tex display="inline"><![CDATA[(x,p:a=x)]]></fr:tex> is
+        identified with <fr:tex display="inline"><![CDATA[(a,\text {refl}_a)]]></fr:tex>. This observation is the prototype for the fundamental
+        theorem of identity types.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Singleton induction">Singleton induction</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-005J/</fr:uri>
+                <fr:display-uri>def-005J</fr:display-uri>
+                <fr:route>/def-005J/</fr:route>
+                <fr:title text="Singleton Induction">Singleton Induction</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline"><![CDATA[A]]></fr:tex> be a type equipped with a point <fr:tex display="inline"><![CDATA[a:A]]></fr:tex>. We say that <fr:tex display="inline"><![CDATA[A]]></fr:tex>
+    satisfies <html:strong>singleton induction at <fr:tex display="inline"><![CDATA[a]]></fr:tex></html:strong> if, for every type family
+    <fr:tex display="inline"><![CDATA[B:A\to \mathcal {U}]]></fr:tex>, the evaluation map
+    <fr:tex display="block"><![CDATA[
+        \mathsf {ev}_a:
+        \left (\Pi _{x:A}B(x)\right )\to  B(a),
+        \qquad 
+        \mathsf {ev}_a(s):\equiv  s(a),
+    ]]></fr:tex>
+    has a <fr:link href="/def-005G/" title="Section of a Map" uri="https://caimeo.space/def-005G/" display-uri="def-005G" type="local">section</fr:link>. In symbols,
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isSingletonInd}(A,a)
+        :\equiv 
+        \Pi _{B:A\to \mathcal {U}}\mathsf {sec}(\mathsf {ev}_a^B).
+    ]]></fr:tex>
+    Equivalently, for every <fr:tex display="inline"><![CDATA[B]]></fr:tex> there are
+    <fr:tex display="block"><![CDATA[
+        \mathsf {indSing}_a:B(a)\to \Pi _{x:A}B(x)
+    ]]></fr:tex>
+    and a homotopy
+    <fr:tex display="block"><![CDATA[
+        \mathsf {compSing}_a:
+        \mathsf {ev}_a\circ \mathsf {indSing}_a\sim \mathsf {id}_{B(a)}.
+    ]]></fr:tex>
+    The computation rule is propositional: it identifies
+    <fr:tex display="inline"><![CDATA[\mathsf {indSing}_a(b,a)]]></fr:tex> with <fr:tex display="inline"><![CDATA[b]]></fr:tex>, rather than requiring judgmental
+    equality.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+        The principle resembles induction for the unit type, but its computation rule is a path
+        rather than a judgmental equality. Contractibility supplies enough paths to transport a
+        value at the center to every other point; conversely, singleton induction applied to the
+        family <fr:tex display="inline"><![CDATA[x\mapsto (a=x)]]></fr:tex> constructs a contraction.
+    </html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/thm-0017/</fr:uri>
+                <fr:display-uri>thm-0017</fr:display-uri>
+                <fr:route>/thm-0017/</fr:route>
+                <fr:title text="Contractibility Is Equivalent to Singleton Induction">Contractibility Is Equivalent to Singleton Induction</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter><html:p>
+    A type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is contractible if and only if it has a point <fr:tex display="inline"><![CDATA[a:A]]></fr:tex> at which
+    it satisfies <fr:link href="/def-005J/" title="Singleton Induction" uri="https://caimeo.space/def-005J/" display-uri="def-005J" type="local">singleton induction</fr:link>.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Suppose first that <fr:tex display="inline"><![CDATA[A]]></fr:tex> has center <fr:tex display="inline"><![CDATA[a:A]]></fr:tex> and contraction
+    <fr:tex display="inline"><![CDATA[C:\Pi _{x:A}(a=x)]]></fr:tex>. Normalize the contraction by defining
+    <fr:tex display="block"><![CDATA[
+        C'(x):\equiv  C(a)^{-1}\cdot  C(x).
+    ]]></fr:tex>
+    The left inverse law gives <fr:tex display="inline"><![CDATA[q:C'(a)=\text {refl}_a]]></fr:tex>. For a family
+    <fr:tex display="inline"><![CDATA[B:A\to \mathcal {U}]]></fr:tex> and <fr:tex display="inline"><![CDATA[b:B(a)]]></fr:tex>, define
+    <fr:tex display="block"><![CDATA[
+        \mathsf {indSing}_a(b,x)
+        :\equiv 
+        \mathsf {transport}_B(C'(x),b):B(x).
+    ]]></fr:tex>
+    At <fr:tex display="inline"><![CDATA[x=a]]></fr:tex>, applying transport to <fr:tex display="inline"><![CDATA[q:C'(a)=\text {refl}_a]]></fr:tex>, followed by the
+    computation rule for transport along reflexivity, gives
+    <fr:tex display="block"><![CDATA[
+        \mathsf {indSing}_a(b,a)
+        =\mathsf {transport}_B(\text {refl}_a,b)
+        =b.
+    ]]></fr:tex>
+    This supplies the required section of evaluation.
+
+    Conversely, suppose <fr:tex display="inline"><![CDATA[A]]></fr:tex> has a point <fr:tex display="inline"><![CDATA[a]]></fr:tex> and satisfies singleton
+    induction. Apply it to the family <fr:tex display="inline"><![CDATA[B(x):\equiv (a=x)]]></fr:tex> and the element
+    <fr:tex display="inline"><![CDATA[\text {refl}_a:B(a)]]></fr:tex>. The resulting section is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {indSing}_a(\text {refl}_a):\Pi _{x:A}(a=x),
+    ]]></fr:tex>
+    which is a contraction of <fr:tex display="inline"><![CDATA[A]]></fr:tex> with center <fr:tex display="inline"><![CDATA[a]]></fr:tex>.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Fibers and contractible maps">Fibers and contractible maps</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-005E/</fr:uri>
+                <fr:display-uri>def-005E</fr:display-uri>
+                <fr:route>/def-005E/</fr:route>
+                <fr:title text="Fiber of a Map">Fiber of a Map</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> and <fr:tex display="inline"><![CDATA[y:B]]></fr:tex>. The <html:strong>fiber of <fr:tex display="inline"><![CDATA[f]]></fr:tex> over <fr:tex display="inline"><![CDATA[y]]></fr:tex></html:strong> is the
+    type of elements of <fr:tex display="inline"><![CDATA[A]]></fr:tex> equipped with an identification of their image
+    with <fr:tex display="inline"><![CDATA[y]]></fr:tex>:
+    <fr:tex display="block"><![CDATA[
+        \mathsf {fib}_f(y)
+        :\equiv 
+        \Sigma _{x:A}\bigl (f(x)=y\bigr ).
+    ]]></fr:tex>
+    Thus a term of the fiber is a pair <fr:tex display="inline"><![CDATA[(x,p)]]></fr:tex> with <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[p:f(x)=y]]></fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-005F/</fr:uri>
+                <fr:display-uri>def-005F</fr:display-uri>
+                <fr:route>/def-005F/</fr:route>
+                <fr:title text="Contractible Map">Contractible Map</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> is a <html:strong>contractible map</html:strong> if each of its
+    <fr:link href="/def-005E/" title="Fiber of a Map" uri="https://caimeo.space/def-005E/" display-uri="def-005E" type="local">fibers</fr:link> is a <fr:link href="/def-005D/" title="Contractible Type" uri="https://caimeo.space/def-005D/" display-uri="def-005D" type="local">contractible type</fr:link>. Define
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isContrMap}(f)
+        :\equiv 
+        \Pi _{y:B}\mathsf {isContr}\bigl (\mathsf {fib}_f(y)\bigr ).
+    ]]></fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+        The forward implication needs no coherence improvement: the contraction already compares
+        the chosen center of each fiber with every other point of that fiber. The following proof
+        extracts the section and retraction explicitly.
+    </html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/thm-001B/</fr:uri>
+                <fr:display-uri>thm-001B</fr:display-uri>
+                <fr:route>/thm-001B/</fr:route>
+                <fr:title text="Any Contractible Map Is an Equivalence">Any Contractible Map Is an Equivalence</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter><html:p>
+    For every map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>, there is a function
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isContrMap}(f)\to \mathsf {isEquiv}(f).
+    ]]></fr:tex></html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Suppose every fiber of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is contractible. For each <fr:tex display="inline"><![CDATA[y:B]]></fr:tex>, write the
+    center and contraction as
+    <fr:tex display="block"><![CDATA[
+        (g(y),G(y)): \mathsf {fib}_f(y),
+        \qquad 
+        C_y:\Pi _{z:\mathsf {fib}_f(y)}\bigl ((g(y),G(y))=z\bigr ).
+    ]]></fr:tex>
+    The first components define <fr:tex display="inline"><![CDATA[g:B\to  A]]></fr:tex>; the second components have type
+    <fr:tex display="block"><![CDATA[
+        G(y):f(g(y))=y.
+    ]]></fr:tex>
+    Hence <fr:tex display="inline"><![CDATA[G:f\circ  g\sim \mathsf {id}_B]]></fr:tex>, so <fr:tex display="inline"><![CDATA[(g,G)]]></fr:tex> is a section of <fr:tex display="inline"><![CDATA[f]]></fr:tex>.
+
+    It remains to construct a retraction. Fix <fr:tex display="inline"><![CDATA[x:A]]></fr:tex>. The fiber over <fr:tex display="inline"><![CDATA[f(x)]]></fr:tex>
+    contains both its chosen center and the canonical point
+    <fr:tex display="block"><![CDATA[
+        (g(f(x)),G(f(x))),
+        \qquad 
+        (x,\text {refl}_{f(x)}):\mathsf {fib}_f(f(x)).
+    ]]></fr:tex>
+    Applying the contraction to the canonical point gives
+    <fr:tex display="block"><![CDATA[
+        q_x
+        :\equiv 
+        C_{f(x)}(x,\text {refl}_{f(x)}):
+        (g(f(x)),G(f(x)))=(x,\text {refl}_{f(x)}).
+    ]]></fr:tex>
+    Apply the first projection to this identity:
+    <fr:tex display="block"><![CDATA[
+        H(x)
+        :\equiv 
+        \mathsf {ap}_{\mathsf {pr}_1}(q_x):g(f(x))=x.
+    ]]></fr:tex>
+    Therefore <fr:tex display="inline"><![CDATA[H:g\circ  f\sim \mathsf {id}_A]]></fr:tex>, so <fr:tex display="inline"><![CDATA[(g,H)]]></fr:tex> is a retraction of
+    <fr:tex display="inline"><![CDATA[f]]></fr:tex>. Pairing the section and retraction yields
+    <fr:tex display="block"><![CDATA[
+        \bigl ((g,G),(g,H)\bigr ):
+        \mathsf {sec}(f)\times \mathsf {retr}(f)
+        :\equiv \mathsf {isEquiv}(f).
+    ]]></fr:tex>
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Equivalences are contractible maps">Equivalences are contractible maps</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+        The converse requires more care. An inverse chooses a plausible center
+        <fr:tex display="inline"><![CDATA[(g(y),G(y))]]></fr:tex> for each fiber, but the two inverse homotopies need not initially satisfy the
+        compatibility required for equality of dependent pairs. Coherent invertibility records
+        precisely this missing triangle identity.
+    </html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/def-005K/</fr:uri>
+                <fr:display-uri>def-005K</fr:display-uri>
+                <fr:route>/def-005K/</fr:route>
+                <fr:title text="Coherently Invertible Map">Coherently Invertible Map</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+    A map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> is <html:strong>coherently invertible</html:strong> if it comes equipped
+    with a map <fr:tex display="inline"><![CDATA[g:B\to  A]]></fr:tex>, homotopies
+    <fr:tex display="block"><![CDATA[
+        G:f\circ  g\sim \mathsf {id}_B,
+        \qquad 
+        H:g\circ  f\sim \mathsf {id}_A,
+    ]]></fr:tex>
+    and a coherence homotopy
+    <fr:tex display="block"><![CDATA[
+        K:\Pi _{x:A}\bigl (G(f(x))=\mathsf {ap}_f(H(x))\bigr ).
+    ]]></fr:tex>
+    The type of such data is
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isCohInv}(f)
+        :\equiv 
+        \Sigma _{g:B\to  A}
+        \Sigma _{G:f\circ  g\sim \mathsf {id}_B}
+        \Sigma _{H:g\circ  f\sim \mathsf {id}_A}
+        \Pi _{x:A}\bigl (G(f(x))=\mathsf {ap}_f(H(x))\bigr ).
+    ]]></fr:tex>
+    Thus the right inverse law at <fr:tex display="inline"><![CDATA[f(x)]]></fr:tex> agrees with the image under <fr:tex display="inline"><![CDATA[f]]></fr:tex> of
+    the left inverse law at <fr:tex display="inline"><![CDATA[x]]></fr:tex>. This is the pointwise, unit-normalized form of
+    the usual coherence <fr:tex display="inline"><![CDATA[G\mathbin {\cdot }f\sim  f\mathbin {\cdot }H]]></fr:tex>.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/thm-0018/</fr:uri>
+                <fr:display-uri>thm-0018</fr:display-uri>
+                <fr:route>/thm-0018/</fr:route>
+                <fr:title text="An Inverse Can Be Made Coherent">An Inverse Can Be Made Coherent</fr:title>
+                <fr:taxon>Lemma</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter><html:p>
+    Every <fr:link href="/def-005I/" title="Map with an Inverse" uri="https://caimeo.space/def-005I/" display-uri="def-005I" type="local">map with an inverse</fr:link> can be equipped with the structure of
+    a <fr:link href="/def-005K/" title="Coherently Invertible Map" uri="https://caimeo.space/def-005K/" display-uri="def-005K" type="local">coherently invertible map</fr:link>. That is, there is a function
+    <fr:tex display="block"><![CDATA[
+        \mathsf {hasInverse}(f)\to \mathsf {isCohInv}(f).
+    ]]></fr:tex></html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline"><![CDATA[g:B\to  A]]></fr:tex>, <fr:tex display="inline"><![CDATA[G:f\circ  g\sim \mathsf {id}_B]]></fr:tex>, and
+    <fr:tex display="inline"><![CDATA[H:g\circ  f\sim \mathsf {id}_A]]></fr:tex>. Keep <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[H]]></fr:tex>, but replace <fr:tex display="inline"><![CDATA[G]]></fr:tex> by
+    <fr:tex display="block"><![CDATA[
+        G'(y)
+        :\equiv 
+        G(f(g(y)))^{-1}
+        \cdot \mathsf {ap}_f(H(g(y)))
+        \cdot  G(y).
+    ]]></fr:tex>
+    This is a path from <fr:tex display="inline"><![CDATA[f(g(y))]]></fr:tex> to <fr:tex display="inline"><![CDATA[y]]></fr:tex>, so
+    <fr:tex display="inline"><![CDATA[G':f\circ  g\sim \mathsf {id}_B]]></fr:tex>.
+
+    It remains to construct
+    <fr:tex display="block"><![CDATA[
+        K(x):G'(f(x))=\mathsf {ap}_f(H(x)).
+    ]]></fr:tex>
+    We use two naturality squares. First apply naturality of
+    <fr:tex display="inline"><![CDATA[H:g\circ  f\sim \mathsf {id}_A]]></fr:tex> to its own component
+    <fr:tex display="inline"><![CDATA[H(x):g(f(x))=x]]></fr:tex>:
+    
+ 
+  
+  <html:figure><fr:resource hash="0538325c2d33dc5563b64dc8dd1e2c03"><fr:resource-content><html:img src="/0538325c2d33dc5563b64dc8dd1e2c03.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
+   
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
+
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
+
+
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
+
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
+
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
+
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     >={Triangle[open]},->.>
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}->
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}->
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
+        \begin {tikzcd}[column sep=large, row sep=large]
+            {g(f(g(f(x))))}
+                \arrow [r, "{H(g(f(x)))}"]
+                \arrow [d, "{\mathsf {ap}_{g\circ  f}(H(x))}"']
+            & {g(f(x))}
+                \arrow [d, "{H(x)}"] \\
+            {g(f(x))}
+                \arrow [r, "{H(x)}"']
+            & x
+        \end {tikzcd}
+    ]]></fr:resource-source></fr:resource></html:figure>
+ 
+
+    Commutativity says
+    <fr:tex display="block"><![CDATA[
+        H(g(f(x)))\cdot  H(x)
+        =\mathsf {ap}_{g\circ  f}(H(x))\cdot  H(x).
+    ]]></fr:tex>
+    Cancelling the common terminal path <fr:tex display="inline"><![CDATA[H(x)]]></fr:tex> gives
+    <fr:tex display="block"><![CDATA[
+        H(g(f(x)))=\mathsf {ap}_{g\circ  f}(H(x)).
+    ]]></fr:tex>
+
+    Next apply naturality of the whiskered homotopy
+    <fr:tex display="inline"><![CDATA[G\mathbin {\cdot }f:f\circ  g\circ  f\sim  f]]></fr:tex> to <fr:tex display="inline"><![CDATA[H(x)]]></fr:tex>:
+    
+ 
+  
+  <html:figure><fr:resource hash="d44cf8233dcb91b18625bf2f4db60635"><fr:resource-content><html:img src="/d44cf8233dcb91b18625bf2f4db60635.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
+   
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
+
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
+
+
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
+
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
+
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
+
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     >={Triangle[open]},->.>
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}->
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}->
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
+        \begin {tikzcd}[column sep=huge, row sep=large]
+            {f(g(f(g(f(x)))))}
+                \arrow [r, "{G(f(g(f(x))))}"]
+                \arrow [d, "{\mathsf {ap}_{f\circ  g\circ  f}(H(x))}"']
+            & {f(g(f(x)))}
+                \arrow [d, "{\mathsf {ap}_f(H(x))}"] \\
+            {f(g(f(x)))}
+                \arrow [r, "{G(f(x))}"']
+            & {f(x)}
+        \end {tikzcd}
+    ]]></fr:resource-source></fr:resource></html:figure>
+ 
+
+    Hence
+    <fr:tex display="block"><![CDATA[
+        G(f(g(f(x))))\cdot \mathsf {ap}_f(H(x))
+        =\mathsf {ap}_{f\circ  g\circ  f}(H(x))\cdot  G(f(x)).
+    ]]></fr:tex>
+
+    Now calculate the required component by a single chain of paths:
+    <fr:tex display="block"><![CDATA[
+        \begin {aligned}
+        G'(f(x))
+        &:\equiv 
+          G(f(g(f(x))))^{-1}
+          \cdot \mathsf {ap}_f(H(g(f(x))))
+          \cdot  G(f(x)) \\
+        &=G(f(g(f(x))))^{-1}
+          \cdot \mathsf {ap}_f\left (\mathsf {ap}_{g\circ  f}(H(x))\right )
+          \cdot  G(f(x))
+          &&\text {naturality of }H \\
+        &=G(f(g(f(x))))^{-1}
+          \cdot \mathsf {ap}_{f\circ  g\circ  f}(H(x))
+          \cdot  G(f(x))
+          &&\text {functoriality of }\mathsf {ap} \\
+        &=G(f(g(f(x))))^{-1}
+          \cdot  G(f(g(f(x))))
+          \cdot \mathsf {ap}_f(H(x))
+          &&\text {naturality of }G\mathbin {\cdot }f \\
+        &=\mathsf {ap}_f(H(x))
+          &&\text {inverse and unit laws.}
+        \end {aligned}
+    ]]></fr:tex>
+    This chain is <fr:tex display="inline"><![CDATA[K(x)]]></fr:tex>. Therefore <fr:tex display="inline"><![CDATA[(g,G',H,K)]]></fr:tex> is coherently invertible.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/thm-0019/</fr:uri>
+                <fr:display-uri>thm-0019</fr:display-uri>
+                <fr:route>/thm-0019/</fr:route>
+                <fr:title text="A Coherently Invertible Map Is Contractible">A Coherently Invertible Map Is Contractible</fr:title>
+                <fr:taxon>Proposition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter><html:p>
+    Every <fr:link href="/def-005K/" title="Coherently Invertible Map" uri="https://caimeo.space/def-005K/" display-uri="def-005K" type="local">coherently invertible map</fr:link> is a
+    <fr:link href="/def-005F/" title="Contractible Map" uri="https://caimeo.space/def-005F/" display-uri="def-005F" type="local">contractible map</fr:link>. Explicitly, there is a function
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isCohInv}(f)\to \mathsf {isContrMap}(f).
+    ]]></fr:tex></html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex> have coherent inverse data <fr:tex display="inline"><![CDATA[(g,G,H,K)]]></fr:tex>, and fix
+    <fr:tex display="inline"><![CDATA[y:B]]></fr:tex>. We contract the fiber <fr:tex display="inline"><![CDATA[\mathsf {fib}_f(y)]]></fr:tex> around
+    <fr:tex display="block"><![CDATA[
+        c_y:\equiv (g(y),G(y)).
+    ]]></fr:tex>
+    Consider an arbitrary <fr:tex display="inline"><![CDATA[(x,p):\mathsf {fib}_f(y)]]></fr:tex>. An identity in the fiber
+    from <fr:tex display="inline"><![CDATA[(g(y),G(y))]]></fr:tex> to <fr:tex display="inline"><![CDATA[(x,p)]]></fr:tex> is equivalently a pair consisting of
+    <fr:tex display="block"><![CDATA[
+        \alpha :g(y)=x
+    ]]></fr:tex>
+    and a path asserting that the following triangle commutes:
+    
+ 
+  
+  <html:figure><fr:resource hash="f5c8dbc2e67e7825076c663aa3989b68"><fr:resource-content><html:img src="/f5c8dbc2e67e7825076c663aa3989b68.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
+   
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
+
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
+
+
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
+
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
+
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
+
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     >={Triangle[open]},->.>
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}->
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}->
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
+        \begin {tikzcd}[column sep=large, row sep=large]
+            {f(g(y))}
+                \arrow [rr, "{\mathsf {ap}_f(\alpha )}"]
+                \arrow [dr, "{G(y)}"']
+            && {f(x)}
+                \arrow [dl, "p"] \\
+            & y
+        \end {tikzcd}
+    ]]></fr:resource-source></fr:resource></html:figure>
+ 
+
+    In formulas, the compatibility type is
+    <fr:tex display="block"><![CDATA[
+        G(y)=\mathsf {ap}_f(\alpha )\cdot  p.
+    ]]></fr:tex>
+
+    By path induction on <fr:tex display="inline"><![CDATA[p:f(x)=y]]></fr:tex>, it suffices to treat
+    <fr:tex display="inline"><![CDATA[y\equiv  f(x)]]></fr:tex> and <fr:tex display="inline"><![CDATA[p\equiv \text {refl}_{f(x)}]]></fr:tex>. The triangle becomes
+    
+ 
+  
+  <html:figure><fr:resource hash="593631febdc46664bbe9f4ab683fb556"><fr:resource-content><html:img src="/593631febdc46664bbe9f4ab683fb556.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
+   
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
+
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
+
+
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
+
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
+
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
+
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     >={Triangle[open]},->.>
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}->
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}->
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
+        \begin {tikzcd}[column sep=large, row sep=large]
+            {f(g(f(x)))}
+                \arrow [rr, "{\mathsf {ap}_f(H(x))}"]
+                \arrow [dr, "{G(f(x))}"']
+            && {f(x)}
+                \arrow [dl, "{\text {refl}_{f(x)}}"] \\
+            & {f(x)}
+        \end {tikzcd}
+    ]]></fr:resource-source></fr:resource></html:figure>
+ 
+
+    We choose <fr:tex display="inline"><![CDATA[\alpha :\equiv  H(x):g(f(x))=x]]></fr:tex>. Its compatibility follows from
+    the path calculation
+    <fr:tex display="block"><![CDATA[
+        \begin {aligned}
+        G(f(x))
+        &=\mathsf {ap}_f(H(x))
+          &&\text {by the coherence }K(x) \\
+        &=\mathsf {ap}_f(H(x))\cdot \text {refl}_{f(x)}
+          &&\text {by the right unit law.}
+        \end {aligned}
+    ]]></fr:tex>
+    Thus <fr:tex display="inline"><![CDATA[(H(x),K'(x))]]></fr:tex> gives an identity
+    <fr:tex display="block"><![CDATA[
+        (g(f(x)),G(f(x)))=(x,\text {refl}_{f(x)})
+    ]]></fr:tex>
+    in the fiber over <fr:tex display="inline"><![CDATA[f(x)]]></fr:tex>. Path induction transports this identity back to
+    the original <fr:tex display="inline"><![CDATA[p:f(x)=y]]></fr:tex>, producing <fr:tex display="inline"><![CDATA[c_y=(x,p)]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[(x,p)]]></fr:tex> was
+    arbitrary, <fr:tex display="inline"><![CDATA[c_y]]></fr:tex> is a center of contraction. Since <fr:tex display="inline"><![CDATA[y]]></fr:tex> was arbitrary,
+    every fiber of <fr:tex display="inline"><![CDATA[f]]></fr:tex> is contractible.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:uri>https://caimeo.space/thm-001A/</fr:uri>
+                <fr:display-uri>thm-001A</fr:display-uri>
+                <fr:route>/thm-001A/</fr:route>
+                <fr:title text="Any Equivalence Is a Contractible Map">Any Equivalence Is a Contractible Map</fr:title>
+                <fr:taxon>Theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter><html:p>
+    For every map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>, there is a function
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isEquiv}(f)\to \mathsf {isContrMap}(f).
+    ]]></fr:tex></html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    An equivalence has an inverse by <fr:link href="/thm-0016/" title="An Equivalence Has an Inverse" uri="https://caimeo.space/thm-0016/" display-uri="thm-0016" type="local">An Equivalence Has an
+    Inverse</fr:link>. That inverse can be made coherent by <fr:link href="/thm-0018/" title="An Inverse Can Be Made Coherent" uri="https://caimeo.space/thm-0018/" display-uri="thm-0018" type="local">An Inverse Can Be
+    Made Coherent</fr:link>, and a coherently invertible map is contractible by
+    <fr:link href="/thm-0019/" title="A Coherently Invertible Map Is Contractible" uri="https://caimeo.space/thm-0019/" display-uri="thm-0019" type="local">A Coherently Invertible Map Is Contractible</fr:link>. Composing these
+    three constructions gives the asserted function.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:title text="Why this formulation matters">Why this formulation matters</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+        Fiberwise contractibility makes uniqueness explicit and behaves well under pullback and
+        composition. It also prepares the later proof that <fr:tex display="inline"><![CDATA[\mathsf {isEquiv}(f)]]></fr:tex> is a proposition:
+        once a fiber is contractible, there is no meaningful choice left in its center or contraction.
+    </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" expanded="false">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:date>
           <fr:year>2024</fr:year>
           <fr:month>2</fr:month>
           <fr:day>3</fr:day>

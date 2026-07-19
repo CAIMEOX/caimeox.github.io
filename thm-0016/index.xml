@@ -409,7 +409,34 @@
         <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter />
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:uri>https://caimeo.space/thm-001A/</fr:uri>
+            <fr:display-uri>thm-001A</fr:display-uri>
+            <fr:route>/thm-001A/</fr:route>
+            <fr:title text="Any Equivalence Is a Contractible Map">Any Equivalence Is a Contractible Map</fr:title>
+            <fr:taxon>Theorem</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter><html:p>
+    For every map <fr:tex display="inline"><![CDATA[f:A\to  B]]></fr:tex>, there is a function
+    <fr:tex display="block"><![CDATA[
+        \mathsf {isEquiv}(f)\to \mathsf {isContrMap}(f).
+    ]]></fr:tex></html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    An equivalence has an inverse by <fr:link href="/thm-0016/" title="An Equivalence Has an Inverse" uri="https://caimeo.space/thm-0016/" display-uri="thm-0016" type="local">An Equivalence Has an
+    Inverse</fr:link>. That inverse can be made coherent by <fr:link href="/thm-0018/" title="An Inverse Can Be Made Coherent" uri="https://caimeo.space/thm-0018/" display-uri="thm-0018" type="local">An Inverse Can Be
+    Made Coherent</fr:link>, and a coherently invertible map is contractible by
+    <fr:link href="/thm-0019/" title="A Coherently Invertible Map Is Contractible" uri="https://caimeo.space/thm-0019/" display-uri="thm-0019" type="local">A Coherently Invertible Map Is Contractible</fr:link>. Composing these
+    three constructions gives the asserted function.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
