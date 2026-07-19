@@ -1,5 +1,6 @@
 import 'ninja-keys';
 import 'katex';
+import 'katex/contrib/copy-tex';
 
 import autoRenderMath from 'katex/contrib/auto-render';
 
@@ -92,5 +93,4 @@ window.addEventListener("load", (event) => {
    ninja.data = items
   });
 });
-
 
