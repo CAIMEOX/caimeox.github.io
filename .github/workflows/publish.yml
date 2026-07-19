@@ -18,6 +18,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+    env:
+      OCAML_VERSION: "5.3.0"
+      FORESTER_VERSION: "5.0"
     steps:
       - uses: actions/checkout@v3
         with:
@@ -27,15 +30,26 @@ jobs:
       - name: "Set-up OCaml"
         uses: ocaml/setup-ocaml@v3
         with:
-          ocaml-compiler: "5.3.0"
+          ocaml-compiler: ${{ env.OCAML_VERSION }}
+
+      # setup-ocaml deliberately caches only the base compiler switch, not
+      # packages installed later in the job. Keep a separate, versioned cache
+      # for the switch after Forester has been installed.
+      - name: Restore Forester opam switch
+        uses: actions/cache@v5
+        with:
+          path: _opam
+          key: forester-opam-v1-${{ runner.os }}-${{ runner.arch }}-ocaml-${{ env.OCAML_VERSION }}-forester-${{ env.FORESTER_VERSION }}
 
       - name: Install Forester system dependencies
         run: sudo apt-get install -y libev-dev
 
-      - name: Install Forester when not restored from the opam cache
+      - name: Install Forester on cache miss
         run: |
-          if ! opam exec -- forester --help >/dev/null 2>&1; then
-            git clone --branch 5.0 --depth 1 \
+          if opam exec -- forester --help >/dev/null 2>&1; then
+            echo "Using Forester restored from the explicit opam switch cache."
+          else
+            git clone --branch "$FORESTER_VERSION" --depth 1 \
               https://git.sr.ht/~jonsterling/ocaml-forester
             opam pin add -y ./ocaml-forester
           fi
