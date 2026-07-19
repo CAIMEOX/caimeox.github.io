@@ -1,0 +1,18 @@
+\title{Identity and Composition of Continuous Maps}
+\taxon{Proposition}
+\import{macros}
+\p{
+    The identity map on every topological space is continuous. If
+    #{f:X\to Y} and #{g:Y\to Z} are [continuous maps](def-005N), then their
+    composite #{g\circ f:X\to Z} is continuous.
+}
+\proof{
+    For every open set #{U\subseteq X}, one has
+    #{\operatorname{id}_X^{-1}(U)=U}, so the identity is continuous. If
+    #{W\subseteq Z} is open, then
+    ##{
+        (g\circ f)^{-1}(W)=f^{-1}\left(g^{-1}(W)\right).
+    }
+    Continuity of #{g} makes #{g^{-1}(W)} open in #{Y}, and continuity of
+    #{f} then makes its preimage open in #{X}.
+}

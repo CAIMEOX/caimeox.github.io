@@ -1,0 +1,20 @@
+\title{Continuous Images Preserve Compactness}
+\taxon{Theorem}
+\import{macros}
+\p{
+    If #{X} is [compact](def-005R) and #{f:X\to Y} is continuous, then the
+    image #{f(X)}, with its subspace topology, is compact.
+}
+\proof{
+    Regard #{f} as a map #{\bar f:X\to f(X)}. It is continuous because the
+    preimage of a subspace-open set #{f(X)\cap O} is #{f^{-1}(O)}, which is
+    open in #{X}.
+
+    Let #{\mathcal{U}} be an open cover of #{f(X)}. The collection
+    ##{
+        \{\bar f^{-1}(U)\mid U\in\mathcal{U}\}
+    }
+    is an open cover of #{X}. Choose a finite subcover
+    #{\bar f^{-1}(U_1),\ldots,\bar f^{-1}(U_n)}. Surjectivity of #{\bar f}
+    then implies that #{U_1,\ldots,U_n} covers #{f(X)}.
+}

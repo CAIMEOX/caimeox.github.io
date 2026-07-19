@@ -1,0 +1,16 @@
+\title{An Infinite Cofinite Space Is Compact but Not Hausdorff}
+\taxon{Example}
+\p{
+    Let #{X} be infinite and carry the [cofinite topology](def-000E). Given an
+    open cover of #{X}, choose one nonempty member #{U_0}. Its complement is
+    finite. For each of the finitely many points outside #{U_0}, choose one
+    further member of the cover containing that point. Together with #{U_0},
+    these sets form a finite subcover, so #{X} is compact.
+}
+\p{
+    Any two nonempty open subsets of #{X} intersect: the complement of their
+    intersection is a union of two finite sets and cannot be all of the
+    infinite set #{X}. Distinct points therefore cannot have disjoint open
+    neighborhoods. Hence #{X} is not Hausdorff. The same observation shows
+    that #{X} is connected.
+}

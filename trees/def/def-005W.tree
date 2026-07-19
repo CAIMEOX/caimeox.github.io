@@ -1,0 +1,12 @@
+\title{Discrete and Indiscrete Topologies}
+\taxon{Definition}
+\p{
+    Let #{X} be a set. The \strong{discrete topology} on #{X} is the power set
+    #{\mathcal{P}(X)}, so every subset is open. The \strong{indiscrete
+    topology} is #{\{\varnothing,X\}}, so only the two sets required by the
+    topology axioms are open.
+}
+\p{
+    These are respectively the [finest and coarsest](def-005X) topologies on
+    the fixed underlying set #{X}.
+}

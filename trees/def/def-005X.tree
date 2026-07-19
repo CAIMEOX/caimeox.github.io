@@ -1,0 +1,13 @@
+\title{Comparison of Topologies}
+\taxon{Definition}
+\p{
+    Let #{\tau_1} and #{\tau_2} be topologies on the same set #{X}. The
+    topology #{\tau_1} is \strong{finer}, or \strong{stronger}, than
+    #{\tau_2} if
+    ##{
+        \tau_2\subseteq\tau_1.
+    }
+    Equivalently, #{\tau_2} is \strong{coarser}, or \strong{weaker}, than
+    #{\tau_1}. Thus a finer topology has more open sets and imposes a stronger
+    continuity requirement on maps into the space.
+}

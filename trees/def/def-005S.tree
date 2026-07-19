@@ -1,0 +1,11 @@
+\title{Hausdorff Space}
+\taxon{Definition}
+\p{
+    A topological space #{X} is \strong{Hausdorff}, or #{T_2}, if any two
+    distinct points can be separated by disjoint open neighborhoods. That is,
+    for #{x,y\in X} with #{x\neq y}, there are open sets #{U,V\subseteq X}
+    such that
+    ##{
+        x\in U,\qquad y\in V,\qquad U\cap V=\varnothing.
+    }
+}

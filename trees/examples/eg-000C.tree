@@ -1,0 +1,18 @@
+\title{An Uncountable Discrete Space Is Not Second-Countable}
+\taxon{Example}
+\p{
+    Let #{X} be an uncountable set with the [discrete topology](def-005W). For
+    every #{x\in X}, the one-element collection #{\{\{x\}\}} is a local basis
+    at #{x}; hence #{X} is first-countable.
+}
+\p{
+    On the other hand, every basis #{\mathcal{B}} for #{X} must contain every
+    singleton. Indeed, since #{\{x\}} is open, the basis property requires
+    some #{B\in\mathcal{B}} with
+    ##{
+        x\in B\subseteq\{x\},
+    }
+    and therefore #{B=\{x\}}. Thus #{\mathcal{B}} is uncountable, so #{X} is
+    not second-countable. This also shows why the two countability axioms are
+    genuinely different.
+}

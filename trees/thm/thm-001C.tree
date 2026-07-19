@@ -1,0 +1,21 @@
+\title{Basis Criterion for Continuity}
+\taxon{Proposition}
+\import{macros}
+\p{
+    Let #{\mathcal{B}} be a [basis](def-005M) for the topology of #{Y}. A map
+    #{f:X\to Y} is [continuous](def-005N) if and only if #{f^{-1}(B)} is open
+    in #{X} for every #{B\in\mathcal{B}}.
+}
+\proof{
+    The forward implication follows immediately from continuity because every
+    basis element is open. Conversely, suppose the preimage of each basis
+    element is open. Every open subset #{V\subseteq Y} is a union of basis
+    elements, say #{V=\bigcup_{i\in I}B_i}. Preimages preserve arbitrary
+    unions, so
+    ##{
+        f^{-1}(V)
+        =f^{-1}\left(\bigcup_{i\in I}B_i\right)
+        =\bigcup_{i\in I}f^{-1}(B_i).
+    }
+    The right-hand side is open in #{X}; hence #{f} is continuous.
+}

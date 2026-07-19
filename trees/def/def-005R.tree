@@ -1,0 +1,26 @@
+\title{Compact Space}
+\taxon{Definition}
+\p{
+    An \strong{open cover} of a topological space #{X} is a collection
+    #{\mathcal{U}} of open subsets such that
+    ##{
+        X=\bigcup_{U\in\mathcal{U}}U.
+    }
+    A \strong{finite subcover} is a finite subcollection
+    #{\mathcal{V}\subseteq\mathcal{U}} such that
+    ##{
+        X=\bigcup_{V\in\mathcal{V}}V.
+    }
+    The finite subcollection may be empty.
+}
+\p{
+    The space #{X} is \strong{compact} if every open cover of #{X} has a
+    finite subcover. A subset #{K\subseteq X} is compact when it is compact
+    with its [subspace topology](def-000D).
+}
+\p{
+    Following Munkres, compactness here does not include the
+    [Hausdorff](def-005S) condition. Some texts call this property
+    \em{quasi-compactness} and reserve \em{compact} for Hausdorff spaces with
+    the finite-subcover property.
+}

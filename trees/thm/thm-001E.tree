@@ -1,0 +1,20 @@
+\title{Universal Property of the Subspace Topology}
+\taxon{Proposition}
+\import{macros}
+\p{
+    Let #{A\subseteq X} carry the [subspace topology](def-000D), and let
+    #{\iota:A\hookrightarrow X} be the inclusion. A map #{f:Z\to A} is
+    continuous if and only if #{\iota\circ f:Z\to X} is continuous.
+}
+\proof{
+    The inclusion is continuous: for every open #{U\subseteq X}, its preimage
+    is #{A\cap U}, which is open in #{A}. Thus the forward implication follows
+    from [closure under composition](thm-001D).
+
+    Conversely, suppose #{\iota\circ f} is continuous. Every open subset of
+    #{A} has the form #{A\cap U} for some open #{U\subseteq X}, and
+    ##{
+        f^{-1}(A\cap U)=(\iota\circ f)^{-1}(U).
+    }
+    This set is open in #{Z}, so #{f} is continuous.
+}

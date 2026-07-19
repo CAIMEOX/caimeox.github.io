@@ -1,0 +1,24 @@
+\title{Quotient Topology and Quotient Space}
+\taxon{Definition}
+\p{
+    Let #{X} be a [topological space](def-000C) and let #{q:X\to Y} be a
+    surjection. The \strong{quotient topology} on #{Y} is defined by
+    ##{
+        U\subseteq Y\text{ is open}
+        \quad\Longleftrightarrow\quad
+        q^{-1}(U)\text{ is open in }X.
+    }
+    With this topology, #{q} is called a \strong{quotient map}. It is the
+    [finest topology](def-005X) on #{Y} for which #{q} is continuous.
+}
+\p{
+    In particular, if #{\sim} is an [equivalence relation](def-000X) on #{X},
+    the canonical surjection
+    ##{
+        q:X\longrightarrow X/{\sim},
+        \qquad x\longmapsto[x]
+    }
+    equips the [quotient set](def-002U) #{X/{\sim}} with a topology. The
+    resulting topological space is the \strong{quotient space} of #{X} by
+    #{\sim}.
+}

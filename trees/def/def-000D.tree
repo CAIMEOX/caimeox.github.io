@@ -1,5 +1,12 @@
-\title{Relative Topology}
+\title{Subspace (Relative) Topology}
 \taxon{Definition}
 \p{
-Let #{(X,\tau)} be a topological space and #{A\subseteq X}. Then #{\tau_A=\{U\cap A\mid U\in\tau\}} is a topology on #{A} called the \strong{relative topology} on #{A} induced by #{\tau}.
+    Let #{(X,\tau)} be a [topological space](def-000C) and let
+    #{A\subseteq X}. The topology
+    ##{
+        \tau_A=\{A\cap U\mid U\in\tau\}
+    }
+    on #{A} is the \strong{subspace topology}, also called the
+    \strong{relative topology}, induced by #{X}. Thus a subset of #{A} may be
+    open in the subspace even when it is not open as a subset of #{X}.
 }

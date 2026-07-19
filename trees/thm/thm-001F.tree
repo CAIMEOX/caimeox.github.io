@@ -1,0 +1,19 @@
+\title{Universal Property of the Quotient Topology}
+\taxon{Proposition}
+\import{macros}
+\p{
+    Let #{q:X\to Y} be a [quotient map](def-005P). For every topological
+    space #{Z}, a map #{g:Y\to Z} is continuous if and only if
+    #{g\circ q:X\to Z} is continuous.
+}
+\proof{
+    If #{g} is continuous, then #{g\circ q} is continuous by
+    [closure under composition](thm-001D). Conversely, suppose #{g\circ q} is
+    continuous and let #{W\subseteq Z} be open. Then
+    ##{
+        q^{-1}\left(g^{-1}(W)\right)
+        =(g\circ q)^{-1}(W)
+    }
+    is open in #{X}. The defining property of the quotient topology implies
+    that #{g^{-1}(W)} is open in #{Y}. Hence #{g} is continuous.
+}

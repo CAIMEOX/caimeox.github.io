@@ -1,0 +1,24 @@
+\title{Products of Euclidean Spaces}
+\taxon{Example}
+\p{
+    For positive integers #{m,n}, the coordinate-concatenation bijection
+    ##{
+        \mathbb{R}^m\times\mathbb{R}^n
+        \longrightarrow\mathbb{R}^{m+n},
+        \qquad
+        (x,y)\longmapsto(x_1,\ldots,x_m,y_1,\ldots,y_n)
+    }
+    is a homeomorphism from the product of the Euclidean topologies to the
+    Euclidean topology on #{\mathbb{R}^{m+n}}.
+}
+\p{
+    Around a point #{(x,y)}, Euclidean balls and products of Euclidean balls
+    refine one another. More precisely,
+    ##{
+        B_{\frac{\varepsilon}{\sqrt{2}}}(x)\times
+        B_{\frac{\varepsilon}{\sqrt{2}}}(y)
+        \subseteq B_\varepsilon(x,y)
+        \subseteq B_\varepsilon(x)\times B_\varepsilon(y).
+    }
+    The two sides therefore generate the same open neighborhoods.
+}

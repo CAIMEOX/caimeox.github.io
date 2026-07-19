@@ -1,0 +1,9 @@
+\title{The Real Line Is Locally Compact}
+\taxon{Example}
+\p{
+    For each #{x\in\mathbb{R}}, the closed interval
+    #{K=[x-1,x+1]} is compact by
+    [compactness of closed intervals](thm-001P). It contains the open interval
+    #{(x-1,x+1)}, so #{K} is a neighborhood of #{x}. Therefore the Euclidean
+    real line is [locally compact](def-005U).
+}

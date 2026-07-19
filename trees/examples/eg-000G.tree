@@ -1,0 +1,19 @@
+\title{The Real Line Is Second-Countable}
+\taxon{Example}
+\p{
+    In the Euclidean real line, let
+    ##{
+        \mathcal{B}
+        =\{(p,q)\mid p,q\in\mathbb{Q},\;p<q\}.
+    }
+    This collection is countable because #{\mathbb{Q}\times\mathbb{Q}} is
+    countable. It is a basis: whenever #{U} is open and #{x\in U}, there is an
+    interval #{(a,b)} with #{x\in(a,b)\subseteq U}; density of the rationals
+    gives #{p,q\in\mathbb{Q}} with
+    ##{
+        a<p<x<q<b.
+    }
+    Thus #{x\in(p,q)\subseteq U}. Hence #{\mathbb{R}} is second-countable and,
+    by [second-countability implies first-countability](thm-001M), also
+    first-countable.
+}

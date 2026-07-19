@@ -1,11 +1,24 @@
 \title{Euclidean Topology}
 \taxon{Definition}
+\import{macros}
 \p{
-A subset #{S} of #{\mathbb{R}} is said to be open in the \strong{euclidean topology} on #{\mathbb{R}} if #{\forall x\in S} there exists #{a,b\in\mathbb{R}} with #{a<b} st #{x\in(a,b)\in S}.
+    For #{n\geq 1}, let
+    ##{
+        d(x,y)=\sqrt{\sum_{i=1}^{n}(x_i-y_i)^2}
+    }
+    be the Euclidean distance on #{\R^n}. A subset #{U\subseteq\R^n} is
+    \strong{Euclidean open} if, for every #{x\in U}, there is some
+    #{\varepsilon>0} such that
+    ##{
+        B_\varepsilon(x)
+        =\{y\in\R^n\mid d(x,y)<\varepsilon\}
+        \subseteq U.
+    }
+    The collection of Euclidean open subsets is the \strong{Euclidean
+    topology} on #{\R^n}.
 }
-
-\p{The dual definition (using closed sets) is also valid.}
 \p{
-For each #{a} and #{b} in #{\mathbb{R}} with #{a<b} the closed intervcal #{[a,b]} is a closed set in the euclidean topology in #{\mathbb{R}}.
+    When #{n=1}, the open balls are open intervals. Thus a subset
+    #{U\subseteq\R} is Euclidean open precisely when every #{x\in U} lies in
+    an interval #{(a,b)\subseteq U}.
 }
-

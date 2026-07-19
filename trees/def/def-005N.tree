@@ -1,0 +1,15 @@
+\title{Continuous Map}
+\taxon{Definition}
+\p{
+    Let #{(X,\tau_X)} and #{(Y,\tau_Y)} be [topological spaces](def-000C). A
+    map #{f:X\to Y} is \strong{continuous} if the preimage of every open set
+    is open:
+    ##{
+        V\in\tau_Y
+        \quad\Longrightarrow\quad
+        f^{-1}(V)\in\tau_X.
+    }
+    Equivalently, the preimage of every closed subset of #{Y} is closed in
+    #{X}. Continuity therefore depends on both the underlying function and the
+    topologies placed on its domain and codomain.
+}

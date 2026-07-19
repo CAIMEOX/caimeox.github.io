@@ -1,0 +1,22 @@
+\title{Continuous Images Preserve Connectedness}
+\taxon{Theorem}
+\import{macros}
+\p{
+    If #{X} is [connected](def-005Q) and #{f:X\to Y} is continuous, then the
+    image #{f(X)}, with its subspace topology, is connected.
+}
+\proof{
+    First regard #{f} as a map #{\bar f:X\to f(X)}. This corestriction is
+    continuous: if #{U=f(X)\cap O} is open in the subspace #{f(X)}, with #{O}
+    open in #{Y}, then
+    ##{
+        \bar f^{-1}(U)=f^{-1}(O),
+    }
+    which is open in #{X}.
+
+    Suppose #{f(X)=U\cup V} were a separation. Continuity of #{\bar f} makes
+    #{\bar f^{-1}(U)} and #{\bar f^{-1}(V)} open in #{X}. They are disjoint
+    and cover #{X}; they are also nonempty because #{\bar f} is surjective.
+    They would therefore form a separation of #{X}, contradicting
+    connectedness.
+}

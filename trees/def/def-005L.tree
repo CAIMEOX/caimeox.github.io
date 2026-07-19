@@ -1,0 +1,17 @@
+\title{Neighborhood and Local Basis}
+\taxon{Definition}
+\p{
+    Let #{X} be a [topological space](def-000C) and let #{x\in X}. A subset
+    #{N\subseteq X} is a \strong{neighborhood} of #{x} if there is an open set
+    #{U} such that
+    ##{
+        x\in U\subseteq N.
+    }
+    In particular, a neighborhood need \strong{not} itself be open.
+}
+\p{
+    A collection #{\mathcal{B}_x} of neighborhoods of #{x} is a
+    \strong{local basis} at #{x} if every neighborhood #{N} of #{x} contains
+    some #{B\in\mathcal{B}_x}. A statement holds \strong{locally at #{x}} when
+    it holds on some neighborhood of #{x}.
+}

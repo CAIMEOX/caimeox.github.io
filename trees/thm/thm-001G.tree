@@ -1,0 +1,23 @@
+\title{Universal Property of the Product Topology}
+\taxon{Proposition}
+\import{macros}
+\p{
+    Let #{X=\prod_{i\in I}X_i} carry the [product topology](def-005V), with
+    projections #{\pi_i:X\to X_i}. A map #{f:Z\to X} is continuous if and
+    only if every coordinate map #{\pi_i\circ f:Z\to X_i} is continuous.
+}
+\proof{
+    If #{f} is continuous, each coordinate map is continuous because the
+    projections are continuous. Conversely, suppose all coordinate maps are
+    continuous. Every basic open subset of #{X} can be written as
+    ##{
+        B=\bigcap_{k=1}^{n}\pi_{i_k}^{-1}(U_{i_k}),
+    }
+    where each #{U_{i_k}} is open in #{X_{i_k}}. Therefore
+    ##{
+        f^{-1}(B)
+        =\bigcap_{k=1}^{n}(\pi_{i_k}\circ f)^{-1}(U_{i_k}),
+    }
+    a finite intersection of open subsets of #{Z}. The
+    [basis criterion](thm-001C) now shows that #{f} is continuous.
+}

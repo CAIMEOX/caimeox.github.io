@@ -1,0 +1,12 @@
+\title{Connected Space}
+\taxon{Definition}
+\p{
+    A \strong{separation} of a topological space #{X} is a pair of disjoint,
+    nonempty open sets #{U,V\subseteq X} such that #{X=U\cup V}. The space
+    #{X} is \strong{connected} if it admits no separation.
+}
+\p{
+    Equivalently, #{X} is connected precisely when its only clopen subsets are
+    #{\varnothing} and #{X}. In this note the empty space is regarded as
+    connected, since it has no separation.
+}

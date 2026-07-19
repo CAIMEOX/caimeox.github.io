@@ -1,0 +1,13 @@
+\title{A Half-Open Subspace}
+\taxon{Example}
+\p{
+    Give #{A=[0,1]} the [subspace topology](def-000D) inherited from the real
+    line. Then
+    the subset
+    ##{
+        \{x\in A\mid 0\leq x<1\}=A\cap(-1,1)
+    }
+    is open in #{A}, although it is not open in #{\mathbb{R}}. Likewise,
+    #{\{x\in A\mid 0<x\leq1\}} is open in #{A}. The word \em{open} therefore
+    always refers to an ambient topological space.
+}

@@ -1,0 +1,17 @@
+\title{A Hausdorff Space Need Not Be Compact}
+\taxon{Example}
+\p{
+    Every Euclidean space #{\mathbb{R}^n}, for #{n\geq1}, is Hausdorff. Given
+    distinct points #{x,y}, choose #{\varepsilon=d(x,y)/3}. The Euclidean balls
+    #{B_\varepsilon(x)} and #{B_\varepsilon(y)} are disjoint by the triangle
+    inequality, so they separate the two points.
+}
+\p{
+    Hausdorffness does not force compactness. On the real line, the collection
+    ##{
+        \{(-n,n)\mid n\in\mathbb{N},\;n\geq1\}
+    }
+    is an open cover of #{\mathbb{R}}, but every finite subcollection is
+    contained in one interval #{(-N,N)} and therefore fails to cover the real
+    line.
+}

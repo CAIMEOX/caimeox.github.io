@@ -1,0 +1,22 @@
+\title{Compact Subsets of Hausdorff Spaces Are Closed}
+\taxon{Theorem}
+\import{macros}
+\p{
+    If #{K} is a compact subspace of a [Hausdorff space](def-005S) #{X}, then
+    #{K} is closed in #{X}.
+}
+\proof{
+    The empty subset is closed, so suppose #{K} is nonempty. Fix
+    #{x\in X\setminus K}. For each #{y\in K}, choose disjoint open sets
+    #{U_y} and #{V_y} with #{y\in U_y} and #{x\in V_y}. The sets
+    #{K\cap U_y} form an open cover of the subspace #{K}; compactness gives
+    finitely many indices #{y_1,\ldots,y_n} for which
+    #{U_{y_1},\ldots,U_{y_n}} cover #{K}. Set
+    ##{
+        V=V_{y_1}\cap\cdots\cap V_{y_n}.
+    }
+    Then #{V} is an open neighborhood of #{x} disjoint from
+    #{U_{y_1}\cup\cdots\cup U_{y_n}}, and hence disjoint from #{K}. Every point
+    outside #{K} therefore has an open neighborhood contained in
+    #{X\setminus K}. The complement is open, so #{K} is closed.
+}

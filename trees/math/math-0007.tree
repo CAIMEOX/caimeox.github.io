@@ -4,7 +4,7 @@
 \import{macros}
 \p{
     Notes about multi-variable calculus, geometry of space and linear algebra.
-    Refer to [df-cm-2018](A Visual Introduction to Differential Forms and Calculus on Manifolds).
+    Refer to [A Visual Introduction to Differential Forms and Calculus on Manifolds](df-cm-2018).
 }
 \subtree{
     \title{Review of Vector Spaces}

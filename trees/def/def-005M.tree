@@ -1,0 +1,22 @@
+\title{Basis for a Topology}
+\taxon{Definition}
+\p{
+    Let #{(X,\tau)} be a [topological space](def-000C). A collection
+    #{\mathcal{B}\subseteq\tau} is a \strong{basis} for #{\tau} if, whenever
+    #{U\in\tau} and #{x\in U}, there is some #{B\in\mathcal{B}} such that
+    ##{
+        x\in B\subseteq U.
+    }
+    Equivalently, every open set is a union of members of #{\mathcal{B}}.
+}
+\p{
+    A collection #{\mathcal{B}\subseteq\mathcal{P}(X)} generates a topology
+    by taking arbitrary unions of its members provided that it covers #{X} and
+    satisfies the refinement condition
+    ##{
+        x\in B_1\cap B_2
+        \quad\Longrightarrow\quad
+        \exists B_3\in\mathcal{B},\;
+        x\in B_3\subseteq B_1\cap B_2.
+    }
+}

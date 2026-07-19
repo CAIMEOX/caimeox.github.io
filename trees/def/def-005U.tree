@@ -1,0 +1,14 @@
+\title{Locally Compact Space}
+\taxon{Definition}
+\p{
+    A topological space #{X} is \strong{locally compact at #{x\in X}} if
+    there exists a [compact](def-005R) subspace #{K\subseteq X} that is a
+    [neighborhood](def-005L) of #{x}. The space is \strong{locally compact} if
+    it is locally compact at every point.
+}
+\p{
+    This definition does not include the [Hausdorff](def-005S) condition. In a
+    different convention, some texts use \em{locally compact} to mean locally
+    compact and Hausdorff. Outside the Hausdorff setting, several common
+    formulations of local compactness need not be equivalent.
+}

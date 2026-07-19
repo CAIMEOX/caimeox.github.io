@@ -1,0 +1,34 @@
+\title{Closed Intervals in the Real Line Are Compact}
+\taxon{Theorem}
+\import{macros}
+\p{
+    For real numbers #{a\leq b}, the closed interval
+    #{[a,b]\subseteq\mathbb{R}} is compact in the Euclidean topology.
+}
+\proof{
+    The case #{a=b} is immediate. Assume #{a<b}, and let #{\mathcal{U}} be an
+    open cover of #{[a,b]}. Define
+    ##{
+        S=\{x\in[a,b]\mid [a,x]\text{ is covered by finitely many members of }
+        \mathcal{U}\}.
+    }
+    A member of the cover containing #{a} also contains a short interval to
+    the right of #{a}, so #{S} is nonempty. It is bounded above by #{b}; let
+    #{c=\sup S}, using the [least-upper-bound property](thm-0003).
+
+    Suppose #{c<b}. Choose #{U\in\mathcal{U}} containing #{c}. Since #{U} is
+    open in the subspace #{[a,b]}, some #{\varepsilon>0} satisfies
+    ##{
+        (c-\varepsilon,c+\varepsilon)\cap[a,b]\subseteq U.
+    }
+    Choose #{x\in S} with #{c-\frac{\varepsilon}{2}<x\leq c}. A finite cover of
+    #{[a,x]}, together with #{U}, covers #{[a,y]} for some #{y>c}. This places
+    #{y} in #{S}, contradicting that #{c} is an upper bound. Hence #{c=b}.
+
+    Finally choose a member of the cover containing #{b}. For some
+    #{\delta>0}, it contains every #{x\in[a,b]} satisfying
+    #{b-\delta<x\leq b}. Since #{b=\sup S}, choose
+    #{x\in S} with #{b-\delta<x\leq b}. A finite cover of #{[a,x]} together
+    with this last member covers all of #{[a,b]}. Therefore every open cover
+    has a finite subcover.
+}

@@ -1,0 +1,22 @@
+\title{Compact-to-Hausdorff Bijections Are Homeomorphisms}
+\taxon{Theorem}
+\import{macros}
+\p{
+    Let #{f:X\to Y} be a continuous bijection. If #{X} is compact and #{Y} is
+    Hausdorff, then #{f} is a [homeomorphism](def-005O).
+}
+\proof{
+    Let #{C\subseteq X} be closed. It is compact by
+    [compactness of closed subspaces](thm-001I), and its image #{f(C)} is
+    compact by [preservation of compactness](thm-001J). Since #{Y} is
+    Hausdorff, [compact subsets are closed](thm-001K), so #{f(C)} is closed in
+    #{Y}. Thus #{f} is a closed map.
+
+    For the inverse map #{f^{-1}:Y\to X}, the preimage of a closed set
+    #{C\subseteq X} is
+    ##{
+        (f^{-1})^{-1}(C)=f(C),
+    }
+    which is closed in #{Y}. Hence #{f^{-1}} is continuous, and #{f} is a
+    homeomorphism.
+}

@@ -1,0 +1,13 @@
+\title{Homeomorphism}
+\taxon{Definition}
+\p{
+    A \strong{homeomorphism} between topological spaces #{X} and #{Y} is a
+    bijective [continuous map](def-005N) #{f:X\to Y} whose inverse
+    #{f^{-1}:Y\to X} is also continuous. If such a map exists, #{X} and #{Y}
+    are \strong{homeomorphic}, written #{X\cong Y}.
+}
+\p{
+    A continuous bijection need not be a homeomorphism: continuity controls
+    preimages of open sets, whereas continuity of the inverse also requires
+    the original map to preserve the topology in the opposite direction.
+}

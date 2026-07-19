@@ -1,0 +1,14 @@
+\title{Countability Axioms}
+\taxon{Definition}
+\p{
+    A topological space #{X} is \strong{first-countable} if every point
+    #{x\in X} has an at most countable [local basis](def-005L). It is
+    \strong{second-countable} if its topology has an at most countable
+    [basis](def-005M).
+}
+\p{
+    These conditions constrain two different scales. First-countability gives
+    a countable collection of tests near each individual point, while
+    second-countability gives one countable collection of basic open sets for
+    the whole space.
+}

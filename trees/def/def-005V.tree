@@ -1,0 +1,24 @@
+\title{Product Topology}
+\taxon{Definition}
+\p{
+    Let #{\{X_i\}_{i\in I}} be a family of topological spaces. The
+    \strong{product topology} on the Cartesian product
+    #{\prod_{i\in I}X_i} has as a basis the sets
+    ##{
+        \prod_{i\in I}U_i,
+    }
+    where each #{U_i} is open in #{X_i} and #{U_i=X_i} for all but finitely
+    many indices #{i}. Equivalently, it is the [coarsest topology](def-005X)
+    that makes
+    every coordinate projection
+    ##{
+        \pi_i:\prod_{j\in I}X_j\longrightarrow X_i
+    }
+    continuous.
+}
+\p{
+    For a finite product #{X_1\times\cdots\times X_n}, the basic open sets are
+    simply products #{U_1\times\cdots\times U_n} of open sets. For an infinite
+    product, the finite-coordinate restriction distinguishes the product
+    topology from the generally [finer](def-005X) box topology.
+}

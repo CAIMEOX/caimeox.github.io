@@ -1,0 +1,252 @@
+\title{General Topology}
+\date{2026-07-19}
+\taxon{Topology}
+\import{macros}
+\p{
+    General topology studies the structures that remain after distance, angle,
+    and coordinates have been forgotten. What remains is a rule for deciding
+    which subsets are open. From this rule one can recover a useful notion of
+    nearness, formulate continuity without a metric, and compare spaces up to
+    homeomorphism. The resulting language is broad enough to treat Euclidean
+    spaces, function spaces, quotient constructions, and spaces that cannot be
+    described by distances at all.
+}
+\p{
+    This note follows the order and conventions of the general-topology part of
+    Munkres's [Topology](topology-2000), with occasional comparison to the
+    [Stacks Project topology chapter](https://stacks.math.columbia.edu/tag/004C).
+    In particular, compactness means the finite-subcover property and does not
+    include Hausdorffness.
+}
+
+\subtree{
+    \title{Open sets, neighborhoods, and bases}
+    \p{
+        A topology does not assign a numerical distance to two points. Instead,
+        it records which collections of points may serve as observable regions.
+        The three topology axioms say that these regions include the trivial
+        ones and are stable under the unions and finite intersections needed to
+        combine observations.
+    }
+    \transclude{def-000C}
+    \transclude{def-005X}
+    \p{
+        Open sets describe the space globally. Near one fixed point it is more
+        economical to work with neighborhoods, and for the entire topology it
+        is often enough to specify a basis. These two reductions will later
+        control continuity, countability, and product constructions.
+    }
+    \transclude{def-005L}
+    \transclude{def-005M}
+    \p{
+        A single set can carry many topologies. At the two extremes, the
+        discrete topology declares every subset open, whereas the indiscrete
+        topology retains only the opens forced by the axioms. Euclidean
+        topology and, on an infinite set, cofinite topology provide less
+        degenerate examples between these extremes.
+    }
+    \transclude{def-005W}
+    \transclude{def-000B}
+    \transclude{def-000E}
+}
+
+\subtree{
+    \title{Continuous maps and homeomorphisms}
+    \p{
+        Once spaces have been specified, the appropriate maps between them are
+        those that respect open sets. The preimage formulation is deliberately
+        asymmetric: it works for every function, preserves unions and
+        intersections, and therefore composes without additional hypotheses.
+    }
+    \transclude{def-005N}
+    \transclude{thm-001C}
+    \transclude{thm-001D}
+    \p{
+        Continuity belongs to a map together with its domain and codomain
+        topologies; it is not merely a property of the underlying formula. The
+        identity between two differently topologized copies of the same set is
+        the smallest example where this dependence becomes visible.
+    }
+    \transclude{eg-0008}
+    \p{
+        A homeomorphism is the topological analogue of an isomorphism. It
+        permits information to move continuously in both directions, so every
+        property expressed solely in terms of the topology is preserved.
+    }
+    \transclude{def-005O}
+    \transclude{eg-000B}
+}
+
+\subtree{
+    \title{Subspaces, products, and quotients}
+    \p{
+        Three constructions account for a large fraction of naturally
+        occurring spaces. A subset inherits opens from an ambient space, a
+        product is observed through its coordinate projections, and a quotient
+        is obtained by identifying points. Their definitions are best read
+        together using the [comparison of topologies](def-005X): subspace and
+        product topologies are the coarsest topologies making the relevant maps
+        continuous, while the quotient topology is the finest one detected by
+        the quotient map.
+    }
+
+    \subtree{
+        \title{Subspaces}
+        \p{
+            Passing to a subspace changes the ambient meaning of openness. An
+            endpoint can acquire an open one-sided neighborhood even though no
+            such set is open in the real line itself.
+        }
+        \transclude{def-000D}
+        \transclude{thm-001E}
+        \transclude{eg-0009}
+    }
+
+    \subtree{
+        \title{Products}
+        \p{
+            The product topology permits observations in finitely many
+            coordinates at a time. This finite-coordinate condition is
+            invisible for ordinary finite-dimensional Euclidean spaces but is
+            essential for infinite products.
+        }
+        \transclude{def-005V}
+        \transclude{thm-001G}
+        \transclude{eg-000D}
+    }
+
+    \subtree{
+        \title{Quotients}
+        \p{
+            A quotient reverses the direction of construction. Instead of
+            restricting an existing topology, it asks which subsets of the
+            target can be recognized as open after pulling them back to the
+            source. Its universal property is the practical way to construct
+            maps out of a quotient.
+        }
+        \transclude{def-005P}
+        \transclude{thm-001F}
+    }
+}
+
+\subtree{
+    \title{Connectedness}
+    \p{
+        Connectedness asks whether a space can be decomposed into two open
+        pieces without overlap. This is a global property: every sufficiently
+        small portion of a space may look simple while the whole space still
+        splits into disconnected pieces.
+    }
+    \transclude{def-005Q}
+    \p{
+        The least-upper-bound property of the real numbers prevents an interval
+        from splitting at an omitted boundary point. This supplies the basic
+        source of connected examples in analysis.
+    }
+    \transclude{thm-001O}
+    \p{
+        The next theorem makes connectedness useful under constructions. A
+        continuous map may collapse points, but it cannot tear one connected
+        space into a disconnected image.
+    }
+    \transclude{thm-001H}
+}
+
+\subtree{
+    \title{Compactness and Hausdorff separation}
+    \p{
+        Compactness replaces an arbitrary amount of local covering data by a
+        finite amount. It is a topological finiteness condition, not a statement
+        about numerical boundedness. Closed bounded intervals motivate the
+        definition, but the definition continues to make sense in every
+        topological space.
+    }
+    \transclude{def-005R}
+    \transclude{thm-001P}
+    \transclude{thm-001I}
+    \transclude{thm-001J}
+    \p{
+        Hausdorffness and compactness do not imply one another. Hausdorffness
+        requires distinct points to admit disjoint observations and thereby
+        rules out several pathologies of coarse topologies. It passes to
+        subspaces and products, though an arbitrary quotient of a Hausdorff
+        space need not remain Hausdorff.
+    }
+    \transclude{def-005S}
+    \transclude{thm-001N}
+    \transclude{thm-001K}
+    \p{
+        The Euclidean real line is Hausdorff but noncompact. In the other
+        direction, an infinite cofinite space is compact and connected, yet it
+        is not Hausdorff.
+    }
+    \transclude{eg-000H}
+    \transclude{eg-000E}
+    \p{
+        Compactness and Hausdorffness become especially effective when they
+        occur on opposite sides of a continuous bijection. Compactness makes
+        closed information survive the map, and Hausdorffness recognizes the
+        image as closed. This supplies a widely used criterion for proving that
+        a bijection is a homeomorphism.
+    }
+    \transclude{thm-001L}
+    \p{
+        We can now return to the quotient construction. Gluing the two
+        endpoints of a compact interval produces a circle, and the criterion
+        above turns the evident continuous bijection into a homeomorphism.
+    }
+    \transclude{eg-000A}
+}
+
+\subtree{
+    \title{Countability axioms}
+    \p{
+        A basis may still be too large for explicit arguments. The two standard
+        countability axioms ask whether local neighborhoods or the entire
+        topology can be controlled by countable data. The second condition is
+        stronger because one global basis must work simultaneously at every
+        point.
+    }
+    \transclude{def-005T}
+    \transclude{thm-001M}
+    \p{
+        Rational endpoints give a countable basis for the Euclidean real line.
+        In contrast, an uncountable discrete space has a one-element local
+        basis at every point but cannot have a countable global basis.
+    }
+    \transclude{eg-000G}
+    \transclude{eg-000C}
+    \p{
+        First-countability explains why sequences suffice for many arguments in
+        metric spaces. Without such a hypothesis, sequences alone may fail to
+        detect closure or continuity; nets or filters are then the appropriate
+        general substitutes.
+    }
+}
+
+\subtree{
+    \title{Local compactness}
+    \p{
+        A noncompact space may nevertheless look compact around each point.
+        Local compactness records this intermediate situation. It is strong
+        enough to support many constructions from analysis while still
+        including open subsets of Euclidean spaces and manifolds.
+    }
+    \transclude{def-005U}
+    \transclude{eg-000F}
+    \p{
+        Keeping Hausdorffness separate from local compactness makes the
+        convention explicit. It also prevents equivalent formulations from the
+        Hausdorff setting from being used automatically in spaces where those
+        formulations may diverge.
+    }
+}
+
+\p{
+    The concepts above form the basic toolkit of point-set topology. Bases
+    present topologies, continuous maps compare them, subspaces, products, and
+    quotients construct new spaces, and connectedness, compactness,
+    Hausdorffness, countability, and local compactness measure the resulting
+    spaces. Natural next steps include stronger separation axioms, the
+    Tychonoff theorem, metrization theorems, and compactifications.
+}

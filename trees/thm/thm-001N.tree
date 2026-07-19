@@ -1,0 +1,19 @@
+\title{Subspaces and Products Preserve Hausdorffness}
+\taxon{Proposition}
+\import{macros}
+\p{
+    Every subspace of a Hausdorff space is Hausdorff, and every product of
+    Hausdorff spaces is Hausdorff in the [product topology](def-005V).
+}
+\proof{
+    Let #{A\subseteq X}, where #{X} is Hausdorff, and choose distinct points
+    #{x,y\in A}. Disjoint open neighborhoods #{U,V\subseteq X} of #{x} and
+    #{y} restrict to disjoint open neighborhoods #{A\cap U} and #{A\cap V} in
+    #{A}. Thus #{A} is Hausdorff.
+
+    Now let #{X=\prod_{i\in I}X_i}, with every #{X_i} Hausdorff, and choose
+    distinct points #{x,y\in X}. They differ in some coordinate #{i}. Choose
+    disjoint open neighborhoods #{U_i,V_i\subseteq X_i} of #{x_i} and #{y_i}.
+    Their inverse images #{\pi_i^{-1}(U_i)} and #{\pi_i^{-1}(V_i)} are
+    disjoint open neighborhoods of #{x} and #{y} in #{X}.
+}

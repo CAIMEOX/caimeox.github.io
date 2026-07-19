@@ -1,0 +1,17 @@
+\title{Closed Subspaces of Compact Spaces Are Compact}
+\taxon{Proposition}
+\import{macros}
+\p{
+    Every closed subspace #{A} of a [compact space](def-005R) #{X} is compact.
+}
+\proof{
+    Let #{\mathcal{U}} be an open cover of #{A} by sets open in its subspace
+    topology. For every #{U\in\mathcal{U}}, choose an open subset
+    #{V_U\subseteq X} with #{U=A\cap V_U}. Then
+    ##{
+        \{X\setminus A\}\cup\{V_U\mid U\in\mathcal{U}\}
+    }
+    is an open cover of #{X}. A finite subcover of #{X}, after discarding
+    #{X\setminus A}, yields a finite subcover of #{A} by members of
+    #{\mathcal{U}}.
+}

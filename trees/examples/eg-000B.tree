@@ -1,0 +1,17 @@
+\title{The Real Line and an Open Interval Are Homeomorphic}
+\taxon{Example}
+\p{
+    The map
+    ##{
+        f:\mathbb{R}\longrightarrow(0,1),
+        \qquad
+        f(x)=\frac12+\frac{1}{\pi}\arctan x
+    }
+    is a bijection. It is continuous, and its inverse
+    ##{
+        f^{-1}(t)=\tan\left(\pi\left(t-\frac12\right)\right)
+    }
+    is continuous on #{(0,1)}. Hence #{f} is a [homeomorphism](def-005O).
+    Topologically, boundedness and total length do not distinguish the open
+    interval from the whole real line.
+}

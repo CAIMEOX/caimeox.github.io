@@ -1,0 +1,20 @@
+\title{Continuity Depends on the Topology}
+\taxon{Example}
+\p{
+    Put the Euclidean topology #{\tau_e} and the cofinite topology #{\tau_c}
+    on the same underlying set #{\mathbb{R}}. The identity function
+    ##{
+        \operatorname{id}:(\mathbb{R},\tau_e)
+        \longrightarrow(\mathbb{R},\tau_c)
+    }
+    is continuous. Indeed, the complement of every cofinite open set is
+    finite. Singletons are Euclidean closed, and finite unions of closed sets
+    remain closed, so every cofinite open set is Euclidean open.
+}
+\p{
+    The identity in the reverse direction is not continuous. The interval
+    #{(0,1)} is Euclidean open, but its preimage under the identity is not
+    cofinite open because #{\mathbb{R}\setminus(0,1)} is infinite. Thus the
+    same set-theoretic function can be continuous in one direction and
+    discontinuous in the other.
+}

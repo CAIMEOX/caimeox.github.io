@@ -1,10 +1,17 @@
 \title{Topological Space}
 \taxon{Definition}
 \p{
-A \strong{topological space} is a set #{S} together with a collection #{\tau} of subsets called open sets such that
-\ul{
-\li{T1: #{S,\varnothing\in\tau}}
-\li{T2: #{\forall U,V\in\tau, U\cap V\in\tau}}
-\li{T3: The union of any collection of open sets is open.}
-}
+    A \strong{topology} on a set #{X} is a collection
+    #{\tau\subseteq\mathcal{P}(X)} satisfying the following axioms:
+    \ul{
+        \li{#{\varnothing\in\tau} and #{X\in\tau}.}
+        \li{If #{\{U_i\}_{i\in I}\subseteq\tau}, then
+            #{\bigcup_{i\in I}U_i\in\tau}.}
+        \li{If #{U_1,\ldots,U_n\in\tau}, then
+            #{U_1\cap\cdots\cap U_n\in\tau}.}
+    }
+    The pair #{(X,\tau)} is a \strong{topological space}, and the members of
+    #{\tau} are its \strong{open sets}. A subset #{F\subseteq X} is
+    \strong{closed} when #{X\setminus F} is open; it is \strong{clopen} when
+    it is both open and closed.
 }

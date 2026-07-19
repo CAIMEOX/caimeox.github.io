@@ -1,0 +1,10 @@
+\title{Topology}
+\taxon{reference}
+\author{james-munkres}
+\meta{external}{https://www.pearson.com/en-us/subject-catalog/p/Munkres-Topology-Classic-Version-2nd-Edition/P200000006299/9780137848669}
+\meta{venue}{Topology, 2nd Edition}
+\p{
+    The second edition develops general topology from topological spaces and
+    continuous functions through connectedness, compactness, countability, and
+    separation axioms before turning to algebraic topology.
+}

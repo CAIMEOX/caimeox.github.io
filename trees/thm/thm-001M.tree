@@ -1,0 +1,17 @@
+\title{Second-Countability Implies First-Countability}
+\taxon{Proposition}
+\import{macros}
+\p{
+    Every [second-countable](def-005T) topological space is first-countable.
+}
+\proof{
+    Let #{\mathcal{B}} be a countable basis for #{X}. For each #{x\in X}, set
+    ##{
+        \mathcal{B}_x=\{B\in\mathcal{B}\mid x\in B\}.
+    }
+    This is a countable collection of open neighborhoods of #{x}. If #{N} is
+    any neighborhood of #{x}, choose an open set #{U} with
+    #{x\in U\subseteq N}. The basis property supplies
+    #{B\in\mathcal{B}_x} with #{x\in B\subseteq U\subseteq N}. Therefore
+    #{\mathcal{B}_x} is a countable local basis at #{x}.
+}

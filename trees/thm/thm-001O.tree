@@ -1,0 +1,32 @@
+\title{Intervals in the Real Line Are Connected}
+\taxon{Theorem}
+\import{macros}
+\p{
+    Let #{I\subseteq\mathbb{R}} be an interval: whenever #{a,b\in I} and
+    #{a<c<b}, one also has #{c\in I}. Then #{I}, with the Euclidean subspace
+    topology, is [connected](def-005Q).
+}
+\proof{
+    Suppose instead that #{I=U\cup V} is a separation. Choose #{u\in U} and
+    #{v\in V}; after exchanging the names if necessary, assume #{u<v}. The
+    interval property gives #{[u,v]\subseteq I}. Set
+    ##{
+        S=U\cap[u,v],
+        \qquad c=\sup S.
+    }
+    The supremum exists by the [least-upper-bound property](thm-0003), and
+    #{u\leq c\leq v}, so #{c\in I}.
+
+    The point #{c} cannot lie in #{U}. If #{c<v}, openness of #{U} in #{I}
+    would place points of #{U\cap[u,v]} strictly above #{c}, contradicting the
+    definition of the supremum. If #{c=v}, then membership in #{U} would
+    contradict #{v\in V} and #{U\cap V=\varnothing}. Hence #{c\in V}.
+
+    Since #{V} is open in #{I}, some #{\varepsilon>0} satisfies
+    ##{
+        (c-\varepsilon,c+\varepsilon)\cap I\subseteq V.
+    }
+    By the defining property of the supremum, there is some #{s\in S} with
+    #{c-\varepsilon<s\leq c}. Since #{c\notin U}, in fact #{s<c}. But then
+    #{s\in U\cap V}, a contradiction. Thus no separation exists.
+}

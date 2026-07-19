@@ -1,0 +1,29 @@
+\title{The Circle as a Quotient of an Interval}
+\taxon{Example}
+\p{
+    Let
+    ##{
+        S^1=\{z\in\mathbb{C}\mid |z|=1\},
+        \qquad q:[0,1]\longrightarrow S^1,
+        \qquad q(t)=e^{2\pi i t}.
+    }
+    The map #{q} identifies precisely the endpoints #{0} and #{1}. Let
+    #{p:[0,1]\to[0,1]/(0\sim1)} be the canonical quotient map. There is a
+    unique bijection
+    ##{
+        \bar q:[0,1]/(0\sim1)\longrightarrow S^1
+    }
+    such that #{\bar q\circ p=q}.
+}
+\p{
+    Since #{q} is continuous, the [universal property of the quotient](thm-001F)
+    makes #{\bar q} continuous. The interval #{[0,1]} is compact by
+    [compactness of closed intervals](thm-001P), and its quotient is compact by
+    [preservation under continuous images](thm-001J). The circle is Hausdorff
+    as a subspace of the Euclidean plane. Therefore the
+    [compact-to-Hausdorff criterion](thm-001L) shows that #{\bar q} is a
+    homeomorphism:
+    ##{
+        [0,1]/(0\sim1)\cong S^1.
+    }
+}
