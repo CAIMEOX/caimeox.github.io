@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors />
+    <fr:uri>https://caimeo.space/james-munkres/</fr:uri>
+    <fr:display-uri>james-munkres</fr:display-uri>
+    <fr:route>/james-munkres/</fr:route>
+    <fr:title text="James R. Munkres">James R. Munkres</fr:title>
+    <fr:taxon>person</fr:taxon>
+    <fr:meta name="external">https://math.mit.edu/directory/faculty/emeriti.html</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter />
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

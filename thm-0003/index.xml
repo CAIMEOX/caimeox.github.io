@@ -159,7 +159,96 @@
         <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter />
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:uri>https://caimeo.space/thm-001P/</fr:uri>
+            <fr:display-uri>thm-001P</fr:display-uri>
+            <fr:route>/thm-001P/</fr:route>
+            <fr:title text="Closed Intervals in the Real Line Are Compact">Closed Intervals in the Real Line Are Compact</fr:title>
+            <fr:taxon>Theorem</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter><html:p>
+    For real numbers <fr:tex display="inline"><![CDATA[a\leq  b]]></fr:tex>, the closed interval
+    <fr:tex display="inline"><![CDATA[[a,b]\subseteq \mathbb {R}]]></fr:tex> is compact in the Euclidean topology.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    The case <fr:tex display="inline"><![CDATA[a=b]]></fr:tex> is immediate. Assume <fr:tex display="inline"><![CDATA[a<b]]></fr:tex>, and let <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> be an
+    open cover of <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex>. Define
+    <fr:tex display="block"><![CDATA[
+        S=\{x\in [a,b]\mid  [a,x]\text { is covered by finitely many members of }
+        \mathcal {U}\}.
+    ]]></fr:tex>
+    A member of the cover containing <fr:tex display="inline"><![CDATA[a]]></fr:tex> also contains a short interval to
+    the right of <fr:tex display="inline"><![CDATA[a]]></fr:tex>, so <fr:tex display="inline"><![CDATA[S]]></fr:tex> is nonempty. It is bounded above by <fr:tex display="inline"><![CDATA[b]]></fr:tex>; let
+    <fr:tex display="inline"><![CDATA[c=\sup  S]]></fr:tex>, using the <fr:link href="/thm-0003/" title="Existence theorem" uri="https://caimeo.space/thm-0003/" display-uri="thm-0003" type="local">least-upper-bound property</fr:link>.
+
+    Suppose <fr:tex display="inline"><![CDATA[c<b]]></fr:tex>. Choose <fr:tex display="inline"><![CDATA[U\in \mathcal {U}]]></fr:tex> containing <fr:tex display="inline"><![CDATA[c]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[U]]></fr:tex> is
+    open in the subspace <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex>, some <fr:tex display="inline"><![CDATA[\varepsilon >0]]></fr:tex> satisfies
+    <fr:tex display="block"><![CDATA[
+        (c-\varepsilon ,c+\varepsilon )\cap [a,b]\subseteq  U.
+    ]]></fr:tex>
+    Choose <fr:tex display="inline"><![CDATA[x\in  S]]></fr:tex> with <fr:tex display="inline"><![CDATA[c-\frac {\varepsilon }{2}<x\leq  c]]></fr:tex>. A finite cover of
+    <fr:tex display="inline"><![CDATA[[a,x]]]></fr:tex>, together with <fr:tex display="inline"><![CDATA[U]]></fr:tex>, covers <fr:tex display="inline"><![CDATA[[a,y]]]></fr:tex> for some <fr:tex display="inline"><![CDATA[y>c]]></fr:tex>. This places
+    <fr:tex display="inline"><![CDATA[y]]></fr:tex> in <fr:tex display="inline"><![CDATA[S]]></fr:tex>, contradicting that <fr:tex display="inline"><![CDATA[c]]></fr:tex> is an upper bound. Hence <fr:tex display="inline"><![CDATA[c=b]]></fr:tex>.
+
+    Finally choose a member of the cover containing <fr:tex display="inline"><![CDATA[b]]></fr:tex>. For some
+    <fr:tex display="inline"><![CDATA[\delta >0]]></fr:tex>, it contains every <fr:tex display="inline"><![CDATA[x\in [a,b]]]></fr:tex> satisfying
+    <fr:tex display="inline"><![CDATA[b-\delta <x\leq  b]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[b=\sup  S]]></fr:tex>, choose
+    <fr:tex display="inline"><![CDATA[x\in  S]]></fr:tex> with <fr:tex display="inline"><![CDATA[b-\delta <x\leq  b]]></fr:tex>. A finite cover of <fr:tex display="inline"><![CDATA[[a,x]]]></fr:tex> together
+    with this last member covers all of <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex>. Therefore every open cover
+    has a finite subcover.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:uri>https://caimeo.space/thm-001O/</fr:uri>
+            <fr:display-uri>thm-001O</fr:display-uri>
+            <fr:route>/thm-001O/</fr:route>
+            <fr:title text="Intervals in the Real Line Are Connected">Intervals in the Real Line Are Connected</fr:title>
+            <fr:taxon>Theorem</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[I\subseteq \mathbb {R}]]></fr:tex> be an interval: whenever <fr:tex display="inline"><![CDATA[a,b\in  I]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[a<c<b]]></fr:tex>, one also has <fr:tex display="inline"><![CDATA[c\in  I]]></fr:tex>. Then <fr:tex display="inline"><![CDATA[I]]></fr:tex>, with the Euclidean subspace
+    topology, is <fr:link href="/def-005Q/" title="Connected Space" uri="https://caimeo.space/def-005Q/" display-uri="def-005Q" type="local">connected</fr:link>.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Suppose instead that <fr:tex display="inline"><![CDATA[I=U\cup  V]]></fr:tex> is a separation. Choose <fr:tex display="inline"><![CDATA[u\in  U]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[v\in  V]]></fr:tex>; after exchanging the names if necessary, assume <fr:tex display="inline"><![CDATA[u<v]]></fr:tex>. The
+    interval property gives <fr:tex display="inline"><![CDATA[[u,v]\subseteq  I]]></fr:tex>. Set
+    <fr:tex display="block"><![CDATA[
+        S=U\cap [u,v],
+        \qquad  c=\sup  S.
+    ]]></fr:tex>
+    The supremum exists by the <fr:link href="/thm-0003/" title="Existence theorem" uri="https://caimeo.space/thm-0003/" display-uri="thm-0003" type="local">least-upper-bound property</fr:link>, and
+    <fr:tex display="inline"><![CDATA[u\leq  c\leq  v]]></fr:tex>, so <fr:tex display="inline"><![CDATA[c\in  I]]></fr:tex>.
+
+    The point <fr:tex display="inline"><![CDATA[c]]></fr:tex> cannot lie in <fr:tex display="inline"><![CDATA[U]]></fr:tex>. If <fr:tex display="inline"><![CDATA[c<v]]></fr:tex>, openness of <fr:tex display="inline"><![CDATA[U]]></fr:tex> in <fr:tex display="inline"><![CDATA[I]]></fr:tex>
+    would place points of <fr:tex display="inline"><![CDATA[U\cap [u,v]]]></fr:tex> strictly above <fr:tex display="inline"><![CDATA[c]]></fr:tex>, contradicting the
+    definition of the supremum. If <fr:tex display="inline"><![CDATA[c=v]]></fr:tex>, then membership in <fr:tex display="inline"><![CDATA[U]]></fr:tex> would
+    contradict <fr:tex display="inline"><![CDATA[v\in  V]]></fr:tex> and <fr:tex display="inline"><![CDATA[U\cap  V=\varnothing ]]></fr:tex>. Hence <fr:tex display="inline"><![CDATA[c\in  V]]></fr:tex>.
+
+    Since <fr:tex display="inline"><![CDATA[V]]></fr:tex> is open in <fr:tex display="inline"><![CDATA[I]]></fr:tex>, some <fr:tex display="inline"><![CDATA[\varepsilon >0]]></fr:tex> satisfies
+    <fr:tex display="block"><![CDATA[
+        (c-\varepsilon ,c+\varepsilon )\cap  I\subseteq  V.
+    ]]></fr:tex>
+    By the defining property of the supremum, there is some <fr:tex display="inline"><![CDATA[s\in  S]]></fr:tex> with
+    <fr:tex display="inline"><![CDATA[c-\varepsilon <s\leq  c]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[c\notin  U]]></fr:tex>, in fact <fr:tex display="inline"><![CDATA[s<c]]></fr:tex>. But then
+    <fr:tex display="inline"><![CDATA[s\in  U\cap  V]]></fr:tex>, a contradiction. Thus no separation exists.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>

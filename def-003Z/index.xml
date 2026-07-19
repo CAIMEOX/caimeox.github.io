@@ -46,7 +46,7 @@
           <fr:mainmatter>
             <html:p>
     Notes about multi-variable calculus, geometry of space and linear algebra.
-    Refer to <fr:link href="https://caimeo.space/A%20Visual%20Introduction%20to%20Differential%20Forms%20and%20Calculus%20on%20Manifolds/" type="external">df-cm-2018</fr:link>.
+    Refer to <fr:link href="/df-cm-2018/" title="A Visual Introduction to Differential Forms and Calculus on Manifolds" uri="https://caimeo.space/df-cm-2018/" display-uri="df-cm-2018" type="local">A Visual Introduction to Differential Forms and Calculus on Manifolds</fr:link>.
 </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>

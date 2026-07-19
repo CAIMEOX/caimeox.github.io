@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors />
+    <fr:uri>https://caimeo.space/thm-001M/</fr:uri>
+    <fr:display-uri>thm-001M</fr:display-uri>
+    <fr:route>/thm-001M/</fr:route>
+    <fr:title text="Second-Countability Implies First-Countability">Second-Countability Implies First-Countability</fr:title>
+    <fr:taxon>Proposition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter><html:p>
+    Every <fr:link href="/def-005T/" title="Countability Axioms" uri="https://caimeo.space/def-005T/" display-uri="def-005T" type="local">second-countable</fr:link> topological space is first-countable.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline"><![CDATA[\mathcal {B}]]></fr:tex> be a countable basis for <fr:tex display="inline"><![CDATA[X]]></fr:tex>. For each <fr:tex display="inline"><![CDATA[x\in  X]]></fr:tex>, set
+    <fr:tex display="block"><![CDATA[
+        \mathcal {B}_x=\{B\in \mathcal {B}\mid  x\in  B\}.
+    ]]></fr:tex>
+    This is a countable collection of open neighborhoods of <fr:tex display="inline"><![CDATA[x]]></fr:tex>. If <fr:tex display="inline"><![CDATA[N]]></fr:tex> is
+    any neighborhood of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, choose an open set <fr:tex display="inline"><![CDATA[U]]></fr:tex> with
+    <fr:tex display="inline"><![CDATA[x\in  U\subseteq  N]]></fr:tex>. The basis property supplies
+    <fr:tex display="inline"><![CDATA[B\in \mathcal {B}_x]]></fr:tex> with <fr:tex display="inline"><![CDATA[x\in  B\subseteq  U\subseteq  N]]></fr:tex>. Therefore
+    <fr:tex display="inline"><![CDATA[\mathcal {B}_x]]></fr:tex> is a countable local basis at <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>19</fr:day>
+            </fr:date>
+            <fr:uri>https://caimeo.space/math-0009/</fr:uri>
+            <fr:display-uri>math-0009</fr:display-uri>
+            <fr:route>/math-0009/</fr:route>
+            <fr:title text="General Topology">General Topology</fr:title>
+            <fr:taxon>Topology</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    General topology studies the structures that remain after distance, angle,
+    and coordinates have been forgotten. What remains is a rule for deciding
+    which subsets are open. From this rule one can recover a useful notion of
+    nearness, formulate continuity without a metric, and compare spaces up to
+    homeomorphism. The resulting language is broad enough to treat Euclidean
+    spaces, function spaces, quotient constructions, and spaces that cannot be
+    described by distances at all.
+</html:p>
+            <html:p>
+    This note follows the order and conventions of the general-topology part of
+    Munkres's <fr:link href="/topology-2000/" title="Topology" uri="https://caimeo.space/topology-2000/" display-uri="topology-2000" type="local">Topology</fr:link>, with occasional comparison to the
+    <fr:link href="https://stacks.math.columbia.edu/tag/004C" type="external">Stacks Project topology chapter</fr:link>.
+    In particular, compactness means the finite-subcover property and does not
+    include Hausdorffness.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>19</fr:day>
+                </fr:date>
+                <fr:title text="Open sets, neighborhoods, and bases">Open sets, neighborhoods, and bases</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        A topology does not assign a numerical distance to two points. Instead,
+        it records which collections of points may serve as observable regions.
+        The three topology axioms say that these regions include the trivial
+        ones and are stable under the unions and finite intersections needed to
+        combine observations.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-000C/</fr:uri>
+                    <fr:display-uri>def-000C</fr:display-uri>
+                    <fr:route>/def-000C/</fr:route>
+                    <fr:title text="Topological Space">Topological Space</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    A <html:strong>topology</html:strong> on a set <fr:tex display="inline"><![CDATA[X]]></fr:tex> is a collection
+    <fr:tex display="inline"><![CDATA[\tau \subseteq \mathcal {P}(X)]]></fr:tex> satisfying the following axioms:
+    <html:ul><html:li><fr:tex display="inline"><![CDATA[\varnothing \in \tau ]]></fr:tex> and <fr:tex display="inline"><![CDATA[X\in \tau ]]></fr:tex>.</html:li>
+        <html:li>If <fr:tex display="inline"><![CDATA[\{U_i\}_{i\in  I}\subseteq \tau ]]></fr:tex>, then
+            <fr:tex display="inline"><![CDATA[\bigcup _{i\in  I}U_i\in \tau ]]></fr:tex>.</html:li>
+        <html:li>If <fr:tex display="inline"><![CDATA[U_1,\ldots ,U_n\in \tau ]]></fr:tex>, then
+            <fr:tex display="inline"><![CDATA[U_1\cap \cdots \cap  U_n\in \tau ]]></fr:tex>.</html:li></html:ul>
+    The pair <fr:tex display="inline"><![CDATA[(X,\tau )]]></fr:tex> is a <html:strong>topological space</html:strong>, and the members of
+    <fr:tex display="inline"><![CDATA[\tau ]]></fr:tex> are its <html:strong>open sets</html:strong>. A subset <fr:tex display="inline"><![CDATA[F\subseteq  X]]></fr:tex> is
+    <html:strong>closed</html:strong> when <fr:tex display="inline"><![CDATA[X\setminus  F]]></fr:tex> is open; it is <html:strong>clopen</html:strong> when
+    it is both open and closed.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005X/</fr:uri>
+                    <fr:display-uri>def-005X</fr:display-uri>
+                    <fr:route>/def-005X/</fr:route>
+                    <fr:title text="Comparison of Topologies">Comparison of Topologies</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[\tau _1]]></fr:tex> and <fr:tex display="inline"><![CDATA[\tau _2]]></fr:tex> be topologies on the same set <fr:tex display="inline"><![CDATA[X]]></fr:tex>. The
+    topology <fr:tex display="inline"><![CDATA[\tau _1]]></fr:tex> is <html:strong>finer</html:strong>, or <html:strong>stronger</html:strong>, than
+    <fr:tex display="inline"><![CDATA[\tau _2]]></fr:tex> if
+    <fr:tex display="block"><![CDATA[
+        \tau _2\subseteq \tau _1.
+    ]]></fr:tex>
+    Equivalently, <fr:tex display="inline"><![CDATA[\tau _2]]></fr:tex> is <html:strong>coarser</html:strong>, or <html:strong>weaker</html:strong>, than
+    <fr:tex display="inline"><![CDATA[\tau _1]]></fr:tex>. Thus a finer topology has more open sets and imposes a stronger
+    continuity requirement on maps into the space.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        Open sets describe the space globally. Near one fixed point it is more
+        economical to work with neighborhoods, and for the entire topology it
+        is often enough to specify a basis. These two reductions will later
+        control continuity, countability, and product constructions.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005L/</fr:uri>
+                    <fr:display-uri>def-005L</fr:display-uri>
+                    <fr:route>/def-005L/</fr:route>
+                    <fr:title text="Neighborhood and Local Basis">Neighborhood and Local Basis</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> be a <fr:link href="/def-000C/" title="Topological Space" uri="https://caimeo.space/def-000C/" display-uri="def-000C" type="local">topological space</fr:link> and let <fr:tex display="inline"><![CDATA[x\in  X]]></fr:tex>. A subset
+    <fr:tex display="inline"><![CDATA[N\subseteq  X]]></fr:tex> is a <html:strong>neighborhood</html:strong> of <fr:tex display="inline"><![CDATA[x]]></fr:tex> if there is an open set
+    <fr:tex display="inline"><![CDATA[U]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
+        x\in  U\subseteq  N.
+    ]]></fr:tex>
+    In particular, a neighborhood need <html:strong>not</html:strong> itself be open.
+</html:p>
+                    <html:p>
+    A collection <fr:tex display="inline"><![CDATA[\mathcal {B}_x]]></fr:tex> of neighborhoods of <fr:tex display="inline"><![CDATA[x]]></fr:tex> is a
+    <html:strong>local basis</html:strong> at <fr:tex display="inline"><![CDATA[x]]></fr:tex> if every neighborhood <fr:tex display="inline"><![CDATA[N]]></fr:tex> of <fr:tex display="inline"><![CDATA[x]]></fr:tex> contains
+    some <fr:tex display="inline"><![CDATA[B\in \mathcal {B}_x]]></fr:tex>. A statement holds <html:strong>locally at <fr:tex display="inline"><![CDATA[x]]></fr:tex></html:strong> when
+    it holds on some neighborhood of <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005M/</fr:uri>
+                    <fr:display-uri>def-005M</fr:display-uri>
+                    <fr:route>/def-005M/</fr:route>
+                    <fr:title text="Basis for a Topology">Basis for a Topology</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[(X,\tau )]]></fr:tex> be a <fr:link href="/def-000C/" title="Topological Space" uri="https://caimeo.space/def-000C/" display-uri="def-000C" type="local">topological space</fr:link>. A collection
+    <fr:tex display="inline"><![CDATA[\mathcal {B}\subseteq \tau ]]></fr:tex> is a <html:strong>basis</html:strong> for <fr:tex display="inline"><![CDATA[\tau ]]></fr:tex> if, whenever
+    <fr:tex display="inline"><![CDATA[U\in \tau ]]></fr:tex> and <fr:tex display="inline"><![CDATA[x\in  U]]></fr:tex>, there is some <fr:tex display="inline"><![CDATA[B\in \mathcal {B}]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
+        x\in  B\subseteq  U.
+    ]]></fr:tex>
+    Equivalently, every open set is a union of members of <fr:tex display="inline"><![CDATA[\mathcal {B}]]></fr:tex>.
+</html:p>
+                    <html:p>
+    A collection <fr:tex display="inline"><![CDATA[\mathcal {B}\subseteq \mathcal {P}(X)]]></fr:tex> generates a topology
+    by taking arbitrary unions of its members provided that it covers <fr:tex display="inline"><![CDATA[X]]></fr:tex> and
+    satisfies the refinement condition
+    <fr:tex display="block"><![CDATA[
+        x\in  B_1\cap  B_2
+        \quad \Longrightarrow \quad 
+        \exists  B_3\in \mathcal {B},\;
+        x\in  B_3\subseteq  B_1\cap  B_2.
+    ]]></fr:tex></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        A single set can carry many topologies. At the two extremes, the
+        discrete topology declares every subset open, whereas the indiscrete
+        topology retains only the opens forced by the axioms. Euclidean
+        topology and, on an infinite set, cofinite topology provide less
+        degenerate examples between these extremes.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005W/</fr:uri>
+                    <fr:display-uri>def-005W</fr:display-uri>
+                    <fr:route>/def-005W/</fr:route>
+                    <fr:title text="Discrete and Indiscrete Topologies">Discrete and Indiscrete Topologies</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> be a set. The <html:strong>discrete topology</html:strong> on <fr:tex display="inline"><![CDATA[X]]></fr:tex> is the power set
+    <fr:tex display="inline"><![CDATA[\mathcal {P}(X)]]></fr:tex>, so every subset is open. The <html:strong>indiscrete
+    topology</html:strong> is <fr:tex display="inline"><![CDATA[\{\varnothing ,X\}]]></fr:tex>, so only the two sets required by the
+    topology axioms are open.
+</html:p>
+                    <html:p>
+    These are respectively the <fr:link href="/def-005X/" title="Comparison of Topologies" uri="https://caimeo.space/def-005X/" display-uri="def-005X" type="local">finest and coarsest</fr:link> topologies on
+    the fixed underlying set <fr:tex display="inline"><![CDATA[X]]></fr:tex>.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-000B/</fr:uri>
+                    <fr:display-uri>def-000B</fr:display-uri>
+                    <fr:route>/def-000B/</fr:route>
+                    <fr:title text="Euclidean Topology">Euclidean Topology</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    For <fr:tex display="inline"><![CDATA[n\geq  1]]></fr:tex>, let
+    <fr:tex display="block"><![CDATA[
+        d(x,y)=\sqrt {\sum _{i=1}^{n}(x_i-y_i)^2}
+    ]]></fr:tex>
+    be the Euclidean distance on <fr:tex display="inline"><![CDATA[\mathbb {R}^n]]></fr:tex>. A subset <fr:tex display="inline"><![CDATA[U\subseteq \mathbb {R}^n]]></fr:tex> is
+    <html:strong>Euclidean open</html:strong> if, for every <fr:tex display="inline"><![CDATA[x\in  U]]></fr:tex>, there is some
+    <fr:tex display="inline"><![CDATA[\varepsilon >0]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
+        B_\varepsilon (x)
+        =\{y\in \mathbb {R}^n\mid  d(x,y)<\varepsilon \}
+        \subseteq  U.
+    ]]></fr:tex>
+    The collection of Euclidean open subsets is the <html:strong>Euclidean
+    topology</html:strong> on <fr:tex display="inline"><![CDATA[\mathbb {R}^n]]></fr:tex>.
+</html:p>
+                    <html:p>
+    When <fr:tex display="inline"><![CDATA[n=1]]></fr:tex>, the open balls are open intervals. Thus a subset
+    <fr:tex display="inline"><![CDATA[U\subseteq \mathbb {R}]]></fr:tex> is Euclidean open precisely when every <fr:tex display="inline"><![CDATA[x\in  U]]></fr:tex> lies in
+    an interval <fr:tex display="inline"><![CDATA[(a,b)\subseteq  U]]></fr:tex>.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-000E/</fr:uri>
+                    <fr:display-uri>def-000E</fr:display-uri>
+                    <fr:route>/def-000E/</fr:route>
+                    <fr:title text="Cofinite Topology">Cofinite Topology</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> be a set. The <html:strong>cofinite topology</html:strong> on <fr:tex display="inline"><![CDATA[X]]></fr:tex> consists of
+    <fr:tex display="inline"><![CDATA[\varnothing ]]></fr:tex> together with every subset <fr:tex display="inline"><![CDATA[U\subseteq  X]]></fr:tex> whose complement
+    <fr:tex display="inline"><![CDATA[X\setminus  U]]></fr:tex> is finite.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>19</fr:day>
+                </fr:date>
+                <fr:title text="Continuous maps and homeomorphisms">Continuous maps and homeomorphisms</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        Once spaces have been specified, the appropriate maps between them are
+        those that respect open sets. The preimage formulation is deliberately
+        asymmetric: it works for every function, preserves unions and
+        intersections, and therefore composes without additional hypotheses.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005N/</fr:uri>
+                    <fr:display-uri>def-005N</fr:display-uri>
+                    <fr:route>/def-005N/</fr:route>
+                    <fr:title text="Continuous Map">Continuous Map</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[(X,\tau _X)]]></fr:tex> and <fr:tex display="inline"><![CDATA[(Y,\tau _Y)]]></fr:tex> be <fr:link href="/def-000C/" title="Topological Space" uri="https://caimeo.space/def-000C/" display-uri="def-000C" type="local">topological spaces</fr:link>. A
+    map <fr:tex display="inline"><![CDATA[f:X\to  Y]]></fr:tex> is <html:strong>continuous</html:strong> if the preimage of every open set
+    is open:
+    <fr:tex display="block"><![CDATA[
+        V\in \tau _Y
+        \quad \Longrightarrow \quad 
+        f^{-1}(V)\in \tau _X.
+    ]]></fr:tex>
+    Equivalently, the preimage of every closed subset of <fr:tex display="inline"><![CDATA[Y]]></fr:tex> is closed in
+    <fr:tex display="inline"><![CDATA[X]]></fr:tex>. Continuity therefore depends on both the underlying function and the
+    topologies placed on its domain and codomain.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001C/</fr:uri>
+                    <fr:display-uri>thm-001C</fr:display-uri>
+                    <fr:route>/thm-001C/</fr:route>
+                    <fr:title text="Basis Criterion for Continuity">Basis Criterion for Continuity</fr:title>
+                    <fr:taxon>Proposition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[\mathcal {B}]]></fr:tex> be a <fr:link href="/def-005M/" title="Basis for a Topology" uri="https://caimeo.space/def-005M/" display-uri="def-005M" type="local">basis</fr:link> for the topology of <fr:tex display="inline"><![CDATA[Y]]></fr:tex>. A map
+    <fr:tex display="inline"><![CDATA[f:X\to  Y]]></fr:tex> is <fr:link href="/def-005N/" title="Continuous Map" uri="https://caimeo.space/def-005N/" display-uri="def-005N" type="local">continuous</fr:link> if and only if <fr:tex display="inline"><![CDATA[f^{-1}(B)]]></fr:tex> is open
+    in <fr:tex display="inline"><![CDATA[X]]></fr:tex> for every <fr:tex display="inline"><![CDATA[B\in \mathcal {B}]]></fr:tex>.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    The forward implication follows immediately from continuity because every
+    basis element is open. Conversely, suppose the preimage of each basis
+    element is open. Every open subset <fr:tex display="inline"><![CDATA[V\subseteq  Y]]></fr:tex> is a union of basis
+    elements, say <fr:tex display="inline"><![CDATA[V=\bigcup _{i\in  I}B_i]]></fr:tex>. Preimages preserve arbitrary
+    unions, so
+    <fr:tex display="block"><![CDATA[
+        f^{-1}(V)
+        =f^{-1}\left (\bigcup _{i\in  I}B_i\right )
+        =\bigcup _{i\in  I}f^{-1}(B_i).
+    ]]></fr:tex>
+    The right-hand side is open in <fr:tex display="inline"><![CDATA[X]]></fr:tex>; hence <fr:tex display="inline"><![CDATA[f]]></fr:tex> is continuous.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001D/</fr:uri>
+                    <fr:display-uri>thm-001D</fr:display-uri>
+                    <fr:route>/thm-001D/</fr:route>
+                    <fr:title text="Identity and Composition of Continuous Maps">Identity and Composition of Continuous Maps</fr:title>
+                    <fr:taxon>Proposition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    The identity map on every topological space is continuous. If
+    <fr:tex display="inline"><![CDATA[f:X\to  Y]]></fr:tex> and <fr:tex display="inline"><![CDATA[g:Y\to  Z]]></fr:tex> are <fr:link href="/def-005N/" title="Continuous Map" uri="https://caimeo.space/def-005N/" display-uri="def-005N" type="local">continuous maps</fr:link>, then their
+    composite <fr:tex display="inline"><![CDATA[g\circ  f:X\to  Z]]></fr:tex> is continuous.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    For every open set <fr:tex display="inline"><![CDATA[U\subseteq  X]]></fr:tex>, one has
+    <fr:tex display="inline"><![CDATA[\operatorname {id}_X^{-1}(U)=U]]></fr:tex>, so the identity is continuous. If
+    <fr:tex display="inline"><![CDATA[W\subseteq  Z]]></fr:tex> is open, then
+    <fr:tex display="block"><![CDATA[
+        (g\circ  f)^{-1}(W)=f^{-1}\left (g^{-1}(W)\right ).
+    ]]></fr:tex>
+    Continuity of <fr:tex display="inline"><![CDATA[g]]></fr:tex> makes <fr:tex display="inline"><![CDATA[g^{-1}(W)]]></fr:tex> open in <fr:tex display="inline"><![CDATA[Y]]></fr:tex>, and continuity of
+    <fr:tex display="inline"><![CDATA[f]]></fr:tex> then makes its preimage open in <fr:tex display="inline"><![CDATA[X]]></fr:tex>.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        Continuity belongs to a map together with its domain and codomain
+        topologies; it is not merely a property of the underlying formula. The
+        identity between two differently topologized copies of the same set is
+        the smallest example where this dependence becomes visible.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/eg-0008/</fr:uri>
+                    <fr:display-uri>eg-0008</fr:display-uri>
+                    <fr:route>/eg-0008/</fr:route>
+                    <fr:title text="Continuity Depends on the Topology">Continuity Depends on the Topology</fr:title>
+                    <fr:taxon>Example</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Put the Euclidean topology <fr:tex display="inline"><![CDATA[\tau _e]]></fr:tex> and the cofinite topology <fr:tex display="inline"><![CDATA[\tau _c]]></fr:tex>
+    on the same underlying set <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex>. The identity function
+    <fr:tex display="block"><![CDATA[
+        \operatorname {id}:(\mathbb {R},\tau _e)
+        \longrightarrow (\mathbb {R},\tau _c)
+    ]]></fr:tex>
+    is continuous. Indeed, the complement of every cofinite open set is
+    finite. Singletons are Euclidean closed, and finite unions of closed sets
+    remain closed, so every cofinite open set is Euclidean open.
+</html:p>
+                    <html:p>
+    The identity in the reverse direction is not continuous. The interval
+    <fr:tex display="inline"><![CDATA[(0,1)]]></fr:tex> is Euclidean open, but its preimage under the identity is not
+    cofinite open because <fr:tex display="inline"><![CDATA[\mathbb {R}\setminus (0,1)]]></fr:tex> is infinite. Thus the
+    same set-theoretic function can be continuous in one direction and
+    discontinuous in the other.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        A homeomorphism is the topological analogue of an isomorphism. It
+        permits information to move continuously in both directions, so every
+        property expressed solely in terms of the topology is preserved.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005O/</fr:uri>
+                    <fr:display-uri>def-005O</fr:display-uri>
+                    <fr:route>/def-005O/</fr:route>
+                    <fr:title text="Homeomorphism">Homeomorphism</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    A <html:strong>homeomorphism</html:strong> between topological spaces <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> is a
+    bijective <fr:link href="/def-005N/" title="Continuous Map" uri="https://caimeo.space/def-005N/" display-uri="def-005N" type="local">continuous map</fr:link> <fr:tex display="inline"><![CDATA[f:X\to  Y]]></fr:tex> whose inverse
+    <fr:tex display="inline"><![CDATA[f^{-1}:Y\to  X]]></fr:tex> is also continuous. If such a map exists, <fr:tex display="inline"><![CDATA[X]]></fr:tex> and <fr:tex display="inline"><![CDATA[Y]]></fr:tex>
+    are <html:strong>homeomorphic</html:strong>, written <fr:tex display="inline"><![CDATA[X\cong  Y]]></fr:tex>.
+</html:p>
+                    <html:p>
+    A continuous bijection need not be a homeomorphism: continuity controls
+    preimages of open sets, whereas continuity of the inverse also requires
+    the original map to preserve the topology in the opposite direction.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/eg-000B/</fr:uri>
+                    <fr:display-uri>eg-000B</fr:display-uri>
+                    <fr:route>/eg-000B/</fr:route>
+                    <fr:title text="The Real Line and an Open Interval Are Homeomorphic">The Real Line and an Open Interval Are Homeomorphic</fr:title>
+                    <fr:taxon>Example</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    The map
+    <fr:tex display="block"><![CDATA[
+        f:\mathbb {R}\longrightarrow (0,1),
+        \qquad 
+        f(x)=\frac 12+\frac {1}{\pi }\arctan  x
+    ]]></fr:tex>
+    is a bijection. It is continuous, and its inverse
+    <fr:tex display="block"><![CDATA[
+        f^{-1}(t)=\tan \left (\pi \left (t-\frac 12\right )\right )
+    ]]></fr:tex>
+    is continuous on <fr:tex display="inline"><![CDATA[(0,1)]]></fr:tex>. Hence <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a <fr:link href="/def-005O/" title="Homeomorphism" uri="https://caimeo.space/def-005O/" display-uri="def-005O" type="local">homeomorphism</fr:link>.
+    Topologically, boundedness and total length do not distinguish the open
+    interval from the whole real line.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>19</fr:day>
+                </fr:date>
+                <fr:title text="Subspaces, products, and quotients">Subspaces, products, and quotients</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        Three constructions account for a large fraction of naturally
+        occurring spaces. A subset inherits opens from an ambient space, a
+        product is observed through its coordinate projections, and a quotient
+        is obtained by identifying points. Their definitions are best read
+        together using the <fr:link href="/def-005X/" title="Comparison of Topologies" uri="https://caimeo.space/def-005X/" display-uri="def-005X" type="local">comparison of topologies</fr:link>: subspace and
+        product topologies are the coarsest topologies making the relevant maps
+        continuous, while the quotient topology is the finest one detected by
+        the quotient map.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>7</fr:month>
+                      <fr:day>19</fr:day>
+                    </fr:date>
+                    <fr:title text="Subspaces">Subspaces</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+            Passing to a subspace changes the ambient meaning of openness. An
+            endpoint can acquire an open one-sided neighborhood even though no
+            such set is open in the real line itself.
+        </html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors />
+                        <fr:uri>https://caimeo.space/def-000D/</fr:uri>
+                        <fr:display-uri>def-000D</fr:display-uri>
+                        <fr:route>/def-000D/</fr:route>
+                        <fr:title text="Subspace (Relative) Topology">Subspace (Relative) Topology</fr:title>
+                        <fr:taxon>Definition</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>
+    Let <fr:tex display="inline"><![CDATA[(X,\tau )]]></fr:tex> be a <fr:link href="/def-000C/" title="Topological Space" uri="https://caimeo.space/def-000C/" display-uri="def-000C" type="local">topological space</fr:link> and let
+    <fr:tex display="inline"><![CDATA[A\subseteq  X]]></fr:tex>. The topology
+    <fr:tex display="block"><![CDATA[
+        \tau _A=\{A\cap  U\mid  U\in \tau \}
+    ]]></fr:tex>
+    on <fr:tex display="inline"><![CDATA[A]]></fr:tex> is the <html:strong>subspace topology</html:strong>, also called the
+    <html:strong>relative topology</html:strong>, induced by <fr:tex display="inline"><![CDATA[X]]></fr:tex>. Thus a subset of <fr:tex display="inline"><![CDATA[A]]></fr:tex> may be
+    open in the subspace even when it is not open as a subset of <fr:tex display="inline"><![CDATA[X]]></fr:tex>.
+</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors />
+                        <fr:uri>https://caimeo.space/thm-001E/</fr:uri>
+                        <fr:display-uri>thm-001E</fr:display-uri>
+                        <fr:route>/thm-001E/</fr:route>
+                        <fr:title text="Universal Property of the Subspace Topology">Universal Property of the Subspace Topology</fr:title>
+                        <fr:taxon>Proposition</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[A\subseteq  X]]></fr:tex> carry the <fr:link href="/def-000D/" title="Subspace (Relative) Topology" uri="https://caimeo.space/def-000D/" display-uri="def-000D" type="local">subspace topology</fr:link>, and let
+    <fr:tex display="inline"><![CDATA[\iota :A\hookrightarrow  X]]></fr:tex> be the inclusion. A map <fr:tex display="inline"><![CDATA[f:Z\to  A]]></fr:tex> is
+    continuous if and only if <fr:tex display="inline"><![CDATA[\iota \circ  f:Z\to  X]]></fr:tex> is continuous.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    The inclusion is continuous: for every open <fr:tex display="inline"><![CDATA[U\subseteq  X]]></fr:tex>, its preimage
+    is <fr:tex display="inline"><![CDATA[A\cap  U]]></fr:tex>, which is open in <fr:tex display="inline"><![CDATA[A]]></fr:tex>. Thus the forward implication follows
+    from <fr:link href="/thm-001D/" title="Identity and Composition of Continuous Maps" uri="https://caimeo.space/thm-001D/" display-uri="thm-001D" type="local">closure under composition</fr:link>.
+
+    Conversely, suppose <fr:tex display="inline"><![CDATA[\iota \circ  f]]></fr:tex> is continuous. Every open subset of
+    <fr:tex display="inline"><![CDATA[A]]></fr:tex> has the form <fr:tex display="inline"><![CDATA[A\cap  U]]></fr:tex> for some open <fr:tex display="inline"><![CDATA[U\subseteq  X]]></fr:tex>, and
+    <fr:tex display="block"><![CDATA[
+        f^{-1}(A\cap  U)=(\iota \circ  f)^{-1}(U).
+    ]]></fr:tex>
+    This set is open in <fr:tex display="inline"><![CDATA[Z]]></fr:tex>, so <fr:tex display="inline"><![CDATA[f]]></fr:tex> is continuous.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors />
+                        <fr:uri>https://caimeo.space/eg-0009/</fr:uri>
+                        <fr:display-uri>eg-0009</fr:display-uri>
+                        <fr:route>/eg-0009/</fr:route>
+                        <fr:title text="A Half-Open Subspace">A Half-Open Subspace</fr:title>
+                        <fr:taxon>Example</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>
+    Give <fr:tex display="inline"><![CDATA[A=[0,1]]]></fr:tex> the <fr:link href="/def-000D/" title="Subspace (Relative) Topology" uri="https://caimeo.space/def-000D/" display-uri="def-000D" type="local">subspace topology</fr:link> inherited from the real
+    line. Then
+    the subset
+    <fr:tex display="block"><![CDATA[
+        \{x\in  A\mid  0\leq  x<1\}=A\cap (-1,1)
+    ]]></fr:tex>
+    is open in <fr:tex display="inline"><![CDATA[A]]></fr:tex>, although it is not open in <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex>. Likewise,
+    <fr:tex display="inline"><![CDATA[\{x\in  A\mid  0<x\leq 1\}]]></fr:tex> is open in <fr:tex display="inline"><![CDATA[A]]></fr:tex>. The word <html:em>open</html:em> therefore
+    always refers to an ambient topological space.
+</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>7</fr:month>
+                      <fr:day>19</fr:day>
+                    </fr:date>
+                    <fr:title text="Products">Products</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+            The product topology permits observations in finitely many
+            coordinates at a time. This finite-coordinate condition is
+            invisible for ordinary finite-dimensional Euclidean spaces but is
+            essential for infinite products.
+        </html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors />
+                        <fr:uri>https://caimeo.space/def-005V/</fr:uri>
+                        <fr:display-uri>def-005V</fr:display-uri>
+                        <fr:route>/def-005V/</fr:route>
+                        <fr:title text="Product Topology">Product Topology</fr:title>
+                        <fr:taxon>Definition</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>
+    Let <fr:tex display="inline"><![CDATA[\{X_i\}_{i\in  I}]]></fr:tex> be a family of topological spaces. The
+    <html:strong>product topology</html:strong> on the Cartesian product
+    <fr:tex display="inline"><![CDATA[\prod _{i\in  I}X_i]]></fr:tex> has as a basis the sets
+    <fr:tex display="block"><![CDATA[
+        \prod _{i\in  I}U_i,
+    ]]></fr:tex>
+    where each <fr:tex display="inline"><![CDATA[U_i]]></fr:tex> is open in <fr:tex display="inline"><![CDATA[X_i]]></fr:tex> and <fr:tex display="inline"><![CDATA[U_i=X_i]]></fr:tex> for all but finitely
+    many indices <fr:tex display="inline"><![CDATA[i]]></fr:tex>. Equivalently, it is the <fr:link href="/def-005X/" title="Comparison of Topologies" uri="https://caimeo.space/def-005X/" display-uri="def-005X" type="local">coarsest topology</fr:link>
+    that makes
+    every coordinate projection
+    <fr:tex display="block"><![CDATA[
+        \pi _i:\prod _{j\in  I}X_j\longrightarrow  X_i
+    ]]></fr:tex>
+    continuous.
+</html:p>
+                        <html:p>
+    For a finite product <fr:tex display="inline"><![CDATA[X_1\times \cdots \times  X_n]]></fr:tex>, the basic open sets are
+    simply products <fr:tex display="inline"><![CDATA[U_1\times \cdots \times  U_n]]></fr:tex> of open sets. For an infinite
+    product, the finite-coordinate restriction distinguishes the product
+    topology from the generally <fr:link href="/def-005X/" title="Comparison of Topologies" uri="https://caimeo.space/def-005X/" display-uri="def-005X" type="local">finer</fr:link> box topology.
+</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors />
+                        <fr:uri>https://caimeo.space/thm-001G/</fr:uri>
+                        <fr:display-uri>thm-001G</fr:display-uri>
+                        <fr:route>/thm-001G/</fr:route>
+                        <fr:title text="Universal Property of the Product Topology">Universal Property of the Product Topology</fr:title>
+                        <fr:taxon>Proposition</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[X=\prod _{i\in  I}X_i]]></fr:tex> carry the <fr:link href="/def-005V/" title="Product Topology" uri="https://caimeo.space/def-005V/" display-uri="def-005V" type="local">product topology</fr:link>, with
+    projections <fr:tex display="inline"><![CDATA[\pi _i:X\to  X_i]]></fr:tex>. A map <fr:tex display="inline"><![CDATA[f:Z\to  X]]></fr:tex> is continuous if and
+    only if every coordinate map <fr:tex display="inline"><![CDATA[\pi _i\circ  f:Z\to  X_i]]></fr:tex> is continuous.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    If <fr:tex display="inline"><![CDATA[f]]></fr:tex> is continuous, each coordinate map is continuous because the
+    projections are continuous. Conversely, suppose all coordinate maps are
+    continuous. Every basic open subset of <fr:tex display="inline"><![CDATA[X]]></fr:tex> can be written as
+    <fr:tex display="block"><![CDATA[
+        B=\bigcap _{k=1}^{n}\pi _{i_k}^{-1}(U_{i_k}),
+    ]]></fr:tex>
+    where each <fr:tex display="inline"><![CDATA[U_{i_k}]]></fr:tex> is open in <fr:tex display="inline"><![CDATA[X_{i_k}]]></fr:tex>. Therefore
+    <fr:tex display="block"><![CDATA[
+        f^{-1}(B)
+        =\bigcap _{k=1}^{n}(\pi _{i_k}\circ  f)^{-1}(U_{i_k}),
+    ]]></fr:tex>
+    a finite intersection of open subsets of <fr:tex display="inline"><![CDATA[Z]]></fr:tex>. The
+    <fr:link href="/thm-001C/" title="Basis Criterion for Continuity" uri="https://caimeo.space/thm-001C/" display-uri="thm-001C" type="local">basis criterion</fr:link> now shows that <fr:tex display="inline"><![CDATA[f]]></fr:tex> is continuous.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors />
+                        <fr:uri>https://caimeo.space/eg-000D/</fr:uri>
+                        <fr:display-uri>eg-000D</fr:display-uri>
+                        <fr:route>/eg-000D/</fr:route>
+                        <fr:title text="Products of Euclidean Spaces">Products of Euclidean Spaces</fr:title>
+                        <fr:taxon>Example</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>
+    For positive integers <fr:tex display="inline"><![CDATA[m,n]]></fr:tex>, the coordinate-concatenation bijection
+    <fr:tex display="block"><![CDATA[
+        \mathbb {R}^m\times \mathbb {R}^n
+        \longrightarrow \mathbb {R}^{m+n},
+        \qquad 
+        (x,y)\longmapsto (x_1,\ldots ,x_m,y_1,\ldots ,y_n)
+    ]]></fr:tex>
+    is a homeomorphism from the product of the Euclidean topologies to the
+    Euclidean topology on <fr:tex display="inline"><![CDATA[\mathbb {R}^{m+n}]]></fr:tex>.
+</html:p>
+                        <html:p>
+    Around a point <fr:tex display="inline"><![CDATA[(x,y)]]></fr:tex>, Euclidean balls and products of Euclidean balls
+    refine one another. More precisely,
+    <fr:tex display="block"><![CDATA[
+        B_{\frac {\varepsilon }{\sqrt {2}}}(x)\times 
+        B_{\frac {\varepsilon }{\sqrt {2}}}(y)
+        \subseteq  B_\varepsilon (x,y)
+        \subseteq  B_\varepsilon (x)\times  B_\varepsilon (y).
+    ]]></fr:tex>
+    The two sides therefore generate the same open neighborhoods.
+</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>7</fr:month>
+                      <fr:day>19</fr:day>
+                    </fr:date>
+                    <fr:title text="Quotients">Quotients</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+            A quotient reverses the direction of construction. Instead of
+            restricting an existing topology, it asks which subsets of the
+            target can be recognized as open after pulling them back to the
+            source. Its universal property is the practical way to construct
+            maps out of a quotient.
+        </html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors />
+                        <fr:uri>https://caimeo.space/def-005P/</fr:uri>
+                        <fr:display-uri>def-005P</fr:display-uri>
+                        <fr:route>/def-005P/</fr:route>
+                        <fr:title text="Quotient Topology and Quotient Space">Quotient Topology and Quotient Space</fr:title>
+                        <fr:taxon>Definition</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> be a <fr:link href="/def-000C/" title="Topological Space" uri="https://caimeo.space/def-000C/" display-uri="def-000C" type="local">topological space</fr:link> and let <fr:tex display="inline"><![CDATA[q:X\to  Y]]></fr:tex> be a
+    surjection. The <html:strong>quotient topology</html:strong> on <fr:tex display="inline"><![CDATA[Y]]></fr:tex> is defined by
+    <fr:tex display="block"><![CDATA[
+        U\subseteq  Y\text { is open}
+        \quad \Longleftrightarrow \quad 
+        q^{-1}(U)\text { is open in }X.
+    ]]></fr:tex>
+    With this topology, <fr:tex display="inline"><![CDATA[q]]></fr:tex> is called a <html:strong>quotient map</html:strong>. It is the
+    <fr:link href="/def-005X/" title="Comparison of Topologies" uri="https://caimeo.space/def-005X/" display-uri="def-005X" type="local">finest topology</fr:link> on <fr:tex display="inline"><![CDATA[Y]]></fr:tex> for which <fr:tex display="inline"><![CDATA[q]]></fr:tex> is continuous.
+</html:p>
+                        <html:p>
+    In particular, if <fr:tex display="inline"><![CDATA[\sim ]]></fr:tex> is an <fr:link href="/def-000X/" title="Equivalence Relation" uri="https://caimeo.space/def-000X/" display-uri="def-000X" type="local">equivalence relation</fr:link> on <fr:tex display="inline"><![CDATA[X]]></fr:tex>,
+    the canonical surjection
+    <fr:tex display="block"><![CDATA[
+        q:X\longrightarrow  X/{\sim },
+        \qquad  x\longmapsto [x]
+    ]]></fr:tex>
+    equips the <fr:link href="/def-002U/" title="Equivalence Class" uri="https://caimeo.space/def-002U/" display-uri="def-002U" type="local">quotient set</fr:link> <fr:tex display="inline"><![CDATA[X/{\sim }]]></fr:tex> with a topology. The
+    resulting topological space is the <html:strong>quotient space</html:strong> of <fr:tex display="inline"><![CDATA[X]]></fr:tex> by
+    <fr:tex display="inline"><![CDATA[\sim ]]></fr:tex>.
+</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors />
+                        <fr:uri>https://caimeo.space/thm-001F/</fr:uri>
+                        <fr:display-uri>thm-001F</fr:display-uri>
+                        <fr:route>/thm-001F/</fr:route>
+                        <fr:title text="Universal Property of the Quotient Topology">Universal Property of the Quotient Topology</fr:title>
+                        <fr:taxon>Proposition</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[q:X\to  Y]]></fr:tex> be a <fr:link href="/def-005P/" title="Quotient Topology and Quotient Space" uri="https://caimeo.space/def-005P/" display-uri="def-005P" type="local">quotient map</fr:link>. For every topological
+    space <fr:tex display="inline"><![CDATA[Z]]></fr:tex>, a map <fr:tex display="inline"><![CDATA[g:Y\to  Z]]></fr:tex> is continuous if and only if
+    <fr:tex display="inline"><![CDATA[g\circ  q:X\to  Z]]></fr:tex> is continuous.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    If <fr:tex display="inline"><![CDATA[g]]></fr:tex> is continuous, then <fr:tex display="inline"><![CDATA[g\circ  q]]></fr:tex> is continuous by
+    <fr:link href="/thm-001D/" title="Identity and Composition of Continuous Maps" uri="https://caimeo.space/thm-001D/" display-uri="thm-001D" type="local">closure under composition</fr:link>. Conversely, suppose <fr:tex display="inline"><![CDATA[g\circ  q]]></fr:tex> is
+    continuous and let <fr:tex display="inline"><![CDATA[W\subseteq  Z]]></fr:tex> be open. Then
+    <fr:tex display="block"><![CDATA[
+        q^{-1}\left (g^{-1}(W)\right )
+        =(g\circ  q)^{-1}(W)
+    ]]></fr:tex>
+    is open in <fr:tex display="inline"><![CDATA[X]]></fr:tex>. The defining property of the quotient topology implies
+    that <fr:tex display="inline"><![CDATA[g^{-1}(W)]]></fr:tex> is open in <fr:tex display="inline"><![CDATA[Y]]></fr:tex>. Hence <fr:tex display="inline"><![CDATA[g]]></fr:tex> is continuous.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>19</fr:day>
+                </fr:date>
+                <fr:title text="Connectedness">Connectedness</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        Connectedness asks whether a space can be decomposed into two open
+        pieces without overlap. This is a global property: every sufficiently
+        small portion of a space may look simple while the whole space still
+        splits into disconnected pieces.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005Q/</fr:uri>
+                    <fr:display-uri>def-005Q</fr:display-uri>
+                    <fr:route>/def-005Q/</fr:route>
+                    <fr:title text="Connected Space">Connected Space</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    A <html:strong>separation</html:strong> of a topological space <fr:tex display="inline"><![CDATA[X]]></fr:tex> is a pair of disjoint,
+    nonempty open sets <fr:tex display="inline"><![CDATA[U,V\subseteq  X]]></fr:tex> such that <fr:tex display="inline"><![CDATA[X=U\cup  V]]></fr:tex>. The space
+    <fr:tex display="inline"><![CDATA[X]]></fr:tex> is <html:strong>connected</html:strong> if it admits no separation.
+</html:p>
+                    <html:p>
+    Equivalently, <fr:tex display="inline"><![CDATA[X]]></fr:tex> is connected precisely when its only clopen subsets are
+    <fr:tex display="inline"><![CDATA[\varnothing ]]></fr:tex> and <fr:tex display="inline"><![CDATA[X]]></fr:tex>. In this note the empty space is regarded as
+    connected, since it has no separation.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        The least-upper-bound property of the real numbers prevents an interval
+        from splitting at an omitted boundary point. This supplies the basic
+        source of connected examples in analysis.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001O/</fr:uri>
+                    <fr:display-uri>thm-001O</fr:display-uri>
+                    <fr:route>/thm-001O/</fr:route>
+                    <fr:title text="Intervals in the Real Line Are Connected">Intervals in the Real Line Are Connected</fr:title>
+                    <fr:taxon>Theorem</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[I\subseteq \mathbb {R}]]></fr:tex> be an interval: whenever <fr:tex display="inline"><![CDATA[a,b\in  I]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[a<c<b]]></fr:tex>, one also has <fr:tex display="inline"><![CDATA[c\in  I]]></fr:tex>. Then <fr:tex display="inline"><![CDATA[I]]></fr:tex>, with the Euclidean subspace
+    topology, is <fr:link href="/def-005Q/" title="Connected Space" uri="https://caimeo.space/def-005Q/" display-uri="def-005Q" type="local">connected</fr:link>.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Suppose instead that <fr:tex display="inline"><![CDATA[I=U\cup  V]]></fr:tex> is a separation. Choose <fr:tex display="inline"><![CDATA[u\in  U]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[v\in  V]]></fr:tex>; after exchanging the names if necessary, assume <fr:tex display="inline"><![CDATA[u<v]]></fr:tex>. The
+    interval property gives <fr:tex display="inline"><![CDATA[[u,v]\subseteq  I]]></fr:tex>. Set
+    <fr:tex display="block"><![CDATA[
+        S=U\cap [u,v],
+        \qquad  c=\sup  S.
+    ]]></fr:tex>
+    The supremum exists by the <fr:link href="/thm-0003/" title="Existence theorem" uri="https://caimeo.space/thm-0003/" display-uri="thm-0003" type="local">least-upper-bound property</fr:link>, and
+    <fr:tex display="inline"><![CDATA[u\leq  c\leq  v]]></fr:tex>, so <fr:tex display="inline"><![CDATA[c\in  I]]></fr:tex>.
+
+    The point <fr:tex display="inline"><![CDATA[c]]></fr:tex> cannot lie in <fr:tex display="inline"><![CDATA[U]]></fr:tex>. If <fr:tex display="inline"><![CDATA[c<v]]></fr:tex>, openness of <fr:tex display="inline"><![CDATA[U]]></fr:tex> in <fr:tex display="inline"><![CDATA[I]]></fr:tex>
+    would place points of <fr:tex display="inline"><![CDATA[U\cap [u,v]]]></fr:tex> strictly above <fr:tex display="inline"><![CDATA[c]]></fr:tex>, contradicting the
+    definition of the supremum. If <fr:tex display="inline"><![CDATA[c=v]]></fr:tex>, then membership in <fr:tex display="inline"><![CDATA[U]]></fr:tex> would
+    contradict <fr:tex display="inline"><![CDATA[v\in  V]]></fr:tex> and <fr:tex display="inline"><![CDATA[U\cap  V=\varnothing ]]></fr:tex>. Hence <fr:tex display="inline"><![CDATA[c\in  V]]></fr:tex>.
+
+    Since <fr:tex display="inline"><![CDATA[V]]></fr:tex> is open in <fr:tex display="inline"><![CDATA[I]]></fr:tex>, some <fr:tex display="inline"><![CDATA[\varepsilon >0]]></fr:tex> satisfies
+    <fr:tex display="block"><![CDATA[
+        (c-\varepsilon ,c+\varepsilon )\cap  I\subseteq  V.
+    ]]></fr:tex>
+    By the defining property of the supremum, there is some <fr:tex display="inline"><![CDATA[s\in  S]]></fr:tex> with
+    <fr:tex display="inline"><![CDATA[c-\varepsilon <s\leq  c]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[c\notin  U]]></fr:tex>, in fact <fr:tex display="inline"><![CDATA[s<c]]></fr:tex>. But then
+    <fr:tex display="inline"><![CDATA[s\in  U\cap  V]]></fr:tex>, a contradiction. Thus no separation exists.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        The next theorem makes connectedness useful under constructions. A
+        continuous map may collapse points, but it cannot tear one connected
+        space into a disconnected image.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001H/</fr:uri>
+                    <fr:display-uri>thm-001H</fr:display-uri>
+                    <fr:route>/thm-001H/</fr:route>
+                    <fr:title text="Continuous Images Preserve Connectedness">Continuous Images Preserve Connectedness</fr:title>
+                    <fr:taxon>Theorem</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    If <fr:tex display="inline"><![CDATA[X]]></fr:tex> is <fr:link href="/def-005Q/" title="Connected Space" uri="https://caimeo.space/def-005Q/" display-uri="def-005Q" type="local">connected</fr:link> and <fr:tex display="inline"><![CDATA[f:X\to  Y]]></fr:tex> is continuous, then the
+    image <fr:tex display="inline"><![CDATA[f(X)]]></fr:tex>, with its subspace topology, is connected.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    First regard <fr:tex display="inline"><![CDATA[f]]></fr:tex> as a map <fr:tex display="inline"><![CDATA[\bar  f:X\to  f(X)]]></fr:tex>. This corestriction is
+    continuous: if <fr:tex display="inline"><![CDATA[U=f(X)\cap  O]]></fr:tex> is open in the subspace <fr:tex display="inline"><![CDATA[f(X)]]></fr:tex>, with <fr:tex display="inline"><![CDATA[O]]></fr:tex>
+    open in <fr:tex display="inline"><![CDATA[Y]]></fr:tex>, then
+    <fr:tex display="block"><![CDATA[
+        \bar  f^{-1}(U)=f^{-1}(O),
+    ]]></fr:tex>
+    which is open in <fr:tex display="inline"><![CDATA[X]]></fr:tex>.
+
+    Suppose <fr:tex display="inline"><![CDATA[f(X)=U\cup  V]]></fr:tex> were a separation. Continuity of <fr:tex display="inline"><![CDATA[\bar  f]]></fr:tex> makes
+    <fr:tex display="inline"><![CDATA[\bar  f^{-1}(U)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\bar  f^{-1}(V)]]></fr:tex> open in <fr:tex display="inline"><![CDATA[X]]></fr:tex>. They are disjoint
+    and cover <fr:tex display="inline"><![CDATA[X]]></fr:tex>; they are also nonempty because <fr:tex display="inline"><![CDATA[\bar  f]]></fr:tex> is surjective.
+    They would therefore form a separation of <fr:tex display="inline"><![CDATA[X]]></fr:tex>, contradicting
+    connectedness.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>19</fr:day>
+                </fr:date>
+                <fr:title text="Compactness and Hausdorff separation">Compactness and Hausdorff separation</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        Compactness replaces an arbitrary amount of local covering data by a
+        finite amount. It is a topological finiteness condition, not a statement
+        about numerical boundedness. Closed bounded intervals motivate the
+        definition, but the definition continues to make sense in every
+        topological space.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005R/</fr:uri>
+                    <fr:display-uri>def-005R</fr:display-uri>
+                    <fr:route>/def-005R/</fr:route>
+                    <fr:title text="Compact Space">Compact Space</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    An <html:strong>open cover</html:strong> of a topological space <fr:tex display="inline"><![CDATA[X]]></fr:tex> is a collection
+    <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> of open subsets such that
+    <fr:tex display="block"><![CDATA[
+        X=\bigcup _{U\in \mathcal {U}}U.
+    ]]></fr:tex>
+    A <html:strong>finite subcover</html:strong> is a finite subcollection
+    <fr:tex display="inline"><![CDATA[\mathcal {V}\subseteq \mathcal {U}]]></fr:tex> such that
+    <fr:tex display="block"><![CDATA[
+        X=\bigcup _{V\in \mathcal {V}}V.
+    ]]></fr:tex>
+    The finite subcollection may be empty.
+</html:p>
+                    <html:p>
+    The space <fr:tex display="inline"><![CDATA[X]]></fr:tex> is <html:strong>compact</html:strong> if every open cover of <fr:tex display="inline"><![CDATA[X]]></fr:tex> has a
+    finite subcover. A subset <fr:tex display="inline"><![CDATA[K\subseteq  X]]></fr:tex> is compact when it is compact
+    with its <fr:link href="/def-000D/" title="Subspace (Relative) Topology" uri="https://caimeo.space/def-000D/" display-uri="def-000D" type="local">subspace topology</fr:link>.
+</html:p>
+                    <html:p>
+    Following Munkres, compactness here does not include the
+    <fr:link href="/def-005S/" title="Hausdorff Space" uri="https://caimeo.space/def-005S/" display-uri="def-005S" type="local">Hausdorff</fr:link> condition. Some texts call this property
+    <html:em>quasi-compactness</html:em> and reserve <html:em>compact</html:em> for Hausdorff spaces with
+    the finite-subcover property.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001P/</fr:uri>
+                    <fr:display-uri>thm-001P</fr:display-uri>
+                    <fr:route>/thm-001P/</fr:route>
+                    <fr:title text="Closed Intervals in the Real Line Are Compact">Closed Intervals in the Real Line Are Compact</fr:title>
+                    <fr:taxon>Theorem</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    For real numbers <fr:tex display="inline"><![CDATA[a\leq  b]]></fr:tex>, the closed interval
+    <fr:tex display="inline"><![CDATA[[a,b]\subseteq \mathbb {R}]]></fr:tex> is compact in the Euclidean topology.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    The case <fr:tex display="inline"><![CDATA[a=b]]></fr:tex> is immediate. Assume <fr:tex display="inline"><![CDATA[a<b]]></fr:tex>, and let <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> be an
+    open cover of <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex>. Define
+    <fr:tex display="block"><![CDATA[
+        S=\{x\in [a,b]\mid  [a,x]\text { is covered by finitely many members of }
+        \mathcal {U}\}.
+    ]]></fr:tex>
+    A member of the cover containing <fr:tex display="inline"><![CDATA[a]]></fr:tex> also contains a short interval to
+    the right of <fr:tex display="inline"><![CDATA[a]]></fr:tex>, so <fr:tex display="inline"><![CDATA[S]]></fr:tex> is nonempty. It is bounded above by <fr:tex display="inline"><![CDATA[b]]></fr:tex>; let
+    <fr:tex display="inline"><![CDATA[c=\sup  S]]></fr:tex>, using the <fr:link href="/thm-0003/" title="Existence theorem" uri="https://caimeo.space/thm-0003/" display-uri="thm-0003" type="local">least-upper-bound property</fr:link>.
+
+    Suppose <fr:tex display="inline"><![CDATA[c<b]]></fr:tex>. Choose <fr:tex display="inline"><![CDATA[U\in \mathcal {U}]]></fr:tex> containing <fr:tex display="inline"><![CDATA[c]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[U]]></fr:tex> is
+    open in the subspace <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex>, some <fr:tex display="inline"><![CDATA[\varepsilon >0]]></fr:tex> satisfies
+    <fr:tex display="block"><![CDATA[
+        (c-\varepsilon ,c+\varepsilon )\cap [a,b]\subseteq  U.
+    ]]></fr:tex>
+    Choose <fr:tex display="inline"><![CDATA[x\in  S]]></fr:tex> with <fr:tex display="inline"><![CDATA[c-\frac {\varepsilon }{2}<x\leq  c]]></fr:tex>. A finite cover of
+    <fr:tex display="inline"><![CDATA[[a,x]]]></fr:tex>, together with <fr:tex display="inline"><![CDATA[U]]></fr:tex>, covers <fr:tex display="inline"><![CDATA[[a,y]]]></fr:tex> for some <fr:tex display="inline"><![CDATA[y>c]]></fr:tex>. This places
+    <fr:tex display="inline"><![CDATA[y]]></fr:tex> in <fr:tex display="inline"><![CDATA[S]]></fr:tex>, contradicting that <fr:tex display="inline"><![CDATA[c]]></fr:tex> is an upper bound. Hence <fr:tex display="inline"><![CDATA[c=b]]></fr:tex>.
+
+    Finally choose a member of the cover containing <fr:tex display="inline"><![CDATA[b]]></fr:tex>. For some
+    <fr:tex display="inline"><![CDATA[\delta >0]]></fr:tex>, it contains every <fr:tex display="inline"><![CDATA[x\in [a,b]]]></fr:tex> satisfying
+    <fr:tex display="inline"><![CDATA[b-\delta <x\leq  b]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[b=\sup  S]]></fr:tex>, choose
+    <fr:tex display="inline"><![CDATA[x\in  S]]></fr:tex> with <fr:tex display="inline"><![CDATA[b-\delta <x\leq  b]]></fr:tex>. A finite cover of <fr:tex display="inline"><![CDATA[[a,x]]]></fr:tex> together
+    with this last member covers all of <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex>. Therefore every open cover
+    has a finite subcover.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001I/</fr:uri>
+                    <fr:display-uri>thm-001I</fr:display-uri>
+                    <fr:route>/thm-001I/</fr:route>
+                    <fr:title text="Closed Subspaces of Compact Spaces Are Compact">Closed Subspaces of Compact Spaces Are Compact</fr:title>
+                    <fr:taxon>Proposition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    Every closed subspace <fr:tex display="inline"><![CDATA[A]]></fr:tex> of a <fr:link href="/def-005R/" title="Compact Space" uri="https://caimeo.space/def-005R/" display-uri="def-005R" type="local">compact space</fr:link> <fr:tex display="inline"><![CDATA[X]]></fr:tex> is compact.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> be an open cover of <fr:tex display="inline"><![CDATA[A]]></fr:tex> by sets open in its subspace
+    topology. For every <fr:tex display="inline"><![CDATA[U\in \mathcal {U}]]></fr:tex>, choose an open subset
+    <fr:tex display="inline"><![CDATA[V_U\subseteq  X]]></fr:tex> with <fr:tex display="inline"><![CDATA[U=A\cap  V_U]]></fr:tex>. Then
+    <fr:tex display="block"><![CDATA[
+        \{X\setminus  A\}\cup \{V_U\mid  U\in \mathcal {U}\}
+    ]]></fr:tex>
+    is an open cover of <fr:tex display="inline"><![CDATA[X]]></fr:tex>. A finite subcover of <fr:tex display="inline"><![CDATA[X]]></fr:tex>, after discarding
+    <fr:tex display="inline"><![CDATA[X\setminus  A]]></fr:tex>, yields a finite subcover of <fr:tex display="inline"><![CDATA[A]]></fr:tex> by members of
+    <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex>.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001J/</fr:uri>
+                    <fr:display-uri>thm-001J</fr:display-uri>
+                    <fr:route>/thm-001J/</fr:route>
+                    <fr:title text="Continuous Images Preserve Compactness">Continuous Images Preserve Compactness</fr:title>
+                    <fr:taxon>Theorem</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    If <fr:tex display="inline"><![CDATA[X]]></fr:tex> is <fr:link href="/def-005R/" title="Compact Space" uri="https://caimeo.space/def-005R/" display-uri="def-005R" type="local">compact</fr:link> and <fr:tex display="inline"><![CDATA[f:X\to  Y]]></fr:tex> is continuous, then the
+    image <fr:tex display="inline"><![CDATA[f(X)]]></fr:tex>, with its subspace topology, is compact.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Regard <fr:tex display="inline"><![CDATA[f]]></fr:tex> as a map <fr:tex display="inline"><![CDATA[\bar  f:X\to  f(X)]]></fr:tex>. It is continuous because the
+    preimage of a subspace-open set <fr:tex display="inline"><![CDATA[f(X)\cap  O]]></fr:tex> is <fr:tex display="inline"><![CDATA[f^{-1}(O)]]></fr:tex>, which is
+    open in <fr:tex display="inline"><![CDATA[X]]></fr:tex>.
+
+    Let <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> be an open cover of <fr:tex display="inline"><![CDATA[f(X)]]></fr:tex>. The collection
+    <fr:tex display="block"><![CDATA[
+        \{\bar  f^{-1}(U)\mid  U\in \mathcal {U}\}
+    ]]></fr:tex>
+    is an open cover of <fr:tex display="inline"><![CDATA[X]]></fr:tex>. Choose a finite subcover
+    <fr:tex display="inline"><![CDATA[\bar  f^{-1}(U_1),\ldots ,\bar  f^{-1}(U_n)]]></fr:tex>. Surjectivity of <fr:tex display="inline"><![CDATA[\bar  f]]></fr:tex>
+    then implies that <fr:tex display="inline"><![CDATA[U_1,\ldots ,U_n]]></fr:tex> covers <fr:tex display="inline"><![CDATA[f(X)]]></fr:tex>.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        Hausdorffness and compactness do not imply one another. Hausdorffness
+        requires distinct points to admit disjoint observations and thereby
+        rules out several pathologies of coarse topologies. It passes to
+        subspaces and products, though an arbitrary quotient of a Hausdorff
+        space need not remain Hausdorff.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005S/</fr:uri>
+                    <fr:display-uri>def-005S</fr:display-uri>
+                    <fr:route>/def-005S/</fr:route>
+                    <fr:title text="Hausdorff Space">Hausdorff Space</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    A topological space <fr:tex display="inline"><![CDATA[X]]></fr:tex> is <html:strong>Hausdorff</html:strong>, or <fr:tex display="inline"><![CDATA[T_2]]></fr:tex>, if any two
+    distinct points can be separated by disjoint open neighborhoods. That is,
+    for <fr:tex display="inline"><![CDATA[x,y\in  X]]></fr:tex> with <fr:tex display="inline"><![CDATA[x\neq  y]]></fr:tex>, there are open sets <fr:tex display="inline"><![CDATA[U,V\subseteq  X]]></fr:tex>
+    such that
+    <fr:tex display="block"><![CDATA[
+        x\in  U,\qquad  y\in  V,\qquad  U\cap  V=\varnothing .
+    ]]></fr:tex></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001N/</fr:uri>
+                    <fr:display-uri>thm-001N</fr:display-uri>
+                    <fr:route>/thm-001N/</fr:route>
+                    <fr:title text="Subspaces and Products Preserve Hausdorffness">Subspaces and Products Preserve Hausdorffness</fr:title>
+                    <fr:taxon>Proposition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    Every subspace of a Hausdorff space is Hausdorff, and every product of
+    Hausdorff spaces is Hausdorff in the <fr:link href="/def-005V/" title="Product Topology" uri="https://caimeo.space/def-005V/" display-uri="def-005V" type="local">product topology</fr:link>.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline"><![CDATA[A\subseteq  X]]></fr:tex>, where <fr:tex display="inline"><![CDATA[X]]></fr:tex> is Hausdorff, and choose distinct points
+    <fr:tex display="inline"><![CDATA[x,y\in  A]]></fr:tex>. Disjoint open neighborhoods <fr:tex display="inline"><![CDATA[U,V\subseteq  X]]></fr:tex> of <fr:tex display="inline"><![CDATA[x]]></fr:tex> and
+    <fr:tex display="inline"><![CDATA[y]]></fr:tex> restrict to disjoint open neighborhoods <fr:tex display="inline"><![CDATA[A\cap  U]]></fr:tex> and <fr:tex display="inline"><![CDATA[A\cap  V]]></fr:tex> in
+    <fr:tex display="inline"><![CDATA[A]]></fr:tex>. Thus <fr:tex display="inline"><![CDATA[A]]></fr:tex> is Hausdorff.
+
+    Now let <fr:tex display="inline"><![CDATA[X=\prod _{i\in  I}X_i]]></fr:tex>, with every <fr:tex display="inline"><![CDATA[X_i]]></fr:tex> Hausdorff, and choose
+    distinct points <fr:tex display="inline"><![CDATA[x,y\in  X]]></fr:tex>. They differ in some coordinate <fr:tex display="inline"><![CDATA[i]]></fr:tex>. Choose
+    disjoint open neighborhoods <fr:tex display="inline"><![CDATA[U_i,V_i\subseteq  X_i]]></fr:tex> of <fr:tex display="inline"><![CDATA[x_i]]></fr:tex> and <fr:tex display="inline"><![CDATA[y_i]]></fr:tex>.
+    Their inverse images <fr:tex display="inline"><![CDATA[\pi _i^{-1}(U_i)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\pi _i^{-1}(V_i)]]></fr:tex> are
+    disjoint open neighborhoods of <fr:tex display="inline"><![CDATA[x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> in <fr:tex display="inline"><![CDATA[X]]></fr:tex>.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001K/</fr:uri>
+                    <fr:display-uri>thm-001K</fr:display-uri>
+                    <fr:route>/thm-001K/</fr:route>
+                    <fr:title text="Compact Subsets of Hausdorff Spaces Are Closed">Compact Subsets of Hausdorff Spaces Are Closed</fr:title>
+                    <fr:taxon>Theorem</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    If <fr:tex display="inline"><![CDATA[K]]></fr:tex> is a compact subspace of a <fr:link href="/def-005S/" title="Hausdorff Space" uri="https://caimeo.space/def-005S/" display-uri="def-005S" type="local">Hausdorff space</fr:link> <fr:tex display="inline"><![CDATA[X]]></fr:tex>, then
+    <fr:tex display="inline"><![CDATA[K]]></fr:tex> is closed in <fr:tex display="inline"><![CDATA[X]]></fr:tex>.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    The empty subset is closed, so suppose <fr:tex display="inline"><![CDATA[K]]></fr:tex> is nonempty. Fix
+    <fr:tex display="inline"><![CDATA[x\in  X\setminus  K]]></fr:tex>. For each <fr:tex display="inline"><![CDATA[y\in  K]]></fr:tex>, choose disjoint open sets
+    <fr:tex display="inline"><![CDATA[U_y]]></fr:tex> and <fr:tex display="inline"><![CDATA[V_y]]></fr:tex> with <fr:tex display="inline"><![CDATA[y\in  U_y]]></fr:tex> and <fr:tex display="inline"><![CDATA[x\in  V_y]]></fr:tex>. The sets
+    <fr:tex display="inline"><![CDATA[K\cap  U_y]]></fr:tex> form an open cover of the subspace <fr:tex display="inline"><![CDATA[K]]></fr:tex>; compactness gives
+    finitely many indices <fr:tex display="inline"><![CDATA[y_1,\ldots ,y_n]]></fr:tex> for which
+    <fr:tex display="inline"><![CDATA[U_{y_1},\ldots ,U_{y_n}]]></fr:tex> cover <fr:tex display="inline"><![CDATA[K]]></fr:tex>. Set
+    <fr:tex display="block"><![CDATA[
+        V=V_{y_1}\cap \cdots \cap  V_{y_n}.
+    ]]></fr:tex>
+    Then <fr:tex display="inline"><![CDATA[V]]></fr:tex> is an open neighborhood of <fr:tex display="inline"><![CDATA[x]]></fr:tex> disjoint from
+    <fr:tex display="inline"><![CDATA[U_{y_1}\cup \cdots \cup  U_{y_n}]]></fr:tex>, and hence disjoint from <fr:tex display="inline"><![CDATA[K]]></fr:tex>. Every point
+    outside <fr:tex display="inline"><![CDATA[K]]></fr:tex> therefore has an open neighborhood contained in
+    <fr:tex display="inline"><![CDATA[X\setminus  K]]></fr:tex>. The complement is open, so <fr:tex display="inline"><![CDATA[K]]></fr:tex> is closed.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        The Euclidean real line is Hausdorff but noncompact. In the other
+        direction, an infinite cofinite space is compact and connected, yet it
+        is not Hausdorff.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/eg-000H/</fr:uri>
+                    <fr:display-uri>eg-000H</fr:display-uri>
+                    <fr:route>/eg-000H/</fr:route>
+                    <fr:title text="A Hausdorff Space Need Not Be Compact">A Hausdorff Space Need Not Be Compact</fr:title>
+                    <fr:taxon>Example</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Every Euclidean space <fr:tex display="inline"><![CDATA[\mathbb {R}^n]]></fr:tex>, for <fr:tex display="inline"><![CDATA[n\geq 1]]></fr:tex>, is Hausdorff. Given
+    distinct points <fr:tex display="inline"><![CDATA[x,y]]></fr:tex>, choose <fr:tex display="inline"><![CDATA[\varepsilon =d(x,y)/3]]></fr:tex>. The Euclidean balls
+    <fr:tex display="inline"><![CDATA[B_\varepsilon (x)]]></fr:tex> and <fr:tex display="inline"><![CDATA[B_\varepsilon (y)]]></fr:tex> are disjoint by the triangle
+    inequality, so they separate the two points.
+</html:p>
+                    <html:p>
+    Hausdorffness does not force compactness. On the real line, the collection
+    <fr:tex display="block"><![CDATA[
+        \{(-n,n)\mid  n\in \mathbb {N},\;n\geq 1\}
+    ]]></fr:tex>
+    is an open cover of <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex>, but every finite subcollection is
+    contained in one interval <fr:tex display="inline"><![CDATA[(-N,N)]]></fr:tex> and therefore fails to cover the real
+    line.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/eg-000E/</fr:uri>
+                    <fr:display-uri>eg-000E</fr:display-uri>
+                    <fr:route>/eg-000E/</fr:route>
+                    <fr:title text="An Infinite Cofinite Space Is Compact but Not Hausdorff">An Infinite Cofinite Space Is Compact but Not Hausdorff</fr:title>
+                    <fr:taxon>Example</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> be infinite and carry the <fr:link href="/def-000E/" title="Cofinite Topology" uri="https://caimeo.space/def-000E/" display-uri="def-000E" type="local">cofinite topology</fr:link>. Given an
+    open cover of <fr:tex display="inline"><![CDATA[X]]></fr:tex>, choose one nonempty member <fr:tex display="inline"><![CDATA[U_0]]></fr:tex>. Its complement is
+    finite. For each of the finitely many points outside <fr:tex display="inline"><![CDATA[U_0]]></fr:tex>, choose one
+    further member of the cover containing that point. Together with <fr:tex display="inline"><![CDATA[U_0]]></fr:tex>,
+    these sets form a finite subcover, so <fr:tex display="inline"><![CDATA[X]]></fr:tex> is compact.
+</html:p>
+                    <html:p>
+    Any two nonempty open subsets of <fr:tex display="inline"><![CDATA[X]]></fr:tex> intersect: the complement of their
+    intersection is a union of two finite sets and cannot be all of the
+    infinite set <fr:tex display="inline"><![CDATA[X]]></fr:tex>. Distinct points therefore cannot have disjoint open
+    neighborhoods. Hence <fr:tex display="inline"><![CDATA[X]]></fr:tex> is not Hausdorff. The same observation shows
+    that <fr:tex display="inline"><![CDATA[X]]></fr:tex> is connected.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        Compactness and Hausdorffness become especially effective when they
+        occur on opposite sides of a continuous bijection. Compactness makes
+        closed information survive the map, and Hausdorffness recognizes the
+        image as closed. This supplies a widely used criterion for proving that
+        a bijection is a homeomorphism.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001L/</fr:uri>
+                    <fr:display-uri>thm-001L</fr:display-uri>
+                    <fr:route>/thm-001L/</fr:route>
+                    <fr:title text="Compact-to-Hausdorff Bijections Are Homeomorphisms">Compact-to-Hausdorff Bijections Are Homeomorphisms</fr:title>
+                    <fr:taxon>Theorem</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    Let <fr:tex display="inline"><![CDATA[f:X\to  Y]]></fr:tex> be a continuous bijection. If <fr:tex display="inline"><![CDATA[X]]></fr:tex> is compact and <fr:tex display="inline"><![CDATA[Y]]></fr:tex> is
+    Hausdorff, then <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a <fr:link href="/def-005O/" title="Homeomorphism" uri="https://caimeo.space/def-005O/" display-uri="def-005O" type="local">homeomorphism</fr:link>.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline"><![CDATA[C\subseteq  X]]></fr:tex> be closed. It is compact by
+    <fr:link href="/thm-001I/" title="Closed Subspaces of Compact Spaces Are Compact" uri="https://caimeo.space/thm-001I/" display-uri="thm-001I" type="local">compactness of closed subspaces</fr:link>, and its image <fr:tex display="inline"><![CDATA[f(C)]]></fr:tex> is
+    compact by <fr:link href="/thm-001J/" title="Continuous Images Preserve Compactness" uri="https://caimeo.space/thm-001J/" display-uri="thm-001J" type="local">preservation of compactness</fr:link>. Since <fr:tex display="inline"><![CDATA[Y]]></fr:tex> is
+    Hausdorff, <fr:link href="/thm-001K/" title="Compact Subsets of Hausdorff Spaces Are Closed" uri="https://caimeo.space/thm-001K/" display-uri="thm-001K" type="local">compact subsets are closed</fr:link>, so <fr:tex display="inline"><![CDATA[f(C)]]></fr:tex> is closed in
+    <fr:tex display="inline"><![CDATA[Y]]></fr:tex>. Thus <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a closed map.
+
+    For the inverse map <fr:tex display="inline"><![CDATA[f^{-1}:Y\to  X]]></fr:tex>, the preimage of a closed set
+    <fr:tex display="inline"><![CDATA[C\subseteq  X]]></fr:tex> is
+    <fr:tex display="block"><![CDATA[
+        (f^{-1})^{-1}(C)=f(C),
+    ]]></fr:tex>
+    which is closed in <fr:tex display="inline"><![CDATA[Y]]></fr:tex>. Hence <fr:tex display="inline"><![CDATA[f^{-1}]]></fr:tex> is continuous, and <fr:tex display="inline"><![CDATA[f]]></fr:tex> is a
+    homeomorphism.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        We can now return to the quotient construction. Gluing the two
+        endpoints of a compact interval produces a circle, and the criterion
+        above turns the evident continuous bijection into a homeomorphism.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/eg-000A/</fr:uri>
+                    <fr:display-uri>eg-000A</fr:display-uri>
+                    <fr:route>/eg-000A/</fr:route>
+                    <fr:title text="The Circle as a Quotient of an Interval">The Circle as a Quotient of an Interval</fr:title>
+                    <fr:taxon>Example</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let
+    <fr:tex display="block"><![CDATA[
+        S^1=\{z\in \mathbb {C}\mid  |z|=1\},
+        \qquad  q:[0,1]\longrightarrow  S^1,
+        \qquad  q(t)=e^{2\pi  i t}.
+    ]]></fr:tex>
+    The map <fr:tex display="inline"><![CDATA[q]]></fr:tex> identifies precisely the endpoints <fr:tex display="inline"><![CDATA[0]]></fr:tex> and <fr:tex display="inline"><![CDATA[1]]></fr:tex>. Let
+    <fr:tex display="inline"><![CDATA[p:[0,1]\to [0,1]/(0\sim 1)]]></fr:tex> be the canonical quotient map. There is a
+    unique bijection
+    <fr:tex display="block"><![CDATA[
+        \bar  q:[0,1]/(0\sim 1)\longrightarrow  S^1
+    ]]></fr:tex>
+    such that <fr:tex display="inline"><![CDATA[\bar  q\circ  p=q]]></fr:tex>.
+</html:p>
+                    <html:p>
+    Since <fr:tex display="inline"><![CDATA[q]]></fr:tex> is continuous, the <fr:link href="/thm-001F/" title="Universal Property of the Quotient Topology" uri="https://caimeo.space/thm-001F/" display-uri="thm-001F" type="local">universal property of the quotient</fr:link>
+    makes <fr:tex display="inline"><![CDATA[\bar  q]]></fr:tex> continuous. The interval <fr:tex display="inline"><![CDATA[[0,1]]]></fr:tex> is compact by
+    <fr:link href="/thm-001P/" title="Closed Intervals in the Real Line Are Compact" uri="https://caimeo.space/thm-001P/" display-uri="thm-001P" type="local">compactness of closed intervals</fr:link>, and its quotient is compact by
+    <fr:link href="/thm-001J/" title="Continuous Images Preserve Compactness" uri="https://caimeo.space/thm-001J/" display-uri="thm-001J" type="local">preservation under continuous images</fr:link>. The circle is Hausdorff
+    as a subspace of the Euclidean plane. Therefore the
+    <fr:link href="/thm-001L/" title="Compact-to-Hausdorff Bijections Are Homeomorphisms" uri="https://caimeo.space/thm-001L/" display-uri="thm-001L" type="local">compact-to-Hausdorff criterion</fr:link> shows that <fr:tex display="inline"><![CDATA[\bar  q]]></fr:tex> is a
+    homeomorphism:
+    <fr:tex display="block"><![CDATA[
+        [0,1]/(0\sim 1)\cong  S^1.
+    ]]></fr:tex></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>19</fr:day>
+                </fr:date>
+                <fr:title text="Countability axioms">Countability axioms</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        A basis may still be too large for explicit arguments. The two standard
+        countability axioms ask whether local neighborhoods or the entire
+        topology can be controlled by countable data. The second condition is
+        stronger because one global basis must work simultaneously at every
+        point.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005T/</fr:uri>
+                    <fr:display-uri>def-005T</fr:display-uri>
+                    <fr:route>/def-005T/</fr:route>
+                    <fr:title text="Countability Axioms">Countability Axioms</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    A topological space <fr:tex display="inline"><![CDATA[X]]></fr:tex> is <html:strong>first-countable</html:strong> if every point
+    <fr:tex display="inline"><![CDATA[x\in  X]]></fr:tex> has an at most countable <fr:link href="/def-005L/" title="Neighborhood and Local Basis" uri="https://caimeo.space/def-005L/" display-uri="def-005L" type="local">local basis</fr:link>. It is
+    <html:strong>second-countable</html:strong> if its topology has an at most countable
+    <fr:link href="/def-005M/" title="Basis for a Topology" uri="https://caimeo.space/def-005M/" display-uri="def-005M" type="local">basis</fr:link>.
+</html:p>
+                    <html:p>
+    These conditions constrain two different scales. First-countability gives
+    a countable collection of tests near each individual point, while
+    second-countability gives one countable collection of basic open sets for
+    the whole space.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/thm-001M/</fr:uri>
+                    <fr:display-uri>thm-001M</fr:display-uri>
+                    <fr:route>/thm-001M/</fr:route>
+                    <fr:title text="Second-Countability Implies First-Countability">Second-Countability Implies First-Countability</fr:title>
+                    <fr:taxon>Proposition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter><html:p>
+    Every <fr:link href="/def-005T/" title="Countability Axioms" uri="https://caimeo.space/def-005T/" display-uri="def-005T" type="local">second-countable</fr:link> topological space is first-countable.
+</html:p>
+ 
+   
+   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Let <fr:tex display="inline"><![CDATA[\mathcal {B}]]></fr:tex> be a countable basis for <fr:tex display="inline"><![CDATA[X]]></fr:tex>. For each <fr:tex display="inline"><![CDATA[x\in  X]]></fr:tex>, set
+    <fr:tex display="block"><![CDATA[
+        \mathcal {B}_x=\{B\in \mathcal {B}\mid  x\in  B\}.
+    ]]></fr:tex>
+    This is a countable collection of open neighborhoods of <fr:tex display="inline"><![CDATA[x]]></fr:tex>. If <fr:tex display="inline"><![CDATA[N]]></fr:tex> is
+    any neighborhood of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, choose an open set <fr:tex display="inline"><![CDATA[U]]></fr:tex> with
+    <fr:tex display="inline"><![CDATA[x\in  U\subseteq  N]]></fr:tex>. The basis property supplies
+    <fr:tex display="inline"><![CDATA[B\in \mathcal {B}_x]]></fr:tex> with <fr:tex display="inline"><![CDATA[x\in  B\subseteq  U\subseteq  N]]></fr:tex>. Therefore
+    <fr:tex display="inline"><![CDATA[\mathcal {B}_x]]></fr:tex> is a countable local basis at <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
+</fr:mainmatter></fr:tree>
+ 
+</fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        Rational endpoints give a countable basis for the Euclidean real line.
+        In contrast, an uncountable discrete space has a one-element local
+        basis at every point but cannot have a countable global basis.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/eg-000G/</fr:uri>
+                    <fr:display-uri>eg-000G</fr:display-uri>
+                    <fr:route>/eg-000G/</fr:route>
+                    <fr:title text="The Real Line Is Second-Countable">The Real Line Is Second-Countable</fr:title>
+                    <fr:taxon>Example</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    In the Euclidean real line, let
+    <fr:tex display="block"><![CDATA[
+        \mathcal {B}
+        =\{(p,q)\mid  p,q\in \mathbb {Q},\;p<q\}.
+    ]]></fr:tex>
+    This collection is countable because <fr:tex display="inline"><![CDATA[\mathbb {Q}\times \mathbb {Q}]]></fr:tex> is
+    countable. It is a basis: whenever <fr:tex display="inline"><![CDATA[U]]></fr:tex> is open and <fr:tex display="inline"><![CDATA[x\in  U]]></fr:tex>, there is an
+    interval <fr:tex display="inline"><![CDATA[(a,b)]]></fr:tex> with <fr:tex display="inline"><![CDATA[x\in (a,b)\subseteq  U]]></fr:tex>; density of the rationals
+    gives <fr:tex display="inline"><![CDATA[p,q\in \mathbb {Q}]]></fr:tex> with
+    <fr:tex display="block"><![CDATA[
+        a<p<x<q<b.
+    ]]></fr:tex>
+    Thus <fr:tex display="inline"><![CDATA[x\in (p,q)\subseteq  U]]></fr:tex>. Hence <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> is second-countable and,
+    by <fr:link href="/thm-001M/" title="Second-Countability Implies First-Countability" uri="https://caimeo.space/thm-001M/" display-uri="thm-001M" type="local">second-countability implies first-countability</fr:link>, also
+    first-countable.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/eg-000C/</fr:uri>
+                    <fr:display-uri>eg-000C</fr:display-uri>
+                    <fr:route>/eg-000C/</fr:route>
+                    <fr:title text="An Uncountable Discrete Space Is Not Second-Countable">An Uncountable Discrete Space Is Not Second-Countable</fr:title>
+                    <fr:taxon>Example</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> be an uncountable set with the <fr:link href="/def-005W/" title="Discrete and Indiscrete Topologies" uri="https://caimeo.space/def-005W/" display-uri="def-005W" type="local">discrete topology</fr:link>. For
+    every <fr:tex display="inline"><![CDATA[x\in  X]]></fr:tex>, the one-element collection <fr:tex display="inline"><![CDATA[\{\{x\}\}]]></fr:tex> is a local basis
+    at <fr:tex display="inline"><![CDATA[x]]></fr:tex>; hence <fr:tex display="inline"><![CDATA[X]]></fr:tex> is first-countable.
+</html:p>
+                    <html:p>
+    On the other hand, every basis <fr:tex display="inline"><![CDATA[\mathcal {B}]]></fr:tex> for <fr:tex display="inline"><![CDATA[X]]></fr:tex> must contain every
+    singleton. Indeed, since <fr:tex display="inline"><![CDATA[\{x\}]]></fr:tex> is open, the basis property requires
+    some <fr:tex display="inline"><![CDATA[B\in \mathcal {B}]]></fr:tex> with
+    <fr:tex display="block"><![CDATA[
+        x\in  B\subseteq \{x\},
+    ]]></fr:tex>
+    and therefore <fr:tex display="inline"><![CDATA[B=\{x\}]]></fr:tex>. Thus <fr:tex display="inline"><![CDATA[\mathcal {B}]]></fr:tex> is uncountable, so <fr:tex display="inline"><![CDATA[X]]></fr:tex> is
+    not second-countable. This also shows why the two countability axioms are
+    genuinely different.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        First-countability explains why sequences suffice for many arguments in
+        metric spaces. Without such a hypothesis, sequences alone may fail to
+        detect closure or continuity; nets or filters are then the appropriate
+        general substitutes.
+    </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>19</fr:day>
+                </fr:date>
+                <fr:title text="Local compactness">Local compactness</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+        A noncompact space may nevertheless look compact around each point.
+        Local compactness records this intermediate situation. It is strong
+        enough to support many constructions from analysis while still
+        including open subsets of Euclidean spaces and manifolds.
+    </html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/def-005U/</fr:uri>
+                    <fr:display-uri>def-005U</fr:display-uri>
+                    <fr:route>/def-005U/</fr:route>
+                    <fr:title text="Locally Compact Space">Locally Compact Space</fr:title>
+                    <fr:taxon>Definition</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    A topological space <fr:tex display="inline"><![CDATA[X]]></fr:tex> is <html:strong>locally compact at <fr:tex display="inline"><![CDATA[x\in  X]]></fr:tex></html:strong> if
+    there exists a <fr:link href="/def-005R/" title="Compact Space" uri="https://caimeo.space/def-005R/" display-uri="def-005R" type="local">compact</fr:link> subspace <fr:tex display="inline"><![CDATA[K\subseteq  X]]></fr:tex> that is a
+    <fr:link href="/def-005L/" title="Neighborhood and Local Basis" uri="https://caimeo.space/def-005L/" display-uri="def-005L" type="local">neighborhood</fr:link> of <fr:tex display="inline"><![CDATA[x]]></fr:tex>. The space is <html:strong>locally compact</html:strong> if
+    it is locally compact at every point.
+</html:p>
+                    <html:p>
+    This definition does not include the <fr:link href="/def-005S/" title="Hausdorff Space" uri="https://caimeo.space/def-005S/" display-uri="def-005S" type="local">Hausdorff</fr:link> condition. In a
+    different convention, some texts use <html:em>locally compact</html:em> to mean locally
+    compact and Hausdorff. Outside the Hausdorff setting, several common
+    formulations of local compactness need not be equivalent.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors />
+                    <fr:uri>https://caimeo.space/eg-000F/</fr:uri>
+                    <fr:display-uri>eg-000F</fr:display-uri>
+                    <fr:route>/eg-000F/</fr:route>
+                    <fr:title text="The Real Line Is Locally Compact">The Real Line Is Locally Compact</fr:title>
+                    <fr:taxon>Example</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+    For each <fr:tex display="inline"><![CDATA[x\in \mathbb {R}]]></fr:tex>, the closed interval
+    <fr:tex display="inline"><![CDATA[K=[x-1,x+1]]]></fr:tex> is compact by
+    <fr:link href="/thm-001P/" title="Closed Intervals in the Real Line Are Compact" uri="https://caimeo.space/thm-001P/" display-uri="thm-001P" type="local">compactness of closed intervals</fr:link>. It contains the open interval
+    <fr:tex display="inline"><![CDATA[(x-1,x+1)]]></fr:tex>, so <fr:tex display="inline"><![CDATA[K]]></fr:tex> is a neighborhood of <fr:tex display="inline"><![CDATA[x]]></fr:tex>. Therefore the Euclidean
+    real line is <fr:link href="/def-005U/" title="Locally Compact Space" uri="https://caimeo.space/def-005U/" display-uri="def-005U" type="local">locally compact</fr:link>.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <html:p>
+        Keeping Hausdorffness separate from local compactness makes the
+        convention explicit. It also prevents equivalent formulations from the
+        Hausdorff setting from being used automatically in spaces where those
+        formulations may diverge.
+    </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+    The concepts above form the basic toolkit of point-set topology. Bases
+    present topologies, continuous maps compare them, subspaces, products, and
+    quotients construct new spaces, and connectedness, compactness,
+    Hausdorffness, countability, and local compactness measure the resulting
+    spaces. Natural next steps include stronger separation axioms, the
+    Tychonoff theorem, metrization theorems, and compactifications.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:uri>https://caimeo.space/eg-000G/</fr:uri>
+            <fr:display-uri>eg-000G</fr:display-uri>
+            <fr:route>/eg-000G/</fr:route>
+            <fr:title text="The Real Line Is Second-Countable">The Real Line Is Second-Countable</fr:title>
+            <fr:taxon>Example</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    In the Euclidean real line, let
+    <fr:tex display="block"><![CDATA[
+        \mathcal {B}
+        =\{(p,q)\mid  p,q\in \mathbb {Q},\;p<q\}.
+    ]]></fr:tex>
+    This collection is countable because <fr:tex display="inline"><![CDATA[\mathbb {Q}\times \mathbb {Q}]]></fr:tex> is
+    countable. It is a basis: whenever <fr:tex display="inline"><![CDATA[U]]></fr:tex> is open and <fr:tex display="inline"><![CDATA[x\in  U]]></fr:tex>, there is an
+    interval <fr:tex display="inline"><![CDATA[(a,b)]]></fr:tex> with <fr:tex display="inline"><![CDATA[x\in (a,b)\subseteq  U]]></fr:tex>; density of the rationals
+    gives <fr:tex display="inline"><![CDATA[p,q\in \mathbb {Q}]]></fr:tex> with
+    <fr:tex display="block"><![CDATA[
+        a<p<x<q<b.
+    ]]></fr:tex>
+    Thus <fr:tex display="inline"><![CDATA[x\in (p,q)\subseteq  U]]></fr:tex>. Hence <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> is second-countable and,
+    by <fr:link href="/thm-001M/" title="Second-Countability Implies First-Countability" uri="https://caimeo.space/thm-001M/" display-uri="thm-001M" type="local">second-countability implies first-countability</fr:link>, also
+    first-countable.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:uri>https://caimeo.space/def-005T/</fr:uri>
+            <fr:display-uri>def-005T</fr:display-uri>
+            <fr:route>/def-005T/</fr:route>
+            <fr:title text="Countability Axioms">Countability Axioms</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    A topological space <fr:tex display="inline"><![CDATA[X]]></fr:tex> is <html:strong>first-countable</html:strong> if every point
+    <fr:tex display="inline"><![CDATA[x\in  X]]></fr:tex> has an at most countable <fr:link href="/def-005L/" title="Neighborhood and Local Basis" uri="https://caimeo.space/def-005L/" display-uri="def-005L" type="local">local basis</fr:link>. It is
+    <html:strong>second-countable</html:strong> if its topology has an at most countable
+    <fr:link href="/def-005M/" title="Basis for a Topology" uri="https://caimeo.space/def-005M/" display-uri="def-005M" type="local">basis</fr:link>.
+</html:p>
+            <html:p>
+    These conditions constrain two different scales. First-countability gives
+    a countable collection of tests near each individual point, while
+    second-countability gives one countable collection of basic open sets for
+    the whole space.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

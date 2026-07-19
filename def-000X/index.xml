@@ -2512,6 +2512,40 @@
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors />
+            <fr:uri>https://caimeo.space/def-005P/</fr:uri>
+            <fr:display-uri>def-005P</fr:display-uri>
+            <fr:route>/def-005P/</fr:route>
+            <fr:title text="Quotient Topology and Quotient Space">Quotient Topology and Quotient Space</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+    Let <fr:tex display="inline"><![CDATA[X]]></fr:tex> be a <fr:link href="/def-000C/" title="Topological Space" uri="https://caimeo.space/def-000C/" display-uri="def-000C" type="local">topological space</fr:link> and let <fr:tex display="inline"><![CDATA[q:X\to  Y]]></fr:tex> be a
+    surjection. The <html:strong>quotient topology</html:strong> on <fr:tex display="inline"><![CDATA[Y]]></fr:tex> is defined by
+    <fr:tex display="block"><![CDATA[
+        U\subseteq  Y\text { is open}
+        \quad \Longleftrightarrow \quad 
+        q^{-1}(U)\text { is open in }X.
+    ]]></fr:tex>
+    With this topology, <fr:tex display="inline"><![CDATA[q]]></fr:tex> is called a <html:strong>quotient map</html:strong>. It is the
+    <fr:link href="/def-005X/" title="Comparison of Topologies" uri="https://caimeo.space/def-005X/" display-uri="def-005X" type="local">finest topology</fr:link> on <fr:tex display="inline"><![CDATA[Y]]></fr:tex> for which <fr:tex display="inline"><![CDATA[q]]></fr:tex> is continuous.
+</html:p>
+            <html:p>
+    In particular, if <fr:tex display="inline"><![CDATA[\sim ]]></fr:tex> is an <fr:link href="/def-000X/" title="Equivalence Relation" uri="https://caimeo.space/def-000X/" display-uri="def-000X" type="local">equivalence relation</fr:link> on <fr:tex display="inline"><![CDATA[X]]></fr:tex>,
+    the canonical surjection
+    <fr:tex display="block"><![CDATA[
+        q:X\longrightarrow  X/{\sim },
+        \qquad  x\longmapsto [x]
+    ]]></fr:tex>
+    equips the <fr:link href="/def-002U/" title="Equivalence Class" uri="https://caimeo.space/def-002U/" display-uri="def-002U" type="local">quotient set</fr:link> <fr:tex display="inline"><![CDATA[X/{\sim }]]></fr:tex> with a topology. The
+    resulting topological space is the <html:strong>quotient space</html:strong> of <fr:tex display="inline"><![CDATA[X]]></fr:tex> by
+    <fr:tex display="inline"><![CDATA[\sim ]]></fr:tex>.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
             <fr:uri>https://caimeo.space/def-002H/</fr:uri>
             <fr:display-uri>def-002H</fr:display-uri>
             <fr:route>/def-002H/</fr:route>
