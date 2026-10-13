@@ -1,284 +1,330 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/default.xsl"?>
-<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
-  <fr:frontmatter>
-    <fr:authors />
-    <fr:uri>https://caimeo.space/thm-0003/</fr:uri>
-    <fr:display-uri>thm-0003</fr:display-uri>
-    <fr:route>/thm-0003/</fr:route>
-    <fr:title text="Existence theorem">Existence theorem</fr:title>
-    <fr:taxon>Theorem</fr:taxon>
-  </fr:frontmatter>
-  <fr:mainmatter>
-    <html:p>
-    There exists an ordered field <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> that satisfies the <fr:link href="/def-0012/" title="Least upper bound property" uri="https://caimeo.space/def-0012/" display-uri="def-0012" type="local">least upper bound property</fr:link>.
-    Moreover <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> contains <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> as a subfield.
-</html:p>
-  </fr:mainmatter>
-  <fr:backmatter>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:authors />
-        <fr:title text="References">References</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter />
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:authors />
-        <fr:title text="Context">Context</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors />
-            <fr:date>
-              <fr:year>2024</fr:year>
-              <fr:month>1</fr:month>
-              <fr:day>27</fr:day>
-            </fr:date>
-            <fr:uri>https://caimeo.space/math-0004/</fr:uri>
-            <fr:display-uri>math-0004</fr:display-uri>
-            <fr:route>/math-0004/</fr:route>
-            <fr:title text="The Construction of \mathbb {R}">The Construction of <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex></fr:title>
-            <fr:taxon>Math Analysis</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p>
-    We start constructing <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> from <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> by a way that it satisfies the existence theorem,
+<fr:tree
+xmlns:fr="http://www.forester-notes.org"
+xmlns:html="http://www.w3.org/1999/xhtml"
+xmlns:xml="http://www.w3.org/XML/1998/namespace"
+root="false"
+base-url="/"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.world/thm-0003/</fr:uri><fr:display-uri>thm-0003</fr:display-uri><fr:route>/thm-0003/</fr:route><fr:title
+text="Existence theorem">Existence theorem</fr:title><fr:taxon>Theorem</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    There exists an ordered field <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex> that satisfies the <fr:link
+href="/def-0012/"
+title="Least upper bound property"
+uri="https://caimeo.world/def-0012/"
+display-uri="def-0012"
+type="local">least upper bound property</fr:link>.
+    Moreover <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex> contains <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> as a subfield.
+</html:p></fr:mainmatter><fr:backmatter><fr:tree
+show-metadata="false"
+hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
+text="References">References</fr:title></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree
+show-metadata="false"
+hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
+text="Context">Context</fr:title></fr:frontmatter><fr:mainmatter><fr:tree
+show-metadata="true"
+expanded="false"
+toc="false"
+numbered="false"><fr:frontmatter><fr:authors /><fr:date><fr:year>2024</fr:year><fr:month>1</fr:month><fr:day>27</fr:day></fr:date><fr:uri>https://caimeo.world/math-0004/</fr:uri><fr:display-uri>math-0004</fr:display-uri><fr:route>/math-0004/</fr:route><fr:title
+text="The Construction of \mathbb {R}">The Construction of <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex></fr:title><fr:taxon>Math Analysis</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    We start constructing <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex> from <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> by a way that it satisfies the existence theorem,
     the core of construction.
-</html:p>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors />
-                <fr:uri>https://caimeo.space/thm-0003/</fr:uri>
-                <fr:display-uri>thm-0003</fr:display-uri>
-                <fr:route>/thm-0003/</fr:route>
-                <fr:title text="Existence theorem">Existence theorem</fr:title>
-                <fr:taxon>Theorem</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>
-    There exists an ordered field <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> that satisfies the <fr:link href="/def-0012/" title="Least upper bound property" uri="https://caimeo.space/def-0012/" display-uri="def-0012" type="local">least upper bound property</fr:link>.
-    Moreover <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> contains <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> as a subfield.
-</html:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <html:p>
+</html:p><fr:tree
+show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.world/thm-0003/</fr:uri><fr:display-uri>thm-0003</fr:display-uri><fr:route>/thm-0003/</fr:route><fr:title
+text="Existence theorem">Existence theorem</fr:title><fr:taxon>Theorem</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    There exists an ordered field <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex> that satisfies the <fr:link
+href="/def-0012/"
+title="Least upper bound property"
+uri="https://caimeo.world/def-0012/"
+display-uri="def-0012"
+type="local">least upper bound property</fr:link>.
+    Moreover <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex> contains <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> as a subfield.
+</html:p></fr:mainmatter></fr:tree><html:p>
     The least-upper-bound property mentioned above is defined:
-</html:p>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors />
-                <fr:uri>https://caimeo.space/def-0012/</fr:uri>
-                <fr:display-uri>def-0012</fr:display-uri>
-                <fr:route>/def-0012/</fr:route>
-                <fr:title text="Least upper bound property">Least upper bound property</fr:title>
-                <fr:taxon>Definition</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>
-    A set <fr:tex display="inline"><![CDATA[S]]></fr:tex> has the least upper bound property if every non-empty subset <fr:tex display="inline"><![CDATA[T]]></fr:tex> of <fr:tex display="inline"><![CDATA[S]]></fr:tex> that is bounded above has a least upper bound <fr:tex display="inline"><![CDATA[\sup  T]]></fr:tex>.
-</html:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <html:p>
+</html:p><fr:tree
+show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.world/def-0012/</fr:uri><fr:display-uri>def-0012</fr:display-uri><fr:route>/def-0012/</fr:route><fr:title
+text="Least upper bound property">Least upper bound property</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    A set <fr:tex
+display="inline"><![CDATA[S]]></fr:tex> has the least upper bound property if every non-empty subset <fr:tex
+display="inline"><![CDATA[T]]></fr:tex> of <fr:tex
+display="inline"><![CDATA[S]]></fr:tex> that is bounded above has a least upper bound <fr:tex
+display="inline"><![CDATA[\sup  T]]></fr:tex>.
+</html:p></fr:mainmatter></fr:tree><html:p>
     Why do we need the least-upper-bound property?
-    Consider the set <fr:tex display="inline"><![CDATA[S = \{x \in  \mathbb {Q} | x^2 < 2\}]]></fr:tex>.
-    <fr:tex display="inline"><![CDATA[S]]></fr:tex> is bounded above by <fr:tex display="inline"><![CDATA[2]]></fr:tex>, but it does not have a least upper bound in <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex>.
-    Therefore we can't express <fr:tex display="inline"><![CDATA[\sqrt {2}]]></fr:tex> in field <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> since some "gaps" exist.
-    This fact motivates us to construct a more complete field <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex>.
-    We have constructed <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> from <fr:tex display="inline"><![CDATA[\mathbb {Z}]]></fr:tex>, and now we construct <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> from <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex>.
-</html:p>
-            <html:p>
-    Then we should find a way to express "<fr:tex display="inline"><![CDATA[\sqrt {2}]]></fr:tex>" using <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex>.
-    A crucial idea is <html:strong>approximating</html:strong> <fr:tex display="inline"><![CDATA[\sqrt {2}]]></fr:tex> by a sequence of rational numbers.
-    <fr:tex display="block"><![CDATA[
+    Consider the set <fr:tex
+display="inline"><![CDATA[S = \{x \in  \mathbb {Q} | x^2 < 2\}]]></fr:tex>.
+    <fr:tex
+display="inline"><![CDATA[S]]></fr:tex> is bounded above by <fr:tex
+display="inline"><![CDATA[2]]></fr:tex>, but it does not have a least upper bound in <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex>.
+    Therefore we can't express <fr:tex
+display="inline"><![CDATA[\sqrt {2}]]></fr:tex> in field <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> since some "gaps" exist.
+    This fact motivates us to construct a more complete field <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex>.
+    We have constructed <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> from <fr:tex
+display="inline"><![CDATA[\mathbb {Z}]]></fr:tex>, and now we construct <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex> from <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex>.
+</html:p><html:p>
+    Then we should find a way to express "<fr:tex
+display="inline"><![CDATA[\sqrt {2}]]></fr:tex>" using <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex>.
+    A crucial idea is <html:strong>approximating</html:strong> <fr:tex
+display="inline"><![CDATA[\sqrt {2}]]></fr:tex> by a sequence of rational numbers.
+    <fr:tex
+display="block"><![CDATA[
         \sqrt {2} := \{ p^2<2 \lor  p<0, p\in \mathbb {Q} \}
     ]]></fr:tex>
-    We can cut the number axis into two pieces by <fr:tex display="inline"><![CDATA[\sqrt {2}]]></fr:tex>, such cut is called a <html:strong>Dedekind cut</html:strong>. 
+    We can cut the number axis into two pieces by <fr:tex
+display="inline"><![CDATA[\sqrt {2}]]></fr:tex>, such cut is called a <html:strong>Dedekind cut</html:strong>. 
     A cut should be well-defined rather than just an intuitive concept.
-</html:p>
-            <html:p>
-    As we use set theory to construct <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex>, it motivates us to define Dedekind cut as a set.
+</html:p><html:p>
+    As we use set theory to construct <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex>, it motivates us to define Dedekind cut as a set.
     It should satisfies some properties:
-    <html:ul><html:li>Can't be empty or the whole <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex></html:li>
+    <html:ul><html:li>Can't be empty or the whole <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex></html:li>
         <html:li>Closed downward</html:li>
         <html:li>Contains not the largest number</html:li></html:ul>
     A formal definition is given below:
-</html:p>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors />
-                <fr:uri>https://caimeo.space/def-0013/</fr:uri>
-                <fr:display-uri>def-0013</fr:display-uri>
-                <fr:route>/def-0013/</fr:route>
-                <fr:title text="Dedekind cuts">Dedekind cuts</fr:title>
-                <fr:taxon>Definition</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>
-    A Dedekind cut is a partition of the rationals <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> into two non-empty sets <fr:tex display="inline"><![CDATA[L]]></fr:tex> and <fr:tex display="inline"><![CDATA[R]]></fr:tex> such that:
-    <html:ul><html:li><fr:tex display="inline"><![CDATA[L\neq \emptyset ]]></fr:tex></html:li>
-        <html:li><fr:tex display="inline"><![CDATA[R\neq \emptyset ]]></fr:tex></html:li>
-        <html:li>if <fr:tex display="inline"><![CDATA[x,y\in \mathbb {Q}, x<y]]></fr:tex> and <fr:tex display="inline"><![CDATA[y\in  L]]></fr:tex> then <fr:tex display="inline"><![CDATA[x\in  L]]></fr:tex></html:li>
-        <html:li>if <fr:tex display="inline"><![CDATA[p\in  L]]></fr:tex> then exists <fr:tex display="inline"><![CDATA[q\in  L]]></fr:tex> such that <fr:tex display="inline"><![CDATA[p<q]]></fr:tex></html:li></html:ul></html:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <html:p>
+</html:p><fr:tree
+show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.world/def-0013/</fr:uri><fr:display-uri>def-0013</fr:display-uri><fr:route>/def-0013/</fr:route><fr:title
+text="Dedekind cuts">Dedekind cuts</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    A Dedekind cut is a partition of the rationals <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex> into two non-empty sets <fr:tex
+display="inline"><![CDATA[L]]></fr:tex> and <fr:tex
+display="inline"><![CDATA[R]]></fr:tex> such that:
+    <html:ul><html:li><fr:tex
+display="inline"><![CDATA[L\neq \emptyset ]]></fr:tex></html:li>
+        <html:li><fr:tex
+display="inline"><![CDATA[R\neq \emptyset ]]></fr:tex></html:li>
+        <html:li>if <fr:tex
+display="inline"><![CDATA[x,y\in \mathbb {Q}, x<y]]></fr:tex> and <fr:tex
+display="inline"><![CDATA[y\in  L]]></fr:tex> then <fr:tex
+display="inline"><![CDATA[x\in  L]]></fr:tex></html:li>
+        <html:li>if <fr:tex
+display="inline"><![CDATA[p\in  L]]></fr:tex> then exists <fr:tex
+display="inline"><![CDATA[q\in  L]]></fr:tex> such that <fr:tex
+display="inline"><![CDATA[p<q]]></fr:tex></html:li></html:ul></html:p></fr:mainmatter></fr:tree><html:p>
     Now we can defined the real number as a set of Dedekind cuts.
-</html:p>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors />
-                <fr:uri>https://caimeo.space/def-0014/</fr:uri>
-                <fr:display-uri>def-0014</fr:display-uri>
-                <fr:route>/def-0014/</fr:route>
-                <fr:title text="Real Number System">Real Number System</fr:title>
-                <fr:taxon>Definition</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>
-    The element of <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> is a <fr:link href="/def-0013/" title="Dedekind cuts" uri="https://caimeo.space/def-0013/" display-uri="def-0013" type="local">Dedekind Cut</fr:link> in <fr:tex display="inline"><![CDATA[\mathbb {Q}]]></fr:tex>.
-    <fr:tex display="block"><![CDATA[
+</html:p><fr:tree
+show-metadata="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.world/def-0014/</fr:uri><fr:display-uri>def-0014</fr:display-uri><fr:route>/def-0014/</fr:route><fr:title
+text="Real Number System">Real Number System</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    The element of <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex> is a <fr:link
+href="/def-0013/"
+title="Dedekind cuts"
+uri="https://caimeo.world/def-0013/"
+display-uri="def-0013"
+type="local">Dedekind Cut</fr:link> in <fr:tex
+display="inline"><![CDATA[\mathbb {Q}]]></fr:tex>.
+    <fr:tex
+display="block"><![CDATA[
         \mathbb {R} := \{ L | (L,R) \text { is a Dedekind Cut} \}
-    ]]></fr:tex></html:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <html:p>
-    Now define the order relation on <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex>.
-    We have defined <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> as the set of Dedekind cuts, so we can define the strict partial order relation <fr:tex display="inline"><![CDATA[<]]></fr:tex> on <fr:tex display="inline"><![CDATA[\mathbb {R}]]></fr:tex> by the set operation <fr:tex display="inline"><![CDATA[\subset ]]></fr:tex>.
+    ]]></fr:tex></html:p></fr:mainmatter></fr:tree><html:p>
+    Now define the order relation on <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex>.
+    We have defined <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex> as the set of Dedekind cuts, so we can define the strict partial order relation <fr:tex
+display="inline"><![CDATA[<]]></fr:tex> on <fr:tex
+display="inline"><![CDATA[\mathbb {R}]]></fr:tex> by the set operation <fr:tex
+display="inline"><![CDATA[\subset ]]></fr:tex>.
     The irreflexive, asymmetric and transitive properties are trivial. 
-</html:p>
-          </fr:mainmatter>
-        </fr:tree>
-      </fr:mainmatter>
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:authors />
-        <fr:title text="Backlinks">Backlinks</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors />
-            <fr:uri>https://caimeo.space/thm-001P/</fr:uri>
-            <fr:display-uri>thm-001P</fr:display-uri>
-            <fr:route>/thm-001P/</fr:route>
-            <fr:title text="Closed Intervals in the Real Line Are Compact">Closed Intervals in the Real Line Are Compact</fr:title>
-            <fr:taxon>Theorem</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter><html:p>
-    For real numbers <fr:tex display="inline"><![CDATA[a\leq  b]]></fr:tex>, the closed interval
-    <fr:tex display="inline"><![CDATA[[a,b]\subseteq \mathbb {R}]]></fr:tex> is compact in the Euclidean topology.
+</html:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree
+show-metadata="false"
+hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
+text="Backlinks">Backlinks</fr:title></fr:frontmatter><fr:mainmatter><fr:tree
+show-metadata="true"
+expanded="false"
+toc="false"
+numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.world/thm-001P/</fr:uri><fr:display-uri>thm-001P</fr:display-uri><fr:route>/thm-001P/</fr:route><fr:title
+text="Closed Intervals in the Real Line Are Compact">Closed Intervals in the Real Line Are Compact</fr:title><fr:taxon>Theorem</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    For real numbers <fr:tex
+display="inline"><![CDATA[a\leq  b]]></fr:tex>, the closed interval
+    <fr:tex
+display="inline"><![CDATA[[a,b]\subseteq \mathbb {R}]]></fr:tex> is compact in the Euclidean topology.
 </html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
-    The case <fr:tex display="inline"><![CDATA[a=b]]></fr:tex> is immediate. Assume <fr:tex display="inline"><![CDATA[a<b]]></fr:tex>, and let <fr:tex display="inline"><![CDATA[\mathcal {U}]]></fr:tex> be an
-    open cover of <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex>. Define
-    <fr:tex display="block"><![CDATA[
+   <fr:tree
+show-metadata="false"
+toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    The case <fr:tex
+display="inline"><![CDATA[a=b]]></fr:tex> is immediate. Assume <fr:tex
+display="inline"><![CDATA[a<b]]></fr:tex>, and let <fr:tex
+display="inline"><![CDATA[\mathcal {U}]]></fr:tex> be an
+    open cover of <fr:tex
+display="inline"><![CDATA[[a,b]]]></fr:tex>. Define
+    <fr:tex
+display="block"><![CDATA[
         S=\{x\in [a,b]\mid  [a,x]\text { is covered by finitely many members of }
         \mathcal {U}\}.
     ]]></fr:tex>
-    A member of the cover containing <fr:tex display="inline"><![CDATA[a]]></fr:tex> also contains a short interval to
-    the right of <fr:tex display="inline"><![CDATA[a]]></fr:tex>, so <fr:tex display="inline"><![CDATA[S]]></fr:tex> is nonempty. It is bounded above by <fr:tex display="inline"><![CDATA[b]]></fr:tex>; let
-    <fr:tex display="inline"><![CDATA[c=\sup  S]]></fr:tex>, using the <fr:link href="/thm-0003/" title="Existence theorem" uri="https://caimeo.space/thm-0003/" display-uri="thm-0003" type="local">least-upper-bound property</fr:link>.
+    A member of the cover containing <fr:tex
+display="inline"><![CDATA[a]]></fr:tex> also contains a short interval to
+    the right of <fr:tex
+display="inline"><![CDATA[a]]></fr:tex>, so <fr:tex
+display="inline"><![CDATA[S]]></fr:tex> is nonempty. It is bounded above by <fr:tex
+display="inline"><![CDATA[b]]></fr:tex>; let
+    <fr:tex
+display="inline"><![CDATA[c=\sup  S]]></fr:tex>, using the <fr:link
+href="/thm-0003/"
+title="Existence theorem"
+uri="https://caimeo.world/thm-0003/"
+display-uri="thm-0003"
+type="local">least-upper-bound property</fr:link>.
 
-    Suppose <fr:tex display="inline"><![CDATA[c<b]]></fr:tex>. Choose <fr:tex display="inline"><![CDATA[U\in \mathcal {U}]]></fr:tex> containing <fr:tex display="inline"><![CDATA[c]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[U]]></fr:tex> is
-    open in the subspace <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex>, some <fr:tex display="inline"><![CDATA[\varepsilon >0]]></fr:tex> satisfies
-    <fr:tex display="block"><![CDATA[
+    Suppose <fr:tex
+display="inline"><![CDATA[c<b]]></fr:tex>. Choose <fr:tex
+display="inline"><![CDATA[U\in \mathcal {U}]]></fr:tex> containing <fr:tex
+display="inline"><![CDATA[c]]></fr:tex>. Since <fr:tex
+display="inline"><![CDATA[U]]></fr:tex> is
+    open in the subspace <fr:tex
+display="inline"><![CDATA[[a,b]]]></fr:tex>, some <fr:tex
+display="inline"><![CDATA[\varepsilon >0]]></fr:tex> satisfies
+    <fr:tex
+display="block"><![CDATA[
         (c-\varepsilon ,c+\varepsilon )\cap [a,b]\subseteq  U.
     ]]></fr:tex>
-    Choose <fr:tex display="inline"><![CDATA[x\in  S]]></fr:tex> with <fr:tex display="inline"><![CDATA[c-\frac {\varepsilon }{2}<x\leq  c]]></fr:tex>. A finite cover of
-    <fr:tex display="inline"><![CDATA[[a,x]]]></fr:tex>, together with <fr:tex display="inline"><![CDATA[U]]></fr:tex>, covers <fr:tex display="inline"><![CDATA[[a,y]]]></fr:tex> for some <fr:tex display="inline"><![CDATA[y>c]]></fr:tex>. This places
-    <fr:tex display="inline"><![CDATA[y]]></fr:tex> in <fr:tex display="inline"><![CDATA[S]]></fr:tex>, contradicting that <fr:tex display="inline"><![CDATA[c]]></fr:tex> is an upper bound. Hence <fr:tex display="inline"><![CDATA[c=b]]></fr:tex>.
+    Choose <fr:tex
+display="inline"><![CDATA[x\in  S]]></fr:tex> with <fr:tex
+display="inline"><![CDATA[c-\frac {\varepsilon }{2}<x\leq  c]]></fr:tex>. A finite cover of
+    <fr:tex
+display="inline"><![CDATA[[a,x]]]></fr:tex>, together with <fr:tex
+display="inline"><![CDATA[U]]></fr:tex>, covers <fr:tex
+display="inline"><![CDATA[[a,y]]]></fr:tex> for some <fr:tex
+display="inline"><![CDATA[y>c]]></fr:tex>. This places
+    <fr:tex
+display="inline"><![CDATA[y]]></fr:tex> in <fr:tex
+display="inline"><![CDATA[S]]></fr:tex>, contradicting that <fr:tex
+display="inline"><![CDATA[c]]></fr:tex> is an upper bound. Hence <fr:tex
+display="inline"><![CDATA[c=b]]></fr:tex>.
 
-    Finally choose a member of the cover containing <fr:tex display="inline"><![CDATA[b]]></fr:tex>. For some
-    <fr:tex display="inline"><![CDATA[\delta >0]]></fr:tex>, it contains every <fr:tex display="inline"><![CDATA[x\in [a,b]]]></fr:tex> satisfying
-    <fr:tex display="inline"><![CDATA[b-\delta <x\leq  b]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[b=\sup  S]]></fr:tex>, choose
-    <fr:tex display="inline"><![CDATA[x\in  S]]></fr:tex> with <fr:tex display="inline"><![CDATA[b-\delta <x\leq  b]]></fr:tex>. A finite cover of <fr:tex display="inline"><![CDATA[[a,x]]]></fr:tex> together
-    with this last member covers all of <fr:tex display="inline"><![CDATA[[a,b]]]></fr:tex>. Therefore every open cover
+    Finally choose a member of the cover containing <fr:tex
+display="inline"><![CDATA[b]]></fr:tex>. For some
+    <fr:tex
+display="inline"><![CDATA[\delta >0]]></fr:tex>, it contains every <fr:tex
+display="inline"><![CDATA[x\in [a,b]]]></fr:tex> satisfying
+    <fr:tex
+display="inline"><![CDATA[b-\delta <x\leq  b]]></fr:tex>. Since <fr:tex
+display="inline"><![CDATA[b=\sup  S]]></fr:tex>, choose
+    <fr:tex
+display="inline"><![CDATA[x\in  S]]></fr:tex> with <fr:tex
+display="inline"><![CDATA[b-\delta <x\leq  b]]></fr:tex>. A finite cover of <fr:tex
+display="inline"><![CDATA[[a,x]]]></fr:tex> together
+    with this last member covers all of <fr:tex
+display="inline"><![CDATA[[a,b]]]></fr:tex>. Therefore every open cover
     has a finite subcover.
 </fr:mainmatter></fr:tree>
  
-</fr:mainmatter>
-        </fr:tree>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors />
-            <fr:uri>https://caimeo.space/thm-001O/</fr:uri>
-            <fr:display-uri>thm-001O</fr:display-uri>
-            <fr:route>/thm-001O/</fr:route>
-            <fr:title text="Intervals in the Real Line Are Connected">Intervals in the Real Line Are Connected</fr:title>
-            <fr:taxon>Theorem</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter><html:p>
-    Let <fr:tex display="inline"><![CDATA[I\subseteq \mathbb {R}]]></fr:tex> be an interval: whenever <fr:tex display="inline"><![CDATA[a,b\in  I]]></fr:tex> and
-    <fr:tex display="inline"><![CDATA[a<c<b]]></fr:tex>, one also has <fr:tex display="inline"><![CDATA[c\in  I]]></fr:tex>. Then <fr:tex display="inline"><![CDATA[I]]></fr:tex>, with the Euclidean subspace
-    topology, is <fr:link href="/def-005Q/" title="Connected Space" uri="https://caimeo.space/def-005Q/" display-uri="def-005Q" type="local">connected</fr:link>.
+</fr:mainmatter></fr:tree><fr:tree
+show-metadata="true"
+expanded="false"
+toc="false"
+numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.world/thm-001O/</fr:uri><fr:display-uri>thm-001O</fr:display-uri><fr:route>/thm-001O/</fr:route><fr:title
+text="Intervals in the Real Line Are Connected">Intervals in the Real Line Are Connected</fr:title><fr:taxon>Theorem</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    Let <fr:tex
+display="inline"><![CDATA[I\subseteq \mathbb {R}]]></fr:tex> be an interval: whenever <fr:tex
+display="inline"><![CDATA[a,b\in  I]]></fr:tex> and
+    <fr:tex
+display="inline"><![CDATA[a<c<b]]></fr:tex>, one also has <fr:tex
+display="inline"><![CDATA[c\in  I]]></fr:tex>. Then <fr:tex
+display="inline"><![CDATA[I]]></fr:tex>, with the Euclidean subspace
+    topology, is <fr:link
+href="/def-005Q/"
+title="Connected Space"
+uri="https://caimeo.world/def-005Q/"
+display-uri="def-005Q"
+type="local">connected</fr:link>.
 </html:p>
  
    
-   <fr:tree show-metadata="false" toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
-    Suppose instead that <fr:tex display="inline"><![CDATA[I=U\cup  V]]></fr:tex> is a separation. Choose <fr:tex display="inline"><![CDATA[u\in  U]]></fr:tex> and
-    <fr:tex display="inline"><![CDATA[v\in  V]]></fr:tex>; after exchanging the names if necessary, assume <fr:tex display="inline"><![CDATA[u<v]]></fr:tex>. The
-    interval property gives <fr:tex display="inline"><![CDATA[[u,v]\subseteq  I]]></fr:tex>. Set
-    <fr:tex display="block"><![CDATA[
+   <fr:tree
+show-metadata="false"
+toc="false"><fr:frontmatter><fr:authors /><fr:taxon>Proof</fr:taxon></fr:frontmatter><fr:mainmatter>
+    Suppose instead that <fr:tex
+display="inline"><![CDATA[I=U\cup  V]]></fr:tex> is a separation. Choose <fr:tex
+display="inline"><![CDATA[u\in  U]]></fr:tex> and
+    <fr:tex
+display="inline"><![CDATA[v\in  V]]></fr:tex>; after exchanging the names if necessary, assume <fr:tex
+display="inline"><![CDATA[u<v]]></fr:tex>. The
+    interval property gives <fr:tex
+display="inline"><![CDATA[[u,v]\subseteq  I]]></fr:tex>. Set
+    <fr:tex
+display="block"><![CDATA[
         S=U\cap [u,v],
         \qquad  c=\sup  S.
     ]]></fr:tex>
-    The supremum exists by the <fr:link href="/thm-0003/" title="Existence theorem" uri="https://caimeo.space/thm-0003/" display-uri="thm-0003" type="local">least-upper-bound property</fr:link>, and
-    <fr:tex display="inline"><![CDATA[u\leq  c\leq  v]]></fr:tex>, so <fr:tex display="inline"><![CDATA[c\in  I]]></fr:tex>.
+    The supremum exists by the <fr:link
+href="/thm-0003/"
+title="Existence theorem"
+uri="https://caimeo.world/thm-0003/"
+display-uri="thm-0003"
+type="local">least-upper-bound property</fr:link>, and
+    <fr:tex
+display="inline"><![CDATA[u\leq  c\leq  v]]></fr:tex>, so <fr:tex
+display="inline"><![CDATA[c\in  I]]></fr:tex>.
 
-    The point <fr:tex display="inline"><![CDATA[c]]></fr:tex> cannot lie in <fr:tex display="inline"><![CDATA[U]]></fr:tex>. If <fr:tex display="inline"><![CDATA[c<v]]></fr:tex>, openness of <fr:tex display="inline"><![CDATA[U]]></fr:tex> in <fr:tex display="inline"><![CDATA[I]]></fr:tex>
-    would place points of <fr:tex display="inline"><![CDATA[U\cap [u,v]]]></fr:tex> strictly above <fr:tex display="inline"><![CDATA[c]]></fr:tex>, contradicting the
-    definition of the supremum. If <fr:tex display="inline"><![CDATA[c=v]]></fr:tex>, then membership in <fr:tex display="inline"><![CDATA[U]]></fr:tex> would
-    contradict <fr:tex display="inline"><![CDATA[v\in  V]]></fr:tex> and <fr:tex display="inline"><![CDATA[U\cap  V=\varnothing ]]></fr:tex>. Hence <fr:tex display="inline"><![CDATA[c\in  V]]></fr:tex>.
+    The point <fr:tex
+display="inline"><![CDATA[c]]></fr:tex> cannot lie in <fr:tex
+display="inline"><![CDATA[U]]></fr:tex>. If <fr:tex
+display="inline"><![CDATA[c<v]]></fr:tex>, openness of <fr:tex
+display="inline"><![CDATA[U]]></fr:tex> in <fr:tex
+display="inline"><![CDATA[I]]></fr:tex>
+    would place points of <fr:tex
+display="inline"><![CDATA[U\cap [u,v]]]></fr:tex> strictly above <fr:tex
+display="inline"><![CDATA[c]]></fr:tex>, contradicting the
+    definition of the supremum. If <fr:tex
+display="inline"><![CDATA[c=v]]></fr:tex>, then membership in <fr:tex
+display="inline"><![CDATA[U]]></fr:tex> would
+    contradict <fr:tex
+display="inline"><![CDATA[v\in  V]]></fr:tex> and <fr:tex
+display="inline"><![CDATA[U\cap  V=\varnothing ]]></fr:tex>. Hence <fr:tex
+display="inline"><![CDATA[c\in  V]]></fr:tex>.
 
-    Since <fr:tex display="inline"><![CDATA[V]]></fr:tex> is open in <fr:tex display="inline"><![CDATA[I]]></fr:tex>, some <fr:tex display="inline"><![CDATA[\varepsilon >0]]></fr:tex> satisfies
-    <fr:tex display="block"><![CDATA[
+    Since <fr:tex
+display="inline"><![CDATA[V]]></fr:tex> is open in <fr:tex
+display="inline"><![CDATA[I]]></fr:tex>, some <fr:tex
+display="inline"><![CDATA[\varepsilon >0]]></fr:tex> satisfies
+    <fr:tex
+display="block"><![CDATA[
         (c-\varepsilon ,c+\varepsilon )\cap  I\subseteq  V.
     ]]></fr:tex>
-    By the defining property of the supremum, there is some <fr:tex display="inline"><![CDATA[s\in  S]]></fr:tex> with
-    <fr:tex display="inline"><![CDATA[c-\varepsilon <s\leq  c]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[c\notin  U]]></fr:tex>, in fact <fr:tex display="inline"><![CDATA[s<c]]></fr:tex>. But then
-    <fr:tex display="inline"><![CDATA[s\in  U\cap  V]]></fr:tex>, a contradiction. Thus no separation exists.
+    By the defining property of the supremum, there is some <fr:tex
+display="inline"><![CDATA[s\in  S]]></fr:tex> with
+    <fr:tex
+display="inline"><![CDATA[c-\varepsilon <s\leq  c]]></fr:tex>. Since <fr:tex
+display="inline"><![CDATA[c\notin  U]]></fr:tex>, in fact <fr:tex
+display="inline"><![CDATA[s<c]]></fr:tex>. But then
+    <fr:tex
+display="inline"><![CDATA[s\in  U\cap  V]]></fr:tex>, a contradiction. Thus no separation exists.
 </fr:mainmatter></fr:tree>
  
-</fr:mainmatter>
-        </fr:tree>
-      </fr:mainmatter>
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:authors />
-        <fr:title text="Related">Related</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors />
-            <fr:uri>https://caimeo.space/def-0012/</fr:uri>
-            <fr:display-uri>def-0012</fr:display-uri>
-            <fr:route>/def-0012/</fr:route>
-            <fr:title text="Least upper bound property">Least upper bound property</fr:title>
-            <fr:taxon>Definition</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p>
-    A set <fr:tex display="inline"><![CDATA[S]]></fr:tex> has the least upper bound property if every non-empty subset <fr:tex display="inline"><![CDATA[T]]></fr:tex> of <fr:tex display="inline"><![CDATA[S]]></fr:tex> that is bounded above has a least upper bound <fr:tex display="inline"><![CDATA[\sup  T]]></fr:tex>.
-</html:p>
-          </fr:mainmatter>
-        </fr:tree>
-      </fr:mainmatter>
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:authors />
-        <fr:title text="Contributions">Contributions</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter />
-    </fr:tree>
-  </fr:backmatter>
-</fr:tree>
+</fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree
+show-metadata="false"
+hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
+text="Related">Related</fr:title></fr:frontmatter><fr:mainmatter><fr:tree
+show-metadata="true"
+expanded="false"
+toc="false"
+numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://caimeo.world/def-0012/</fr:uri><fr:display-uri>def-0012</fr:display-uri><fr:route>/def-0012/</fr:route><fr:title
+text="Least upper bound property">Least upper bound property</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>
+    A set <fr:tex
+display="inline"><![CDATA[S]]></fr:tex> has the least upper bound property if every non-empty subset <fr:tex
+display="inline"><![CDATA[T]]></fr:tex> of <fr:tex
+display="inline"><![CDATA[S]]></fr:tex> that is bounded above has a least upper bound <fr:tex
+display="inline"><![CDATA[\sup  T]]></fr:tex>.
+</html:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree
+show-metadata="false"
+hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
+text="Contributions">Contributions</fr:title></fr:frontmatter><fr:mainmatter /></fr:tree></fr:backmatter></fr:tree>
